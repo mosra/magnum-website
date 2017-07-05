@@ -7,6 +7,13 @@ Magnum is 2D/3D graphics engine written in C++11/C++14 and modern OpenGL. Its
 goal is to simplify low-level graphics development and interaction with OpenGL
 using recent C++11 features and to abstract away platform-specific issues.
 
+.. note-danger:: Website under development
+
+    This website is very much a work-in-progress, currently contains only
+    archived content and might be *very broken* on your system. Please see
+    `the explanatory blog post <{filename}/blog/meta/a-new-website-coming-soon.rst>`_
+    for more information.
+
 .. todo: button Magnum Download latest
 
 Design goals
