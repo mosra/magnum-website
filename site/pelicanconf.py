@@ -53,7 +53,7 @@ LINKS_FOOTER3 = [('Connect', None),
 
 CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600|Source+Sans+Pro:400,400i,600&amp;subset=latin-ext',
             STATIC_URL.format(path='inc/m-dark.css'),
-            STATIC_URL.format(path='inc/pygment.css')]
+            STATIC_URL.format(path='inc/pygments-dark.css')]
 
 FINE_PRINT = """
 Magnum Engine. Copyright © Vladimír Vondruš 2010-2017. Site powered by Pelican.
