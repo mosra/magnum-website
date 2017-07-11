@@ -3,9 +3,9 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://magnum.graphics'
-BLOGURL = 'http://blog.magnum.graphics'
-STATIC_URL = 'http://static.magnum.graphics/{path}'
+SITEURL = '//magnum.graphics'
+BLOGURL = '//blog.magnum.graphics'
+STATIC_URL = '//static.magnum.graphics/{path}'
 
 LINKS_NAVBAR1 = [('Features', SITEURL + '/features/', []),
                  ('Showcase', SITEURL + '/showcase/', []),
