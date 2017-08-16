@@ -17,7 +17,8 @@ PAGE_PATHS = ['pages']
 TIMEZONE = 'Europe/Prague'
 
 DEFAULT_LANG = 'en'
-DATE_FORMATS = {'en': ('en_US', '%b %d %Y')}
+LOCALE = ('en_US', 'usa')
+DATE_FORMATS = {'en': '%b %d %Y'}
 
 FEED_ATOM = None
 FEED_ALL_ATOM = None
