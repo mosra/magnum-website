@@ -8,6 +8,10 @@ Introducing Corrade, an plugin management and utility library
     and dynamic plugin management with dependency support and also various
     filesystem, portability and debugging utilities.
 
+.. role:: cpp(code)
+    :language: c++
+    :class: highlight
+
 ..
 
     *corrade* (v.) --- "To scrape together, to gather together from various
