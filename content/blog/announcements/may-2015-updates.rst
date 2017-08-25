@@ -3,7 +3,8 @@ May 2015 updates to Magnum
 
 :date: 2015-05-09
 :category: Announcements
-:tags: C++, CMake, Corrade, OpenGL
+:tags: C++, CMake, Corrade, OpenGL, NaCl, WebGL
+:cover: {filename}/img/viewer.png
 :summary: The Magnum C++11/C++14 and OpenGL graphics engine gained OpenGEX
     format support, a bunch of new importer plugins, cross-platform extension
     loader, transform feedback support and new features from OpenGL ES 3.1 and
