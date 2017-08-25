@@ -1,0 +1,74 @@
+/* #wrapper3          makes the canvas occupy the whole page width
+   #wrapper2          centers it
+   #wrapper           does aspect ratio preservation
+   #listener          snaps to #wrapper edges
+   #listener::before  does the border, which finally goes below the canvas */
+#m-container-inflatable > .m-row > [class*='m-col-'] > #wrapper3 {
+  margin: 1rem -1rem 1rem -1rem;
+}
+#wrapper2 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: 640px;
+}
+#wrapper {
+  position: relative;
+  padding-bottom: 75%;
+}
+#listener {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#listener::before {
+  position: absolute;
+  content: ' ';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  border-style: solid;
+  border-width: 0.125rem;
+  border-radius: 0.2rem;
+  border-color: var(--line-color);
+}
+
+#module {
+  max-width: 100%;
+  border-radius: 0.2rem;
+  width: 640px;
+  z-index: 10;
+  margin-bottom: -0.25rem; /* otherwise the border is still visible (why?) */
+}
+#status, #status-description {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 9;
+}
+#status {
+  top: 10%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#status-description {
+  top: 30%;
+  font-size: 1rem;
+}
+#module.hidden {
+  display: none;
+}
+#log {
+  border-radius: 0.2rem;
+  width: 640px;
+  max-width: 100%;
+  height: 100%;
+  z-index: 10;
+  font-size: 0.8rem; /* so 80 columns fits into 640 pixels */
+}
+
+/* kate: indent-width 2; */

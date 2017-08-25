@@ -64,7 +64,7 @@ Layout and style based on ``m.css``. Contact the author via
 
 DEFAULT_PAGINATION = 10
 
-STATIC_PATHS = ['img', 'gr']
+STATIC_PATHS = ['img', 'gr', 'showcase']
 EXTRA_PATH_METADATA = {'gr/favicon.ico': {'path', 'favicon.ico'}}
 
 PLUGIN_PATHS = ['m.css/pelican-plugins']
