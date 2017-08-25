@@ -11,7 +11,7 @@ The reason I decided to make the website public even though it's not fully
 ready yet is that I desperately needed some official space for putting
 feature announcements and blog posts. The old website infrastructure already
 showed its age and authoring an article for it was a matter of *days* due to
-technical debt of the PHP code originating back in 2004 (yes, I'm old).
+technical debt of the PHP code originating back in 2004 (I feel old now).
 
 The only thing that's here now is the content from the old website, copied over
 verbatim for archival reasons. In the next weeks I will go over everything and
