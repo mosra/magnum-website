@@ -22,6 +22,8 @@ currently supported.
       <div id="status-description"></div>
       <script src="{filename}/showcase/EmscriptenApplication.js"></script>
       <script async="async" src="magnum-viewer.js"></script>
+      <!-- pelican:attach src="{attach}/showcase/viewer/magnum-viewer.js" -->
+      <!-- pelican:attach src="{attach}/showcase/viewer/magnum-viewer.wasm" -->
     </div></div></div></div>
 
 .. block-warning:: Doesn't work?

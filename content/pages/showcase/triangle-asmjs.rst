@@ -17,6 +17,8 @@ minimal possible amount of code.
       <div id="status-description"></div>
       <script src="{filename}/showcase/EmscriptenApplication.js"></script>
       <script async="async" src="magnum-triangle.js"></script>
+      <!-- pelican:attach src="{attach}/showcase/triangle-asmjs/magnum-triangle.js" -->
+      <!-- pelican:attach src="{attach}/showcase/triangle-asmjs/magnum-triangle.js.mem" -->
     </div></div></div></div>
 
 .. block-warning:: Doesn't work?

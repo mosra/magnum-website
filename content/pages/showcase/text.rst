@@ -23,6 +23,8 @@ text, buffer mapping is used.
       <div id="status-description"></div>
       <script src="{filename}/showcase/EmscriptenApplication.js"></script>
       <script async="async" src="magnum-text.js"></script>
+      <!-- pelican:attach src="{attach}/showcase/text/magnum-text.js" -->
+      <!-- pelican:attach src="{attach}/showcase/text/magnum-text.wasm" -->
     </div></div></div></div>
 
 .. block-warning:: Doesn't work?

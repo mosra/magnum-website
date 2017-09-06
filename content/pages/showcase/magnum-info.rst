@@ -25,6 +25,8 @@ available.
       <div id="status-description"></div>
       <script src="{filename}/showcase/WindowlessEmscriptenApplication.js"></script>
       <script async="async" src="magnum-info.js"></script>
+      <!-- pelican:attach src="{attach}/showcase/magnum-info/magnum-info.js" -->
+      <!-- pelican:attach src="{attach}/showcase/magnum-info/magnum-info.wasm" -->
     </div></div></div></div>
 
 .. block-warning:: Doesn't work?

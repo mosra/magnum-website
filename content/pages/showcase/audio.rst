@@ -30,6 +30,8 @@ source can be moved around the listener using the keyboard.
       <div id="status-description"></div>
       <script src="{filename}/showcase/EmscriptenApplication.js"></script>
       <script async="async" src="magnum-audio.js"></script>
+      <!-- pelican:attach src="{attach}/showcase/audio/magnum-audio.js" -->
+      <!-- pelican:attach src="{attach}/showcase/audio/magnum-audio.wasm" -->
     </div></div></div></div>
 
 .. block-warning:: Doesn't work?

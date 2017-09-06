@@ -18,6 +18,8 @@ on it.
       <div id="status-description"></div>
       <script src="{filename}/showcase/EmscriptenApplication.js"></script>
       <script async="async" src="magnum-textured-triangle.js"></script>
+      <!-- pelican:attach src="{attach}/showcase/textured-triangle/magnum-textured-triangle.js" -->
+      <!-- pelican:attach src="{attach}/showcase/textured-triangle/magnum-textured-triangle.wasm" -->
     </div></div></div></div>
 
 .. block-warning:: Doesn't work?
