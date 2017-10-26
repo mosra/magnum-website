@@ -3,11 +3,11 @@ Showcase
 
 Demos and examples on this page require `WebAssembly <http://webassembly.org/>`_-enabled
 browser with at least WebGL 1 working. All recent versions of major browsers
-should work, see the `introductory blog post <{filename}/blog/announcements/webassembly-support-in-magnum.rst>`__
+should work, see the `introductory blog post <{filename}/blog/announcements/webassembly-support-and-more.rst>`__
 for more information. You can also use the `Magnum Info <{filename}/pages/showcase/magnum-info.rst>`_
 utility to see if your browser is capable of running the demos; if you are
 unlucky and your browser isn't, you can at least try `asm.js <http://asmjs.org/>`_
-version the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`_.
+version of the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`_.
 
 .. block-info:: Spotted a bug?
 
