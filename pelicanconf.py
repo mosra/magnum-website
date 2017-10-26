@@ -111,7 +111,7 @@ M_DOX_TAGFILES = [
     ('doxygen/corrade.tag', 'http://doc.magnum.graphics/corrade/', ['Corrade::']),
     ('doxygen/magnum.tag', 'http://doc.magnum.graphics/magnum/', ['Magnum::'])]
 
-DIRECT_TEMPLATES = ['index', 'archives']
+DIRECT_TEMPLATES = ['archives']
 PAGINATED_DIRECT_TEMPLATES = ['archives']
 
 SLUGIFY_SOURCE = 'basename'
