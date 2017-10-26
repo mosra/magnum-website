@@ -94,11 +94,12 @@ STATIC_PATHS = ['img', 'gr', 'showcase']
 EXTRA_PATH_METADATA = {'gr/favicon.ico': {'path', 'favicon.ico'}}
 
 PLUGIN_PATHS = ['m.css/pelican-plugins']
-PLUGINS = ['m.gl',
-           'm.gh',
-           'm.dox',
-           'm.htmlsanity',
+PLUGINS = ['m.code',
            'm.components',
+           'm.dox',
+           'm.gh',
+           'm.gl',
+           'm.htmlsanity',
            'm.images']
 
 THEME = 'm.css/pelican-theme'
