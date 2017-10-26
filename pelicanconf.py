@@ -81,10 +81,11 @@ CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,6
             STATIC_URL.format(path='m-dark.css')]
 
 FINE_PRINT = """
-Magnum Engine. Copyright © Vladimír Vondruš 2010-2017. Site powered by Pelican.
-Layout and style based on ``m.css``. Contact the author via
-`e-mail <mosra@centrum.cz>`_, :abbr:`Jabber (mosra@jabbim.cz)`,
-`Twitter <https://twitter.com/czmosra>`_ or smoke signals.
+Magnum Engine. Copyright © Vladimír Vondruš 2010-2017. Site powered by
+`Pelican <https://getpelican.com>`_ and `m.css <http://mcss.mosra.cz>`_.
+Contact the author via `e-mail <mosra@centrum.cz>`_,
+:abbr:`Jabber (mosra@jabbim.cz)`, `Twitter <https://twitter.com/czmosra>`_ or
+smoke signals.
 """
 
 DEFAULT_PAGINATION = 10
