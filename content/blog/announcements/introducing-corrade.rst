@@ -10,7 +10,6 @@ Introducing Corrade, an plugin management and utility library
 
 .. role:: cpp(code)
     :language: c++
-    :class: highlight
 
 ..
 

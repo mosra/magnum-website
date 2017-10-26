@@ -11,7 +11,6 @@ Reducing C++ compilation time in Magnum: code optimizations
 
 .. role:: cpp(code)
     :language: c++
-    :class: highlight
 
 To put things into perspective, the Magnum graphics engine has around 100k
 lines of templated C++ code, documentation and comments. Currently the

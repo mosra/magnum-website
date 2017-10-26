@@ -10,7 +10,6 @@ How to draw a red square in Magnum --- in one statement
 
 .. role:: cpp(code)
     :language: c++
-    :class: highlight
 
 .. note-info::
 

@@ -12,7 +12,6 @@ C++11 features in Magnum: Better memory management
 
 .. role:: cpp(code)
     :language: c++
-    :class: highlight
 
 .. block-primary:: Backstage
 

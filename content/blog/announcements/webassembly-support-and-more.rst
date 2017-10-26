@@ -12,7 +12,6 @@ WebAssembly support in Magnum --- and more
 
 .. role:: cmake(code)
     :language: cmake
-    :class: highlight
 .. role:: info(strong)
     :class: m-text m-info
 .. role:: warning(strong)

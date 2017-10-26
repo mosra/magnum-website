@@ -19,7 +19,6 @@ version the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`_.
 
 .. role:: info(strong)
     :class: m-text m-info
-
 .. role:: warning(strong)
     :class: m-text m-warning
 

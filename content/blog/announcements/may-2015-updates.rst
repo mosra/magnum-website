@@ -12,7 +12,6 @@ May 2015 updates to Magnum
 
 .. role:: cpp(code)
     :language: c++
-    :class: highlight
 
 The new release comes almost a whole year after the previous one, mainly due to
 the fact that I'm currently full-time employed and I have less free time than I

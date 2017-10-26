@@ -11,7 +11,6 @@ January 2014 updates to Magnum
 
 .. role:: cpp(code)
     :language: c++
-    :class: highlight
 
 The January snapshot is available under ``snapshot-2014-01`` tag in
 :gh:`Corrade <mosra/corrade^snapshot-2014-01>`,

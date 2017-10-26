@@ -10,7 +10,6 @@ C++11 features in Magnum: Simplifying daily workflow
 
 .. role:: cpp(code)
     :language: c++
-    :class: highlight
 
 .. block-primary:: Backstage
 
