@@ -42,6 +42,7 @@ version the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`_.
     .. container:: m-col-m-6
 
         .. figure:: {filename}/showcase/audio/screenshot.png
+            :alt: Audio example screenshot
             :figclass: m-figure m-fullwidth
             :target: {filename}/pages/showcase/audio.rst
 
@@ -53,6 +54,7 @@ version the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`_.
     .. container:: m-col-m-6
 
         .. figure:: {filename}/showcase/viewer/screenshot.png
+            :alt: Viewer example screenshot
             :figclass: m-figure m-fullwidth
             :target: {filename}/pages/showcase/viewer.rst
 
@@ -66,6 +68,7 @@ version the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`_.
     .. container:: m-col-m-6
 
         .. figure:: {filename}/showcase/primitives/screenshot.png
+            :alt: Primitives example screenshot
             :figclass: m-figure m-fullwidth
             :target: {filename}/pages/showcase/primitives.rst
 
@@ -77,6 +80,7 @@ version the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`_.
     .. container:: m-col-m-6
 
         .. figure:: {filename}/showcase/text/screenshot.png
+            :alt: Text example screenshot
             :figclass: m-figure m-fullwidth
             :target: {filename}/pages/showcase/text.rst
 
@@ -91,6 +95,7 @@ version the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`_.
     .. container:: m-col-m-6
 
         .. figure:: {filename}/showcase/triangle/screenshot.png
+            :alt: Triangle example screenshot
             :figclass: m-figure m-fullwidth
             :target: {filename}/pages/showcase/triangle.rst
 
@@ -103,6 +108,7 @@ version the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`_.
     .. container:: m-col-m-6
 
         .. figure:: {filename}/showcase/textured-triangle/screenshot.png
+            :alt: Textured triangle example screenshot
             :figclass: m-figure m-fullwidth
             :target: {filename}/pages/showcase/textured-triangle.rst
 
@@ -117,6 +123,7 @@ version the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`_.
     .. container:: m-col-m-6
 
         .. figure:: {filename}/showcase/magnum-info/screenshot.png
+            :alt: Magnum Info screenshot
             :figclass: m-figure m-fullwidth
             :target: {filename}/pages/showcase/magnum-info.rst
 
@@ -131,6 +138,7 @@ version the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`_.
     .. container:: m-col-m-6
 
         .. figure:: {filename}/showcase/magnum-al-info/screenshot.png
+            :alt: Magnum AL Info screenshot
             :figclass: m-figure m-fullwidth
             :target: {filename}/pages/showcase/magnum-al-info.rst
 

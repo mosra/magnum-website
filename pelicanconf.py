@@ -110,6 +110,7 @@ M_HTMLSANITY_HYPHENATION = True
 M_DOX_TAGFILES = [
     ('doxygen/corrade.tag', 'http://doc.magnum.graphics/corrade/', ['Corrade::']),
     ('doxygen/magnum.tag', 'http://doc.magnum.graphics/magnum/', ['Magnum::'])]
+M_IMAGES_REQUIRE_ALT_TEXT = True
 
 DIRECT_TEMPLATES = ['archives']
 PAGINATED_DIRECT_TEMPLATES = ['archives']

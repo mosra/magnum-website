@@ -90,6 +90,7 @@ WebAssembly, there is also a fresh port of the Audio example:
     .. container:: m-col-m-6 m-push-m-3
 
         .. figure:: {filename}/showcase/audio/screenshot.png
+            :alt: Audio example screenshot
             :figclass: m-figure m-fullwidth
             :target: {filename}/pages/showcase/audio.rst
 
@@ -146,6 +147,7 @@ also makes the Magnum Info utilities finally available on the web:
     .. container:: m-col-m-6
 
         .. figure:: {filename}/showcase/magnum-info/screenshot.png
+            :alt: Magnum Info screenshot
             :figclass: m-figure m-fullwidth
             :target: {filename}/pages/showcase/magnum-info.rst
 
@@ -160,6 +162,7 @@ also makes the Magnum Info utilities finally available on the web:
     .. container:: m-col-m-6
 
         .. figure:: {filename}/showcase/magnum-al-info/screenshot.png
+            :alt: Magnum AL Info screenshot
             :figclass: m-figure m-fullwidth
             :target: {filename}/pages/showcase/magnum-al-info.rst
 
