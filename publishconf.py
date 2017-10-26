@@ -15,9 +15,11 @@ AUTHOR_URL = '//blog.magnum.graphics/author/{slug}/'
 CATEGORY_URL = '//blog.magnum.graphics/{slug}/'
 TAG_URL = '//blog.magnum.graphics/tag/{slug}/'
 
-# Not sure why the slash needs to be THRICE?!
-PAGINATION_PATTERNS = [(1, '///blog.magnum.graphics/{base_name}/', '{base_name}/index.html'),
-                       (2, '///blog.magnum.graphics/{base_name}/{number}/', '{base_name}/{number}/index.html')]
+# URL needs to be prepended by / because Pelican removes the first / for some
+# reason which makes the second URL look like relative to server root instead
+# of having a domain as well :/
+PAGINATION_PATTERNS = [(1, '/{url}', '{base_name}/index.html'),
+                       (2, '/{url}{number}/', '{base_name}/{number}/index.html')]
 
 LINKS_NAVBAR1 = [('Features', SITEURL + '/features/', 'features', []),
                  ('Showcase', SITEURL + '/showcase/', 'showcase', []),
@@ -55,6 +57,3 @@ CATEGORY_FEED_ATOM = 'blog/feeds/%s.atom.xml'
 CATEGORY_FEED_ATOM_URL = '//blog.magnum.graphics/feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
-
-# It's broken (base_name is /blog/) so I'm extending it beyond
-DEFAULT_PAGINATION = 15
