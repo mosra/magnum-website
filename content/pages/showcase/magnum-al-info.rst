@@ -2,7 +2,7 @@ Magnum AL Info
 ##############
 
 :save_as: showcase/magnum-al-info/index.html
-:url: /showcase/magnum-al-info/
+:url: showcase/magnum-al-info/
 :css: {filename}/showcase/showcase.css
 
 Displays various information about Magnum and the OpenAL implementation it's

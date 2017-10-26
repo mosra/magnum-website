@@ -2,7 +2,7 @@ Viewer example
 ##############
 
 :save_as: showcase/viewer/index.html
-:url: /showcase/viewer/
+:url: showcase/viewer/
 :css: {filename}/showcase/showcase.css
 
 This is simply an viewer for 3D scene files, such as OpenGEX or COLLADA ones.

@@ -2,7 +2,7 @@ Primitives example
 ##################
 
 :save_as: showcase/primitives/index.html
-:url: /showcase/primitives/
+:url: showcase/primitives/
 :css: {filename}/showcase/showcase.css
 
 Shows how to use builtin primitives and do simple input handling. Displays

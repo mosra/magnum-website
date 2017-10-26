@@ -2,7 +2,7 @@ Textured triangle example
 #########################
 
 :save_as: showcase/textured-triangle/index.html
-:url: /showcase/textured-triangle/
+:url: showcase/textured-triangle/
 :css: {filename}/showcase/showcase.css
 
 This example is just slightly more complicated version of the

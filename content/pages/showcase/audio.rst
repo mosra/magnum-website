@@ -2,7 +2,7 @@ Audio example
 #############
 
 :save_as: showcase/audio/index.html
-:url: /showcase/audio/
+:url: showcase/audio/
 :css: {filename}/showcase/showcase.css
 
 Shows how to play spatialized audio with Magnum. The audio scene includes a 3D

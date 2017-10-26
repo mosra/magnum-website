@@ -7,29 +7,29 @@ SITENAME = 'Magnum Engine'
 SITEURL = ''
 
 BLOGNAME = 'Magnum Engine Blog'
-BLOGURL = '/blog/'
+BLOGURL = 'blog/'
 
 PATH = 'content'
 ARTICLE_PATHS = ['blog']
 PAGE_PATHS = ['pages']
 
-STATIC_URL = '/static/{path}'
+STATIC_URL = 'static/{path}'
 STATIC_SAVE_AS = 'static/{path}'
 
-PAGE_URL = '/{slug}/'
+PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
-ARCHIVES_URL = '/blog/'
+ARCHIVES_URL = 'blog/'
 ARCHIVES_SAVE_AS = 'blog/index.html'
-ARTICLE_URL = '/blog/{category}/{slug}/'
+ARTICLE_URL = 'blog/{category}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{category}/{slug}/index.html'
-DRAFT_URL = '/blog/draft/{slug}/'
+DRAFT_URL = 'blog/draft/{slug}/'
 DRAFT_SAVE_AS = 'blog/draft/{slug}/index.html'
-AUTHOR_URL = '/blog/author/{slug}/'
+AUTHOR_URL = 'blog/author/{slug}/'
 AUTHOR_SAVE_AS = 'blog/author/{slug}/index.html'
-CATEGORY_URL = '/blog/{slug}/'
+CATEGORY_URL = 'blog/{slug}/'
 CATEGORY_SAVE_AS = 'blog/{slug}/index.html'
-TAG_URL = '/blog/tag/{slug}/'
+TAG_URL = 'blog/tag/{slug}/'
 TAG_SAVE_AS = 'blog/tag/{slug}/index.html'
 
 AUTHORS_SAVE_AS = None # Not used

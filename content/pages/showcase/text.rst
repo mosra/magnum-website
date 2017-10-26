@@ -2,7 +2,7 @@ Text example
 ############
 
 :save_as: showcase/text/index.html
-:url: /showcase/text/
+:url: showcase/text/
 :css: {filename}/showcase/showcase.css
 
 Showcase of Magnum distance-field text rendering. Instead of rendering the

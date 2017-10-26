@@ -2,7 +2,7 @@ Triangle example
 ################
 
 :save_as: showcase/triangle/index.html
-:url: /showcase/triangle/
+:url: showcase/triangle/
 :css: {filename}/showcase/showcase.css
 
 So-called *Hello World* of 3D graphics. Displays simple triangle with different

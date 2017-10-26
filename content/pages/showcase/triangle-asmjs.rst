@@ -2,7 +2,7 @@ Triangle example (asm.js)
 #########################
 
 :save_as: showcase/triangle-asmjs/index.html
-:url: /showcase/triangle-asmjs/
+:url: showcase/triangle-asmjs/
 :css: {filename}/showcase/showcase.css
 
 So-called *Hello World* of 3D graphics. Displays simple triangle with different

@@ -2,7 +2,7 @@ Magnum WebGL 2 Info
 ###################
 
 :save_as: showcase/magnum-info-webgl2/index.html
-:url: /showcase/magnum-info-webgl2/
+:url: showcase/magnum-info-webgl2/
 :css: {filename}/showcase/showcase.css
 
 Displays various information about Magnum and the WebGL implementation it's
