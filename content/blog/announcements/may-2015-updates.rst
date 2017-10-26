@@ -59,7 +59,7 @@ load PNG images, for example, you no longer need to worry about which
 particular plugin might be available on given platform and just always request
 PngImporter plugin:
 
-.. code-block:: c++
+.. code:: c++
 
     PluginManager::Manager<Trade::AbstractImporter> manager{MAGNUM_PLUGINS_IMPORTER_DIR};
     std::unique_ptr<Trade::AbstractImporter> importer = manager.loadAndInstantiate("PngImporter");
@@ -101,7 +101,7 @@ plugin is currently only a private part of the plugin, but if it is seen to be
 useful outside of the plugin, I may move it into a publicly usable library.
 Here's an example how OpenDDL file parsing can look like:
 
-.. code-block:: c++
+.. code:: c++
 
     OpenDdl::Document d;
 

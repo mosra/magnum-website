@@ -70,13 +70,13 @@ Textured Triangle example.
 All projects were switched to use absolute includes by default, i.e. headers
 are included this way:
 
-.. code-block:: c++
+.. code:: c++
 
     #include <Magnum/Math/Vector3.h>
 
 rather than this way:
 
-.. code-block:: c++
+.. code:: c++
 
     #include <Math/Vector3.h>
 

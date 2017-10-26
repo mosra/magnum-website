@@ -58,7 +58,7 @@ from install location for system files (so, for example, you can set
 ``CMAKE_INSTALL_PREFIX`` still points to system location where libraries are
 stored):
 
-.. code-block:: cmake
+.. code:: cmake
 
     if(CORRADE_TARGET_EMSCRIPTEN)
         install(FILES
@@ -184,13 +184,13 @@ done with the browser apps as well. Just pass the arguments as URL GET
 parameters. Only long named arguments and boolean options are supported. For
 example, having the URL as
 
-.. code-block:: txt
+.. code:: txt
 
     /my-app/?enable-msaa&magnum-disable-extensions=GL_OES_vertex_array_object GL_EXT_texture_filter_anisotropic
 
 is equivalent to calling the command-line version of the application as
 
-.. code-block:: sh
+.. code:: sh
 
     ./my-app --enable-msaa --magnum-disable-extensions "GL_OES_vertex_array_object GL_EXT_texture_filter_anisotropic"
 
@@ -240,7 +240,7 @@ default, the servers are configured to compress only textual data such as
 might be problematic and so it's best to just rely on file extensions in your
 Apache configuration or ``.htaccess`` file:
 
-.. code-block:: apache
+.. code:: apache
 
     AddOutputFilter DEFLATE html css js wasm
 

@@ -73,7 +73,7 @@ common, for example with Qt). It gets more complicated when :cpp:`namespace`\ s
 and :cpp:`typedef`\ s are involved, with template classes you need to repeat
 the whole template list and it can get quicky out of hand:
 
-.. code-block:: c++
+.. code:: c++
 
     class Mesh; // easy
 
@@ -85,7 +85,7 @@ For user convenience has Magnum :dox:`forward declaration headers <compilation-f
 which are available for each namespace, so the users can just include this tiny
 header and don't need to write forward declarations on their own:
 
-.. code-block:: c++
+.. code:: c++
 
     // forward-declares both Mesh and Matrix3x3
     #include <Magnum.h>
@@ -97,7 +97,7 @@ declaration header, we can put the default arguments in that header and omit
 them in the actual definition. The type definition must be complete, so the
 forward declaration header must be included in the type definition header.
 
-.. code-block:: c++
+.. code:: c++
 
     // SceneGraph.h
     template<UnsignedInt, class T, class TranslationType = T> class TranslationTransformation;
@@ -116,7 +116,7 @@ doesn't care about particular named values and needs to know only the type,
 thus you can pass the value around without having full definition of the enum
 around:
 
-.. code-block:: c++
+.. code:: c++
 
     // forward-declares ColorFormat enum
     #include <Magnum.h>
@@ -149,7 +149,7 @@ following command, headers which didn't exceed 25k lines were omitted. In
 comparison, whole ``<cmath>`` has just below 3k lines and ``<vector>`` is
 merely 11k lines in C++11 libstdc++.
 
-.. code-block:: sh
+.. code:: sh
 
     echo "#include <iostream>" | g++ -std=c++11 -E -x c++ - | wc -l
 
@@ -235,7 +235,7 @@ the template for e.g. :cpp:`int`\ s (which isn't provided by default), they can
 include this header in some source file and do the explicit instantiation
 themselves:
 
-.. code-block:: c++
+.. code:: c++
 
     // instantiation.cpp
     #include "SceneGraph/AbstractObject.hpp"

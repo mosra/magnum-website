@@ -29,7 +29,7 @@ cases you won't even notice. With them the engine is able to catch many
 mistakes, which otherwise would be impossible to detect, at compile time.
 Consider creating 7-element vector the C++03 way:
 
-.. code-block:: c++
+.. code:: c++
 
     Float data[] = { 3.5f, 0.3f, 4.0f, -7.3f, 5.0f, 1.0f -5.0f }; // oops
     Math::Vector<7, Float> vec = Math::Vector<7, Float>::from(data);
@@ -39,7 +39,7 @@ two statements. Moreover the function cannot generally check that we fed it
 with proper amount of data, as it gets just a :cpp:`Float*` pointer. In Magnum
 the same can be written using C++11 variadic constructor like this:
 
-.. code-block:: c++
+.. code:: c++
 
     Math::Vector<7, Float> vec(3.5f, 0.3f, 4.0f, -7.3f, 5.0f, 1.0f -5.0f); // error!
 
@@ -53,7 +53,7 @@ and save repetitive typing, which otherwise leads to accidental mistakes.
 Imagine adding buffer with interleaved vertex attributes, specifying one
 attribute at a time:
 
-.. code-block:: c++
+.. code:: c++
 
     Int offset = 4238;
     Int stride = 36;
@@ -71,7 +71,7 @@ the whole vertex format is specified at once using variadic function, the
 sizes, offsets and strides are computed automatically behind the scenes,
 leaving no room for mistakes:
 
-.. code-block:: c++
+.. code:: c++
 
     mesh.addVertexBuffer(vertexBuffer, 4238, Shader::Position(), Shader::Normal(),
         Shader::TextureCoordinates(), Shader::Weight(), 3);
@@ -80,7 +80,7 @@ Lastly, with variadic classes you can merge many similar tasks into one.
 Imagine having type-safe resource manager for meshes, textures and sound
 buffers:
 
-.. code-block:: c++
+.. code:: c++
 
     ResouceManager<Mesh> meshManager;
     ResouceManager<Texture2D> textureManager;
@@ -106,7 +106,7 @@ buffers:
 Variadic resource manager implementation allows you to significantly shorten
 the above code:
 
-.. code-block:: c++
+.. code:: c++
 
     ResourceManager<Mesh, Texture2D, Audio::Buffer> manager;
 
@@ -132,7 +132,7 @@ type less (as shown above), this feature allows you to do instantiation and
 configuration in single expression, going nicely along *"everyting is an
 expression"* approach:
 
-.. code-block:: c++
+.. code:: c++
 
     // Configure debug shape rendering
     DebugTools::set("collision-shapes", DebugTools::ShapeRendererConfiguration()
@@ -165,7 +165,7 @@ converted to the expected units at compile time. All Magnum functions dealing
 with angles are taking only the strongly typed values, passing plain numbers to
 them results in compile-time error:
 
-.. code-block:: c++
+.. code:: c++
 
     Double sin = Math::sin(45.0_deg);
     //Float cos = Math::cos(1.57f); // error
@@ -187,7 +187,7 @@ support for (explicit) conversion from and to external types, thanks to
 :cpp:`std::enable_if` the actual conversion can be then implemented in separate
 library without touching the original implementation.
 
-.. code-block:: c++
+.. code:: c++
 
     #include <BulletIntegration/Integration.h>
 

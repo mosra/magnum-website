@@ -33,7 +33,7 @@ textures, meshes or buffers) aren't copyable, similarly to e.g.
 solutions for avoiding copying. You can force the user to create an instance
 beforehand and then use the function to do perform some action on it:
 
-.. code-block:: c++
+.. code:: c++
 
     Trade::MeshData3D mesh;
     importer->meshData3D("steam-locomotive", mesh);
@@ -41,7 +41,7 @@ beforehand and then use the function to do perform some action on it:
 Or you can create the instance on heap, return pointer to it and instruct the
 user to explicitly delete the object afterwards:
 
-.. code-block:: c++
+.. code:: c++
 
     Trade::MeshData3D* mesh = importer->meshData3D("steam-locomotive");
     if(mesh) {
@@ -60,7 +60,7 @@ memory leaks.
 C++11 introduces move semantics, which means that the object can be just moved
 out from the function without copying:
 
-.. code-block:: c++
+.. code:: c++
 
     Trade::MeshData3D mesh = importer->meshData3D("steam-locomotive");
 
@@ -73,7 +73,7 @@ implementation for C++11 compilers is :gh:`available on GitHub <AGWA/Optional>`,
 which means that we can use it right now and don't have to wait until C++14
 becomes a thing.
 
-.. code-block:: c++
+.. code:: c++
 
     std::optional<Trade::MeshData3D> mesh = importer->meshData3D("steam-locomotive");
     if(mesh) {
@@ -85,7 +85,7 @@ way than with heap allocation. C++11's :cpp:`std::unique_ptr` will handle the
 deletion implicitly and unlike :cpp:`std::shared_ptr` it adds only a tiny
 overhead, because it doesn't need to do any reference counting.
 
-.. code-block:: c++
+.. code:: c++
 
     std::unique_ptr<Trade::AbstractMaterialData> material = importer->material("scratched-copper");
     if(material) {
@@ -98,7 +98,7 @@ overhead, because it doesn't need to do any reference counting.
 In C++03 code, when you want to pass list of some values (known at
 compile-time) to a function, the most performant way is this:
 
-.. code-block:: c++
+.. code:: c++
 
     Source* sources[] = {backgroundMusic, boom, laughter, eternalPain};
     Audio::Source::play(sources, 4);
@@ -108,7 +108,7 @@ specially crafted container containing some magic with :cpp:`operator,` or
 :cpp:`operator<<`, but with not exactly intuitive usage and a cost of run-time
 heap allocation, for example:
 
-.. code-block:: c++
+.. code:: c++
 
     Audio::Source::play((Array<Source*>(), backgroundMusic, boom, laughter, eternalPain));
 
@@ -117,7 +117,7 @@ allows to write this as one-liner without any additional overhead. In many
 cases Magnum also provides :cpp:`std::vector` overload for lists of run-time
 dependent size.
 
-.. code-block:: c++
+.. code:: c++
 
     Audio::Source::play({backgroundMusic, boom, laughter, eternalPain});
 
@@ -141,7 +141,7 @@ possible portability issues.
 Setters in C++03 code commonly take const reference to object and then copy it
 to the destination:
 
-.. code-block:: c++
+.. code:: c++
 
     void Configuration::setFilename(const std::string& filename) {
         _filename = filename;
@@ -150,7 +150,7 @@ to the destination:
 While taking object by reference avoids creating another copy compared to
 taking object by value, it doesn't avoid unnecessary copies altogether:
 
-.. code-block:: c++
+.. code:: c++
 
     Configuration conf;
     std::string file = "game.conf";
@@ -164,7 +164,7 @@ can be avoided using move semantics, but from user point-of-view the usage is
 still the same. In Magnum all setters taking heavy types (strings, vectors...)
 are done this way.
 
-.. code-block:: c++
+.. code:: c++
 
     void Configuration::setFilename(std::string filename) {
         _filename = std::move(filename);
@@ -184,7 +184,7 @@ automatically destroyed too. In fact, together with method chaining you can add
 objects to scene and configure them without even saving them to a variable. You
 can read more about scene graph :dox:`in the documentation <scenegraph>`.
 
-.. code-block:: c++
+.. code:: c++
 
     (new Chair(&scene))
         ->translate({0.4f, 0.0f, -1.0f})

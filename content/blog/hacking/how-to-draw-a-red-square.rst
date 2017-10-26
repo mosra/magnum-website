@@ -20,7 +20,7 @@ How to draw a red square in Magnum --- in one statement
 The following statement creates and renders red square in Magnum. The statement
 is wrapped on four lines for better readability:
 
-.. code-block:: c++
+.. code:: c++
 
     std::get<0>(MeshTools::compile(Primitives::Square::solid(), BufferUsage::StaticDraw))
         .draw(Shaders::Flat2D{}
@@ -54,7 +54,7 @@ noting:
 The following code is the exact equivalent of the above, with explicit
 temporaries for better understanding:
 
-.. code-block:: c++
+.. code:: c++
 
     const Trade::MeshData2D meshData = Primitives::Square::solid();
 
@@ -93,7 +93,7 @@ generic meshes from imported data. In this case the preparation is very simple,
 so we can replace it with the following. Note that we need only the vertex
 buffer (the index buffer above was :cpp:`nullptr` as it was also not needed).
 
-.. code-block:: c++
+.. code:: c++
 
     constexpr const Vector2 data[] = {{ 1.0f, -1.0f},
                                       { 1.0f,  1.0f},
@@ -115,7 +115,7 @@ compatibility stuff to make it working on all supported OpenGL, OpenGL ES and
 WebGL systems. To make things simpler we will restrict our shader to GLSL 4.30
 only. Also all error checking is omitted for brevity:
 
-.. code-block:: c++
+.. code:: c++
 
     struct FlatShader: AbstractShaderProgram {
         typedef Attribute<0, Vector2> Position;
@@ -160,7 +160,7 @@ only. Also all error checking is omitted for brevity:
 The actual code is then just slightly modified to use our shader, i.e.
 :cpp:`FlatShader` instead of :dox:`Shaders::Flat2D`:
 
-.. code-block:: c++
+.. code:: c++
 
     // ...
 

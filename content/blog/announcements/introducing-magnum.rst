@@ -39,7 +39,7 @@ C++11 list-initialization and compile-time checks allow for easier and safer
 structure initialization. With :cpp:`constexpr` you can even do some limited
 vector math at compile-time.
 
-.. code-block:: c++
+.. code:: c++
 
     Int* data = new Int{2, 5, -1, 10, 0,                          /* using C++03 */
                         3, 53, -60, -27, // oops
@@ -48,7 +48,7 @@ vector math at compile-time.
     Math::Matrix<3, 5, Int> a;
     a.assignFrom(data);
 
-.. code-block:: c++
+.. code:: c++
 
     Math::Matrix<3, 5, Int> a({2, 5, -1, 10, 0},                  /* using C++11 */
                             {3, 53, -60, -27, 25},
@@ -59,7 +59,7 @@ mistakes, however you are not limited to do this at compile-time only. It is
 possible to do the equivalent in run-time, but at the cost of more verbose
 code.
 
-.. code-block:: c++
+.. code:: c++
 
     /* Shader properties using C++03 and pure OpenGL */
     const int SHADER_POSITION = 0; // three-component
@@ -80,7 +80,7 @@ code.
     glVertexAttribPointer(SHADER_TEXCOORD, 2, GL_FLOAT, GL_FALSE, 40, static_cast<GLvoid*>(offset + 24));
     glVertexAttribPointer(SHADER_WEIGHT, 2, GL_FLOAT, GL_FALSE, 40, static_cast<GLvoid*>(offset + 32)); // oops
 
-.. code-block:: c++
+.. code:: c++
 
     /* Type-safe shader definition using C++11 and Magnum */
     class Shader: public AbstractShaderProgram {
@@ -102,13 +102,13 @@ code.
 Initializer lists and user-defined literals will save you typing and avoid
 nasty mistakes with units in unobtrusive way:
 
-.. code-block:: c++
+.. code:: c++
 
     Object3D object;                                              /* using C++03 */
     object.translate(Vector3(1.5f, 0.3f, -1.0f))
         .rotate(35.0f); // this function accepts degrees, right?
 
-.. code-block:: c++
+.. code:: c++
 
     Object3D object;                                              /* using C++11 */
     object.translate({1.5f, 0.3f, -1.0f})
@@ -119,12 +119,12 @@ Strongly typed enums and type-safe :dox:`EnumSet <Containers::EnumSet>` class
 prevent hard-to-spot errors with improper enum values and enable proper IDE
 autocompletion for enumeration values, saving precious time:
 
-.. code-block:: c++
+.. code:: c++
 
     /* Using pure OpenGL, the errors are catched at run-time */
     glClear(GL_COLOR|GL_DEPTH); // oops
 
-.. code-block:: c++
+.. code:: c++
 
     /* Using C++11 and Magnum, the errors are catched at compile-time */
     framebuffer.clear(FramebufferClear::Color|FramebufferClear::Depth);
@@ -136,7 +136,7 @@ and call a function on it without any boilerplate code. You don't need to
 handle any explicit initialization and finalization, save and restore the
 previous state or bother about extension availability:
 
-.. code-block:: c++
+.. code:: c++
 
     GLint texture;                                          /* using pure OpenGL */
     glGenTextures(1, &texture);
@@ -159,7 +159,7 @@ previous state or bother about extension availability:
 
     glDeleteTextures(1, &texture);
 
-.. code-block:: c++
+.. code:: c++
 
     Texture2D texture;                                           /* using Magnum */
     texture.setStorage(4, TextureFormat::RGBA8, {256, 256});
