@@ -19,14 +19,14 @@ TAG_URL = '//blog.magnum.graphics/tag/{slug}/'
 PAGINATION_PATTERNS = [(1, '///blog.magnum.graphics/{base_name}/', '{base_name}/index.html'),
                        (2, '///blog.magnum.graphics/{base_name}/{number}/', '{base_name}/{number}/index.html')]
 
-LINKS_NAVBAR1 = [('Features', SITEURL + '/features/', []),
-                 ('Showcase', SITEURL + '/showcase/', []),
-                 ('Corrade', SITEURL + '/corrade/', [])]
+LINKS_NAVBAR1 = [('Features', SITEURL + '/features/', 'features', []),
+                 ('Showcase', SITEURL + '/showcase/', 'showcase', []),
+                 ('Corrade', SITEURL + '/corrade/', 'corrade', [])]
 
-LINKS_NAVBAR2 = [('Docs', '//doc.magnum.graphics/',
-                 [('Corrade', '//doc.magnum.graphics/corrade/'),
-                  ('Magnum', '//doc.magnum.graphics/magnum/')]),
-                ('Blog', BLOGURL, [])]
+LINKS_NAVBAR2 = [('Docs', '//doc.magnum.graphics/', '',
+                 [('Corrade', '//doc.magnum.graphics/corrade/', ''),
+                  ('Magnum', '//doc.magnum.graphics/magnum/', '')]),
+                ('Blog', BLOGURL, 'archives', [])]
 
 LINKS_FOOTER1 = [('Magnum', SITEURL + '/'),
                  ('Features', SITEURL + '/features/'),
@@ -45,8 +45,7 @@ LINKS_FOOTER3 = [('Connect', None),
                  ('Google Groups', 'https://groups.google.com/forum/#!forum/magnum-engine')]
 
 CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600%7CSource+Sans+Pro:400,400i,600&amp;subset=latin-ext',
-            STATIC_URL.format(path='inc/m-dark.css'),
-            STATIC_URL.format(path='inc/pygments-dark.css')]
+            STATIC_URL.format(path='m-dark.css')]
 
 OUTPUT_PATH = 'published/'
 
