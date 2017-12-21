@@ -17,6 +17,9 @@ AUTHOR_URL = '//blog.magnum.graphics/author/{slug}/'
 CATEGORY_URL = '//blog.magnum.graphics/{slug}/'
 TAG_URL = '//blog.magnum.graphics/tag/{slug}/'
 
+STATIC_PATHS += ['htaccess']
+EXTRA_PATH_METADATA = {'htaccess': {'path': '../.htaccess'}}
+
 # URL needs to be prepended by / because Pelican removes the first / for some
 # reason which makes the second URL look like relative to server root instead
 # of having a domain as well :/

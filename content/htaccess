@@ -1,0 +1,32 @@
+# Gzip
+AddOutputFilter DEFLATE html xml txt css js wasm
+
+# Subdomains
+RewriteEngine On
+
+# doc.magnum.graphics -> /doc
+RewriteCond %{HTTP_HOST} ^doc\.magnum\.graphics$ [NC]
+RewriteCond %{REQUEST_URI} !^/(doc|corrade-ng|magnum-ng)/
+RewriteRule ^(.+)$ /doc/$1 [QSA,L]
+
+# blog.magnum.graphics -> /blog
+RewriteCond %{HTTP_HOST} ^blog\.magnum\.graphics$ [NC]
+RewriteCond %{REQUEST_URI} !^/blog/
+RewriteRule ^(.*)$ /blog/$1 [QSA,L]
+
+# static.magnum.graphics -> /magnum/static
+RewriteCond %{HTTP_HOST} ^static\.magnum\.graphics$ [NC]
+RewriteCond %{REQUEST_URI} !^/static/
+RewriteRule ^(.*)$ /static/$1 [QSA,L]
+
+# doc.magnum.graphics/corrade-ng/ -> /corrade/
+RewriteCond %{HTTP_HOST} ^doc\.magnum\.graphics$ [NC]
+RewriteCond %{REQUEST_URI} ^/corrade-ng/
+RewriteRule ^corrade-ng/(.*)$ http://doc.magnum.graphics/corrade/$1 [R=301,QSA]
+
+# doc.magnum.graphics/magnum-ng/ -> /magnum/
+RewriteCond %{HTTP_HOST} ^doc\.magnum\.graphics$ [NC]
+RewriteCond %{REQUEST_URI} ^/magnum-ng/
+RewriteRule ^magnum-ng/(.*)$ http://doc.magnum.graphics/magnum/$1 [R=301,QSA]
+
+# kate: hl Apache
