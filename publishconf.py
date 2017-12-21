@@ -17,8 +17,11 @@ AUTHOR_URL = '//blog.magnum.graphics/author/{slug}/'
 CATEGORY_URL = '//blog.magnum.graphics/{slug}/'
 TAG_URL = '//blog.magnum.graphics/tag/{slug}/'
 
-STATIC_PATHS += ['htaccess']
-EXTRA_PATH_METADATA = {'htaccess': {'path': '../.htaccess'}}
+# htaccess is global for the whole domain
+# doc/index.html redirects from doc.magnum.graphics to doc.magnum.graphics/magnum
+STATIC_PATHS += ['doc/index.html', 'htaccess']
+EXTRA_PATH_METADATA = {'doc/index.html': {'path': '../doc/index.html'},
+                       'htaccess': {'path': '../.htaccess'}}
 
 # URL needs to be prepended by / because Pelican removes the first / for some
 # reason which makes the second URL look like relative to server root instead
