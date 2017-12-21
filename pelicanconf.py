@@ -4,6 +4,7 @@ AUTHOR = 'Vladimír Vondruš'
 M_SITE_LOGO_TEXT = 'Magnum'
 
 SITENAME = 'Magnum Engine'
+SITESUBTITLE = 'C++11/C++14 and OpenGL graphics engine'
 SITEURL = ''
 
 M_BLOG_NAME = 'Magnum Engine Blog'
