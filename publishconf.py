@@ -19,9 +19,10 @@ TAG_URL = '//blog.magnum.graphics/tag/{slug}/'
 
 # htaccess is global for the whole domain
 # doc/index.html redirects from doc.magnum.graphics to doc.magnum.graphics/magnum
-STATIC_PATHS += ['doc/index.html', 'htaccess']
+STATIC_PATHS += ['doc/index.html', 'htaccess', '../m.css/css/m-dark.doxygen.compiled.css']
 EXTRA_PATH_METADATA = {'doc/index.html': {'path': '../doc/index.html'},
-                       'htaccess': {'path': '../.htaccess'}}
+                       'htaccess': {'path': '../.htaccess'},
+                       '../m.css/css/m-dark.doxygen.compiled.css': {'path': 'm-dark.doxygen.compiled.css'}}
 
 # URL needs to be prepended by / because Pelican removes the first / for some
 # reason which makes the second URL look like relative to server root instead
