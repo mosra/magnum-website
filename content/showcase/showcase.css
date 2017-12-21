@@ -3,7 +3,7 @@
    #wrapper           does aspect ratio preservation
    #listener          snaps to #wrapper edges
    #listener::before  does the border, which finally goes below the canvas */
-#m-container-inflatable > .m-row > [class*='m-col-'] > #wrapper3 {
+.m-container-inflatable > .m-row > [class*='m-col-'] > #wrapper3 {
   margin: 1rem -1rem 1rem -1rem;
 }
 #wrapper2 {
@@ -34,7 +34,7 @@
   border-style: solid;
   border-width: 0.125rem;
   border-radius: 0.2rem;
-  border-color: var(--line-color);
+  border-color: #405363 /*var(--line-color)*/;
 }
 
 #module {
