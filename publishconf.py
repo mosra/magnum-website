@@ -36,4 +36,6 @@ FEED_ALL_ATOM_URL = '//blog.magnum.graphics/feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'blog/feeds/%s.atom.xml'
 CATEGORY_FEED_ATOM_URL = '//blog.magnum.graphics/feeds/%s.atom.xml'
 
+FEED_MAX_ITEMS = 10
+
 DELETE_OUTPUT_DIRECTORY = True
