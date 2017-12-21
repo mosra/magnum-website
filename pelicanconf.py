@@ -1,13 +1,13 @@
 AUTHOR = 'Vladimír Vondruš'
 
-#SITE_LOGO = 'gr/logo.png'
-SITE_LOGO_TEXT = 'Magnum'
+#M_SITE_LOGO = 'gr/logo.png'
+M_SITE_LOGO_TEXT = 'Magnum'
 
 SITENAME = 'Magnum Engine'
 SITEURL = ''
 
-BLOGNAME = 'Magnum Engine Blog'
-BLOGURL = 'blog/'
+M_BLOG_NAME = 'Magnum Engine Blog'
+M_BLOG_URL = 'blog/'
 
 PATH = 'content'
 ARTICLE_PATHS = ['blog']
@@ -52,39 +52,40 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-LINKS_NAVBAR1 = [('Features', SITEURL + '/features/', 'features', []),
-                 ('Showcase', SITEURL + '/showcase/', 'showcase', []),
-                 ('Corrade', SITEURL + '/corrade/', 'corrade', [])]
+M_LINKS_NAVBAR1 = [('Features', 'features/', 'features', []),
+                   ('Showcase', 'showcase/', 'showcase', []),
+                   ('Corrade', 'corrade/', 'corrade', [])]
 
-LINKS_NAVBAR2 = [('Docs', '//doc.magnum.graphics/', '',
-                 [('Corrade', '//doc.magnum.graphics/corrade/', ''),
-                  ('Magnum', '//doc.magnum.graphics/magnum/', '')]),
-                ('Blog', BLOGURL, '[blog]', [])]
+M_LINKS_NAVBAR2 = [('Docs', '//doc.magnum.graphics/', '', [
+                        ('Getting started', '//doc.magnum.graphics/magnum/getting-started.html', ''),
+                        ('Corrade', '//doc.magnum.graphics/corrade/', ''),
+                        ('Magnum', '//doc.magnum.graphics/magnum/', '')]),
+                   ('Blog', M_BLOG_URL, '[blog]', [])]
 
-LINKS_FOOTER1 = [('Magnum', SITEURL + '/'),
-                 ('Features', SITEURL + '/features/'),
-                 ('Showcase', SITEURL + '/showcase/'),
-                 ('Corrade', SITEURL + '/corrade/')]
+M_LINKS_FOOTER1 = [('Magnum', '/'),
+                   ('Features', 'features/'),
+                   ('Showcase', 'showcase/'),
+                   ('Corrade', 'corrade/')]
 
-LINKS_FOOTER2 = [('Docs', '//doc.magnum.graphics/'),
-                 ('Getting Started', '//doc.magnum.graphics/magnum/getting-started.html'),
-                 ('Corrade', '//doc.magnum.graphics/corrade/'),
-                 ('Magnum', '//doc.magnum.graphics/magnum/')]
+M_LINKS_FOOTER2 = [('Docs', '//doc.magnum.graphics/'),
+                   ('Getting started', '//doc.magnum.graphics/magnum/getting-started.html'),
+                   ('Corrade', '//doc.magnum.graphics/corrade/'),
+                   ('Magnum', '//doc.magnum.graphics/magnum/')]
 
-LINKS_FOOTER3 = [('Connect', None),
-                 ('Blog feed', BLOGURL + '/feeds/all.atom.xml'),
-                 ('GitHub', 'https://github.com/mosra/magnum'),
-                 ('Gitter', 'https://gitter.im/mosra/magnum'),
-                 ('Google Groups', 'https://groups.google.com/forum/#!forum/magnum-engine')]
+M_LINKS_FOOTER3 = [('Connect', None),
+                   ('Blog feed', M_BLOG_URL + '/feeds/all.atom.xml'),
+                   ('GitHub', 'https://github.com/mosra/magnum'),
+                   ('Gitter', 'https://gitter.im/mosra/magnum'),
+                   ('Google Groups', 'https://groups.google.com/forum/#!forum/magnum-engine')]
 
-CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600%7CSource+Sans+Pro:400,400i,600&amp;subset=latin-ext',
-            STATIC_URL.format(path='m-dark.css')]
+M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600%7CSource+Sans+Pro:400,400i,600,600i&amp;subset=latin-ext',
+               STATIC_URL.format(path='m-dark.css')]
 
-FINE_PRINT = """
+M_FINE_PRINT = """
 Magnum Engine. Copyright © Vladimír Vondruš 2010-2017. Site powered by
 `Pelican <https://getpelican.com>`_ and `m.css <http://mcss.mosra.cz>`_.
 Contact the author via `e-mail <mosra@centrum.cz>`_,
-:abbr:`Jabber (mosra@jabbim.cz)`, `Twitter <https://twitter.com/czmosra>`_ or
+:abbr:`Jabber <mosra@jabbim.cz>`, `Twitter <https://twitter.com/czmosra>`_ or
 smoke signals.
 """
 
@@ -94,7 +95,8 @@ STATIC_PATHS = ['img', 'gr', 'showcase']
 EXTRA_PATH_METADATA = {'gr/favicon.ico': {'path', 'favicon.ico'}}
 
 PLUGIN_PATHS = ['m.css/pelican-plugins']
-PLUGINS = ['m.code',
+PLUGINS = ['m.abbr',
+           'm.code',
            'm.components',
            'm.dox',
            'm.gh',
@@ -102,9 +104,10 @@ PLUGINS = ['m.code',
            'm.htmlsanity',
            'm.images']
 
-THEME = 'm.css/pelican-theme'
+THEME = 'm.css/pelican-theme/'
 THEME_STATIC_DIR = 'static/'
-THEME_COLOR = '#22272e'
+
+M_THEME_COLOR = '#22272e'
 
 M_HTMLSANITY_SMART_QUOTES = True
 M_HTMLSANITY_HYPHENATION = True
