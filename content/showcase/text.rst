@@ -2,6 +2,7 @@ Text example
 ############
 
 :css: {filename}/showcase/showcase.css
+:breadcrumb: {filename}/showcase.rst Showcase
 
 Showcase of Magnum distance-field text rendering. Instead of rendering the
 glyphs for each size the glyphs are prerendered and converted into signed

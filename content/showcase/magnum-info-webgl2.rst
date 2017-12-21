@@ -2,6 +2,7 @@ Magnum WebGL 2 Info
 ###################
 
 :css: {filename}/showcase/showcase.css
+:breadcrumb: {filename}/showcase.rst Showcase
 
 Displays various information about Magnum and the WebGL implementation it's
 running on. As with the command-line :dox:`magnum-info` utility, it's possible

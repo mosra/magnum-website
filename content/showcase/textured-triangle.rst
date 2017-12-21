@@ -2,6 +2,7 @@ Textured triangle example
 #########################
 
 :css: {filename}/showcase/showcase.css
+:breadcrumb: {filename}/showcase.rst Showcase
 
 This example is just slightly more complicated version of the
 `basic triangle example <{filename}/showcase/triangle.rst>`_. It uses a TGA

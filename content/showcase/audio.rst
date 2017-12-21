@@ -2,6 +2,7 @@ Audio example
 #############
 
 :css: {filename}/showcase/showcase.css
+:breadcrumb: {filename}/showcase.rst Showcase
 
 Shows how to play spatialized audio with Magnum. The audio scene includes a 3D
 sound source and a (default) listener, which are visualized as a sphere and a

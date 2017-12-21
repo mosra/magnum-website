@@ -2,6 +2,7 @@ Triangle example
 ################
 
 :css: {filename}/showcase/showcase.css
+:breadcrumb: {filename}/showcase.rst Showcase
 
 So-called *Hello World* of 3D graphics. Displays simple triangle with different
 colors for each vertex, which are interpolated over the triangle area using

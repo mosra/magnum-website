@@ -2,6 +2,7 @@ Viewer example
 ##############
 
 :css: {filename}/showcase/showcase.css
+:breadcrumb: {filename}/showcase.rst Showcase
 
 This is simply an viewer for 3D scene files, such as OpenGEX or COLLADA ones.
 Only triangle meshes with Phong shading with optional diffuse texture are

@@ -2,6 +2,7 @@ Primitives example
 ##################
 
 :css: {filename}/showcase/showcase.css
+:breadcrumb: {filename}/showcase.rst Showcase
 
 Shows how to use builtin primitives and do simple input handling. Displays
 colored cube which can be rotated using mouse.
