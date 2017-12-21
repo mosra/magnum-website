@@ -41,7 +41,7 @@ on a module system, but it is not usable for C++ yet.
 
 If you are using CMake with Makefile generator for your project, you can use it
 to generate just the preprocessed file so you can examine preprocessed line
-count for each source file -- just append ``.i`` to name of source file. Then
+count for each source file --- just append ``.i`` to name of source file. Then
 you can try removing some :cpp:`#include`\ s to bisect the big ones.
 
 ::
@@ -248,7 +248,7 @@ For headers it's often good to split the header into smaller ones with less
 dependencies, but for source files it's better to combine more of them into
 one, as the compiler then needs to preprocess the included headers only once
 instead of more times. Be aware that this is double-edged sword and it will
-hurt iteration times -- recompiling whole huge file after small change would
+hurt iteration times --- recompiling whole huge file after small change would
 take much longer than rebuilding only small one. Also the compile time
 reduction is not as significant as when optimizing widely-used header file.
 Magnum uses this approach for template instantiation files, the merging
