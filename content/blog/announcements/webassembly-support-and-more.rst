@@ -186,7 +186,7 @@ done with the browser apps as well. Just pass the arguments as URL GET
 parameters. Only long named arguments and boolean options are supported. For
 example, having the URL as
 
-.. code:: txt
+::
 
     /my-app/?enable-msaa&magnum-disable-extensions=GL_OES_vertex_array_object GL_EXT_texture_filter_anisotropic
 
