@@ -43,7 +43,12 @@ PAGINATION_PATTERNS = [(1, '{base_name}/', '{base_name}/index.html'),
 TIMEZONE = 'Europe/Prague'
 
 DEFAULT_LANG = 'en'
-DATE_FORMATS = {'en': ('en_US.UTF-8', '%b %d, %Y')}
+
+import platform
+if platform.system() == 'Windows':
+    DATE_FORMATS = {'en': ('usa', '%b %d, %Y')}
+else:
+    DATE_FORMATS = {'en': ('en_US.UTF-8', '%b %d, %Y')}
 
 FEED_ATOM = None
 FEED_ALL_ATOM = None
