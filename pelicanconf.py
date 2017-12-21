@@ -87,7 +87,7 @@ M_LINKS_FOOTER3 = [('Connect', None),
                    ('Google Groups', 'https://groups.google.com/forum/#!forum/magnum-engine')]
 
 M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600%7CSource+Sans+Pro:400,400i,600,600i&amp;subset=latin-ext',
-               STATIC_URL.format(path='m-dark.css')]
+               'static/m-dark.css']
 
 M_FINE_PRINT = """
 Magnum Engine. Copyright © Vladimír Vondruš 2010-2017. Site powered by
