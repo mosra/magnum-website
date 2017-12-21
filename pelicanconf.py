@@ -37,7 +37,6 @@ AUTHORS_SAVE_AS = None # Not used
 CATEGORIES_SAVE_AS = None # Not used
 TAGS_SAVE_AS = None # Not used
 
-# Not sure why the slash needs to be twice
 PAGINATION_PATTERNS = [(1, '{base_name}/', '{base_name}/index.html'),
                        (2, '{base_name}/{number}/', '{base_name}/{number}/index.html')]
 
