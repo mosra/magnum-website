@@ -32,8 +32,8 @@ they are still loaded automatically from the main ``*.js`` file), and
 everything else stays the same as with the classic `asm.js <http://asmjs.org/>`_
 compilation.
 
-`But how?`_
-===========
+But how?
+========
 
 If you pull latest revisions of Magnum repositories, building for WebAssembly
 instead of asm.js is just a matter of specifying different toolchain ---
@@ -261,7 +261,3 @@ and improvements in my buffer, so expect another blog post later!
     Due to time constraints, I was not yet able to update all relevant info on
     the website, so it still advertises NaCl support and other fake news. I'll
     get around to do that later. Sorry for the mess.
-
-.. todo:
-    -   .htaccess to compress
-    -   update doxygen!!
