@@ -47,7 +47,7 @@ self-hosted forum.
 
 I added text rendering example to showcase new features such as text alignment
 and multi-line text, in addition to already existing distance-field rendering
-capabilities. See `showcase page <{filename}/pages/showcase.rst>`_ for live
+capabilities. See `showcase page <{filename}/showcase.rst>`_ for live
 application running on both Emscripten and Native Client. I also added live
 Textured Triangle example.
 

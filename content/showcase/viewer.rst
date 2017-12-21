@@ -1,8 +1,6 @@
 Viewer example
 ##############
 
-:save_as: showcase/viewer/index.html
-:url: showcase/viewer/
 :css: {filename}/showcase/showcase.css
 
 This is simply an viewer for 3D scene files, such as OpenGEX or COLLADA ones.
@@ -20,10 +18,8 @@ currently supported.
       <canvas id="module"></canvas>
       <div id="status">Initialization...</div>
       <div id="status-description"></div>
+      <script async="async" src="{filename}/showcase/viewer/magnum-viewer.js"></script>
       <script src="{filename}/showcase/EmscriptenApplication.js"></script>
-      <script async="async" src="magnum-viewer.js"></script>
-      <!-- pelican:attach src="{attach}/showcase/viewer/magnum-viewer.js" -->
-      <!-- pelican:attach src="{attach}/showcase/viewer/magnum-viewer.wasm" -->
     </div></div></div></div>
 
 .. block-warning:: Doesn't work?
@@ -31,8 +27,8 @@ currently supported.
     This example requires `WebAssembly <http://webassembly.org/>`_-capable
     browser with WebGL 1 enabled. If you see a black rectangle instead of a
     live example, the browser console might show some details about the error.
-    See the `Showcase <{filename}/pages/showcase.rst>`_ page for more
-    information; you can also report a bug either for the
+    See the `Showcase <{filename}/showcase.rst>`_ page for more information;
+    you can also report a bug either for the
     :gh:`example itself <mosra/magnum-examples>` or
     :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
 

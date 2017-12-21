@@ -1,8 +1,6 @@
 Triangle example
 ################
 
-:save_as: showcase/triangle/index.html
-:url: showcase/triangle/
 :css: {filename}/showcase/showcase.css
 
 So-called *Hello World* of 3D graphics. Displays simple triangle with different
@@ -15,10 +13,8 @@ minimal possible amount of code.
       <canvas id="module"></canvas>
       <div id="status">Initialization...</div>
       <div id="status-description"></div>
+      <script async="async" src="{filename}/showcase/triangle/magnum-triangle.js"></script>
       <script src="{filename}/showcase/EmscriptenApplication.js"></script>
-      <script async="async" src="magnum-triangle.js"></script>
-      <!-- pelican:attach src="{attach}/showcase/triangle/magnum-triangle.js" -->
-      <!-- pelican:attach src="{attach}/showcase/triangle/magnum-triangle.wasm" -->
     </div></div></div></div>
 
 .. block-warning:: Doesn't work?
@@ -26,12 +22,12 @@ minimal possible amount of code.
     This example requires `WebAssembly <http://webassembly.org/>`_-capable
     browser with WebGL 1 enabled, but if you don't have a WebAssembly-capable
     browser, you can try to run the classic
-    `asm.js version <{filename}/pages/showcase/triangle-asmjs.rst>`_ instead.
-    If you see a black rectangle instead of a live example, the browser console
-    might show some details about the error. See the
-    `Showcase <{filename}/pages/showcase.rst>`_ page for more information; you
-    can also report a bug either for the :gh:`example itself <mosra/magnum-examples>`
-    or :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
+    `asm.js version <{filename}/showcase/triangle-asmjs.rst>`_ instead. If you
+    see a black rectangle instead of a live example, the browser console might
+    show some details about the error. See the `Showcase <{filename}/showcase.rst>`_
+    page for more information; you can also report a bug either for the
+    :gh:`example itself <mosra/magnum-examples>` or
+    :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
 
 .. block-info:: Source code and documentation
 

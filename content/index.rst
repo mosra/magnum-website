@@ -83,8 +83,8 @@ Features
 -   Pre-made shaders, primitives and other tools for easy prototyping and
     debugging.
 
-See `complete feature list <{filename}/pages/features.rst>`_ for more
-information. You might want to read also
+See `complete feature list <{filename}/features.rst>`_ for more information.
+You might want to read also
 `official project announcement <{filename}/blog/announcements/introducing-magnum.rst>`_
 or notes from latest `May 2015 release <{filename}/blog/announcements/may-2015-updates.rst>`_.
 
@@ -106,8 +106,7 @@ Showcase
 
 Magnum is currently used in two small games (one of which is still unannounced)
 and the functionality is demonstrated in various examples. See
-`showcase page <{filename}/pages/showcase.rst>`_ for images and live
-applications.
+`showcase page <{filename}/showcase.rst>`_ for images and live applications.
 
 Getting started
 ===============

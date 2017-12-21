@@ -7,8 +7,8 @@ WebAssembly support in Magnum --- and more
 :tags: C++, CMake, NaCl, Emscripten, WebAssembly, WebGL
 :summary: Along with dropped support for NaCl, Magnum now has first-class
     WebAssembly support. I also took this opportunity to overhaul the outdated
-    `Showcase <{filename}/pages/showcase.rst>`_ page with WebAssembly builds
-    and there is a bunch more Emscripten-related goodies all over the place!
+    `Showcase <{filename}/showcase.rst>`_ page with WebAssembly builds and
+    there is a bunch more Emscripten-related goodies all over the place!
 
 .. role:: cmake(code)
     :language: cmake
@@ -81,9 +81,9 @@ The most exciting about WebAssembly and web things in general is that you
 don't have to get up from your computer, go to the app store across the street
 and tell them to download and install a new app on your machine. WebAssembly
 demos are just one click away --- head over to the fully reworked
-`Showcase <{filename}/pages/showcase.rst>`_ page! Apart from all examples that
-were already ported to Emscripten and now they are just recompiled in
-WebAssembly, there is also a fresh port of the Audio example:
+`Showcase <{filename}/showcase.rst>`_ page! Apart from all examples that were
+already ported to Emscripten and now they are just recompiled in WebAssembly,
+there is also a fresh port of the Audio example:
 
 .. container:: m-row
 
@@ -92,7 +92,7 @@ WebAssembly, there is also a fresh port of the Audio example:
         .. figure:: {filename}/showcase/audio/screenshot.png
             :alt: Audio example screenshot
             :figclass: m-figure m-fullwidth
-            :target: {filename}/pages/showcase/audio.rst
+            :target: {filename}/showcase/audio.rst
 
             Audio example
 
@@ -149,14 +149,14 @@ also makes the Magnum Info utilities finally available on the web:
         .. figure:: {filename}/showcase/magnum-info/screenshot.png
             :alt: Magnum Info screenshot
             :figclass: m-figure m-fullwidth
-            :target: {filename}/pages/showcase/magnum-info.rst
+            :target: {filename}/showcase/magnum-info.rst
 
             Magnum Info
 
             Text utility printing out various information about Magnum and
             the OpenGL / WebGL implementation it's running on. Versions for
-            `WebGL 1 <{filename}/pages/showcase/magnum-info.rst>`__ and
-            `WebGL 2 <{filename}/pages/showcase/magnum-info-webgl2.rst>`__ are
+            `WebGL 1 <{filename}/showcase/magnum-info.rst>`__ and
+            `WebGL 2 <{filename}/showcase/magnum-info-webgl2.rst>`__ are
             available.
 
     .. container:: m-col-m-6
@@ -164,7 +164,7 @@ also makes the Magnum Info utilities finally available on the web:
         .. figure:: {filename}/showcase/magnum-al-info/screenshot.png
             :alt: Magnum AL Info screenshot
             :figclass: m-figure m-fullwidth
-            :target: {filename}/pages/showcase/magnum-al-info.rst
+            :target: {filename}/showcase/magnum-al-info.rst
 
             Magnum AL Info
 
@@ -212,7 +212,7 @@ step was applied to the generated JS file to minify it. Compressing the data
 makes the difference even smaller --- there's simply the same amount of
 information, just encoded differently. Here's a table showing size of the
 generated ``*.js`` and ``*.js.mem`` / ``*.wasm`` files for the
-`Triangle example <{filename}/pages/showcase/triangle.rst>`_:
+`Triangle example <{filename}/showcase/triangle.rst>`_:
 
 .. class:: m-table m-center-t
 

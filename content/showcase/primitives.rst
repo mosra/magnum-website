@@ -1,8 +1,6 @@
 Primitives example
 ##################
 
-:save_as: showcase/primitives/index.html
-:url: showcase/primitives/
 :css: {filename}/showcase/showcase.css
 
 Shows how to use builtin primitives and do simple input handling. Displays
@@ -19,10 +17,8 @@ colored cube which can be rotated using mouse.
       <canvas id="module"></canvas>
       <div id="status">Initialization...</div>
       <div id="status-description"></div>
+      <script async="async" src="{filename}/showcase/primitives/magnum-primitives.js"></script>
       <script src="{filename}/showcase/EmscriptenApplication.js"></script>
-      <script async="async" src="magnum-primitives.js"></script>
-      <!-- pelican:attach src="{attach}/showcase/primitives/magnum-primitives.js" -->
-      <!-- pelican:attach src="{attach}/showcase/primitives/magnum-primitives.wasm" -->
     </div></div></div></div>
 
 .. block-warning:: Doesn't work?
@@ -30,8 +26,8 @@ colored cube which can be rotated using mouse.
     This example requires `WebAssembly <http://webassembly.org/>`_-capable
     browser with WebGL 1 enabled. If you see a black rectangle instead of a
     live example, the browser console might show some details about the error.
-    See the `Showcase <{filename}/pages/showcase.rst>`_ page for more
-    information; you can also report a bug either for the
+    See the `Showcase <{filename}/showcase.rst>`_ page for more information;
+    you can also report a bug either for the
     :gh:`example itself <mosra/magnum-examples>` or
     :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
 

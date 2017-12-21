@@ -4,10 +4,10 @@ Showcase
 Demos and examples on this page require `WebAssembly <http://webassembly.org/>`_-enabled
 browser with at least WebGL 1 working. All recent versions of major browsers
 should work, see the `introductory blog post <{filename}/blog/announcements/webassembly-support-and-more.rst>`__
-for more information. You can also use the `Magnum Info <{filename}/pages/showcase/magnum-info.rst>`_
+for more information. You can also use the `Magnum Info <{filename}/showcase/magnum-info.rst>`_
 utility to see if your browser is capable of running the demos; if you are
 unlucky and your browser isn't, you can at least try `asm.js <http://asmjs.org/>`_
-version of the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`_.
+version of the `Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
 
 .. block-info:: Spotted a bug?
 
@@ -28,7 +28,7 @@ version of the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`
 
         .. figure:: {filename}/showcase/push-the-box/screenshot.png
             :figclass: m-figure m-fullwidth
-            :target: {filename}/pages/showcase/push-the-box.rst
+            :target: {filename}/showcase/push-the-box.rst
 
             Push the Box
 
@@ -44,7 +44,7 @@ version of the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`
         .. figure:: {filename}/showcase/audio/screenshot.png
             :alt: Audio example screenshot
             :figclass: m-figure m-fullwidth
-            :target: {filename}/pages/showcase/audio.rst
+            :target: {filename}/showcase/audio.rst
 
             Audio example
 
@@ -56,7 +56,7 @@ version of the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`
         .. figure:: {filename}/showcase/viewer/screenshot.png
             :alt: Viewer example screenshot
             :figclass: m-figure m-fullwidth
-            :target: {filename}/pages/showcase/viewer.rst
+            :target: {filename}/showcase/viewer.rst
 
             Viewer example
 
@@ -70,7 +70,7 @@ version of the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`
         .. figure:: {filename}/showcase/primitives/screenshot.png
             :alt: Primitives example screenshot
             :figclass: m-figure m-fullwidth
-            :target: {filename}/pages/showcase/primitives.rst
+            :target: {filename}/showcase/primitives.rst
 
             Primitives example
 
@@ -82,7 +82,7 @@ version of the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`
         .. figure:: {filename}/showcase/text/screenshot.png
             :alt: Text example screenshot
             :figclass: m-figure m-fullwidth
-            :target: {filename}/pages/showcase/text.rst
+            :target: {filename}/showcase/text.rst
 
             Text example
 
@@ -97,20 +97,20 @@ version of the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`
         .. figure:: {filename}/showcase/triangle/screenshot.png
             :alt: Triangle example screenshot
             :figclass: m-figure m-fullwidth
-            :target: {filename}/pages/showcase/triangle.rst
+            :target: {filename}/showcase/triangle.rst
 
             Triangle example
 
             Displays simple triangle with interpolated colors. For the unlucky,
-            an `asm.js version <{filename}/pages/showcase/triangle-asmjs.rst>`__
-            that doesn't require WebAssembly-capable browser is also available.
+            an `asm.js version <{filename}/showcase/triangle-asmjs.rst>`__ that
+            doesn't require WebAssembly-capable browser is also available.
 
     .. container:: m-col-m-6
 
         .. figure:: {filename}/showcase/textured-triangle/screenshot.png
             :alt: Textured triangle example screenshot
             :figclass: m-figure m-fullwidth
-            :target: {filename}/pages/showcase/textured-triangle.rst
+            :target: {filename}/showcase/textured-triangle.rst
 
             Textured triangle example
 
@@ -125,14 +125,14 @@ version of the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`
         .. figure:: {filename}/showcase/magnum-info/screenshot.png
             :alt: Magnum Info screenshot
             :figclass: m-figure m-fullwidth
-            :target: {filename}/pages/showcase/magnum-info.rst
+            :target: {filename}/showcase/magnum-info.rst
 
             Magnum Info
 
             Text utility printing out various information about Magnum and
             the OpenGL / WebGL implementation it's running on. Versions for
-            `WebGL 1 <{filename}/pages/showcase/magnum-info.rst>`__ and
-            `WebGL 2 <{filename}/pages/showcase/magnum-info-webgl2.rst>`__ are
+            `WebGL 1 <{filename}/showcase/magnum-info.rst>`__ and
+            `WebGL 2 <{filename}/showcase/magnum-info-webgl2.rst>`__ are
             available.
 
     .. container:: m-col-m-6
@@ -140,7 +140,7 @@ version of the `Triangle example <{filename}/pages/showcase/triangle-asmjs.rst>`
         .. figure:: {filename}/showcase/magnum-al-info/screenshot.png
             :alt: Magnum AL Info screenshot
             :figclass: m-figure m-fullwidth
-            :target: {filename}/pages/showcase/magnum-al-info.rst
+            :target: {filename}/showcase/magnum-al-info.rst
 
             Magnum AL Info
 

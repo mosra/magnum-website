@@ -1,8 +1,6 @@
 Magnum AL Info
 ##############
 
-:save_as: showcase/magnum-al-info/index.html
-:url: showcase/magnum-al-info/
 :css: {filename}/showcase/showcase.css
 
 Displays various information about Magnum and the OpenAL implementation it's
@@ -20,10 +18,8 @@ you:
       <pre id="log"></pre>
       <div id="status">Initialization...</div>
       <div id="status-description"></div>
+      <script async="async" src="{filename}/showcase/magnum-al-info/magnum-al-info.js"></script>
       <script src="{filename}/showcase/WindowlessEmscriptenApplication.js"></script>
-      <script async="async" src="magnum-al-info.js"></script>
-      <!-- pelican:attach src="{attach}/showcase/magnum-al-info/magnum-al-info.js" -->
-      <!-- pelican:attach src="{attach}/showcase/magnum-al-info/magnum-al-info.wasm" -->
     </div></div></div></div>
 
 .. block-warning:: Doesn't work?
@@ -31,8 +27,8 @@ you:
     This example requires `WebAssembly <http://webassembly.org/>`_-capable
     browser. If you see a blank space instead of the output, the browser
     console might show some details about the error. See the
-    `Showcase <{filename}/pages/showcase.rst>`_ page for more information; you
-    can also report a bug either for the :gh:`utility itself <mosra/magnum>` or
+    `Showcase <{filename}/showcase.rst>`_ page for more information; you can
+    also report a bug either for the :gh:`utility itself <mosra/magnum>` or
     :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
 
 .. block-info:: Documentation

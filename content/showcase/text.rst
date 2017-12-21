@@ -1,8 +1,6 @@
 Text example
 ############
 
-:save_as: showcase/text/index.html
-:url: showcase/text/
 :css: {filename}/showcase/showcase.css
 
 Showcase of Magnum distance-field text rendering. Instead of rendering the
@@ -21,10 +19,8 @@ text, buffer mapping is used.
       <canvas id="module"></canvas>
       <div id="status">Initialization...</div>
       <div id="status-description"></div>
+      <script async="async" src="{filename}/showcase/text/magnum-text.js"></script>
       <script src="{filename}/showcase/EmscriptenApplication.js"></script>
-      <script async="async" src="magnum-text.js"></script>
-      <!-- pelican:attach src="{attach}/showcase/text/magnum-text.js" -->
-      <!-- pelican:attach src="{attach}/showcase/text/magnum-text.wasm" -->
     </div></div></div></div>
 
 .. block-warning:: Doesn't work?
@@ -32,8 +28,8 @@ text, buffer mapping is used.
     This example requires `WebAssembly <http://webassembly.org/>`_-capable
     browser with WebGL 1 enabled. If you see a black rectangle instead of a
     live example, the browser console might show some details about the error.
-    See the `Showcase <{filename}/pages/showcase.rst>`_ page for more
-    information; you can also report a bug either for the
+    See the `Showcase <{filename}/showcase.rst>`_ page for more information;
+    you can also report a bug either for the
     :gh:`example itself <mosra/magnum-examples>` or
     :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
 

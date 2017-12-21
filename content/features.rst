@@ -2,7 +2,7 @@ Features
 ########
 
 Nearly exhaustive feature list of Magnum graphics engine, including notable
-features provided by `Corrade utility library <{filename}/pages/corrade.rst>`_.
+features provided by `Corrade utility library <{filename}/corrade.rst>`_.
 
 Architecture
 ============

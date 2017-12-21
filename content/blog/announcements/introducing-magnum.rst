@@ -229,7 +229,7 @@ More features
 -------------
 
 There are many more things worth mentioning, you can read through the
-`nearly exhaustive feature list <{filename}/pages/features.rst>`_ for more
+`nearly exhaustive feature list <{filename}/features.rst>`_ for more
 information. The `project page <{index}>`_ contains also rationale and design
 goals.
 
@@ -251,8 +251,7 @@ will suit all imaginable use cases.
 
 Magnum is currently used in one small game and one bigger, yet unnanounced one
 and the functionality is demonstrated in various examples. See
-`showcase page <{filename}/pages/showcase.rst>`_ for images and live
-applications.
+`showcase page <{filename}/showcase.rst>`_ for images and live applications.
 
 .. image:: {filename}/img/push-the-box.png
     :alt: Push The Box

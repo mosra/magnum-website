@@ -110,7 +110,7 @@ New features
 ------------
 
 -   Initial Emscripten (HTML5/WebGL) port. See :dox:`Platform::Sdl2Application`
-    for detailed porting information. The `showcase page <{filename}/pages/showcase.rst>`_
+    for detailed porting information. The `showcase page <{filename}/showcase.rst>`_
     has now online Emscripten demos, see also
     :gh:`base-emscripten <mosra/magnum-bootstrap$base-emscripten>` branch in
     Magnum Bootstrap.

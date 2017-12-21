@@ -12,8 +12,11 @@ M_BLOG_URL = 'blog/'
 
 PATH = 'content'
 ARTICLE_PATHS = ['blog']
-PAGE_PATHS = ['pages']
 
+PAGE_PATHS = ['']
+PAGE_EXCLUDES = ['doc', 'img']
+
+STATIC_PATHS = ['img', 'showcase']
 STATIC_URL = 'static/{path}'
 STATIC_SAVE_AS = 'static/{path}'
 
@@ -22,10 +25,10 @@ PAGE_SAVE_AS = '{slug}/index.html'
 
 ARCHIVES_URL = 'blog/'
 ARCHIVES_SAVE_AS = 'blog/index.html'
-ARTICLE_URL = 'blog/{category}/{slug}/'
-ARTICLE_SAVE_AS = 'blog/{category}/{slug}/index.html'
-DRAFT_URL = 'blog/draft/{slug}/'
-DRAFT_SAVE_AS = 'blog/draft/{slug}/index.html'
+ARTICLE_URL = '{slug}/' # blog/category/ is part of the slug
+ARTICLE_SAVE_AS = '{slug}/index.html'
+DRAFT_URL = '{slug}-draft/'
+DRAFT_SAVE_AS = '{slug}-draft/index.html'
 AUTHOR_URL = 'blog/author/{slug}/'
 AUTHOR_SAVE_AS = 'blog/author/{slug}/index.html'
 CATEGORY_URL = 'blog/{slug}/'
@@ -96,8 +99,6 @@ smoke signals.
 
 DEFAULT_PAGINATION = 10
 
-STATIC_PATHS = ['img', 'showcase']
-
 PLUGIN_PATHS = ['m.css/pelican-plugins']
 PLUGINS = ['m.abbr',
            'm.code',
@@ -124,4 +125,5 @@ DIRECT_TEMPLATES = ['archives']
 PAGINATED_DIRECT_TEMPLATES = ['archives']
 
 SLUGIFY_SOURCE = 'basename'
+PATH_METADATA = '(?P<slug>.+).rst'
 SLUG_SUBSTITUTIONS = [('C++', 'cpp')]

@@ -1,3 +1,10 @@
+/* Patched version of the upstream Magnum driver code in order to support
+   having extra files on another domain. Be careful when updating. The module
+   <script> tag has to be *right before* this one for the following to work. */
+var scripts = document.getElementsByTagName('script');
+var moduleSrc = scripts[scripts.length - 2].src;
+var moduleBaseDir = moduleSrc.substr(0, moduleSrc.lastIndexOf('/') + 1);
+
 var Module = {
     preRun: [],
     postRun: [],
@@ -11,6 +18,8 @@ var Module = {
     print: function(message) {
         console.log(Array.prototype.slice.call(arguments).join(' '));
     },
+
+    locateFile: function(url) { return moduleBaseDir + url; },
 
     canvas: document.getElementById('module'),
 
