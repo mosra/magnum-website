@@ -1,4 +1,4 @@
-Audio example
+Audio Example
 #############
 
 :css: {filename}/showcase/showcase.css

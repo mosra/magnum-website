@@ -1,4 +1,4 @@
-Triangle example
+Triangle Example
 ################
 
 :css: {filename}/showcase/showcase.css

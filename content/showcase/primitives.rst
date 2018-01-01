@@ -1,4 +1,4 @@
-Primitives example
+Primitives Example
 ##################
 
 :css: {filename}/showcase/showcase.css

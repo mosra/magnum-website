@@ -1,4 +1,4 @@
-Viewer example
+Viewer Example
 ##############
 
 :css: {filename}/showcase/showcase.css

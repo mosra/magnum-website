@@ -1,4 +1,4 @@
-Textured triangle example
+Textured Triangle Example
 #########################
 
 :css: {filename}/showcase/showcase.css

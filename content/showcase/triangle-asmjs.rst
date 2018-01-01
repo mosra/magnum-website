@@ -1,4 +1,4 @@
-Triangle example (asm.js)
+Triangle Example (asm.js)
 #########################
 
 :css: {filename}/showcase/showcase.css

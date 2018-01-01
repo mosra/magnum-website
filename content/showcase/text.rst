@@ -1,4 +1,4 @@
-Text example
+Text Example
 ############
 
 :css: {filename}/showcase/showcase.css
