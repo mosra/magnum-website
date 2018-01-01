@@ -2,6 +2,7 @@ Primitives Example
 ##################
 
 :css: {filename}/showcase/showcase.css
+:highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
 Shows how to use builtin primitives and do simple input handling. Displays

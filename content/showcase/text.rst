@@ -2,6 +2,7 @@ Text Example
 ############
 
 :css: {filename}/showcase/showcase.css
+:highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
 Showcase of Magnum distance-field text rendering. Instead of rendering the

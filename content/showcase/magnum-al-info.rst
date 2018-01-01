@@ -2,6 +2,7 @@ Magnum AL Info
 ##############
 
 :css: {filename}/showcase/showcase.css
+:highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
 Displays various information about Magnum and the OpenAL implementation it's

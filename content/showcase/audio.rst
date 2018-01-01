@@ -2,6 +2,7 @@ Audio Example
 #############
 
 :css: {filename}/showcase/showcase.css
+:highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
 Shows how to play spatialized audio with Magnum. The audio scene includes a 3D

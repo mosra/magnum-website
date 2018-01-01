@@ -2,6 +2,7 @@ Magnum WebGL 1 Info
 ###################
 
 :css: {filename}/showcase/showcase.css
+:highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
 Displays various information about Magnum and the WebGL implementation it's

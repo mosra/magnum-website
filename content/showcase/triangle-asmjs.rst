@@ -2,6 +2,7 @@ Triangle Example (asm.js)
 #########################
 
 :css: {filename}/showcase/showcase.css
+:highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
 So-called *Hello World* of 3D graphics. Displays simple triangle with different

@@ -2,6 +2,7 @@ Viewer Example
 ##############
 
 :css: {filename}/showcase/showcase.css
+:highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
 This is simply an viewer for 3D scene files, such as OpenGEX or COLLADA ones.

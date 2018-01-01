@@ -2,6 +2,7 @@ Textured Triangle Example
 #########################
 
 :css: {filename}/showcase/showcase.css
+:highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
 This example is just slightly more complicated version of the
