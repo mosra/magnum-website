@@ -15,6 +15,7 @@ ARTICLE_PATHS = ['blog']
 
 PAGE_PATHS = ['']
 PAGE_EXCLUDES = ['doc', 'img']
+READERS = {'html': None} # HTML files are only ever included from reST
 
 STATIC_PATHS = ['img', 'showcase']
 STATIC_URL = 'static/{path}'
@@ -60,41 +61,53 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-M_LINKS_NAVBAR1 = [('Features', 'features/', 'features', []),
+M_LINKS_NAVBAR1 = [('Features', 'features/', 'features', [
+                        ('Extra Functionality', 'features/extras/', 'features/extras'),
+                        ('Plugins & Extensions', 'features/extensions/', 'features/extensions')]),
                    ('Showcase', 'showcase/', 'showcase', []),
-                   ('Corrade', 'corrade/', 'corrade', [])]
-
-M_LINKS_NAVBAR2 = [('Docs', '//doc.magnum.graphics/', '', [
-                        ('Getting started', '//doc.magnum.graphics/magnum/getting-started.html', ''),
+                   ('Docs', '//doc.magnum.graphics/', '', [
+                        ('Getting Started', '//doc.magnum.graphics/magnum/getting-started.html', ''),
                         ('Corrade', '//doc.magnum.graphics/corrade/', ''),
-                        ('Magnum', '//doc.magnum.graphics/magnum/', '')]),
-                   ('Blog', M_BLOG_URL, '[blog]', [])]
+                        ('Magnum', '//doc.magnum.graphics/magnum/', ''),
+                        ('Doc Downloads', 'doc-downloads/', 'doc-downloads')])]
+
+M_LINKS_NAVBAR2 = [('Blog', M_BLOG_URL, '[blog]', []),
+                   ('Contact & Support', 'contact/', 'contact', [
+                        ('GitHub', 'https://github.com/mosra/magnum', ''),
+                        ('About the Project', 'about/', 'about')])]
 
 M_LINKS_FOOTER1 = [('Magnum', '/'),
                    ('Features', 'features/'),
+                   ('Extra Functionality', 'features/extras/'),
+                   ('Plugins & Extensions', 'features/extensions/'),
                    ('Showcase', 'showcase/'),
-                   ('Corrade', 'corrade/')]
+                   ('Build Status', 'build-status/')]
 
 M_LINKS_FOOTER2 = [('Docs', '//doc.magnum.graphics/'),
-                   ('Getting started', '//doc.magnum.graphics/magnum/getting-started.html'),
+                   ('Getting Started', '//doc.magnum.graphics/magnum/getting-started.html'),
                    ('Corrade', '//doc.magnum.graphics/corrade/'),
-                   ('Magnum', '//doc.magnum.graphics/magnum/')]
+                   ('Magnum', '//doc.magnum.graphics/magnum/'),
+                   ('Doc Downloads', 'documentation-downloads/')]
 
-M_LINKS_FOOTER3 = [('Connect', None),
-                   ('Blog feed', M_BLOG_URL + '/feeds/all.atom.xml'),
+M_LINKS_FOOTER3 = [('Contact & Support', 'contact/'),
+                   ('About the Project', 'about/'),
+                   ('Blog Feed', M_BLOG_URL + '/feeds/all.atom.xml'),
                    ('GitHub', 'https://github.com/mosra/magnum'),
                    ('Gitter', 'https://gitter.im/mosra/magnum'),
+                   ('Twitter', 'https://twitter.com/czmosra'),
                    ('Google Groups', 'https://groups.google.com/forum/#!forum/magnum-engine')]
 
-M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600%7CSource+Sans+Pro:400,400i,600,600i&amp;subset=latin-ext',
+M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600%7CSource+Sans+Pro:400,400i,600,600i&subset=latin-ext',
                'static/m-dark.css']
 
 M_FINE_PRINT = """
-Magnum Engine. Copyright © Vladimír Vondruš 2010-2017. Site powered by
-`Pelican <https://getpelican.com>`_ and `m.css <http://mcss.mosra.cz>`_.
-Contact the author via `e-mail <mosra@centrum.cz>`_,
-:abbr:`Jabber <mosra@jabbim.cz>`, `Twitter <https://twitter.com/czmosra>`_ or
-smoke signals.
+| Magnum Engine. Copyright © `Vladimír Vondruš <http://mosra.cz>`_ and
+  contributors, 2010--2017.
+| Site powered by `Pelican <https://getpelican.com>`_ and
+  `m.css <http://mcss.mosra.cz>`_. Contact the team via
+  `GitHub <https://github.com/mosra/magnum>`_, `Gitter <https://gitter.im/mosra/magnum>`_,
+  `e-mail <mailto:magnum-engine@googlegroups.com>`_, or
+  `Twitter <https://twitter.com/czmosra>`_.
 """
 
 DEFAULT_PAGINATION = 10
@@ -104,15 +117,22 @@ PLUGINS = ['m.abbr',
            'm.code',
            'm.components',
            'm.dox',
+           'm.filesize',
            'm.gh',
            'm.gl',
            'm.htmlsanity',
-           'm.images']
+           'm.images',
+           'm.math']
+
+FORMATTED_FIELDS = ['summary', 'description', 'landing', 'header', 'footer']
 
 THEME = 'm.css/pelican-theme/'
 THEME_STATIC_DIR = 'static/'
 
 M_THEME_COLOR = '#22272e'
+M_SOCIAL_TWITTER_SITE = '@czmosra'
+M_SOCIAL_TWITTER_SITE_ID = 1537427036
+M_SOCIAL_IMAGE = 'static/site.jpg'
 
 M_HTMLSANITY_SMART_QUOTES = True
 M_HTMLSANITY_HYPHENATION = True

@@ -1,13 +1,16 @@
 Showcase
 ########
 
+:cover: {filename}/img/cover-showcase.jpg
+:summary: Interactive WebGL showcase of Magnum capabilities
+
 Demos and examples on this page require `WebAssembly <http://webassembly.org/>`_-enabled
 browser with at least WebGL 1 working. All recent versions of major browsers
 should work, see the `introductory blog post <{filename}/blog/announcements/webassembly-support-and-more.rst>`__
 for more information. You can also use the `Magnum Info <{filename}/showcase/magnum-info.rst>`_
 utility to see if your browser is capable of running the demos; if you are
-unlucky and your browser isn't, you can at least try `asm.js <http://asmjs.org/>`_
-version of the `Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
+unlucky and your browser isn't, you can at least try
+`asm.js version of the Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
 
 .. block-info:: Spotted a bug?
 
@@ -17,10 +20,18 @@ version of the `Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
     :gh:`a particular example <mosra/magnum-examples>` or
     :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
 
-.. role:: info(strong)
-    :class: m-text m-info
-.. role:: warning(strong)
-    :class: m-text m-warning
+.. role:: label-danger
+    :class: m-label m-danger
+.. role:: label-warning
+    :class: m-label m-warning
+.. role:: label-success
+    :class: m-label m-success
+.. role:: label-flat-success
+    :class: m-label m-flat m-success
+.. role:: label-info
+    :class: m-label m-info
+.. role:: label-flat-info
+    :class: m-label m-flat m-info
 
 .. .. container:: m-row m-container-inflate
 
@@ -30,12 +41,11 @@ version of the `Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
             :figclass: m-figure m-fullwidth
             :target: {filename}/showcase/push-the-box.rst
 
-            Push the Box
+            Push the Box :label-danger:`webgl 2`
 
             Simple 3D reincarnation of Sokoban. Your target is to push all the
             boxes to their destination places. Made as an entry into
             `GitHub Game Off 2012 <https://github.com/blog/1303-github-game-off>`_.
-            :info:`Requires WebGL 2.`
 
 .. container:: m-row m-container-inflate
 
@@ -46,10 +56,10 @@ version of the `Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
             :figclass: m-figure m-fullwidth
             :target: {filename}/showcase/audio.rst
 
-            Audio example
+            Audio Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
+            :label-warning:`sound`
 
             Shows how to play spatialized audio with Magnum.
-            :warning:`Warning: plays sound on load.`
 
     .. container:: m-col-m-6
 
@@ -58,9 +68,9 @@ version of the `Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
             :figclass: m-figure m-fullwidth
             :target: {filename}/showcase/viewer.rst
 
-            Viewer example
+            Viewer Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
 
-            Uses OpenGEX importer plugin to load 3D scene for interactive
+            Uses scene importer plugins to load a 3D scene for interactive
             viewing.
 
 .. container:: m-row m-container-inflate
@@ -72,7 +82,7 @@ version of the `Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
             :figclass: m-figure m-fullwidth
             :target: {filename}/showcase/primitives.rst
 
-            Primitives example
+            Primitives Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
 
             Shows how to use builtin primitives and how to do simple input
             handling. Displays colored cube which can be rotated using mouse.
@@ -84,7 +94,7 @@ version of the `Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
             :figclass: m-figure m-fullwidth
             :target: {filename}/showcase/text.rst
 
-            Text example
+            Text Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
 
             Showcase of Magnum text rendering using signed distance field
             technique. Full UTF-8 support. Buffer mapping is used for mutable
@@ -99,7 +109,8 @@ version of the `Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
             :figclass: m-figure m-fullwidth
             :target: {filename}/showcase/triangle.rst
 
-            Triangle example
+            Triangle Example :label-flat-info:`wasm` :label-info:`asm.js`
+            :label-flat-success:`webgl1`
 
             Displays simple triangle with interpolated colors. For the unlucky,
             an `asm.js version <{filename}/showcase/triangle-asmjs.rst>`__ that
@@ -112,7 +123,7 @@ version of the `Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
             :figclass: m-figure m-fullwidth
             :target: {filename}/showcase/textured-triangle.rst
 
-            Textured triangle example
+            Textured Triangle Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
 
             Slightly extended version of the triangle example; uses TGA
             importer plugin to load a stone image and displays a triangle with
@@ -127,7 +138,8 @@ version of the `Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
             :figclass: m-figure m-fullwidth
             :target: {filename}/showcase/magnum-info.rst
 
-            Magnum Info
+            Magnum Info :label-flat-info:`wasm` :label-flat-success:`webgl1`
+            :label-success:`webgl2`
 
             Text utility printing out various information about Magnum and
             the OpenGL / WebGL implementation it's running on. Versions for
@@ -142,7 +154,7 @@ version of the `Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
             :figclass: m-figure m-fullwidth
             :target: {filename}/showcase/magnum-al-info.rst
 
-            Magnum AL Info
+            Magnum AL Info :label-flat-info:`wasm`
 
             Text utility printing out various information about Magnum and
             the OpenAL implementation it's running on.

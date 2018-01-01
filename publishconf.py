@@ -19,8 +19,14 @@ TAG_URL = '//blog.magnum.graphics/tag/{slug}/'
 
 # htaccess is global for the whole domain
 # doc/index.html redirects from doc.magnum.graphics to doc.magnum.graphics/magnum
-STATIC_PATHS += ['doc/index.html', 'htaccess', '../m.css/css/m-dark.doxygen.compiled.css']
+STATIC_PATHS += ['doc/index.html',
+                 'doc/corrade.tag',
+                 'doc/magnum.tag',
+                 'htaccess',
+                 '../m.css/css/m-dark.doxygen.compiled.css']
 EXTRA_PATH_METADATA = {'doc/index.html': {'path': '../doc/index.html'},
+                       'doc/corrade.tag': {'path': '../doc/corrade.tag'},
+                       'doc/magnum.tag': {'path': '../doc/magnum.tag'},
                        'htaccess': {'path': '../.htaccess'},
                        '../m.css/css/m-dark.doxygen.compiled.css': {'path': 'm-dark.doxygen.compiled.css'}}
 
@@ -30,11 +36,14 @@ EXTRA_PATH_METADATA = {'doc/index.html': {'path': '../doc/index.html'},
 PAGINATION_PATTERNS = [(1, '/{url}', '{base_name}/index.html'),
                        (2, '/{url}{number}/', '{base_name}/{number}/index.html')]
 
-M_LINKS_NAVBAR2[1] = ('Blog', M_BLOG_URL, 'archives', [])
-M_LINKS_FOOTER3[1] = ('Blog feed', M_BLOG_URL + '/feeds/all.atom.xml')
+assert M_LINKS_NAVBAR2[0][0] == 'Blog'
+M_LINKS_NAVBAR2[0] = ('Blog', M_BLOG_URL, 'archives', [])
 
-M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600%7CSource+Sans+Pro:400,400i,600,600i&amp;subset=latin-ext',
-            STATIC_URL.format(path='m-dark.compiled.css')]
+assert M_LINKS_FOOTER3[2][0] == 'Blog Feed'
+M_LINKS_FOOTER3[2] = ('Blog Feed', M_BLOG_URL + '/feeds/all.atom.xml')
+
+M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600%7CSource+Sans+Pro:400,400i,600,600i&subset=latin-ext',
+               STATIC_URL.format(path='m-dark.compiled.css')]
 THEME_STATIC_PATHS = ['static/m-dark.compiled.css']
 
 OUTPUT_PATH = 'published/'
