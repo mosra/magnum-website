@@ -22,12 +22,20 @@ TAG_URL = '//blog.magnum.graphics/tag/{slug}/'
 STATIC_PATHS += ['doc/index.html',
                  'doc/corrade.tag',
                  'doc/magnum.tag',
+                 'doc/robots.txt',
                  'htaccess',
+                 'robots.txt',
+                 'robots-blog.txt',
+                 'robots-static.txt',
                  '../m.css/css/m-dark.doxygen.compiled.css']
 EXTRA_PATH_METADATA = {'doc/index.html': {'path': '../doc/index.html'},
                        'doc/corrade.tag': {'path': '../doc/corrade.tag'},
                        'doc/magnum.tag': {'path': '../doc/magnum.tag'},
+                       'doc/robots.txt': {'path': '../doc/robots.txt'},
                        'htaccess': {'path': '../.htaccess'},
+                       'robots.txt': {'path': '../robots.txt'},
+                       'robots-blog.txt': {'path': '../blog/robots.txt'},
+                       'robots-static.txt': {'path': '../static/robots.txt'},
                        '../m.css/css/m-dark.doxygen.compiled.css': {'path': 'm-dark.doxygen.compiled.css'}}
 
 # URL needs to be prepended by / because Pelican removes the first / for some

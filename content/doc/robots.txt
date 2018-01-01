@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /corrade-archive/
+Disallow: /magnum-archive/
