@@ -18,7 +18,7 @@ You can contact the team and follow the development via the following means:
 ============================
 
 Make a difference by submitting a bug report, feature request or submit a
-patch. Best way to contribute is via the :gh:`GitHub project page <mosra/magnum>`_,
+patch. Best way to contribute is via the :gh:`GitHub project page <mosra/magnum>`,
 but you can also send patches via e-mail or any other way. Thank you!
 
 `Support the development`_
