@@ -11,7 +11,9 @@ M_BLOG_NAME = 'Magnum Engine Blog'
 M_BLOG_URL = 'blog/'
 
 PATH = 'content'
+
 ARTICLE_PATHS = ['blog']
+ARTICLE_EXCLUDES = ['blog/authors', 'blog/categories', 'blog/tags']
 
 PAGE_PATHS = ['']
 PAGE_EXCLUDES = ['doc', 'img']
@@ -132,9 +134,10 @@ PLUGINS = ['m.abbr',
            'm.gl',
            'm.htmlsanity',
            'm.images',
-           'm.math']
+           'm.math',
+           'm.metadata']
 
-FORMATTED_FIELDS = ['summary', 'description', 'landing', 'header', 'footer']
+FORMATTED_FIELDS = ['summary', 'description', 'landing', 'badge', 'header', 'footer']
 
 THEME = 'm.css/pelican-theme/'
 THEME_STATIC_DIR = 'static/'
@@ -151,6 +154,9 @@ M_DOX_TAGFILES = [
     ('content/doc/corrade.tag', 'http://doc.magnum.graphics/corrade/', ['Corrade::']),
     ('content/doc/magnum.tag', 'http://doc.magnum.graphics/magnum/', ['Magnum::'])]
 M_IMAGES_REQUIRE_ALT_TEXT = True
+M_METADATA_AUTHOR_PATH = 'blog/authors'
+M_METADATA_CATEGORY_PATH = 'blog/categories'
+M_METADATA_TAG_PATH = 'blog/tags'
 
 DIRECT_TEMPLATES = ['archives']
 PAGINATED_DIRECT_TEMPLATES = ['archives']
