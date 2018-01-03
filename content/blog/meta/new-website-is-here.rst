@@ -111,3 +111,10 @@ after. One of the more important things to be released is a public roadmap for
 Magnum, uncovering the feature priorities and future milestones. The open
 website content also lowers the barrier for contributions, enabling people to,
 for example, publish guest posts on the blog. But more on that later ;)
+
+.. note-dim::
+
+    Discussion: `Twitter <https://twitter.com/czmosra/status/948660232686796801>`_,
+    `Reddit <https://www.reddit.com/r/cpp/comments/7nxo0k/new_website_for_the_magnum_c11c14_graphics_engine/>`_,
+    `Hacker News <https://news.ycombinator.com/item?id=16065321>`_,
+    `mailing list <https://groups.google.com/forum/#!topic/magnum-engine/qRXQ_PA7hJQ>`_
