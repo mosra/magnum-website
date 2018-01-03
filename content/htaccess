@@ -29,4 +29,4 @@ RewriteCond %{HTTP_HOST} ^doc\.magnum\.graphics$ [NC]
 RewriteCond %{REQUEST_URI} ^/magnum-ng/
 RewriteRule ^magnum-ng/(.*)$ http://doc.magnum.graphics/magnum/$1 [R=301,QSA]
 
-# kate: hl Apache
+# kate: hl Apache Configuration
