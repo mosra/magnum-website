@@ -2,6 +2,8 @@ Reducing C++ compilation time in Magnum: code optimizations
 ###########################################################
 
 :date: 2013-12-11 13:43
+:modified: 2018-01-03
+:archived: True
 :category: Backstage
 :tags: C++, CMake, Corrade, OpenGL, Qt
 :summary: Large C++ projects often suffer with very long times for both full
@@ -11,6 +13,11 @@ Reducing C++ compilation time in Magnum: code optimizations
 
 .. role:: cpp(code)
     :language: c++
+
+.. note-success:: Content care: Jan 03, 2018
+
+    Code snippets were updated to match current state of the Magnum API and
+    some typos and grammar errors were fixed.
 
 To put things into perspective, the Magnum graphics engine has around 100k
 lines of templated C++ code, documentation and comments. Currently the
@@ -44,7 +51,7 @@ to generate just the preprocessed file so you can examine preprocessed line
 count for each source file --- just append ``.i`` to name of source file. Then
 you can try removing some :cpp:`#include`\ s to bisect the big ones.
 
-::
+.. code:: shell-session
 
     [magnum/build/src]$ make Framebuffer.cpp.i
     Preprocessing CXX source to CMakeFiles/MagnumObjects.dir/Framebuffer.cpp.i
@@ -77,10 +84,10 @@ the whole template list and it can get quicky out of hand:
     class Mesh; // easy
 
     namespace Math { template<std::size_t, class> class Matrix; }
-    typedef std::float32_t Float;
+    typedef float Float;
     typedef Math::Matrix<3, Float> Matrix3x3; // ehh...
 
-For user convenience has Magnum :dox:`forward declaration headers <compilation-forward-declarations>`,
+For user convenience Magnum has :dox:`forward declaration headers <compilation-forward-declarations>`,
 which are available for each namespace, so the users can just include this tiny
 header and don't need to write forward declarations on their own:
 
@@ -101,8 +108,11 @@ forward declaration header must be included in the type definition header.
     // SceneGraph.h
     template<UnsignedInt, class T, class TranslationType = T> class TranslationTransformation;
 
+.. code:: c++
+
     // TranslationTransformation.h
     #include "SceneGraph.h"
+
     template<UnsignedInt dimensions, class T, class TranslationType> class TranslationTransformation {
         // ...
     };
@@ -123,13 +133,16 @@ around:
     // Don't need the header here
     ColorFormat format = image.format();
 
+.. code:: c++
+
     // Need it here
     #include <ColorFormat.h>
+
     format = ColorFormat::RGBA;
 
 Note that in C++ it is not possible to forward declare class members. To reduce
 header dependencies I had to extract some widely-used enums from their classes
-(thus :cpp:`Buffer::Usage` is now :cpp:`BufferUsage` etc.), but the change
+(thus :cpp:`Buffer::Usage` is now :dox:`BufferUsage` etc.), but the change
 resulted in improved compilation times of code where the enum
 forward-declaration is enough.
 
@@ -159,17 +172,17 @@ Header              C++03 libstdc++ C++11 libstdc++ C++11 libc++
 =================== =============== =============== ============
 ``<forward_list>``                  25927           18095
 ``<queue>``         8749            13830           26309
-``<algorithm>``     9801            46279           16645
-``<complex>``       21160           28312           44507
-``<valarray>``      14671           49630           24949
-``<random>``                        36180           51187
+``<algorithm>``     9801            **46279**       16645
+``<complex>``       21160           28312           **44507**
+``<valarray>``      14671           **49630**       24949
+``<random>``                        **36180**       **51187**
 ``<ios>``           15442           21561           29202
-``<*stream>``       ~18000          ~24000          ~41000
-``<iomanip>``       11504           24296           40545
+``<*stream>``       ~18000          ~24000          **~41000**
+``<iomanip>``       11504           24296           **40545**
 ``<streambuf>``     11839           17946           29652
-``<locale>``        17913           24027           35188
+``<locale>``        17913           24027           **35188**
 ``<codecvt>``                       n/a             28922
-``<regex>``                         70409           41601
+``<regex>``                         **70409**       **41601**
 ``<thread>``                        27436           17155
 ``<future>``                        32254           19618
 =================== =============== =============== ============
@@ -217,7 +230,7 @@ the compiler can know its size and can generate proper constructor, assignment
 operator and destructor. You can circumvent this by making it a reference or
 pointer and then explicitly define the constructor and other functions in
 source file. The D-Pointer approach, which is very heavily used in Qt, is
-another solution to this and many other issues, however the additional heap
+another solution for this and many other issues, however the additional heap
 allocation and indirection has performance implications and thus is not used in
 Magnum.
 
@@ -248,18 +261,18 @@ For headers it's often good to split the header into smaller ones with less
 dependencies, but for source files it's better to combine more of them into
 one, as the compiler then needs to preprocess the included headers only once
 instead of more times. Be aware that this is double-edged sword and it will
-hurt iteration times --- recompiling whole huge file after small change would
-take much longer than rebuilding only small one. Also the compile time
-reduction is not as significant as when optimizing widely-used header file.
+hurt iteration times --- recompiling the whole huge file after a small change
+would take much longer than rebuilding only a small one. Also the compile time
+reduction is not as significant as when optimizing a widely-used header file.
 Magnum uses this approach for template instantiation files, the merging
 resulted in 5 seconds shorter build time.
 
 `Reducing amount of generated code`_
 ====================================
 
-C++11's extern template keyword tells the compiler that the code is already
-compiled in some library and thus the compiler can skip the compilation and
-optimizing of given code fragment and leave it for the linker.
+C++11 :cpp:`extern template` keyword tells the compiler that the code is
+already compiled in some library and thus the compiler can skip the compilation
+and optimizing of given code fragment and leave it for the linker.
 
 Reducing amount of exported symbols helps the linker (and also dynamic linker
 at runtime), as it doesn't have to process huge symbol table containing stuff

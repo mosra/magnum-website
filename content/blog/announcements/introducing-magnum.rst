@@ -2,6 +2,7 @@ Introducing Magnum, a multiplatform 2D/3D graphics engine
 #########################################################
 
 :date: 2013-08-30 15:54
+:archived: True
 :category: Announcements
 :tags: C++, Corrade, OpenGL
 :summary: After nearly three years of semi-public hyperactive development, I
@@ -28,8 +29,8 @@ Magnum is currently ported to these platforms:
 `What it offers you`_
 =====================
 
-Use C++11 to simplify common workflow and OpenGL interaction
-------------------------------------------------------------
+`Use C++11 to simplify common workflow and OpenGL interaction`_
+---------------------------------------------------------------
 
 Magnum makes extensive use of C++11. Most of the new features are used in the
 internals to make the library more powerful and you can only guess their
@@ -171,8 +172,8 @@ to test it). Sometimes the missing features are heavily worked around, which
 might case some issues, thus this compatibility is not part of the mainline
 code.
 
-Modular and extensible scene graph
-----------------------------------
+`Modular and extensible scene graph`_
+-------------------------------------
 
 On top of core library taking care of math and OpenGL there are various
 optional libraries, which you can, but don't have to use. One of them is scene
@@ -187,8 +188,8 @@ having function for setting wheel count on base object).
 
 You can learn more about scene graph :dox:`in the documentation <scenegraph>`.
 
-Integration with other software, plugins for data manipulation
---------------------------------------------------------------
+`Integration with other software, plugins for data manipulation`_
+-----------------------------------------------------------------
 
 Magnum library itself is kept lightweight and without any external dependencies
 to make porting and usage in embedded systems easier. However, in real world
@@ -214,19 +215,19 @@ abstraction library, instead it is able to hook into various multiplatform
 toolkits like GLUT or SDL2 and also lightweight platform-specific toolkits such
 as Xlib with GLX/EGL or PPAPI.
 
-Extensive documentation and examples
-------------------------------------
+`Extensive documentation and examples`_
+---------------------------------------
 
-:dox:`Documentation <>` is essential part of the engine. Each module and class
-has introductional chapter and example usage, each OpenGL support class
+:dox:`Documentation <magnum>` is essential part of the engine. Each module and
+class has introductional chapter and example usage, each OpenGL support class
 provides detailed information about related OpenGL calls and extension
 dependence. There is also :gh:`example repository <mosra/magnum-examples>`
 containing fully documented examples to ease your learning even more. The
 documentation also has a thorough :dox:`guide how to start using Magnum <getting-started>`
 in your project, providing even ready-to-build :gh:`bootstrap code <mosra/magnum-bootstrap>`.
 
-More features
--------------
+`More features`_
+----------------
 
 There are many more things worth mentioning, you can read through the
 `nearly exhaustive feature list <{filename}/features.rst>`_ for more
@@ -261,6 +262,7 @@ and the functionality is demonstrated in various examples. See
 
 Because the library is meant to be used by developers and not end users, it is
 distributed purely as source code, available on GitHub. The documentation is
-available :dox:`for online viewing <>`, you can also generate it directly from
-the source code, see instructions on download page for more information. Be
-sure to read also the thorough :dox:`Getting Started Guide <getting-started>`.
+available :dox:`for online viewing <magnum>`, you can also generate it directly
+from the source code, see the :dox:`building documentation <building>` for more
+information. Be sure to read also the thorough
+:dox:`Getting Started Guide <getting-started>`.

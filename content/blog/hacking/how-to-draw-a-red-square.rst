@@ -2,8 +2,10 @@ How to draw a red square in Magnum --- in one statement
 #######################################################
 
 :date: 2014-03-13
+:modified: 2018-01-03
 :category: Hacking
 :tags: C++, OpenGL, Qt
+:archived: True
 :summary: After reading the "How to draw a red square in Qt Quick" blog post
     showcasing the simplicity of Qt API I thought it would be interesting to
     try something similar in Magnum for comparison.
@@ -11,13 +13,22 @@ How to draw a red square in Magnum --- in one statement
 .. role:: cpp(code)
     :language: c++
 
+.. note-success:: Content care: Jan 03, 2018
+
+    Updated the original blog post URL to a version from archive.org, as the
+    blog does not exist anymore. Besides that, code snippets were updated to
+    match current state of the Magnum API and some typos and grammar errors
+    were fixed.
+
 .. note-info::
 
-    Be sure to read the `original blog post <http://blog.davidedmundson.co.uk/blog/making-a-red-square-in-qtquick>`_
+    Be sure to read the `original blog post <http://web.archive.org/web/20140328040855/http://blog.davidedmundson.co.uk/blog/>`_
     first so you can do a fair comparison.
 
-The following statement creates and renders red square in Magnum. The statement
-is wrapped on four lines for better readability:
+    .. original URL no longer available: http://blog.davidedmundson.co.uk/blog/making-a-red-square-in-qtquick
+
+The following statement creates and renders a red square in Magnum. The
+statement is wrapped on four lines for better readability:
 
 .. code:: c++
 
@@ -26,7 +37,7 @@ is wrapped on four lines for better readability:
             .setTransformationProjectionMatrix(Matrix3::scaling({0.2f, 0.3f}))
             .setColor(Color3::red()));
 
-Copy-pasting it into draw event of :dox:`basic boostrap application <getting-started>`
+Copy-pasting it into draw event of the :dox:`basic boostrap application <getting-started>`
 and doing a bunch of :cpp:`#include` and library linking bureaucracy will
 result in this image:
 
@@ -69,12 +80,12 @@ temporaries for better understanding:
 
 The setup and actual drawing is now clearly separated. You can now see that we
 abused method chaining to create, configure and pass the shader to
-:dox:`Mesh::draw()` in single expression, but that's perfectly legal thing to
-do. Having 2D equivalents of everything also makes things a bit simpler, on the
-other hand displaying a 3D cube would only need different primitive, different
-shader with more involved configuration and enabling depth test. The code is
-also as fast as it could get, unless you have a very specific use case (like
-drawing thousands of squares in a particle system).
+:dox:`Mesh::draw()` in a single expression, but that's a perfectly legal thing
+to do. Having 2D equivalents of everything also makes things a bit simpler, on
+the other hand displaying a 3D cube would only need different primitive,
+different shader with more involved configuration and enabling depth test. The
+code is also as fast as it could get, unless you have a very specific use case
+(like drawing thousands of squares in a particle system).
 
 `Going deeper`_
 ===============
@@ -87,7 +98,7 @@ only thing we can do is to recreate parts of the setup by hand.
 `Manually creating the mesh`_
 -----------------------------
 
-The :dox:`MeshTools::compile()` function is all-in-one tool for creating
+The :dox:`MeshTools::compile()` function is an all-in-one tool for creating
 generic meshes from imported data. In this case the preparation is very simple,
 so we can replace it with the following. Note that we need only the vertex
 buffer (the index buffer above was :cpp:`nullptr` as it was also not needed).
@@ -104,7 +115,7 @@ buffer (the index buffer above was :cpp:`nullptr` as it was also not needed).
     Mesh mesh;
     mesh.setPrimitive(MeshPrimitive::TriangleStrip)
         .setVertexCount(4)
-        .addVertexBuffer(buffer, 0, Shaders::Flat2D::Position());
+        .addVertexBuffer(buffer, 0, Shaders::Flat2D::Position{});
 
 `Manually creating the shader`_
 -------------------------------

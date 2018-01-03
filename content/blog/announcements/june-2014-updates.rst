@@ -2,6 +2,7 @@ June 2014 updates to Magnum
 ###########################
 
 :date: 2014-06-29
+:archived: True
 :category: Announcements
 :tags: C++, CMake, Corrade, OpenGL
 :summary: The Magnum C++11 and OpenGL/OpenGL ES/WebGL graphics engine gained

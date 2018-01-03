@@ -2,6 +2,8 @@ C++11 features in Magnum: Simplifying daily workflow
 ####################################################
 
 :date: 2013-09-13 18:57
+:modified: 2018-01-03
+:archived: True
 :category: Backstage
 :tags: C++, OpenGL
 :summary: While the previous part was focused on C++11 features improving
@@ -19,6 +21,11 @@ C++11 features in Magnum: Simplifying daily workflow
     1.  `C++11 features in Magnum: Better memory management <{filename}/blog/backstage/cpp11-features-in-magnum-better-memory-management.rst>`_
     2.  C++11 features in Magnum: Simplifying daily workflow
     3.  `Static and dynamic polymorphism in Magnum <{filename}/blog/backstage/static-and-dynamic-polymorphism-in-magnum.rst>`_
+
+.. note-success:: Content care: Jan 03, 2018
+
+    Code snippets were updated to match current state of the Magnum API and
+    some typos and grammar errors were fixed.
 
 `Variadic templates`_
 =====================
@@ -44,36 +51,36 @@ the same can be written using C++11 variadic constructor like this:
 
 Note that unlike with e.g. initializer lists, mentioned in previous article,
 the error will be detected at compile time --- we forgot to separate last two
-values with a comma, thus passed only six elements to the constructor, causing
-undefined behavior.
+values with a comma, thus passed only six elements to the constructor causing
+undefined behavior in the C++03 case.
 
-In other situations, variadic templates might compute some things automatically
-and save repetitive typing, which otherwise leads to accidental mistakes.
-Imagine adding buffer with interleaved vertex attributes, specifying one
-attribute at a time:
+In other situations, variadic templates might calculate some things
+automatically and save repetitive typing, which otherwise leads to accidental
+mistakes. Imagine adding buffer with interleaved vertex attributes, specifying
+one attribute at a time:
 
 .. code:: c++
 
     Int offset = 4238;
     Int stride = 36;
     Mesh mesh;
-    mesh.addVertexBuffer(vertexBuffer, offset, Shader::Position(), stride-12)
-        .addVertexBuffer(vertexBuffer, offset+12, Shader::Normal(), stride-12)
-        .addVertexBuffer(vertexBuffer, offset+24, Shader::TextureCoordinates(), stride-12)
-        .addVertexBuffer(vertexBuffer, offset+32, Shader::Weight(), stride-12);
+    mesh.addVertexBuffer(vertexBuffer, offset, Shader::Position{}, stride-12)
+        .addVertexBuffer(vertexBuffer, offset+12, Shader::Normal{}, stride-12)
+        .addVertexBuffer(vertexBuffer, offset+24, Shader::TextureCoords{}, stride-12)
+        .addVertexBuffer(vertexBuffer, offset+32, Shader::Weight{}, stride-12);
 
 Each interleaved attribute is specified by starting offset and size of the gap
 after it (containing data of other attributes). Note that, due to copy-paste
 error, all the attributes have specified the same gap, even though the texture
-coordinates occupy only 8 bytes, not 12 and the weight is only four bytes. If
-the whole vertex format is specified at once using variadic function, the
-sizes, offsets and strides are computed automatically behind the scenes,
-leaving no room for mistakes:
+coordinates are two floats and thus occupy only 8 bytes (not 12), and the
+weight is only a single four-byte float. If the whole vertex format is
+specified at once using variadic function, the sizes, offsets and strides are
+calculated automatically behind the scenes, leaving no room for mistakes:
 
 .. code:: c++
 
-    mesh.addVertexBuffer(vertexBuffer, 4238, Shader::Position(), Shader::Normal(),
-        Shader::TextureCoordinates(), Shader::Weight(), 3);
+    mesh.addVertexBuffer(vertexBuffer, 4238, Shader::Position{}, Shader::Normal{},
+        Shader::TextureCoords{}, Shader::Weight{}, 3);
 
 Lastly, with variadic classes you can merge many similar tasks into one.
 Imagine having type-safe resource manager for meshes, textures and sound
@@ -128,7 +135,7 @@ This is not exactly a C++11 feature (however C++11's rvalue references for
 :cpp:`this` can be employed to improve performance in some corner cases), but I
 will mention it here, as it allows for some neat tricks. Except for helping you
 type less (as shown above), this feature allows you to do instantiation and
-configuration in single expression, going nicely along *"everyting is an
+configuration in single expression, going nicely along the *"everything is an
 expression"* approach:
 
 .. code:: c++
@@ -145,7 +152,7 @@ expression"* approach:
 
 Note that this feature also has its downsides, so use it only when it improves
 readability and not the other way. For example, more than one method chain in
-single expression can cause the code to be unreadable and prone to errors.
+a single expression can cause the code to be unreadable and prone to errors.
 
 `Miscellaneous`_
 ================
@@ -154,15 +161,15 @@ single expression can cause the code to be unreadable and prone to errors.
 -----------------------
 
 API inconsistence, where some functions accept radians (STL and OpenGL) and
-some degrees (OpenAL) leads to problems with mistaken units. C++11's
-user-defined literals, explicit conversion operators and :cpp:`constexpr` allow
-to solve this in intuitive way without sacrificing performance. The strong
-types behave just like any other numeric type and only conversion from and to
-the underlying type needs to be done explicitly. For literals, instead of
-writing ``f`` suffix you can just write ``_degf`` or ``_radf`` and it will be
-converted to the expected units at compile time. All Magnum functions dealing
-with angles are taking only the strongly typed values, passing plain numbers to
-them results in compile-time error:
+some degrees (OpenAL) leads to problems with mistaken units. C++11 user-defined
+literals, explicit conversion operators and :cpp:`constexpr` allow to solve
+this in intuitive way without sacrificing performance. The strong types behave
+just like any other numeric type and only conversion from and to the underlying
+type needs to be done explicitly. For literals, instead of writing ``f`` suffix
+you can just write ``_degf`` or ``_radf`` and it will be converted to the
+expected units at compile time. All Magnum functions dealing with angles are
+taking only the strongly typed values, passing plain numbers to them results in
+compile-time error:
 
 .. code:: c++
 
@@ -178,13 +185,13 @@ course). Time unit literals will be `part of C++14 <http://en.cppreference.com/w
 `Usage of SFINAE and type traits`_
 ----------------------------------
 
-With C++11's type traits and `std::enable_if <http://en.cppreference.com/w/cpp/types/enable_if>`_
-it's possible to design clean generic API free of any workarounds for ambiguous
-method and constructor calls. For example, bitwise operations are enabled only
-for vectors with integral underlying type. Vectors and matrices have generic
-support for (explicit) conversion from and to external types, thanks to
-:cpp:`std::enable_if` the actual conversion can be then implemented in separate
-library without touching the original implementation.
+With C++11's type traits and :dox:`std::enable_if` it's possible to design
+clean generic API free of any workarounds for ambiguous method and constructor
+calls. For example, bitwise operations are enabled only for vectors with
+integral underlying type. Vectors and matrices have generic support for
+(explicit) conversion from and to external types, thanks to :dox:`std::enable_if`
+the actual conversion can be then implemented in separate library without
+touching the original implementation.
 
 .. code:: c++
 

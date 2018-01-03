@@ -2,6 +2,7 @@ May 2015 updates to Magnum
 ##########################
 
 :date: 2015-05-09
+:archived: True
 :category: Announcements
 :tags: C++, CMake, Corrade, OpenGL, NaCl, WebGL
 :summary: The Magnum C++11/C++14 and OpenGL graphics engine gained OpenGEX

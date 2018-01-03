@@ -2,6 +2,7 @@ January 2014 updates to Magnum
 ##############################
 
 :date: 2014-01-21
+:archived: True
 :category: Announcements
 :tags: C++, CMake, Corrade, OpenGL
 :summary: Since the previous October snapshot Magnum gained Visual Studio port,

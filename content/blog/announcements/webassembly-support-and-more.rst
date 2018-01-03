@@ -255,9 +255,3 @@ automagically and you need to supply your own async loading code.
 
 Okay, that's all! There's still quite a lot Emscripten-related features, demos
 and improvements in my buffer, so expect another blog post later!
-
-.. block-danger:: Side note: website update
-
-    Due to time constraints, I was not yet able to update all relevant info on
-    the website, so it still advertises NaCl support and other fake news. I'll
-    get around to do that later. Sorry for the mess.

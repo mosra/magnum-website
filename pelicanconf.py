@@ -110,6 +110,16 @@ M_FINE_PRINT = """
   `Twitter <https://twitter.com/czmosra>`_.
 """
 
+M_ARCHIVED_ARTICLE_BADGE = """
+.. note-warning:: Archived article
+
+    This article is from {year}. While great care is taken to keep information
+    up-to-date, please note that not everything in this article might reflect
+    current state of the Magnum project, external links might be dead and
+    content might be preserved in its original form for archival purposes. Even
+    the typos.
+"""
+
 DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['m.css/pelican-plugins']

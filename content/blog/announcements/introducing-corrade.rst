@@ -1,7 +1,8 @@
-Introducing Corrade, an plugin management and utility library
-#############################################################
+Introducing Corrade, a plugin management and utility library
+############################################################
 
 :date: 2012-02-08
+:archived: True
 :category: Announcements
 :tags: C++, Corrade, Qt
 :summary: Originally developed for *Kompas*, this library provides both static
@@ -36,7 +37,13 @@ Current version is 0.2 (previous version 0.1 was part of *Kompas*), you can
 download packages for your favorite distribution, build from source or view
 documentation at download page:
 
-.. todo: button Corrade Download 0.2
+.. container:: m-text-center
+
+    .. button-primary:: {filename}/corrade.rst
+
+        Corrade
+
+        download latest
 
 Future plans
 ============

@@ -2,6 +2,7 @@ October 2013 updates to Magnum
 ##############################
 
 :date: 2013-10-30 18:50
+:archived: True
 :category: Announcements
 :tags: C++, CMake, Corrade, OpenGL
 :summary: Summary of changes during the first two months after public release.
