@@ -10,7 +10,7 @@ New Magnum website is here --- a stepping stone for what is to come
     that, its development resulted in many valuable byproducts for both C++
     developers and web content publishers.
 
-One of greatest strenghts that developed in Magnum over time is its modularity
+One of greatest strengths that developed in Magnum over time is its modularity
 and flexibility. Until now the capabilities were not really well communicated,
 leading to false impression. The new `Feature Overview pages <{filename}/features.rst>`_
 with interactive architecture diagrams are designed to show modularity and
@@ -37,11 +37,11 @@ put into the overall website performance and responsiveness.
 
 The website is built using `m.css <http://mcss.mosra.cz>`_, a no-nonsense,
 no-JavaScript CSS framework. It was originally developed mainly to power this
-website, but thanks to its simplicity and lightweight approach it already got
-to be used by numerous people since its release in late October 2017. Besides
+website, but thanks to its simplicity and lightweight approach it has already 
+been adopted by numerous people since its release in late October 2017. Besides
 CSS style, m.css provides a theme for `Pelican <http://docs.getpelican.com/en/stable/>`_
 static site generator and a bunch of useful plugins for generating nicely
-highlighted code blocks, rendering math equations and more.
+highlighted code blocks, rendering math equations, and more.
 
 `Doxygen theme`_
 ================
@@ -54,7 +54,7 @@ uses XML output from Doxygen to produce a modern and responsive HTML5 markup.
 You can see the Doxygen theme live at http://doc.magnum.graphics. Please note
 that the theme is still a work-in-progress and some features (such as symbol
 search) are yet to be implemented. The documentation content is gradually
-proofread, updated and improved to match the new theme.
+proofread, updated, and improved to match the new theme.
 
 `Benefits for projects outside of Magnum`_
 ==========================================
@@ -65,7 +65,7 @@ proofread, updated and improved to match the new theme.
     with, present a project or write documentation in.
 -   `8 patches integrated to Doxygen <https://github.com/doxygen/doxygen/pulls?utf8=✓&q=is%3Apr+author%3Amosra+>`_,
     mostly related to the XML output, majority of them already included in
-    version 1.8.14 that got released in December 2017.
+    version 1.8.14 that was released in December 2017.
 -   `9 patches submitted to Pelican <https://github.com/getpelican/pelican/pulls?utf8=✓&q=is%3Apr+author%3Amosra+>`_,
     improving support for sites spanning multiple subdomains, in large part
     still waiting to be merged upstream.
@@ -109,5 +109,5 @@ There's a lot in the queue for the next weeks and the new website is the first
 stepping stone, allowing us to share the progress of everything that comes
 after. One of the more important things to be released is a public roadmap for
 Magnum, uncovering the feature priorities and future milestones. The open
-website content also lowers the barrier for controbutions, enabling people to,
+website content also lowers the barrier for contributions, enabling people to,
 for example, publish guest posts on the blog. But more on that later ;)
