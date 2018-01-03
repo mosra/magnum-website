@@ -149,14 +149,14 @@
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>a7a282f38bdfb30e0bf96e3a9263d4379</anchor>
+      <anchor>a668ca2e16644e9d8e6b077ed9d2262cd</anchor>
       <arglist>(Debug &amp;debug, PlaneFlag value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>a054d68d97cdff0794d7fbefc84bc8206</anchor>
+      <anchor>af1efee2fa682422665c299232d1870b9</anchor>
       <arglist>(Debug &amp;debug, PlaneFlags value)</arglist>
     </member>
   </compound>
@@ -279,28 +279,28 @@
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>a80012b5da15050b1d9d527f6ce833fd9</anchor>
+      <anchor>aa164d931b7585de7abc12588d41b9c55</anchor>
       <arglist>(Debug &amp;debug, Type value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>a5ce5a2039af17edd22c9e851f07ffb07</anchor>
+      <anchor>a328fb1fa2dd19b12b50706df41c2ce53</anchor>
       <arglist>(Debug &amp;debug, State value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>ac5f33b043d9d0c87a98edceac041f506</anchor>
+      <anchor>aed40c9f728962b3d3ff3794ca563a5b0</anchor>
       <arglist>(Debug &amp;debug, Style value)</arglist>
     </member>
     <member kind="function">
       <type>StyleConfiguration</type>
       <name>defaultStyleConfiguration</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>ad57a0a7abf897080139bce4ed91642cd</anchor>
+      <anchor>a757a55d7cb2d73c2e757e308cd8d9e14</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -374,14 +374,14 @@
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>aa8da4a420b361121b5e71f13da8c2b9b</anchor>
+      <anchor>a0310478aa60fec3a2e0e4e2226751a95</anchor>
       <arglist>(Debug &amp;debug, WidgetFlag value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>a9b714e67f7fa8079cdc357574f2486aa</anchor>
+      <anchor>ad24ec2ad8310d61add110dbe738e8566</anchor>
       <arglist>(Debug &amp;debug, WidgetFlags value)</arglist>
     </member>
   </compound>
@@ -397,21 +397,21 @@
       <type>Shapes::AbstractShape3D *</type>
       <name>convertShape</name>
       <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>a126bfaf12459eb1a25ef13559de89510</anchor>
+      <anchor>a1dde6f0e2a6682369e75b7ab8e7ebe89</anchor>
       <arglist>(SceneGraph::AbstractBasicObject3D&lt; btScalar &gt; &amp;object, const btCollisionShape &amp;shape, Shapes::ShapeGroup3D *shapes=nullptr)</arglist>
     </member>
     <member kind="function">
       <type>Shapes::Shape&lt; Shapes::Box3D &gt; *</type>
       <name>convertShape</name>
       <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>af76460d8f14aa7dc64e78ca327f8d7a5</anchor>
+      <anchor>abdb0da4dbc47010da441ffaa2ae21c9f</anchor>
       <arglist>(SceneGraph::AbstractBasicObject3D&lt; btScalar &gt; &amp;object, const btBoxShape &amp;box, Shapes::ShapeGroup3D *shapes=nullptr)</arglist>
     </member>
     <member kind="function">
       <type>Shapes::Shape&lt; Shapes::Sphere3D &gt; *</type>
       <name>convertShape</name>
       <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>ab23e9ad42c1adb4f0c565163a442ce66</anchor>
+      <anchor>af4a9aaecf5768855ae183b32b8ba29fa</anchor>
       <arglist>(SceneGraph::AbstractBasicObject3D&lt; btScalar &gt; &amp;object, const btSphereShape &amp;sphere, Shapes::ShapeGroup3D *shapes=nullptr)</arglist>
     </member>
   </compound>
@@ -431,7 +431,7 @@
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>aa37ff90bc9f6e2756fe1a2854d114f43</anchor>
+      <anchor>ae4102f01b3709014e598d0c6725f31ed</anchor>
       <arglist>(Debug &amp;debug, DebugDraw::DebugMode value)</arglist>
     </member>
   </compound>
@@ -721,84 +721,84 @@
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a4a10d88a62e4d474e820e1aea0f069c5</anchor>
+      <anchor>a650d4953f7d4d211f4d022d50d616538</anchor>
       <arglist>(Debug &amp;debug, HmdType value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>aad9eb7c25050cc589dd7839ba68cd8b8</anchor>
+      <anchor>a73ce87139dacba79763659aaeebc170c</anchor>
       <arglist>(Debug &amp;debug, TrackingOrigin value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>af590305adfc6bdc7c96e6e80a65ddb43</anchor>
+      <anchor>a75fcd47c56139a2a51ac70f958ff8615</anchor>
       <arglist>(Debug &amp;debug, TrackerFlag value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>ae6e92af37ce60f20df7e7f91968efa27</anchor>
+      <anchor>ab05854774e0c74850a6258734e56e1f6</anchor>
       <arglist>(Debug &amp;debug, Button value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a67cda2f111927cd1e9165953d0e14359</anchor>
+      <anchor>af1ee6d0c448e1a216f8414fc842687af</anchor>
       <arglist>(Debug &amp;debug, Touch value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a565af34924402b9f08c965b363f33f7c</anchor>
+      <anchor>aa8726fd40080c94c7dd03067313b095f</anchor>
       <arglist>(Debug &amp;debug, ControllerType value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>af02b621587a4811d5180e4cb4f1614fa</anchor>
+      <anchor>a79df2b6b9a2e08ae0a76732f970c7920</anchor>
       <arglist>(Debug &amp;debug, StatusFlag value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a87cb3e499853d4455b1c0bf96c50e812</anchor>
+      <anchor>ae84582e8ef8bdf12136fbd05d443c4ca</anchor>
       <arglist>(Debug &amp;debug, SessionStatusFlag value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a194427e41c0919b2aaa1ba4e6e98665a</anchor>
+      <anchor>a4d12129038f2a71b3f7ae7a4852b5755</anchor>
       <arglist>(Debug &amp;debug, PerformanceHudMode value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>ae6d78ab231653215a4e595a46af077da</anchor>
+      <anchor>a3bbf933e98ed3cf875a09525f71171f3</anchor>
       <arglist>(Debug &amp;debug, DebugHudStereoMode value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a83b6866212d8f11499717ccdbedc37eb</anchor>
+      <anchor>aa1582c7807ce82ce4c3dfcf394049404</anchor>
       <arglist>(Debug &amp;debug, LayerHudMode value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a61cd76fb1687e7e03b67d8b6da39cf54</anchor>
+      <anchor>a340c9be88a1f969d3a34dc53af11f808</anchor>
       <arglist>(Debug &amp;debug, ErrorType value)</arglist>
     </member>
   </compound>
@@ -2031,7 +2031,7 @@
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>aac03f9b2a91ebbda095acce83b4a4f32</anchor>
+      <anchor>a898ef35965e30a1d246cfa56c4c6ef1d</anchor>
       <arglist>(Debug &amp;debug, DetectResult value)</arglist>
     </member>
   </compound>
@@ -8734,7 +8734,7 @@
       <type>std::vector&lt; Range2Di &gt;</type>
       <name>atlas</name>
       <anchorfile>namespaceMagnum_1_1TextureTools.html</anchorfile>
-      <anchor>af76cb9fcfc002d17f8ef57825015ba0e</anchor>
+      <anchor>aff46ef512cba7ef2b0ad24924df26d96</anchor>
       <arglist>(const Vector2i &amp;atlasSize, const std::vector&lt; Vector2i &gt; &amp;sizes, const Vector2i &amp;padding=Vector2i())</arglist>
     </member>
   </compound>
@@ -8750,7 +8750,7 @@
       <type>void</type>
       <name>distanceField</name>
       <anchorfile>namespaceMagnum_1_1TextureTools.html</anchorfile>
-      <anchor>a91c52a5c8cd23540f80e8b153f51caeb</anchor>
+      <anchor>a4faa222ac6d064719e5ca9650e6a973d</anchor>
       <arglist>(Texture2D &amp;input, Texture2D &amp;output, const Range2Di &amp;rectangle, Int radius, const Vector2i &amp;imageSize=Vector2i())</arglist>
     </member>
   </compound>
@@ -9152,7 +9152,7 @@
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Audio.html</anchorfile>
-      <anchor>a6dbcdc8c1c4e6d46220e4475b66d3bdb</anchor>
+      <anchor>a50e86c1c5b9c056a96ad3a7bf5cdd90b</anchor>
       <arglist>(Debug &amp;debug, WavAudioFormat value)</arglist>
     </member>
   </compound>
@@ -13861,6 +13861,7 @@
       <anchor>abc6f098f83ff56b1790ba42a2a43a91c</anchor>
       <arglist>()</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Audio_1_1AbstractImporter" title="Subclassing">Audio-AbstractImporter-subclassing</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Audio::AnyImporter</name>
@@ -14334,6 +14335,10 @@
       <anchor>a4d93994b5c330f6bc8ecc718b3c9381d</anchor>
       <arglist>() const </arglist>
     </member>
+    <docanchor file="classMagnum_1_1Audio_1_1Listener" title="Usage">Audio-Listener-usage</docanchor>
+    <docanchor file="classMagnum_1_1Audio_1_1Listener" title="Using Listener with PlayableGroup">Audio-Listener-usage-playablegroup</docanchor>
+    <docanchor file="classMagnum_1_1Audio_1_1Listener" title="Active listener">Audio-Listener-active-listener</docanchor>
+    <docanchor file="classMagnum_1_1Audio_1_1Listener" title="Sound transformation">Audio-Listener-sound-transformation</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Audio::Playable</name>
@@ -14382,6 +14387,7 @@
       <anchor>a229843ff848e433be843c1ac405115e2</anchor>
       <arglist>() const </arglist>
     </member>
+    <docanchor file="classMagnum_1_1Audio_1_1Playable" title="Usage">Audio-Playable-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Audio::PlayableGroup</name>
@@ -14451,6 +14457,7 @@
       <anchor>ac902ff9516f00c99f29d1e0f10b0c14d</anchor>
       <arglist>()</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Audio_1_1PlayableGroup" title="Usage">Audio-PlayableGroup-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Audio::Renderer</name>
@@ -20985,6 +20992,8 @@
       <anchor>ac757572f15467c51569563ea991a2549</anchor>
       <arglist>(Corrade::Utility::Debug &amp;debug, const Unit&lt; Deg, T &gt; &amp;value)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Math_1_1Deg" title="Usage">Math-Deg-usage</docanchor>
+    <docanchor file="classMagnum_1_1Math_1_1Deg" title="Requirement of explicit conversion">Math-Angle-explicit-conversion</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Math::Dual</name>
@@ -27871,6 +27880,10 @@
       <anchor>a1712a5ea421c0833d092c05eee25c0ba</anchor>
       <arglist>(MouseMoveEvent &amp;event)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1AndroidApplication" title="Bootstrap application">Platform-AndroidApplication-bootstrap</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1AndroidApplication" title="General usage">Platform-AndroidApplication-usage</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1AndroidApplication" title="Android packaging stuff">Platform-AndroidApplication-packaging</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1AndroidApplication" title="Redirecting output to Android log buffer">Platform-AndroidApplication-output-redirection</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Platform::AndroidApplication::Configuration</name>
@@ -28191,6 +28204,7 @@
       <anchor>a2320f71394d5e757fb59b8f3fdf3152c</anchor>
       <arglist>(MouseMoveEvent &amp;event)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1BasicScreen" title="Explicit template specializations">Platform-BasicScreen-template-specializations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Platform::BasicScreenedApplication</name>
@@ -28295,6 +28309,7 @@
       <anchor>a7e8fce19853330b675e34e15f9937fdb</anchor>
       <arglist>()=0</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1BasicScreenedApplication" title="Explicit template specializations">Platform-ScreenedApplication-template-specializations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Platform::Context</name>
@@ -28578,6 +28593,8 @@
       <anchor>a8483f136c94f1fc651257fcf8c90f72b</anchor>
       <arglist>(TextInputEvent &amp;event)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1GlfwApplication" title="Bootstrap application">Platform-GlfwApplication-bootstrap</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1GlfwApplication" title="General usage">Platform-GlfwApplication-usage</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::Platform::GlfwApplication::Arguments</name>
@@ -29293,6 +29310,8 @@
       <anchor>a6a18e2aa4321e61ce4fe4e759f477570</anchor>
       <arglist>(MouseMoveEvent &amp;event)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1GlutApplication" title="Bootstrap application">Platform-GlutApplication-bootstrap</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1GlutApplication" title="General usage">Platform-GlutApplication-usage</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::Platform::GlutApplication::Arguments</name>
@@ -29635,6 +29654,8 @@
       <anchor>ab8e7cf24b6ddb31637cbcb2b649a2708</anchor>
       <arglist>(const Arguments &amp;arguments, std::nullptr_t)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1GlxApplication" title="Bootstrap application">Platform-GlxApplication-bootstrap</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1GlxApplication" title="General usage">Platform-GlxApplication-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Platform::Sdl2Application</name>
@@ -29908,6 +29929,14 @@
       <anchor>af700c9491a5c748a897001d373b2be6a</anchor>
       <arglist>(TextEditingEvent &amp;event)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="Bootstrap application">Platform-Sdl2Application-bootstrap</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="Bootstrap application for Emscripten">Platform-Sdl2Application-bootstrap-emscripten</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="Bootstrap application for iOS">Platform-Sdl2Application-bootstrap-ios</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="Bootstrap application for Windows RT">Platform-Sdl2Application-bootstrap-winrt</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="General usage">Platform-Sdl2Application-usage</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="Usage with Emscripten">Platform-Sdl2Application-usage-emscripten</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="Usage with iOS">Platform-Sdl2Application-usage-ios</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="Usage with Windows RT">Platform-Sdl2Application-usage-winrt</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::Platform::Sdl2Application::Arguments</name>
@@ -30663,6 +30692,8 @@
       <anchor>acb0a1a3f7d8dbcc39d178d6f4a4a2f43</anchor>
       <arglist>(const Configuration &amp;configuration)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessCglApplication" title="Bootstrap application">Platform-WindowlessCglApplication-bootstrap</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessCglApplication" title="General usage">Platform-WindowlessCglApplication-usage</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::Platform::WindowlessCglApplication::Arguments</name>
@@ -30842,6 +30873,10 @@
       <anchor>a9e023637c96818fc8bae26a0265f3b86</anchor>
       <arglist>(const Configuration &amp;configuration)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessEglApplication" title="Bootstrap application">Platform-WindowlessEglApplication-bootstrap</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessEglApplication" title="Bootstrap application for Emscripten">Platform-WindowlessEglApplication-bootstrap-emscripten</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessEglApplication" title="General usage">Platform-WindowlessEglApplication-usage</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessEglApplication" title="Usage with Emscripten">Platform-WindowlessEglApplication-usage-emscripten</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::Platform::WindowlessEglApplication::Arguments</name>
@@ -31050,6 +31085,8 @@
       <anchor>a91443b4db4ce576c5ddbf534e08eab9f</anchor>
       <arglist>(const Configuration &amp;configuration)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessGlxApplication" title="Bootstrap application">Platform-WindowlessGlxApplication-bootstrap</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessGlxApplication" title="General usage">Platform-WindowlessGlxApplication-usage</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::Platform::WindowlessGlxApplication::Arguments</name>
@@ -31258,6 +31295,8 @@
       <anchor>a0b509ffbff615b30d85d67a5dddf5439</anchor>
       <arglist>(const Configuration &amp;configuration)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessIosApplication" title="Bootstrap application">Platform-WindowlessIosApplication-bootstrap</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessIosApplication" title="General usage">Platform-WindowlessIosApplication-usage</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::Platform::WindowlessIosApplication::Arguments</name>
@@ -31437,6 +31476,8 @@
       <anchor>a18429f31ca98d129e85e20cf5bfbf544</anchor>
       <arglist>(const Configuration &amp;configuration)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessWglApplication" title="Bootstrap application">Platform-WindowlessWglApplication-bootstrap</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessWglApplication" title="General usage">Platform-WindowlessWglApplication-usage</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::Platform::WindowlessWglApplication::Arguments</name>
@@ -31645,6 +31686,8 @@
       <anchor>a032e40a2e04cae4b468ad19dffbe9011</anchor>
       <arglist>(const Configuration &amp;configuration)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessWindowsEglApplication" title="Bootstrap application">Platform-WindowlessWindowsEglApplication-bootstrap</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1WindowlessWindowsEglApplication" title="General usage">Platform-WindowlessWindowsEglApplication-usage</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::Platform::WindowlessWindowsEglApplication::Arguments</name>
@@ -31797,6 +31840,8 @@
       <anchor>a06fd8eade92d19690c9c93ec711b2a19</anchor>
       <arglist>(const Arguments &amp;arguments, std::nullptr_t)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Platform_1_1XEglApplication" title="Bootstrap application">Platform-XEglApplication-bootstrap</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1XEglApplication" title="General usage">Platform-XEglApplication-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::PrimitiveQuery</name>
@@ -58113,7 +58158,7 @@
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Audio.html</anchorfile>
-      <anchor>a6dbcdc8c1c4e6d46220e4475b66d3bdb</anchor>
+      <anchor>a50e86c1c5b9c056a96ad3a7bf5cdd90b</anchor>
       <arglist>(Debug &amp;debug, WavAudioFormat value)</arglist>
     </member>
   </compound>
@@ -58130,28 +58175,28 @@
       <type>Shapes::AbstractShape3D *</type>
       <name>convertShape</name>
       <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>a126bfaf12459eb1a25ef13559de89510</anchor>
+      <anchor>a1dde6f0e2a6682369e75b7ab8e7ebe89</anchor>
       <arglist>(SceneGraph::AbstractBasicObject3D&lt; btScalar &gt; &amp;object, const btCollisionShape &amp;shape, Shapes::ShapeGroup3D *shapes=nullptr)</arglist>
     </member>
     <member kind="function">
       <type>Shapes::Shape&lt; Shapes::Box3D &gt; *</type>
       <name>convertShape</name>
       <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>af76460d8f14aa7dc64e78ca327f8d7a5</anchor>
+      <anchor>abdb0da4dbc47010da441ffaa2ae21c9f</anchor>
       <arglist>(SceneGraph::AbstractBasicObject3D&lt; btScalar &gt; &amp;object, const btBoxShape &amp;box, Shapes::ShapeGroup3D *shapes=nullptr)</arglist>
     </member>
     <member kind="function">
       <type>Shapes::Shape&lt; Shapes::Sphere3D &gt; *</type>
       <name>convertShape</name>
       <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>ab23e9ad42c1adb4f0c565163a442ce66</anchor>
+      <anchor>af4a9aaecf5768855ae183b32b8ba29fa</anchor>
       <arglist>(SceneGraph::AbstractBasicObject3D&lt; btScalar &gt; &amp;object, const btSphereShape &amp;sphere, Shapes::ShapeGroup3D *shapes=nullptr)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>aa37ff90bc9f6e2756fe1a2854d114f43</anchor>
+      <anchor>ae4102f01b3709014e598d0c6725f31ed</anchor>
       <arglist>(Debug &amp;debug, DebugDraw::DebugMode value)</arglist>
     </member>
   </compound>
@@ -60107,91 +60152,91 @@
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>aac03f9b2a91ebbda095acce83b4a4f32</anchor>
+      <anchor>a898ef35965e30a1d246cfa56c4c6ef1d</anchor>
       <arglist>(Debug &amp;debug, DetectResult value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a4a10d88a62e4d474e820e1aea0f069c5</anchor>
+      <anchor>a650d4953f7d4d211f4d022d50d616538</anchor>
       <arglist>(Debug &amp;debug, HmdType value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>aad9eb7c25050cc589dd7839ba68cd8b8</anchor>
+      <anchor>a73ce87139dacba79763659aaeebc170c</anchor>
       <arglist>(Debug &amp;debug, TrackingOrigin value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>af590305adfc6bdc7c96e6e80a65ddb43</anchor>
+      <anchor>a75fcd47c56139a2a51ac70f958ff8615</anchor>
       <arglist>(Debug &amp;debug, TrackerFlag value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>ae6e92af37ce60f20df7e7f91968efa27</anchor>
+      <anchor>ab05854774e0c74850a6258734e56e1f6</anchor>
       <arglist>(Debug &amp;debug, Button value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a67cda2f111927cd1e9165953d0e14359</anchor>
+      <anchor>af1ee6d0c448e1a216f8414fc842687af</anchor>
       <arglist>(Debug &amp;debug, Touch value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a565af34924402b9f08c965b363f33f7c</anchor>
+      <anchor>aa8726fd40080c94c7dd03067313b095f</anchor>
       <arglist>(Debug &amp;debug, ControllerType value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>af02b621587a4811d5180e4cb4f1614fa</anchor>
+      <anchor>a79df2b6b9a2e08ae0a76732f970c7920</anchor>
       <arglist>(Debug &amp;debug, StatusFlag value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a87cb3e499853d4455b1c0bf96c50e812</anchor>
+      <anchor>ae84582e8ef8bdf12136fbd05d443c4ca</anchor>
       <arglist>(Debug &amp;debug, SessionStatusFlag value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a194427e41c0919b2aaa1ba4e6e98665a</anchor>
+      <anchor>a4d12129038f2a71b3f7ae7a4852b5755</anchor>
       <arglist>(Debug &amp;debug, PerformanceHudMode value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>ae6d78ab231653215a4e595a46af077da</anchor>
+      <anchor>a3bbf933e98ed3cf875a09525f71171f3</anchor>
       <arglist>(Debug &amp;debug, DebugHudStereoMode value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a83b6866212d8f11499717ccdbedc37eb</anchor>
+      <anchor>aa1582c7807ce82ce4c3dfcf394049404</anchor>
       <arglist>(Debug &amp;debug, LayerHudMode value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a61cd76fb1687e7e03b67d8b6da39cf54</anchor>
+      <anchor>a340c9be88a1f969d3a34dc53af11f808</anchor>
       <arglist>(Debug &amp;debug, ErrorType value)</arglist>
     </member>
   </compound>
@@ -61256,14 +61301,14 @@
       <type>std::vector&lt; Range2Di &gt;</type>
       <name>atlas</name>
       <anchorfile>namespaceMagnum_1_1TextureTools.html</anchorfile>
-      <anchor>af76cb9fcfc002d17f8ef57825015ba0e</anchor>
+      <anchor>aff46ef512cba7ef2b0ad24924df26d96</anchor>
       <arglist>(const Vector2i &amp;atlasSize, const std::vector&lt; Vector2i &gt; &amp;sizes, const Vector2i &amp;padding=Vector2i())</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>distanceField</name>
       <anchorfile>namespaceMagnum_1_1TextureTools.html</anchorfile>
-      <anchor>a91c52a5c8cd23540f80e8b153f51caeb</anchor>
+      <anchor>a4faa222ac6d064719e5ca9650e6a973d</anchor>
       <arglist>(Texture2D &amp;input, Texture2D &amp;output, const Range2Di &amp;rectangle, Int radius, const Vector2i &amp;imageSize=Vector2i())</arglist>
     </member>
   </compound>
@@ -61888,56 +61933,56 @@
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>a7a282f38bdfb30e0bf96e3a9263d4379</anchor>
+      <anchor>a668ca2e16644e9d8e6b077ed9d2262cd</anchor>
       <arglist>(Debug &amp;debug, PlaneFlag value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>a054d68d97cdff0794d7fbefc84bc8206</anchor>
+      <anchor>af1efee2fa682422665c299232d1870b9</anchor>
       <arglist>(Debug &amp;debug, PlaneFlags value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>a80012b5da15050b1d9d527f6ce833fd9</anchor>
+      <anchor>aa164d931b7585de7abc12588d41b9c55</anchor>
       <arglist>(Debug &amp;debug, Type value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>a5ce5a2039af17edd22c9e851f07ffb07</anchor>
+      <anchor>a328fb1fa2dd19b12b50706df41c2ce53</anchor>
       <arglist>(Debug &amp;debug, State value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>ac5f33b043d9d0c87a98edceac041f506</anchor>
+      <anchor>aed40c9f728962b3d3ff3794ca563a5b0</anchor>
       <arglist>(Debug &amp;debug, Style value)</arglist>
     </member>
     <member kind="function">
       <type>StyleConfiguration</type>
       <name>defaultStyleConfiguration</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>ad57a0a7abf897080139bce4ed91642cd</anchor>
+      <anchor>a757a55d7cb2d73c2e757e308cd8d9e14</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>aa8da4a420b361121b5e71f13da8c2b9b</anchor>
+      <anchor>a0310478aa60fec3a2e0e4e2226751a95</anchor>
       <arglist>(Debug &amp;debug, WidgetFlag value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
-      <anchor>a9b714e67f7fa8079cdc357574f2486aa</anchor>
+      <anchor>ad24ec2ad8310d61add110dbe738e8566</anchor>
       <arglist>(Debug &amp;debug, WidgetFlags value)</arglist>
     </member>
   </compound>
@@ -62462,11 +62507,17 @@
     <name>index</name>
     <title>Magnum</title>
     <filename>index</filename>
-    <docanchor file="index" title="Design goals">mainpage-design-goals</docanchor>
+    <docanchor file="index" title="Beauty of simplicity">mainpage-goals1</docanchor>
+    <docanchor file="index" title="With batteries included">mainpage-goals2</docanchor>
+    <docanchor file="index" title="Screws are not glued in">mainpage-goals3</docanchor>
     <docanchor file="index" title="Supported platforms">mainpage-platforms</docanchor>
-    <docanchor file="index" title="Features">mainpage-features</docanchor>
+    <docanchor file="index" title="Building Magnum">mainpage-building</docanchor>
+    <docanchor file="index" title="Minimal dependencies">mainpage-building-dependencies</docanchor>
+    <docanchor file="index" title="Compilation, installation">mainpage-building-compilation</docanchor>
+    <docanchor file="index" title="Building and running unit tests">mainpage-building-tests</docanchor>
+    <docanchor file="index" title="Building documentation">mainpage-building-doc</docanchor>
     <docanchor file="index" title="Getting started">mainpage-getting-started</docanchor>
-    <docanchor file="index" title="Hacking Magnum">mainpage-hacking</docanchor>
+    <docanchor file="index" title="Contact &amp; support">mainpage-contact</docanchor>
     <docanchor file="index" title="License">mainpage-license</docanchor>
   </compound>
 </tagfile>

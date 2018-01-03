@@ -154,6 +154,7 @@
     <class kind="class">Corrade::Containers::EnumSet</class>
     <class kind="class">Corrade::Containers::LinkedList</class>
     <class kind="class">Corrade::Containers::LinkedListItem</class>
+    <class kind="class">Corrade::Containers::Optional</class>
     <namespace>Corrade</namespace>
     <namespace>Corrade::Containers</namespace>
   </compound>
@@ -207,6 +208,23 @@
     <class kind="class">Corrade::Containers::LinkedListItem</class>
     <namespace>Corrade</namespace>
     <namespace>Corrade::Containers</namespace>
+  </compound>
+  <compound kind="file">
+    <name>Optional.h</name>
+    <path>/home/mosra/Code/corrade/src/Corrade/Containers/</path>
+    <filename>Optional_8h</filename>
+    <includes id="Assert_8h" name="Assert.h" local="yes" imported="no">Corrade/Utility/Assert.h</includes>
+    <class kind="struct">Corrade::Containers::NullOptT</class>
+    <class kind="class">Corrade::Containers::Optional</class>
+    <namespace>Corrade</namespace>
+    <namespace>Corrade::Containers</namespace>
+    <member kind="variable">
+      <type>constexpr NullOptT</type>
+      <name>NullOpt</name>
+      <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
+      <anchor>a047ff43a43f3841e3c7125e1cc41bb60</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>StaticArray.h</name>
@@ -3377,6 +3395,211 @@
     <name>Corrade::Containers::NoInitT</name>
     <filename>structCorrade_1_1Containers_1_1NoInitT.html</filename>
   </compound>
+  <compound kind="struct">
+    <name>Corrade::Containers::NullOptT</name>
+    <filename>structCorrade_1_1Containers_1_1NullOptT.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>Corrade::Containers::Optional</name>
+    <filename>classCorrade_1_1Containers_1_1Optional.html</filename>
+    <templarg></templarg>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>ab0817945d9ae1c756a1a8d43b844a2d8</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>ac514d8d80de955a420761b2eba4acc10</anchor>
+      <arglist>(NullOptT) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a3457c40bc241ec7bd083085a87d559d6</anchor>
+      <arglist>(const T &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a8a38b7b89a97e1a4823fcfae9c49605f</anchor>
+      <arglist>(T &amp;&amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a0c3581fe10027150d9a1762e07be11f7</anchor>
+      <arglist>(InPlaceInitT, Args &amp;&amp;...args)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>aa9815b3020d45dd0afe3be4a9b1bc948</anchor>
+      <arglist>(const Optional&lt; T &gt; &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a7206e879c196e544eb8836270e3709e0</anchor>
+      <arglist>(Optional&lt; T &gt; &amp;&amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>Optional&lt; T &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a2a0030e84b53f0b5769b7321c1a243e0</anchor>
+      <arglist>(const Optional&lt; T &gt; &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>Optional&lt; T &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>aaba624ac91782215a3698637111a15d3</anchor>
+      <arglist>(Optional&lt; T &gt; &amp;&amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>aca99a8049370de23ee82834babab94ee</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>abd7470c76c538ec5fc336e649c93b1f1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>ac806980a86d61a42fb769b6f0d728445</anchor>
+      <arglist>(const Optional&lt; T &gt; &amp;other) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a4bb21112c42bd90a21c2af714b7d955f</anchor>
+      <arglist>(const Optional&lt; T &gt; &amp;other) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a4c3bf36def2b5ed90a42eb5d965774c9</anchor>
+      <arglist>(NullOptT) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a520051d7ef64917247e1bc6d213809df</anchor>
+      <arglist>(NullOptT) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a046b353c32075a990a14563d6b7ee53f</anchor>
+      <arglist>(const T &amp;other) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a78f36add983b86f5961a641e555ea1bf</anchor>
+      <arglist>(const T &amp;other) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator T &amp;</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a02cd8f155ccc7dc51b9ba5876aca9613</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator const T &amp;</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a5ae7adc848b7398467f1b18f721b7e29</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>T *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a000cfe22c91613c0acfb0816d06a3f5e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const T *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>ab9475f5852b9a21573ffc3627e584f4c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>T &amp;</type>
+      <name>operator*</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a69cd09fb7692a22375d9fe8919d2bce6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const T &amp;</type>
+      <name>operator*</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a7cb5e8d64a3d72817826a0f4a9b04f2f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>T &amp;</type>
+      <name>emplace</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>aa87b1126c552acb7c224bd73feb245a5</anchor>
+      <arglist>(Args &amp;&amp;...args)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a8404f64fbb8bf4965462b97179e4ebaa</anchor>
+      <arglist>(NullOptT, const Optional&lt; T &gt; &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a1c553d2af62a154653128d1d9ce46a7f</anchor>
+      <arglist>(NullOptT, const Optional&lt; T &gt; &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>aba65d386a0b9f9cfd54919c48bbd87e8</anchor>
+      <arglist>(const T &amp;a, const Optional&lt; T &gt; &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a19c44b59df82dbebce8c720ec88717f5</anchor>
+      <arglist>(const T &amp;a, const Optional&lt; T &gt; &amp;b)</arglist>
+    </member>
+  </compound>
   <compound kind="class">
     <name>Corrade::Containers::StaticArray</name>
     <filename>classCorrade_1_1Containers_1_1StaticArray.html</filename>
@@ -6366,7 +6589,7 @@
       <arglist>(std::ostream *output, Flags flags={})</arglist>
     </member>
     <member kind="function">
-      <type>CORRADE_NORETURN</type>
+      <type></type>
       <name>~Fatal</name>
       <anchorfile>classCorrade_1_1Utility_1_1Fatal.html</anchorfile>
       <anchor>a7a65b11e97ce23312a7c62e9d52cd847</anchor>
@@ -6815,6 +7038,8 @@
     <class kind="class">Corrade::Containers::LinkedList</class>
     <class kind="class">Corrade::Containers::LinkedListItem</class>
     <class kind="struct">Corrade::Containers::NoInitT</class>
+    <class kind="struct">Corrade::Containers::NullOptT</class>
+    <class kind="class">Corrade::Containers::Optional</class>
     <class kind="class">Corrade::Containers::StaticArray</class>
     <class kind="class">Corrade::Containers::StaticArrayView</class>
     <class kind="struct">Corrade::Containers::ValueInitT</class>
@@ -6992,6 +7217,13 @@
       <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
       <anchor>a0cad6e09b65666040bb2460df883e4a3</anchor>
       <arglist>(const StaticArray&lt; size_, T &gt; &amp;)</arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr NullOptT</type>
+      <name>NullOpt</name>
+      <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
+      <anchor>a047ff43a43f3841e3c7125e1cc41bb60</anchor>
+      <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr DefaultInitT</type>
@@ -7842,8 +8074,12 @@
     <docanchor file="index" title="Supported platforms">corrade-mainpage-platforms</docanchor>
     <docanchor file="index" title="Features">corrade-mainpage-features</docanchor>
     <docanchor file="index" title="Building Corrade">corrade-mainpage-building</docanchor>
+    <docanchor file="index" title="Minimal dependencies">corrade-mainpage-building-dependencies</docanchor>
+    <docanchor file="index" title="Compilation, installation">corrade-mainpage-building-compilation</docanchor>
+    <docanchor file="index" title="Building and running unit tests">corrade-mainpage-building-tests</docanchor>
+    <docanchor file="index" title="Building documentation">corrade-mainpage-building-doc</docanchor>
     <docanchor file="index" title="Examples and tutorials">corrade-mainpage-getting-started</docanchor>
-    <docanchor file="index" title="Hacking Corrade">corrade-mainpage-hacking</docanchor>
+    <docanchor file="index" title="Contact &amp; support">corrade-mainpage-contact</docanchor>
     <docanchor file="index" title="License">corrade-mainpage-license</docanchor>
   </compound>
 </tagfile>
