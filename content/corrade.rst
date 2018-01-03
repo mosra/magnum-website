@@ -8,8 +8,11 @@ Corrade
 
     *corrade* (v.) --- "To scrape together, to gather together from various sources"
 
-Corrade is a multiplatform utility library written in C++11/C++14, now used as
+Corrade is a multiplatform utility library written in C++11/C++14. It's used as
 a base for the Magnum graphics engine, among other things.
+
+-   Documentation --- http://doc.magnum.graphics/corrade/
+-   GitHub project page --- https://github.com/mosra/corrade
 
 Supported platforms
 ===================
@@ -21,24 +24,31 @@ Supported platforms
 -   **Web** (`asm.js <http://asmjs.org/>`_ or `WebAssembly <http://webassembly.org/>`_),
     through `Emscripten <http://kripken.github.io/emscripten-site/>`_
 
+See the `Build Status page <http://magnum.graphics/build-status/>`_ for
+detailed per-platform build status.
+
 Features
 ========
 
--   Signal/slot connection library with compile-time argument checking.
--   Plugin management library with static and dynamic plugins and dependency
-    handling.
--   Easy-to-use unit test framework and extensible debugging output.
--   Various utilities to simplify multiplatform development.
+-   Low-level utilities to bridge platform differences when accessing OS
+    functionality, filesystem, console and environment
+-   Lightweight container implementations, complementing STL features with
+    focus on compilation speed, ease of use and performance
+-   Test framework emphasizing flexibility, extensibility, minimal use of
+    macros and clarity of diagnostic output
+-   Plugin management library with static and dynamic plugins, dependency
+    handling and hot code reload
+-   Signal/slot connection library with full type safety
 
-You might want to read also the
-`official project announcement <{filename}/blog/announcements/introducing-corrade.rst>`_
-or notes from latest `May 2015 release <{filename}/blog/announcements/may-2015-updates.rst#corrade>`_.
+Check also the `Feature Overview pages <http://magnum.graphics/features/>`_ for
+further information.
 
 Documentation, getting started
 ==============================
 
-Documentation is available :dox:`for online viewing <corrade>`, you can also
-generate it directly from the source code.
+Head over :dox:`to the documentation <corrade>` for building instructions.
+The best way to get started is to read some
+:dox:`examples and tutorials <corrade-example-index>`.
 
 License
 =======
