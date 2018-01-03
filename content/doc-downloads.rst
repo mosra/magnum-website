@@ -26,8 +26,8 @@ the files.
 
 .. code:: ini
 
-    TAGFILES += corrade.xml=http://doc.magnum.graphics/corrade/ \
-                magnum.xml=http://doc.magnum.graphics/magnum/
+    TAGFILES += corrade.tag=http://doc.magnum.graphics/corrade/ \
+                magnum.tag=http://doc.magnum.graphics/magnum/
 
 .. block-info:: Linking to STL documentation
 
@@ -38,7 +38,7 @@ the files.
 
     .. code:: ini
 
-        TAGFILES += stl.xml=http://en.cppreference.com/w/
+        TAGFILES += stl.tag=http://en.cppreference.com/w/
 
 .. note-success::
 
