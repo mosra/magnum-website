@@ -89,7 +89,7 @@ M_LINKS_FOOTER2 = [('Docs', '//doc.magnum.graphics/'),
                    ('Getting Started', '//doc.magnum.graphics/magnum/getting-started.html'),
                    ('Corrade', '//doc.magnum.graphics/corrade/'),
                    ('Magnum', '//doc.magnum.graphics/magnum/'),
-                   ('Doc Downloads', 'documentation-downloads/')]
+                   ('Doc Downloads', 'doc-downloads/')]
 
 M_LINKS_FOOTER3 = [('Contact & Support', 'contact/'),
                    ('About the Project', 'about/'),
