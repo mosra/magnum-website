@@ -12,6 +12,10 @@ May 2015 updates to Magnum
 
 .. role:: cpp(code)
     :language: c++
+.. role:: label-flat-success
+    :class: m-label m-flat m-success
+.. role:: label-flat-info
+    :class: m-label m-flat m-info
 
 The new release comes almost a whole year after the previous one, mainly due to
 the fact that I'm currently full-time employed and I have less free time than I
@@ -88,17 +92,17 @@ better alternative to the bloated XML-based COLLADA format and currently there
 are exporters from 3Ds Max, Maya and Blender.
 
 Current OpenGEX importer implementation in Magnum covers the same feature set
-as the `ColladaImporter <http://mosra.cz/blog/magnum-doc/classMagnum_1_1Trade_1_1ColladaImporter.html>`_
-plugin, but with faster and more robust implementation and hopefully with less
-bugs and uncovered corner cases. The future of the COLLADA importer is
-uncertain and it will probably be deprecated in favor of the new OpenGEX
-importer, because COLLADA support in 3D modelling software is far from ideal
-and the XML parser is hell to implement.
+as the :dox:`ColladaImporter <Trade::ColladaImporter>` plugin, but with faster
+and more robust implementation and hopefully with less bugs and uncovered
+corner cases. The future of the COLLADA importer is uncertain and it will
+probably be deprecated in favor of the new OpenGEX importer, because COLLADA
+support in 3D modelling software is far from ideal and the XML parser is hell
+to implement.
 
-The underlying `OpenDDL <http://mosra.cz/blog/magnum-doc/classMagnum_1_1OpenDdl_1_1Document.html#details>`_ parser that powers the
-plugin is currently only a private part of the plugin, but if it is seen to be
-useful outside of the plugin, I may move it into a publicly usable library.
-Here's an example how OpenDDL file parsing can look like:
+The underlying :dox:`OpenDDL <OpenDdl::Document>` parser that powers the plugin
+is currently only a private part of the plugin, but if it is seen to be useful
+outside of the plugin, I may move it into a publicly usable library. Here's an
+example how OpenDDL file parsing can look like:
 
 .. code:: c++
 
@@ -142,12 +146,16 @@ Here's an example how OpenDDL file parsing can look like:
         // ...
     }
 
-The `Viewer example <http://mosra.cz/blog/magnum-doc/examples-viewer.html>`_
-was also updated to support loading OpenGEX files and it is now also available
-`online through Emscripten <http://mosra.cz/blog/magnum/viewer-emscripten.html>`_.
+The Viewer example was also updated to support loading OpenGEX files and it is
+now also available online through Emscripten:
 
-.. image:: {filename}/img/viewer.png
-    :alt: Viewer example
+.. container:: m-row
+
+    .. container:: m-col-m-6 m-push-m-3
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [viewer]
+            :end-before: [/viewer]
 
 `New extension loader, extension loading for OpenGL ES`_
 ========================================================
@@ -478,7 +486,7 @@ Performance improvements
 New features
 ------------
 
--   New :dox:`OpenDDL parser <Trade::OpenDdl::Document>` and
+-   New :dox:`OpenDDL parser <OpenDdl::Document>` and
     :dox:`OpenGexImporter <Trade::OpenGexImporter>` plugin for importing
     `OpenGEX`_ files.
 -   New :dox:`StanfordImporter <Trade::StanfordImporter>` plugin for importing

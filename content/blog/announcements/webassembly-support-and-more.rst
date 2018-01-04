@@ -16,6 +16,14 @@ WebAssembly support in Magnum --- and more
     :class: m-text m-info
 .. role:: warning(strong)
     :class: m-text m-warning
+.. role:: label-flat-success
+    :class: m-label m-flat m-success
+.. role:: label-flat-info
+    :class: m-label m-flat m-info
+.. role:: label-success
+    :class: m-label m-success
+.. role:: label-warning
+    :class: m-label m-warning
 
 As `(P)NaCl was deemed dead <https://blog.chromium.org/2017/05/goodbye-pnacl-hello-webassembly.html>`_
 by its creators, I axed all support for it from all repos. Frankly, it was
@@ -89,15 +97,9 @@ there is also a fresh port of the Audio example:
 
     .. container:: m-col-m-6 m-push-m-3
 
-        .. figure:: {filename}/showcase/audio/screenshot.png
-            :alt: Audio example screenshot
-            :figclass: m-figure m-fullwidth
-            :target: {filename}/showcase/audio.rst
-
-            Audio example
-
-            Shows how to play spatialized audio with Magnum.
-            :warning:`Warning: plays sound on load.`
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [audio]
+            :end-before: [/audio]
 
 I aimed to make all the demo pages responsive and mobile-firendly, but nobody's
 perfect --- if you see something strange, don't hesitate to report a bug either
@@ -146,30 +148,15 @@ also makes the Magnum Info utilities finally available on the web:
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/showcase/magnum-info/screenshot.png
-            :alt: Magnum Info screenshot
-            :figclass: m-figure m-fullwidth
-            :target: {filename}/showcase/magnum-info.rst
-
-            Magnum Info
-
-            Text utility printing out various information about Magnum and
-            the OpenGL / WebGL implementation it's running on. Versions for
-            `WebGL 1 <{filename}/showcase/magnum-info.rst>`__ and
-            `WebGL 2 <{filename}/showcase/magnum-info-webgl2.rst>`__ are
-            available.
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [magnum-info]
+            :end-before: [/magnum-info]
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/showcase/magnum-al-info/screenshot.png
-            :alt: Magnum AL Info screenshot
-            :figclass: m-figure m-fullwidth
-            :target: {filename}/showcase/magnum-al-info.rst
-
-            Magnum AL Info
-
-            Text utility printing out various information about Magnum and
-            the OpenAL implementation it's running on.
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [magnum-al-info]
+            :end-before: [/magnum-al-info]
 
 Windowless applications for Emscripten are using the :dox:`Platform::WindowlessEglApplication`
 class, see its documentation for detailed usage guide. There is also a new

@@ -12,6 +12,10 @@ January 2014 updates to Magnum
 
 .. role:: cpp(code)
     :language: c++
+.. role:: label-flat-info
+    :class: m-label m-flat m-info
+.. role:: label-flat-success
+    :class: m-label m-flat m-success
 
 The January snapshot is available under ``snapshot-2014-01`` tag in
 :gh:`Corrade <mosra/corrade^snapshot-2014-01>`,
@@ -56,13 +60,15 @@ Textured Triangle example.
 
     .. container:: m-col-m-6
 
-        .. image:: {filename}/img/textured-triangle.png
-            :alt: Textured Triangle Example
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [textured-triangle]
+            :end-before: [/textured-triangle]
 
     .. container:: m-col-m-6
 
-        .. image:: {filename}/img/text.png
-            :alt: Text Example
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [text]
+            :end-before: [/text]
 
 `Using absolute includes by default`_
 =====================================

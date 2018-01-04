@@ -51,110 +51,54 @@ unlucky and your browser isn't, you can at least try
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/showcase/audio/screenshot.png
-            :alt: Audio example screenshot
-            :figclass: m-figure m-fullwidth
-            :target: {filename}/showcase/audio.rst
-
-            Audio Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
-            :label-warning:`sound`
-
-            Shows how to play spatialized audio with Magnum.
+        .. include:: showcase-figures.rst.in
+            :start-after: [audio]
+            :end-before: [/audio]
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/showcase/viewer/screenshot.png
-            :alt: Viewer example screenshot
-            :figclass: m-figure m-fullwidth
-            :target: {filename}/showcase/viewer.rst
-
-            Viewer Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
-
-            Uses scene importer plugins to load a 3D scene for interactive
-            viewing.
+        .. include:: showcase-figures.rst.in
+            :start-after: [viewer]
+            :end-before: [/viewer]
 
 .. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/showcase/primitives/screenshot.png
-            :alt: Primitives example screenshot
-            :figclass: m-figure m-fullwidth
-            :target: {filename}/showcase/primitives.rst
-
-            Primitives Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
-
-            Shows how to use builtin primitives and how to do simple input
-            handling. Displays colored cube which can be rotated using mouse.
+        .. include:: showcase-figures.rst.in
+            :start-after: [primitives]
+            :end-before: [/primitives]
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/showcase/text/screenshot.png
-            :alt: Text example screenshot
-            :figclass: m-figure m-fullwidth
-            :target: {filename}/showcase/text.rst
-
-            Text Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
-
-            Showcase of Magnum text rendering using signed distance field
-            technique. Full UTF-8 support. Buffer mapping is used for mutable
-            text.
+        .. include:: showcase-figures.rst.in
+            :start-after: [text]
+            :end-before: [/text]
 
 .. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/showcase/triangle/screenshot.png
-            :alt: Triangle example screenshot
-            :figclass: m-figure m-fullwidth
-            :target: {filename}/showcase/triangle.rst
-
-            Triangle Example :label-flat-info:`wasm` :label-info:`asm.js`
-            :label-flat-success:`webgl1`
-
-            Displays simple triangle with interpolated colors. For the unlucky,
-            an `asm.js version <{filename}/showcase/triangle-asmjs.rst>`__ that
-            doesn't require WebAssembly-capable browser is also available.
+        .. include:: showcase-figures.rst.in
+            :start-after: [triangle]
+            :end-before: [/triangle]
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/showcase/textured-triangle/screenshot.png
-            :alt: Textured triangle example screenshot
-            :figclass: m-figure m-fullwidth
-            :target: {filename}/showcase/textured-triangle.rst
-
-            Textured Triangle Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
-
-            Slightly extended version of the triangle example; uses TGA
-            importer plugin to load a stone image and displays a triangle with
-            colored texture on it.
+        .. include:: showcase-figures.rst.in
+            :start-after: [textured-triangle]
+            :end-before: [/textured-triangle]
 
 .. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/showcase/magnum-info/screenshot.png
-            :alt: Magnum Info screenshot
-            :figclass: m-figure m-fullwidth
-            :target: {filename}/showcase/magnum-info.rst
-
-            Magnum Info :label-flat-info:`wasm` :label-flat-success:`webgl1`
-            :label-success:`webgl2`
-
-            Text utility printing out various information about Magnum and
-            the OpenGL / WebGL implementation it's running on. Versions for
-            `WebGL 1 <{filename}/showcase/magnum-info.rst>`__ and
-            `WebGL 2 <{filename}/showcase/magnum-info-webgl2.rst>`__ are
-            available.
+        .. include:: showcase-figures.rst.in
+            :start-after: [magnum-info]
+            :end-before: [/magnum-info]
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/showcase/magnum-al-info/screenshot.png
-            :alt: Magnum AL Info screenshot
-            :figclass: m-figure m-fullwidth
-            :target: {filename}/showcase/magnum-al-info.rst
-
-            Magnum AL Info :label-flat-info:`wasm`
-
-            Text utility printing out various information about Magnum and
-            the OpenAL implementation it's running on.
+        .. include:: showcase-figures.rst.in
+            :start-after: [magnum-al-info]
+            :end-before: [/magnum-al-info]
