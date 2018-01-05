@@ -50,6 +50,8 @@ M_LINKS_NAVBAR2[0] = ('Blog', M_BLOG_URL, 'archives', [])
 assert M_LINKS_FOOTER3[2][0] == 'Blog Feed'
 M_LINKS_FOOTER3[2] = ('Blog Feed', M_BLOG_URL + '/feeds/all.atom.xml')
 
+M_SOCIAL_IMAGE = 'http://static.magnum.graphics/img/site.jpg'
+
 M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600%7CSource+Sans+Pro:400,400i,600,600i&subset=latin-ext',
                STATIC_URL.format(path='m-dark.compiled.css')]
 THEME_STATIC_PATHS = ['static/m-dark.compiled.css']
