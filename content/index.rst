@@ -16,7 +16,7 @@ Magnum Engine
 
             .. raw:: html
 
-                <h1>magnum</h1>
+                <h1>Magnum <span class="m-thin">Engine</span></h1>
 
     .. container:: m-row
 
@@ -56,7 +56,7 @@ Magnum Engine
         .. block-primary:: Beauty of *simplicity*
 
             Among Magnum essentials is a UTF-8-aware OS, filesystem and console
-            abstraction, a feature-packed vector math library and a slim C++11
+            abstraction, a versatile vector math library and a slim C++11
             wrapper of OpenGL / WebGL family of APIs. Build on top of that or
             opt-in for more.
 
