@@ -103,5 +103,6 @@ Magnum Engine
 
 .. class:: m-text-center
 
-*Looking for more?* There's a `Showcase page <{filename}/showcase.rst>`_ right
-behind the corner with lots of WebGL demos.
+*Wondering if Magnum is a good fit for your project?* We prepared
+`a few case studies <{filename}/is-magnum-what-i-am-looking-for.rst>`_ to help
+you decide.
