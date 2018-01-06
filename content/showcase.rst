@@ -102,3 +102,7 @@ unlucky and your browser isn't, you can at least try
         .. include:: showcase-figures.rst.in
             :start-after: [magnum-al-info]
             :end-before: [/magnum-al-info]
+
+*Looking for more?* Not all demos are ported to HTML5 yet. See
+:dox:`Examples and Tutorials <example-index>` in the documentation --- there's
+an Oculus VR demo, shadow mapping, Bullet Physics integration and more.
