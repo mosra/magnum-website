@@ -1,3 +1,6 @@
+# CORS
+Header set Access-Control-Allow-Origin "*"
+
 # Gzip
 AddOutputFilter DEFLATE html xml txt css js wasm
 
