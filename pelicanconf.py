@@ -104,12 +104,12 @@ M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i
 
 M_FINE_PRINT = """
 | Magnum Engine. Copyright © `Vladimír Vondruš <http://mosra.cz>`_ and
-  contributors, 2010--2018.
-| Site powered by `Pelican <https://getpelican.com>`_ and
-  `m.css <http://mcss.mosra.cz>`_. Contact the team via
-  `GitHub <https://github.com/mosra/magnum>`_, `Gitter <https://gitter.im/mosra/magnum>`_,
-  `e-mail <mailto:magnum-engine@googlegroups.com>`_, or
-  `Twitter <https://twitter.com/czmosra>`_.
+  contributors, 2010--2018. Site powered by `Pelican <https://getpelican.com>`_
+  and `m.css <http://mcss.mosra.cz>`_.
+| Site content is `available on GitHub under MIT <https://github.com/mosra/magnum-website>`_.
+  Contact the team via `GitHub <https://github.com/mosra/magnum>`_,
+  `Gitter <https://gitter.im/mosra/magnum>`_, `e-mail <mailto:magnum-engine@googlegroups.com>`_,
+  or `Twitter <https://twitter.com/czmosra>`_.
 """
 
 M_ARCHIVED_ARTICLE_BADGE = """
