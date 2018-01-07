@@ -83,7 +83,7 @@ studies loosely based on existing Magnum users to help you decide.
             .. button-info:: http://doc.magnum.graphics/magnum/examples-triangle-plain-glfw.html
                 :class: m-fullwidth
 
-                Integrate Magnum core
+                Integrate just the core
 
     .. container:: m-col-l-4 m-col-m-8 m-push-m-2
 
@@ -103,3 +103,6 @@ studies loosely based on existing Magnum users to help you decide.
                 :class: m-fullwidth
 
                 Check out Godot engine
+
+*These are not all possible use cases.* If your project doesn't resemble any of
+above, feel free to `ask us for advice <{filename}/contact.rst>`_.
