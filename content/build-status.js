@@ -18,8 +18,6 @@ if(location.search) {
     let params = new URLSearchParams(location.search);
     projects = []
     for(let p of params) projects.push(p);
-
-    console.log(projects);
 }
 
 function fetchTravisJobStatus(latestJobs) {
