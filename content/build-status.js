@@ -20,6 +20,21 @@ if(location.search) {
     for(let p of params) projects.push(p);
 }
 
+function timeDiff(before, now) {
+    var diff = now.getTime() - before.getTime();
+
+    /* Try days first. If less than two days, try hours. If less than two
+       hours, try minutes. If less than a minute, say "now". */
+    if(diff/(24*60*60*1000) > 2)
+        return Math.round(diff/(24*60*60*1000)) + "d";
+    else if(diff/(60*60*1000) > 2)
+        return Math.round(diff/(60*60*1000)) + "h";
+    else if(diff/(60*1000) > 1)
+        return Math.round(diff/(60*1000)) + "m";
+    else
+        return "now";
+}
+
 function fetchTravisJobStatus(latestJobs) {
     var req = window.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
     if(!req) return;
@@ -30,8 +45,9 @@ function fetchTravisJobStatus(latestJobs) {
     req.onreadystatechange = function() {
         if(req.readyState != 4) return;
 
-        console.log(req.response);
+        //console.log(req.response);
 
+        var now = new Date(Date.now());
         var jobs = req.response['jobs'];
         for(var i = 0; i != jobs.length; ++i) {
             var match = jobs[i]['config']['env'].match(travisJobIdRe);
@@ -47,29 +63,49 @@ function fetchTravisJobStatus(latestJobs) {
                 continue;
             }
 
-            var type = '';
-            var status = jobs[i]['state'];
+            var type;
+            var status;
+            var ageField;
             if(jobs[i]['state'] == 'passed') {
                 type = 'm-success';
                 status = '✔';
+                ageField = 'finished_at';
             } else if(jobs[i]['state'] == 'started') {
                 type = 'm-warning';
                 status = '↺';
+                ageField = 'started_at';
             } else if(jobs[i]['state'] == 'canceled') {
                 type = 'm-dim';
                 status = '∅';
+                ageField = 'finished_at';
             } else if(jobs[i]['state'] == 'received' ||
-                    jobs[i]['state'] == 'created' ||
-                    jobs[i]['state'] == 'queued') {
+                      jobs[i]['state'] == 'created' ||
+                      jobs[i]['state'] == 'queued') {
                 type = 'm-info';
                 status = '…';
+                ageField = '';
             } else if(jobs[i]['state'] == 'errored' ||
-                    jobs[i]['state'] == 'failed') {
+                      jobs[i]['state'] == 'failed') {
                 type = 'm-danger';
                 status = '✘';
-            } else type = 'm-default';
+                ageField = 'finished_at';
+            } else {
+                type = 'm-default';
+                status = jobs[i]['state'];
+                ageField = 'started_at';
+            }
 
-            elem.innerHTML = '<a href="https://travis-ci.org/' + jobs[i]['repository_slug'] + '/jobs/' + jobs[i]['id'] + '">' + status + '</a>';
+            var age;
+            var title;
+            if(ageField) {
+                age = timeDiff(new Date(Date.parse(jobs[i][ageField])), now);
+                title = jobs[i]['state'] + ' @ ' + jobs[i][ageField];
+            } else {
+                age = '';
+                title = jobs[i]['state'];
+            }
+
+            elem.innerHTML = '<a href="https://travis-ci.org/' + repo + '/jobs/' + jobs[i]['id'] + '" title="' + title + '">' + status + '<br />' + age + '</a>';
             elem.className = type;
         }
     };
@@ -102,8 +138,9 @@ function fetchLatestAppveyorJobs(project, branch) {
     req.onreadystatechange = function() {
         if(req.readyState != 4) return;
 
-        console.log(req.response);
+        //console.log(req.response);
 
+        var now = new Date(Date.now());
         var repo = req.response['project']['repositoryName'];
         repo = repo.substr(repo.indexOf('/') + 1);
         var jobs = req.response['build']['jobs'];
@@ -120,23 +157,38 @@ function fetchLatestAppveyorJobs(project, branch) {
                 continue;
             }
 
-            var type = '';
-            var status = jobs[i]['status'];
+            var type;
+            var status;
+            var ageField;
             if(jobs[i]['status'] == 'success') {
                 type = 'm-success';
                 status = '✔';
+                ageField = 'finished';
             } else if(jobs[i]['status'] == 'queued') {
                 type = 'm-info';
                 status = '…';
+                ageField = 'started';
             } else if(jobs[i]['status'] == 'running') {
                 type = 'm-warning';
                 status = '↺';
+                ageField = 'started';
             } else if(jobs[i]['status'] == 'failed') {
                 type = 'm-danger';
                 status = '✘';
-            } else type = 'm-default';
+                ageField = 'finished';
+            } else if(jobs[i]['status'] == 'cancelled') {
+                type = 'm-dim';
+                status = '∅';
+                ageField = 'finished';
+            } else {
+                type = 'm-default';
+                status = jobs[i]['status'];
+                ageField = 'started';
+            }
 
-            elem.innerHTML = '<a href="https://ci.appveyor.com/project/' + req.response['project']['repositoryName'] + '/build/' + req.response['build']['version'] + '/job/' + jobs[i]['jobId'] + '">' + status + '</a>';
+            var age = timeDiff(new Date(Date.parse(jobs[i][ageField])), now);
+
+            elem.innerHTML = '<a href="https://ci.appveyor.com/project/' + repo + '/build/' + req.response['build']['version'] + '/job/' + jobs[i]['jobId'] + '" title="' + jobs[i]['status'] + ' @ ' + jobs[i][ageField] + '">' + status + '<br />' + age + '</a>';
             elem.className = type;
         }
     };
