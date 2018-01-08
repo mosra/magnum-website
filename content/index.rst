@@ -5,9 +5,9 @@ Magnum Engine
 :url:
 :cover: {filename}/img/cover.jpg
 :description: Lightweight and modular C++11/C++14 open-source graphics
-    middleware / game engine to power your dreams.
-:summary: Lightweight and modular C++11/C++14 graphics middleware to power
-    your dreams
+    middleware for games and data visualization.
+:summary: Lightweight and modular C++11/C++14 graphics middleware for games and
+    data visualization
 :hide_navbar_brand: True
 :landing:
     .. container:: m-row
@@ -22,8 +22,8 @@ Magnum Engine
 
         .. container:: m-col-l-6 m-push-l-1 m-col-m-7 m-nopadt
 
-            *Lightweight and modular C++11/C++14 graphics middleware to power
-            your dreams.*
+            *Lightweight and modular C++11/C++14 graphics middleware for games
+            and data visualization.*
 
             Looking for an open-source library that gives you graphics
             abstraction and platform independence on major desktop, mobile and
