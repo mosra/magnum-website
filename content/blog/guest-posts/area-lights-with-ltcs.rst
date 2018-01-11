@@ -28,7 +28,7 @@ transformed cosines (LTCs) and how Magnum was used for the implementation.
 
     Check out the `paper on Eric Heitz's Research Page <https://eheitzresearch.wordpress.com/415-2/>`_
     for a more detailed and complete explanation. It is very well written and
-    has a ton of supplemental material like a WebGL implementation to play
+    has a ton of supplemental material such as a WebGL implementation to play
     around with.
 
 To understand linearly transformed cosines I will start off by explaining some
@@ -38,14 +38,21 @@ paragraph or two.
 `Binary Reflectance Distribution Functions`_
 --------------------------------------------
 
-When shading a point on a surface, physically, you need to take an account all
-incoming rays from every direction. Some light rays affect the final color of
+When shading a point on a surface, physically, you need to take all incoming
+rays from every direction into account. Some light rays affect the final color of
 the shaded point more than others --- depending on their direction,
 the view direction and the properties of the material.
 
 A perfect mirror, for example, may take only the exact reflection of the view
-vector into account, as can be seen in figure (a), where a perfectly diffuse
-material will be affected by all incoming rays equally, as in figure (b).
+vector into account, as can be seen in figure (a), whereas a more diffuse
+material will be affected by all or most incoming rays similarly or equally, as
+visualized in figure (b).
+
+These figures show spherical distributions: imagine you want to shade a point
+on a surface (the point where the view vector is reflected). Imagine a ray of
+light hitting this point, it will pierce through the colored sphere at some
+location. The color at that location on the sphere indicates how much this ray
+will affect the color of the surface point: the more red, the higher the effect.
 
 .. container:: m-row
 
@@ -67,16 +74,19 @@ material will be affected by all incoming rays equally, as in figure (b).
             (b) Visualization of what the BRDF of a more diffuse material
             may look like.
 
-The function that describes how much effect an incoming light ray has, is
-determined by a function called the :abbr:`BRDF <binary reflectance distribution function>`.
+The function that describes how much effect an incoming light ray has for given
+viewing and incoming light angles, is called
+:abbr:`BRDF <binary reflectance distribution function>`.
 This function is very specific to every material. As this is very impractical
 for real-time rendering and art pipelines, it is common to instead use
-something called a parametric BRDF but this is a function which is able to
-approximate many different BRDFs of different materials using intuitive
-parameters.
+a so called parametric BRDF; a function which is able to approximate many
+different BRDFs of different materials using intuitive parameters, e.g.
+roughness or metalness.
 
-Examples for these parametric BRDFs include the GGX microfacet BRDF, the
-Schlick BRDF and the Cook-Torrance BRDF.
+There are many parametric BRDFs out there: the GGX microfacet BRDF, the
+Schlick BRDF and the Cook-Torrance BRDF. I recomment playing around with
+them in
+`Disney's BRDF Explorer <https://www.disneyanimation.com/technology/brdf.html>`_.
 
 `Shading area lights`_
 ----------------------
@@ -87,23 +97,24 @@ get the appropriate factor (of how much of that ray will be reflected in view
 direction) from the BRDF using the view angle and light angle, multiply that
 with the light intensity and that is already it.
 
-With area lights, it is a lot more complicated, as you have an unlimited amount
+With area lights, it is a lot more complicated, as you have an infinite amount
 of incoming rays. The final intensity of the shaded point is the integral over
-the BRDF in the domain of the polygon of the light (which projected onto the
-spherical distribution is a spherical polygon).
+the BRDF in the domain of the polygon of the light (which, projected onto the
+spherical distribution, is a spherical polygon).
 
 This is a problem, because we do not have an analytical solution to integrating
-over arbitrary spherical distributions. Instead, this is known only for very
-specific distributions, such as the uniform sphere or the cosine distribution.
+over arbitrary spherical distributions. Instead, such a solution is known only
+for very specific distributions, the uniform sphere or the cosine distribution
+for example.
 
-So can we still do it without radically approximating the area light?
+So, how can we still do it without radically approximating the area light?
 
 `Linearly transformed cosines`_
 -------------------------------
 
 The genius of the paper is that the authors realized they can transform
-spherical distributions using linear transforms, such as scaling, rotation and
-skewing, and that this leaves the value of the integral unchanged.
+spherical distributions using linear transforms (scaling, rotation and
+skewing) and that this leaves the value of the integral unchanged.
 
 .. container:: m-row
 
@@ -153,19 +164,19 @@ skewing, and that this leaves the value of the integral unchanged.
 
 You can therefore transform a spherical distribution to look like another
 spherical distribution. This means that you can transform something like the
-cosine distribution to look like a specific BRDF at a certain view angle. You
-can then --- thanks to the invariance of the interval --- integrate over the
-cosine distribution, to which an analytical solution is known, instead of
-integrating over the BRDF.
+cosine distribution to look like a specific BRDF given a certain view angle. You
+can then --- because the integral is unaffected by the linear transform ---
+integrate over the cosine distribution, to which an analytical solution is known,
+instead of integrating over the BRDF.
 
 As this BRDF is view dependent, you need a transformation for every incident
-view angle, and every parameter of a parametric BRDF. They achieve this by
-fitting a 3x3 matrix (for the transformation) for a set of sampled values for
-the BRDF parameter ``alpha`` (roughness) of the GGX Microfacet BRDF as well as
+view angle, and every parameter of a parametric BRDF. In the paper, they achieve
+this by fitting a 3x3 matrix (for the transformation) for a set of sampled values
+for the BRDF parameter ``alpha`` (roughness) of the GGX Microfacet BRDF as well as
 the viewing angle.
 
-The 3x3 matrices have only four components that really have an effect on the
-transformation. Consequently they can store these in a RGBA texture.
+The 3x3 matrices have only four really significant components. Consequently they can
+be stored in an RGBA texture.
 
 .. math::
 
@@ -175,8 +186,8 @@ transformation. Consequently they can store these in a RGBA texture.
             d & 0 & 1
         \end{matrix}\right)
 
-For shading the inverse matrices are required to transform the polygon of the
-light. Originally it is of course in the space of the BRDF over which we do not
+For shading we need the inverse matrices to transform the polygon of the light.
+Originally it is of course in the space of the BRDF over which we do not
 know how to integrate over. If we apply the inverse matrix to polygon, it is
 then in the space of the cosine distribution over which we can integrate
 instead.
@@ -210,9 +221,9 @@ The original C++ implementation provided with the paper already contained .dds
 files for the fitted inverse LTC matrices. Many thanks to Eric Heitz, who was
 kind enough to let me use these for the Magnum example.
 
-I packed them as a resource into the binary (makes porting to web easier
-later). It was a matter of simply adding the ``resources.conf``, telling
-Corrade to compile it in your ``CMakeLists.txt``:
+I packed these dds files as a resource into the binary (makes porting to web
+easier later). It was a matter of simply adding the ``resources.conf``, telling
+Corrade to compile it in your ``CMakeLists.txt``...
 
 .. code:: cmake
 
@@ -220,7 +231,7 @@ Corrade to compile it in your ``CMakeLists.txt``:
 
     add_executable(magnum-arealights AreaLightsExample.cpp ${AreaLights_RESOURCES})
 
-and then loading the texture from the resource memory using
+... and then loading the texture from the resource memory using
 :dox:`DdsImporter <Trade::DdsImporter>`:
 
 .. code:: c++
@@ -256,12 +267,14 @@ time you make a change to the GLSL shader code. It is rather nice to be able to
 just hit :label-default:`F5` and see the changes immediately instead.
 
 It turns out that if you implemented an :dox:`AbstractShaderProgram`,
-hot-reloading it is surprisingly simple:
+hot-reloading is just a matter of reinstantiating it:
 
 .. code:: c++
 
-    /* Reload shader */
+    /* Reload the shader */
     _shader = AreaLightShader{};
+
+Yes, it is that simple.
 
 Often you will compile your shader files as resources in Magnum (as done in the
 example). To use shaders from a resource in your :dox:`AbstractShaderProgram`
@@ -283,7 +296,7 @@ original file rather than from memory before hot-reloading:
 
 .. code:: c++
 
-    /* Reload shader */
+    /* Reload the shader */
     Utility::Resource::overrideGroup("arealights-data", "<path>/resources.conf");
     _shader = Shaders::AreaLight{};
 
@@ -292,8 +305,8 @@ original file rather than from memory before hot-reloading:
 
 Final appreciations go to Eric Heitz, Jonathan Dupuy, Stephen Hill and David
 Neubelt for publishing a incredibly well written paper with a ton of
-supplemental material and effort around it --- and of course Vladimír Vondruš
-for being insanely dedicated to this project and aswering every stupid question
-I throw at him.
+supplemental material and effort around it --- and of course Magnum for making
+it viable to quickly get this basic implementation running.
+
 
 Thank you for reading! I'll be back.
