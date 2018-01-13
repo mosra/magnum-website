@@ -108,7 +108,7 @@ M_FINE_PRINT = """
   and `m.css <http://mcss.mosra.cz>`_.
 | Site content is `available on GitHub under MIT <https://github.com/mosra/magnum-website>`_.
   Contact the team via `GitHub <https://github.com/mosra/magnum>`_,
-  `Gitter <https://gitter.im/mosra/magnum>`_, `e-mail <mailto:magnum-engine@googlegroups.com>`_,
+  `Gitter <https://gitter.im/mosra/magnum>`_, `e-mail <mailto:info@magnum.graphics>`_,
   or `Twitter <https://twitter.com/czmosra>`_.
 """
 
