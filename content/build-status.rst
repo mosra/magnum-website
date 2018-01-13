@@ -16,14 +16,15 @@ Build Status
           table.build-status td.m-success,
           table.build-status td.m-warning,
           table.build-status td.m-danger,
-          table.build-status td.m-info {
+          table.build-status td.m-info,
+          table.build-status td.m-dim {
             padding: 0;
           }
           table.build-status a {
             display: block;
             width: 100%;
             height: 100%;
-            padding: 0.5rem 0;
+            padding: 0.25rem 0.5rem;
             text-decoration: none;
           }
         </style>

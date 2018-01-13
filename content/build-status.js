@@ -26,11 +26,11 @@ function timeDiff(before, now) {
     /* Try days first. If less than two days, try hours. If less than two
        hours, try minutes. If less than a minute, say "now". */
     if(diff/(24*60*60*1000) > 2)
-        return Math.round(diff/(24*60*60*1000)) + "d";
+        return Math.round(diff/(24*60*60*1000)) + "d ago";
     else if(diff/(60*60*1000) > 2)
-        return Math.round(diff/(60*60*1000)) + "h";
+        return Math.round(diff/(60*60*1000)) + "h ago";
     else if(diff/(60*1000) > 1)
-        return Math.round(diff/(60*1000)) + "m";
+        return Math.round(diff/(60*1000)) + "m ago";
     else
         return "now";
 }
@@ -105,7 +105,7 @@ function fetchTravisJobStatus(latestJobs) {
                 title = jobs[i]['state'];
             }
 
-            elem.innerHTML = '<a href="https://travis-ci.org/' + repo + '/jobs/' + jobs[i]['id'] + '" title="' + title + '">' + status + '<br />' + age + '</a>';
+            elem.innerHTML = '<a href="https://travis-ci.org/' + repo + '/jobs/' + jobs[i]['id'] + '" title="' + title + '">' + status + '<br /><span class="m-text m-small">' + age + '</span></a>';
             elem.className = type;
         }
     };
@@ -142,7 +142,6 @@ function fetchLatestAppveyorJobs(project, branch) {
 
         var now = new Date(Date.now());
         var repo = req.response['project']['repositoryName'];
-        repo = repo.substr(repo.indexOf('/') + 1);
         var jobs = req.response['build']['jobs'];
         for(var i = 0; i != jobs.length; ++i) {
             var match = jobs[i]['name'].match(appveyorJobIdRe);
@@ -150,7 +149,7 @@ function fetchLatestAppveyorJobs(project, branch) {
 
             /* ID is combined repository name (w/o author) and the job ID from
                environment */
-            var id = repo + "-" + match[1];
+            var id = repo.substr(repo.indexOf('/') + 1) + "-" + match[1];
             var elem = document.getElementById(id);
             if(!elem) {
                 console.log('Unknown AppVeyor job ID', id);
@@ -167,7 +166,7 @@ function fetchLatestAppveyorJobs(project, branch) {
             } else if(jobs[i]['status'] == 'queued') {
                 type = 'm-info';
                 status = '…';
-                ageField = 'started';
+                ageField = 'created';
             } else if(jobs[i]['status'] == 'running') {
                 type = 'm-warning';
                 status = '↺';
@@ -183,12 +182,12 @@ function fetchLatestAppveyorJobs(project, branch) {
             } else {
                 type = 'm-default';
                 status = jobs[i]['status'];
-                ageField = 'started';
+                ageField = 'created';
             }
 
             var age = timeDiff(new Date(Date.parse(jobs[i][ageField])), now);
 
-            elem.innerHTML = '<a href="https://ci.appveyor.com/project/' + repo + '/build/' + req.response['build']['version'] + '/job/' + jobs[i]['jobId'] + '" title="' + jobs[i]['status'] + ' @ ' + jobs[i][ageField] + '">' + status + '<br />' + age + '</a>';
+            elem.innerHTML = '<a href="https://ci.appveyor.com/project/' + repo + '/build/' + req.response['build']['version'] + '/job/' + jobs[i]['jobId'] + '" title="' + jobs[i]['status'] + ' @ ' + jobs[i][ageField] + '">' + status + '<br /><span class="m-text m-small">' + age + '</span></a>';
             elem.className = type;
         }
     };
