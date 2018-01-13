@@ -32,6 +32,5 @@ minimal possible amount of code.
 
 .. block-info:: Source code and documentation
 
-    You can find :gh:`source code of this example <mosra/magnum-examples$master/src/triangle>`
-    on GitHub. This example is also thoroughly explained
+    You can find a thorough tutorial together with source code of this example
     :dox:`in the documentation <examples-triangle>`.

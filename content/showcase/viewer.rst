@@ -5,14 +5,17 @@ Viewer Example
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
+.. role:: label-default
+    :class: m-label m-default
+
 This is simply an viewer for 3D scene files, such as OpenGEX or COLLADA ones.
 Only triangle meshes with Phong shading with optional diffuse texture are
 currently supported.
 
 .. topic:: Controls
 
-    -   **Mouse drag** rotates the model
-    -   **Mouse wheel** zooms in or out
+    -   :label-default:`Mouse drag` --- rotate the model
+    -   :label-default:`Mouse wheel` --- zooms in or out
 
 .. raw:: html
 
@@ -36,6 +39,5 @@ currently supported.
 
 .. block-info:: Source code and documentation
 
-    You can find :gh:`source code of this example <mosra/magnum-examples$master/src/viewer>`
-    on GitHub. This example is also thoroughly explained
+    You can find a thorough tutorial together with source code of this example
     :dox:`in the documentation <examples-viewer>`.

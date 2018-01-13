@@ -5,7 +5,7 @@ Textured Triangle Example
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
-This example is just slightly more complicated version of the
+This example is just a slightly more complicated version of the
 `basic triangle example <{filename}/showcase/triangle.rst>`_. It uses a TGA
 importer plugin to load a stone image and displays a triangle with texture
 on it.
@@ -32,6 +32,5 @@ on it.
 
 .. block-info:: Source code and documentation
 
-    You can find :gh:`source code of this example <mosra/magnum-examples$master/src/textured-triangle>`
-    on GitHub. This example is also thoroughly explained
+    You can find a thorough tutorial together with source code of this example
     :dox:`in the documentation <examples-textured-triangle>`.

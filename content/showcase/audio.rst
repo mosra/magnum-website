@@ -18,9 +18,12 @@ source can be moved around the listener using the keyboard.
 
 .. topic:: Key controls
 
-    -   **Right**/**Left** rotate the source around Y axis
-    -   **Up**/**Down** rotate the source around local X axis
-    -   **Page Up**/**Page Down** move the source away/towards the listener
+    -   :label-default:`Right` / :label-default:`Left` --- rotate the source
+        around Y axis
+    -   :label-default:`Up` / :label-default:`Down` --- rotate the source
+        around local X axis
+    -   :label-default:`Page Up` / :label-default:`Page Down` --- move the
+        source away/towards the listener
 
 .. raw:: html
 
@@ -42,7 +45,7 @@ source can be moved around the listener using the keyboard.
     :gh:`example itself <mosra/magnum-examples>` or
     :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
 
-.. block-info:: Source code
+.. block-info:: Source code and documentation
 
-    You can find :gh:`source code of this example <mosra/magnum-examples$master/src/audio>`
-    on GitHub.
+    You can find further information and source code of this example
+    :dox:`in the documentation <examples-arealights>`.

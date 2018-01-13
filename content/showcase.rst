@@ -20,6 +20,8 @@ unlucky and your browser isn't, you can at least try
     :gh:`a particular example <mosra/magnum-examples>` or
     :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
 
+.. role:: label-primary
+    :class: m-label m-primary
 .. role:: label-danger
     :class: m-label m-danger
 .. role:: label-warning
@@ -52,14 +54,14 @@ unlucky and your browser isn't, you can at least try
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [audio]
-            :end-before: [/audio]
+            :start-after: [triangle]
+            :end-before: [/triangle]
 
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [viewer]
-            :end-before: [/viewer]
+            :start-after: [textured-triangle]
+            :end-before: [/textured-triangle]
 
 .. container:: m-row m-container-inflate
 
@@ -72,22 +74,36 @@ unlucky and your browser isn't, you can at least try
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [text]
-            :end-before: [/text]
+            :start-after: [viewer]
+            :end-before: [/viewer]
 
 .. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [triangle]
-            :end-before: [/triangle]
+            :start-after: [text]
+            :end-before: [/text]
 
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [textured-triangle]
-            :end-before: [/textured-triangle]
+            :start-after: [audio]
+            :end-before: [/audio]
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [picking]
+            :end-before: [/picking]
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [magnum-ui-gallery]
+            :end-before: [/magnum-ui-gallery]
 
 .. container:: m-row m-container-inflate
 

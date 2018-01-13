@@ -5,13 +5,16 @@ Primitives Example
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
+.. role:: label-default
+    :class: m-label m-default
+
 Shows how to use builtin primitives and do simple input handling. Displays
 colored cube which can be rotated using mouse.
 
 .. topic:: Key controls
 
-    -   **Mouse drag**: Rotate the cube
-    -   **Mouse click**: Change cube color
+    -   :label-default:`Mouse drag` --- rotate the cube
+    -   :label-default:`Mouse click` --- change cube color
 
 .. raw:: html
 
@@ -35,6 +38,5 @@ colored cube which can be rotated using mouse.
 
 .. block-info:: Source code and documentation
 
-    You can find :gh:`source code of this example <mosra/magnum-examples$master/src/primitives>`
-    on GitHub. This example is also thoroughly explained
+    You can find a thorough tutorial together with source code of this example
     :dox:`in the documentation <examples-primitives>`.
