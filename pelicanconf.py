@@ -12,16 +12,17 @@ M_BLOG_URL = 'blog/'
 
 PATH = 'content'
 
+STATIC_URL = 'static/{path}'
+STATIC_SAVE_AS = 'static/{path}'
+STATIC_PATHS = ['img', 'showcase']
+EXTRA_PATH_METADATA = {'img/favicon.ico': {'path': '../favicon.ico'}}
+
 ARTICLE_PATHS = ['blog']
 ARTICLE_EXCLUDES = ['blog/authors', 'blog/categories', 'blog/tags']
 
 PAGE_PATHS = ['']
 PAGE_EXCLUDES = ['doc', 'img']
 READERS = {'html': None} # HTML files are only ever included from reST
-
-STATIC_PATHS = ['img', 'showcase']
-STATIC_URL = 'static/{path}'
-STATIC_SAVE_AS = 'static/{path}'
 
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'

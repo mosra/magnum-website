@@ -28,15 +28,19 @@ STATIC_PATHS += ['doc/index.html',
                  'robots-blog.txt',
                  'robots-static.txt',
                  '../m.css/css/m-dark.doxygen.compiled.css']
-EXTRA_PATH_METADATA = {'doc/index.html': {'path': '../doc/index.html'},
-                       'doc/corrade.tag': {'path': '../doc/corrade.tag'},
-                       'doc/magnum.tag': {'path': '../doc/magnum.tag'},
-                       'doc/robots.txt': {'path': '../doc/robots.txt'},
-                       'htaccess': {'path': '../.htaccess'},
-                       'robots.txt': {'path': '../robots.txt'},
-                       'robots-blog.txt': {'path': '../blog/robots.txt'},
-                       'robots-static.txt': {'path': '../static/robots.txt'},
-                       '../m.css/css/m-dark.doxygen.compiled.css': {'path': 'm-dark.doxygen.compiled.css'}}
+EXTRA_PATH_METADATA.update({
+    'img/favicon-blog.ico': {'path': '../blog/favicon.ico'},
+    'img/favicon-doc.ico': {'path': '../doc/favicon.ico'},
+    'img/favicon-static.ico': {'path': '../static/favicon.ico'},
+    'doc/index.html': {'path': '../doc/index.html'},
+    'doc/corrade.tag': {'path': '../doc/corrade.tag'},
+    'doc/magnum.tag': {'path': '../doc/magnum.tag'},
+    'doc/robots.txt': {'path': '../doc/robots.txt'},
+    'htaccess': {'path': '../.htaccess'},
+    'robots.txt': {'path': '../robots.txt'},
+    'robots-blog.txt': {'path': '../blog/robots.txt'},
+    'robots-static.txt': {'path': '../static/robots.txt'},
+    '../m.css/css/m-dark.doxygen.compiled.css': {'path': 'm-dark.doxygen.compiled.css'}})
 
 # URL needs to be prepended by / because Pelican removes the first / for some
 # reason which makes the second URL look like relative to server root instead

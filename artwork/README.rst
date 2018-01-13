@@ -21,3 +21,16 @@ Exporting:
         (assuming the original width/height is this)
 
 #.  Check git diff for suspicious changes
+
+favicon.svg
+===========
+
+Export each layer (+ the bg layer) as 16x16 PNG with the following naming and
+convert to an ``*.ico``:
+
+.. code:: sh
+
+    convert favicon.{png,ico}
+    convert favicon-blog.{png,ico}
+    convert favicon-doc.{png,ico}
+    convert favicon-static.{png,ico}
