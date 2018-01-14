@@ -4,7 +4,7 @@ Introducing Magnum, a multiplatform 2D/3D graphics engine
 :date: 2013-08-30 15:54
 :archived: True
 :category: Announcements
-:tags: C++, Corrade, OpenGL
+:tags: C++, Corrade, OpenGL, NaCl
 :summary: After nearly three years of semi-public hyperactive development, I
     think it's the time to release this beast into wild. Say hello to Magnum,
     modular graphics engine written in C++11 and OpenGL.

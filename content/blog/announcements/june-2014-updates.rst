@@ -4,7 +4,7 @@ June 2014 updates to Magnum
 :date: 2014-06-29
 :archived: True
 :category: Announcements
-:tags: C++, CMake, Corrade, OpenGL
+:tags: C++, CMake, Corrade, OpenGL, Android
 :summary: The Magnum C++11 and OpenGL/OpenGL ES/WebGL graphics engine gained
     experimental Android support, windowless applications on OS X and Windows,
     uses SDL2 as the default toolkit, adds new texture and mesh features,
