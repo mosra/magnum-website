@@ -22,7 +22,7 @@ A `WebGL 1 version <{filename}/showcase/magnum-info.rst>`_ is also available.
       <pre id="log"></pre>
       <div id="status">Initialization...</div>
       <div id="status-description"></div>
-      <script async="async" src="{filename}/showcase/magnum-info/magnum-info.js"></script>
+      <script async="async" src="{filename}/showcase/magnum-info-webgl2/magnum-info.js"></script>
       <script src="{filename}/showcase/WindowlessEmscriptenApplication.js"></script>
     </div></div></div></div>
 
