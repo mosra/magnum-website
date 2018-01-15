@@ -21,7 +21,7 @@ below. You can also click on various parts of the architecture diagram.
     platforms
 -   Lightweight core with modular and extensible addons that enable diverse use
     cases
--   Clean code with high test coverage, `built and tested once a day <{filename}/build-status.rst>`_
+-   Clean code with high test coverage, `built and tested at least once a week <{filename}/build-status.rst>`_
     on all platforms to ensure continuous reliability and stability
 -   Actively maintained :dox:`extensive documentation <magnum>`
 -   First-class support and friendly community (`Gitter chat <https://gitter.im/mosra/magnum>`_,
