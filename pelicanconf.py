@@ -125,6 +125,8 @@ M_ARCHIVED_ARTICLE_BADGE = """
     the typos.
 """
 
+M_SHOW_NEWS_ON_INDEX = ("Latest news on our blog", 3)
+
 DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['m.css/pelican-plugins']
