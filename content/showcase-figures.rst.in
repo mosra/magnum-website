@@ -36,6 +36,18 @@
     :dox:`Audio` library.
 
 .. [/audio]
+.. [bullet]
+
+.. figure:: {filename}/showcase/bullet/screenshot.png
+    :alt: Bullet Physics example screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/bullet.rst
+
+    Bullet Physics Example :label-flat-info:`wasm` :label-flat-success:`webgl1` :label-warning:`physics`
+
+    Shows a rotating table full of cubes that you can shoot down.
+
+.. [/bullet]
 .. [picking]
 
 .. figure:: {filename}/showcase/picking/screenshot.png

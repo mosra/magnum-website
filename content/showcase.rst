@@ -96,8 +96,16 @@ unlucky and your browser isn't, you can at least try
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
+            :start-after: [bullet]
+            :end-before: [/bullet]
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
             :start-after: [picking]
             :end-before: [/picking]
+
+.. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 
@@ -105,15 +113,15 @@ unlucky and your browser isn't, you can at least try
             :start-after: [magnum-ui-gallery]
             :end-before: [/magnum-ui-gallery]
 
-.. container:: m-row m-container-inflate
-
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
             :start-after: [magnum-info]
             :end-before: [/magnum-info]
 
-    .. container:: m-col-m-6
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6 m-push-m-3
 
         .. include:: showcase-figures.rst.in
             :start-after: [magnum-al-info]
@@ -121,4 +129,4 @@ unlucky and your browser isn't, you can at least try
 
 *Looking for more?* Not all demos are ported to HTML5 yet. See
 :dox:`Examples and Tutorials <example-index>` in the documentation --- there's
-an Oculus VR demo, shadow mapping, Bullet Physics integration and more.
+an Oculus VR demo, shadow mapping, shader effects and more.
