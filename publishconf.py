@@ -48,11 +48,11 @@ EXTRA_PATH_METADATA.update({
 PAGINATION_PATTERNS = [(1, '/{url}', '{base_name}/index.html'),
                        (2, '/{url}{number}/', '{base_name}/{number}/index.html')]
 
-assert M_LINKS_NAVBAR2[0][0] == 'Blog'
-M_LINKS_NAVBAR2[0] = ('Blog', M_BLOG_URL, 'archives', [])
+assert M_LINKS_NAVBAR2[1][0] == 'Blog'
+M_LINKS_NAVBAR2[1] = ('Blog', M_BLOG_URL, '[blog]', [])
 
-assert M_LINKS_FOOTER3[2][0] == 'Blog Feed'
-M_LINKS_FOOTER3[2] = ('Blog Feed', M_BLOG_URL + '/feeds/all.atom.xml')
+assert M_LINKS_FOOTER3[1][0] == 'Blog Feed'
+M_LINKS_FOOTER3[1] = ('Blog Feed', M_BLOG_URL + '/feeds/all.atom.xml')
 
 M_SOCIAL_IMAGE = 'http://static.magnum.graphics/img/site.jpg'
 

@@ -1,8 +1,11 @@
 About the Project
 #################
 
-:breadcrumb: {filename}/contact.rst Contact & Support
+:breadcrumb: {filename}/contact.rst Contact Us
 :summary: Legal info, third party licenses and contributor credits
+
+`License`_
+==========
 
 Magnum library code, documentation and website is licensed under the MIT/Expat
 license:
@@ -54,8 +57,8 @@ apps:
 
     For more information, please refer to <http://unlicense.org/>
 
-Third party software
-====================
+`Third party software`_
+=======================
 
 -   Magnum makes use of the **OpenGL** and **WebGL** APIs ---
     https://www.opengl.org/, https://www.khronos.org/webgl/
@@ -70,8 +73,8 @@ Third party software
     https://www.libsdl.org/, licensed under the
     `ZLIB license <http://www.gzip.org/zlib/zlib_license.html>`_.
 
-Contributors
-============
+`Contributors`_
+===============
 
 .. note-danger::
 

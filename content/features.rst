@@ -14,10 +14,6 @@ The following pages provide a high-level overview of the feature set offered by
 Magnum. For greater detail please read documentation linked from the sections
 below. You can also click on various parts of the architecture diagram.
 
-.. todo: em that the core is really small
-
-.. todo: zen garden
-
 `Our "Zen Garden" philosophy`_
 ==============================
 
@@ -31,7 +27,7 @@ below. You can also click on various parts of the architecture diagram.
 -   First-class support and friendly community (`Gitter chat <https://gitter.im/mosra/magnum>`_,
     `mailing list <https://groups.google.com/forum/#!forum/magnum-engine>`_)
 -   **Premium support and consulting offers** (see the
-    `Contact & Support page <{filename}/contact.rst>`_ for details)
+    `Premium Services <{filename}/premium.rst>`_ page for details)
 
 `Supported platforms`_
 ======================

@@ -74,16 +74,18 @@ M_LINKS_NAVBAR1 = [('Features', 'features/', 'features', [
                         ('Magnum', '//doc.magnum.graphics/magnum/', ''),
                         ('Doc Downloads', 'doc-downloads/', 'doc-downloads')])]
 
-M_LINKS_NAVBAR2 = [('Blog', M_BLOG_URL, '[blog]', []),
-                   ('Contact & Support', 'contact/', 'contact', [
+M_LINKS_NAVBAR2 = [('Premium Services', 'premium/', 'premium', []),
+                   ('Blog', M_BLOG_URL, '[blog]', []),
+                   ('Contact Us', 'contact/', 'contact', [
                         ('GitHub', 'https://github.com/mosra/magnum', ''),
-                        ('About the Project', 'about/', 'about')])]
+                        ('About', 'about/', 'about')])]
 
 M_LINKS_FOOTER1 = [('Magnum', '/'),
                    ('Features', 'features/'),
                    ('Extra Functionality', 'features/extras/'),
                    ('Plugins & Extensions', 'features/extensions/'),
                    ('Showcase', 'showcase/'),
+                   ('Premium Services', 'premium/'),
                    ('Build Status', 'build-status/')]
 
 M_LINKS_FOOTER2 = [('Docs', '//doc.magnum.graphics/'),
@@ -92,13 +94,13 @@ M_LINKS_FOOTER2 = [('Docs', '//doc.magnum.graphics/'),
                    ('Magnum', '//doc.magnum.graphics/magnum/'),
                    ('Doc Downloads', 'doc-downloads/')]
 
-M_LINKS_FOOTER3 = [('Contact & Support', 'contact/'),
-                   ('About the Project', 'about/'),
+M_LINKS_FOOTER3 = [('Contact Us', 'contact/'),
                    ('Blog Feed', M_BLOG_URL + '/feeds/all.atom.xml'),
                    ('GitHub', 'https://github.com/mosra/magnum'),
                    ('Gitter', 'https://gitter.im/mosra/magnum'),
                    ('Twitter', 'https://twitter.com/czmosra'),
-                   ('Google Groups', 'https://groups.google.com/forum/#!forum/magnum-engine')]
+                   ('Google Groups', 'https://groups.google.com/forum/#!forum/magnum-engine'),
+                   ('About the Project', 'about/')]
 
 M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600%7CSource+Sans+Pro:400,400i,600,600i&subset=latin-ext',
                'static/m-dark.css']

@@ -1,5 +1,5 @@
-Contact & Support
-#################
+Contact Us
+##########
 
 :summary: Ways to contact the team, follow the development, contribute, support
     the project and get premium support and consulting offers
@@ -27,12 +27,5 @@ but you can also send patches via e-mail or any other way. Thank you!
 
 We're happy to accept donations of any form. Financial support is very welcome,
 you can also donate hardware to improve support for particular platform. Even
-just sharing your success story using Magnum can make a difference. Contact the
-author via mosra@centrum.cz if you'd like to help.
-
-`Premium support and consulting offers`_
-========================================
-
-If you are looking for dedicated support, prioritized bug reports and feature
-requests, consulting or training, we offer paid premium support. Get in touch
-with the author via mosra@centrum.cz to discuss the details.
+just sharing your success story using Magnum can make a difference. Contact us
+via info@magnum.graphics if you'd like to help.

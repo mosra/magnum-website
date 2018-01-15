@@ -56,7 +56,7 @@ studies loosely based on existing Magnum users to help you decide.
 
             Build your tech on a subset of Magnum that fits your needs. To
             ensure your time is well invested, ask us for
-            `premium support <{filename}/contact.rst#premium-support-and-consulting-offers>`_.
+            `premium support <{filename}/premium.rst>`_.
 
             .. button-warning:: http://doc.magnum.graphics/magnum/features.html
                 :class: m-fullwidth
@@ -77,8 +77,8 @@ studies loosely based on existing Magnum users to help you decide.
 
             Magnum is able to hook into existing contexts and surfaces and
             plays well with 3rd party code. We provide
-            `consulting and training <{filename}/contact.rst#premium-support-and-consulting-offers>`_
-            to get your team quickly up to speed.
+            `consulting and training <{filename}/premium.rst>`_ to get your
+            team quickly up to speed.
 
             .. button-info:: http://doc.magnum.graphics/magnum/examples-triangle-plain-glfw.html
                 :class: m-fullwidth
