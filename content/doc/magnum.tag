@@ -303,6 +303,13 @@
       <anchor>a757a55d7cb2d73c2e757e308cd8d9e14</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>StyleConfiguration</type>
+      <name>mcssDarkStyleConfiguration</name>
+      <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
+      <anchor>a1f6e9b3376c1bc4f6f913e2bcbf37b57</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>Ui.h</name>
@@ -323,8 +330,8 @@
     <path>/home/mosra/Code/magnum-extras/src/Magnum/Ui/</path>
     <filename>UserInterface_8h</filename>
     <includes id="Buffer_8h" name="Buffer.h" local="no" imported="no">Magnum/Buffer.h</includes>
+    <includes id="Texture_8h" name="Texture.h" local="no" imported="no">Magnum/Texture.h</includes>
     <includes id="Text_8h" name="Text.h" local="no" imported="no">Magnum/Text/Text.h</includes>
-    <includes id="GlyphCache_8h" name="GlyphCache.h" local="no" imported="no">Magnum/Text/GlyphCache.h</includes>
     <includes id="AbstractUiShader_8h" name="AbstractUiShader.h" local="yes" imported="no">Magnum/Ui/AbstractUiShader.h</includes>
     <includes id="BasicUserInterface_8h" name="BasicUserInterface.h" local="yes" imported="no">Magnum/Ui/BasicUserInterface.h</includes>
     <includes id="Style_8h" name="Style.h" local="yes" imported="no">Magnum/Ui/Style.h</includes>
@@ -9125,38 +9132,6 @@
     <namespace>Magnum::Trade</namespace>
   </compound>
   <compound kind="file">
-    <name>WavHeader.h</name>
-    <path>/home/mosra/Code/magnum/src/MagnumPlugins/WavAudioImporter/</path>
-    <filename>WavHeader_8h</filename>
-    <includes id="WavImporter_8h" name="WavImporter.h" local="yes" imported="no">MagnumPlugins/WavAudioImporter/WavImporter.h</includes>
-    <class kind="struct">Magnum::Audio::RiffChunk</class>
-    <class kind="struct">Magnum::Audio::WavHeaderChunk</class>
-    <class kind="struct">Magnum::Audio::WavFormatChunk</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Audio</namespace>
-    <member kind="enumeration">
-      <type></type>
-      <name>WavAudioFormat</name>
-      <anchorfile>namespaceMagnum_1_1Audio.html</anchorfile>
-      <anchor>a4815cf29b938deb1289a7b3da48d9a32</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32a52461f094ac3952b9f67ec9562fd69d3">Pcm</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32a10ffce258b606414a30069a7385035a5">AdPcm</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32a9dcf79cfa6b3d22821e3992bcbf96354">IeeeFloat</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32aabd77aee2c10d743732ccff67c190069">ALaw</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32a2c93ec3305b0f0862cf45521ee021dcc">MuLaw</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32acb9e3624404af6e2ec52e3a39d5358a7">Extensible</enumvalue>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1Audio.html</anchorfile>
-      <anchor>a50e86c1c5b9c056a96ad3a7bf5cdd90b</anchor>
-      <arglist>(Debug &amp;debug, WavAudioFormat value)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>WavImporter.h</name>
     <path>/home/mosra/Code/magnum/src/MagnumPlugins/WavAudioImporter/</path>
     <filename>WavImporter_8h</filename>
@@ -14693,24 +14668,6 @@
       <arglist>(DistanceModel model)</arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>Magnum::Audio::RiffChunk</name>
-    <filename>structMagnum_1_1Audio_1_1RiffChunk.html</filename>
-    <member kind="variable">
-      <type>char</type>
-      <name>chunkId</name>
-      <anchorfile>structMagnum_1_1Audio_1_1RiffChunk.html</anchorfile>
-      <anchor>a9f86bd993c85f98f5ecd9d1976ae304f</anchor>
-      <arglist>[4]</arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedInt</type>
-      <name>chunkSize</name>
-      <anchorfile>structMagnum_1_1Audio_1_1RiffChunk.html</anchorfile>
-      <anchor>a9615cee2f94fef50f19744893ce732ef</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
   <compound kind="class">
     <name>Magnum::Audio::Source</name>
     <filename>classMagnum_1_1Audio_1_1Source.html</filename>
@@ -15448,77 +15405,6 @@
       <arglist>(PluginManager::AbstractManager &amp;manager, const std::string &amp;plugin)</arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>Magnum::Audio::WavFormatChunk</name>
-    <filename>structMagnum_1_1Audio_1_1WavFormatChunk.html</filename>
-    <member kind="variable">
-      <type>RiffChunk</type>
-      <name>chunk</name>
-      <anchorfile>structMagnum_1_1Audio_1_1WavFormatChunk.html</anchorfile>
-      <anchor>ab17431cde26dbd79e05deccd08b80a4c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>WavAudioFormat</type>
-      <name>audioFormat</name>
-      <anchorfile>structMagnum_1_1Audio_1_1WavFormatChunk.html</anchorfile>
-      <anchor>a1bd7847fe973e750437f5e665973f688</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedShort</type>
-      <name>numChannels</name>
-      <anchorfile>structMagnum_1_1Audio_1_1WavFormatChunk.html</anchorfile>
-      <anchor>a4fa47192334d56359f9f57002327679a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedInt</type>
-      <name>sampleRate</name>
-      <anchorfile>structMagnum_1_1Audio_1_1WavFormatChunk.html</anchorfile>
-      <anchor>a5768a042b87bf6dd6017973f41d8de0c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedInt</type>
-      <name>byteRate</name>
-      <anchorfile>structMagnum_1_1Audio_1_1WavFormatChunk.html</anchorfile>
-      <anchor>a1bab3429bfb22683d67835fd112d45a4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedShort</type>
-      <name>blockAlign</name>
-      <anchorfile>structMagnum_1_1Audio_1_1WavFormatChunk.html</anchorfile>
-      <anchor>a3f7180ef5c1d84be25812e6e91c7f27e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedShort</type>
-      <name>bitsPerSample</name>
-      <anchorfile>structMagnum_1_1Audio_1_1WavFormatChunk.html</anchorfile>
-      <anchor>a564180fd7772fb5669d189fd965a2fd9</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>Magnum::Audio::WavHeaderChunk</name>
-    <filename>structMagnum_1_1Audio_1_1WavHeaderChunk.html</filename>
-    <member kind="variable">
-      <type>RiffChunk</type>
-      <name>chunk</name>
-      <anchorfile>structMagnum_1_1Audio_1_1WavHeaderChunk.html</anchorfile>
-      <anchor>ab4591e57b14024bbaf07676ccad6afdc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>char</type>
-      <name>format</name>
-      <anchorfile>structMagnum_1_1Audio_1_1WavHeaderChunk.html</anchorfile>
-      <anchor>a7c7580a50e6101e376371d46f9feccec</anchor>
-      <arglist>[4]</arglist>
-    </member>
-  </compound>
   <compound kind="class">
     <name>Magnum::Audio::WavImporter</name>
     <filename>classMagnum_1_1Audio_1_1WavImporter.html</filename>
@@ -15537,6 +15423,7 @@
       <anchor>ac6c088e008f0576d51f1252b1c017b59</anchor>
       <arglist>(PluginManager::AbstractManager &amp;manager, const std::string &amp;plugin)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Audio_1_1WavImporter" title="Behavior and limitations">Audio-WavImporter-limitations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Buffer</name>
@@ -17081,6 +16968,7 @@
       <anchor>ad75f14aae1be07e6094458ae5eab06a7</anchor>
       <arglist>(Debug &amp;debug, Context::DetectedDrivers value)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Context" title="Command-line options">Context-command-line</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::CubeMapTexture</name>
@@ -25873,10 +25761,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findFirstChild</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Document.html</anchorfile>
-      <anchor>a2d06002360975f159f0b4615832e5c8e</anchor>
+      <anchor>a59ba8046bd3cf787f843b81e76613397</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -25894,31 +25782,31 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findFirstChildOf</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Document.html</anchorfile>
-      <anchor>a1a18654c99099543cc1dd75230ff6caa</anchor>
+      <anchor>a29c6c9a24a8f3cf551a5dbf2009c7b5e</anchor>
       <arglist>(Type type) const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findFirstChildOf</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Document.html</anchorfile>
-      <anchor>ad4b521c2c1f882e6bf8e694805b2ca13</anchor>
+      <anchor>af3109dcf2c081f960e8bec7fef2cbe5d</anchor>
       <arglist>(Int identifier) const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findFirstChildOf</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Document.html</anchorfile>
-      <anchor>a827838f8bcfe08e15862f248a7136f2e</anchor>
+      <anchor>ae65699e0919f491a6d1ebcc4594fa89a</anchor>
       <arglist>(std::initializer_list&lt; Int &gt; identifiers) const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findFirstChildOf</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Document.html</anchorfile>
-      <anchor>a2db71814797540c50b74600bed7c1494</anchor>
+      <anchor>a7e565dc4dddd798ffdf516a6eba66c0b</anchor>
       <arglist>(Containers::ArrayView&lt; const Int &gt; identifiers) const </arglist>
     </member>
     <member kind="function">
@@ -25975,10 +25863,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>asReference</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Property.html</anchorfile>
-      <anchor>ae8e35e3013a148b2a50c5e652e4c292c</anchor>
+      <anchor>a88aed7d6be0202a6d3a73fbed8a92aff</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -26056,10 +25944,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>asReference</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>a0f6a7b846dd5424a6eb1c508f450627d</anchor>
+      <anchor>a6cd82fbdbe1f5870c1808f02c338d8e1</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -26070,52 +25958,52 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>Containers::Array&lt; std::optional&lt; Structure &gt; &gt;</type>
+      <type>Containers::Array&lt; Containers::Optional&lt; Structure &gt; &gt;</type>
       <name>asReferenceArray</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>acd6cab730e130c0d4935ae385097c1f6</anchor>
+      <anchor>a27c7ba2d0d36adecef795a2633b48758</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>parent</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>a4cd9099e1e6ce07994075050aa6c6053</anchor>
+      <anchor>ae9753971db7f4e1b4ab667711f4868bf</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findNext</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>a899fc540a1b1fefad6781d4b07a3f78c</anchor>
+      <anchor>a6a903475292a849fcbbaa71f902ffc02</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findNextOf</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>ae351f4f3eee95a6bb696a6dad3395a00</anchor>
+      <anchor>aa92021ff2af384957b77998cf7443610</anchor>
       <arglist>(Int identifier) const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findNextOf</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>aaef8e48f9bde1c37fc657fc0abeb65b5</anchor>
+      <anchor>a328c8d6bb52bfbfd5f785f46fc6d3001</anchor>
       <arglist>(std::initializer_list&lt; Int &gt; identifiers) const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findNextOf</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>a0ebf99957148e286e334831ec637e071</anchor>
+      <anchor>ae5ce1abc72a3240cd06a2e3934703b68</anchor>
       <arglist>(Containers::ArrayView&lt; const Int &gt; identifiers) const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findNextSame</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>a88ede310ca0c8f548bd158358c3f3684</anchor>
+      <anchor>a73eb11d21e48b2c29462fb25a50604d1</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -26140,10 +26028,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Property &gt;</type>
+      <type>Containers::Optional&lt; Property &gt;</type>
       <name>findPropertyOf</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>a1aabdb73140e8fc49cf5eb68ac7c3fac</anchor>
+      <anchor>a33aa6d0f6968745c2d8f92a270b15248</anchor>
       <arglist>(Int identifier) const </arglist>
     </member>
     <member kind="function">
@@ -26161,10 +26049,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findFirstChild</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>ac9c0b34d017981f2a25f79780178f361</anchor>
+      <anchor>ada65b4c08001c9b584c8b91cf6682dfa</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -26182,31 +26070,31 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findFirstChildOf</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>aabd50bd8c4cc68d7ad73b5d5132bff56</anchor>
+      <anchor>a46e0cd4a81efc241a82ea7297592fdfe</anchor>
       <arglist>(Type type) const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findFirstChildOf</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>a16fb7fcd6b8ffca99a369587cbaee05a</anchor>
+      <anchor>a6854f555f525fe7146152f3b99cdf543</anchor>
       <arglist>(Int identifier) const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findFirstChildOf</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>a68a899fa94b8f9694a70ad965e58a426</anchor>
+      <anchor>a7caaadd9aab9c5f46c21587fb8718de6</anchor>
       <arglist>(std::initializer_list&lt; Int &gt; identifiers) const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Structure &gt;</type>
+      <type>Containers::Optional&lt; Structure &gt;</type>
       <name>findFirstChildOf</name>
       <anchorfile>classMagnum_1_1OpenDdl_1_1Structure.html</anchorfile>
-      <anchor>a8be0ffe48dbee47287e16c1b5ece3f73</anchor>
+      <anchor>ab9b058b87026b80b30f947d21248d711</anchor>
       <arglist>(Containers::ArrayView&lt; const Int &gt; identifiers) const </arglist>
     </member>
     <member kind="function">
@@ -26343,6 +26231,9 @@
       <anchor>acd44b697ab59b3250ec9b99319e2846a</anchor>
       <arglist>()</arglist>
     </member>
+    <docanchor file="classMagnum_1_1OpenGLTester" title="OpenGL context creation">OpenGLTester-context</docanchor>
+    <docanchor file="classMagnum_1_1OpenGLTester" title="Debug context and error checking">OpenGLTester-debug</docanchor>
+    <docanchor file="classMagnum_1_1OpenGLTester" title="GPU time benchmarks">OpenGLTester-benchmarks</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::OvrIntegration::Buttons</name>
@@ -28363,6 +28254,13 @@
       <anchorfile>classMagnum_1_1Platform_1_1Context.html</anchorfile>
       <anchor>a04e8f4306d02c5330c128792c6cac03d</anchor>
       <arglist>(NoCreateT, Int argc, std::nullptr_t argv)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Context</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Context.html</anchorfile>
+      <anchor>acb97a0695e29bfa3b96f7b11918c754e</anchor>
+      <arglist>(NoCreateT)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -39914,17 +39812,17 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; Image2D &gt;</type>
+      <type>Containers::Optional&lt; Image2D &gt;</type>
       <name>exportToImage</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImageConverter.html</anchorfile>
-      <anchor>a2db70ad43684c3a738e27a61b52936bc</anchor>
+      <anchor>aad8ffac3d3397d60bb2cc4c8008bbfd6</anchor>
       <arglist>(const ImageView2D &amp;image)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; CompressedImage2D &gt;</type>
+      <type>Containers::Optional&lt; CompressedImage2D &gt;</type>
       <name>exportToCompressedImage</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImageConverter.html</anchorfile>
-      <anchor>af330495dd83347f5e05ec86d9bd42d77</anchor>
+      <anchor>a3371017dc62509bdfbfcb980bd86da16</anchor>
       <arglist>(const ImageView2D &amp;image)</arglist>
     </member>
     <member kind="function">
@@ -39977,17 +39875,17 @@
       <arglist>() const  =0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::optional&lt; Image2D &gt;</type>
+      <type>virtual Containers::Optional&lt; Image2D &gt;</type>
       <name>doExportToImage</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImageConverter.html</anchorfile>
-      <anchor>a1acb9d1262308fdd3e4965b048dcd033</anchor>
+      <anchor>a47e4ed0901980c96aaaf267c42670f4b</anchor>
       <arglist>(const ImageView2D &amp;image)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::optional&lt; CompressedImage2D &gt;</type>
+      <type>virtual Containers::Optional&lt; CompressedImage2D &gt;</type>
       <name>doExportToCompressedImage</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImageConverter.html</anchorfile>
-      <anchor>a3fd00724fd2a59f55efa3663251eb689</anchor>
+      <anchor>a0538c3a79ff4d2185f0febfcf62b219f</anchor>
       <arglist>(const ImageView2D &amp;image)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40018,6 +39916,7 @@
       <anchor>a4f290b4c0c3e0dbf180ed577f88a5153</anchor>
       <arglist>(const CompressedImageView2D &amp;image, const std::string &amp;filename)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Trade_1_1AbstractImageConverter" title="Subclassing">Trade-AbstractImageConverter-subclassing</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Trade::AbstractImporter</name>
@@ -40130,10 +40029,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; SceneData &gt;</type>
+      <type>Containers::Optional&lt; SceneData &gt;</type>
       <name>scene</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a57d95a36dc487003a70d7da046186d9f</anchor>
+      <anchor>a350cbc71f61e3517a5110875f13579e0</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -40158,10 +40057,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; LightData &gt;</type>
+      <type>Containers::Optional&lt; LightData &gt;</type>
       <name>light</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a6328232ce6e54f5473d03e15ee292cc2</anchor>
+      <anchor>acdbaf8126a5815b46add74eb9341d8a3</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -40186,10 +40085,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; CameraData &gt;</type>
+      <type>Containers::Optional&lt; CameraData &gt;</type>
       <name>camera</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a4fe89dcd42ced8146cbf42947444f935</anchor>
+      <anchor>a77c903a3d1e8aad82a2c02d57b12cd91</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -40270,10 +40169,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; MeshData2D &gt;</type>
+      <type>Containers::Optional&lt; MeshData2D &gt;</type>
       <name>mesh2D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>acfdac8fae8156c0efe3f214ddaad82de</anchor>
+      <anchor>a2542f73e0cdb07c3eb2b1a0daa527e6b</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -40298,10 +40197,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; MeshData3D &gt;</type>
+      <type>Containers::Optional&lt; MeshData3D &gt;</type>
       <name>mesh3D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a8ce1c3e644b92348d1f965f977ad9ad5</anchor>
+      <anchor>ae8b43371e8629753d78e790aa6e5e7c1</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -40354,10 +40253,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; TextureData &gt;</type>
+      <type>Containers::Optional&lt; TextureData &gt;</type>
       <name>texture</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a05e5b6f4827b8774dc30dd67f21dc74f</anchor>
+      <anchor>a50547a48fd1820fba3d784a2f1d2b083</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -40382,10 +40281,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; ImageData1D &gt;</type>
+      <type>Containers::Optional&lt; ImageData1D &gt;</type>
       <name>image1D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a313b6a2fcb43b088bb3d4efe9ae835b8</anchor>
+      <anchor>ad307c5891854a51e41535682317fd5d6</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -40410,10 +40309,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; ImageData2D &gt;</type>
+      <type>Containers::Optional&lt; ImageData2D &gt;</type>
       <name>image2D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a293d1d079a2119bbb7aa54294635fe93</anchor>
+      <anchor>ab5b6af6272c3ee61104f356cc907ea11</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -40438,10 +40337,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; ImageData3D &gt;</type>
+      <type>Containers::Optional&lt; ImageData3D &gt;</type>
       <name>image3D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>af5cf9482677ef9b440821ca30e508ca4</anchor>
+      <anchor>a5d52eccb836ed23e68e23dd6ba3f8ebd</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40508,10 +40407,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::optional&lt; SceneData &gt;</type>
+      <type>virtual Containers::Optional&lt; SceneData &gt;</type>
       <name>doScene</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>aa3552fd55b443df62b7d5ecc8e47ca9d</anchor>
+      <anchor>ae52ba64c6bc1f64cf573bbed25f2222d</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40536,10 +40435,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::optional&lt; LightData &gt;</type>
+      <type>virtual Containers::Optional&lt; LightData &gt;</type>
       <name>doLight</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>ad9713c5017cae9521e80144ad186974b</anchor>
+      <anchor>a6a63c97f51a4c518a61eb71aa0927934</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40564,10 +40463,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::optional&lt; CameraData &gt;</type>
+      <type>virtual Containers::Optional&lt; CameraData &gt;</type>
       <name>doCamera</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a192bf3fa80217be3d104f3d99403f6d5</anchor>
+      <anchor>aebd65c47d087b672c2fce7a34e55c4c2</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40648,10 +40547,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::optional&lt; MeshData2D &gt;</type>
+      <type>virtual Containers::Optional&lt; MeshData2D &gt;</type>
       <name>doMesh2D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>abaf5e4d6045008c76438bc33242bd705</anchor>
+      <anchor>a3d6fc0af4571ce7806794f3724bb3469</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40676,10 +40575,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::optional&lt; MeshData3D &gt;</type>
+      <type>virtual Containers::Optional&lt; MeshData3D &gt;</type>
       <name>doMesh3D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>ad71c04d459d5945712d42859d0345c4b</anchor>
+      <anchor>a9fcd573489ce46d8f8c68b08cbfe2da3</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40732,10 +40631,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::optional&lt; TextureData &gt;</type>
+      <type>virtual Containers::Optional&lt; TextureData &gt;</type>
       <name>doTexture</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a4f18e460dab42ae873448db746610e69</anchor>
+      <anchor>a7b4b0b243dba7278f68be18a164941bd</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40760,10 +40659,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::optional&lt; ImageData1D &gt;</type>
+      <type>virtual Containers::Optional&lt; ImageData1D &gt;</type>
       <name>doImage1D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a896d1c4daaf538a6b18ecf28c33daf03</anchor>
+      <anchor>ade69538fba52b35e2aab8c89919f7499</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40788,10 +40687,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::optional&lt; ImageData2D &gt;</type>
+      <type>virtual Containers::Optional&lt; ImageData2D &gt;</type>
       <name>doImage2D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a5806a00dd6677054d38d37587282e7f6</anchor>
+      <anchor>a314523e3b3f0136c265e7ea16e059812</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40816,10 +40715,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual std::optional&lt; ImageData3D &gt;</type>
+      <type>virtual Containers::Optional&lt; ImageData3D &gt;</type>
       <name>doImage3D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>ace3fab936ecdaced784c3db2e4116777</anchor>
+      <anchor>a32379c2f00563b9c75d98eef22493792</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -40858,10 +40757,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; SceneData &gt;</type>
+      <type>Containers::Optional&lt; SceneData &gt;</type>
       <name>scene</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a57d95a36dc487003a70d7da046186d9f</anchor>
+      <anchor>a350cbc71f61e3517a5110875f13579e0</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -40886,10 +40785,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; LightData &gt;</type>
+      <type>Containers::Optional&lt; LightData &gt;</type>
       <name>light</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a6328232ce6e54f5473d03e15ee292cc2</anchor>
+      <anchor>acdbaf8126a5815b46add74eb9341d8a3</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -40914,10 +40813,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; CameraData &gt;</type>
+      <type>Containers::Optional&lt; CameraData &gt;</type>
       <name>camera</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a4fe89dcd42ced8146cbf42947444f935</anchor>
+      <anchor>a77c903a3d1e8aad82a2c02d57b12cd91</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -40998,10 +40897,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; MeshData2D &gt;</type>
+      <type>Containers::Optional&lt; MeshData2D &gt;</type>
       <name>mesh2D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>acfdac8fae8156c0efe3f214ddaad82de</anchor>
+      <anchor>a2542f73e0cdb07c3eb2b1a0daa527e6b</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -41026,10 +40925,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; MeshData3D &gt;</type>
+      <type>Containers::Optional&lt; MeshData3D &gt;</type>
       <name>mesh3D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a8ce1c3e644b92348d1f965f977ad9ad5</anchor>
+      <anchor>ae8b43371e8629753d78e790aa6e5e7c1</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -41082,10 +40981,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; TextureData &gt;</type>
+      <type>Containers::Optional&lt; TextureData &gt;</type>
       <name>texture</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a05e5b6f4827b8774dc30dd67f21dc74f</anchor>
+      <anchor>a50547a48fd1820fba3d784a2f1d2b083</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -41110,10 +41009,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; ImageData1D &gt;</type>
+      <type>Containers::Optional&lt; ImageData1D &gt;</type>
       <name>image1D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a313b6a2fcb43b088bb3d4efe9ae835b8</anchor>
+      <anchor>ad307c5891854a51e41535682317fd5d6</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -41138,10 +41037,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; ImageData2D &gt;</type>
+      <type>Containers::Optional&lt; ImageData2D &gt;</type>
       <name>image2D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a293d1d079a2119bbb7aa54294635fe93</anchor>
+      <anchor>ab5b6af6272c3ee61104f356cc907ea11</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -41166,12 +41065,13 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::optional&lt; ImageData3D &gt;</type>
+      <type>Containers::Optional&lt; ImageData3D &gt;</type>
       <name>image3D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>af5cf9482677ef9b440821ca30e508ca4</anchor>
+      <anchor>a5d52eccb836ed23e68e23dd6ba3f8ebd</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Trade_1_1AbstractImporter" title="Subclassing">Trade-AbstractImporter-subclassing</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Trade::AbstractMaterialData</name>
@@ -41308,6 +41208,15 @@
       <anchor>a078f0599290d52608fd48f91fa57d9d1</anchor>
       <arglist>(PluginManager::AbstractManager &amp;manager, const std::string &amp;plugin)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Trade_1_1AssimpImporter" title="Behavior and limitations">Trade-AssimpImporter-limitations</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1AssimpImporter" title="Material import">Trade-AssimpImporter-limitations-materials</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1AssimpImporter" title="Light import">Trade-AssimpImporter-limitations-lights</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1AssimpImporter" title="Camera import">Trade-AssimpImporter-limitations-cameras</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1AssimpImporter" title="Mesh import">Trade-AssimpImporter-limitations-meshes</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1AssimpImporter" title="Texture import">Trade-AssimpImporter-limitations-textures</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1AssimpImporter" title="Bone import">Trade-AssimpImporter-limitations-bones</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1AssimpImporter" title="Animation import">Trade-AssimpImporter-limitations-animations</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1AssimpImporter" title="Access to internal importer state">Trade-AssimpImporter-state</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Trade::CameraData</name>
@@ -41401,13 +41310,9 @@
       <anchor>a09f746b7c4bca109d92c1f0832607e03</anchor>
       <arglist>(PluginManager::AbstractManager &amp;manager, const std::string &amp;plugin)</arglist>
     </member>
-    <member kind="function">
-      <type>std::vector&lt; T &gt;</type>
-      <name>parseSource</name>
-      <anchorfile>classMagnum_1_1Trade_1_1ColladaImporter.html</anchorfile>
-      <anchor>ae3b29aba242dd2cf5c14a7e77e73de63</anchor>
-      <arglist>(const QString &amp;id)</arglist>
-    </member>
+    <docanchor file="classMagnum_1_1Trade_1_1ColladaImporter" title="Behavior and limitations">Trade-ColladaImporter-limitations</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1ColladaImporter" title="Mesh import">Trade-ColladaImporter-limitations-meshes</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1ColladaImporter" title="Material import">Trade-ColladaImporter-limitations-materials</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Trade::DdsImporter</name>
@@ -42421,6 +42326,7 @@
       <anchor>a28e7782925186f7e48a7d24a89dbb3f8</anchor>
       <arglist>(PluginManager::AbstractManager &amp;manager, const std::string &amp;plugin)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Trade_1_1ObjImporter" title="Behavior and limitations">Trade-ObjImporter-limitations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Trade::OpenGexImporter</name>
@@ -42454,6 +42360,13 @@
       <anchor>a7655b00adc0a080386e0d4ed93817587</anchor>
       <arglist>() const </arglist>
     </member>
+    <docanchor file="classMagnum_1_1Trade_1_1OpenGexImporter" title="Behavior and limitations">Trade-OpenGexImporter-limitations</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1OpenGexImporter" title="Scene hierarchy import">Trade-OpenGexImporter-limitations-scenes</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1OpenGexImporter" title="Light import">Trade-OpenGexImporter-limitations-lights</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1OpenGexImporter" title="Mesh import">Trade-OpenGexImporter-limitations-meshes</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1OpenGexImporter" title="Material import">Trade-OpenGexImporter-limitations-materials</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1OpenGexImporter" title="Texture import">Trade-OpenGexImporter-limitations-textures</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1OpenGexImporter" title="Access to internal importer state">Trade-OpenGexImporter-state</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Trade::PhongMaterialData</name>
@@ -43024,6 +42937,7 @@
       <anchor>aaef2517042d9d4ebaf1b512e0a17ff70</anchor>
       <arglist>(PluginManager::AbstractManager &amp;manager, const std::string &amp;plugin)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Trade_1_1TgaImageConverter" title="Behavior and limitations">Trade-TgaImageConverter-limitations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Trade::TgaImporter</name>
@@ -43777,6 +43691,7 @@
       <anchor>a7ba55309488e42143106e09c6ec3655a</anchor>
       <arglist>()</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Ui_1_1BasicPlane" title="Plane hierarchy">Ui-BasicPlane-hierarchy</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Ui::BasicUserInterface</name>
@@ -43887,6 +43802,7 @@
       <anchor>a0903428b90b7e71c9390da426572b036</anchor>
       <arglist>()</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Ui_1_1Button" title="Styling">Ui-Button-styling</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Ui::Input</name>
@@ -43948,6 +43864,13 @@
       <anchorfile>classMagnum_1_1Ui_1_1Input.html</anchorfile>
       <anchor>ad9fa975db22b6c4c53be4513ed444398</anchor>
       <arglist>(Containers::ArrayView&lt; const char &gt; value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Input &amp;</type>
+      <name>setValue</name>
+      <anchorfile>classMagnum_1_1Ui_1_1Input.html</anchorfile>
+      <anchor>ae165fcad293eb4944105b5bac204b15b</anchor>
+      <arglist>(const char(&amp;value)[size])</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -44059,6 +43982,7 @@
       <anchor>a2b86dd9734b6b123b3c5fae10edc2b84</anchor>
       <arglist>(const char(&amp;text)[size])</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Ui_1_1Label" title="Styling">Ui-Label-styling</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Ui::Modal</name>
@@ -44071,6 +43995,7 @@
       <anchor>aa8423e5553e547e742d3e01ab6c12a7a</anchor>
       <arglist>(Plane &amp;plane, const Anchor &amp;anchor, Style style=Style::Default)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Ui_1_1Modal" title="Styling">Ui-Modal-styling</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Ui::Plane</name>
@@ -44321,6 +44246,27 @@
       <type></type>
       <name>UserInterface</name>
       <anchorfile>classMagnum_1_1Ui_1_1UserInterface.html</anchorfile>
+      <anchor>ae879707d826299472b8a4ef616bd68f0</anchor>
+      <arglist>(const Vector2 &amp;size, const Vector2i &amp;screenSize, const std::string &amp;extraGlyphs={})</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>UserInterface</name>
+      <anchorfile>classMagnum_1_1Ui_1_1UserInterface.html</anchorfile>
+      <anchor>aa672d18d77ec7269369397135b4bc147</anchor>
+      <arglist>(const Vector2 &amp;size, const Vector2i &amp;screenSize, const StyleConfiguration &amp;styleConfiguration, const std::string &amp;extraGlyphs={})</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>UserInterface</name>
+      <anchorfile>classMagnum_1_1Ui_1_1UserInterface.html</anchorfile>
+      <anchor>a05f9e84222134233c5e4f1edc51d6267</anchor>
+      <arglist>(const Vector2 &amp;size, const Vector2i &amp;screenSize, Text::AbstractFont &amp;font, Text::GlyphCache &amp;glyphCache, const StyleConfiguration &amp;styleConfiguration)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>UserInterface</name>
+      <anchorfile>classMagnum_1_1Ui_1_1UserInterface.html</anchorfile>
       <anchor>a43a2ceeaa33a82068abdf69ce3edb544</anchor>
       <arglist>(const Vector2 &amp;size, const Vector2i &amp;screenSize, Text::AbstractFont &amp;font, const StyleConfiguration &amp;styleConfiguration)</arglist>
     </member>
@@ -44394,6 +44340,7 @@
       <anchor>a4101e9b947d67939d32b96dbb8658e8e</anchor>
       <arglist>()</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Ui_1_1UserInterface" title="Font plugins">Ui-UserInterface-fonts</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Ui::ValidatedInput</name>
@@ -58057,11 +58004,8 @@
     <class kind="class">Magnum::Audio::Playable</class>
     <class kind="class">Magnum::Audio::PlayableGroup</class>
     <class kind="class">Magnum::Audio::Renderer</class>
-    <class kind="struct">Magnum::Audio::RiffChunk</class>
     <class kind="class">Magnum::Audio::Source</class>
     <class kind="class">Magnum::Audio::StbVorbisImporter</class>
-    <class kind="struct">Magnum::Audio::WavFormatChunk</class>
-    <class kind="struct">Magnum::Audio::WavHeaderChunk</class>
     <class kind="class">Magnum::Audio::WavImporter</class>
     <member kind="typedef">
       <type>Playable&lt; 2 &gt;</type>
@@ -58105,20 +58049,6 @@
       <anchor>aeec8317e1c2929ffa7e179140b1760cd</anchor>
       <arglist></arglist>
     </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>WavAudioFormat</name>
-      <anchorfile>namespaceMagnum_1_1Audio.html</anchorfile>
-      <anchor>a4815cf29b938deb1289a7b3da48d9a32</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32a52461f094ac3952b9f67ec9562fd69d3">Pcm</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32a10ffce258b606414a30069a7385035a5">AdPcm</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32a9dcf79cfa6b3d22821e3992bcbf96354">IeeeFloat</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32aabd77aee2c10d743732ccff67c190069">ALaw</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32a2c93ec3305b0f0862cf45521ee021dcc">MuLaw</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Audio.html" anchor="a4815cf29b938deb1289a7b3da48d9a32acb9e3624404af6e2ec52e3a39d5358a7">Extensible</enumvalue>
-    </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
@@ -58153,13 +58083,6 @@
       <anchorfile>namespaceMagnum_1_1Audio.html</anchorfile>
       <anchor>a0a8de3ea9665f8333aabda2b530b9d7d</anchor>
       <arglist>(Debug &amp;debug, Source::State value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1Audio.html</anchorfile>
-      <anchor>a50e86c1c5b9c056a96ad3a7bf5cdd90b</anchor>
-      <arglist>(Debug &amp;debug, WavAudioFormat value)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -61972,6 +61895,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type>StyleConfiguration</type>
+      <name>mcssDarkStyleConfiguration</name>
+      <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
+      <anchor>a1f6e9b3376c1bc4f6f913e2bcbf37b57</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
@@ -62030,11 +61960,11 @@
     <name>getting-started</name>
     <title>Getting started</title>
     <filename>getting-started</filename>
-    <docanchor file="getting-started" title="Download bootstrap project">getting-started-bootstrap</docanchor>
+    <docanchor file="getting-started" title="Download the bootstrap project">getting-started-bootstrap</docanchor>
     <docanchor file="getting-started" title="Download, build and install Corrade and Magnum">getting-started-download</docanchor>
     <docanchor file="getting-started" title="Review project structure">getting-started-review</docanchor>
     <docanchor file="getting-started" title="Build it and run">getting-started-build</docanchor>
-    <docanchor file="getting-started" title="Linux, macOS and other Unix-based OSs">getting-started-linux</docanchor>
+    <docanchor file="getting-started" title="Linux, macOS and other Unix-based OSes">getting-started-linux</docanchor>
     <docanchor file="getting-started" title="Windows">getting-started-windows</docanchor>
     <docanchor file="getting-started" title="Running the application">getting-started-running</docanchor>
     <docanchor file="getting-started" title="Follow tutorials and learn the principles">getting-started-tutorials</docanchor>
@@ -62077,6 +62007,26 @@
     <title>Changelog</title>
     <filename>changelog</filename>
     <docanchor file="changelog" title="Changes since 2015-05 snapshot">changelog-latest</docanchor>
+    <docanchor file="changelog" title="Dependency changes">changelog-latest-dependencies</docanchor>
+    <docanchor file="changelog" title="New features">changelog-latest-new</docanchor>
+    <docanchor file="changelog" title="Audio library">changelog-latest-new-audio</docanchor>
+    <docanchor file="changelog" title="DebugTools library">changelog-latest-new-debugtools</docanchor>
+    <docanchor file="changelog" title="Math library">changelog-latest-new-math</docanchor>
+    <docanchor file="changelog" title="Platform libraries">changelog-latest-new-platform</docanchor>
+    <docanchor file="changelog" title="Primitives library">changelog-latest-new-primitives</docanchor>
+    <docanchor file="changelog" title="Shaders library">changelog-latest-new-shaders</docanchor>
+    <docanchor file="changelog" title="Text library">changelog-latest-new-text</docanchor>
+    <docanchor file="changelog" title="Trade library">changelog-latest-new-trade</docanchor>
+    <docanchor file="changelog" title="Changes and improvements">changelog-latest-changes</docanchor>
+    <docanchor file="changelog" title="Math library">changelog-latest-changes-math</docanchor>
+    <docanchor file="changelog" title="Platform library">changelog-latest-changes-platform</docanchor>
+    <docanchor file="changelog" title="Shaders library">changelog-latest-changes-shaders</docanchor>
+    <docanchor file="changelog" title="Build system">changelog-latest-buildsystem</docanchor>
+    <docanchor file="changelog" title="Bug fixes">changelog-latest-bugfixes</docanchor>
+    <docanchor file="changelog" title="Deprecated APIs">changelog-latest-deprecated</docanchor>
+    <docanchor file="changelog" title="Potential compatibility breakages, removed APIs">changelog-latest-compatibility</docanchor>
+    <docanchor file="changelog" title="Performance improvements">changelog-latest-performance</docanchor>
+    <docanchor file="changelog" title="Documentation">changelog-latest-docs</docanchor>
     <docanchor file="changelog" title="2015-05 snapshot">changelog-2015-05</docanchor>
     <docanchor file="changelog" title="2014-06 snapshot">changelog-2014-06</docanchor>
     <docanchor file="changelog" title="2014-01 snapshot">changelog-2014-01</docanchor>
@@ -62088,6 +62038,13 @@
     <title>Plugins changelog</title>
     <filename>changelog-plugins</filename>
     <docanchor file="changelog-plugins" title="Changes since 2015-05 snapshot">changelog-plugins-latest</docanchor>
+    <docanchor file="changelog-plugins" title="Dependency changes">changelog-plugins-latest-dependencies</docanchor>
+    <docanchor file="changelog-plugins" title="New features">changelog-plugins-latest-new</docanchor>
+    <docanchor file="changelog-plugins" title="Changes and improvements">changelog-plugins-latest-changes</docanchor>
+    <docanchor file="changelog-plugins" title="Build system">changelog-plugins-latest-buildsystem</docanchor>
+    <docanchor file="changelog-plugins" title="Bug fixes">changelog-plugins-latest-bugfixes</docanchor>
+    <docanchor file="changelog-plugins" title="Potential compatibility breakages">changelog-plugins-latest-compatibility</docanchor>
+    <docanchor file="changelog-plugins" title="Documentation">changelog-plugins-latest-documentation</docanchor>
     <docanchor file="changelog-plugins" title="2015-05 snapshot">changelog-plugins-2015-05</docanchor>
     <docanchor file="changelog-plugins" title="2014-06 snapshot">changelog-plugins-2014-06</docanchor>
     <docanchor file="changelog-plugins" title="2014-01 snapshot">changelog-plugins-2014-01</docanchor>
@@ -62099,6 +62056,14 @@
     <title>Integration changelog</title>
     <filename>changelog-integration</filename>
     <docanchor file="changelog-integration" title="Changes since 2015-05 snapshot">changelog-integration-latest</docanchor>
+    <docanchor file="changelog-integration" title="Dependency changes">changelog-integration-latest-dependencies</docanchor>
+    <docanchor file="changelog-integration" title="New features">changelog-integration-latest-new</docanchor>
+    <docanchor file="changelog-integration" title="Changes and improvements">changelog-integration-latest-changes</docanchor>
+    <docanchor file="changelog-integration" title="Build system">changelog-integration-latest-buildsystem</docanchor>
+    <docanchor file="changelog-integration" title="Bug fixes">changelog-integration-latest-bugfixes</docanchor>
+    <docanchor file="changelog-integration" title="Deprecated APIs">changelog-integration-latest-deprecated</docanchor>
+    <docanchor file="changelog-integration" title="Potential compatibility breakages, removed APIs">changelog-integration-latest-compatibility</docanchor>
+    <docanchor file="changelog-integration" title="Documentation">changelog-integration-latest-documentation</docanchor>
     <docanchor file="changelog-integration" title="2015-05 snapshot">changelog-integration-2015-05</docanchor>
     <docanchor file="changelog-integration" title="2014-06 snapshot">changelog-integration-2014-06</docanchor>
     <docanchor file="changelog-integration" title="2014-01 snapshot">changelog-integration-2014-01</docanchor>
@@ -62110,12 +62075,24 @@
     <title>Extras changelog</title>
     <filename>changelog-extras</filename>
     <docanchor file="changelog-extras" title="Changes during the initial release">changelog-extras-latest</docanchor>
+    <docanchor file="changelog-extras" title="De­pen­den­cy changes">changelog-extras-latest-dependencies</docanchor>
+    <docanchor file="changelog-extras" title="New features">changelog-extras-latest-new</docanchor>
+    <docanchor file="changelog-extras" title="Build system">changelog-extras-latest-buildsystem</docanchor>
+    <docanchor file="changelog-extras" title="Deprecated APIs">changelog-extras-latest-deprecated</docanchor>
+    <docanchor file="changelog-extras" title="Documentation">changelog-extras-latest-documentation</docanchor>
+    <docanchor file="changelog-extras" title="Potential compatibility breakages, removed APIs">changelog-extras-latest-compatibility</docanchor>
   </compound>
   <compound kind="page">
     <name>changelog-examples</name>
     <title>Examples changelog</title>
     <filename>changelog-examples</filename>
     <docanchor file="changelog-examples" title="Changes since 2015-05 snapshot">changelog-examples-latest</docanchor>
+    <docanchor file="changelog-examples" title="Dependency changes">changelog-examples-latest-dependencies</docanchor>
+    <docanchor file="changelog-examples" title="New features">changelog-examples-latest-new</docanchor>
+    <docanchor file="changelog-examples" title="Changes and improvements">changelog-examples-latest-changes</docanchor>
+    <docanchor file="changelog-examples" title="Build system">changelog-examples-latest-buildsystem</docanchor>
+    <docanchor file="changelog-examples" title="Bug fixes">changelog-examples-latest-bugfixes</docanchor>
+    <docanchor file="changelog-examples" title="Documentation">changelog-examples-latest-documentation</docanchor>
     <docanchor file="changelog-examples" title="2015-05 snapshot">changelog-examples-2015-05</docanchor>
     <docanchor file="changelog-examples" title="2014-06 snapshot">changelog-examples-2014-06</docanchor>
     <docanchor file="changelog-examples" title="2014-01 snapshot">changelog-examples-2014-01</docanchor>
@@ -62162,28 +62139,28 @@
     <name>building</name>
     <title>Downloading and building</title>
     <filename>building</filename>
+    <docanchor file="building" title="Prepared packages">building-packages</docanchor>
+    <docanchor file="building" title="Vcpkg packages on Windows">building-packages-vcpkg</docanchor>
+    <docanchor file="building" title="ArchLinux packages">building-packages-arch</docanchor>
+    <docanchor file="building" title="Packages for Debian, Ubuntu and derivatives">building-packages-deb</docanchor>
+    <docanchor file="building" title="Gentoo Linux ebuilds">building-packages-gentoo</docanchor>
+    <docanchor file="building" title="Homebrew formulas for macOS">building-packages-brew</docanchor>
+    <docanchor file="building" title="Manual build">building-manual</docanchor>
     <docanchor file="building" title="Downloading the sources">building-download</docanchor>
-    <docanchor file="building" title="Compilation, installation">building-compilation</docanchor>
     <docanchor file="building" title="Via command-line (on Linux/Unix)">building-linux</docanchor>
     <docanchor file="building" title="Building on Windows">building-windows</docanchor>
     <docanchor file="building" title="Using Visual Studio">building-windows-msvc</docanchor>
     <docanchor file="building" title="Using QtCreator">building-windows-qtcreator</docanchor>
     <docanchor file="building" title="Enabling or disabling features">building-features</docanchor>
-    <docanchor file="building" title="Building and running unit tests">building-tests</docanchor>
+    <docanchor file="building" title="Building and running tests">building-tests</docanchor>
     <docanchor file="building" title="Building documentation">building-doc</docanchor>
-    <docanchor file="building" title="Related projects">building-related</docanchor>
-    <docanchor file="building" title="Prepared packages">building-packages</docanchor>
-    <docanchor file="building" title="ArchLinux packages">building-packages-arch</docanchor>
-    <docanchor file="building" title="Gentoo ebuilds">building-packages-gentoo</docanchor>
-    <docanchor file="building" title="DEB packages">building-packages-deb</docanchor>
-    <docanchor file="building" title="Homebrew formulas">building-packages-brew</docanchor>
     <docanchor file="building" title="Building for ANGLE on Windows">building-windows-angle</docanchor>
-    <docanchor file="building" title="Crosscompiling">building-crosscompiling</docanchor>
-    <docanchor file="building" title="Crosscompiling for Windows RT">building-cross-winrt</docanchor>
-    <docanchor file="building" title="Crosscompiling for Windows using MinGW-w64">building-cross-win</docanchor>
-    <docanchor file="building" title="Crosscompiling for Emscripten">building-cross-emscripten</docanchor>
-    <docanchor file="building" title="Crosscompiling for iOS">building-cross-ios</docanchor>
-    <docanchor file="building" title="Crosscompiling for Android ARM and x86">building-cross-android</docanchor>
+    <docanchor file="building" title="Cross-compiling">building-cross</docanchor>
+    <docanchor file="building" title="Cross-compiling for Windows RT">building-cross-winrt</docanchor>
+    <docanchor file="building" title="Cross-compiling for Windows using MinGW-w64">building-cross-win</docanchor>
+    <docanchor file="building" title="Cross-compiling for Emscripten">building-cross-emscripten</docanchor>
+    <docanchor file="building" title="Cross-compiling for iOS">building-cross-ios</docanchor>
+    <docanchor file="building" title="Cross-compiling for Android ARM and x86">building-cross-android</docanchor>
     <docanchor file="building" title="Continuous Integration">building-ci</docanchor>
     <docanchor file="building" title="Travis">building-ci-travis</docanchor>
     <docanchor file="building" title="AppVeyor">building-ci-appveyor</docanchor>
@@ -62406,10 +62383,15 @@
     <name>building-plugins</name>
     <title>Downloading and building plugins</title>
     <filename>building-plugins</filename>
-    <docanchor file="building-plugins" title="Building ArchLinux packages">building-plugins-arch</docanchor>
-    <docanchor file="building-plugins" title="Gentoo ebuilds">building-plugins-gentoo</docanchor>
-    <docanchor file="building-plugins" title="Building DEB packages">building-plugins-deb</docanchor>
-    <docanchor file="building-plugins" title="Homebrew formulas">building-plugins-brew</docanchor>
+    <docanchor file="building-plugins" title="Prepared packages">building-plugins-packages</docanchor>
+    <docanchor file="building-plugins" title="Vcpkg packages on Windows">building-plugins-packages-vcpkg</docanchor>
+    <docanchor file="building-plugins" title="ArchLinux packages">building-plugins-packages-arch</docanchor>
+    <docanchor file="building-plugins" title="Packages for Debian, Ubuntu and derivatives">building-plugins-packages-deb</docanchor>
+    <docanchor file="building-plugins" title="Gentoo Linux ebuilds">building-plugins-packages-gentoo</docanchor>
+    <docanchor file="building-plugins" title="Homebrew formulas for macOS">building-plugins-packages-brew</docanchor>
+    <docanchor file="building-plugins" title="Manual build">building-plugins-manual</docanchor>
+    <docanchor file="building-plugins" title="Enabling or disabling features">building-plugins-features</docanchor>
+    <docanchor file="building-plugins" title="Building documentation">building-plugins-doc</docanchor>
     <docanchor file="building-plugins" title="Continuous Integration">building-plugins-ci</docanchor>
     <docanchor file="building-plugins" title="Travis">building-plugins-ci-travis</docanchor>
     <docanchor file="building-plugins" title="AppVeyor">building-plugins-ci-appveyor</docanchor>
@@ -62424,10 +62406,14 @@
     <name>building-integration</name>
     <title>Downloading and building integration libraries</title>
     <filename>building-integration</filename>
-    <docanchor file="building-integration" title="Building ArchLinux packages">building-integration-arch</docanchor>
-    <docanchor file="building-integration" title="Gentoo ebuilds">building-integration-gentoo</docanchor>
-    <docanchor file="building-integration" title="Building DEB packages">building-integration-deb</docanchor>
-    <docanchor file="building-integration" title="Homebrew formulas">building-integration-brew</docanchor>
+    <docanchor file="building-integration" title="Prepared packages">building-integration-packages</docanchor>
+    <docanchor file="building-integration" title="ArchLinux packages">building-integration-packages-arch</docanchor>
+    <docanchor file="building-integration" title="Packages for Debian, Ubuntu and derivatives">building-integration-packages-deb</docanchor>
+    <docanchor file="building-integration" title="Gentoo Linux ebuilds">building-integration-packages-gentoo</docanchor>
+    <docanchor file="building-integration" title="Homebrew formulas for macOS">building-integration-packages-brew</docanchor>
+    <docanchor file="building-integration" title="Manual build">building-integration-manual</docanchor>
+    <docanchor file="building-integration" title="Enabling or disabling features">building-integration-features</docanchor>
+    <docanchor file="building-integration" title="Building documentation">building-integration-doc</docanchor>
     <docanchor file="building-integration" title="Continuous Integration">building-integration-ci</docanchor>
     <docanchor file="building-integration" title="Travis">building-integration-ci-travis</docanchor>
     <docanchor file="building-integration" title="AppVeyor">building-integration-ci-appveyor</docanchor>
@@ -62439,16 +62425,75 @@
     <docanchor file="cmake-integration" title="Other CMake modules">cmake-integration-modules</docanchor>
   </compound>
   <compound kind="page">
+    <name>examples-arealights</name>
+    <title>Area lights</title>
+    <filename>examples-arealights</filename>
+    <docanchor file="examples-arealights" title="Controls">examples-arealights-controls</docanchor>
+    <docanchor file="examples-arealights" title="Credits">examples-arealights-credits</docanchor>
+    <docanchor file="examples-arealights" title="Source">examples-arealights-source</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>examples-audio</name>
+    <title>Audio</title>
+    <filename>examples-audio</filename>
+    <docanchor file="examples-audio" title="Key controls">examples-audio-controls</docanchor>
+    <docanchor file="examples-audio" title="Credits">examples-audio-credits</docanchor>
+    <docanchor file="examples-audio" title="Source">examples-audio-source</docanchor>
+  </compound>
+  <compound kind="page">
     <name>building-examples</name>
     <title>Downloading and building examples</title>
     <filename>building-examples</filename>
-    <docanchor file="building-examples" title="Building ArchLinux packages">building-examples-arch</docanchor>
-    <docanchor file="building-examples" title="Gentoo ebuilds">building-examples-gentoo</docanchor>
-    <docanchor file="building-examples" title="Building DEB packages">building-examples-deb</docanchor>
-    <docanchor file="building-examples" title="Homebrew formulas">building-examples-brew</docanchor>
+    <docanchor file="building-examples" title="Prepared packages">building-examples-packages</docanchor>
+    <docanchor file="building-examples" title="ArchLinux packages">building-examples-packages-arch</docanchor>
+    <docanchor file="building-examples" title="Packages for Debian, Ubuntu and derivatives">building-examples-packages-deb</docanchor>
+    <docanchor file="building-examples" title="Gentoo Linux ebuilds">building-examples-packages-gentoo</docanchor>
+    <docanchor file="building-examples" title="Homebrew formulas for macOS">building-examples-packages-brew</docanchor>
+    <docanchor file="building-examples" title="Manual build">building-examples-manual</docanchor>
+    <docanchor file="building-examples" title="Enabling or disabling features">building-examples-features</docanchor>
+    <docanchor file="building-examples" title="Building documentation">building-examples-doc</docanchor>
     <docanchor file="building-examples" title="Continuous Integration">building-examples-ci</docanchor>
     <docanchor file="building-examples" title="Travis">building-examples-ci-travis</docanchor>
     <docanchor file="building-examples" title="AppVeyor">building-examples-ci-appveyor</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>examples-bullet</name>
+    <title>Bullet Physics</title>
+    <filename>examples-bullet</filename>
+    <docanchor file="examples-bullet" title="Key controls">examples-bullet-controls</docanchor>
+    <docanchor file="examples-bullet" title="Credits">examples-bullet-credits</docanchor>
+    <docanchor file="examples-bullet" title="Source">examples-bullet-source</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>examples-cubemap</name>
+    <title>Cube map</title>
+    <filename>examples-cubemap</filename>
+    <docanchor file="examples-cubemap" title="Usage">examples-cubemap-usage</docanchor>
+    <docanchor file="examples-cubemap" title="Key controls">examples-cubemap-controls</docanchor>
+    <docanchor file="examples-cubemap" title="Credits">examples-cubemap-credits</docanchor>
+    <docanchor file="examples-cubemap" title="Source">examples-cubemap-source</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>examples-motionblur</name>
+    <title>Motion blur</title>
+    <filename>examples-motionblur</filename>
+    <docanchor file="examples-motionblur" title="Source">examples-motionblur-source</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>examples-ovr</name>
+    <title>Oculus VR</title>
+    <filename>examples-ovr</filename>
+    <docanchor file="examples-ovr" title="Usage">examples-ovr-usage</docanchor>
+    <docanchor file="examples-ovr" title="Key controls">examples-ovr-controls</docanchor>
+    <docanchor file="examples-ovr" title="Credits">examples-ovr-credits</docanchor>
+    <docanchor file="examples-ovr" title="Source">examples-ovr-source</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>examples-picking</name>
+    <title>Object picking</title>
+    <filename>examples-picking</filename>
+    <docanchor file="examples-picking" title="Key controls">examples-picking-controls</docanchor>
+    <docanchor file="examples-picking" title="Source">examples-picking-source</docanchor>
   </compound>
   <compound kind="page">
     <name>examples-primitives</name>
@@ -62460,6 +62505,22 @@
     <docanchor file="examples-primitives" title="Compilation">examples-primitives-compilation</docanchor>
   </compound>
   <compound kind="page">
+    <name>examples-shadows</name>
+    <title>Shadow map</title>
+    <filename>examples-shadows</filename>
+    <docanchor file="examples-shadows" title="Key controls">examples-shadows-controls</docanchor>
+    <docanchor file="examples-shadows" title="Credits">examples-shadows-credits</docanchor>
+    <docanchor file="examples-shadows" title="Source">examples-shadows-source</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>examples-text</name>
+    <title>Text rendering</title>
+    <filename>examples-text</filename>
+    <docanchor file="examples-text" title="Usage">examples-text-usage</docanchor>
+    <docanchor file="examples-text" title="Credits">examples-text-credits</docanchor>
+    <docanchor file="examples-text" title="Source">examples-text-source</docanchor>
+  </compound>
+  <compound kind="page">
     <name>examples-textured-triangle</name>
     <title>Textured triangle</title>
     <filename>examples-textured-triangle</filename>
@@ -62467,6 +62528,11 @@
     <docanchor file="examples-textured-triangle" title="Textured triangle shader">examples-textured-triangle-shader</docanchor>
     <docanchor file="examples-textured-triangle" title="Setting up the mesh and texture">examples-textured-triangle-setup</docanchor>
     <docanchor file="examples-textured-triangle" title="Compilation">examples-textured-triangle-compilation</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>examples-triangle-plain-glfw</name>
+    <title>Triangle using plain GLFW</title>
+    <filename>examples-triangle-plain-glfw</filename>
   </compound>
   <compound kind="page">
     <name>examples-triangle</name>
@@ -62489,10 +62555,14 @@
     <name>building-extras</name>
     <title>Downloading and building extras</title>
     <filename>building-extras</filename>
-    <docanchor file="building-extras" title="Building ArchLinux packages">building-extras-arch</docanchor>
-    <docanchor file="building-extras" title="Gentoo ebuilds">building-extras-gentoo</docanchor>
-    <docanchor file="building-extras" title="Building DEB packages">building-extras-deb</docanchor>
-    <docanchor file="building-extras" title="Homebrew formulas">building-extras-brew</docanchor>
+    <docanchor file="building-extras" title="Prepared packages">building-extras-packages</docanchor>
+    <docanchor file="building-extras" title="ArchLinux packages">building-extras-packages-arch</docanchor>
+    <docanchor file="building-extras" title="Packages for Debian, Ubuntu and derivatives">building-extras-packages-deb</docanchor>
+    <docanchor file="building-extras" title="Gentoo Linux ebuilds">building-extras-packages-gentoo</docanchor>
+    <docanchor file="building-extras" title="Homebrew formulas for macOS">building-extras-packages-brew</docanchor>
+    <docanchor file="building-extras" title="Manual build">building-extras-manual</docanchor>
+    <docanchor file="building-extras" title="Enabling or disabling features">building-extras-features</docanchor>
+    <docanchor file="building-extras" title="Building documentation">building-extras-doc</docanchor>
     <docanchor file="building-extras" title="Continuous Integration">building-extras-ci</docanchor>
     <docanchor file="building-extras" title="Travis">building-extras-ci-travis</docanchor>
     <docanchor file="building-extras" title="AppVeyor">building-extras-ci-appveyor</docanchor>
@@ -62507,15 +62577,6 @@
     <name>index</name>
     <title>Magnum</title>
     <filename>index</filename>
-    <docanchor file="index" title="Beauty of simplicity">mainpage-goals1</docanchor>
-    <docanchor file="index" title="With batteries included">mainpage-goals2</docanchor>
-    <docanchor file="index" title="Screws are not glued in">mainpage-goals3</docanchor>
-    <docanchor file="index" title="Supported platforms">mainpage-platforms</docanchor>
-    <docanchor file="index" title="Building Magnum">mainpage-building</docanchor>
-    <docanchor file="index" title="Minimal dependencies">mainpage-building-dependencies</docanchor>
-    <docanchor file="index" title="Compilation, installation">mainpage-building-compilation</docanchor>
-    <docanchor file="index" title="Building and running unit tests">mainpage-building-tests</docanchor>
-    <docanchor file="index" title="Building documentation">mainpage-building-doc</docanchor>
     <docanchor file="index" title="Getting started">mainpage-getting-started</docanchor>
     <docanchor file="index" title="Contact &amp; support">mainpage-contact</docanchor>
     <docanchor file="index" title="License">mainpage-license</docanchor>

@@ -218,6 +218,13 @@
     <class kind="class">Corrade::Containers::Optional</class>
     <namespace>Corrade</namespace>
     <namespace>Corrade::Containers</namespace>
+    <member kind="function">
+      <type>Optional&lt; typename std::decay&lt; T &gt;::type &gt;</type>
+      <name>optional</name>
+      <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
+      <anchor>a71e22f3640eb28dd7b2f7b8339931224</anchor>
+      <arglist>(T &amp;&amp;value)</arglist>
+    </member>
     <member kind="variable">
       <type>constexpr NullOptT</type>
       <name>NullOpt</name>
@@ -1190,6 +1197,13 @@
       <name>CORRADE_NORETURN</name>
       <anchorfile>Macros_8h.html</anchorfile>
       <anchor>aeac429c30ec933b14293d5431a5c1a01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CORRADE_CXX_STANDARD</name>
+      <anchorfile>Macros_8h.html</anchorfile>
+      <anchor>ac60c76b712cf20807a6415c733ca40a5</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
@@ -3523,20 +3537,6 @@
       <arglist>(const T &amp;other) const </arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>operator T &amp;</name>
-      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
-      <anchor>a02cd8f155ccc7dc51b9ba5876aca9613</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator const T &amp;</name>
-      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
-      <anchor>a5ae7adc848b7398467f1b18f721b7e29</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
       <type>T *</type>
       <name>operator-&gt;</name>
       <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
@@ -3598,6 +3598,13 @@
       <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
       <anchor>a19c44b59df82dbebce8c720ec88717f5</anchor>
       <arglist>(const T &amp;a, const Optional&lt; T &gt; &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>Optional&lt; typename std::decay&lt; T &gt;::type &gt;</type>
+      <name>optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a71e22f3640eb28dd7b2f7b8339931224</anchor>
+      <arglist>(T &amp;&amp;value)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5106,6 +5113,20 @@
       <anchorfile>classCorrade_1_1TestSuite_1_1Tester.html</anchorfile>
       <anchor>ae25a961212c79ee5652183b199357ea7</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTestName</name>
+      <anchorfile>classCorrade_1_1TestSuite_1_1Tester.html</anchorfile>
+      <anchor>a5df4a9a998c838fac32a592764dc1dc0</anchor>
+      <arglist>(const std::string &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setTestName</name>
+      <anchorfile>classCorrade_1_1TestSuite_1_1Tester.html</anchorfile>
+      <anchor>af2d00f73187b4016f8612f9668ee60e1</anchor>
+      <arglist>(std::string &amp;&amp;name)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -7170,6 +7191,13 @@
       <arglist>(Utility::Debug &amp;debug, EnumSet&lt; T, fullValue &gt; value, const char *empty, std::initializer_list&lt; T &gt; enums)</arglist>
     </member>
     <member kind="function">
+      <type>Optional&lt; typename std::decay&lt; T &gt;::type &gt;</type>
+      <name>optional</name>
+      <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
+      <anchor>a71e22f3640eb28dd7b2f7b8339931224</anchor>
+      <arglist>(T &amp;&amp;value)</arglist>
+    </member>
+    <member kind="function">
       <type>constexpr ArrayView&lt; T &gt;</type>
       <name>arrayView</name>
       <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
@@ -7915,38 +7943,39 @@
   </compound>
   <compound kind="page">
     <name>building-corrade</name>
-    <title>Downloading and building</title>
+    <title>Downloading and building Corrade</title>
     <filename>building-corrade</filename>
+    <docanchor file="building-corrade" title="Prepared packages">building-corrade-packages</docanchor>
+    <docanchor file="building-corrade" title="Vcpkg packages on Windows">building-corrade-packages-vcpkg</docanchor>
+    <docanchor file="building-corrade" title="ArchLinux packages">building-corrade-packages-arch</docanchor>
+    <docanchor file="building-corrade" title="Packages for Debian, Ubuntu and derivatives">building-corrade-packages-deb</docanchor>
+    <docanchor file="building-corrade" title="Gentoo Linux ebuilds">building-corrade-packages-gentoo</docanchor>
+    <docanchor file="building-corrade" title="Packages for Fedora, openSUSE and other RPM-based Linux distributions">building-corrade-packages-rpm</docanchor>
+    <docanchor file="building-corrade" title="Homebrew formulas for macOS">building-corrade-packages-brew</docanchor>
+    <docanchor file="building-corrade" title="Manual build">building-corrade-manual</docanchor>
     <docanchor file="building-corrade" title="Downloading the sources">building-corrade-download</docanchor>
-    <docanchor file="building-corrade" title="Compilation, installation">building-corrade-compilation</docanchor>
     <docanchor file="building-corrade" title="CMake primer">building-corrade-cmake</docanchor>
-    <docanchor file="building-corrade" title="Via command-line (on Linux/Unix)">building-corrade-linux</docanchor>
+    <docanchor file="building-corrade" title="Via command line (on Linux/Unix)">building-corrade-linux</docanchor>
     <docanchor file="building-corrade" title="Building on Windows">building-corrade-windows</docanchor>
     <docanchor file="building-corrade" title="Using Visual Studio">building-corrade-windows-msvc</docanchor>
     <docanchor file="building-corrade" title="Using QtCreator">building-corrade-windows-qtcreator</docanchor>
     <docanchor file="building-corrade" title="Enabling or disabling features">building-corrade-features</docanchor>
-    <docanchor file="building-corrade" title="Building and running unit tests">building-corrade-tests</docanchor>
+    <docanchor file="building-corrade" title="Building and running tests">building-corrade-tests</docanchor>
     <docanchor file="building-corrade" title="Building documentation">building-corrade-doc</docanchor>
     <docanchor file="building-corrade" title="Building examples">building-corrade-examples</docanchor>
-    <docanchor file="building-corrade" title="Prepared packages">building-corrade-packages</docanchor>
-    <docanchor file="building-corrade" title="ArchLinux packages">building-corrade-packages-arch</docanchor>
-    <docanchor file="building-corrade" title="Gentoo ebuilds">building-corrade-packages-gentoo</docanchor>
-    <docanchor file="building-corrade" title="RPM packages">building-corrade-packages-rpm</docanchor>
-    <docanchor file="building-corrade" title="DEB packages">building-corrade-packages-deb</docanchor>
-    <docanchor file="building-corrade" title="Homebrew formulas">building-corrade-packages-brew</docanchor>
-    <docanchor file="building-corrade" title="Crosscompiling">building-corrade-cross</docanchor>
-    <docanchor file="building-corrade" title="Crosscompiling for Windows RT">building-corrade-cross-winrt</docanchor>
-    <docanchor file="building-corrade" title="Crosscompiling for Windows using MinGW-w64">building-corrade-cross-win</docanchor>
-    <docanchor file="building-corrade" title="Crosscompiling for Emscripten">building-corrade-cross-emscripten</docanchor>
-    <docanchor file="building-corrade" title="Crosscompiling for iOS">building-corrade-cross-ios</docanchor>
-    <docanchor file="building-corrade" title="Crosscompiling for Android ARM and x86">building-corrade-cross-android</docanchor>
+    <docanchor file="building-corrade" title="Cross-compiling">building-corrade-cross</docanchor>
+    <docanchor file="building-corrade" title="Cross-compiling for Windows RT">building-corrade-cross-winrt</docanchor>
+    <docanchor file="building-corrade" title="Cross-compiling for Windows using MinGW-w64">building-corrade-cross-win</docanchor>
+    <docanchor file="building-corrade" title="Cross-compiling for Emscripten">building-corrade-cross-emscripten</docanchor>
+    <docanchor file="building-corrade" title="Cross-compiling for iOS">building-corrade-cross-ios</docanchor>
+    <docanchor file="building-corrade" title="Cross-compiling for Android ARM and x86">building-corrade-cross-android</docanchor>
     <docanchor file="building-corrade" title="Continuous Integration">building-corrade-ci</docanchor>
     <docanchor file="building-corrade" title="Travis">building-corrade-ci-travis</docanchor>
     <docanchor file="building-corrade" title="AppVeyor">building-corrade-ci-appveyor</docanchor>
   </compound>
   <compound kind="page">
     <name>corrade-cmake</name>
-    <title>Usage with CMake</title>
+    <title>Using Corrade with CMake</title>
     <filename>corrade-cmake</filename>
     <docanchor file="corrade-cmake" title="Other CMake modules">corrade-cmake-modules</docanchor>
     <docanchor file="corrade-cmake" title="Macros and functions">corrade-cmake-functions</docanchor>
@@ -8027,6 +8056,7 @@
     <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-latest-bugfixes</docanchor>
     <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-latest-deprecated</docanchor>
     <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-latest-compatibility</docanchor>
+    <docanchor file="corrade-changelog" title="Documentation">corrade-changelog-latest-documentation</docanchor>
     <docanchor file="corrade-changelog" title="2015-05 snapshot">corrade-changelog-2015-05</docanchor>
     <docanchor file="corrade-changelog" title="2014-06 snapshot">corrade-changelog-2014-06</docanchor>
     <docanchor file="corrade-changelog" title="2014-01 snapshot">corrade-changelog-2014-01</docanchor>
@@ -8071,14 +8101,7 @@
     <name>index</name>
     <title>Corrade</title>
     <filename>index</filename>
-    <docanchor file="index" title="Supported platforms">corrade-mainpage-platforms</docanchor>
-    <docanchor file="index" title="Features">corrade-mainpage-features</docanchor>
-    <docanchor file="index" title="Building Corrade">corrade-mainpage-building</docanchor>
-    <docanchor file="index" title="Minimal dependencies">corrade-mainpage-building-dependencies</docanchor>
-    <docanchor file="index" title="Compilation, installation">corrade-mainpage-building-compilation</docanchor>
-    <docanchor file="index" title="Building and running unit tests">corrade-mainpage-building-tests</docanchor>
-    <docanchor file="index" title="Building documentation">corrade-mainpage-building-doc</docanchor>
-    <docanchor file="index" title="Examples and tutorials">corrade-mainpage-getting-started</docanchor>
+    <docanchor file="index" title="Getting started">corrade-mainpage-getting-started</docanchor>
     <docanchor file="index" title="Contact &amp; support">corrade-mainpage-contact</docanchor>
     <docanchor file="index" title="License">corrade-mainpage-license</docanchor>
   </compound>
