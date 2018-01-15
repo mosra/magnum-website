@@ -4,6 +4,9 @@ Header set Access-Control-Allow-Origin "*"
 # Gzip
 AddOutputFilter DEFLATE html xml txt css js wasm
 
+# Proper MIME type for WebAssembly files
+AddType application/wasm .wasm
+
 # Subdomains
 RewriteEngine On
 
