@@ -2,6 +2,7 @@ January 2014 updates to Magnum
 ##############################
 
 :date: 2014-01-21
+:modified: 2018-01-04
 :archived: True
 :category: Announcements
 :tags: C++, CMake, Corrade, OpenGL, Emscripten, NaCl
@@ -16,6 +17,13 @@ January 2014 updates to Magnum
     :class: m-label m-flat m-info
 .. role:: label-flat-success
     :class: m-label m-flat m-success
+
+.. note-success:: Content care: Jan 04, 2018
+
+    Since NaCl support is
+    `no longer available <{filename}/blog/announcements/webassembly-support-and-more.rst>`_,
+    links to NaCl web demos were replaced with Emscripten demos. Other than
+    that, the functionality is the same.
 
 The January snapshot is available under ``snapshot-2014-01`` tag in
 :gh:`Corrade <mosra/corrade^snapshot-2014-01>`,
