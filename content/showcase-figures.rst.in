@@ -22,6 +22,20 @@
 .. role:: label-flat-info
     :class: m-label m-flat m-info
 
+.. [arealights]
+
+.. figure:: {filename}/showcase/arealights/screenshot.png
+    :alt: Area Lights example screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/arealights.rst
+
+    Area Lights Example :label-flat-info:`wasm` :label-success:`webgl2`
+    :label-primary:`ui`
+
+    A basic implementation of
+    `Real-Time Polygonal-Light Shading with Linearly Transformed Cosines <https://eheitzresearch.wordpress.com/415-2/>`_.
+
+.. [/arealights]
 .. [audio]
 
 .. figure:: {filename}/showcase/audio/screenshot.png

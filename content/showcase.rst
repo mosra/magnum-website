@@ -110,8 +110,16 @@ unlucky and your browser isn't, you can at least try
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
+            :start-after: [arealights]
+            :end-before: [/arealights]
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
             :start-after: [magnum-ui-gallery]
             :end-before: [/magnum-ui-gallery]
+
+.. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 
@@ -119,9 +127,7 @@ unlucky and your browser isn't, you can at least try
             :start-after: [magnum-info]
             :end-before: [/magnum-info]
 
-.. container:: m-row m-container-inflate
-
-    .. container:: m-col-m-6 m-push-m-3
+    .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
             :start-after: [magnum-al-info]
