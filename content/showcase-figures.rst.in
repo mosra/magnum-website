@@ -182,5 +182,19 @@
     Uses scene importer plugins to load a 3D scene for interactive viewing.
 
 .. [/viewer]
+.. [webvr]
+
+.. figure:: {filename}/showcase/webvr/screenshot.png
+    :alt: WebVR example screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/webvr.rst
+
+    WebVR Example :label-flat-info:`wasm` :label-flat-success:`webgl1` :label-primary:`webvr`
+
+    A basic demonstration of how to use the
+    `Emscripten VR API <https://kripken.github.io/emscripten-site/docs/api_reference/vr.h.html>`_
+    with Magnum.
+
+.. [/webvr]
 
 .. kate: hl reStructuredText
