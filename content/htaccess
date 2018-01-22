@@ -25,6 +25,11 @@ RewriteCond %{HTTP_HOST} ^static\.magnum\.graphics$ [NC]
 RewriteCond %{REQUEST_URI} !^/static/
 RewriteRule ^(.*)$ /static/$1 [QSA,L]
 
+# tmp.magnum.graphics -> /magnum/tmp
+RewriteCond %{HTTP_HOST} ^tmp\.magnum\.graphics$ [NC]
+RewriteCond %{REQUEST_URI} !^/tmp/
+RewriteRule ^(.*)$ /tmp/$1 [QSA,L]
+
 # doc.magnum.graphics/corrade-ng/ -> /corrade/
 RewriteCond %{HTTP_HOST} ^doc\.magnum\.graphics$ [NC]
 RewriteCond %{REQUEST_URI} ^/corrade-ng/
