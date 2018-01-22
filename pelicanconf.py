@@ -1,3 +1,6 @@
+import shutil
+import logging
+
 AUTHOR = 'Vladimír Vondruš'
 
 #M_SITE_LOGO = 'gr/logo.png'
@@ -163,6 +166,10 @@ M_IMAGES_REQUIRE_ALT_TEXT = True
 M_METADATA_AUTHOR_PATH = 'blog/authors'
 M_METADATA_CATEGORY_PATH = 'blog/categories'
 M_METADATA_TAG_PATH = 'blog/tags'
+
+if not shutil.which('latex'):
+    logging.warning("LaTeX not found, fallback to rendering math as code")
+    M_MATH_RENDER_AS_CODE = True
 
 DIRECT_TEMPLATES = ['archives']
 PAGINATED_DIRECT_TEMPLATES = ['archives']
