@@ -33962,6 +33962,10 @@
       <anchor>a38a4e3c18ff8a2636a533af17f6f79db</anchor>
       <arglist>(const MatrixTypeFor&lt; dimensions, T &gt; &amp;invertedAbsoluteTransformationMatrix)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1AbstractFeature" title="Subclassing">SceneGraph-AbstractFeature-subclassing</docanchor>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1AbstractFeature" title="Caching transformations in features">SceneGraph-AbstractFeature-subclassing-caching</docanchor>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1AbstractFeature" title="Accessing object transformation">SceneGraph-AbstractFeature-subclassing-object-transformation</docanchor>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1AbstractFeature" title="Explicit template specializations">SceneGraph-AbstractFeature-explicit-specializations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::SceneGraph::AbstractFeatureGroup</name>
@@ -34004,6 +34008,8 @@
       <anchor>aef1a64d67e5ca02b3424cd380b398fb6</anchor>
       <arglist>() const </arglist>
     </member>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1AbstractGroupedFeature" title="Subclassing">SceneGraph-AbstractGroupedFeature-subclassing</docanchor>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1AbstractGroupedFeature" title="Explicit template specializations">SceneGraph-AbstractGroupedFeature-explicit-specializations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::SceneGraph::AbstractObject</name>
@@ -34178,7 +34184,7 @@
       <anchor>a355409a5a8fb73443fbced50092462dd</anchor>
       <arglist>(const std::vector&lt; std::reference_wrapper&lt; AbstractObject&lt; dimensions, T &gt;&gt;&gt; &amp;objects)</arglist>
     </member>
-    <docanchor file="classMagnum_1_1SceneGraph_1_1AbstractObject">SceneGraph-AbstractObject-explicit-specializations</docanchor>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1AbstractObject" title="Explicit template specializations">SceneGraph-AbstractObject-explicit-specializations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::SceneGraph::AbstractTransformation</name>
@@ -34218,7 +34224,7 @@
       <anchor>af5a594c7ccdfa4c2e402f6dc584a385f</anchor>
       <arglist>()=0</arglist>
     </member>
-    <docanchor file="classMagnum_1_1SceneGraph_1_1AbstractTransformation">SceneGraph-AbstractTransformation-explicit-specializations</docanchor>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1AbstractTransformation" title="Explicit template specializations">SceneGraph-AbstractTransformation-explicit-specializations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::SceneGraph::AbstractTranslation</name>
@@ -34381,6 +34387,9 @@
       <anchor>a6bf1c8d14d02afa5a9eaf6455c23a1de</anchor>
       <arglist>()</arglist>
     </member>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1Animable" title="Usage">SceneGraph-Animable</docanchor>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1Animable" title="Using multiple animable groups to improve performance">SceneGraph-Animable-multiple-groups</docanchor>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1Animable" title="Explicit template specializations">SceneGraph-Animable-explicit-specializations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::SceneGraph::AnimableGroup</name>
@@ -35376,7 +35385,7 @@
       <anchor>a4fb306aae49309025b41ff298f5bacc0</anchor>
       <arglist>(DrawableGroup&lt; dimensions, T &gt; &amp;group)</arglist>
     </member>
-    <docanchor file="classMagnum_1_1SceneGraph_1_1Camera">SceneGraph-Camera-explicit-specializations</docanchor>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1Camera" title="Explicit template specializations">SceneGraph-Camera-explicit-specializations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::SceneGraph::Drawable</name>
@@ -35412,6 +35421,9 @@
       <anchor>aca0d0a219aa4d7712316de55d67f2134</anchor>
       <arglist>(const MatrixTypeFor&lt; dimensions, T &gt; &amp;transformationMatrix, Camera&lt; dimensions, T &gt; &amp;camera)=0</arglist>
     </member>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1Drawable" title="Usage">SceneGraph-Drawable-usage</docanchor>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1Drawable" title="Using multiple drawable groups to improve performance">SceneGraph-Drawable-multiple-groups</docanchor>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1Drawable" title="Explicit template specializations">SceneGraph-Drawable-explicit-specializations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::SceneGraph::FeatureGroup</name>
@@ -35874,7 +35886,7 @@
       <anchor>adb0b04e0e2f800a907ac2af72c4df4c3</anchor>
       <arglist>(std::vector&lt; std::reference_wrapper&lt; Object&lt; Transformation &gt;&gt;&gt; objects)</arglist>
     </member>
-    <docanchor file="classMagnum_1_1SceneGraph_1_1Object">SceneGraph-Object-explicit-specializations</docanchor>
+    <docanchor file="classMagnum_1_1SceneGraph_1_1Object" title="Explicit template specializations">SceneGraph-Object-explicit-specializations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::SceneGraph::Scene</name>
@@ -39929,6 +39941,7 @@
       <anchor>ae3781a6c337f96f6d1f6c3168f726e13</anchor>
       <arglist></arglist>
       <enumvalue file="classMagnum_1_1Trade_1_1AbstractImporter.html" anchor="ae3781a6c337f96f6d1f6c3168f726e13ad81dcb96c7ab3ee3608397d0b0a9071c">OpenData</enumvalue>
+      <enumvalue file="classMagnum_1_1Trade_1_1AbstractImporter.html" anchor="ae3781a6c337f96f6d1f6c3168f726e13afa62bfefa29c8d5dfd686505c6f2e639">OpenState</enumvalue>
     </member>
     <member kind="typedef">
       <type>Containers::EnumSet&lt; Feature &gt;</type>
@@ -39978,6 +39991,13 @@
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
       <anchor>a88703d241d03b605112b2163778529b2</anchor>
       <arglist>(Containers::ArrayView&lt; const char &gt; data)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>openState</name>
+      <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
+      <anchor>af75dd6cdc3c7c067a488ec522ddaa895</anchor>
+      <arglist>(const void *state, const std::string &amp;filePath={})</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -40370,6 +40390,13 @@
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
       <anchor>a5c5914c94300963627e1369d2a7a30c6</anchor>
       <arglist>(Containers::ArrayView&lt; const char &gt; data)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>doOpenState</name>
+      <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
+      <anchor>a77b566ded5ff22d6211673c1fa36c23a</anchor>
+      <arglist>(const void *state, const std::string &amp;filePath)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual void</type>
@@ -62550,6 +62577,14 @@
     <docanchor file="examples-viewer" title="Event handling">examples-viewer-interactivity</docanchor>
     <docanchor file="examples-viewer" title="Drawable objects">examples-viewer-objects</docanchor>
     <docanchor file="examples-viewer" title="Compilation">examples-viewer-compilation</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>examples-webvr</name>
+    <title>WebVR</title>
+    <filename>examples-webvr</filename>
+    <docanchor file="examples-webvr" title="Controls">examples-webvr-controls</docanchor>
+    <docanchor file="examples-webvr" title="Credits">examples-webvr-credits</docanchor>
+    <docanchor file="examples-webvr" title="Source">examples-webvr-source</docanchor>
   </compound>
   <compound kind="page">
     <name>building-extras</name>
