@@ -1,7 +1,7 @@
 Build Status
 ############
 
-:summary: CI build status of all Magnum projects.
+:summary: CI build status of all Magnum projects
 :footer:
     .. raw:: html
 
