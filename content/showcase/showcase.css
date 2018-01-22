@@ -16,6 +16,10 @@
   position: relative;
   padding-bottom: 75%;
 }
+#wrapper.aspect-2-1 {
+  position: relative;
+  padding-bottom: 50%;
+}
 #listener {
   position: absolute;
   top: 0;
