@@ -18,7 +18,7 @@ are displayed, each with different orientation and parameters.
 .. note-warning::
 
     This example currently doesn't work on browsers that don't support the
-    :glext:`OES_texture_float_linear` extension. Fix will arrive later.
+    :webglext:`OES_texture_float_linear` extension. Fix will arrive later.
 
 .. topic:: Key controls
 
