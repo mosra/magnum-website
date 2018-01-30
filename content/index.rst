@@ -101,7 +101,7 @@ Magnum Engine
 
                 View extension points
 
-.. class:: m-text-center
+.. class:: m-text-center m-noindent
 
 *Wondering if Magnum is a good fit for your project?* We prepared
 `a few case studies <{filename}/is-magnum-what-i-am-looking-for.rst>`_ to help
