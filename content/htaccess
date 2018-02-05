@@ -2,7 +2,7 @@
 Header set Access-Control-Allow-Origin "*"
 
 # Gzip
-AddOutputFilter DEFLATE html xml txt css js wasm
+AddOutputFilter DEFLATE html xml txt css js wasm bin
 
 # Proper MIME type for WebAssembly files
 AddType application/wasm .wasm
