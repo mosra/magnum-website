@@ -1,0 +1,10 @@
+[1;36m0[0;34m: [1;39mMagnum[0;34m [[1;33mtype=NAMESPACE[0;34m] -> [0mnamespaceMagnum.html
+[1;36m1[0;34m: [1;39mMagnum::Math[0;34m [[1;33mtype=NAMESPACE[0;34m] -> [0mnamespaceMagnum_1_1Math.html
+[1;36m2[0;34m: [1;39mMagnum::Math::Vector[0;34m [[1;33mtype=CLASS[0;34m] -> [0mclassMagnum_1_1Math_1_1Vector.html
+[1;36m3[0;34m: [1;39mMagnum::Math::Vector::min()[0;34m [[1;33mtype=FUNC[0;34m] ->
+        [0mclassMagnum_1_1Math_1_1Vector.html#af029f9f7810201f0bd8d9580af273bde
+[1;36m4[0;34m: [1;39mMagnum::Math::Range[0;34m [[1;33mtype=CLASS[0;34m] -> [0mclassMagnum_1_1Math_1_1Range.html
+[1;36m5[0;34m: [1;39mMagnum::Math::Range::min()[0;34m [[1;33mtype=FUNC[0;34m] ->
+        [0mclassMagnum_1_1Math_1_1Range.html#ad4919361a2086212fac96da0221e4dcd
+[1;36m6[0;34m: [1;39mMagnum::Math::min()[0;34m [[1;33mtype=FUNC[0;34m] ->
+        [0mnamespaceMagnum_1_1Math.html#ae22ef0cb2a5a5e4c5e626a3df670be21
