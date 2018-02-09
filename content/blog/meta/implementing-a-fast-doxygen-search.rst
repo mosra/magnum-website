@@ -437,3 +437,9 @@ to try it out? Head over to the full documentation of the `m.css Doxygen theme`_
 for details. Bug reports very welcome, and if you like what you see, consider
 `making a donation <{filename}/contact.rst#support-the-development>`_. Thank
 you!
+
+.. note-dim::
+
+    Discussion: `Twitter <https://twitter.com/czmosra/status/960419184940343296>`_,
+    `Reddit <https://www.reddit.com/r/cpp/comments/7vhaca/implementing_a_lightning_fast_doxygen/>`_,
+    `Hacker News <https://news.ycombinator.com/item?id=16311366>`_
