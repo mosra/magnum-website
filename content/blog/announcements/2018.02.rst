@@ -1,0 +1,584 @@
+Magnum 2018.02 released
+#######################
+
+:date: 2018-02-20
+:category: Announcements
+:cover: {filename}/img/blog/announcements/2018.02/cover.jpg
+:tags: C++, OpenGL, WebGL, WebAssembly, NaCl, Android, iOS, Windows, ANGLE, UI,
+    Metal, Vulkan, Qt, CMake
+:summary: The new Magnum milestone brings WebGL 2.0 and WebAssembly, VR
+    support, lots of niceties for Windows users, iOS port, new experimental UI
+    library, improved testing capabilities, support for over 80 new asset
+    formats, new examples and much more.
+
+.. role:: label-flat-success
+    :class: m-label m-flat m-success
+.. role:: label-warning
+    :class: m-label m-warning
+
+With nearly three years of development since the previous release, I'm excited
+to announce the release of Magnum 2018.02. Lots of things happened, so I'll
+focus on the most prominent features, for a detailed list follow the changelog
+links at the end. This release also introduces a new versioning scheme.
+Originally this was meant to be 1.0, but after much thought I decided to go
+with year/month instead, as it fits more into the rolling release philosophy of
+Magnum.
+
+.. contents::
+    :class: m-block m-default
+
+`Brand new website and documentation theme`_
+============================================
+
+Until very recently, Magnum lacked a central place with consistent design for
+showcasing the features, providing documentation and keeping you updated. You
+can read more in the `website announcement <{filename}/blog/meta/a-new-website-coming-soon.rst>`_
+post, be sure to also subscribe to `the blog Atom feed <http://blog.magnum.graphics/feeds/all.atom.xml>`_
+to not miss any updates. The documentation got an overhaul in a similar style,
+with extra effort put into being fast, easy-to-read and with first-class search
+functionality. There's a blog post dedicated to
+`explaining how the new search works <{filename}/blog/meta/implementing-a-fast-doxygen-search.rst>`_,
+if you want to learn about the inner workings.
+
+One notable non-obvious feature is an ability to search using OpenGL or OpenAL
+API names --- very handy in case you are porting existing OpenGL code to
+Magnum:
+
+.. image:: {filename}/img/blog/announcements/2018.02/opengl-search.png
+    :alt: OpenGL symbol search
+    :target: http://doc.magnum.graphics/magnum/#search
+
+Magnum wouldn't be anything without the great community that formed around it
+and community involvement is important also for the website content --- if you
+want to share a succes story with Magnum or have something interesting to say,
+`submit a Guest Post <{filename}/blog/meta/introducing-guest-posts.rst>`_ and
+we'll be happy to publish it.
+
+If you didn't notice yet, there's also a `Magnum chat room on Gitter.im <https://gitter.im/mosra/magnum>`_,
+full of people that are happy to help if you have questions or need a bit of
+support. You can join simply with your GitHub or Twitter account.
+
+`First-class WebGL 2.0 support, WebAssembly`_
+=============================================
+
+An area that received great care is the WebGL port. WebGL 2.0 is now fully
+supported and there is a set of new dependency-less plugins so you can now more
+easily play audio, convert images or render text on the web. The
+:dox:`StbImageConverter <Trade::StbImageConverter>` and :dox:`StbTrueTypeFont <Text::StbTrueTypeFont>`
+plugins are one of them. The :dox:`BulletIntegration` code and example now
+runs on the web and the :dox:`magnum-info` / :dox:`magnum-al-info` utilities
+were ported to provide information about your WebGL implementation as well.
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [bullet]
+            :end-before: [/bullet]
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [magnum-info]
+            :end-before: [/magnum-info]
+
+A bunch of code size optimizations is already in place and further size
+improvements are on the roadmap. Compilation to WebAssembly for better
+performance is now possible, which in fact replaced the unmaintained NaCl port.
+See the `post about WebAssembly support <{filename}/blog/announcements/webassembly-support-and-more.rst>`_
+for more information.
+
+`Virtual Reality, WebVR`_
+=========================
+
+Thanks to *years* of hard work by :gh:`Squareys`, Magnum now provides seamless
+integration of the Oculus VR SDK in the :dox:`OvrIntegration` library, together
+with a simple example that :dox:`showcases a basic use <examples-ovr>`. Besides
+that, there's a live example showing WebVR integration in Emscripten:
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6 m-push-m-3
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [webvr]
+            :end-before: [/webvr]
+
+`Windows improvements`_
+=======================
+
+`Visual Studio 2015, 2017, Windows Store/Phone, ANGLE, Vcpkg`_
+--------------------------------------------------------------
+
+Windows support did a huge leap forward compared to the previous version.
+Thanks to big improvements in C++11 support in recent Visual Studio versions
+it's now possible to build Magnum with MSVC 2015 and 2017 and also target the
+UWP platform using the `ANGLE <https://github.com/google/angle>`_ OpenGL-to-D3D
+translation layer. On the other hand, support for MSVC 2013 and MinGW32 (the
+non-w64 version) was dropped to simplify maintenance efforts.
+
+To make development and dependency handling on Windows even easier, Magnum now
+has `Vcpkg <https://github.com/Microsoft/vcpkg>`_ packages, which allow you to
+install it together with all dependencies using a single command:
+
+.. code:: bat
+
+    vcpkg install magnum
+
+Packages installed using Vcpkg can be used straight away in Visual Studio ---
+all you need to do is to :cpp:`#include` the headers you want, the buildsystem
+will do all needed library linking and setup behind the scenes automatically.
+*(Cool, isn't it?)*
+
+It's of course also possible to use Vcpkg-installed packages with CMake. See
+:dox:`the documentation <building-packages-vcpkg>` for details.
+
+`UTF-8 everywhere`_
+-------------------
+
+Among other notable things is improved Unicode support on Windows. In line with
+the `UTF-8 Manifesto <http://utf8everywhere.org/>`_, all Magnum APIs were
+designed to expect strings and paths encoded in UTF-8. This is now working
+properly also on Windows --- as long as you use Magnum APIs such as
+:dox:`Utility::Directory` or :dox:`Trade::AbstractImporter` to access the
+filesystem, Windows wide-char APIs will be used behind the scenes to ensure
+proper path encoding.
+
+`macOS improvements, iOS port`_
+===============================
+
+Magnum is being used in a project that's tightly coupled to Apple platforms,
+which means the code now runs on iOS as well. :dox:`Platform::Sdl2Application`
+was updated for Retina support and other iOS-specific features.
+
+There's also a new :dox:`Platform::WindowlessIosApplication` that's useful for
+running headless OpenGL tests on iOS. The :dox:`TestSuite` library now provides
+integration with Xcode and XCTest so you can run tests directly from the IDE.
+The :dox:`corrade_add_test() <corrade-cmake-add-test>` macro is also able to do
+all the necessary boilerplate to allow you to run your tests directly on an iOS
+device or simulator simply by running CMake ``ctest`` from the command-line.
+
+To make life easier for macOS users, there are now Homebrew packages that you
+can install simply by typing
+
+.. code:: sh
+
+    brew install mosra/magnum/magnum
+
+You can also add all Magnum packages as a tap, see :dox:`the documentation <building-packages-brew>`
+for more information.
+
+.. note-info::
+
+    We're fully aware of Apple decision to abandon OpenGL support and pushing
+    for Metal instead. This will be, along with Vulkan, among the main topics
+    for the following Magnum releases.
+
+`Broader testing capabilities`_
+===============================
+
+Magnum was involved in a project that was all about processing of image and
+spatial data. Thanks to that, the :dox:`TestSuite` library received loads of
+improvements to make automated testing a breeze. The test output is now colored
+to make it easier to spot failures and it gained
+:dox:`benchmarking capabilities <TestSuite-Tester-benchmark>` so you can
+compare how your algorithms perform against baseline implementations --- using
+CPU time, wall clock time, instruction counter or any custom measured quantity
+such as amount of allocated memory.
+
+.. include:: 2018.02/benchmark.ansi
+    :code: ansi
+
+Besides the already mentioned iOS testing, there are similar improvements for
+Android --- the :dox:`corrade_add_test() <corrade-cmake-add-test>` can employ
+``adb`` to upload the test executable together with all bundled files to a
+device or emulator, run it there and retrieve the results just as if you would
+be running the tests on your local machine.
+
+The test suite is now able to handle :dox:`instanced tests <TestSuite-Tester-instanced>`
+(or, in other words, data-driven tests). Lots of attention was put into fuzzy
+comparison --- from simple numeric comparison using :dox:`TestSuite::Compare::Around`
+to comparing image data to a ground truth with error thresholds using
+:dox:`DebugTools::CompareImage`. Because proper visualization of large data is
+essential for productivity, the latter is able to print ASCII art visualization
+of the difference so you can see what's wrong directly from your CI log:
+
+.. include:: 2018.02/compareimage.ansi
+    :code: ansi
+
+Base class for tests requiring OpenGL context is now available in a dedicated
+:dox:`OpenGLTester` library and it gained support for
+:dox:`GPU time benchmarks <OpenGLTester-benchmarks>`. For easier testing on
+OpenGL ES and WebGL, there are now :dox:`DebugTools::bufferSubData()` and
+:dox:`DebugTools::textureSubImage()` helper utilities that supplement the lack
+of :dox:`Buffer::data()` and :dox:`Texture::image()` on those platforms.
+
+To ensure stability and make maintenance easier, Magnum and all its libraries
+are now also compiled and tested with code coverage on all supported platforms
+--- see the `Build Status <{filename}/build-status.rst>`_ page for the whole
+testing matrix. This also means that every submitted pull request gets
+automatically tested for regressions, streamlining the whole review process.
+
+There's much more to mention regarding testing --- it'll be a part of a more
+detailed blog post in the future, stay tuned!
+
+`Experimental UI library`_
+==========================
+
+Some years ago I was responsible for UI rendering in a project that focused on
+visualizing large amounts of textual and plot data. The new experimental
+:dox:`Magnum::Ui` library builds on the knowledge gained during that project
+and its design goal is being ale to render huge UIs (such as editors) *fast*
+while staying fully customizable and easy to use for quick prototyping.
+
+Due to its heavy use of uniform buffers and instancing it's requiring at least
+OpenGL ES 3.0 (or WebGL 2.0). The current state is *very experimental* --- it
+will gradually stabilize, gain more widgets and get documented in the next
+months. You can see how it looks in the UI Widget Gallery, it was also used to
+provide some knobs and toggles for the
+`Area Lights <{filename}/blog/guest-posts/area-lights-with-ltcs.rst>`_ demo:
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [magnum-ui-gallery]
+            :end-before: [/magnum-ui-gallery]
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [arealights]
+            :end-before: [/arealights]
+
+`Asset management improvements`_
+================================
+
+A large new feature is support for compressed images --- loading them from
+files, uploading and downloading them from textures; plus there are new
+interfaces in :dox:`Trade::AbstractImageConverter` ready for integrating
+various GPU compression libraries. Together with compressed images Magnum
+gained support for various pixel storage options in the :dox:`PixelStorage`
+class to allow direct manipulation of image sub-rectangles, with further
+convenience features such as :cpp:`Image::slice()` planned for the next
+releases.
+
+There's also a new utility called :dox:`magnum-imageconverter <magnum-imageconverter>`
+that simply exposes all existing :dox:`*Importer <Trade::AbstractImporter#derived-classes>`
+and :dox:`*ImageConverter <Trade::AbstractImageConverter#derived-classes>`
+plugins on a command line. Together with a new :dox:`AnyImageConverter <Trade::AnyImageConverter>`
+plugin it's able to autodetect source and destination file formats based on
+extension, so you can easily use it in your pipeline for data conversion, for
+example:
+
+.. code:: sh
+
+    magnum-imageconverter image.bmp image.png
+
+Many external contributions went into asset management and conversion --- you
+can now use the :dox:`AssimpImporter <Trade::AssimpImporter>` plugin to load
+about 40 new scene formats using the `Assimp <http://assimp.sourceforge.net/>`_
+library; the :dox:`DevIlImageImporter <Trade::DevIlImageImporter>` plugin uses
+`DevIL <http://openil.sourceforge.net/>`_ to load 40 new image formats. Initial
+work went into camera and light property import, with support in the Assimp and
+:dox:`OpenGEX <Trade::OpenGexImporter>` importer.
+
+Among the others there's a possibility to load DXT-compressed textures using
+:dox:`DdsImporter <Trade::DdsImporter>` or convert images to PNG and EXR using
+:dox:`PngImageConverter <Trade::PngImageConverter>` and
+:dox:`MiniExrImageConverter <Trade::MiniExrImageConverter>`. The
+:dox:`StbImageConverter <Trade::StbImageConverter>` can now use
+:gh:`stb_image_write <nothings/stb>` to output HDR and BMP formats in addition
+to PNG.
+
+`Audio library goodies`_
+========================
+
+The Audio library received `HRTF <https://en.wikipedia.org/wiki/Head-related_transfer_function>`_
+support that's very important for immersive audio in VR, besides that it
+supports :dox:`many new buffer formats <Audio::Buffer::Format>`. The HRTF
+support is accompanied with a new example and the whole :dox:`Audio` library
+was updated to work on the web as well:
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6 m-push-m-3
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [audio]
+            :end-before: [/audio]
+
+Many new dependency-less import plugins were contributed ---
+:dox:`StbVorbisAudioImporter <Audio::StbVorbisImporter>` for loading OGG Vorbis
+files using :gh:`stb_vorbis <nothings/stb>`, :dox:`DrWavAudioImporter <Audio::DrWavImporter>`
+and :dox:`DrFlacAudioImporter <Audio::DrFlacImporter>` for loading WAV and FLAC
+files using :gh:`dr_wav/dr_flac <mackron/dr_libs>`. The
+:dox:`WavAudioImporter <Audio::WavImporter>` plugin that's maintained directly
+in Magnum received various updates, broader buffer format support and better
+error handling.
+
+`Full control over initialization and ownership`_
+=================================================
+
+While all types in Magnum are by default initialized to a defined value, it's
+now possible to override the behavior for greater flexibility. For example
+if you will be overwriting all values in a container anyway; to avoid
+unnecessary memory zeroing instructions in a tight loop; or to defer OpenGL
+object initialization to a point where a context is ready without introducing
+additional indirection using pointers or optional objects:
+
+.. code:: c++
+
+    /* Generate grid positions */
+    Containers::Array<Vector3> positions{Containers::NoInit, 16*16};
+    for(auto& i: positions)
+        i = ...;
+
+    /* Zero-init the matrix instead of setting it to identity */
+    Matrix3x3 m{Math::ZeroInit};
+
+    /* Defer buffer initialization for later when GL context is ready */
+    Buffer buffer{NoCreate};
+
+    // ...
+
+    buffer = Buffer{};
+
+Together with this it's now possible to transfer ownership of all underlying
+resources --- wrapping externally allocated arrays and providing custom
+deleters, or, on the other hand, using :dox:`Containers::Array::release()` to
+release ownership of the allocated memory. There are also two new classes,
+:dox:`Containers::StaticArray` and :dox:`Containers::StaticArrayView`, for
+handling stack-allocated, compile-time-sized arrays and views on them. New
+APIs like :dox:`Containers::arrayCast()` or :dox:`Containers::arraySize()`
+provide further convenience utilities:
+
+.. code:: c++
+
+    /* custom allocator functions */
+    char* allocate(std::size_t);
+    void deallocate(char*, std::size_t);
+
+    // ...
+
+    /* Allocate the data and wrap them in a RAII container */
+    Containers::Array<char> data{allocate(128), 128, [](char* data, std::size_t size) {
+        deallocate(data, size);
+    }};
+
+    /* The allocated array is in fact 16 four-component float vectors */
+    Containers::ArrayView<Vector4> vectors = Containers::arrayCast<Vector4>(data);
+    for(Vector4& i: vectors)
+        // ...
+
+`Math library additions`_
+=========================
+
+The :dox:`Math` library received a class representing :dox:`Bezier <Math::Bezier>`
+curves and a :dox:`Frustum` structure. The :dox:`Math::Geometry::Intersection`
+namespace is extended with frustum culling algorithms and further additions are
+already being worked on.
+
+There's a new :dox:`Half` type for representing 16-bit half-float numbers. It's
+just a storage type, providing conversions from and to :cpp:`float` types. In
+addition to the existing ``_deg``/``_rad`` literals there is a new ``_h``
+literal for half-floats and :dox:`various literals <Math::Literals>` for
+entering hexadecimal RGB(A) colors in linear RGB or sRGB:
+
+.. code:: c++
+
+    Color3ub a = 0x33b27f_rgb;      // {0x33, 0xb2, 0x7f}
+    Color4 c = 0x33b27fcc_srgbaf;   // {0.0331048f, 0.445201f, 0.212231f, 0.8f}
+
+There's much more added for more convenience and better feature parity with
+GLSL, check out the complete changelog at the end of the article.
+
+`Better interoperability with 3rd-party code`_
+==============================================
+
+One of design goals of Magnum is to be a collection of useful non-intrusive
+tools that works well with third-party libraries --- not being a big monolithic
+engine that takes over everything and forces a particular workflow. With this
+and the following releases this design goal is being pushed further than ever
+before.
+
+One common case is that Magnum is not the only library accessing the OpenGL
+context --- for example it's only taking care of data visualization in a bigger
+application that's written in Qt. Because OpenGL is a lot of global state, care
+must be taken so libraries know what state can be trusted and what not ---
+that's handled with :dox:`Context::resetState()`. It's also possible to wrap
+externally created OpenGL objects using :dox:`*::wrap() <Buffer::wrap()>` and,
+conversely, release their ownership with :dox:`release() <Buffer::release()>`.
+A reduced example showing `rendering into QQuickFramebufferObject <http://blog.qt.io/blog/2015/05/11/integrating-custom-opengl-rendering-with-qt-quick-via-qquickframebufferobject/>`_:
+
+.. code:: c++
+
+    #include <Magnum/Context.h>
+    #include <Magnum/Framebuffer.h>
+    #include <Magnum/Mesh.h>
+    #include <Magnum/Shaders/Phong.h>
+    #include <QQuickFramebufferObject>
+
+    struct MagnumRenderer: QQuickFramebufferObject::Renderer {
+        // ...
+
+        QOpenGLFramebufferObject* createFramebufferObject(const QSize& size) override {
+            /* Create Qt framebuffer object and wrap it to use with Magnum APIs */
+            auto fb = new QOpenGLFramebufferObject(size, ...);
+            _fb = Framebuffer::wrap(fb->handle(), {{}, {size.width(), size.height()}});
+            return fb;
+        }
+
+        void render() override {
+            /* Reset Magnum state tracker after Qt did its job */
+            Context::resetState(Context::State::ExitExternal);
+
+            /* Clear the framebuffer and draw a mesh */
+            _fb.clear(FramebufferClear::Color|FramebufferClear::Depth);
+            _mesh.draw(_shader);
+
+            /* Clean up to avoid Magnum state being modified by Qt */
+            Context::resetState(Context::State::EnterExternal);
+        }
+
+        Framebuffer _fb{NoInit};
+        Mesh _mesh;
+        Shaders::Phong _shader;
+    };
+
+Sometimes you may need to access the underlying APIs that Magnum is wrapping
+--- for example to test out a new feature that hasn't been exposed yet. Both
+:dox:`Platform::Sdl2Application` and :dox:`Platform::GlfwApplication` now
+provide access to the underlying toolkit structures. If you need to go even
+deeper, you can ditch the ``*Application`` classes completely and simply attach
+Magnum to an existing OpenGL context. How to do that with GLFW is shown on a
+:dox:`simple triangle rendering example <examples-triangle-plain-glfw>`.
+
+Similar thing is with asset importers --- if you need to access particular
+Assimp feature directly or parse an OpenGEX extension structure, it's now
+available through type-erased ``importerState()`` accessors. In case of Assimp
+it's also possible to take over an existing Assimp instance using
+:dox:`openState() <Trade::AbstractImporter::openState()>`. See related sections
+in :dox:`AssimpImporter <Trade-AssimpImporter-state>` and
+:dox:`OpenGexImporter <Trade-OpenGexImporter-state>` plugin documentation for
+details.
+
+Conversion of math structures from and to external types was extended to all
+structures in the :dox:`Math` namespace, so with proper boilerplate header
+included it is possible to have seamless integration with, for example,
+`GLM <https://glm.g-truc.net/>`_:
+
+.. code:: c++
+
+    glm::gtc::quaternion a{4.0f, 1.0f, 2.0f, 3.0f};
+
+    Quaternion q{a};
+    Debug{} << q.vector();              // {1.0, 2.0, 3.0}
+
+    glm::gtc::quaternion b{q.normalized()};
+
+`New OpenGL-related functionality`_
+===================================
+
+The OpenGL wrapping layer received updates for full compute shader support with
+SSBOs and image load/store, there's a new :dox:`TransformFeedback` class and
+completed uniform buffer support, among many other things.
+
+Improvements were made to make it possible to have multiple independent
+thread-local instances of Magnum, for example in case where one Magnum context
+is used as a data processing backend in a background thread and another for
+application UI rendering on the main thread.
+
+In order to make debugging easier, it's now possible to blacklist certain
+OpenGL extensions or driver workarounds from the command-line and environment.
+See :dox:`the documentation for more information <Context-command-line>`.
+
+`Even more new stuff`_
+=======================
+
+The list of new things doesn't stop here. It's important to note that all
+example code is now :dox:`put into public domain <example-index>` (or
+UNLICENSE) to free you from legal obstacles when using the code in your
+apps. There's a new example showing how to use :dox:`Parallel Split / Cascaded Shadow Maps <examples-shadows>`
+and also a simple Object Picking example:
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6 m-push-m-3
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [picking]
+            :end-before: [/picking]
+
+There's also a new experimental :dox:`DartIntegration` library being worked on
+--- it integrates the `DART Dynamic Animation and Robotics Toolkit <http://dartsim.github.io/>`_
+into Magnum in a similar way that's done with the Bullet Physics library. A
+first draft is already merged with second revision being currently in the
+works. This library alone deserves a blog post on its own --- stay tuned!
+
+`Upgrading from previous versions`_
+===================================
+
+Because there was no milestone since 2015, great care was taken to maintain
+backwards compatibility with the 2015.05 version. Depending on how big your
+upgrade jump is, upgrading to 2018.02 should be largely source compatible, with
+deprecation warnings issued for APIs that were replaced with new functionality.
+
+In contrast, immediately following this release there's some cleanup work
+scheduled --- purging of APIs deprecated for a long time and doing some
+reorganization to make space for new features, such as Vulkan and SPIR-V
+support.
+
+`Complete changelog`_
+=====================
+
+If you survived all the way down here, congrats! There's much more and it's not
+possible to fit everything in this announcement. You can find a detailed list
+of changes in version 2018.02 in the documentation:
+
+-   :dox:`Changes in Corrade 2018.02 <corrade-changelog-2018-02>`
+-   :dox:`Changes in Magnum 2018.02 <changelog-2018-02>`
+-   :dox:`Changes in Magnum Plugins 2018.02 <changelog-plugins-2018-02>`
+-   :dox:`Changes in Magnum Integration 2018.02 <changelog-integration-2018-02>`
+-   :dox:`Changes in Magnum Extras 2018.02 <changelog-extras-2018-02>`
+-   :dox:`Changes in Magnum Examples 2018.02 <changelog-examples-2018-02>`
+
+`Special thanks`_
+=================
+
+This release wouldn't be possible without extreme dedication of numerous
+volunteers:
+
+-   **Jonathan Hale** (:gh:`Squareys`) --- Oculus VR integration, WebVR
+    example, HRTF support in the Audio library; DDS Assimp and Vorbis
+    importers, Area Lights example, GLFW application, frustum culling and much
+    much more
+-   **Alice Margatroid** (:gh:`Alicemargatroid`) --- multi-channel support in
+    Audio library, standard conformance, huge improvements in the WAV importer
+    plugin, dr_wav and dr_flac importer plugins, DevIL importer plugin, various
+    bug reports, feature suggestions and much more
+-   **Konstantinos Chatzilygeroudis** (:gh:`costashatz`) --- ongoing work on
+    the DART integration library and related functionality
+-   **Bill Robinson** (:gh:`wivlaro`) --- shadow mapping example, various bug
+    reports and suggestions
+-   **Ashwin Ravichandran** (:gh:`ashrko619`) --- Bézier curve implementation
+-   **Michael Dietschi** (:gh:`mdietsch`) --- colored output in Windows console,
+    numerous bug reports
+-   **Gerhard de Clercq** --- initial Windows RT (Store/Phone) port
+-   :gh:`sigman78` --- initial MSVC 2017 port, initial version of Vcpkg
+    packages
+-   **Joel Clay** (:gh:`jclay`) --- updates to Vcpkg packages
+
+This list is not exhaustive --- sorry if I forgot about somebody! Over the time
+there were many more people reporting issues, helping with bugfixes, giving
+encouraging and constructive feedback or just being happy to help each other
+on the Gitter chat. Thank you, everybody, and cheers!
+
+.. note-dim::
+
+    Discussion: `Twitter <https://twitter.com/czmosra/status/966048745732345859>`_,
+    `Reddit <https://www.reddit.com/r/cpp/comments/7yzmd6/magnum_graphics_engine_201802_released_with_webgl/>`_,
+    `Hacker News <https://news.ycombinator.com/item?id=16424288>`_,
+    `mailing list <https://groups.google.com/forum/#!topic/magnum-engine/_5IT9xLntJQ>`_
