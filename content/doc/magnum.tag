@@ -462,6 +462,59 @@
     <namespace>Magnum::BulletIntegration</namespace>
   </compound>
   <compound kind="file">
+    <name>ConvertShapeNode.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/DartIntegration/</path>
+    <filename>ConvertShapeNode_8h</filename>
+    <includes id="ImageData_8h" name="ImageData.h" local="no" imported="no">Magnum/Trade/ImageData.h</includes>
+    <includes id="MeshData3D_8h" name="MeshData3D.h" local="no" imported="no">Magnum/Trade/MeshData3D.h</includes>
+    <includes id="PhongMaterialData_8h" name="PhongMaterialData.h" local="no" imported="no">Magnum/Trade/PhongMaterialData.h</includes>
+    <includes id="TextureData_8h" name="TextureData.h" local="no" imported="no">Magnum/Trade/TextureData.h</includes>
+    <includes id="DartIntegration_8h" name="DartIntegration.h" local="yes" imported="no">Magnum/DartIntegration/DartIntegration.h</includes>
+    <class kind="struct">Magnum::DartIntegration::ShapeData</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::DartIntegration</namespace>
+    <member kind="function">
+      <type>Containers::Optional&lt; ShapeData &gt;</type>
+      <name>convertShapeNode</name>
+      <anchorfile>namespaceMagnum_1_1DartIntegration.html</anchorfile>
+      <anchor>a8c8e0d4592507ffa6ceac25efa2808f3</anchor>
+      <arglist>(dart::dynamics::ShapeNode &amp;shapeNode)</arglist>
+    </member>
+    <member kind="function">
+      <type>Containers::Optional&lt; ShapeData &gt;</type>
+      <name>convertShapeNode</name>
+      <anchorfile>namespaceMagnum_1_1DartIntegration.html</anchorfile>
+      <anchor>a5c462907cfd20c9f92bbb9d09b86ad3e</anchor>
+      <arglist>(DartObject &amp;object)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>DartIntegration.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/DartIntegration/</path>
+    <filename>DartIntegration_8h</filename>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::DartIntegration</namespace>
+  </compound>
+  <compound kind="file">
+    <name>DartObject.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/DartIntegration/</path>
+    <filename>DartObject_8h</filename>
+    <includes id="AbstractFeature_8h" name="AbstractFeature.h" local="no" imported="no">Magnum/SceneGraph/AbstractFeature.h</includes>
+    <includes id="AbstractTranslationRotation3D_8h" name="AbstractTranslationRotation3D.h" local="no" imported="no">Magnum/SceneGraph/AbstractTranslationRotation3D.h</includes>
+    <class kind="class">Magnum::DartIntegration::DartObject</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::DartIntegration</namespace>
+  </compound>
+  <compound kind="file">
+    <name>DartSkeleton.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/DartIntegration/</path>
+    <filename>DartSkeleton_8h</filename>
+    <includes id="DartObject_8h" name="DartObject.h" local="yes" imported="no">Magnum/DartIntegration/DartObject.h</includes>
+    <class kind="class">Magnum::DartIntegration::DartSkeleton</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::DartIntegration</namespace>
+  </compound>
+  <compound kind="file">
     <name>Compositor.h</name>
     <path>/home/mosra/Code/magnum-integration/src/Magnum/OvrIntegration/</path>
     <filename>Compositor_8h</filename>
@@ -2910,7 +2963,7 @@
     <name>ImageFormat.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/</path>
     <filename>ImageFormat_8h</filename>
-    <includes id="OpenGL_8h" name="OpenGL.h" local="no" imported="no">Magnum/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/OpenGL.h</includes>
     <namespace>Magnum</namespace>
     <member kind="enumeration">
       <type></type>
@@ -9114,15 +9167,6 @@
     <namespace>Magnum::Trade</namespace>
   </compound>
   <compound kind="file">
-    <name>TgaHeader.h</name>
-    <path>/home/mosra/Code/magnum/src/MagnumPlugins/TgaImporter/</path>
-    <filename>TgaHeader_8h</filename>
-    <includes id="Types_8h" name="Types.h" local="yes" imported="no">Magnum/Types.h</includes>
-    <class kind="struct">Magnum::Trade::TgaHeader</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Trade</namespace>
-  </compound>
-  <compound kind="file">
     <name>TgaImporter.h</name>
     <path>/home/mosra/Code/magnum/src/MagnumPlugins/TgaImporter/</path>
     <filename>TgaImporter_8h</filename>
@@ -9283,6 +9327,151 @@
       <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
       <anchor>aa72727d90a1e236694992d65c6f88012</anchor>
       <arglist>(Math::Rad&lt; btScalar &gt; angle)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>AbstractBasicTranslationRotation3D&lt; Float &gt;</name>
+    <filename>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</filename>
+    <base>Magnum::SceneGraph::AbstractTranslation</base>
+    <member kind="function">
+      <type>AbstractBasicTranslationRotation3D&lt; Float &gt; &amp;</type>
+      <name>rotate</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>a0bd51880d3a81804056476390a0a6107</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle, const Math::Vector3&lt; Float &gt; &amp;normalizedAxis)</arglist>
+    </member>
+    <member kind="function">
+      <type>AbstractBasicTranslationRotation3D&lt; Float &gt; &amp;</type>
+      <name>rotate</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>a2d2398d9b6c1bc62bd17025cfa25923d</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle, const Math::Vector3&lt; Float &gt; &amp;normalizedAxis, TransformationType type)</arglist>
+    </member>
+    <member kind="function">
+      <type>AbstractBasicTranslationRotation3D&lt; Float &gt; &amp;</type>
+      <name>rotateLocal</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>a82e9eb5eef081b6c8456185c0f3a2cf9</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle, const Math::Vector3&lt; Float &gt; &amp;normalizedAxis)</arglist>
+    </member>
+    <member kind="function">
+      <type>AbstractBasicTranslationRotation3D&lt; Float &gt; &amp;</type>
+      <name>rotateX</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>a64f7281a7cf5a346bdd17c361462149a</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>AbstractBasicTranslationRotation3D&lt; Float &gt; &amp;</type>
+      <name>rotateX</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>a2cca30e9632d9d56b71de76b13df47b7</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle, TransformationType type)</arglist>
+    </member>
+    <member kind="function">
+      <type>AbstractBasicTranslationRotation3D&lt; Float &gt; &amp;</type>
+      <name>rotateXLocal</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>aa474a071ab087ea66f66e05534467af2</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>AbstractBasicTranslationRotation3D&lt; Float &gt; &amp;</type>
+      <name>rotateY</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>a173e0633663b8b735042b2937e12b0c3</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>AbstractBasicTranslationRotation3D&lt; Float &gt; &amp;</type>
+      <name>rotateY</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>a36d705dcfbc546dd79791373a5bdd848</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle, TransformationType type)</arglist>
+    </member>
+    <member kind="function">
+      <type>AbstractBasicTranslationRotation3D&lt; Float &gt; &amp;</type>
+      <name>rotateYLocal</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>ad80f968e497178612267004c0873235b</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>AbstractBasicTranslationRotation3D&lt; Float &gt; &amp;</type>
+      <name>rotateZ</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>a3d8f9942fcba8fb49ea2ea7d928d6422</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>AbstractBasicTranslationRotation3D&lt; Float &gt; &amp;</type>
+      <name>rotateZ</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>aed51880474fd556821f99231e49b8bc6</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle, TransformationType type)</arglist>
+    </member>
+    <member kind="function">
+      <type>AbstractBasicTranslationRotation3D&lt; Float &gt; &amp;</type>
+      <name>rotateZLocal</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>a82fe5b472338a31166abdbcd47e2bd5e</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>doRotate</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>ad0a53ace7dace831a04645b506e38b3b</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle, const Math::Vector3&lt; Float &gt; &amp;normalizedAxis)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>doRotateLocal</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>ad1fd68194dd06f6eca323ccc01356914</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle, const Math::Vector3&lt; Float &gt; &amp;normalizedAxis)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>doRotateX</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>ad1c6934dbd6184e051cdf68ecc7bff9d</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>doRotateXLocal</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>ae178eb9da782ad4dd49dfae458919c65</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>doRotateY</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>a5029eaa35ec05d318f49af5aa7226494</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>doRotateYLocal</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>a731255196c113375304ac8f668da2efe</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>doRotateZ</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>a87ca173ab4afe918be59544ca749d41d</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>doRotateZLocal</name>
+      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractBasicTranslationRotation3D.html</anchorfile>
+      <anchor>aa72727d90a1e236694992d65c6f88012</anchor>
+      <arglist>(Math::Rad&lt; Float &gt; angle)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14005,6 +14194,13 @@
     </member>
     <member kind="function">
       <type>std::string</type>
+      <name>hrtfSpecifierString</name>
+      <anchorfile>classMagnum_1_1Audio_1_1Context.html</anchorfile>
+      <anchor>a865e70bd2f02958d80c8ddcc810bda3c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
       <name>hrtfSpecifier</name>
       <anchorfile>classMagnum_1_1Audio_1_1Context.html</anchorfile>
       <anchor>a67f0d42acea575646bc95f180038fb5d</anchor>
@@ -15884,7 +16080,10 @@
       <anchor>a41d8e7d6b7a2d9d12dcca72630d3a23a</anchor>
       <arglist>(Debug &amp;debug, Buffer::Target value)</arglist>
     </member>
-    <docanchor file="classMagnum_1_1Buffer">Buffer-data-mapping</docanchor>
+    <docanchor file="classMagnum_1_1Buffer" title="Data updating">Buffer-data-updating</docanchor>
+    <docanchor file="classMagnum_1_1Buffer" title="Memory mapping">Buffer-data-mapping</docanchor>
+    <docanchor file="classMagnum_1_1Buffer" title="WebGL restrictions">Buffer-webgl-restrictions</docanchor>
+    <docanchor file="classMagnum_1_1Buffer" title="Performance optimizations">Buffer-performance-optimizations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::BufferImage</name>
@@ -16131,6 +16330,8 @@
       <anchor>ae28073c0fcae5ec5c955cb8cbca1efe3</anchor>
       <arglist>(GLuint id, ObjectFlags flags={})</arglist>
     </member>
+    <docanchor file="classMagnum_1_1BufferTexture" title="Usage">BufferTexture-usage</docanchor>
+    <docanchor file="classMagnum_1_1BufferTexture" title="Performance optimizations">BufferTexture-performance-optimizations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::BulletIntegration::DebugDraw</name>
@@ -16207,6 +16408,7 @@
       <anchor>a51c3b95ebf3085f779c27a6d4b367742</anchor>
       <arglist>(const Matrix4 &amp;matrix)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1BulletIntegration_1_1DebugDraw" title="Usage">BulletIntegration-DebugDraw-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::BulletIntegration::MotionState</name>
@@ -16226,6 +16428,7 @@
       <anchor>a2779520943f0b6c6cf613f48e0031260</anchor>
       <arglist>()</arglist>
     </member>
+    <docanchor file="classMagnum_1_1BulletIntegration_1_1MotionState" title="Usage">BulletIntegration-MotionState-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::CompressedBufferImage</name>
@@ -16718,11 +16921,14 @@
       <enumvalue file="classMagnum_1_1Context.html" anchor="a40a7999dc06d5be02e48f4a4ded8ef68a4c19ddb10d5a902842dda06a62c3d601">Buffers</enumvalue>
       <enumvalue file="classMagnum_1_1Context.html" anchor="a40a7999dc06d5be02e48f4a4ded8ef68ac81a0bdfe577125a16bb2a53d37df5cf">Framebuffers</enumvalue>
       <enumvalue file="classMagnum_1_1Context.html" anchor="a40a7999dc06d5be02e48f4a4ded8ef68a6f977d7c0201677985cc21e9e24d8b35">Meshes</enumvalue>
+      <enumvalue file="classMagnum_1_1Context.html" anchor="a40a7999dc06d5be02e48f4a4ded8ef68a0b6f6aca19cb4c22774dcf1910081685">MeshVao</enumvalue>
       <enumvalue file="classMagnum_1_1Context.html" anchor="a40a7999dc06d5be02e48f4a4ded8ef68afa61958e6a37a6f8f906a692fbab4c53">PixelStorage</enumvalue>
       <enumvalue file="classMagnum_1_1Context.html" anchor="a40a7999dc06d5be02e48f4a4ded8ef68a07b20ae970048fc2002d756f27acc863">Renderer</enumvalue>
       <enumvalue file="classMagnum_1_1Context.html" anchor="a40a7999dc06d5be02e48f4a4ded8ef68aecee0a84af1bbe31d8aec4ce303fad9d">Shaders</enumvalue>
       <enumvalue file="classMagnum_1_1Context.html" anchor="a40a7999dc06d5be02e48f4a4ded8ef68a536300d63028e7f16ba150566ecd3a5f">Textures</enumvalue>
       <enumvalue file="classMagnum_1_1Context.html" anchor="a40a7999dc06d5be02e48f4a4ded8ef68af42c5721f003b0657f081141043576f6">TransformFeedback</enumvalue>
+      <enumvalue file="classMagnum_1_1Context.html" anchor="a40a7999dc06d5be02e48f4a4ded8ef68a3181a9f4f540be3dc56f8b5369adead5">EnterExternal</enumvalue>
+      <enumvalue file="classMagnum_1_1Context.html" anchor="a40a7999dc06d5be02e48f4a4ded8ef68aaf72841d0fc1b8826d99b7854f898411">ExitExternal</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -17492,6 +17698,7 @@
       <anchor>aaa0d9d84e8318cc41765de3b4d39b8f8</anchor>
       <arglist>(GLuint id, ObjectFlags flags={})</arglist>
     </member>
+    <docanchor file="classMagnum_1_1CubeMapTexture" title="Basic usage">CubeMapTexture-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::CubeMapTextureArray</name>
@@ -17903,6 +18110,142 @@
       <anchor>a84df4006b48ce3392314dc57561f6855</anchor>
       <arglist>(GLuint id, ObjectFlags flags={})</arglist>
     </member>
+    <docanchor file="classMagnum_1_1CubeMapTextureArray" title="Usage">CubeMapTextureArray-usage</docanchor>
+  </compound>
+  <compound kind="class">
+    <name>Magnum::DartIntegration::DartObject</name>
+    <filename>classMagnum_1_1DartIntegration_1_1DartObject.html</filename>
+    <base>Magnum::SceneGraph::AbstractFeature</base>
+    <member kind="function">
+      <type></type>
+      <name>DartObject</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartObject.html</anchorfile>
+      <anchor>a4e14766975b3326893409297f6d8b19e</anchor>
+      <arglist>(T &amp;object, dart::dynamics::ShapeNode *node=nullptr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>DartObject</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartObject.html</anchorfile>
+      <anchor>ad8dc25ff604a43bfa75458e87022ff59</anchor>
+      <arglist>(T &amp;object, dart::dynamics::BodyNode *body=nullptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>DartObject &amp;</type>
+      <name>setShapeNode</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartObject.html</anchorfile>
+      <anchor>a92fa250973a6012f13965c2ff0a0eaf3</anchor>
+      <arglist>(dart::dynamics::ShapeNode *node)</arglist>
+    </member>
+    <member kind="function">
+      <type>DartObject &amp;</type>
+      <name>setBodyNode</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartObject.html</anchorfile>
+      <anchor>a2cd9b990977427cb1b1223bb102b6e2b</anchor>
+      <arglist>(dart::dynamics::BodyNode *body)</arglist>
+    </member>
+    <member kind="function">
+      <type>DartObject &amp;</type>
+      <name>update</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartObject.html</anchorfile>
+      <anchor>a70df49a0f26638be518056e2cdb84110</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>dart::dynamics::ShapeNode *</type>
+      <name>shapeNode</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartObject.html</anchorfile>
+      <anchor>afb85f0660d68787c568b82920ff68250</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>dart::dynamics::BodyNode *</type>
+      <name>bodyNode</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartObject.html</anchorfile>
+      <anchor>a36870ef786de247c30048d0c2136c207</anchor>
+      <arglist>()</arglist>
+    </member>
+    <docanchor file="classMagnum_1_1DartIntegration_1_1DartObject" title="Usage">DartIntegration-DartObject-usage</docanchor>
+  </compound>
+  <compound kind="class">
+    <name>Magnum::DartIntegration::DartSkeleton</name>
+    <filename>classMagnum_1_1DartIntegration_1_1DartSkeleton.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>DartSkeleton</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartSkeleton.html</anchorfile>
+      <anchor>a38492464255b99dec72dad282820a52c</anchor>
+      <arglist>(T &amp;parent, dart::dynamics::SkeletonPtr skeleton=nullptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>DartSkeleton &amp;</type>
+      <name>parseSkeleton</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartSkeleton.html</anchorfile>
+      <anchor>a740148cd55df10ba708198643a96ce18</anchor>
+      <arglist>(T &amp;parent, dart::dynamics::SkeletonPtr skeleton)</arglist>
+    </member>
+    <member kind="function">
+      <type>DartSkeleton &amp;</type>
+      <name>updateObjects</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartSkeleton.html</anchorfile>
+      <anchor>a4c06dd54d05aa5159d559e195d075df3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::reference_wrapper&lt; DartObject &gt; &gt;</type>
+      <name>objects</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartSkeleton.html</anchorfile>
+      <anchor>ad109dfd297c79795b0a9447c8b05bd45</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::reference_wrapper&lt; DartObject &gt; &gt;</type>
+      <name>shapeObjects</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartSkeleton.html</anchorfile>
+      <anchor>a2f757d8ffe82ca29e9a108fc55f4ad17</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::reference_wrapper&lt; DartObject &gt; &gt;</type>
+      <name>bodyObjects</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1DartSkeleton.html</anchorfile>
+      <anchor>a86cbff104e5ed614a1687db9dded88ff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <docanchor file="classMagnum_1_1DartIntegration_1_1DartSkeleton" title="Usage">DartIntegration-DartSkeleton-usage</docanchor>
+    <docanchor file="classMagnum_1_1DartIntegration_1_1DartSkeleton" title="Limitations">DartIntegration-DartSkeleton-limitations</docanchor>
+  </compound>
+  <compound kind="struct">
+    <name>Magnum::DartIntegration::ShapeData</name>
+    <filename>structMagnum_1_1DartIntegration_1_1ShapeData.html</filename>
+    <member kind="variable">
+      <type>Trade::MeshData3D</type>
+      <name>mesh</name>
+      <anchorfile>structMagnum_1_1DartIntegration_1_1ShapeData.html</anchorfile>
+      <anchor>a4a7da4c1a38a602315a3ecb98dafba17</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Trade::PhongMaterialData</type>
+      <name>material</name>
+      <anchorfile>structMagnum_1_1DartIntegration_1_1ShapeData.html</anchorfile>
+      <anchor>ab834114b8c81cddfd7f3b84514ec8857</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Containers::Array&lt; Containers::Optional&lt; Trade::ImageData2D &gt; &gt;</type>
+      <name>images</name>
+      <anchorfile>structMagnum_1_1DartIntegration_1_1ShapeData.html</anchorfile>
+      <anchor>af3f15f30bf4b4d86ecc7bc37abf6ea57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Containers::Array&lt; Containers::Optional&lt; Trade::TextureData &gt; &gt;</type>
+      <name>textures</name>
+      <anchorfile>structMagnum_1_1DartIntegration_1_1ShapeData.html</anchorfile>
+      <anchor>a82df88a04ad2481e6620ff5c0c633fe1</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Magnum::DebugGroup</name>
@@ -17979,6 +18322,9 @@
       <anchor>ac94d5fde25c824e3f7cafb1c0ff7cb13</anchor>
       <arglist>(Debug &amp;debug, DebugGroup::Source value)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1DebugGroup" title="Basic usage">DebugGroup-usage</docanchor>
+    <docanchor file="classMagnum_1_1DebugGroup" title="Interaction with debug output volume control">DebugGroup-volume-control</docanchor>
+    <docanchor file="classMagnum_1_1DebugGroup" title="Performance notes">DebugGroup-performance-notes</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::DebugMessage</name>
@@ -18094,6 +18440,8 @@
       <anchor>ab1f7b8a72a9a538560f8f0606ca1f4a8</anchor>
       <arglist>(Debug &amp;debug, DebugMessage::Type value)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1DebugMessage" title="Basic usage">DebugMessage-usage</docanchor>
+    <docanchor file="classMagnum_1_1DebugMessage" title="Performance notes">DebugMessage-performance-notes</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::DebugOutput</name>
@@ -18264,6 +18612,7 @@
       <anchor>a89d1fd21bfaa208055a8c0c9520776e2</anchor>
       <arglist>(Debug &amp;debug, DebugOutput::Severity value)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1DebugOutput" title="Basic usage">Magnum-DebugOutput-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::DebugTools::CompareImage</name>
@@ -18302,7 +18651,7 @@
       <anchor>a4a47078956031ff2961eb316dc05582a</anchor>
       <arglist>(SceneGraph::AbstractObject&lt; dimensions, Float &gt; &amp;, const VectorTypeFor&lt; dimensions, Float &gt; &amp;, VectorTypeFor&lt; dimensions, Float &gt; &amp;&amp;, ResourceKey=ResourceKey(), SceneGraph::DrawableGroup&lt; dimensions, Float &gt; *=nullptr)=delete</arglist>
     </member>
-    <docanchor file="classMagnum_1_1DebugTools_1_1ForceRenderer">DebugTools-ForceRenderer-usage</docanchor>
+    <docanchor file="classMagnum_1_1DebugTools_1_1ForceRenderer" title="Basic usage">DebugTools-ForceRenderer-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::DebugTools::ForceRendererOptions</name>
@@ -18348,7 +18697,7 @@
       <anchor>a39c29ddf3220a6d6d4a810a7724b1960</anchor>
       <arglist>(SceneGraph::AbstractObject&lt; dimensions, Float &gt; &amp;object, ResourceKey options=ResourceKey(), SceneGraph::DrawableGroup&lt; dimensions, Float &gt; *drawables=nullptr)</arglist>
     </member>
-    <docanchor file="classMagnum_1_1DebugTools_1_1ObjectRenderer">DebugTools-ObjectRenderer-usage</docanchor>
+    <docanchor file="classMagnum_1_1DebugTools_1_1ObjectRenderer" title="Basic usage">DebugTools-ObjectRenderer-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::DebugTools::ObjectRendererOptions</name>
@@ -18473,7 +18822,7 @@
       <anchor>aaa210f947039f9027c584c0859b0c5b6</anchor>
       <arglist>(Shapes::AbstractShape&lt; dimensions &gt; &amp;shape, ResourceKey options=ResourceKey(), SceneGraph::DrawableGroup&lt; dimensions, Float &gt; *drawables=nullptr)</arglist>
     </member>
-    <docanchor file="classMagnum_1_1DebugTools_1_1ShapeRenderer">DebugTools-ShapeRenderer-usage</docanchor>
+    <docanchor file="classMagnum_1_1DebugTools_1_1ShapeRenderer" title="Basic usage">DebugTools-ShapeRenderer-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::DebugTools::ShapeRendererOptions</name>
@@ -18685,7 +19034,8 @@
       <anchor>a67c85d774decf9566ce34f0861b88198</anchor>
       <arglist>(Debug &amp;debug, DefaultFramebuffer::Status value)</arglist>
     </member>
-    <docanchor file="classMagnum_1_1DefaultFramebuffer">DefaultFramebuffer-usage</docanchor>
+    <docanchor file="classMagnum_1_1DefaultFramebuffer" title="Usage">DefaultFramebuffer-usage</docanchor>
+    <docanchor file="classMagnum_1_1DefaultFramebuffer" title="Performance optimizations">DefaultFramebuffer-performance-optimizations</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::DimensionTraits</name>
@@ -19146,6 +19496,7 @@
       <arglist>(Debug &amp;debug, Framebuffer::Status value)</arglist>
     </member>
     <docanchor file="classMagnum_1_1Framebuffer" title="Example usage">Framebuffer-usage</docanchor>
+    <docanchor file="classMagnum_1_1Framebuffer" title="Performance optimizations">Framebuffer-performance-optimizations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Framebuffer::BufferAttachment</name>
@@ -25442,9 +25793,16 @@
       <anchor>a57501c2212f201d21f32303c9bfad36f</anchor>
       <arglist>(Debug &amp;debug, Mesh::IndexType value)</arglist>
     </member>
-    <docanchor file="classMagnum_1_1Mesh">Mesh-configuration</docanchor>
-    <docanchor file="classMagnum_1_1Mesh">Mesh-configuration-dynamic</docanchor>
-    <docanchor file="classMagnum_1_1Mesh">Mesh-performance-optimization</docanchor>
+    <docanchor file="classMagnum_1_1Mesh" title="Mesh configuration">Mesh-configuration</docanchor>
+    <docanchor file="classMagnum_1_1Mesh" title="Example mesh configuration">Mesh-configuration-example</docanchor>
+    <docanchor file="classMagnum_1_1Mesh" title="Basic non-indexed mesh">Mesh-configuration-example-basic</docanchor>
+    <docanchor file="classMagnum_1_1Mesh" title="Interleaved vertex data">Mesh-configuration-interleaved</docanchor>
+    <docanchor file="classMagnum_1_1Mesh" title="Indexed mesh">Mesh-configuration-indexed</docanchor>
+    <docanchor file="classMagnum_1_1Mesh" title="Specific formats of vertex data">Mesh-configuration-formats</docanchor>
+    <docanchor file="classMagnum_1_1Mesh" title="Dynamically specified attributes">Mesh-configuration-dynamic</docanchor>
+    <docanchor file="classMagnum_1_1Mesh" title="Rendering meshes">Mesh-rendering</docanchor>
+    <docanchor file="classMagnum_1_1Mesh" title="WebGL restrictions">Mesh-webgl-restrictions</docanchor>
+    <docanchor file="classMagnum_1_1Mesh" title="Performance optimizations">Mesh-performance-optimization</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::MeshView</name>
@@ -25653,8 +26011,8 @@
       <type>MultisampleTexture&lt; dimensions &gt; &amp;</type>
       <name>setStorage</name>
       <anchorfile>classMagnum_1_1MultisampleTexture.html</anchorfile>
-      <anchor>ad3073428ae29145ce9cd6da43378680b</anchor>
-      <arglist>(Int samples, TextureFormat internalFormat, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, MultisampleTextureSampleLocations sampleLocations=NotFixed)</arglist>
+      <anchor>aca186965b5f5841c5d37b1f00b0ab4e4</anchor>
+      <arglist>(Int samples, TextureFormat internalFormat, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, MultisampleTextureSampleLocations sampleLocations=MultisampleTextureSampleLocations::NotFixed)</arglist>
     </member>
     <member kind="function">
       <type>VectorTypeFor&lt; dimensions, Int &gt;</type>
@@ -25691,6 +26049,7 @@
       <anchor>a0819e1babff709cd5dd87e7cdb14cafe</anchor>
       <arglist>(GLuint id, ObjectFlags flags={})</arglist>
     </member>
+    <docanchor file="classMagnum_1_1MultisampleTexture" title="Usage">MultisampleTexture-usage</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::NoCreateT</name>
@@ -25837,6 +26196,7 @@
       <anchor>af967ede4c01c3f15d271be858d03d729</anchor>
       <arglist>(Validation::Structures allowedRootStructures, std::initializer_list&lt; Validation::Structure &gt; structures) const </arglist>
     </member>
+    <docanchor file="classMagnum_1_1OpenDdl_1_1Document" title="Usage">Magnum-OpenDdl-Document-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::OpenDdl::Property</name>
@@ -26320,6 +26680,7 @@
       <anchor>a68a95040c892970f05e35f19b693bbe7</anchor>
       <arglist>(Session &amp;session)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1OvrIntegration_1_1Compositor" title="Usage">OvrIntegration-Compositor-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::OvrIntegration::Context</name>
@@ -26401,6 +26762,7 @@
       <anchor>a6be091c7c622ecdbaa523777e62be9d6</anchor>
       <arglist>()</arglist>
     </member>
+    <docanchor file="classMagnum_1_1OvrIntegration_1_1Context" title="Usage">OvrIntegration-Context-usage</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::OvrIntegration::Error</name>
@@ -27031,6 +27393,8 @@
       <anchor>a651f3b0b72c30bff14f3dbd46ba7cf62</anchor>
       <arglist>() const </arglist>
     </member>
+    <docanchor file="classMagnum_1_1OvrIntegration_1_1Session" title="Usage">OvrIntegration-Session-usage</docanchor>
+    <docanchor file="classMagnum_1_1OvrIntegration_1_1Session" title="Rendering to the HMD">OvrIntegration-Session-usage-rendering</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::OvrIntegration::TextureSwapChain</name>
@@ -27205,6 +27569,7 @@
       <anchor>a642d65120e1f3692a75c82925489bf09</anchor>
       <arglist>(PixelFormat format, PixelType type)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1PixelStorage" title="Performance optimizations">PixelFormat-performance-optimizations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Platform::AbstractXApplication</name>
@@ -32425,6 +32790,7 @@
       <anchor>ab3754f8e80af911ef26a9202f42b1bfe</anchor>
       <arglist>(GLuint id, ObjectFlags flags={})</arglist>
     </member>
+    <docanchor file="classMagnum_1_1RectangleTexture" title="Usage">RectangleTexture-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Renderbuffer</name>
@@ -32549,6 +32915,7 @@
       <anchor>a7394ed340087f6a4ec792a71c6f61d30</anchor>
       <arglist>(GLuint id, ObjectFlags flags={})</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Renderbuffer" title="Performance optimizations">Renderbuffer-performance-optimizations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Renderer</name>
@@ -33400,6 +33767,7 @@
       <anchor>ad3aaf3af1453af97dfd57b296bd70a90</anchor>
       <arglist>()</arglist>
     </member>
+    <docanchor file="classMagnum_1_1ResourceManager" title="Usage">ResourceMananger-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::SampleQuery</name>
@@ -36262,6 +36630,7 @@
       <anchor>a7ade40fd2de1c917757f97dbd6c5ab11</anchor>
       <arglist>(Debug &amp;debug, Shader::Type value)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Shader" title="Performance optimizations">Shader-performance-optimizations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Shaders::AbstractVector</name>
@@ -36337,6 +36706,7 @@
       <anchor>a5aa7fe5ef127755b16f84273522a5053</anchor>
       <arglist>(Float value)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Shaders_1_1DistanceFieldVector" title="Example usage">Shaders-DistanceFieldVector-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Shaders::Flat</name>
@@ -36414,6 +36784,9 @@
       <anchor>a5a1734d3e63a174685e246c342880b83</anchor>
       <arglist>(Texture2D &amp;texture)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Shaders_1_1Flat" title="Example usage">Shaders-Flat-usage</docanchor>
+    <docanchor file="classMagnum_1_1Shaders_1_1Flat" title="Colored mesh">Shaders-Flat-usage-colored</docanchor>
+    <docanchor file="classMagnum_1_1Shaders_1_1Flat" title="Textured mesh">Shaders-Flat-usage-textured</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::Shaders::Generic</name>
@@ -36551,6 +36924,11 @@
       <anchor>af4b28d82a4e5ef903c48ae37c4e572f3</anchor>
       <arglist>(Float smoothness)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Shaders_1_1MeshVisualizer" title="Wireframe visualization">Shaders-MeshVisualizer-wireframe</docanchor>
+    <docanchor file="classMagnum_1_1Shaders_1_1MeshVisualizer" title="Example usage">Shaders-MeshVisualizer-usage</docanchor>
+    <docanchor file="classMagnum_1_1Shaders_1_1MeshVisualizer" title="Wireframe visualization with geometry shader (desktop GL)">Shaders-MeshVisualizer-usage-wireframe-geom</docanchor>
+    <docanchor file="classMagnum_1_1Shaders_1_1MeshVisualizer" title="Wireframe visualization without geometry shader on older hardware">Shaders-MeshVisualizer-usage-wireframe-no-geom-old</docanchor>
+    <docanchor file="classMagnum_1_1Shaders_1_1MeshVisualizer" title="Wireframe visualization of indexed meshes without geometry shader">Shaders-MeshVisualizer-usage-wireframe-no-geom</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Shaders::Phong</name>
@@ -36706,6 +37084,10 @@
       <anchor>a686e3193ec87f31f1530c64d0a6c968a</anchor>
       <arglist>(const Color4 &amp;color)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Shaders_1_1Phong" title="Example usage">Shaders-Phong-usage</docanchor>
+    <docanchor file="classMagnum_1_1Shaders_1_1Phong" title="Colored mesh">Shaders-Phong-usage-colored</docanchor>
+    <docanchor file="classMagnum_1_1Shaders_1_1Phong" title="Diffuse and specular texture">Shaders-Phong-usage-texture</docanchor>
+    <docanchor file="classMagnum_1_1Shaders_1_1Phong" title="Alpha-masked drawing">Shaders-Phong-usage-alpha</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Shaders::Vector</name>
@@ -36740,6 +37122,7 @@
       <anchor>a2b683fb66c78ea3c6015590efd2c308a</anchor>
       <arglist>(const Color4 &amp;color)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Shaders_1_1Vector" title="Example usage">Shaders-Vector-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Shaders::VertexColor</name>
@@ -36774,6 +37157,7 @@
       <anchor>ac680b3e05d8d10a65963a47188da75ec</anchor>
       <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;matrix)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Shaders_1_1VertexColor" title="Example usage">Shaders-VertexColor-example</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Shapes::AbstractShape</name>
@@ -38184,6 +38568,8 @@
       <anchor>a56f63723d8aab143f27df0b6a085a858</anchor>
       <arglist>(const GlyphCache &amp;cache, Float size, const std::string &amp;text)=0</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Text_1_1AbstractFont" title="Usage">Text-AbstractFont-usage</docanchor>
+    <docanchor file="classMagnum_1_1Text_1_1AbstractFont" title="Subclassing">Text-AbstractFont-subclassing</docanchor>
   </compound>
   <compound kind="struct">
     <name>Magnum::Text::AbstractFont::Metrics</name>
@@ -38394,6 +38780,7 @@
       <anchor>a76ed561dc84d7134f428543ff644993d</anchor>
       <arglist>(const std::string &amp;filename) const </arglist>
     </member>
+    <docanchor file="classMagnum_1_1Text_1_1AbstractFontConverter" title="Subclassing">Text-AbstractFontConverter-subclassing</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Text::AbstractLayouter</name>
@@ -38454,6 +38841,7 @@
       <anchor>a8270241cae0a79a88e3d1f368f2efa03</anchor>
       <arglist>(UnsignedInt i)=0</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Text_1_1AbstractLayouter" title="Subclassing">Text-AbstractLayouter-subclassing</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Text::AbstractRenderer</name>
@@ -38540,6 +38928,7 @@
       <anchor>ad6df87163895423be3c8648911c57750</anchor>
       <arglist>(const Vector2i &amp;offset, const ImageView2D &amp;image)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Text_1_1DistanceFieldGlyphCache" title="Usage">Text-DistanceFieldGlyphCache-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Text::FreeTypeFont</name>
@@ -38675,6 +39064,7 @@
       <anchor>af0144585f641e15cdef310f16692a5d7</anchor>
       <arglist>(const Vector2i &amp;offset, const ImageView2D &amp;image)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Text_1_1GlyphCache" title="Usage">Text-GlyphCache-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Text::HarfBuzzFont</name>
@@ -38752,13 +39142,6 @@
       <anchor>a138c14dbfbbc0bcf9f3b0a7ae20fa160</anchor>
       <arglist>(AbstractFont &amp;, GlyphCache &amp;&amp;, Float, Alignment alignment=Alignment::LineLeft)=delete</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>render</name>
-      <anchorfile>classMagnum_1_1Text_1_1Renderer.html</anchorfile>
-      <anchor>ab5dd57e04bdba8d6367223591d40df82</anchor>
-      <arglist>(const std::string &amp;text)</arglist>
-    </member>
     <member kind="function" static="yes">
       <type>static std::tuple&lt; Mesh, Range2D &gt;</type>
       <name>render</name>
@@ -38766,13 +39149,8 @@
       <anchor>a07e9cb41a140cc9b2eafedea94f968bd</anchor>
       <arglist>(AbstractFont &amp;font, const GlyphCache &amp;cache, Float size, const std::string &amp;text, Buffer &amp;vertexBuffer, Buffer &amp;indexBuffer, BufferUsage usage, Alignment alignment=Alignment::LineLeft)</arglist>
     </member>
-    <member kind="function" static="yes">
-      <type>static std::tuple&lt; std::vector&lt; Vector2 &gt;, std::vector&lt; Vector2 &gt;, std::vector&lt; UnsignedInt &gt;, Range2D &gt;</type>
-      <name>render</name>
-      <anchorfile>classMagnum_1_1Text_1_1Renderer.html</anchorfile>
-      <anchor>a131f565d384788d27fe3b95e4a32dc56</anchor>
-      <arglist>(AbstractFont &amp;font, const GlyphCache &amp;cache, Float size, const std::string &amp;text, Alignment alignment=Alignment::LineLeft)</arglist>
-    </member>
+    <docanchor file="classMagnum_1_1Text_1_1Renderer" title="Usage">Text-Renderer-usage</docanchor>
+    <docanchor file="classMagnum_1_1Text_1_1Renderer" title="Required OpenGL functionality">Text-Renderer-required-opengl-functionality</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Text::StbTrueTypeFont</name>
@@ -39223,6 +39601,7 @@
       <anchor>ac5fa2d224fa575571997401dc87b3194</anchor>
       <arglist>(GLuint id, ObjectFlags flags={})</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Texture" title="Usage">Texture-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::TextureArray</name>
@@ -39647,6 +40026,7 @@
       <anchor>a95768ca896d41295503cbcd4d804ee78</anchor>
       <arglist>(GLuint id, ObjectFlags flags={})</arglist>
     </member>
+    <docanchor file="classMagnum_1_1TextureArray" title="Usage">TextureArray-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Timeline</name>
@@ -39707,6 +40087,7 @@
       <anchor>a50206c9347ed2af5babf34fb1cf2d1f9</anchor>
       <arglist>() const </arglist>
     </member>
+    <docanchor file="classMagnum_1_1Timeline" title="Basic usage">Timeline-usage</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::TimeQuery</name>
@@ -42858,94 +43239,6 @@
       <arglist>(Debug &amp;debug, TextureData::Type value)</arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>Magnum::Trade::TgaHeader</name>
-    <filename>structMagnum_1_1Trade_1_1TgaHeader.html</filename>
-    <member kind="variable">
-      <type>UnsignedByte</type>
-      <name>identsize</name>
-      <anchorfile>structMagnum_1_1Trade_1_1TgaHeader.html</anchorfile>
-      <anchor>a7054cecca1034bf4fe72ad5d973eae97</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedByte</type>
-      <name>colorMapType</name>
-      <anchorfile>structMagnum_1_1Trade_1_1TgaHeader.html</anchorfile>
-      <anchor>ad6dceb9f563e31a90ef25184c70e378b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedByte</type>
-      <name>imageType</name>
-      <anchorfile>structMagnum_1_1Trade_1_1TgaHeader.html</anchorfile>
-      <anchor>a7b6d64177ae150e4dfea77be10439cdb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedShort</type>
-      <name>colorMapStart</name>
-      <anchorfile>structMagnum_1_1Trade_1_1TgaHeader.html</anchorfile>
-      <anchor>ae20a378752bf193bf66f5989d3e10ec9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedShort</type>
-      <name>colorMapLength</name>
-      <anchorfile>structMagnum_1_1Trade_1_1TgaHeader.html</anchorfile>
-      <anchor>aa71915293f3220bd6487082382d5dcd1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedByte</type>
-      <name>colorMapBpp</name>
-      <anchorfile>structMagnum_1_1Trade_1_1TgaHeader.html</anchorfile>
-      <anchor>aa259522621eb33773c0811e64107d1b3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedShort</type>
-      <name>beginX</name>
-      <anchorfile>structMagnum_1_1Trade_1_1TgaHeader.html</anchorfile>
-      <anchor>a2280c06726be106c7358f539f5ca115d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedShort</type>
-      <name>beginY</name>
-      <anchorfile>structMagnum_1_1Trade_1_1TgaHeader.html</anchorfile>
-      <anchor>a033fbc1ab0e9fe405f4884ab3be54769</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedShort</type>
-      <name>width</name>
-      <anchorfile>structMagnum_1_1Trade_1_1TgaHeader.html</anchorfile>
-      <anchor>aeb3be24ff41a963fdea858c1669d2b51</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedShort</type>
-      <name>height</name>
-      <anchorfile>structMagnum_1_1Trade_1_1TgaHeader.html</anchorfile>
-      <anchor>a236c52fbff737a75b9386df47307087d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedByte</type>
-      <name>bpp</name>
-      <anchorfile>structMagnum_1_1Trade_1_1TgaHeader.html</anchorfile>
-      <anchor>a507ecccb0a61781ffeefd564f34a03af</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>UnsignedByte</type>
-      <name>descriptor</name>
-      <anchorfile>structMagnum_1_1Trade_1_1TgaHeader.html</anchorfile>
-      <anchor>a50cf26f43cf071fe4a5661e721353150</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
   <compound kind="class">
     <name>Magnum::Trade::TgaImageConverter</name>
     <filename>classMagnum_1_1Trade_1_1TgaImageConverter.html</filename>
@@ -43181,6 +43474,7 @@
       <anchor>a624c1c03be6e5afbae2c31e7f65e3d9e</anchor>
       <arglist>(GLuint id, ObjectFlags flags={})</arglist>
     </member>
+    <docanchor file="classMagnum_1_1TransformFeedback" title="Performance optimizations">TransformFeedback-performance-optimizations</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Ui::AbstractPlane</name>
@@ -55635,6 +55929,7 @@
     <filename>namespaceMagnum.html</filename>
     <namespace>Magnum::Audio</namespace>
     <namespace>Magnum::BulletIntegration</namespace>
+    <namespace>Magnum::DartIntegration</namespace>
     <namespace>Magnum::DebugTools</namespace>
     <namespace>Magnum::Extensions</namespace>
     <namespace>Magnum::Math</namespace>
@@ -58148,6 +58443,27 @@
       <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
       <anchor>ae4102f01b3709014e598d0c6725f31ed</anchor>
       <arglist>(Debug &amp;debug, DebugDraw::DebugMode value)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>Magnum::DartIntegration</name>
+    <filename>namespaceMagnum_1_1DartIntegration.html</filename>
+    <class kind="class">Magnum::DartIntegration::DartObject</class>
+    <class kind="class">Magnum::DartIntegration::DartSkeleton</class>
+    <class kind="struct">Magnum::DartIntegration::ShapeData</class>
+    <member kind="function">
+      <type>Containers::Optional&lt; ShapeData &gt;</type>
+      <name>convertShapeNode</name>
+      <anchorfile>namespaceMagnum_1_1DartIntegration.html</anchorfile>
+      <anchor>a8c8e0d4592507ffa6ceac25efa2808f3</anchor>
+      <arglist>(dart::dynamics::ShapeNode &amp;shapeNode)</arglist>
+    </member>
+    <member kind="function">
+      <type>Containers::Optional&lt; ShapeData &gt;</type>
+      <name>convertShapeNode</name>
+      <anchorfile>namespaceMagnum_1_1DartIntegration.html</anchorfile>
+      <anchor>a5c462907cfd20c9f92bbb9d09b86ad3e</anchor>
+      <arglist>(DartObject &amp;object)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -61297,7 +61613,6 @@
     <class kind="class">Magnum::Trade::StbImageConverter</class>
     <class kind="class">Magnum::Trade::StbImageImporter</class>
     <class kind="class">Magnum::Trade::TextureData</class>
-    <class kind="struct">Magnum::Trade::TgaHeader</class>
     <class kind="class">Magnum::Trade::TgaImageConverter</class>
     <class kind="class">Magnum::Trade::TgaImporter</class>
     <member kind="typedef">
@@ -62033,98 +62348,157 @@
     <name>changelog</name>
     <title>Changelog</title>
     <filename>changelog</filename>
-    <docanchor file="changelog" title="Changes since 2015-05 snapshot">changelog-latest</docanchor>
-    <docanchor file="changelog" title="Dependency changes">changelog-latest-dependencies</docanchor>
-    <docanchor file="changelog" title="New features">changelog-latest-new</docanchor>
-    <docanchor file="changelog" title="Audio library">changelog-latest-new-audio</docanchor>
-    <docanchor file="changelog" title="DebugTools library">changelog-latest-new-debugtools</docanchor>
-    <docanchor file="changelog" title="Math library">changelog-latest-new-math</docanchor>
-    <docanchor file="changelog" title="Platform libraries">changelog-latest-new-platform</docanchor>
-    <docanchor file="changelog" title="Primitives library">changelog-latest-new-primitives</docanchor>
-    <docanchor file="changelog" title="Shaders library">changelog-latest-new-shaders</docanchor>
-    <docanchor file="changelog" title="Text library">changelog-latest-new-text</docanchor>
-    <docanchor file="changelog" title="Trade library">changelog-latest-new-trade</docanchor>
-    <docanchor file="changelog" title="Changes and improvements">changelog-latest-changes</docanchor>
-    <docanchor file="changelog" title="Math library">changelog-latest-changes-math</docanchor>
-    <docanchor file="changelog" title="Platform library">changelog-latest-changes-platform</docanchor>
-    <docanchor file="changelog" title="Shaders library">changelog-latest-changes-shaders</docanchor>
-    <docanchor file="changelog" title="Build system">changelog-latest-buildsystem</docanchor>
-    <docanchor file="changelog" title="Bug fixes">changelog-latest-bugfixes</docanchor>
-    <docanchor file="changelog" title="Deprecated APIs">changelog-latest-deprecated</docanchor>
-    <docanchor file="changelog" title="Potential compatibility breakages, removed APIs">changelog-latest-compatibility</docanchor>
-    <docanchor file="changelog" title="Performance improvements">changelog-latest-performance</docanchor>
-    <docanchor file="changelog" title="Documentation">changelog-latest-docs</docanchor>
-    <docanchor file="changelog" title="2015-05 snapshot">changelog-2015-05</docanchor>
-    <docanchor file="changelog" title="2014-06 snapshot">changelog-2014-06</docanchor>
-    <docanchor file="changelog" title="2014-01 snapshot">changelog-2014-01</docanchor>
-    <docanchor file="changelog" title="2013-10 snapshot">changelog-2013-10</docanchor>
-    <docanchor file="changelog" title="Initial release">changelog-initial</docanchor>
+    <docanchor file="changelog" title="2018.02">changelog-2018-02</docanchor>
+    <docanchor file="changelog" title="Dependency changes">changelog-2018-02-dependencies</docanchor>
+    <docanchor file="changelog" title="New features">changelog-2018-02-new</docanchor>
+    <docanchor file="changelog" title="Audio library">changelog-2018-02-new-audio</docanchor>
+    <docanchor file="changelog" title="DebugTools library">changelog-2018-02-new-debugtools</docanchor>
+    <docanchor file="changelog" title="Math library">changelog-2018-02-new-math</docanchor>
+    <docanchor file="changelog" title="Platform libraries">changelog-2018-02-new-platform</docanchor>
+    <docanchor file="changelog" title="Primitives library">changelog-2018-02-new-primitives</docanchor>
+    <docanchor file="changelog" title="Shaders library">changelog-2018-02-new-shaders</docanchor>
+    <docanchor file="changelog" title="Text library">changelog-2018-02-new-text</docanchor>
+    <docanchor file="changelog" title="Trade library">changelog-2018-02-new-trade</docanchor>
+    <docanchor file="changelog" title="Changes and improvements">changelog-2018-02-changes</docanchor>
+    <docanchor file="changelog" title="Math library">changelog-2018-02-changes-math</docanchor>
+    <docanchor file="changelog" title="Platform library">changelog-2018-02-changes-platform</docanchor>
+    <docanchor file="changelog" title="Shaders library">changelog-2018-02-changes-shaders</docanchor>
+    <docanchor file="changelog" title="Build system">changelog-2018-02-buildsystem</docanchor>
+    <docanchor file="changelog" title="Bug fixes">changelog-2018-02-bugfixes</docanchor>
+    <docanchor file="changelog" title="Deprecated APIs">changelog-2018-02-deprecated</docanchor>
+    <docanchor file="changelog" title="Potential compatibility breakages, removed APIs">changelog-2018-02-compatibility</docanchor>
+    <docanchor file="changelog" title="Performance improvements">changelog-2018-02-performance</docanchor>
+    <docanchor file="changelog" title="Documentation">changelog-2018-02-docs</docanchor>
+    <docanchor file="changelog" title="2015.05">changelog-2015-05</docanchor>
+    <docanchor file="changelog" title="New features">changelog-2015-05-new</docanchor>
+    <docanchor file="changelog" title="Changes">changelog-2015-05-changes</docanchor>
+    <docanchor file="changelog" title="Build system">changelog-2015-05-buildsystem</docanchor>
+    <docanchor file="changelog" title="Bug fixes">changelog-2015-05-bugfixes</docanchor>
+    <docanchor file="changelog" title="Deprecated APIs">changelog-2015-05-deprecated</docanchor>
+    <docanchor file="changelog" title="Potential compatibility breakages, removed APIs">changelog-2015-05-compatibility</docanchor>
+    <docanchor file="changelog" title="Performance improvements">changelog-2015-05-performance</docanchor>
+    <docanchor file="changelog" title="2014.06">changelog-2014-06</docanchor>
+    <docanchor file="changelog" title="Dependency changes">changelog-2014-06-dependencies</docanchor>
+    <docanchor file="changelog" title="New features">changelog-2014-06-new</docanchor>
+    <docanchor file="changelog" title="Changes">changelog-2014-06-changes</docanchor>
+    <docanchor file="changelog" title="Build system">changelog-2014-06-buildsystem</docanchor>
+    <docanchor file="changelog" title="Bug fixes">changelog-2014-06-bugfixes</docanchor>
+    <docanchor file="changelog" title="Deprecated APIs">changelog-2014-06-deprecated</docanchor>
+    <docanchor file="changelog" title="Potential compatibility breakages, removed APIs">changelog-2014-06-compatibility</docanchor>
+    <docanchor file="changelog" title="Internal changes">changelog-2014-06-internal</docanchor>
+    <docanchor file="changelog" title="2014.01">changelog-2014-01</docanchor>
+    <docanchor file="changelog" title="Dependency changes">changelog-2014-01-dependencies</docanchor>
+    <docanchor file="changelog" title="New features">changelog-2014-01-new</docanchor>
+    <docanchor file="changelog" title="Changes">changelog-2014-01-changes</docanchor>
+    <docanchor file="changelog" title="Bug fixes">changelog-2014-01-bugfixes</docanchor>
+    <docanchor file="changelog" title="Deprecated APIs">changelog-2014-01-deprecated</docanchor>
+    <docanchor file="changelog" title="Potential compatibility breakages, removed APIs">changelog-2014-01-compatibility</docanchor>
+    <docanchor file="changelog" title="Documentation">changelog-2014-01-documentation</docanchor>
+    <docanchor file="changelog" title="Internal changes">changelog-2014-01-internal</docanchor>
+    <docanchor file="changelog" title="2013.10">changelog-2013-10</docanchor>
+    <docanchor file="changelog" title="Dependency changes">changelog-2013-10-dependencies</docanchor>
+    <docanchor file="changelog" title="New features">changelog-2013-10-new</docanchor>
+    <docanchor file="changelog" title="Changes">changelog-2013-10-changes</docanchor>
+    <docanchor file="changelog" title="Bug fixes">changelog-2013-10-bugfixes</docanchor>
+    <docanchor file="changelog" title="Deprecated APIs">changelog-2013-10-deprecated</docanchor>
+    <docanchor file="changelog" title="Potential compatibility breakages, removed APIs">changelog-2013-10-compatibility</docanchor>
+    <docanchor file="changelog" title="2013.08">changelog-2013-08</docanchor>
   </compound>
   <compound kind="page">
     <name>changelog-plugins</name>
     <title>Plugins changelog</title>
     <filename>changelog-plugins</filename>
-    <docanchor file="changelog-plugins" title="Changes since 2015-05 snapshot">changelog-plugins-latest</docanchor>
-    <docanchor file="changelog-plugins" title="Dependency changes">changelog-plugins-latest-dependencies</docanchor>
-    <docanchor file="changelog-plugins" title="New features">changelog-plugins-latest-new</docanchor>
-    <docanchor file="changelog-plugins" title="Changes and improvements">changelog-plugins-latest-changes</docanchor>
-    <docanchor file="changelog-plugins" title="Build system">changelog-plugins-latest-buildsystem</docanchor>
-    <docanchor file="changelog-plugins" title="Bug fixes">changelog-plugins-latest-bugfixes</docanchor>
-    <docanchor file="changelog-plugins" title="Potential compatibility breakages">changelog-plugins-latest-compatibility</docanchor>
-    <docanchor file="changelog-plugins" title="Documentation">changelog-plugins-latest-documentation</docanchor>
-    <docanchor file="changelog-plugins" title="2015-05 snapshot">changelog-plugins-2015-05</docanchor>
-    <docanchor file="changelog-plugins" title="2014-06 snapshot">changelog-plugins-2014-06</docanchor>
-    <docanchor file="changelog-plugins" title="2014-01 snapshot">changelog-plugins-2014-01</docanchor>
-    <docanchor file="changelog-plugins" title="2013-10 snapshot">changelog-plugins-2013-10</docanchor>
-    <docanchor file="changelog-plugins" title="Initial release">changelog-plugins-initial</docanchor>
+    <docanchor file="changelog-plugins" title="2018.02">changelog-plugins-2018-02</docanchor>
+    <docanchor file="changelog-plugins" title="Dependency changes">changelog-plugins-2018-02-dependencies</docanchor>
+    <docanchor file="changelog-plugins" title="New features">changelog-plugins-2018-02-new</docanchor>
+    <docanchor file="changelog-plugins" title="Changes and improvements">changelog-plugins-2018-02-changes</docanchor>
+    <docanchor file="changelog-plugins" title="Build system">changelog-plugins-2018-02-buildsystem</docanchor>
+    <docanchor file="changelog-plugins" title="Bug fixes">changelog-plugins-2018-02-bugfixes</docanchor>
+    <docanchor file="changelog-plugins" title="Potential compatibility breakages">changelog-plugins-2018-02-compatibility</docanchor>
+    <docanchor file="changelog-plugins" title="Documentation">changelog-plugins-2018-02-documentation</docanchor>
+    <docanchor file="changelog-plugins" title="2015.05">changelog-plugins-2015-05</docanchor>
+    <docanchor file="changelog-plugins" title="New features">changelog-plugins-2015-05-new</docanchor>
+    <docanchor file="changelog-plugins" title="Potential compatibility breakages, removed APIs">changelog-plugins-2015-05-compatibility</docanchor>
+    <docanchor file="changelog-plugins" title="Build system">changelog-plugins-2015-05-buildsystem</docanchor>
+    <docanchor file="changelog-plugins" title="2014.06">changelog-plugins-2014-06</docanchor>
+    <docanchor file="changelog-plugins" title="Dependency changes">changelog-plugins-2014-06-dependencies</docanchor>
+    <docanchor file="changelog-plugins" title="Changes">changelog-plugins-2014-06-changes</docanchor>
+    <docanchor file="changelog-plugins" title="2014.01">changelog-plugins-2014-01</docanchor>
+    <docanchor file="changelog-plugins" title="Dependency changes">changelog-plugins-2014-01-dependencies</docanchor>
+    <docanchor file="changelog-plugins" title="New features">changelog-plugins-2014-01-new</docanchor>
+    <docanchor file="changelog-plugins" title="Changes">changelog-plugins-2014-01-changes</docanchor>
+    <docanchor file="changelog-plugins" title="Bug fixes">changelog-plugins-2014-01-bugfixes</docanchor>
+    <docanchor file="changelog-plugins" title="Internal changes">changelog-plugins-2014-01-internal</docanchor>
+    <docanchor file="changelog-plugins" title="2013.10">changelog-plugins-2013-10</docanchor>
+    <docanchor file="changelog-plugins" title="Dependency changes">changelog-plugins-2013-10-dependencies</docanchor>
+    <docanchor file="changelog-plugins" title="New features">changelog-plugins-2013-10-new</docanchor>
+    <docanchor file="changelog-plugins" title="Changes">changelog-plugins-2013-10-changes</docanchor>
+    <docanchor file="changelog-plugins" title="Bug fixes">changelog-plugins-2013-10-bugfixes</docanchor>
+    <docanchor file="changelog-plugins" title="2013.08">changelog-plugins-2013-08</docanchor>
   </compound>
   <compound kind="page">
     <name>changelog-integration</name>
     <title>Integration changelog</title>
     <filename>changelog-integration</filename>
-    <docanchor file="changelog-integration" title="Changes since 2015-05 snapshot">changelog-integration-latest</docanchor>
-    <docanchor file="changelog-integration" title="Dependency changes">changelog-integration-latest-dependencies</docanchor>
-    <docanchor file="changelog-integration" title="New features">changelog-integration-latest-new</docanchor>
-    <docanchor file="changelog-integration" title="Changes and improvements">changelog-integration-latest-changes</docanchor>
-    <docanchor file="changelog-integration" title="Build system">changelog-integration-latest-buildsystem</docanchor>
-    <docanchor file="changelog-integration" title="Bug fixes">changelog-integration-latest-bugfixes</docanchor>
-    <docanchor file="changelog-integration" title="Deprecated APIs">changelog-integration-latest-deprecated</docanchor>
-    <docanchor file="changelog-integration" title="Potential compatibility breakages, removed APIs">changelog-integration-latest-compatibility</docanchor>
-    <docanchor file="changelog-integration" title="Documentation">changelog-integration-latest-documentation</docanchor>
-    <docanchor file="changelog-integration" title="2015-05 snapshot">changelog-integration-2015-05</docanchor>
-    <docanchor file="changelog-integration" title="2014-06 snapshot">changelog-integration-2014-06</docanchor>
-    <docanchor file="changelog-integration" title="2014-01 snapshot">changelog-integration-2014-01</docanchor>
-    <docanchor file="changelog-integration" title="2013-10 snapshot">changelog-integration-2013-10</docanchor>
-    <docanchor file="changelog-integration" title="Initial release">changelog-integration-initial</docanchor>
+    <docanchor file="changelog-integration" title="2018.02">changelog-integration-2018-02</docanchor>
+    <docanchor file="changelog-integration" title="Dependency changes">changelog-integration-2018-02-dependencies</docanchor>
+    <docanchor file="changelog-integration" title="New features">changelog-integration-2018-02-new</docanchor>
+    <docanchor file="changelog-integration" title="Changes and improvements">changelog-integration-2018-02-changes</docanchor>
+    <docanchor file="changelog-integration" title="Build system">changelog-integration-2018-02-buildsystem</docanchor>
+    <docanchor file="changelog-integration" title="Bug fixes">changelog-integration-2018-02-bugfixes</docanchor>
+    <docanchor file="changelog-integration" title="Deprecated APIs">changelog-integration-2018-02-deprecated</docanchor>
+    <docanchor file="changelog-integration" title="Potential compatibility breakages, removed APIs">changelog-integration-2018-02-compatibility</docanchor>
+    <docanchor file="changelog-integration" title="Documentation">changelog-integration-2018-02-documentation</docanchor>
+    <docanchor file="changelog-integration" title="2015.05">changelog-integration-2015-05</docanchor>
+    <docanchor file="changelog-integration" title="Build system">changelog-integration-2015-05-buildsystem</docanchor>
+    <docanchor file="changelog-integration" title="Deprecated APIs">changelog-integration-2015-05-deprecated</docanchor>
+    <docanchor file="changelog-integration" title="Potential compatibility breakages, removed APIs">changelog-integration-2015-05-compatibility</docanchor>
+    <docanchor file="changelog-integration" title="2014.06">changelog-integration-2014-06</docanchor>
+    <docanchor file="changelog-integration" title="Dependency changes">changelog-integration-2014-06-dependencies</docanchor>
+    <docanchor file="changelog-integration" title="Changes">changelog-integration-2014-06-changes</docanchor>
+    <docanchor file="changelog-integration" title="Deprecated APIs">changelog-integration-2014-06-deprecated</docanchor>
+    <docanchor file="changelog-integration" title="Potential compatibility breakages, removed APIs">changelog-integration-2014-06-compatibility</docanchor>
+    <docanchor file="changelog-integration" title="2014.01">changelog-integration-2014-01</docanchor>
+    <docanchor file="changelog-integration" title="Dependency changes">changelog-integration-2014-01-dependencies</docanchor>
+    <docanchor file="changelog-integration" title="New features">changelog-integration-2014-01-new</docanchor>
+    <docanchor file="changelog-integration" title="Deprecated APIs">changelog-integration-2014-01-deprecated</docanchor>
+    <docanchor file="changelog-integration" title="Potential compatibility breakages, removed APIs">changelog-integration-2014-01-compatibility</docanchor>
+    <docanchor file="changelog-integration" title="Internal changes">changelog-integration-2014-01-internal</docanchor>
+    <docanchor file="changelog-integration" title="2013.10">changelog-integration-2013-10</docanchor>
+    <docanchor file="changelog-integration" title="Dependency changes">changelog-integration-2013-10-dependencies</docanchor>
+    <docanchor file="changelog-integration" title="Changes">changelog-integration-2013-10-changes</docanchor>
+    <docanchor file="changelog-integration" title="Deprecated APIs">changelog-integration-2013-10-deprecated</docanchor>
+    <docanchor file="changelog-integration" title="Potential compatibility breakages, removed APIs">changelog-integration-2013-10-compatibility</docanchor>
+    <docanchor file="changelog-integration" title="2013.08">changelog-integration-2013-08</docanchor>
   </compound>
   <compound kind="page">
     <name>changelog-extras</name>
     <title>Extras changelog</title>
     <filename>changelog-extras</filename>
-    <docanchor file="changelog-extras" title="Changes during the initial release">changelog-extras-latest</docanchor>
-    <docanchor file="changelog-extras" title="De­pen­den­cy changes">changelog-extras-latest-dependencies</docanchor>
-    <docanchor file="changelog-extras" title="New features">changelog-extras-latest-new</docanchor>
-    <docanchor file="changelog-extras" title="Build system">changelog-extras-latest-buildsystem</docanchor>
-    <docanchor file="changelog-extras" title="Deprecated APIs">changelog-extras-latest-deprecated</docanchor>
-    <docanchor file="changelog-extras" title="Documentation">changelog-extras-latest-documentation</docanchor>
-    <docanchor file="changelog-extras" title="Potential compatibility breakages, removed APIs">changelog-extras-latest-compatibility</docanchor>
+    <docanchor file="changelog-extras" title="2018.02">changelog-extras-2018-02</docanchor>
+    <docanchor file="changelog-extras" title="New features">changelog-extras-2018-02-new</docanchor>
+    <docanchor file="changelog-extras" title="Build system">changelog-extras-2018-02-buildsystem</docanchor>
+    <docanchor file="changelog-extras" title="Deprecated APIs">changelog-extras-2018-02-deprecated</docanchor>
+    <docanchor file="changelog-extras" title="Documentation">changelog-extras-2018-02-documentation</docanchor>
   </compound>
   <compound kind="page">
     <name>changelog-examples</name>
     <title>Examples changelog</title>
     <filename>changelog-examples</filename>
-    <docanchor file="changelog-examples" title="Changes since 2015-05 snapshot">changelog-examples-latest</docanchor>
-    <docanchor file="changelog-examples" title="Dependency changes">changelog-examples-latest-dependencies</docanchor>
-    <docanchor file="changelog-examples" title="New features">changelog-examples-latest-new</docanchor>
-    <docanchor file="changelog-examples" title="Changes and improvements">changelog-examples-latest-changes</docanchor>
-    <docanchor file="changelog-examples" title="Build system">changelog-examples-latest-buildsystem</docanchor>
-    <docanchor file="changelog-examples" title="Bug fixes">changelog-examples-latest-bugfixes</docanchor>
-    <docanchor file="changelog-examples" title="Documentation">changelog-examples-latest-documentation</docanchor>
-    <docanchor file="changelog-examples" title="2015-05 snapshot">changelog-examples-2015-05</docanchor>
-    <docanchor file="changelog-examples" title="2014-06 snapshot">changelog-examples-2014-06</docanchor>
-    <docanchor file="changelog-examples" title="2014-01 snapshot">changelog-examples-2014-01</docanchor>
-    <docanchor file="changelog-examples" title="2013-10 snapshot">changelog-examples-2013-10</docanchor>
-    <docanchor file="changelog-examples" title="Initial release">changelog-examples-initial</docanchor>
+    <docanchor file="changelog-examples" title="2018.02">changelog-examples-2018-02</docanchor>
+    <docanchor file="changelog-examples" title="Dependency changes">changelog-examples-2018-02-dependencies</docanchor>
+    <docanchor file="changelog-examples" title="New features">changelog-examples-2018-02-new</docanchor>
+    <docanchor file="changelog-examples" title="Changes and improvements">changelog-examples-2018-02-changes</docanchor>
+    <docanchor file="changelog-examples" title="Build system">changelog-examples-2018-02-buildsystem</docanchor>
+    <docanchor file="changelog-examples" title="Bug fixes">changelog-examples-2018-02-bugfixes</docanchor>
+    <docanchor file="changelog-examples" title="Documentation">changelog-examples-2018-02-documentation</docanchor>
+    <docanchor file="changelog-examples" title="2015.05">changelog-examples-2015-05</docanchor>
+    <docanchor file="changelog-examples" title="Changes">changelog-examples-2015-05-changes</docanchor>
+    <docanchor file="changelog-examples" title="Bug fixes">changelog-examples-2015-05-bugfixes</docanchor>
+    <docanchor file="changelog-examples" title="Build system">changelog-examples-2015-05-buildsystem</docanchor>
+    <docanchor file="changelog-examples" title="Documentation">changelog-examples-2015-05-documentation</docanchor>
+    <docanchor file="changelog-examples" title="2014.06">changelog-examples-2014-06</docanchor>
+    <docanchor file="changelog-examples" title="Bug fixes">changelog-examples-2014-06-bugfixes</docanchor>
   </compound>
   <compound kind="page">
     <name>coding-style</name>
@@ -62139,10 +62513,11 @@
     <docanchor file="coding-style" title="Compatibility with various OpenGL editions">coding-style-compatibility</docanchor>
     <docanchor file="coding-style" title="Doxygen documentation">coding-style-documentation</docanchor>
     <docanchor file="coding-style" title="Special documentation commands">coding-style-documentation-commands</docanchor>
+    <docanchor file="coding-style" title="Code">coding-style-documentation-commands-code</docanchor>
     <docanchor file="coding-style" title="Shape collision operators">coding-style-documentation-commands-collisionoperator</docanchor>
-    <docanchor file="coding-style" title="Links to OpenGL extensions">coding-style-documentation-commands-extension</docanchor>
-    <docanchor file="coding-style" title="Links to related OpenGL functions and definitions">coding-style-documentation-commands-ref_gl</docanchor>
-    <docanchor file="coding-style" title="Classes and functions requiring specific OpenGL version or extensions">coding-style-documentation-commands-requires</docanchor>
+    <docanchor file="coding-style" title="Links to OpenGL and OpenAL extensions">coding-style-documentation-commands-extension</docanchor>
+    <docanchor file="coding-style" title="Links to related OpenGL, OpenAL functions and definitions">coding-style-documentation-commands-ref_gl</docanchor>
+    <docanchor file="coding-style" title="Classes and functions requiring specific OpenGL, OpenAL version or extensions">coding-style-documentation-commands-requires</docanchor>
     <docanchor file="coding-style" title="Section ordering">coding-style-documentation-ordering</docanchor>
     <docanchor file="coding-style" title="Unit tests">coding-style-unit-tests</docanchor>
   </compound>
@@ -62191,6 +62566,7 @@
     <docanchor file="building" title="Continuous Integration">building-ci</docanchor>
     <docanchor file="building" title="Travis">building-ci-travis</docanchor>
     <docanchor file="building" title="AppVeyor">building-ci-appveyor</docanchor>
+    <docanchor file="building" title="Codecov.io">building-ci-coverage</docanchor>
   </compound>
   <compound kind="page">
     <name>cmake</name>
@@ -62422,6 +62798,7 @@
     <docanchor file="building-plugins" title="Continuous Integration">building-plugins-ci</docanchor>
     <docanchor file="building-plugins" title="Travis">building-plugins-ci-travis</docanchor>
     <docanchor file="building-plugins" title="AppVeyor">building-plugins-ci-appveyor</docanchor>
+    <docanchor file="building-plugins" title="Codecov.io">building-plugins-ci-coverage</docanchor>
   </compound>
   <compound kind="page">
     <name>cmake-plugins</name>
@@ -62444,6 +62821,7 @@
     <docanchor file="building-integration" title="Continuous Integration">building-integration-ci</docanchor>
     <docanchor file="building-integration" title="Travis">building-integration-ci-travis</docanchor>
     <docanchor file="building-integration" title="AppVeyor">building-integration-ci-appveyor</docanchor>
+    <docanchor file="building-integration" title="Codecov.io">building-integration-ci-coverage</docanchor>
   </compound>
   <compound kind="page">
     <name>cmake-integration</name>
@@ -62601,6 +62979,7 @@
     <docanchor file="building-extras" title="Continuous Integration">building-extras-ci</docanchor>
     <docanchor file="building-extras" title="Travis">building-extras-ci-travis</docanchor>
     <docanchor file="building-extras" title="AppVeyor">building-extras-ci-appveyor</docanchor>
+    <docanchor file="building-extras" title="Codecov.io">building-extras-ci-coverage</docanchor>
   </compound>
   <compound kind="page">
     <name>cmake-extras</name>

@@ -3456,29 +3456,29 @@
       <type></type>
       <name>Optional</name>
       <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
-      <anchor>aa9815b3020d45dd0afe3be4a9b1bc948</anchor>
-      <arglist>(const Optional&lt; T &gt; &amp;other)</arglist>
+      <anchor>aa9d04a3b7e025d6428552ee7a7b572af</anchor>
+      <arglist>(const Optional&lt; T &gt; &amp;other) noexcept(std::is_nothrow_copy_constructible&lt; T &gt;::value)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Optional</name>
       <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
-      <anchor>a7206e879c196e544eb8836270e3709e0</anchor>
-      <arglist>(Optional&lt; T &gt; &amp;&amp;other)</arglist>
+      <anchor>a89c8a0260c48815b8938484ae455c592</anchor>
+      <arglist>(Optional&lt; T &gt; &amp;&amp;other) noexcept(std::is_nothrow_move_constructible&lt; T &gt;::value)</arglist>
     </member>
     <member kind="function">
       <type>Optional&lt; T &gt; &amp;</type>
       <name>operator=</name>
       <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
-      <anchor>a2a0030e84b53f0b5769b7321c1a243e0</anchor>
-      <arglist>(const Optional&lt; T &gt; &amp;other)</arglist>
+      <anchor>a2dcb464863ceb583033a012f53c3a7ad</anchor>
+      <arglist>(const Optional&lt; T &gt; &amp;other) noexcept(std::is_nothrow_copy_assignable&lt; T &gt;::value)</arglist>
     </member>
     <member kind="function">
       <type>Optional&lt; T &gt; &amp;</type>
       <name>operator=</name>
       <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
-      <anchor>aaba624ac91782215a3698637111a15d3</anchor>
-      <arglist>(Optional&lt; T &gt; &amp;&amp;other)</arglist>
+      <anchor>a6946a7975796cd2c4e6472e33ee679c6</anchor>
+      <arglist>(Optional&lt; T &gt; &amp;&amp;other) noexcept(std::is_nothrow_move_assignable&lt; T &gt;::value)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -3566,6 +3566,20 @@
     </member>
     <member kind="function">
       <type>T &amp;</type>
+      <name>value</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>ad19c6d47aa093630ac3d9d4bd73e1866</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const T &amp;</type>
+      <name>value</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>ad559755ee1ae4fd6fe86ed74aa9f4a8b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>T &amp;</type>
       <name>emplace</name>
       <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
       <anchor>aa87b1126c552acb7c224bd73feb245a5</anchor>
@@ -3605,6 +3619,20 @@
       <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
       <anchor>a71e22f3640eb28dd7b2f7b8339931224</anchor>
       <arglist>(T &amp;&amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>aa6b2e93a65009b7ac7278b36bcd760c9</anchor>
+      <arglist>(Utility::Debug &amp;debug, NullOptT)</arglist>
+    </member>
+    <member kind="function">
+      <type>Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>abb61d1d1f8de79a08d22cef7ef99cb36</anchor>
+      <arglist>(Utility::Debug &amp;debug, const Optional&lt; T &gt; &amp;value)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -7972,6 +8000,7 @@
     <docanchor file="building-corrade" title="Continuous Integration">building-corrade-ci</docanchor>
     <docanchor file="building-corrade" title="Travis">building-corrade-ci-travis</docanchor>
     <docanchor file="building-corrade" title="AppVeyor">building-corrade-ci-appveyor</docanchor>
+    <docanchor file="building-corrade" title="Codecov.io">building-corrade-ci-coverage</docanchor>
   </compound>
   <compound kind="page">
     <name>corrade-cmake</name>
@@ -8026,7 +8055,7 @@
     <docanchor file="corrade-coding-style" title="Doxygen documentation">corrade-coding-style-documentation</docanchor>
     <docanchor file="corrade-coding-style" title="Section ordering">corrade-coding-style-documentation-ordering</docanchor>
     <docanchor file="corrade-coding-style" title="Special documentation commands">corrade-coding-style-documentation-commands</docanchor>
-    <docanchor file="corrade-coding-style" title="Code">corrade-coding-style-documentation-code</docanchor>
+    <docanchor file="corrade-coding-style" title="Code">corrade-coding-style-documentation-commands-code</docanchor>
     <docanchor file="corrade-coding-style" title="Documentation-related TODOs">corrade-coding-style-documentation-commands-todoc</docanchor>
     <docanchor file="corrade-coding-style" title="Debugging operators">corrade-coding-style-documentation-commands-debugoperator</docanchor>
     <docanchor file="corrade-coding-style" title="Configuration value parsers and writers">corrade-coding-style-documentation-commands-configurationvalue</docanchor>
@@ -8040,29 +8069,56 @@
     <name>corrade-changelog</name>
     <title>Changelog</title>
     <filename>corrade-changelog</filename>
-    <docanchor file="corrade-changelog" title="Changes since 2015-05 snapshot">corrade-changelog-latest</docanchor>
-    <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-latest-dependencies</docanchor>
-    <docanchor file="corrade-changelog" title="New features">corrade-changelog-latest-new</docanchor>
-    <docanchor file="corrade-changelog" title="Containers library">corrade-changelog-latest-new-containers</docanchor>
-    <docanchor file="corrade-changelog" title="PluginManager library">corrade-changelog-latest-new-pluginmanager</docanchor>
-    <docanchor file="corrade-changelog" title="TestSuite library">corrade-changelog-latest-new-testsuite</docanchor>
-    <docanchor file="corrade-changelog" title="Utility library">corrade-changelog-latest-new-utility</docanchor>
-    <docanchor file="corrade-changelog" title="Changes and improvements">corrade-changelog-latest-changes</docanchor>
-    <docanchor file="corrade-changelog" title="Containers library">corrade-changelog-latest-changes-containers</docanchor>
-    <docanchor file="corrade-changelog" title="PluginManager library">corrade-changelog-latest-changes-pluginmanager</docanchor>
-    <docanchor file="corrade-changelog" title="TestSuite library">corrade-changelog-latest-changes-testsuite</docanchor>
-    <docanchor file="corrade-changelog" title="Utility library">corrade-changelog-latest-changes-utility</docanchor>
-    <docanchor file="corrade-changelog" title="Build system">corrade-changelog-latest-buildsystem</docanchor>
-    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-latest-bugfixes</docanchor>
-    <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-latest-deprecated</docanchor>
-    <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-latest-compatibility</docanchor>
-    <docanchor file="corrade-changelog" title="Documentation">corrade-changelog-latest-documentation</docanchor>
-    <docanchor file="corrade-changelog" title="2015-05 snapshot">corrade-changelog-2015-05</docanchor>
-    <docanchor file="corrade-changelog" title="2014-06 snapshot">corrade-changelog-2014-06</docanchor>
-    <docanchor file="corrade-changelog" title="2014-01 snapshot">corrade-changelog-2014-01</docanchor>
-    <docanchor file="corrade-changelog" title="2013-10 snapshot">corrade-changelog-2013-10</docanchor>
-    <docanchor file="corrade-changelog" title="2013-08 snapshot">corrade-changelog-2013-08</docanchor>
-    <docanchor file="corrade-changelog" title="Initial release">corrade-changelog-initial</docanchor>
+    <docanchor file="corrade-changelog" title="2018.02">corrade-changelog-2018-02</docanchor>
+    <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2018-02-dependencies</docanchor>
+    <docanchor file="corrade-changelog" title="New features">corrade-changelog-2018-02-new</docanchor>
+    <docanchor file="corrade-changelog" title="Containers library">corrade-changelog-2018-02-new-containers</docanchor>
+    <docanchor file="corrade-changelog" title="PluginManager library">corrade-changelog-2018-02-new-pluginmanager</docanchor>
+    <docanchor file="corrade-changelog" title="TestSuite library">corrade-changelog-2018-02-new-testsuite</docanchor>
+    <docanchor file="corrade-changelog" title="Utility library">corrade-changelog-2018-02-new-utility</docanchor>
+    <docanchor file="corrade-changelog" title="Changes and improvements">corrade-changelog-2018-02-changes</docanchor>
+    <docanchor file="corrade-changelog" title="Containers library">corrade-changelog-2018-02-changes-containers</docanchor>
+    <docanchor file="corrade-changelog" title="PluginManager library">corrade-changelog-2018-02-changes-pluginmanager</docanchor>
+    <docanchor file="corrade-changelog" title="TestSuite library">corrade-changelog-2018-02-changes-testsuite</docanchor>
+    <docanchor file="corrade-changelog" title="Utility library">corrade-changelog-2018-02-changes-utility</docanchor>
+    <docanchor file="corrade-changelog" title="Build system">corrade-changelog-2018-02-buildsystem</docanchor>
+    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-2018-02-bugfixes</docanchor>
+    <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-2018-02-deprecated</docanchor>
+    <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-2018-02-compatibility</docanchor>
+    <docanchor file="corrade-changelog" title="Documentation">corrade-changelog-2018-02-documentation</docanchor>
+    <docanchor file="corrade-changelog" title="2015.05">corrade-changelog-2015-05</docanchor>
+    <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2015-05-dependencies</docanchor>
+    <docanchor file="corrade-changelog" title="New features">corrade-changelog-2015-05-new</docanchor>
+    <docanchor file="corrade-changelog" title="Changes">corrade-changelog-2015-05-changes</docanchor>
+    <docanchor file="corrade-changelog" title="Build system">corrade-changelog-2015-05-buildsystem</docanchor>
+    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-2015-05-bugfixes</docanchor>
+    <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-2015-05-deprecated</docanchor>
+    <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-2015-05-compatibility</docanchor>
+    <docanchor file="corrade-changelog" title="2014.06">corrade-changelog-2014-06</docanchor>
+    <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2014-06-dependencies</docanchor>
+    <docanchor file="corrade-changelog" title="New features">corrade-changelog-2014-06-new</docanchor>
+    <docanchor file="corrade-changelog" title="Changes">corrade-changelog-2014-06-changes</docanchor>
+    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-2014-06-bugfixes</docanchor>
+    <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-2014-06-deprecated</docanchor>
+    <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-2014-06-compatibility</docanchor>
+    <docanchor file="corrade-changelog" title="2014.01">corrade-changelog-2014-01</docanchor>
+    <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2014-01-dependencies</docanchor>
+    <docanchor file="corrade-changelog" title="New features">corrade-changelog-2014-01-new</docanchor>
+    <docanchor file="corrade-changelog" title="Changes">corrade-changelog-2014-01-changes</docanchor>
+    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-2014-01-bugfixes</docanchor>
+    <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-2014-01-deprecated</docanchor>
+    <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-2014-01-compatibility</docanchor>
+    <docanchor file="corrade-changelog" title="Internal changes">corrade-changelog-2014-01-internal</docanchor>
+    <docanchor file="corrade-changelog" title="2013.10">corrade-changelog-2013-10</docanchor>
+    <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2013-10-dependencies</docanchor>
+    <docanchor file="corrade-changelog" title="New features">corrade-changelog-2013-10-new</docanchor>
+    <docanchor file="corrade-changelog" title="Changes">corrade-changelog-2013-10-changes</docanchor>
+    <docanchor file="corrade-changelog" title="Build system">corrade-changelog-2013-10-buildsystem</docanchor>
+    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-2013-10-bugfixes</docanchor>
+    <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-2013-10-deprecated</docanchor>
+    <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-2013-10-compatibility</docanchor>
+    <docanchor file="corrade-changelog" title="2013.08">corrade-changelog-2013-08</docanchor>
+    <docanchor file="corrade-changelog" title="2012.02">corrade-changelog-2012-02</docanchor>
   </compound>
   <compound kind="page">
     <name>interconnect</name>
