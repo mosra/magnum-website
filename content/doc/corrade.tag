@@ -8020,55 +8020,11 @@
     <filename>corrade-example-index</filename>
   </compound>
   <compound kind="page">
-    <name>corrade-coding-style</name>
-    <title>Coding style</title>
-    <filename>corrade-coding-style</filename>
-    <docanchor file="corrade-coding-style" title="Text files in general">corrade-coding-style-text</docanchor>
-    <docanchor file="corrade-coding-style" title="CMake code">corrade-coding-style-cmake</docanchor>
-    <docanchor file="corrade-coding-style" title="CMake modules">corrade-coding-style-cmake-modules</docanchor>
-    <docanchor file="corrade-coding-style" title="C++ code">corrade-coding-style-cpp</docanchor>
-    <docanchor file="corrade-coding-style" title="File and directory naming">corrade-coding-style-cpp-filesystem</docanchor>
-    <docanchor file="corrade-coding-style" title="File structure">corrade-coding-style-cpp-files</docanchor>
-    <docanchor file="corrade-coding-style" title="Code format">corrade-coding-style-cpp-format</docanchor>
-    <docanchor file="corrade-coding-style" title="Naming">corrade-coding-style-cpp-naming</docanchor>
-    <docanchor file="corrade-coding-style" title="Forward declarations and forward declaration headers">corrade-coding-style-cpp-forward-declarations</docanchor>
-    <docanchor file="corrade-coding-style" title="Namespace declarations">corrade-coding-style-cpp-namespace</docanchor>
-    <docanchor file="corrade-coding-style" title="Class and structure declarations">corrade-coding-style-cpp-classes</docanchor>
-    <docanchor file="corrade-coding-style" title="Blocks, whitespace and indentation">corrade-coding-style-cpp-style</docanchor>
-    <docanchor file="corrade-coding-style" title="Switch statements">corrade-coding-style-cpp-switches</docanchor>
-    <docanchor file="corrade-coding-style" title="Class member and function keywords">corrade-coding-style-cpp-keywords</docanchor>
-    <docanchor file="corrade-coding-style" title="Preprocessor macros">corrade-coding-style-cpp-macros</docanchor>
-    <docanchor file="corrade-coding-style" title="Class constructors and destructors">corrade-coding-style-cpp-constructors</docanchor>
-    <docanchor file="corrade-coding-style" title="Constant expressions and constants">corrade-coding-style-cpp-constexpr</docanchor>
-    <docanchor file="corrade-coding-style" title="Assertions">corrade-coding-style-cpp-assert</docanchor>
-    <docanchor file="corrade-coding-style" title="Enums and inheritance">corrade-coding-style-cpp-enum-inheritance</docanchor>
-    <docanchor file="corrade-coding-style" title="Initialization">corrade-coding-style-cpp-initialization</docanchor>
-    <docanchor file="corrade-coding-style" title="Virtual functions">corrade-coding-style-cpp-virtual</docanchor>
-    <docanchor file="corrade-coding-style" title="Naked pointers">corrade-coding-style-cpp-pointers</docanchor>
-    <docanchor file="corrade-coding-style" title="Discouraged C/C++ features">corrade-coding-style-cpp-discouraged</docanchor>
-    <docanchor file="corrade-coding-style" title="Heavy STL headers">corrade-coding-style-cpp-heavy-headers</docanchor>
-    <docanchor file="corrade-coding-style" title="using namespace keyword">corrade-coding-style-cpp-using</docanchor>
-    <docanchor file="corrade-coding-style" title="C-style casts">corrade-coding-style-cpp-backward</docanchor>
-    <docanchor file="corrade-coding-style" title="Unscoped and untyped enums">corrade-coding-style-cpp-enums</docanchor>
-    <docanchor file="corrade-coding-style" title="static keyword">corrade-coding-style-cpp-anonymous-namespace</docanchor>
-    <docanchor file="corrade-coding-style" title="Comments">corrade-coding-style-comments</docanchor>
-    <docanchor file="corrade-coding-style" title="Doxygen documentation">corrade-coding-style-documentation</docanchor>
-    <docanchor file="corrade-coding-style" title="Section ordering">corrade-coding-style-documentation-ordering</docanchor>
-    <docanchor file="corrade-coding-style" title="Special documentation commands">corrade-coding-style-documentation-commands</docanchor>
-    <docanchor file="corrade-coding-style" title="Code">corrade-coding-style-documentation-commands-code</docanchor>
-    <docanchor file="corrade-coding-style" title="Documentation-related TODOs">corrade-coding-style-documentation-commands-todoc</docanchor>
-    <docanchor file="corrade-coding-style" title="Debugging operators">corrade-coding-style-documentation-commands-debugoperator</docanchor>
-    <docanchor file="corrade-coding-style" title="Configuration value parsers and writers">corrade-coding-style-documentation-commands-configurationvalue</docanchor>
-    <docanchor file="corrade-coding-style" title="Partially supported features">corrade-coding-style-documentation-commands-partialsupport</docanchor>
-    <docanchor file="corrade-coding-style" title="Backwards compatibility and experimental features">corrade-coding-style-documentation-commands-experimental</docanchor>
-    <docanchor file="corrade-coding-style" title="Git">corrade-coding-style-git</docanchor>
-    <docanchor file="corrade-coding-style" title="Commit message format">corrade-coding-style-git-commits</docanchor>
-    <docanchor file="corrade-coding-style" title="Repository, branch and tag format">corrade-coding-style-git-branches</docanchor>
-  </compound>
-  <compound kind="page">
     <name>corrade-changelog</name>
     <title>Changelog</title>
     <filename>corrade-changelog</filename>
+    <docanchor file="corrade-changelog" title="Changes since 2018.02">corrade-changelog-latest</docanchor>
+    <docanchor file="corrade-changelog" title="Documentation">corrade-changelog-latest-docs</docanchor>
     <docanchor file="corrade-changelog" title="2018.02">corrade-changelog-2018-02</docanchor>
     <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2018-02-dependencies</docanchor>
     <docanchor file="corrade-changelog" title="New features">corrade-changelog-2018-02-new</docanchor>
@@ -8119,6 +8075,73 @@
     <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-2013-10-compatibility</docanchor>
     <docanchor file="corrade-changelog" title="2013.08">corrade-changelog-2013-08</docanchor>
     <docanchor file="corrade-changelog" title="2012.02">corrade-changelog-2012-02</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>corrade-developers</name>
+    <title>Developers guide</title>
+    <filename>corrade-developers</filename>
+    <docanchor file="corrade-developers" title="Checklist for adding / removing a library">corrade-developers-library</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for adding / removing a plugin">corrade-developers-plugin</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for adding / removing a plugin interface">corrade-developers-plugin-interface</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for adding / removing a tool">corrade-developers-tool</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for adding / removing an example">corrade-developers-example</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for adding / removing a new source / header file">corrade-developers-file</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for adding / removing a symbol">corrade-developers-symbol</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for adding a new CMake documentation page">corrade-developers-page</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for deprecating a feature">corrade-developers-deprecation</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for removing a feature">corrade-developers-removing</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for adding, removing or updating a dependency">corrade-developers-dependency</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for adding or removing a port">corrade-developers-port</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for updating copyright year">corrade-developers-copyright-year</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for uploading documentation">corrade-developers-documentation</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for merging a PR">corrade-developers-pr</docanchor>
+    <docanchor file="corrade-developers" title="Checklist for making a release">corrade-developers-release</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>corrade-coding-style</name>
+    <title>Coding style</title>
+    <filename>corrade-coding-style</filename>
+    <docanchor file="corrade-coding-style" title="Text files in general">corrade-coding-style-text</docanchor>
+    <docanchor file="corrade-coding-style" title="CMake code">corrade-coding-style-cmake</docanchor>
+    <docanchor file="corrade-coding-style" title="CMake modules">corrade-coding-style-cmake-modules</docanchor>
+    <docanchor file="corrade-coding-style" title="C++ code">corrade-coding-style-cpp</docanchor>
+    <docanchor file="corrade-coding-style" title="File and directory naming">corrade-coding-style-cpp-filesystem</docanchor>
+    <docanchor file="corrade-coding-style" title="File structure">corrade-coding-style-cpp-files</docanchor>
+    <docanchor file="corrade-coding-style" title="Code format">corrade-coding-style-cpp-format</docanchor>
+    <docanchor file="corrade-coding-style" title="Naming">corrade-coding-style-cpp-naming</docanchor>
+    <docanchor file="corrade-coding-style" title="Forward declarations and forward declaration headers">corrade-coding-style-cpp-forward-declarations</docanchor>
+    <docanchor file="corrade-coding-style" title="Namespace declarations">corrade-coding-style-cpp-namespace</docanchor>
+    <docanchor file="corrade-coding-style" title="Class and structure declarations">corrade-coding-style-cpp-classes</docanchor>
+    <docanchor file="corrade-coding-style" title="Blocks, whitespace and indentation">corrade-coding-style-cpp-style</docanchor>
+    <docanchor file="corrade-coding-style" title="Switch statements">corrade-coding-style-cpp-switches</docanchor>
+    <docanchor file="corrade-coding-style" title="Class member and function keywords">corrade-coding-style-cpp-keywords</docanchor>
+    <docanchor file="corrade-coding-style" title="Preprocessor macros">corrade-coding-style-cpp-macros</docanchor>
+    <docanchor file="corrade-coding-style" title="Class constructors and destructors">corrade-coding-style-cpp-constructors</docanchor>
+    <docanchor file="corrade-coding-style" title="Constant expressions and constants">corrade-coding-style-cpp-constexpr</docanchor>
+    <docanchor file="corrade-coding-style" title="Assertions">corrade-coding-style-cpp-assert</docanchor>
+    <docanchor file="corrade-coding-style" title="Enums and inheritance">corrade-coding-style-cpp-enum-inheritance</docanchor>
+    <docanchor file="corrade-coding-style" title="Initialization">corrade-coding-style-cpp-initialization</docanchor>
+    <docanchor file="corrade-coding-style" title="Virtual functions">corrade-coding-style-cpp-virtual</docanchor>
+    <docanchor file="corrade-coding-style" title="Naked pointers">corrade-coding-style-cpp-pointers</docanchor>
+    <docanchor file="corrade-coding-style" title="Discouraged C/C++ features">corrade-coding-style-cpp-discouraged</docanchor>
+    <docanchor file="corrade-coding-style" title="Heavy STL headers">corrade-coding-style-cpp-heavy-headers</docanchor>
+    <docanchor file="corrade-coding-style" title="using namespace keyword">corrade-coding-style-cpp-using</docanchor>
+    <docanchor file="corrade-coding-style" title="C-style casts">corrade-coding-style-cpp-backward</docanchor>
+    <docanchor file="corrade-coding-style" title="Unscoped and untyped enums">corrade-coding-style-cpp-enums</docanchor>
+    <docanchor file="corrade-coding-style" title="static keyword">corrade-coding-style-cpp-anonymous-namespace</docanchor>
+    <docanchor file="corrade-coding-style" title="Comments">corrade-coding-style-comments</docanchor>
+    <docanchor file="corrade-coding-style" title="Doxygen documentation">corrade-coding-style-documentation</docanchor>
+    <docanchor file="corrade-coding-style" title="Section ordering">corrade-coding-style-documentation-ordering</docanchor>
+    <docanchor file="corrade-coding-style" title="Special documentation commands">corrade-coding-style-documentation-commands</docanchor>
+    <docanchor file="corrade-coding-style" title="Code">corrade-coding-style-documentation-commands-code</docanchor>
+    <docanchor file="corrade-coding-style" title="Documentation-related TODOs">corrade-coding-style-documentation-commands-todoc</docanchor>
+    <docanchor file="corrade-coding-style" title="Debugging operators">corrade-coding-style-documentation-commands-debugoperator</docanchor>
+    <docanchor file="corrade-coding-style" title="Configuration value parsers and writers">corrade-coding-style-documentation-commands-configurationvalue</docanchor>
+    <docanchor file="corrade-coding-style" title="Partially supported features">corrade-coding-style-documentation-commands-partialsupport</docanchor>
+    <docanchor file="corrade-coding-style" title="Backwards compatibility and experimental features">corrade-coding-style-documentation-commands-experimental</docanchor>
+    <docanchor file="corrade-coding-style" title="Git">corrade-coding-style-git</docanchor>
+    <docanchor file="corrade-coding-style" title="Commit message format">corrade-coding-style-git-commits</docanchor>
+    <docanchor file="corrade-coding-style" title="Repository, branch and tag format">corrade-coding-style-git-branches</docanchor>
   </compound>
   <compound kind="page">
     <name>interconnect</name>
