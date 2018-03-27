@@ -15,11 +15,6 @@ A basic implementation of
 by Eric Heitz, Jonathan Dupuy, Stephen Hill and David Neubelt.  Three lights
 are displayed, each with different orientation and parameters.
 
-.. note-warning::
-
-    This example currently doesn't work on browsers that don't support the
-    :webglext:`OES_texture_float_linear` extension. Fix will arrive later.
-
 .. topic:: Key controls
 
     -   :label-default:`W` / :label-default:`A` / :label-default:`S` /
