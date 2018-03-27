@@ -16,7 +16,9 @@ For the full experience, this example requires a WebVR 1.1 capable browser and
 a VR headset. If you don't have a VR headset, you can try to load the example
 on your phone or use one of the
 `WebVR API emulation <https://chrome.google.com/webstore/detail/webvr-api-emulation/gbdnpaebafagioggnhkacnaaahpiefil>`_
-browser extensions.
+browser extensions. You may need to enable WebVR support explicitly on your
+browser --- on Chrome go to ``chrome://flags`` and search for WebVR. Works on
+Android as well.
 
 .. topic:: Controls
 
