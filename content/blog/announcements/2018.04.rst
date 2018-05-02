@@ -1,0 +1,483 @@
+Magnum 2018.04 released --- with custom renderer support
+########################################################
+
+:date: 2018-05-02
+:category: Announcements
+:cover: {filename}/img/blog/announcements/2018.04/cover.jpg
+:tags: Corrade, C++, OpenGL, Android, Metal, D3D, Vulkan, CMake, Assimp, Vcpkg,
+    glTF
+:summary: The new release brings more flexibility to asset management and
+    rendering abstractions, improves plugin handling and showcases Leap Motion
+    integration.
+
+Two months after the previous release, Magnum comes with the biggest change in
+five years of its public history. With 2018.04 the OpenGL wrapping layer and
+asset management APIs are no longer a core part of the library, but completely
+optional --- this finally allows for the Vulkan port implementation and also
+makes it possible to use Magnum in contexts where it was not possible before.
+The changelog since `2018.02 <{filename}/blog/announcements/2018.02.rst>`_ is
+almost as long as list of changes for whole three years before, so let's dive
+right in!
+
+OpenGL wrapping layer made optional
+===================================
+
+There's a new :dox:`GL` library containing all buffer, mesh, texture and
+other APIs that were previously part of the core library. It's built by
+default, but can be completely disabled. Some Magnum libraries still have a
+hard dependency on it, at the moment it's :dox:`Text` and :dox:`Shaders`. This
+will change during the next releases, especially the :dox:`Text` library is
+scheduled to receive updates that separate the text layouting from GPU
+rendering. However, these updates will be rather incremental compared to this
+release.
+
+Some Magnum libraries provide functionality that makes use of the :dox:`GL`
+library (for example :dox:`MeshTools::compile()` or
+:dox:`DebugTools::textureSubImage()`). This doesn't make them tied to it,
+however --- you can disable OpenGL integration and leave just the API-agnostic
+features there. Look :dox:`in the documentation <building-features>` for
+details.
+
+API-independent asset management
+================================
+
+Besides having the :dox:`GL` library optional, the :dox:`Trade` library is now
+optional as well --- so if you use Magnum for GPU data processing and don't
+need any image decoding plugins or mesh import, you can use Magnum without any
+of that, with faster build times and smaller deploy sizes.
+
+To make the asset management APIs independent on OpenGL, there are now generic
+:dox:`PixelFormat` / :dox:`CompressedPixelFormat`, :dox:`MeshPrimitive`, :dox:`SamplerFilter`, :dox:`SamplerMipmap` and :dox:`SamplerWrapping` enums.
+Each of these contains a set of most widely used formats/types and all image
+and scene importers now describe  data using those generic types. The new mesh
+primitive and sampler types retain their original naming, because that's in
+line with how most graphics APIs including Vulkan, Metal, or D3D name them.
+However I dropped the unnecessary pixel format / pixel type distinction
+enforced by OpenGL legacy and made just a single :dox:`PixelFormat` enum.
+Naming of its values is a result of finding a good compromise between
+readability and clarity with unambiguous implicit mapping to GPU APIs. It
+resembles `MTLPixelFormat <https://developer.apple.com/documentation/metal/mtlpixelformat>`_
+the most, which itself is a more readable alternative to what
+`VkFormat <https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkFormat.html>`_
+or `D3D formats <https://msdn.microsoft.com/en-us/library/windows/desktop/bb153349(v=vs.85).aspx>`_
+offer.
+
+.. code:: c++
+
+    const Color3 data[]{
+        0xff0000_rgbf, 0x00ff00_rgbf,
+        0x00ffff_rgbf, 0xffff00_rgbf
+    };
+
+    /* Three-component 32-bit floating point pixels */
+    ImageView2D image{PixelFormat::RGB32F, {2, 2}, data};
+
+*However*, that does not mean you are now restricted to some "lowest common
+denominator" subset, as is unfortunately the case in some graphics API
+abstractions --- if you feel the need for a BGR565 type or simply want to use
+the OpenGL types directly like before, just do it:
+
+.. code:: c++
+
+    ImageView2D image{GL::PixelFormat::BGR, GL::PixelType::UnsignedShort565Rev,
+        {32, 32}, data};
+
+The :dox:`Image`, :dox:`ImageView` and :dox:`Trade::ImageData` APIs support
+both --- if you pass them a generic format, the :dox:`GL` library converts it
+to the well-known :dox:`GL::PixelFormat` / :dox:`GL::PixelType` pair that
+OpenGL understands; if you pass it an implementation-specific format, it will
+use it as-is.
+
+The translation to OpenGL-specific formats is done implicitly (i.e., all APIs
+in the :dox:`GL` library that take the generic enum have an overload that takes
+the OpenGL-specific value as well), but you can also request explicit
+conversion using :dox:`GL::pixelFormat()`, :dox:`GL::pixelType()`,
+:dox:`GL::samplerWrapping()` and other translation functions.
+
+.. block-success:: Implementation details
+
+    The translation functions simply index into a :cpp:`constexpr` lookup table
+    using zero-based enums. The approach is loosely based on
+    `this detailed article by G-Truc <https://www.g-truc.net/post-0704.html>`_
+    and is as fast as it can possibly be. I'm going a bit further to ensure
+    that the mapping is valid and robust for further additions, but all of the
+    extra work is done in a separate test case, not affecting runtime
+    translation performance. `Have a look at the code <https://github.com/mosra/magnum/blob/9457cfc37670bd407f920da05026f62039194431/src/Magnum/GL/Test/PixelFormatTest.cpp#L117-L150>`_,
+    if you are interested.
+
+This is not limited to OpenGL, though --- if you want to use the Magnum image
+classes with Metal-specific formats, for example, you can do so, too. In this
+case the constructor requires you to specify pixel size manually, as it needs
+it for various checks and operations later:
+
+.. code:: c++
+
+    /* Default pixel storage, 8-bit sRGB + alpha, four bytes per pixel */
+    ImageView2D view{{}, MTLPixelFormatRGBA8Unorm_sRGB, {}, 4, {256, 256}, data};
+
+Using custom renderers with Magnum
+==================================
+
+Making the :dox:`GL` library optional was primarily a first step towards Vulkan
+support (work on which will now be resumed, you can watch the progress in
+:gh:`mosra/magnum#234`), but this opens up more possibilites than that --- you
+can now use Magnum in projects that have their own rendering engines! To prove
+the point, there's now :dox:`a new example <examples-triangle-sokol>` that uses
+the :gh:`sokol_gfx <floooh/sokol>` single-file graphics API abstraction library
+to render a triangle on screen without relying on Magnum OpenGL support at all.
+
+.. note-success::
+
+    I was very impressed by how clean and simple the API of ``sokol_gfx`` is
+    --- it took me 20 minutes and 150 lines of code to get from a blank file to
+    a triangle on screen, and the whole library is mere 8000 lines. Hats off,
+    :gh:`floooh`!
+
+    .. class:: m-text m-em m-small
+
+    (For comparison, `my first Vulkan triangle <https://twitter.com/czmosra/status/970601850348212225>`_
+    took me 16 hours and 512 lines.)
+
+.. container:: m-row
+
+    .. container:: m-col-m-6 m-push-m-3
+
+        .. figure:: {filename}/showcase/triangle/screenshot.png
+            :alt: sokol_gfx Triangle example screenshot
+            :figclass: m-figure m-fullwidth
+            :target: http://doc.magnum.graphics/magnum/examples-triangle-sokol.html
+
+            Triangle using sokol_gfx
+
+            Shows how to use custom renderers with Magnum.
+
+The possibilities don't end here --- if the :gh:`bgfx <bkaradzic/bgfx>` library
+is your renderer of choice, you can still make use of the
+well-documented Magnum :dox:`Math` library, :dox:`SceneGraph` or the :dox:`OpenGexImporter <Trade::OpenGexImporter>` and other plugins. Or use the
+:dox:`TestSuite <TestSuite::Tester>` with Unreal Engine and compare your shader
+output against a ground truth using :dox:`DebugTools::CompareImage`, for
+example.
+
+Plugin workflow improvements
+============================
+
+A lot of effort went into improving the general plugin workflow. Until now,
+loading a file using plugins involved quite a lot of setup in order to find
+and load the correct plugin from the filesystem. Not anymore --- loading a
+model from a glTF file is now just a matter of this:
+
+.. code:: c++
+
+    PluginManager::Manager<Trade::AbstractImporter> manager;
+    std::unique_ptr<Trade::AbstractImporter> importer =
+        manager.loadAndInstantiate("GltfImporter");
+
+    importer->openFile("cave.gltf");
+    Containers::Optional<Trade::MeshData3D> data =
+        importer->mesh3D(importer->mesh3DForName("treasure-chest"));
+
+And the workflow is the same independently on the platform --- thanks to
+:gh:`Squareys` the Vcpkg packages also received updates that make the plugin
+"just work" on Windows as well, including deployment of all necessary files.
+
+There's more --- plugin alias priorities, plugin-specific configuration and
+automagic import of static plugins. And if you like glTF, there's now a fresh
+:dox:`TinyGltfImporter <Trade::TinyGltfImporter>` plugin for importing this
+format. Further details about all plugin usability improvements are
+`in a dedicated article <{filename}/blog/announcements/plugin-usability-improvements.rst>`_.
+
+Package updates
+===============
+
+Thanks to :gh:`xyproto`, the ArchLinux ``[community]`` repository now contains
+stable versions of Corrade, Magnum and Magnum Plugins packages, so if you are
+on ArchLinux, you can just do this now:
+
+.. code:: sh
+
+    sudo pacman -S magnum
+
+The Homebrew packages are now providing stable versions so you no longer need
+to install ``--HEAD`` versions:
+
+.. code:: sh
+
+    brew install mosra/magnum/magnum
+
+The Homebrew and ArchLinux AUR packages are already updated to 2018.04, the
+ArchLinux ``[community]`` and Vcpkg packages are expecting an update soon (see
+:gh:`microsoft/vcpkg#3407`). Besides these, Magnum provides in-tree Debian/
+Ubuntu and Gentoo packages as usual, head over to the
+:dox:`documentation <building-packages>` for details.
+
+.. note-info::
+
+    We're aware of the freshly announced `Linux and macOS support in Vcpkg <https://blogs.msdn.microsoft.com/vcblog/2018/04/24/announcing-a-single-c-library-manager-for-linux-macos-and-windows-vcpkg/>`_
+    and are working on making Magnum Vcpkg packages work on these systems. It's
+    not done yet, though.
+
+More? Yes, there's more!
+========================
+
+Thanks to :gh:`Squareys` (again!), we have a new fun example integrating the
+`Leap Motion SDK <https://leapmotion.com/>`_. See its
+:dox:`full source in the documentation <examples-leapmotion>`.
+
+.. container:: m-row
+
+    .. container:: m-col-m-6 m-push-m-3
+
+        .. figure:: {filename}/img/blog/announcements/2018.04/leapmotion.gif
+            :alt: Leap Motion example screenshot
+            :figclass: m-fullwidth
+            :target: http://doc.magnum.graphics/magnum/examples-triangle-sokol.html
+
+            Leap Motion
+
+            (In case you wonder how can :gh:`Squareys` move his hands so fast,
+            it's because *he uses vim*.)
+
+Android support got an overhaul, supporting the Gradle build and new
+Clang-based NDKs. There's now a :dox:`very detailed Android guide <platforms-android>`
+in the documentation, explaining all quirks and annoyances you might encounter.
+Other :dox:`platform-specific guides <platforms>` will get gradually filled
+with useful information regarding specific targets.
+
+The :dox:`GL` library has now an initial support for OpenGL ES 3.2 and OpenGL
+4.6 and received various clarifications and updates regarding floating-point
+formats on embedded systems.
+
+The :dox:`Primitives` namespace was simplified to a bunch of free functions
+instead of the OOP-heavy interface before. There are new cone, grid and 3D
+circle primitives and the documentation now shows how every primitive looks:
+
+.. image:: {filename}/img/blog/announcements/2018.04/primitives.jpg
+    :alt: Primitives namespace documentation
+
+Among other things the :dox:`examples-ovr` example got simplified and there's a
+second experimental version of the :dox:`DartIntegration` library by
+:gh:`costashatz`.
+
+Upgrading from previous versions
+================================
+
+Because the API changed quite heavily, upgrading from previous versions is not
+as smooth as usual. Nevertheless, great care was taken to make this process as
+frictionless as possible.
+
+First of all, if you are not on `2018.02 <{filename}/blog/announcements/2018.02.rst>`_
+yet, please update to it first to reduce the amount of unwanted surprises.
+Next, in case you use Magnum with the ``BUILD_DEPRECATED`` option disabled
+(it's usually enabled by default), enable it again --- it will help with the
+upgrade a lot.
+
+Update your copies of ``FindCorrade.cmake``, ``FindMagnum.cmake`` and others
+--- in the ideal case just doing that should make your code compile and link
+again, although with a lot of deprecation warnings. The deprecation warnings
+include helpful messages showing what to use instead, a high-level overview of
+the changes needed is below:
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        CMake setup before:
+
+        .. code:: cmake
+            :class: m-inverted
+
+            find_package(Magnum REQUIRED
+                Sdl2Application)
+
+            add_exectutable(my-app main.cpp)
+            target_link_libraries(my-app PRIVATE
+                Magnum::Application
+                Magnum::Magnum)
+
+    .. container:: m-col-m-6
+
+        With 2018.04:
+
+        .. code:: cmake
+            :class: m-inverted
+            :hl_lines: 2 3 9 10
+
+            find_package(Magnum REQUIRED
+                GL
+                Trade
+                Sdl2Application)
+
+            add_exectutable(my-app main.cpp)
+            target_link_libraries(my-app PRIVATE
+                Magnum::Application
+                Magnum::GL
+                Magnum::Trade
+                Magnum::Magnum)
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        Includes before:
+
+        .. code:: c++
+            :class: m-inverted
+            :hl_lines: 3 4 5
+
+            #include <Magnum/ImageView.h>
+            #include <Magnum/PixelFormat.h>
+            #include <Magnum/Buffer.h>
+            #include <Magnum/Framebuffer.h>
+            #include <Magnum/Mesh.h>
+
+    .. container:: m-col-m-6
+
+        With 2018.04:
+
+        .. code:: c++
+            :class: m-inverted
+            :hl_lines: 3 4 5
+
+            #include <Magnum/ImageView.h>
+            #include <Magnum/PixelFormat.h>
+            #include <Magnum/GL/Buffer.h>
+            #include <Magnum/GL/Framebuffer.h>
+            #include <Magnum/GL/Mesh.h>
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        Mesh setup before:
+
+        .. code:: c++
+            :class: m-inverted
+            :hl_lines: 1 3 5 7 10
+
+            Buffer vertices, indices;
+            vertices.setData(data,
+                BufferUsage::StaticDraw);
+            indices.setData(indexData,
+                BufferUsage::StaticDraw);
+
+            Mesh mesh{MeshPrimitive::Triangles};
+            mesh.addVertexBuffer(vertices, 0, ...)
+                .setIndexBuffer(indices, 0,
+                    Mesh::IndexType::UnsignedShort);
+
+    .. container:: m-col-m-6
+
+        With 2018.02:
+
+        .. code:: c++
+            :class: m-inverted
+            :hl_lines: 1 3 5 7 10
+
+            GL::Buffer vertices;
+            vertices.setData(data,
+                GL::BufferUsage::StaticDraw);
+            indices.setData(indexData,
+                GL::BufferUsage::StaticDraw);
+
+            GL::Mesh mesh{MeshPrimitive::Triangles};
+            mesh.addVertexBuffer(vertices, 0, ...)
+                .setIndexBuffer(indices, 0,
+                    MeshIndexType::UnsignedShort);
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        Texture setup before:
+
+        .. code:: c++
+            :class: m-inverted
+            :hl_lines: 2 5 7 9 11
+
+            ImageView2D image{
+                PixelFormat::Red, PixelType::UnsignedByte,
+                size, data};
+
+            Texture2D t;
+            t.setMagnificationFilter(
+                Sampler::Filter::Linear)
+             .setMinificationFilter(
+                Sampler::Filter::Linear)
+             .setWrapping(Sampler::Wrapping::ClampToEdge)
+             .setStorage(1, TextureFormat::R8, size)
+             .setSubImage(0, {}, image);
+
+    .. container:: m-col-m-6
+
+        With 2018.02:
+
+        .. code:: c++
+            :class: m-inverted
+            :hl_lines: 2 5 7 9 11
+
+            ImageView2D image{
+                PixelFormat::R8Unorm,
+                size, data};
+
+            GL::Texture2D t;
+            t.setMagnificationFilter(
+                SamplerFilter::Linear)
+             .setMinificationFilter(
+                SamplerFilter::Linear)
+             .setWrapping(SamplerWrapping::ClampToEdge)
+             .setStorage(1, GL::TextureFormat::R8, size)
+             .setSubImage(0, {}, image);
+
+The above snippets assume you'd want to use the generic pixel format and
+sampler state enums as it's less typing, but you can use their GL-specific
+alternatives as well. You also might not need to link to all the libraries
+shown above if you don't use any functionality from them.
+
+Look in the changelog for a full overview of all :dox:`deprecated features <changelog-2018-04-deprecated>` and also :dox:`backwards-incompatible changes <changelog-2018-04-compatibility>`.
+
+`Complete changelog`_
+=====================
+
+There's a lot of small changes that would be too boring to mention in full
+here. As usual, you can find a complete list of changes since 2018.02 in the
+documentation:
+
+-   :dox:`Changes in Corrade 2018.04 <corrade-changelog-2018-04>`
+-   :dox:`Changes in Magnum 2018.04 <changelog-2018-04>`
+-   :dox:`Changes in Magnum Plugins 2018.04 <changelog-plugins-2018-04>`
+-   :dox:`Changes in Magnum Integration 2018.04 <changelog-integration-2018-04>`
+-   :dox:`Changes in Magnum Extras 2018.04 <changelog-extras-2018-04>`
+-   :dox:`Changes in Magnum Examples 2018.04 <changelog-examples-2018-04>`
+
+`Special thanks`_
+=================
+
+Again a lot of work in this release is done thanks to external contributors:
+
+-   **Tobias Stein** (:gh:`NussknackerXXL`) --- initial implementation of the
+    :dox:`TinyGltfImporter <Trade::TinyGltfImporter>` plugin
+-   **Jonathan Hale** (:gh:`Squareys`) --- Oculus VR example simplification,
+    contributions to the tiny_gltf importer plugin, Leap Motion example, Vcpkg
+    package maintenance and *much more*
+-   **Konstantinos Chatzilygeroudis** (:gh:`costashatz`) --- improvements to
+    the DART integration library
+-   **Alexander F Rødseth** (:gh:`xyproto`) --- ArchLinux ``[community]``
+    package maintenance
+
+Thanks a lot to everyone, not to forget all people that reported issues or just
+wrote encouraging messages on the `Gitter chat <https://gitter.im/mosra/magnum>`_.
+Cheers!
+
+.. note-warning::
+
+    The `Features <{filename}/features.rst>`_ pages are not updated to reflect
+    the latest changes yet --- it's on the tasklist together with other
+    improvements. Stay tuned :)
+
+.. note-dim::
+
+    Discussion: `Twitter <https://twitter.com/czmosra/status/991710844575715328>`_,
+    Reddit `r/cpp <https://www.reddit.com/r/cpp/comments/8gild1/magnum_201804_released_with_custom_renderer/>`_ and
+    `r/gamedev <https://www.reddit.com/r/gamedev/comments/8gilpj/magnum_201804_released_with_custom_renderer/>`_,
+    `Hacker News <https://news.ycombinator.com/item?id=16978436>`_,
+    `mailing list <https://groups.google.com/forum/#!topic/magnum-engine/RCiT7f1Q5Bk>`_

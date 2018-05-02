@@ -42,9 +42,10 @@ Magnum Engine
                 | quick guide to
                 | get you started
 
-            .. class:: m-text-center m-text m-primary m-noindent
+            .. class:: m-text-center m-text m-success m-noindent
 
-            | Version `2018.02 <{filename}/blog/announcements/2018.02.rst>`_ now out!
+            | Version `2018.04 <{filename}/blog/announcements/2018.04.rst>`_ with custom
+            | renderers now out!
 
 .. role:: raw-html(raw)
     :format: html
