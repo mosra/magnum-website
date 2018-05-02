@@ -11,6 +11,8 @@ Implementing a fast Doxygen search
 
 .. role:: ansi(code)
     :language: ansi
+.. role:: cpp(code)
+    :language: cpp
 .. role:: html(code)
     :language: html
 .. role:: js(code)
