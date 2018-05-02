@@ -134,6 +134,7 @@ DEFAULT_PAGINATION = 10
 
 PLUGIN_PATHS = ['m.css/pelican-plugins']
 PLUGINS = ['m.abbr',
+           'm.alias',
            'm.code',
            'm.components',
            'm.dox',

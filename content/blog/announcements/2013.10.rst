@@ -1,0 +1,71 @@
+October 2013 updates to Magnum
+##############################
+
+:date: 2013-10-30 18:50
+:modified: 2018-02-18
+:archived: True
+:alias: /blog/announcements/october-2013-updates/
+:category: Announcements
+:tags: C++, CMake, Corrade, OpenGL, WebGL, Emscripten
+:summary: Summary of changes during the first two months after public release.
+    Two new ports, usability improvements, OpenGL limit queries and
+    introduction of API deprecation.
+
+.. note-success:: Content care: May 06, 2018
+
+    Since NaCl support is
+    `no longer available <{filename}/blog/announcements/webassembly-support-and-more.rst>`_,
+    links to NaCl web demos were replaced with Emscripten demos. Other than
+    that, the functionality is the same.
+
+    With the 2018.02 release the versioning scheme and tag naming changed from
+    "Month Year snapshot" and ``snapshot-YYYY-MM`` to simply "YYYY.MM" and
+    ``vYYYY.MM``. All tags and links in the article were updated to follow the
+    new scheme.
+
+    Detailed changelogs are now part of the documentation. Code snippets are
+    kept in the original form for archival purposes.
+
+The version 2013.10 is available under the ``v2013.10`` tag in
+:gh:`Corrade <mosra/corrade^v2013.10>`, :gh:`Magnum <mosra/magnum^v2013.10>`,
+:gh:`Magnum Plugins <mosra/magnum-plugins^v2013.10>` and
+:gh:`Magnum Integration <mosra/magnum-integration^v2013.10>` GitHub
+repositories. This article will describe the most important changes, for
+detailed list follow the changelog links at the end of this announcement.
+
+`API deprecation and backwards compatibility`_
+==============================================
+
+Because the library is constantly evolving, some APIs will be replaced with
+faster, safer or more intuitive versions from time to time. The old API is then
+marked as deprecated and scheduled for removal in some future release. The
+libraries are source compatible, but not binary compatible, as full binary
+compatibility might impose unwanted performance issues, which is usually not
+wanted for high-performance graphics frameworks.
+
+Both Corrade and Magnum libraries are by default built with deprecated APIs
+included. However, to make your code future-proof and more robust, you should
+disable building of deprecated APIs by disabling ``BUILD_DEPRECATED`` CMake
+option. Information about whether given library is built with deprecated APIs
+or not is exposed via :dox:`CORRADE_BUILD_DEPRECATED` or
+:dox:`MAGNUM_BUILD_DEPRECATED` CMake variable and also preprocessor definition.
+Please note that the deprecated APIs will be periodically removed after some
+time (on which I have yet to decide, but the deprecation period will be not
+shorter than six months).
+
+The documentation now also contains list of deprecated APIs in both
+:dox:`Corrade <Corrade::deprecated>` and :dox:`Magnum <Corrade::deprecated>`,
+information about whether :dox:`CORRADE_BUILD_DEPRECATED` and
+:dox:`MAGNUM_BUILD_DEPRECATED` is enabled or not is now also printed in
+:dox:`magnum-info <magnum-gl-info>`.
+
+`Complete changelog`_
+=====================
+
+You can find a detailed list of changes in version 2013.10 in the
+documentation:
+
+-   :dox:`Changes in Corrade 2013.10 <corrade-changelog-2013-10>`
+-   :dox:`Changes in Magnum 2013.10 <changelog-2013-10>`
+-   :dox:`Changes in Magnum Plugins 2013.10 <changelog-plugins-2013-10>`
+-   :dox:`Changes in Magnum Integration 2013.10 <changelog-integration-2013-10>`

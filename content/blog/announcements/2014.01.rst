@@ -1,0 +1,137 @@
+January 2014 updates to Magnum
+##############################
+
+:date: 2014-01-21
+:modified: 2018-02-18
+:alias: /blog/announcements/january-2014-updates/
+:archived: True
+:category: Announcements
+:tags: C++, CMake, Corrade, OpenGL, Emscripten, NaCl
+:summary: Since the previous October snapshot Magnum gained Visual Studio port,
+    font conversion utility, improved text rendering along with example
+    application, support for OpenGL debug output, documentation updates, better
+    test coverage and many more usability improvements and fixes.
+
+.. role:: cpp(code)
+    :language: c++
+.. role:: label-flat-info
+    :class: m-label m-flat m-info
+.. role:: label-flat-success
+    :class: m-label m-flat m-success
+
+.. note-success:: Content care: May 06, 2018
+
+    Since NaCl support is
+    `no longer available <{filename}/blog/announcements/webassembly-support-and-more.rst>`_,
+    links to NaCl web demos were replaced with Emscripten demos. Other than
+    that, the functionality is the same.
+
+    With the 2018.02 release the versioning scheme and tag naming changed from
+    "Month Year snapshot" and ``snapshot-YYYY-MM`` to simply "YYYY.MM" and
+    ``vYYYY.MM``. All tags and links in the article were updated to follow the
+    new scheme, except for tags in the compatibility branch, which are kept in
+    their original form for archival purposes.
+
+    Detailed changelogs are now part of the documentation. Code snippets are
+    kept in the original form for archival purposes.
+
+The version 2014.01 is available under the ``v2014.01`` tag in
+:gh:`Corrade <mosra/corrade^v2014.01>`, :gh:`Magnum <mosra/magnum^v2014.01>`,
+:gh:`Magnum Plugins <mosra/magnum-plugins^v2014.01>` and
+:gh:`Magnum Integration <mosra/magnum-integration^v2014.01>` GitHub
+repositories. This article will describe the most important changes, for
+detailed list follow the changelog links at the end of this announcement.
+
+For compatibility branch there is the ``snapshot-2014-01-compatibility`` tag in
+:gh:`Corrade <mosra/corrade^snapshot-2014-01-compatibility>`,
+:gh:`Magnum <mosra/magnum^snapshot-2014-01-compatibility>` and
+:gh:`Magnum Plugins <mosra/magnum-plugins^snapshot-2014-01-compatibility>`
+repositories.
+
+`Google Groups discussion`_
+===========================
+
+You can now ask for help, share your work or participiate in development at the
+`new Google Groups forum <https://groups.google.com/forum/#!forum/magnum-engine>`_.
+The group is open to everyone, you just need Google account to post. In my
+opinion this is better than requiring everyone to create new account on some
+self-hosted forum.
+
+`New text rendering example`_
+=============================
+
+I added text rendering example to showcase new features such as text alignment
+and multi-line text, in addition to already existing distance-field rendering
+capabilities. See `showcase page <{filename}/showcase.rst>`_ for live
+application running on both Emscripten and Native Client. I also added live
+Textured Triangle example.
+
+.. container:: m-row
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [textured-triangle]
+            :end-before: [/textured-triangle]
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [text]
+            :end-before: [/text]
+
+`Using absolute includes by default`_
+=====================================
+
+All projects were switched to use absolute includes by default, i.e. headers
+are included this way:
+
+.. code:: c++
+
+    #include <Magnum/Math/Vector3.h>
+
+rather than this way:
+
+.. code:: c++
+
+    #include <Math/Vector3.h>
+
+This solves many problems with filename collisions (namely with Visual Studio
+compiler, Doxygen and possibly elsewhere), see :gh:`mosra/magnum#36` for more
+information. As this is a very drastic change, you may need to recreate your
+build directories and update at least ``FindCorrade.cmake`` and
+``FindMagnum.cmake`` CMake modules with new ones from ``modules/`` subdirectory
+in :gh:`Corrade <mosra/corrade/tree/master/modules>` and
+:gh:`Magnum <mosra/magnum/tree/master/modules>` repositories (and possibly also
+other ones).
+
+If you are building with deprecated features enabled (``BUILD_DEPRECATED``
+CMake parameter in *both* Corrade and Magnum), you can still use the old
+non-absolute includes, but you are encouraged to switch to absolute ones.
+
+`Visual Studio 2013 support`_
+=============================
+
+This release is the first one with experimental Visual Studio 2013 support.
+Because the compiler still lacks some required features (:cpp:`constexpr` and
+:cpp:`noexcept` keywords) and has some serious bugs in C++11 implementation,
+the support is provided only through ``compatibility`` branch. The port
+involves some ugly hacks and workarounds which can't be put in ``master``,
+hopefully the next MSVC release will make my life easier. Snapshot of
+``compatibility`` branch with MSVC 2013 support is available under
+``snapshot-2014-01-compatibility`` tag in
+:gh:`Corrade <mosra/corrade^snapshot-2014-01-compatibility>` and
+:gh:`Magnum <mosra/magnum^snapshot-2014-01-compatibility>` GitHub repositories.
+The compatibility branch doesn't contain anything new except workarounds for
+said compilers.
+
+`Complete changelog`_
+=====================
+
+You can find a detailed list of changes in version 2014.01 in the
+documentation:
+
+-   :dox:`Changes in Corrade 2014.01 <corrade-changelog-2014-01>`
+-   :dox:`Changes in Magnum 2014.01 <changelog-2014-01>`
+-   :dox:`Changes in Magnum Plugins 2014.01 <changelog-plugins-2014-01>`
+-   :dox:`Changes in Magnum Integration 2014.01 <changelog-integration-2014-01>`

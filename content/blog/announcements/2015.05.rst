@@ -1,0 +1,214 @@
+May 2015 updates to Magnum
+##########################
+
+:date: 2015-05-09
+:modified: 2018-02-18
+:archived: True
+:alias: /blog/announcements/may-2015-updates/
+:category: Announcements
+:tags: C++, CMake, Corrade, OpenGL, NaCl, WebGL, Emscripten
+:summary: The Magnum C++11/C++14 and OpenGL graphics engine gained OpenGEX
+    format support, a bunch of new importer plugins, cross-platform extension
+    loader, transform feedback support and new features from OpenGL ES 3.1 and
+    OpenGL 4.5, among other things.
+
+.. role:: cpp(code)
+    :language: c++
+.. role:: label-flat-success
+    :class: m-label m-flat m-success
+.. role:: label-flat-info
+    :class: m-label m-flat m-info
+
+.. note-success:: Content care: May 06, 2018
+
+    With the 2018.02 release the versioning scheme and tag naming changed from
+    "Month Year snapshot" and ``snapshot-YYYY-MM`` to simply "YYYY.MM" and
+    ``vYYYY.MM``. All tags and links in the article were updated to follow the
+    new scheme, except for tags in the compatibility branch, which are kept in
+    their original form for archival purposes.
+
+    Detailed changelogs are now part of the documentation. Code snippets are
+    kept in the original form for archival purposes.
+
+The new release comes almost a whole year after the previous one, mainly due to
+the fact that I'm currently full-time employed and I have less free time than I
+expected. Nevertheless the project accumulated quite a lot of changes over the
+year, so this changelog may be a bit overwhelming. I plan to do one smaller
+release in a few months to polish and clean up some more things and then I'll
+probably start breaking stuff in never-before-seen ways to make
+:gh:`Vulkan support <mosra/magnum#91>` a reality.
+
+The version 2015.05 is available under the ``v2015.05`` tag in
+:gh:`Corrade <mosra/corrade^v2015.05>`, :gh:`Magnum <mosra/magnum^v2015.05>`,
+:gh:`Magnum Plugins <mosra/magnum-plugins^v2015.05>` and
+:gh:`Magnum Integration <mosra/magnum-integration^v2015.05>` GitHub
+repositories. This article will describe the most important changes, for
+detailed list follow the changelog links at the end of this announcement.
+
+For compatibility branch there is the ``snapshot-2015-05-compatibility`` tag in
+:gh:`Corrade <mosra/corrade^snapshot-2015-05-compatibility>`,
+:gh:`Magnum <mosra/magnum^snapshot-2015-05-compatibility>`,
+:gh:`Magnum Plugins <mosra/magnum-plugins^snapshot-2015-05-compatibility>` and
+:gh:`Magnum Examples <mosra/magnum-plugins^snapshot-2015-05-compatibility>`
+repositories.
+
+`Plugin aliases, smart importers and new format support`_
+=========================================================
+
+In an ongoing attempt to make the engine useful even without a slew of external
+library dependencies, I added a bunch of dependency-less plugins for loading
+common scene and image formats (see the changelog below for a complete list). I
+had a firsthand experience about how crazy hard it is to get working Freetype,
+HarfBuzz or even libPNG binary for Windows, so there are more plugins planned
+(especially for dependency-less font handling), stay tuned.
+
+In addition to this, the plugin loader now supports aliases. It means that, to
+load PNG images, for example, you no longer need to worry about which
+particular plugin might be available on given platform and just always request
+PngImporter plugin:
+
+.. code:: c++
+
+    PluginManager::Manager<Trade::AbstractImporter> manager{MAGNUM_PLUGINS_IMPORTER_DIR};
+    std::unique_ptr<Trade::AbstractImporter> importer = manager.loadAndInstantiate("PngImporter");
+    // ...
+
+Now, if the ``PngImporter`` plugin is not available, it tries to load any other
+plugin that aliases with ``PngImporter``. Currently it might be for example
+:dox:`StbImageImporter <Trade::StbImageImporter>`, in future releases possibly
+also ``Sdl2ImageImporter`` or ``WebGlImageImporter``.
+
+Lastly, there are now *smart* image and scene loaders, named
+:dox:`AnyImageImporter <Trade::AnyImageImporter>` and
+:dox:`AnySceneImporter <Trade::AnySceneImporter>`.
+They try to detect file type from filename and then redirect the operation to
+dedicated importer plugin (so if you load ``image.tga``, for example, it tries
+to load it with ``TgaImporter``, if you load ``texture.png``, it tries to load
+it with ``PngImporter`` etc.). In combination with plugin aliases this makes a
+fairly powerful importer framework.
+
+`Initial OpenDDL/OpenGEX support`_
+==================================
+
+Possibly the biggest new importer plugin is the `OpenGEX <http://www.opengex.org/>`_
+format importer. If you haven't heard about it yet, it is a fairly new 3D scene
+file format based on the cleanly designed OpenDDL language. It aims to be a
+better alternative to the bloated XML-based COLLADA format and currently there
+are exporters from 3Ds Max, Maya and Blender.
+
+Current OpenGEX importer implementation in Magnum covers the same feature set
+as the :dox:`ColladaImporter <Trade::ColladaImporter>` plugin, but with faster
+and more robust implementation and hopefully with less bugs and uncovered
+corner cases. The future of the COLLADA importer is uncertain and it will
+probably be deprecated in favor of the new OpenGEX importer, because COLLADA
+support in 3D modelling software is far from ideal and the XML parser is hell
+to implement.
+
+The underlying :dox:`OpenDDL <OpenDdl::Document>` parser that powers the plugin
+is currently only a private part of the plugin, but if it is seen to be useful
+outside of the plugin, I may move it into a publicly usable library. Here's an
+example how OpenDDL file parsing can look like:
+
+.. code:: c++
+
+    OpenDdl::Document d;
+
+    /* Parse the document */
+    if(!d.parse(data, OpenGex::structures, OpenGex::properties)) {
+        // ...
+    }
+
+    /* Validate its structure */
+    if(!d.validate(OpenGex::rootStructures, OpenGex::structureInfo)) {
+        // ...
+    }
+
+    /* Parse all meshes */
+    for(OpenDdl::Structure geometryObject: d.childrenOf(OpenGex::GeometryObject)) {
+        /* Decide about primitive */
+        if(std::optional<OpenDdl::Property> primitive = geometryObject.findPropertyOf(OpenGex::primitive)) {
+            auto&& str = primitive->as<std::string>();
+            if(str == "triangles") {
+                // ...
+            } else if(str == "lines") {
+                // ...
+            } // ...
+        } else {
+            // default primitive ...
+        }
+
+        /* Parse vertex array */
+        OpenDdl::Structure vertexArray = geometryObject.firstChildOf(OpenGex::VertexArray);
+        auto&& attrib = vertexArray.propertyOf(OpenGex::attrib).as<std::string>();
+        if(attrib == "position") {
+            // ...
+        } else if(attrib == "normal") {
+            // ...
+        }
+
+        /* Parse vertex array data */
+        Containers::ArrayReference<const Float> vertexData = vertexArray.firstChild().asArray<Float>();
+        // ...
+    }
+
+The Viewer example was also updated to support loading OpenGEX files and it is
+now also available online through Emscripten:
+
+.. container:: m-row
+
+    .. container:: m-col-m-6 m-push-m-3
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [viewer]
+            :end-before: [/viewer]
+
+`New extension loader, extension loading for OpenGL ES`_
+========================================================
+
+I was being more and more dissatisfied with the state of ``glLoadGen`` (which
+was originally meant to replace the even worse GLEW) and switched to
+:gh:`flextGL <ginkgo/flextgl>`. If you don't know it yet, it is very flexible
+and customizable extension loader generator and consists of just a single very
+clean Python file. Switching to it resulted in much shorter generated code
+(which means faster build times) and after a few minor changes I managed to add
+OpenGL ES support to it. So it is now finally possible to use extensions on
+both desktop GL and OpenGL ES. The only platforms which don't have any notion
+of traditional extension loading are WebGL and NaCl, on which the extension
+handling is not yet fully implemented.
+
+`OpenGL 4.5, OpenGL ES 3.1 support`_
+====================================
+
+In August 2014, OpenGL 4.5 was released, which was understood as some sort of a
+cleanup release with no radically new functionality. The most essential
+addition is :glext:`ARB_direct_state_access`, which finally cleans up some
+rough corners of the old :glext:`EXT_direct_state_access` extension and puts it
+in the core specification. Magnum currently implements both extensions and
+prefers the ARB one. Some API changes were needed to accomodate to the new
+design, mainly in construction of query objects and cube map texture data
+uploads. The other minor features include ability to query only a part of
+texture image, inverted conditional rendering etc., see below for complete
+list.
+
+Thanks to the new extension loader it was also finally possible to implement
+OpenGL ES 3.1 support. Unlike the ES 2.0/3.0 switch, there is no compile-time
+option to enable OpenGL ES 3.1, the library is compiled for both 3.0 and 3.1
+and the new features are enabled based on version reported by the driver.
+
+`IRC channel`_
+==============
+
+In addition to all other communication channels there is now a IRC channel:
+join the discussion at ``#magnum-engine`` on Freenode.
+
+`Complete changelog`_
+=====================
+
+You can find a detailed list of changes in version 2015.05 in the
+documentation:
+
+-   :dox:`Changes in Corrade 2015.05 <corrade-changelog-2015-05>`
+-   :dox:`Changes in Magnum 2015.05 <changelog-2015-05>`
+-   :dox:`Changes in Magnum Plugins 2015.05 <changelog-plugins-2015-05>`
+-   :dox:`Changes in Magnum Integration 2015.05 <changelog-integration-2015-05>`
+-   :dox:`Changes in Magnum Examples 2015.05 <changelog-examples-2015-05>`
