@@ -452,9 +452,9 @@
     </member>
     <member kind="define">
       <type>#define</type>
-      <name>CORRADE_UTILITY_USE_ANSI_COLORS</name>
+      <name>CORRADE_PLUGINMANAGER_NO_DYNAMIC_PLUGIN_SUPPORT</name>
       <anchorfile>Corrade_8h.html</anchorfile>
-      <anchor>ac7cb3a2eb43e3bc3e9e925899229a768</anchor>
+      <anchor>a17304cb82d4f7b7279a223fe69bb78d8</anchor>
       <arglist></arglist>
     </member>
     <member kind="define">
@@ -462,6 +462,13 @@
       <name>CORRADE_TESTSUITE_TARGET_XCTEST</name>
       <anchorfile>Corrade_8h.html</anchorfile>
       <anchor>ad07f99b330b2e84932d57b2cb7ed393d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CORRADE_UTILITY_USE_ANSI_COLORS</name>
+      <anchorfile>Corrade_8h.html</anchorfile>
+      <anchor>ac7cb3a2eb43e3bc3e9e925899229a768</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -528,10 +535,7 @@
     <path>/home/mosra/Code/corrade/src/Corrade/PluginManager/</path>
     <filename>AbstractManager_8h</filename>
     <includes id="EnumSet_8h" name="EnumSet.h" local="yes" imported="no">Corrade/Containers/EnumSet.h</includes>
-    <includes id="PluginMetadata_8h" name="PluginMetadata.h" local="yes" imported="no">Corrade/PluginManager/PluginMetadata.h</includes>
     <includes id="PluginManager_8h" name="PluginManager.h" local="yes" imported="no">Corrade/PluginManager/PluginManager.h</includes>
-    <includes id="Configuration_8h" name="Configuration.h" local="yes" imported="no">Corrade/Utility/Configuration.h</includes>
-    <includes id="Debug_8h" name="Debug.h" local="yes" imported="no">Corrade/Utility/Debug.h</includes>
     <includes id="Resource_8h" name="Resource.h" local="yes" imported="no">Corrade/Utility/Resource.h</includes>
     <class kind="class">Corrade::PluginManager::AbstractManager</class>
     <namespace>Corrade</namespace>
@@ -542,6 +546,20 @@
       <anchorfile>AbstractManager_8h.html</anchorfile>
       <anchor>ab89b06433d06b311b50b4aa1b33f4ef4</anchor>
       <arglist>(name)                                                                              </arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CORRADE_PLUGIN_VERSION</name>
+      <anchorfile>AbstractManager_8h.html</anchorfile>
+      <anchor>a32a64a27920c39102eec2496320a0b8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CORRADE_PLUGIN_REGISTER</name>
+      <anchorfile>AbstractManager_8h.html</anchorfile>
+      <anchor>aa39d441432b9f4e399c152c85a6dd417</anchor>
+      <arglist>(name, className, interface)</arglist>
     </member>
     <member kind="typedef">
       <type>Containers::EnumSet&lt; LoadState &gt;</type>
@@ -591,31 +609,11 @@
     <name>AbstractPlugin.h</name>
     <path>/home/mosra/Code/corrade/src/Corrade/PluginManager/</path>
     <filename>AbstractPlugin_8h</filename>
-    <includes id="AbstractManager_8h" name="AbstractManager.h" local="yes" imported="no">Corrade/PluginManager/AbstractManager.h</includes>
+    <includes id="PluginManager_8h" name="PluginManager.h" local="yes" imported="no">Corrade/PluginManager/PluginManager.h</includes>
+    <includes id="Utility_8h" name="Utility.h" local="yes" imported="no">Corrade/Utility/Utility.h</includes>
     <class kind="class">Corrade::PluginManager::AbstractPlugin</class>
     <namespace>Corrade</namespace>
     <namespace>Corrade::PluginManager</namespace>
-    <member kind="define">
-      <type>#define</type>
-      <name>CORRADE_PLUGIN_VERSION</name>
-      <anchorfile>AbstractPlugin_8h.html</anchorfile>
-      <anchor>a32a64a27920c39102eec2496320a0b8c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>CORRADE_PLUGIN_INTERFACE</name>
-      <anchorfile>AbstractPlugin_8h.html</anchorfile>
-      <anchor>a361c0144a9a2664c32259912fdc4cdc2</anchor>
-      <arglist>(name)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>CORRADE_PLUGIN_REGISTER</name>
-      <anchorfile>AbstractPlugin_8h.html</anchorfile>
-      <anchor>aa39d441432b9f4e399c152c85a6dd417</anchor>
-      <arglist>(name, className, interface)</arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>Manager.h</name>
@@ -827,12 +825,19 @@
     <namespace>Corrade::Utility</namespace>
   </compound>
   <compound kind="file">
-    <name>AndroidStreamBuffer.h</name>
+    <name>AndroidLogStreamBuffer.h</name>
     <path>/home/mosra/Code/corrade/src/Corrade/Utility/</path>
-    <filename>AndroidStreamBuffer_8h</filename>
+    <filename>AndroidLogStreamBuffer_8h</filename>
     <class kind="class">Corrade::Utility::AndroidLogStreamBuffer</class>
     <namespace>Corrade</namespace>
     <namespace>Corrade::Utility</namespace>
+  </compound>
+  <compound kind="file">
+    <name>AndroidStreamBuffer.h</name>
+    <path>/home/mosra/Code/corrade/src/Corrade/Utility/</path>
+    <filename>AndroidStreamBuffer_8h</filename>
+    <includes id="Macros_8h" name="Macros.h" local="yes" imported="no">Corrade/Utility/Macros.h</includes>
+    <includes id="AndroidLogStreamBuffer_8h" name="AndroidLogStreamBuffer.h" local="yes" imported="no">Corrade/Utility/AndroidLogStreamBuffer.h</includes>
   </compound>
   <compound kind="file">
     <name>Arguments.h</name>
@@ -857,10 +862,31 @@
     </member>
     <member kind="define">
       <type>#define</type>
+      <name>CORRADE_CONSTEXPR_ASSERT</name>
+      <anchorfile>Assert_8h.html</anchorfile>
+      <anchor>afc4fbe28d2cedab8a8956bbfcf0dbd96</anchor>
+      <arglist>(condition, message)                                            </arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CORRADE_ASSERT_OUTPUT</name>
+      <anchorfile>Assert_8h.html</anchorfile>
+      <anchor>ae0eb1d35b71730b9ae9ff0bcc75e1a9e</anchor>
+      <arglist>(call, message, returnValue)                                  </arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
       <name>CORRADE_INTERNAL_ASSERT</name>
       <anchorfile>Assert_8h.html</anchorfile>
       <anchor>ab400ab0feaa558febf338c6bbc339d5a</anchor>
       <arglist>(condition)                                                                </arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CORRADE_INTERNAL_CONSTEXPR_ASSERT</name>
+      <anchorfile>Assert_8h.html</anchorfile>
+      <anchor>a8b1bf6dac22e3989a7027dbadbd5e937</anchor>
+      <arglist>(condition)                                            </arglist>
     </member>
     <member kind="define">
       <type>#define</type>
@@ -1166,6 +1192,13 @@
     </member>
     <member kind="define">
       <type>#define</type>
+      <name>CORRADE_DEPRECATED_NAMESPACE</name>
+      <anchorfile>Macros_8h.html</anchorfile>
+      <anchor>a0614a11b8608ffc924324f4843da7992</anchor>
+      <arglist>(message)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
       <name>CORRADE_DEPRECATED_ENUM</name>
       <anchorfile>Macros_8h.html</anchorfile>
       <anchor>aa58b39f18ce825eaad362ea65e91eda1</anchor>
@@ -1177,6 +1210,27 @@
       <anchorfile>Macros_8h.html</anchorfile>
       <anchor>a4bc9f2298919bde9bacc16f319707fe3</anchor>
       <arglist>(message)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CORRADE_DEPRECATED_MACRO</name>
+      <anchorfile>Macros_8h.html</anchorfile>
+      <anchor>a6a94c59eaa6f104ce689c22ebc44c336</anchor>
+      <arglist>(macro, message)</arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CORRADE_IGNORE_DEPRECATED_PUSH</name>
+      <anchorfile>Macros_8h.html</anchorfile>
+      <anchor>a3d9823862d0498c5a6cfe2dbc39f47c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>CORRADE_IGNORE_DEPRECATED_POP</name>
+      <anchorfile>Macros_8h.html</anchorfile>
+      <anchor>a8131d4370d2883c4942e1afebcf18ad5</anchor>
+      <arglist></arglist>
     </member>
     <member kind="define">
       <type>#define</type>
@@ -1357,6 +1411,69 @@
       <arglist>(std::string string)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>ltrimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a9ec8fbf7b2a097997d9ae0b7fd8008b6</anchor>
+      <arglist>(std::string &amp;string, const std::string &amp;characters)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ltrimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>aeb380f7b1a78cde7b825a2dd70d13035</anchor>
+      <arglist>(std::string &amp;string, const char(&amp;characters)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ltrimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>aa559956eafb291ec822be7a090303d93</anchor>
+      <arglist>(std::string &amp;string)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rtrimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a7fe6b0a142484d4768e6cbb915229a7e</anchor>
+      <arglist>(std::string &amp;string, const std::string &amp;characters)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rtrimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>afe0d71afe06d476c99ca801c4a60a13c</anchor>
+      <arglist>(std::string &amp;string, const char(&amp;characters)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rtrimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>ae415f2a9274c946aa64ce76b2978f512</anchor>
+      <arglist>(std::string &amp;string)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>trimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a60ffdcb3d21f7d4fcf1068be07c37908</anchor>
+      <arglist>(std::string &amp;string, const std::string &amp;characters)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>trimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a03e7318d0f0755c771da20b917c294e4</anchor>
+      <arglist>(std::string &amp;string, const char(&amp;characters)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>trimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a9ad609584914e7de5a25fc01d807731b</anchor>
+      <arglist>(std::string &amp;string)</arglist>
+    </member>
+    <member kind="function">
       <type>std::vector&lt; std::string &gt;</type>
       <name>split</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
@@ -1435,6 +1552,13 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>beginsWith</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>adcf054be72915ea30008949ba8d7e45a</anchor>
+      <arglist>(const std::string &amp;string, char prefix)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>endsWith</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
       <anchor>a810b5cb07e3a5e5063145ef47567ab7f</anchor>
@@ -1446,6 +1570,55 @@
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
       <anchor>ace94f739418cde7292a1e4ffdb75598e</anchor>
       <arglist>(const std::string &amp;string, const char(&amp;suffix)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>endsWith</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a5a89d25c3d54527384d85f3b9b22010f</anchor>
+      <arglist>(const std::string &amp;string, char suffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>stripPrefix</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a6d1d8723eecd80d2cb0b476a92730782</anchor>
+      <arglist>(std::string string, const std::string &amp;prefix)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>stripPrefix</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a6ee28cbd419602d233cb0d517f0f6695</anchor>
+      <arglist>(const std::string &amp;string, const char(&amp;prefix)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>stripPrefix</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>aa7d42726ddf76ed15a26fb40548fedd7</anchor>
+      <arglist>(const std::string &amp;string, char prefix)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>stripSuffix</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a3c4cd4ef9dd5ba175b64ae4b1259bffb</anchor>
+      <arglist>(const std::string &amp;string, const std::string &amp;suffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>stripSuffix</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a82b4f24fef3089683ca4cb42d1790078</anchor>
+      <arglist>(const std::string &amp;string, const char(&amp;suffix)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>stripSuffix</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a895f4585310a1df25ee76d9854783a27</anchor>
+      <arglist>(const std::string &amp;string, char suffix)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -4608,10 +4781,24 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>setPreferredPlugins</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1AbstractManager.html</anchorfile>
+      <anchor>a93baed5663d354c0dd860676474de42c</anchor>
+      <arglist>(const std::string &amp;alias, std::initializer_list&lt; std::string &gt; plugins)</arglist>
+    </member>
+    <member kind="function">
       <type>std::vector&lt; std::string &gt;</type>
       <name>pluginList</name>
       <anchorfile>classCorrade_1_1PluginManager_1_1AbstractManager.html</anchorfile>
       <anchor>a52bd2c0a000f6695cbd586cc54355fee</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>aliasList</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1AbstractManager.html</anchorfile>
+      <anchor>a40daa74a20b4d241784f89052241aadc</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -4771,6 +4958,27 @@
       <anchor>a12273c7c387ef6db25d34bd70b9536db</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function">
+      <type>Utility::ConfigurationGroup &amp;</type>
+      <name>configuration</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1AbstractPlugin.html</anchorfile>
+      <anchor>a689a0e941a34e9573d17517c147982b9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Utility::ConfigurationGroup &amp;</type>
+      <name>configuration</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1AbstractPlugin.html</anchorfile>
+      <anchor>ad64f62b0436666efabb26c9fd928aa00</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::vector&lt; std::string &gt;</type>
+      <name>pluginSearchPaths</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1AbstractPlugin.html</anchorfile>
+      <anchor>a0354f07e12d5a853deb305a4aa8d8ce1</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" static="yes">
       <type>static void</type>
       <name>initialize</name>
@@ -4785,6 +4993,7 @@
       <anchor>a161dadb17ef0e4d0f5169b8fddb81d52</anchor>
       <arglist>()</arglist>
     </member>
+    <docanchor file="classCorrade_1_1PluginManager_1_1AbstractPlugin" title="Subclassing">PluginManager-AbstractPlugin-subclassing</docanchor>
   </compound>
   <compound kind="class">
     <name>Corrade::PluginManager::Manager</name>
@@ -4800,6 +5009,13 @@
     </member>
     <member kind="function">
       <type>std::unique_ptr&lt; T &gt;</type>
+      <name>instantiate</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1Manager.html</anchorfile>
+      <anchor>a3bc96ca508e6c97562d541fde7e9b6cb</anchor>
+      <arglist>(const std::string &amp;plugin)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::unique_ptr&lt; T &gt;</type>
       <name>instance</name>
       <anchorfile>classCorrade_1_1PluginManager_1_1Manager.html</anchorfile>
       <anchor>ad5bd99c59c93571ce37612eea1648460</anchor>
@@ -4812,6 +5028,9 @@
       <anchor>a1b831c65abd0581f9d336bd3ad820058</anchor>
       <arglist>(const std::string &amp;plugin)</arglist>
     </member>
+    <docanchor file="classCorrade_1_1PluginManager_1_1Manager" title="Plugin directories">PluginManager-Manager-paths</docanchor>
+    <docanchor file="classCorrade_1_1PluginManager_1_1Manager" title="Plugin loading, instantiation and unloading">PluginManager-Manager-reload</docanchor>
+    <docanchor file="classCorrade_1_1PluginManager_1_1Manager" title="Plugin-specific data and configuration">PluginManager-Manager-data</docanchor>
   </compound>
   <compound kind="class">
     <name>Corrade::PluginManager::PluginMetadata</name>
@@ -4849,6 +5068,13 @@
       <name>data</name>
       <anchorfile>classCorrade_1_1PluginManager_1_1PluginMetadata.html</anchorfile>
       <anchor>ae998a6ccb557313441f65b7b07dade01</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const Utility::ConfigurationGroup &amp;</type>
+      <name>configuration</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1PluginMetadata.html</anchorfile>
+      <anchor>a0d4ff28b3c656d96a2a55765abe58607</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -5205,7 +5431,11 @@
     <docanchor file="classCorrade_1_1TestSuite_1_1Tester" title="Custom benchmarks">TestSuite-Tester-benchmark-custom</docanchor>
     <docanchor file="classCorrade_1_1TestSuite_1_1Tester" title="Specifying setup/teardown routines">TestSuite-Tester-setup-teardown</docanchor>
     <docanchor file="classCorrade_1_1TestSuite_1_1Tester" title="Command-line options">TestSuite-Tester-command-line</docanchor>
-    <docanchor file="classCorrade_1_1TestSuite_1_1Tester" title="CMake support and platform-specific goodies">TestSuite-Tester-cmake</docanchor>
+    <docanchor file="classCorrade_1_1TestSuite_1_1Tester" title="Compiling and running tests">TestSuite-Tester-running</docanchor>
+    <docanchor file="classCorrade_1_1TestSuite_1_1Tester" title="Using CMake">TestSuite-Tester-running-cmake</docanchor>
+    <docanchor file="classCorrade_1_1TestSuite_1_1Tester" title="Manually running the tests on Android">TestSuite-Tester-running-android</docanchor>
+    <docanchor file="classCorrade_1_1TestSuite_1_1Tester" title="Manually running the tests on Emscripten">TestSuite-Tester-running-emscripten</docanchor>
+    <docanchor file="classCorrade_1_1TestSuite_1_1Tester" title="Running Emscripten tests in a browser">TestSuite-Tester-running-emscripten-browser</docanchor>
   </compound>
   <compound kind="class">
     <name>Corrade::TestSuite::Tester::TesterConfiguration</name>
@@ -5272,13 +5502,6 @@
       <anchorfile>classCorrade_1_1Utility_1_1AndroidLogStreamBuffer.html</anchorfile>
       <anchor>ab631a4d21e449fa7fc4ba337f6663b97</anchor>
       <arglist>(LogPriority priority, std::string tag)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>sync</name>
-      <anchorfile>classCorrade_1_1Utility_1_1AndroidLogStreamBuffer.html</anchorfile>
-      <anchor>ad18648077ccbb78dc0fc5c46b2166e7e</anchor>
-      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5591,8 +5814,10 @@
       <anchor>ae6d938117a8afa18976fc9a481220f2e</anchor>
       <arglist>()</arglist>
     </member>
-    <docanchor file="classCorrade_1_1Utility_1_1Configuration" title="Example usage">Utility-Configuration-example</docanchor>
-    <docanchor file="classCorrade_1_1Utility_1_1Configuration" title="File syntax">Utility-Configuration-syntax</docanchor>
+    <docanchor file="classCorrade_1_1Utility_1_1Configuration" title="File syntax and usage">Utility-Configuration-usage</docanchor>
+    <docanchor file="classCorrade_1_1Utility_1_1Configuration" title="Whitespace and comments">Utility-Configuration-usage-whitespace</docanchor>
+    <docanchor file="classCorrade_1_1Utility_1_1Configuration" title="Key/value pairs">Utility-Configuration-usage-values</docanchor>
+    <docanchor file="classCorrade_1_1Utility_1_1Configuration" title="Value groups">Utility-Configuration-usage-groups</docanchor>
   </compound>
   <compound kind="class">
     <name>Corrade::Utility::ConfigurationGroup</name>
@@ -6366,6 +6591,13 @@
       <arglist>(std::ostream *output)</arglist>
     </member>
     <member kind="function" static="yes">
+      <type>static std::ostream *</type>
+      <name>output</name>
+      <anchorfile>classCorrade_1_1Utility_1_1Debug.html</anchorfile>
+      <anchor>a8e86dc68a57d254e1a539b91672a496f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
       <type>static bool</type>
       <name>isTty</name>
       <anchorfile>classCorrade_1_1Utility_1_1Debug.html</anchorfile>
@@ -6596,6 +6828,13 @@
       <anchorfile>classCorrade_1_1Utility_1_1Error.html</anchorfile>
       <anchor>a30ad23439c87546e85b787a30c6f89ac</anchor>
       <arglist>(std::ostream *output)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::ostream *</type>
+      <name>output</name>
+      <anchorfile>classCorrade_1_1Utility_1_1Error.html</anchorfile>
+      <anchor>aa9d822cae6bdb9632ff49fb8b8ca8b02</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
@@ -6913,6 +7152,13 @@
       <anchorfile>classCorrade_1_1Utility_1_1Warning.html</anchorfile>
       <anchor>a6d7c48994b6b03bf7703a77ffe4ec632</anchor>
       <arglist>(std::ostream *output)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::ostream *</type>
+      <name>output</name>
+      <anchorfile>classCorrade_1_1Utility_1_1Warning.html</anchorfile>
+      <anchor>ad124e9124dfbfac55f9c6cf602d1910d</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
@@ -7705,6 +7951,27 @@
       <arglist>(std::string string)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>ltrimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>aa559956eafb291ec822be7a090303d93</anchor>
+      <arglist>(std::string &amp;string)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rtrimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>ae415f2a9274c946aa64ce76b2978f512</anchor>
+      <arglist>(std::string &amp;string)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>trimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a9ad609584914e7de5a25fc01d807731b</anchor>
+      <arglist>(std::string &amp;string)</arglist>
+    </member>
+    <member kind="function">
       <type>std::vector&lt; std::string &gt;</type>
       <name>splitWithoutEmptyParts</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
@@ -7810,6 +8077,48 @@
       <arglist>(std::string string, const char(&amp;characters)[size])</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>ltrimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a9ec8fbf7b2a097997d9ae0b7fd8008b6</anchor>
+      <arglist>(std::string &amp;string, const std::string &amp;characters)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ltrimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>aeb380f7b1a78cde7b825a2dd70d13035</anchor>
+      <arglist>(std::string &amp;string, const char(&amp;characters)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rtrimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a7fe6b0a142484d4768e6cbb915229a7e</anchor>
+      <arglist>(std::string &amp;string, const std::string &amp;characters)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>rtrimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>afe0d71afe06d476c99ca801c4a60a13c</anchor>
+      <arglist>(std::string &amp;string, const char(&amp;characters)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>trimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a60ffdcb3d21f7d4fcf1068be07c37908</anchor>
+      <arglist>(std::string &amp;string, const std::string &amp;characters)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>trimInPlace</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a03e7318d0f0755c771da20b917c294e4</anchor>
+      <arglist>(std::string &amp;string, const char(&amp;characters)[size])</arglist>
+    </member>
+    <member kind="function">
       <type>std::vector&lt; std::string &gt;</type>
       <name>splitWithoutEmptyParts</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
@@ -7839,6 +8148,13 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>beginsWith</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>adcf054be72915ea30008949ba8d7e45a</anchor>
+      <arglist>(const std::string &amp;string, char prefix)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>endsWith</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
       <anchor>a810b5cb07e3a5e5063145ef47567ab7f</anchor>
@@ -7850,6 +8166,55 @@
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
       <anchor>ace94f739418cde7292a1e4ffdb75598e</anchor>
       <arglist>(const std::string &amp;string, const char(&amp;suffix)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>endsWith</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a5a89d25c3d54527384d85f3b9b22010f</anchor>
+      <arglist>(const std::string &amp;string, char suffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>stripPrefix</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a6d1d8723eecd80d2cb0b476a92730782</anchor>
+      <arglist>(std::string string, const std::string &amp;prefix)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>stripPrefix</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a6ee28cbd419602d233cb0d517f0f6695</anchor>
+      <arglist>(const std::string &amp;string, const char(&amp;prefix)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>stripPrefix</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>aa7d42726ddf76ed15a26fb40548fedd7</anchor>
+      <arglist>(const std::string &amp;string, char prefix)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>stripSuffix</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a3c4cd4ef9dd5ba175b64ae4b1259bffb</anchor>
+      <arglist>(const std::string &amp;string, const std::string &amp;suffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>stripSuffix</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a82b4f24fef3089683ca4cb42d1790078</anchor>
+      <arglist>(const std::string &amp;string, const char(&amp;suffix)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>stripSuffix</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a895f4585310a1df25ee76d9854783a27</anchor>
+      <arglist>(const std::string &amp;string, char suffix)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -7996,7 +8361,7 @@
     <docanchor file="building-corrade" title="Cross-compiling for Windows using MinGW-w64">building-corrade-cross-win</docanchor>
     <docanchor file="building-corrade" title="Cross-compiling for Emscripten">building-corrade-cross-emscripten</docanchor>
     <docanchor file="building-corrade" title="Cross-compiling for iOS">building-corrade-cross-ios</docanchor>
-    <docanchor file="building-corrade" title="Cross-compiling for Android ARM and x86">building-corrade-cross-android</docanchor>
+    <docanchor file="building-corrade" title="Cross-compiling for Android">building-corrade-cross-android</docanchor>
     <docanchor file="building-corrade" title="Continuous Integration">building-corrade-ci</docanchor>
     <docanchor file="building-corrade" title="Travis">building-corrade-ci-travis</docanchor>
     <docanchor file="building-corrade" title="AppVeyor">building-corrade-ci-appveyor</docanchor>
@@ -8023,8 +8388,17 @@
     <name>corrade-changelog</name>
     <title>Changelog</title>
     <filename>corrade-changelog</filename>
-    <docanchor file="corrade-changelog" title="Changes since 2018.02">corrade-changelog-latest</docanchor>
-    <docanchor file="corrade-changelog" title="Documentation">corrade-changelog-latest-docs</docanchor>
+    <docanchor file="corrade-changelog" title="2018.04">corrade-changelog-2018-04</docanchor>
+    <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2018-04-dependencies</docanchor>
+    <docanchor file="corrade-changelog" title="New features">corrade-changelog-2018-04-new</docanchor>
+    <docanchor file="corrade-changelog" title="PluginManager library">corrade-changelog-2018-04-new-pluginmanager</docanchor>
+    <docanchor file="corrade-changelog" title="TestSuite library">corrade-changelog-2018-04-new-testsuite</docanchor>
+    <docanchor file="corrade-changelog" title="Utility library">corrade-changelog-2018-04-new-utility</docanchor>
+    <docanchor file="corrade-changelog" title="Build system">corrade-changelog-2018-04-buildsystem</docanchor>
+    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-2018-04-bugfixes</docanchor>
+    <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-2018-04-deprecated</docanchor>
+    <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-2018-04-compatibility</docanchor>
+    <docanchor file="corrade-changelog" title="Documentation">corrade-changelog-2018-04-docs</docanchor>
     <docanchor file="corrade-changelog" title="2018.02">corrade-changelog-2018-02</docanchor>
     <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2018-02-dependencies</docanchor>
     <docanchor file="corrade-changelog" title="New features">corrade-changelog-2018-02-new</docanchor>
@@ -8042,39 +8416,44 @@
     <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-2018-02-deprecated</docanchor>
     <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-2018-02-compatibility</docanchor>
     <docanchor file="corrade-changelog" title="Documentation">corrade-changelog-2018-02-documentation</docanchor>
-    <docanchor file="corrade-changelog" title="2015.05">corrade-changelog-2015-05</docanchor>
-    <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2015-05-dependencies</docanchor>
-    <docanchor file="corrade-changelog" title="New features">corrade-changelog-2015-05-new</docanchor>
-    <docanchor file="corrade-changelog" title="Changes">corrade-changelog-2015-05-changes</docanchor>
-    <docanchor file="corrade-changelog" title="Build system">corrade-changelog-2015-05-buildsystem</docanchor>
-    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-2015-05-bugfixes</docanchor>
-    <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-2015-05-deprecated</docanchor>
-    <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-2015-05-compatibility</docanchor>
-    <docanchor file="corrade-changelog" title="2014.06">corrade-changelog-2014-06</docanchor>
-    <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2014-06-dependencies</docanchor>
-    <docanchor file="corrade-changelog" title="New features">corrade-changelog-2014-06-new</docanchor>
-    <docanchor file="corrade-changelog" title="Changes">corrade-changelog-2014-06-changes</docanchor>
-    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-2014-06-bugfixes</docanchor>
-    <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-2014-06-deprecated</docanchor>
-    <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-2014-06-compatibility</docanchor>
-    <docanchor file="corrade-changelog" title="2014.01">corrade-changelog-2014-01</docanchor>
-    <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2014-01-dependencies</docanchor>
-    <docanchor file="corrade-changelog" title="New features">corrade-changelog-2014-01-new</docanchor>
-    <docanchor file="corrade-changelog" title="Changes">corrade-changelog-2014-01-changes</docanchor>
-    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-2014-01-bugfixes</docanchor>
-    <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-2014-01-deprecated</docanchor>
-    <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-2014-01-compatibility</docanchor>
-    <docanchor file="corrade-changelog" title="Internal changes">corrade-changelog-2014-01-internal</docanchor>
-    <docanchor file="corrade-changelog" title="2013.10">corrade-changelog-2013-10</docanchor>
-    <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2013-10-dependencies</docanchor>
-    <docanchor file="corrade-changelog" title="New features">corrade-changelog-2013-10-new</docanchor>
-    <docanchor file="corrade-changelog" title="Changes">corrade-changelog-2013-10-changes</docanchor>
-    <docanchor file="corrade-changelog" title="Build system">corrade-changelog-2013-10-buildsystem</docanchor>
-    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-2013-10-bugfixes</docanchor>
-    <docanchor file="corrade-changelog" title="Deprecated APIs">corrade-changelog-2013-10-deprecated</docanchor>
-    <docanchor file="corrade-changelog" title="Potential compatibility breakages, removed APIs">corrade-changelog-2013-10-compatibility</docanchor>
-    <docanchor file="corrade-changelog" title="2013.08">corrade-changelog-2013-08</docanchor>
-    <docanchor file="corrade-changelog" title="2012.02">corrade-changelog-2012-02</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>corrade-changelog-old</name>
+    <title>Archived changelogs</title>
+    <filename>corrade-changelog-old</filename>
+    <docanchor file="corrade-changelog-old" title="2015.05">corrade-changelog-2015-05</docanchor>
+    <docanchor file="corrade-changelog-old" title="Dependency changes">corrade-changelog-2015-05-dependencies</docanchor>
+    <docanchor file="corrade-changelog-old" title="New features">corrade-changelog-2015-05-new</docanchor>
+    <docanchor file="corrade-changelog-old" title="Changes">corrade-changelog-2015-05-changes</docanchor>
+    <docanchor file="corrade-changelog-old" title="Build system">corrade-changelog-2015-05-buildsystem</docanchor>
+    <docanchor file="corrade-changelog-old" title="Bug fixes">corrade-changelog-2015-05-bugfixes</docanchor>
+    <docanchor file="corrade-changelog-old" title="Deprecated APIs">corrade-changelog-2015-05-deprecated</docanchor>
+    <docanchor file="corrade-changelog-old" title="Potential compatibility breakages, removed APIs">corrade-changelog-2015-05-compatibility</docanchor>
+    <docanchor file="corrade-changelog-old" title="2014.06">corrade-changelog-2014-06</docanchor>
+    <docanchor file="corrade-changelog-old" title="Dependency changes">corrade-changelog-2014-06-dependencies</docanchor>
+    <docanchor file="corrade-changelog-old" title="New features">corrade-changelog-2014-06-new</docanchor>
+    <docanchor file="corrade-changelog-old" title="Changes">corrade-changelog-2014-06-changes</docanchor>
+    <docanchor file="corrade-changelog-old" title="Bug fixes">corrade-changelog-2014-06-bugfixes</docanchor>
+    <docanchor file="corrade-changelog-old" title="Deprecated APIs">corrade-changelog-2014-06-deprecated</docanchor>
+    <docanchor file="corrade-changelog-old" title="Potential compatibility breakages, removed APIs">corrade-changelog-2014-06-compatibility</docanchor>
+    <docanchor file="corrade-changelog-old" title="2014.01">corrade-changelog-2014-01</docanchor>
+    <docanchor file="corrade-changelog-old" title="Dependency changes">corrade-changelog-2014-01-dependencies</docanchor>
+    <docanchor file="corrade-changelog-old" title="New features">corrade-changelog-2014-01-new</docanchor>
+    <docanchor file="corrade-changelog-old" title="Changes">corrade-changelog-2014-01-changes</docanchor>
+    <docanchor file="corrade-changelog-old" title="Bug fixes">corrade-changelog-2014-01-bugfixes</docanchor>
+    <docanchor file="corrade-changelog-old" title="Deprecated APIs">corrade-changelog-2014-01-deprecated</docanchor>
+    <docanchor file="corrade-changelog-old" title="Potential compatibility breakages, removed APIs">corrade-changelog-2014-01-compatibility</docanchor>
+    <docanchor file="corrade-changelog-old" title="Internal changes">corrade-changelog-2014-01-internal</docanchor>
+    <docanchor file="corrade-changelog-old" title="2013.10">corrade-changelog-2013-10</docanchor>
+    <docanchor file="corrade-changelog-old" title="Dependency changes">corrade-changelog-2013-10-dependencies</docanchor>
+    <docanchor file="corrade-changelog-old" title="New features">corrade-changelog-2013-10-new</docanchor>
+    <docanchor file="corrade-changelog-old" title="Changes">corrade-changelog-2013-10-changes</docanchor>
+    <docanchor file="corrade-changelog-old" title="Build system">corrade-changelog-2013-10-buildsystem</docanchor>
+    <docanchor file="corrade-changelog-old" title="Bug fixes">corrade-changelog-2013-10-bugfixes</docanchor>
+    <docanchor file="corrade-changelog-old" title="Deprecated APIs">corrade-changelog-2013-10-deprecated</docanchor>
+    <docanchor file="corrade-changelog-old" title="Potential compatibility breakages, removed APIs">corrade-changelog-2013-10-compatibility</docanchor>
+    <docanchor file="corrade-changelog-old" title="2013.08">corrade-changelog-2013-08</docanchor>
+    <docanchor file="corrade-changelog-old" title="2012.02">corrade-changelog-2012-02</docanchor>
   </compound>
   <compound kind="page">
     <name>corrade-developers</name>
@@ -8142,6 +8521,11 @@
     <docanchor file="corrade-coding-style" title="Git">corrade-coding-style-git</docanchor>
     <docanchor file="corrade-coding-style" title="Commit message format">corrade-coding-style-git-commits</docanchor>
     <docanchor file="corrade-coding-style" title="Repository, branch and tag format">corrade-coding-style-git-branches</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>configurationvalues</name>
+    <title>Configuration value parsers and writers for custom types</title>
+    <filename>configurationvalues</filename>
   </compound>
   <compound kind="page">
     <name>interconnect</name>
