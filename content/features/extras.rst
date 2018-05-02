@@ -9,7 +9,7 @@ Extra Functionality
     .. note-dim::
         :class: m-text-center
 
-        `Features <{filename}/features.rst>`_ | `Plugins & extensions » <{filename}/features/extensions.rst>`_
+        `Features <{filename}/features.rst>`_ | `Plugins & Extensions » <{filename}/features/extensions.rst>`_
 
 .. raw:: html
     :file: extras.svg
