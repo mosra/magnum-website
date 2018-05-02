@@ -194,7 +194,11 @@ function fetchLatestAppveyorJobs(project, branch) {
     req.send();
 }
 
-for(var i = 0; i != projects.length; ++i) {
-    fetchLatestTravisJobs(projects[i][0], projects[i][1]);
-    fetchLatestAppveyorJobs(projects[i][0], projects[i][1]);
+function fetch() {
+    for(var i = 0; i != projects.length; ++i) {
+        fetchLatestTravisJobs(projects[i][0], projects[i][1]);
+        fetchLatestAppveyorJobs(projects[i][0], projects[i][1]);
+    }
 }
+
+fetch();
