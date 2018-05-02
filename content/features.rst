@@ -108,32 +108,15 @@ quaternions and their dual counterparts. Intuitive transformation APIs in both
     See documentation of the :dox:`types`, :dox:`matrix-vector` and
     :dox:`transformations` for details.
 
-`OpenGL wrapping layer`_
-------------------------
-
-Abstracts away platform differences and extensions, resulting in a single API
-covering desktop OpenGL, OpenGL ES and WebGL. Depending on the GPU driver, the
-backend selects the most suitable feature implementation, giving priority to
-recent extensions.
-
--   OpenGL 2.1 to 4.5, OpenGL ES 2.0, 3.0, 3.1, WebGL 1 / 2 + extensions
--   DSA-like API with state tracking, elimination of redundant GL calls,
-    feature emulation on older drivers
--   Can co-exist with other renderers sharing the same OpenGL context,
-    exchange live OpenGL objects with third-party code
-
-.. note-dim::
-
-    See documentation of the :dox:`opengl-wrapping` and
-    :dox:`OpenGL support state <opengl>` for details.
 
 `Extra functionality » <{filename}/features/extras.rst>`_
 =========================================================
 
 While you can stay with just the core Magnum library, there are additional
 opt-in libraries and tools providing features that can make development of your
-application easier. APIs for asset management, mesh and texture tools,
-debugging and prototyping utilities, command-line utilities and much more.
+application easier. OpenGL wrapper layer, APIs for asset management, mesh and
+texture tools, debugging and prototyping utilities, command-line utilities and
+much more.
 
 `Plugins & extensions » <{filename}/features/extensions.rst>`_
 ==============================================================

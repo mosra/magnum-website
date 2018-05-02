@@ -19,6 +19,25 @@ The following libraries provide additional functionality on top of
 well-balanced experience, however none of them are strictly required and it's
 possible to use any subset that matches your particular use case.
 
+`OpenGL wrapping layer`_
+========================
+
+Abstracts away platform differences and extensions, resulting in a single API
+covering desktop OpenGL, OpenGL ES and WebGL. Depending on the GPU driver, the
+backend selects the most suitable feature implementation, giving priority to
+recent extensions.
+
+-   OpenGL 2.1 to 4.6, OpenGL ES 2.0, 3.0--3.2, WebGL 1 / 2 + extensions
+-   DSA-like API with state tracking, elimination of redundant GL calls,
+    feature emulation on older drivers
+-   Can co-exist with other renderers sharing the same OpenGL context,
+    exchange live OpenGL objects with third-party code
+
+.. note-dim::
+
+    See documentation of the :dox:`opengl-wrapping` and
+    :dox:`OpenGL support state <opengl>` for details.
+
 `Plugin management`_
 ====================
 
