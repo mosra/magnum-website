@@ -13,12 +13,9 @@ Build Status
           table.build-status th svg {
             fill: #dcdcdc /*var(--color)*/;
           }
-          table.build-status td.m-success,
-          table.build-status td.m-warning,
-          table.build-status td.m-danger,
-          table.build-status td.m-info,
-          table.build-status td.m-dim {
+          table.build-status td {
             padding: 0;
+            min-width: 5rem;
           }
           table.build-status a {
             display: block;
