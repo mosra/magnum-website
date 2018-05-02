@@ -38,4 +38,4 @@ A `WebGL 1 version <{filename}/showcase/magnum-info.rst>`_ is also available.
 .. block-info:: Documentation
 
     All options for the Magnum Info utility are explained
-    :dox:`in the documentation <magnum-info>`.
+    :dox:`in the documentation <magnum-gl-info>`.

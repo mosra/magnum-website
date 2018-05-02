@@ -208,11 +208,12 @@ of the difference so you can see what's wrong directly from your CI log:
     :code: ansi
 
 Base class for tests requiring OpenGL context is now available in a dedicated
-:dox:`OpenGLTester` library and it gained support for
-:dox:`GPU time benchmarks <OpenGLTester-benchmarks>`. For easier testing on
+:dox:`OpenGLTester <GL::OpenGLTester>` library and it gained support for
+:dox:`GPU time benchmarks <GL-OpenGLTester-benchmarks>`. For easier testing on
 OpenGL ES and WebGL, there are now :dox:`DebugTools::bufferSubData()` and
 :dox:`DebugTools::textureSubImage()` helper utilities that supplement the lack
-of :dox:`Buffer::data()` and :dox:`Texture::image()` on those platforms.
+of :dox:`Buffer::data() <GL::Buffer::data()>` and
+:dox:`Texture::image() <GL::Texture::image()>` on those platforms.
 
 To ensure stability and make maintenance easier, Magnum and all its libraries
 are now also compiled and tested with code coverage on all supported platforms
@@ -298,9 +299,9 @@ to PNG.
 
 The Audio library received `HRTF <https://en.wikipedia.org/wiki/Head-related_transfer_function>`_
 support that's very important for immersive audio in VR, besides that it
-supports :dox:`many new buffer formats <Audio::Buffer::Format>`. The HRTF
-support is accompanied with a new example and the whole :dox:`Audio` library
-was updated to work on the web as well:
+supports :dox:`many new buffer formats <Audio::BufferFormat>`. The HRTF support
+is accompanied with a new example and the whole :dox:`Audio` library was
+updated to work on the web as well:
 
 .. container:: m-row m-container-inflate
 
@@ -408,10 +409,11 @@ One common case is that Magnum is not the only library accessing the OpenGL
 context --- for example it's only taking care of data visualization in a bigger
 application that's written in Qt. Because OpenGL is a lot of global state, care
 must be taken so libraries know what state can be trusted and what not ---
-that's handled with :dox:`Context::resetState()`. It's also possible to wrap
-externally created OpenGL objects using :dox:`*::wrap() <Buffer::wrap()>` and,
-conversely, release their ownership with :dox:`release() <Buffer::release()>`.
-A reduced example showing `rendering into QQuickFramebufferObject <http://blog.qt.io/blog/2015/05/11/integrating-custom-opengl-rendering-with-qt-quick-via-qquickframebufferobject/>`_:
+that's handled with :dox:`Context::resetState() <GL::Context::resetState()>`.
+It's also possible to wrap externally created OpenGL objects using
+:dox:`*::wrap() <GL::Buffer::wrap()>` and, conversely, release their ownership
+with :dox:`release() <GL::Buffer::release()>`. A reduced example showing
+`rendering into QQuickFramebufferObject <http://blog.qt.io/blog/2015/05/11/integrating-custom-opengl-rendering-with-qt-quick-via-qquickframebufferobject/>`_:
 
 .. code:: c++
 
@@ -493,7 +495,7 @@ application UI rendering on the main thread.
 
 In order to make debugging easier, it's now possible to blacklist certain
 OpenGL extensions or driver workarounds from the command-line and environment.
-See :dox:`the documentation for more information <Context-command-line>`.
+See :dox:`the documentation for more information <GL-Context-command-line>`.
 
 `Even more new stuff`_
 =======================

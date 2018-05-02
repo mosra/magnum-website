@@ -39,4 +39,4 @@ available.
 .. block-info:: Documentation
 
     All options for the Magnum Info utility are explained
-    :dox:`in the documentation <magnum-info>`.
+    :dox:`in the documentation <magnum-gl-info>`.
