@@ -57,3 +57,9 @@ otherwise the built website will lack all styling. Sorry for the inconvenience.
 
 If you run into problems, please open an issue. The `m.css <http://mcss.mosra.cz>`_
 documentation might also help. Thank you.
+
+Pelican workarounds and publishing notes
+========================================
+
+.. todo: htacces
+.. todo: doc/index.html
