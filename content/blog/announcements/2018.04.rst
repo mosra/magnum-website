@@ -19,8 +19,8 @@ The changelog since `2018.02 <{filename}/blog/announcements/2018.02.rst>`_ is
 almost as long as list of changes for whole three years before, so let's dive
 right in!
 
-OpenGL wrapping layer made optional
-===================================
+`OpenGL wrapping layer made optional`_
+======================================
 
 There's a new :dox:`GL` library containing all buffer, mesh, texture and
 other APIs that were previously part of the core library. It's built by
@@ -38,8 +38,8 @@ however --- you can disable OpenGL integration and leave just the API-agnostic
 features there. Look :dox:`in the documentation <building-features>` for
 details.
 
-API-independent asset management
-================================
+`API-independent asset management`_
+===================================
 
 Besides having the :dox:`GL` library optional, the :dox:`Trade` library is now
 optional as well --- so if you use Magnum for GPU data processing and don't
@@ -115,8 +115,8 @@ it for various checks and operations later:
     /* Default pixel storage, 8-bit sRGB + alpha, four bytes per pixel */
     ImageView2D view{{}, MTLPixelFormatRGBA8Unorm_sRGB, {}, 4, {256, 256}, data};
 
-Using custom renderers with Magnum
-==================================
+`Using custom renderers with Magnum`_
+=====================================
 
 Making the :dox:`GL` library optional was primarily a first step towards Vulkan
 support (work on which will now be resumed, you can watch the progress in
@@ -158,8 +158,8 @@ well-documented Magnum :dox:`Math` library, :dox:`SceneGraph` or the :dox:`OpenG
 output against a ground truth using :dox:`DebugTools::CompareImage`, for
 example.
 
-Plugin workflow improvements
-============================
+`Plugin workflow improvements`_
+===============================
 
 A lot of effort went into improving the general plugin workflow. Until now,
 loading a file using plugins involved quite a lot of setup in order to find
@@ -186,8 +186,8 @@ automagic import of static plugins. And if you like glTF, there's now a fresh
 format. Further details about all plugin usability improvements are
 `in a dedicated article <{filename}/blog/announcements/plugin-usability-improvements.rst>`_.
 
-Package updates
-===============
+`Package updates`_
+==================
 
 Thanks to :gh:`xyproto`, the ArchLinux ``[community]`` repository now contains
 stable versions of Corrade, Magnum and Magnum Plugins packages, so if you are
@@ -216,8 +216,8 @@ Ubuntu and Gentoo packages as usual, head over to the
     and are working on making Magnum Vcpkg packages work on these systems. It's
     not done yet, though.
 
-More? Yes, there's more!
-========================
+`More? Yes, there's more!`_
+===========================
 
 Thanks to :gh:`Squareys` (again!), we have a new fun example integrating the
 `Leap Motion SDK <https://leapmotion.com/>`_. See its
@@ -258,8 +258,8 @@ Among other things the :dox:`examples-ovr` example got simplified and there's a
 second experimental version of the :dox:`DartIntegration` library by
 :gh:`costashatz`.
 
-Upgrading from previous versions
-================================
+`Upgrading from previous versions`_
+===================================
 
 Because the API changed quite heavily, upgrading from previous versions is not
 as smooth as usual. Nevertheless, great care was taken to make this process as
