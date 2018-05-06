@@ -13,7 +13,7 @@ How to draw a red square in Magnum --- in one statement
 .. role:: cpp(code)
     :language: c++
 
-.. note-success:: Content care: Jan 03, 2018
+.. note-success:: Content care: May 06, 2018
 
     Updated the original blog post URL to a version from archive.org, as the
     blog does not exist anymore. Besides that, code snippets were updated to
@@ -32,7 +32,7 @@ statement is wrapped on four lines for better readability:
 
 .. code:: c++
 
-    std::get<0>(MeshTools::compile(Primitives::Square::solid(), BufferUsage::StaticDraw))
+    std::get<0>(MeshTools::compile(Primitives::squareSolid(), GL::BufferUsage::StaticDraw))
         .draw(Shaders::Flat2D{}
             .setTransformationProjectionMatrix(Matrix3::scaling({0.2f, 0.3f}))
             .setColor(Color3::red()));
@@ -66,11 +66,11 @@ temporaries for better understanding:
 
 .. code:: c++
 
-    const Trade::MeshData2D meshData = Primitives::Square::solid();
+    const Trade::MeshData2D meshData = Primitives::squareSolid();
 
-    Mesh mesh;
-    std::unique_ptr<Buffer> vertices, indices;
-    std::tie(mesh, vertices, indices) = MeshTools::compile(meshData, BufferUsage::StaticDraw);
+    GL::Mesh mesh;
+    std::unique_ptr<GL::Buffer> vertices, indices;
+    std::tie(mesh, vertices, indices) = MeshTools::compile(meshData, GL::BufferUsage::StaticDraw);
 
     Shaders::Flat2D shader;
     shader.setTransformationProjectionMatrix(Matrix3::scaling({0.2f, 0.3f}))
@@ -80,12 +80,12 @@ temporaries for better understanding:
 
 The setup and actual drawing is now clearly separated. You can now see that we
 abused method chaining to create, configure and pass the shader to
-:dox:`Mesh::draw()` in a single expression, but that's a perfectly legal thing
-to do. Having 2D equivalents of everything also makes things a bit simpler, on
-the other hand displaying a 3D cube would only need different primitive,
-different shader with more involved configuration and enabling depth test. The
-code is also as fast as it could get, unless you have a very specific use case
-(like drawing thousands of squares in a particle system).
+:dox:`GL::Mesh::draw()` in a single expression, but that's a perfectly legal
+thing to do. Having 2D equivalents of everything also makes things a bit
+simpler, on the other hand displaying a 3D cube would only need different
+primitive, different shader with more involved configuration and enabling depth
+test. The code is also as fast as it could get, unless you have a very specific
+use case (like drawing thousands of squares in a particle system).
 
 `Going deeper`_
 ===============
@@ -105,16 +105,15 @@ buffer (the index buffer above was :cpp:`nullptr` as it was also not needed).
 
 .. code:: c++
 
-    constexpr const Vector2 data[] = {{ 1.0f, -1.0f},
-                                      { 1.0f,  1.0f},
-                                      {-1.0f, -1.0f},
-                                      {-1.0f,  1.0f}};
+    constexpr Vector2 data[]{{ 1.0f, -1.0f},
+                             { 1.0f,  1.0f},
+                             {-1.0f, -1.0f},
+                             {-1.0f,  1.0f}};
 
-    Buffer buffer;
+    GL::Buffer buffer;
     buffer.setData(data, BufferUsage::StaticDraw);
-    Mesh mesh;
-    mesh.setPrimitive(MeshPrimitive::TriangleStrip)
-        .setVertexCount(4)
+    GL::Mesh mesh{MeshPrimitive::TriangleStrip};
+    mesh.setCount(4)
         .addVertexBuffer(buffer, 0, Shaders::Flat2D::Position{});
 
 `Manually creating the shader`_
@@ -127,11 +126,11 @@ only. Also all error checking is omitted for brevity:
 
 .. code:: c++
 
-    struct FlatShader: AbstractShaderProgram {
-        typedef Attribute<0, Vector2> Position;
+    struct FlatShader: GL::AbstractShaderProgram {
+        typedef GL::Attribute<0, Vector2> Position;
 
         FlatShader() {
-            Shader vert{Version::GL430, Shader::Type::Vertex};
+            GL::Shader vert{GL::Version::GL430, GL::Shader::Type::Vertex};
             vert.addSource(R"GLSL(
     layout(location = 0) uniform mat3 matrix;
     layout(location = 0) in vec4 position;
@@ -141,7 +140,7 @@ only. Also all error checking is omitted for brevity:
     }
     )GLSL").compile();
 
-            Shader frag{Version::GL430, Shader::Type::Fragment};
+            GL::Shader frag{GL::Version::GL430, GL::Shader::Type::Fragment};
             frag.addSource(R"GLSL(
     layout(location = 1) uniform vec4 color;
     out vec4 fragmentColor;
@@ -174,9 +173,8 @@ The actual code is then just slightly modified to use our shader, i.e.
 
     // ...
 
-    Mesh mesh;
-    mesh.setPrimitive(MeshPrimitive::TriangleStrip)
-        .setVertexCount(4)
+    GL::Mesh mesh{MeshPrimitive::TriangleStrip};
+    mesh.setCount(4)
         .addVertexBuffer(buffer, 0, FlatShader::Position());
 
     FlatShader shader;

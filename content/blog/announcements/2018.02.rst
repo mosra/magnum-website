@@ -66,8 +66,9 @@ supported and there is a set of new dependency-less plugins so you can now more
 easily play audio, convert images or render text on the web. The
 :dox:`StbImageConverter <Trade::StbImageConverter>` and :dox:`StbTrueTypeFont <Text::StbTrueTypeFont>`
 plugins are one of them. The :dox:`BulletIntegration` code and example now
-runs on the web and the :dox:`magnum-info` / :dox:`magnum-al-info` utilities
-were ported to provide information about your WebGL implementation as well.
+runs on the web and the :dox:`magnum-info <magnum-gl-info>` /
+:dox:`magnum-al-info` utilities were ported to provide information about your
+WebGL implementation as well.
 
 .. container:: m-row m-container-inflate
 

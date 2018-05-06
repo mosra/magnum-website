@@ -13,11 +13,14 @@ Reducing C++ compilation time in Magnum: code optimizations
 
 .. role:: cpp(code)
     :language: c++
+.. role:: hl
+    :class: m-text m-strong m-danger
 
-.. note-success:: Content care: Jan 03, 2018
+.. note-success:: Content care: May 06, 2018
 
     Code snippets were updated to match current state of the Magnum API and
-    some typos and grammar errors were fixed.
+    some typos and grammar errors were fixed. The measured numbers are kept on
+    their 2013 values.
 
 To put things into perspective, the Magnum graphics engine has around 100k
 lines of templated C++ code, documentation and comments. Currently the
@@ -53,10 +56,10 @@ you can try removing some :cpp:`#include`\ s to bisect the big ones.
 
 .. code:: shell-session
 
-    [magnum/build/src]$ make Framebuffer.cpp.i
-    Preprocessing CXX source to CMakeFiles/MagnumObjects.dir/Framebuffer.cpp.i
-    [magnum/build/src]$ wc -l CMakeFiles/MagnumObjects.dir/Framebuffer.cpp.i
-    35695 CMakeFiles/MagnumObjects.dir/Framebuffer.cpp.i
+    [build/src/Magnum/GL]$ make Framebuffer.cpp.i
+    Preprocessing CXX source to CMakeFiles/MagnumGLObjects.dir/Framebuffer.cpp.i
+    [build/src/Magnum/GL]$ wc -l CMakeFiles/MagnumGLObjects.dir/Framebuffer.cpp.i
+    35695 CMakeFiles/MagnumGLObjects.dir/Framebuffer.cpp.i
 
 `Reducing includes in headers`_
 -------------------------------
@@ -81,7 +84,7 @@ the whole template list and it can get quicky out of hand:
 
 .. code:: c++
 
-    class Mesh; // easy
+    class Timeline; // easy
 
     namespace Math { template<std::size_t, class> class Matrix; }
     typedef float Float;
@@ -93,8 +96,8 @@ header and don't need to write forward declarations on their own:
 
 .. code:: c++
 
-    // forward-declares both Mesh and Matrix3x3
-    #include <Magnum.h>
+    // forward-declares both Timeline and Matrix3x3
+    #include <Magnum/Magnum.h>
 
 The problem is when you want to forward-declare class with default template
 arguments. Similarly to default arguments in functions, in C++ you can't repeat
@@ -118,32 +121,32 @@ forward declaration header must be included in the type definition header.
     };
 
 With C++11 it is also possible to forward-declare typed enums. In Magnum some
-enums are used on many places (:dox:`BufferUsage`, :dox:`MeshPrimitive`, ...)
-and some are very large (:dox:`ColorFormat`, :dox:`TextureFormat`, ...) and the
-enum values often depend on OpenGL headers which are also big. The compiler
-doesn't care about particular named values and needs to know only the type,
-thus you can pass the value around without having full definition of the enum
-around:
+enums are used on many places (:dox:`MeshPrimitive`, :dox:`GL::BufferUsage`
+...) and some are very large (:dox:`PixelFormat`, :dox:`GL::TextureFormat`,
+...) and the enum values often depend on OpenGL headers which are also big. The
+compiler doesn't care about particular named values and needs to know only the
+type, thus you can pass the value around without having full definition of the
+enum around:
 
 .. code:: c++
 
     // forward-declares ColorFormat enum
-    #include <Magnum.h>
+    #include <Magnum/Magnum.h>
 
     // Don't need the header here
-    ColorFormat format = image.format();
+    PixelFormat format = image.format();
 
 .. code:: c++
 
     // Need it here
-    #include <ColorFormat.h>
+    #include <Magnum/PixelFormat.h>
 
-    format = ColorFormat::RGBA;
+    format = PixelFormat::RGBA8Unorm;
 
 Note that in C++ it is not possible to forward declare class members. To reduce
 header dependencies I had to extract some widely-used enums from their classes
-(thus :cpp:`Buffer::Usage` is now :dox:`BufferUsage` etc.), but the change
-resulted in improved compilation times of code where the enum
+(thus :cpp:`GL::Buffer::Usage` is now :dox:`GL::BufferUsage` etc.), but the
+change resulted in improved compilation times of code where the enum
 forward-declaration is enough.
 
 `STL includes`_
@@ -172,17 +175,17 @@ Header              C++03 libstdc++ C++11 libstdc++ C++11 libc++
 =================== =============== =============== ============
 ``<forward_list>``                  25927           18095
 ``<queue>``         8749            13830           26309
-``<algorithm>``     9801            **46279**       16645
-``<complex>``       21160           28312           **44507**
-``<valarray>``      14671           **49630**       24949
-``<random>``                        **36180**       **51187**
+``<algorithm>``     9801            :hl:`46279`     16645
+``<complex>``       21160           28312           :hl:`44507`
+``<valarray>``      14671           :hl:`49630`     24949
+``<random>``                        :hl:`36180`     :hl:`51187`
 ``<ios>``           15442           21561           29202
-``<*stream>``       ~18000          ~24000          **~41000**
-``<iomanip>``       11504           24296           **40545**
+``<*stream>``       ~18000          ~24000          :hl:`~41000`
+``<iomanip>``       11504           24296           :hl:`40545`
 ``<streambuf>``     11839           17946           29652
-``<locale>``        17913           24027           **35188**
+``<locale>``        17913           24027           :hl:`35188`
 ``<codecvt>``                       n/a             28922
-``<regex>``                         **70409**       **41601**
+``<regex>``                         :hl:`70409`     :hl:`41601`
 ``<thread>``                        27436           17155
 ``<future>``                        32254           19618
 =================== =============== =============== ============
