@@ -7,9 +7,10 @@ Showcase
 Demos and examples on this page require `WebAssembly <http://webassembly.org/>`_-enabled
 browser with at least WebGL 1 working. All recent versions of major browsers
 should work, see the `introductory blog post <{filename}/blog/announcements/webassembly-support-and-more.rst>`__
-for more information. You can also use the `Magnum Info <{filename}/showcase/magnum-info.rst>`_
-utility to see if your browser is capable of running the demos; if you are
-unlucky and your browser isn't, you can at least try
+for more information. You can also use the
+`Magnum GL Info <{filename}/showcase/magnum-gl-info.rst>`_ utility to see if
+your browser is capable of running the demos; if you are unlucky and your
+browser isn't, you can at least try
 `asm.js version of the Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
 
 .. block-info:: Spotted a bug?
@@ -130,8 +131,8 @@ unlucky and your browser isn't, you can at least try
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [magnum-info]
-            :end-before: [/magnum-info]
+            :start-after: [magnum-gl-info]
+            :end-before: [/magnum-gl-info]
 
 .. container:: m-row m-container-inflate
 

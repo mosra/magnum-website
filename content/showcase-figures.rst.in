@@ -101,21 +101,21 @@
     implementation it's running on.
 
 .. [/magnum-al-info]
-.. [magnum-info]
+.. [magnum-gl-info]
 
-.. figure:: {filename}/showcase/magnum-info/screenshot.png
-    :alt: Magnum Info screenshot
+.. figure:: {filename}/showcase/magnum-gl-info/screenshot.png
+    :alt: Magnum GL Info screenshot
     :figclass: m-figure m-fullwidth
-    :target: {filename}/showcase/magnum-info.rst
+    :target: {filename}/showcase/magnum-gl-info.rst
 
-    Magnum Info :label-flat-info:`wasm` :label-flat-success:`webgl1`
+    Magnum GL Info :label-flat-info:`wasm` :label-flat-success:`webgl1`
     :label-success:`webgl2`
 
-    Text utility printing information about Magnum and OpenGL drivers. Separate
-    `WebGL 1 <{filename}/showcase/magnum-info.rst>`__ and
-    `WebGL 2 <{filename}/showcase/magnum-info-webgl2.rst>`__ versions.
+    Text utility printing information about Magnum OpenGL functionality.
+    Separate `WebGL 1 <{filename}/showcase/magnum-gl-info.rst>`__ and
+    `WebGL 2 <{filename}/showcase/magnum-gl-info-webgl2.rst>`__ versions.
 
-.. [/magnum-info]
+.. [/magnum-gl-info]
 .. [magnum-ui-gallery]
 
 .. figure:: {filename}/showcase/magnum-ui-gallery/screenshot.png

@@ -149,8 +149,8 @@ also makes the Magnum Info utilities finally available on the web:
     .. container:: m-col-m-6
 
         .. include:: ../../showcase-figures.rst.in
-            :start-after: [magnum-info]
-            :end-before: [/magnum-info]
+            :start-after: [magnum-gl-info]
+            :end-before: [/magnum-gl-info]
 
     .. container:: m-col-m-6
 

@@ -6,14 +6,15 @@ Magnum WebGL 1 Info
 :breadcrumb: {filename}/showcase.rst Showcase
 
 Displays various information about Magnum and the WebGL implementation it's
-running on. As with the command-line :dox:`magnum-info` utility, it's possible
-to specify additional options. Here they are, conveniently linked for you:
+running on. As with the command-line :dox:`magnum-gl-info` utility, it's
+possible to specify additional options. Here they are, conveniently linked for
+you:
 
 -   `Default view <?>`_
 -   `Show limits <?limits>`_
 -   `Show all extension strings <?extension-strings>`_
 
-A `WebGL 2 version <{filename}/showcase/magnum-info-webgl2.rst>`_ is also
+A `WebGL 2 version <{filename}/showcase/magnum-gl-info-webgl2.rst>`_ is also
 available.
 
 .. raw:: html
@@ -23,7 +24,7 @@ available.
       <pre id="log"></pre>
       <div id="status">Initialization...</div>
       <div id="status-description"></div>
-      <script async="async" src="{filename}/showcase/magnum-info/magnum-info.js"></script>
+      <script async="async" src="{filename}/showcase/magnum-gl-info/magnum-gl-info.js"></script>
       <script src="{filename}/showcase/WindowlessEmscriptenApplication.js"></script>
     </div></div></div></div>
 
@@ -38,5 +39,5 @@ available.
 
 .. block-info:: Documentation
 
-    All options for the Magnum Info utility are explained
+    All options for the Magnum GL Info utility are explained
     :dox:`in the documentation <magnum-gl-info>`.

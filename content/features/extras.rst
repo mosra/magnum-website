@@ -112,7 +112,7 @@ systems, utilities for platform capability introspection.
 .. note-dim::
 
     See documentation of the :dox:`platform`, :dox:`Platform` namespace and the
-    :dox:`magnum-info` utility for details.
+    :dox:`magnum-gl-info` utility for details.
 
 `Mesh and texture tools`_
 =========================
