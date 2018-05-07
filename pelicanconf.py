@@ -69,7 +69,8 @@ AUTHOR_FEED_RSS = None
 
 M_LINKS_NAVBAR1 = [('Features', 'features/', 'features', [
                         ('Extra Functionality', 'features/extras/', 'features/extras'),
-                        ('Plugins & Extensions', 'features/extensions/', 'features/extensions')]),
+                        ('Plugins & Extensions', 'features/extensions/', 'features/extensions'),
+                        ('Community Contributions', 'features/community/', 'features/community')]),
                    ('Showcase', 'showcase/', 'showcase', []),
                    ('Docs', '//doc.magnum.graphics/', '', [
                         ('Getting Started', '//doc.magnum.graphics/magnum/getting-started.html', ''),
@@ -87,6 +88,7 @@ M_LINKS_FOOTER1 = [('Magnum', '/'),
                    ('Features', 'features/'),
                    ('Extra Functionality', 'features/extras/'),
                    ('Plugins & Extensions', 'features/extensions/'),
+                   ('Community Contributions', 'features/community/'),
                    ('Showcase', 'showcase/'),
                    ('Premium Services', 'premium/'),
                    ('Build Status', 'build-status/')]

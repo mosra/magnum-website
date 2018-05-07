@@ -7,8 +7,10 @@ Features
 .. role:: dox-dim(dox)
     :class: m-dim
 
-.. raw:: html
-    :file: features.svg
+.. container:: m-container-inflate
+
+    .. raw:: html
+        :file: features.svg
 
 The following pages provide a high-level overview of the feature set offered by
 Magnum. For greater detail please read documentation linked from the sections
@@ -108,17 +110,16 @@ quaternions and their dual counterparts. Intuitive transformation APIs in both
     See documentation of the :dox:`types`, :dox:`matrix-vector` and
     :dox:`transformations` for details.
 
-
-`Extra functionality » <{filename}/features/extras.rst>`_
+`Extra Functionality » <{filename}/features/extras.rst>`_
 =========================================================
 
 While you can stay with just the core Magnum library, there are additional
 opt-in libraries and tools providing features that can make development of your
-application easier. OpenGL wrapper layer, APIs for asset management, mesh and
-texture tools, debugging and prototyping utilities, command-line utilities and
-much more.
+application easier. OpenGL and Vulkan wrapper layer, APIs for asset management,
+mesh, texture and shader tools, debugging and prototyping utilities,
+command-line utilities and much more.
 
-`Plugins & extensions » <{filename}/features/extensions.rst>`_
+`Plugins & Extensions » <{filename}/features/extensions.rst>`_
 ==============================================================
 
 The libraries are extensible via plugins for asset loading and conversion or,
@@ -126,3 +127,11 @@ for example, text rendering. Magnum provides a rich set of plugins for loading
 common image and scene formats, audio formats and image format conversion. It's
 also possible to integrate math library of your choice for seamless use with
 core Magnum APIs.
+
+`Community Contributions » <{filename}/features/community.rst>`_
+================================================================
+
+On top of everything else, there are libraries, tools and concepts built by the
+community --- not part of Magnum itself, but worth mentioning nevertheless.
+There are integrations with various external UI toolkits, packaging scripts or
+proofs of concept for upcoming features.

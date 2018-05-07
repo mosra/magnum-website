@@ -11,32 +11,15 @@ Extra Functionality
 
         `Features <{filename}/features.rst>`_ | `Plugins & Extensions » <{filename}/features/extensions.rst>`_
 
-.. raw:: html
-    :file: extras.svg
+.. container:: m-container-inflate
+
+    .. raw:: html
+        :file: extras.svg
 
 The following libraries provide additional functionality on top of
 `core Magnum APIs <{filename}/features.rst>`_. They complement each other for a
 well-balanced experience, however none of them are strictly required and it's
 possible to use any subset that matches your particular use case.
-
-`OpenGL wrapping layer`_
-========================
-
-Abstracts away platform differences and extensions, resulting in a single API
-covering desktop OpenGL, OpenGL ES and WebGL. Depending on the GPU driver, the
-backend selects the most suitable feature implementation, giving priority to
-recent extensions.
-
--   OpenGL 2.1 to 4.6, OpenGL ES 2.0, 3.0--3.2, WebGL 1 / 2 + extensions
--   DSA-like API with state tracking, elimination of redundant GL calls,
-    feature emulation on older drivers
--   Can co-exist with other renderers sharing the same OpenGL context,
-    exchange live OpenGL objects with third-party code
-
-.. note-dim::
-
-    See documentation of the :dox:`opengl-wrapping` and
-    :dox:`OpenGL support state <opengl>` for details.
 
 `Plugin management`_
 ====================
@@ -96,6 +79,35 @@ scenes.
     See the :dox:`testsuite` example, documentation of the :dox:`TestSuite`
     namespace or the :dox:`DebugTools::CompareImage` class for details.
 
+`Animation framework`_
+======================
+
+*Coming soon.* Subscribe to :gh:`mosra/magnum#191` for updates.
+
+`OpenGL wrapping layer`_
+========================
+
+Abstracts away platform differences and extensions, resulting in a single API
+covering desktop OpenGL, OpenGL ES and WebGL. Depending on the GPU driver, the
+backend selects the most suitable feature implementation, giving priority to
+recent extensions.
+
+-   OpenGL 2.1 to 4.6, OpenGL ES 2.0, 3.0--3.2, WebGL 1 / 2 + extensions
+-   DSA-like API with state tracking, elimination of redundant GL calls,
+    feature emulation on older drivers
+-   Can co-exist with other renderers sharing the same OpenGL context,
+    exchange live OpenGL objects with third-party code
+
+.. note-dim::
+
+    See documentation of the :dox:`opengl-wrapping` and
+    :dox:`OpenGL support state <opengl>` for details.
+
+`Vulkan wrapping layer`_
+========================
+
+*Coming soon.* Subscribe to :gh:`mosra/magnum#234` for updates.
+
 `Platform integration`_
 =======================
 
@@ -114,8 +126,8 @@ systems, utilities for platform capability introspection.
     See documentation of the :dox:`platform`, :dox:`Platform` namespace and the
     :dox:`magnum-gl-info` utility for details.
 
-`Mesh and texture tools`_
-=========================
+`Mesh, texture and shader tools`_
+=================================
 
 Collection of essential mesh, texture and image algorithms. Simple input/output
 functions working on plain data types for *easy integration* into existing
@@ -125,6 +137,9 @@ pipelines.
     subdivision algorithms and attribute (de)interleaving
 -   Texture atlas packing
 -   Distance field calculation, available also through a command-line utility
+
+*Shader tools are coming soon.* Subscribe to :gh:`mosra/magnum#234` for
+updates.
 
 .. note-dim::
 
@@ -226,10 +241,12 @@ improve interoperability with third-party libraries.
     integration of given library
 -   `Bullet Physics <https://bulletphysics.org/>`_ math type conversion, debug
     renderer implementation and scene graph integration
+-   `DART Dynamics Animation and Robotics Toolkit <http://dartsim.github.io/>`_
+    math type conversion and renderer for DART worlds
 -   `Oculus SDK <https://www.oculus.com/>`_ math type conversion and wrapper
     classes for full Oculus VR support in Magnum
 
 .. note-dim::
 
-    See documentation of the :dox:`BulletIntegration` and :dox:`OvrIntegration`
-    namespaces for details.
+    See documentation of the :dox:`BulletIntegration`, :dox:`DartIntegration`
+    and :dox:`OvrIntegration` namespaces for details.

@@ -7,16 +7,20 @@ architecture.svg
 Exporting:
 
 #.  Enable layer-by-layer and "Save a copy" via Inkscape as Optimized SVG to
-    ``/content/features.svg``, ``/content/features/extensions.svg`` and
-    ``/content/features/extras.svg``. Enable all possible options in the
-    dialog.
+    ``/content/features.svg``, ``/content/features/extras.svg``,
+    ``/content/features/extensions.svg`` and ``/content/features/community.svg``.
+    Enable all possible options in the dialog. On fresh installations you
+    need ``python2-lxml`` and ``python2-scour`` packages.
 #.  Hand-edit each exported SVG and:
 
-    -   Convert absolute URLs so ``{filename}`` is first
-    -   Remove all top-level ``<g display="none">`` elements
+    -   Convert absolute URLs so ``{filename}`` is first (three times each)
+    -   Remove all top-level ``<g display="none">`` elements (use editor code
+        collapsing feature), there should be only four top-level ``<g>``
+        elements left. Scour unfortunately doesn't implement this yet:
+        https://github.com/scour-project/scour/issues/73
     -   Replace ``width``/``height`` on the top-level ``<svg>`` with::
 
-            style="max-width: 750px; max-height: 370px;"
+            style="max-width: 875px; max-height: 415px;"
 
         (assuming the original width/height is this)
 

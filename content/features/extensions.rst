@@ -9,12 +9,14 @@ Plugins & Extensions
     .. note-dim::
         :class: m-text-center
 
-        `« Extra Functionality <{filename}/features/extras.rst>`_ | `Features <{filename}/features.rst>`_
+        `« Extra Functionality <{filename}/features/extras.rst>`_ | `Features <{filename}/features.rst>`_ | `Community Contributions » <{filename}/features/community.rst>`_
 
-.. raw:: html
-    :file: extensions.svg
+.. container:: m-container-inflate
 
-A lot of `Magnum addon libraries <{filename}/features/extras.rst>`_ define
+    .. raw:: html
+        :file: extensions.svg
+
+A lot of `Magnum extra libraries <{filename}/features/extras.rst>`_ define
 interfaces for further extensibility with plugins. Advantage of using plugins
 is the ability to defer decision about particular dependency into deploy stage
 on given platform.
@@ -93,6 +95,11 @@ textures.
 
     See the :dox:`Text::AbstractFontConverter` class and ``*FontConverter``
     classes in the :dox:`Text` namespace for details.
+
+`Shader converters`_
+====================
+
+*Coming soon.* Subscribe to :gh:`mosra/magnum#234` for updates.
 
 `Math converters`_
 ==================
