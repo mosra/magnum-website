@@ -16,14 +16,14 @@ On ArchLinux it's the following packages:
 
 .. code:: sh
 
-    sudo pacman -S texlive-most pelican python-pillow
+    sudo pacman -S texlive-most pelican python-pillow python-matplotlib
     cower -d python-pyphen # Build the python-pyphen package from AUR
 
 On Ubuntu you need these:
 
 .. code:: sh
 
-    sudo apt-get install texlive-base texlive-latex-extra texlive-fonts-extra
+    sudo apt-get install texlive-base texlive-latex-extra texlive-fonts-extra python3-matplotlib
     pip3 install pelican Pyphen Pillow
 
 On Windows and macOS pick some LaTeX distribution and make it available in the
@@ -31,7 +31,7 @@ On Windows and macOS pick some LaTeX distribution and make it available in the
 
 .. code:: sh
 
-    pip3 install pelican Pyphen Pillow
+    pip3 install pelican Pyphen Pillow matplotlib
 
 **Note:** Setting up LaTeX might be problematic and so the website doesn't
 strictly require it to make life easier for you --- if LaTeX is not found, it

@@ -146,7 +146,8 @@ PLUGINS = ['m.abbr',
            'm.htmlsanity',
            'm.images',
            'm.math',
-           'm.metadata']
+           'm.metadata',
+           'm.plots']
 
 FORMATTED_FIELDS = ['summary', 'description', 'landing', 'badge', 'header', 'footer']
 
