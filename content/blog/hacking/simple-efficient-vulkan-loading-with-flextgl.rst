@@ -2,6 +2,7 @@ Simple and efficient Vulkan loading with flextGL
 ################################################
 
 :date: 2018-05-14
+:modified: 2018-06-07
 :category: Hacking
 :tags: C++, Vulkan, flextGL, OpenGL, Python
 :summary: Playing with Vulkan but don't want to include thousands lines of
@@ -13,7 +14,14 @@ Simple and efficient Vulkan loading with flextGL
 .. role:: lol
     :class: m-label m-warning
 
-If you don't know what :gh:`flextGL <ginkgo/flextGL>` is, it's a function
+.. note-success:: Update: June 07, 2018
+
+    Since the time this article was originally written, I agreed with
+    :gh:`ginkgo` to take over flextGL maintainership. The :gh:`mosra/flextGL`
+    repository is now the main place. You'll get automatically redirected if
+    you have a link to the original location.
+
+If you don't know what :gh:`flextGL <mosra/flextGL>` is, it's a function
 loader generator for OpenGL, OpenGL ES and now also Vulkan. In comparison to
 GLEW, GL3W, GLAD, glLoadGen and all other function pointer loaders it allows
 you to provide a template and a whitelist of versions, extensions and functions
@@ -22,17 +30,11 @@ to load, so you can load what you want, however you want.
 Chances are you're using flextGL for function pointer loading in your GL / GLES
 code, so now you can use the same tool for your Vulkan backend as well.
 
-.. note-info::
-
-    At the time of writing, Vulkan support is a pull request that's not merged
-    upstream yet. Grab it from :gh:`ginkgo/flextGL#15` or use the ``vulkan``
-    branch of :gh:`mosra/flextGL`.
-
 `How?`_
 =======
 
-If you grab flextGL from the PR above, it contains a builtin Vulkan template
-that you can use to generate a basic loader. In addition you need Python 3 and
+FlextGL contains a builtin Vulkan template that you can use to generate a basic
+loader. In addition you need Python 3 and
 `Wheezy Template <https://pypi.org/project/wheezy-template/>`_:
 
 .. code:: sh
