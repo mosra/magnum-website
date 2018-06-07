@@ -72,16 +72,6 @@ GTK-based variable inspector window running alongside Magnum.
 -   **License:** :label-danger:`unspecified`
 -   **Platforms:** any desktop
 
-`GLM integration`_
-==================
-
-Provides basic integration of the `OpenGL Mathematics <https://glm.g-truc.net/>`_
-library into Magnum.
-
--   **GitHub:** :gh:`sigman78/magnum-glm`
--   **License:** :label-danger:`unspecified`
--   **Platforms:** any
-
 `Magnum Web Application template`_
 ==================================
 
