@@ -5,6 +5,9 @@ Bullet Physics Example
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
+.. role:: label-default
+    :class: m-label m-default
+
 Shows a rotating table full of cubes that you can shoot down.
 
 .. topic:: Key controls
