@@ -5,9 +5,6 @@ WebVR example
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
-.. role:: label-default
-    :class: m-label m-default
-
 A basic demonstration of how to use the
 `Emscripten VR API <https://kripken.github.io/emscripten-site/docs/api_reference/vr.h.html>`_
 with Magnum.

@@ -14,14 +14,6 @@ Area Lights with LTCs
 .. role:: cpp(code)
     :language: c++
     :class: highlight
-.. role:: label-default
-    :class: m-label m-default
-.. role:: label-success
-    :class: m-label m-success
-.. role:: label-primary
-    :class: m-label m-primary
-.. role:: label-flat-info
-    :class: m-label m-flat m-info
 
 The code is available through the :dox:`examples-arealights` example page in
 the documentation and the example has also a live web version linked below.

@@ -28,11 +28,6 @@ Community Contributions
 
         `« Plugins & Extensions <{filename}/features/extensions.rst>`_ | `Features <{filename}/features.rst>`_
 
-.. role:: label-success
-    :class: m-label m-success
-.. role:: label-danger
-    :class: m-label m-danger
-
 .. container:: m-container-inflate
 
     .. raw:: html

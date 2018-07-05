@@ -14,10 +14,6 @@ January 2014 updates to Magnum
 
 .. role:: cpp(code)
     :language: c++
-.. role:: label-flat-info
-    :class: m-label m-flat m-info
-.. role:: label-flat-success
-    :class: m-label m-flat m-success
 
 .. note-success:: Content care: May 06, 2018
 

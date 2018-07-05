@@ -12,16 +12,6 @@ Introducing Guest Posts
 
 .. role:: sh(code)
     :language: sh
-.. role:: label-primary
-    :class: m-label m-primary
-.. role:: label-success
-    :class: m-label m-success
-.. role:: label-flat-success
-    :class: m-label m-flat m-success
-.. role:: label-flat-info
-    :class: m-label m-flat m-info
-.. role:: label-warning
-    :class: m-label m-warning
 
 Guest posts were kicked off with the
 `Area Lights post by Jonathan Hale <{filename}/blog/guest-posts/area-lights-with-ltcs.rst>`_

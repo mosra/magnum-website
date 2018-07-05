@@ -5,11 +5,6 @@ Area Lights Example
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
-.. role:: label-default
-    :class: m-label m-default
-.. role:: label-warning
-    :class: m-label m-warning
-
 A basic implementation of
 `Real-Time Polygonal-Light Shading with Linearly Transformed Cosines <https://eheitzresearch.wordpress.com/415-2/>`_
 by Eric Heitz, Jonathan Dupuy, Stephen Hill and David Neubelt.  Three lights

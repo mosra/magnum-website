@@ -5,9 +5,6 @@ Object Picking Example
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
-.. role:: label-default
-    :class: m-label m-default
-
 Showcases usage of multiple framebuffer attachments to implement object
 picking.
 

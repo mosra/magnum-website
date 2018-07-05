@@ -21,21 +21,6 @@ browser isn't, you can at least try
     :gh:`a particular example <mosra/magnum-examples>` or
     :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
 
-.. role:: label-primary
-    :class: m-label m-primary
-.. role:: label-danger
-    :class: m-label m-danger
-.. role:: label-warning
-    :class: m-label m-warning
-.. role:: label-success
-    :class: m-label m-success
-.. role:: label-flat-success
-    :class: m-label m-flat m-success
-.. role:: label-info
-    :class: m-label m-info
-.. role:: label-flat-info
-    :class: m-label m-flat m-info
-
 .. .. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6 m-push-m-3

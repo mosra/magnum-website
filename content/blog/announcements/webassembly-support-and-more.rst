@@ -16,14 +16,6 @@ WebAssembly support in Magnum --- and more
     :class: m-text m-info
 .. role:: warning(strong)
     :class: m-text m-warning
-.. role:: label-flat-success
-    :class: m-label m-flat m-success
-.. role:: label-flat-info
-    :class: m-label m-flat m-info
-.. role:: label-success
-    :class: m-label m-success
-.. role:: label-warning
-    :class: m-label m-warning
 
 As `(P)NaCl was deemed dead <https://blog.chromium.org/2017/05/goodbye-pnacl-hello-webassembly.html>`_
 by its creators, I axed all support for it from all repos. Frankly, it was

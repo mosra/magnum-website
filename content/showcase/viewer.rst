@@ -5,9 +5,6 @@ Viewer Example
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
-.. role:: label-default
-    :class: m-label m-default
-
 This is simply an viewer for 3D scene files, such as OpenGEX or COLLADA ones.
 Only triangle meshes with Phong shading with optional diffuse texture are
 currently supported.

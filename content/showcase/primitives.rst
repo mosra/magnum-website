@@ -5,9 +5,6 @@ Primitives Example
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
-.. role:: label-default
-    :class: m-label m-default
-
 Shows how to use builtin primitives and do simple input handling. Displays
 colored cube which can be rotated using mouse.
 
