@@ -48,4 +48,4 @@ source can be moved around the listener using the keyboard.
 .. block-info:: Source code and documentation
 
     You can find further information and source code of this example
-    :dox:`in the documentation <examples-arealights>`.
+    :dox:`in the documentation <examples-audio>`.
