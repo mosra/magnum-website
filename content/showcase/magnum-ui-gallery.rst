@@ -19,21 +19,21 @@ the :dox:`Magnum::Ui` library. It's possible to select among different themes:
 
 .. raw:: html
 
-    <div id="wrapper3"><div id="wrapper2"><div id="wrapper"><div id="listener">
-      <canvas id="module"></canvas>
-      <div id="status">Initialization...</div>
-      <div id="status-description"></div>
-      <script async="async" src="{filename}/showcase/magnum-ui-gallery/magnum-ui-gallery.js"></script>
-      <script src="{filename}/showcase/EmscriptenApplication.js"></script>
-    </div></div></div></div>
+    <div id="container">
+      <div id="sizer"><div id="expander"><div id="listener">
+        <canvas id="module"></canvas>
+        <div id="status">Initialization...</div>
+        <div id="status-description"></div>
+        <script async="async" src="{filename}/showcase/magnum-ui-gallery/magnum-ui-gallery.js"></script>
+        <script src="{filename}/showcase/EmscriptenApplication.js"></script>
+      </div></div></div>
+    </div>
 
 .. block-warning:: Doesn't work?
 
     This example requires `WebAssembly <http://webassembly.org/>`_-capable
-    browser with WebGL 2 enabled. If you see a blank space instead of
-    live example, the browser console might show some details about the error.
-    See the `Showcase <{filename}/showcase.rst>`_ page for more information;
-    you can also report a bug either for the
+    browser with WebGL 2 enabled. See the `Showcase <{filename}/showcase.rst>`_
+    page for more information; you can also report a bug either for the
     :gh:`UI library itself <mosra/magnum-extras>` or
     :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
 
