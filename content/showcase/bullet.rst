@@ -9,8 +9,12 @@ Shows a rotating table full of cubes that you can shoot down.
 
 .. topic:: Key controls
 
-    :label-default:`Arrow keys` *rotate* the camera around,
-    :label-default:`mouse click` shoots a cube.
+    -   :label-default:`Arrow keys` rotate the camera around
+    -   :label-default:`mouse click` shoots an object
+    -   :label-default:`S` toggles between a box (larger, lighter) or a sphere
+        (smaller but heavier) to shoot
+    -   :label-default:`D` toggles draw mode (solid + wireframe debug overlay,
+        just solid or just wireframe debug)
 
 .. raw:: html
 
