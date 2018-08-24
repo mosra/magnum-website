@@ -10,6 +10,11 @@ AddType application/wasm .wasm
 # Subdomains
 RewriteEngine On
 
+# ci.magnum.graphics -> /ci
+RewriteCond %{HTTP_HOST} ^ci\.magnum\.graphics$ [NC]
+RewriteCond %{REQUEST_URI} !^/ci/
+RewriteRule ^(.+)$ /ci/$1 [QSA,L]
+
 # doc.magnum.graphics -> /doc
 RewriteCond %{HTTP_HOST} ^doc\.magnum\.graphics$ [NC]
 RewriteCond %{REQUEST_URI} !^/(doc|corrade-ng|magnum-ng)/
