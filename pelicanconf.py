@@ -145,6 +145,7 @@ PLUGINS = ['m.abbr',
            'm.gl',
            'm.htmlsanity',
            'm.images',
+           'm.link',
            'm.math',
            'm.metadata',
            'm.plots']
