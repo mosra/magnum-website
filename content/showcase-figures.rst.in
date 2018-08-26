@@ -122,12 +122,13 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/magnum-gl-info.rst
 
-    Magnum GL Info :label-flat-info:`wasm` :label-flat-success:`webgl1`
-    :label-success:`webgl2`
+    Magnum GL Info :label-flat-info:`wasm` :label-info:`asm.js`
+    :label-flat-success:`webgl1` :label-success:`webgl2`
 
-    Text utility printing information about Magnum OpenGL functionality.
-    Separate `WebGL 1 <{filename}/showcase/magnum-gl-info.rst>`__ and
-    `WebGL 2 <{filename}/showcase/magnum-gl-info-webgl2.rst>`__ versions.
+    Text utility printing info about Magnum OpenGL capabilities. Versions for
+    `WebGL 1 <{filename}/showcase/magnum-gl-info.rst>`__,
+    `asm.js WebGL 1 <{filename}/showcase/magnum-gl-info.rst>`__,
+    and `WebGL 2 <{filename}/showcase/magnum-gl-info-webgl2.rst>`__.
 
 .. [/magnum-gl-info]
 .. [magnum-ui-gallery]

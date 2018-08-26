@@ -14,8 +14,9 @@ you:
 -   `Show limits <?limits>`_
 -   `Show all extension strings <?extension-strings>`_
 
-A `WebGL 1 version <{filename}/showcase/magnum-gl-info.rst>`_ is also
-available.
+A `WebGL 1 version <{filename}/showcase/magnum-gl-info.rst>`_ and an
+`asm.js WebGL 1 version <{filename}/showcase/magnum-gl-info-asmjs.rst>`_ is
+also available.
 
 .. raw:: html
 
