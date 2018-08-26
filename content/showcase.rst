@@ -40,48 +40,6 @@ isn't capable, you can at least try the
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [triangle]
-            :end-before: [/triangle]
-
-    .. container:: m-col-m-6
-
-        .. include:: showcase-figures.rst.in
-            :start-after: [textured-triangle]
-            :end-before: [/textured-triangle]
-
-.. container:: m-row m-container-inflate
-
-    .. container:: m-col-m-6
-
-        .. include:: showcase-figures.rst.in
-            :start-after: [primitives]
-            :end-before: [/primitives]
-
-    .. container:: m-col-m-6
-
-        .. include:: showcase-figures.rst.in
-            :start-after: [viewer]
-            :end-before: [/viewer]
-
-.. container:: m-row m-container-inflate
-
-    .. container:: m-col-m-6
-
-        .. include:: showcase-figures.rst.in
-            :start-after: [text]
-            :end-before: [/text]
-
-    .. container:: m-col-m-6
-
-        .. include:: showcase-figures.rst.in
-            :start-after: [audio]
-            :end-before: [/audio]
-
-.. container:: m-row m-container-inflate
-
-    .. container:: m-col-m-6
-
-        .. include:: showcase-figures.rst.in
             :start-after: [box2d]
             :end-before: [/box2d]
 
@@ -110,14 +68,56 @@ isn't capable, you can at least try the
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [webvr]
-            :end-before: [/webvr]
+            :start-after: [ui-gallery]
+            :end-before: [/ui-gallery]
 
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [ui-gallery]
-            :end-before: [/ui-gallery]
+            :start-after: [webvr]
+            :end-before: [/webvr]
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [audio]
+            :end-before: [/audio]
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [viewer]
+            :end-before: [/viewer]
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [primitives]
+            :end-before: [/primitives]
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [text]
+            :end-before: [/text]
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [triangle]
+            :end-before: [/triangle]
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [textured-triangle]
+            :end-before: [/textured-triangle]
 
 .. container:: m-row m-container-inflate
 
