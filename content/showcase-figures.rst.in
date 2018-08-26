@@ -50,6 +50,19 @@
     :dox:`Audio` library.
 
 .. [/audio]
+.. [box2d]
+
+.. figure:: {filename}/showcase/box2d/screenshot.png
+    :alt: Box2D example screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/box2d.rst
+
+    Box2D Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
+    :label-warning:`physics`
+
+    Builds a pyramid out of cubes and allows you to destroy it after.
+
+.. [/box2d]
 .. [bullet]
 
 .. figure:: {filename}/showcase/bullet/screenshot.png
@@ -57,7 +70,8 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/bullet.rst
 
-    Bullet Physics Example :label-flat-info:`wasm` :label-flat-success:`webgl1` :label-warning:`physics`
+    Bullet Physics Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
+    :label-warning:`physics`
 
     Shows a rotating table full of cubes that you can shoot down.
 

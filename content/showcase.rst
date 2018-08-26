@@ -82,8 +82,16 @@ browser isn't, you can at least try
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
+            :start-after: [box2d]
+            :end-before: [/box2d]
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
             :start-after: [bullet]
             :end-before: [/bullet]
+
+.. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 
@@ -91,13 +99,13 @@ browser isn't, you can at least try
             :start-after: [picking]
             :end-before: [/picking]
 
-.. container:: m-row m-container-inflate
-
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
             :start-after: [arealights]
             :end-before: [/arealights]
+
+.. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 
@@ -105,13 +113,13 @@ browser isn't, you can at least try
             :start-after: [webvr]
             :end-before: [/webvr]
 
-.. container:: m-row m-container-inflate
-
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
             :start-after: [magnum-ui-gallery]
             :end-before: [/magnum-ui-gallery]
+
+.. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 
@@ -119,9 +127,7 @@ browser isn't, you can at least try
             :start-after: [magnum-gl-info]
             :end-before: [/magnum-gl-info]
 
-.. container:: m-row m-container-inflate
-
-    .. container:: m-col-m-6 m-push-m-3
+    .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
             :start-after: [magnum-al-info]
