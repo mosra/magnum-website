@@ -10,12 +10,6 @@ sound source and a (default) listener, which are visualized as a sphere and a
 box respectively, the listener initially facing the sound source. The sound
 source can be moved around the listener using the keyboard.
 
-.. note-warning::
-
-    Note that, currently, due to implementation limitation, the browser version
-    of this example plays just a mono sound. Download and build the native
-    version from the link below to experience true 3D sound.
-
 .. topic:: Key controls
 
     -   :label-default:`Right` / :label-default:`Left` --- rotate the source
