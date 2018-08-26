@@ -14,9 +14,8 @@ you:
 -   `Show limits <?limits>`_
 -   `Show all extension strings <?extension-strings>`_
 
-A `WebAssembly WebGL 1 version <{filename}/showcase/magnum-gl-info-asmjs.rst>`_
-and `WebGL 2 version <{filename}/showcase/magnum-gl-info-webgl2.rst>`_ is also
-available.
+A `WebAssembly WebGL 1 version <{filename}/showcase/gl-info-asmjs.rst>`_ and
+`WebGL 2 version <{filename}/showcase/gl-info-webgl2.rst>`_ is also available.
 
 .. raw:: html
 
@@ -26,7 +25,7 @@ available.
         <pre id="log"></pre>
         <div id="status">Initialization...</div>
         <div id="status-description"></div>
-        <script async="async" src="{filename}/showcase/magnum-gl-info-asmjs/magnum-gl-info.js"></script>
+        <script async="async" src="{filename}/showcase/gl-info-asmjs/magnum-gl-info.js"></script>
         <script src="{filename}/showcase/WindowlessEmscriptenApplication.js"></script>
       </div></div></div>
     </div>
@@ -34,8 +33,8 @@ available.
 .. block-warning:: Doesn't work?
 
     This example requires a browser with WebGL 1 enabled. Unlike the
-    `WebAssembly version <{filename}/showcase/magnum-gl-info.rst>`__, this
-    example uses only `asm.js <http://asmjs.org/>`_, so it should work on more
+    `WebAssembly version <{filename}/showcase/gl-info.rst>`__, this example
+    uses only `asm.js <http://asmjs.org/>`_, so it should work on more
     browsers. See the `Showcase <{filename}/showcase.rst>`_
     page for more information; you can also report a bug either for the
     :gh:`utility itself <mosra/magnum>` or

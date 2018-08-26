@@ -146,8 +146,8 @@ page:
     .. container:: m-col-m-6
 
         .. include:: ../../showcase-figures.rst.in
-            :start-after: [magnum-ui-gallery]
-            :end-before: [/magnum-ui-gallery]
+            :start-after: [ui-gallery]
+            :end-before: [/ui-gallery]
 
 .. note-dim::
 

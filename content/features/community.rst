@@ -82,7 +82,7 @@ refreshes the browser on code updates.
 `Magnum VR UI`_
 ===============
 
-Mix of `Magnum Ui Gallery <{filename}/showcase/magnum-ui-gallery.rst>`_,
+Mix of `Magnum Ui Gallery <{filename}/showcase/ui-gallery.rst>`_,
 :dox:`Magnum Oculus VR example <examples-ovr>` and
 :dox:`Magnum Leap Motion example <examples-leapmotion>`, showing how to fusion
 them all together.

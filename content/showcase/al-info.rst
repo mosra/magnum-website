@@ -4,6 +4,7 @@ Magnum AL Info
 :css: {filename}/showcase/showcase.css
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
+:alias: /showcase/magnum-al-info/
 
 Displays various information about Magnum and the OpenAL implementation it's
 running on. As with the command-line :dox:`magnum-al-info` utility, it's
@@ -21,7 +22,7 @@ you:
         <pre id="log"></pre>
         <div id="status">Initialization...</div>
         <div id="status-description"></div>
-        <script async="async" src="{filename}/showcase/magnum-al-info/magnum-al-info.js"></script>
+        <script async="async" src="{filename}/showcase/al-info/magnum-al-info.js"></script>
         <script src="{filename}/showcase/WindowlessEmscriptenApplication.js"></script>
       </div></div></div>
     </div>

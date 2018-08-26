@@ -8,9 +8,9 @@ Demos and examples on this page require `WebAssembly <http://webassembly.org/>`_
 browser with at least WebGL 1 working. All recent versions of major browsers
 should work, see the `introductory blog post <{filename}/blog/announcements/webassembly-support-and-more.rst>`__
 for more information. You can also use the
-`Magnum GL Info <{filename}/showcase/magnum-gl-info.rst>`_ utility to see if
-your browser is capable of running the demos; if you are unlucky and your
-browser isn't capable, you can at least try the
+`Magnum GL Info <{filename}/showcase/gl-info.rst>`_ utility to see if your
+browser is capable of running the demos; if you are unlucky and your browser
+isn't capable, you can at least try the
 `asm.js version of the Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
 
 .. block-info:: Spotted a bug?
@@ -116,22 +116,22 @@ browser isn't capable, you can at least try the
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [magnum-ui-gallery]
-            :end-before: [/magnum-ui-gallery]
+            :start-after: [ui-gallery]
+            :end-before: [/ui-gallery]
 
 .. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [magnum-gl-info]
-            :end-before: [/magnum-gl-info]
+            :start-after: [gl-info]
+            :end-before: [/gl-info]
 
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [magnum-al-info]
-            :end-before: [/magnum-al-info]
+            :start-after: [al-info]
+            :end-before: [/al-info]
 
 *Looking for more?* Not all demos are ported to HTML5 yet. See
 :dox:`Examples and Tutorials <example-index>` in the documentation --- there's

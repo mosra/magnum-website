@@ -22,6 +22,19 @@
 .. role:: label-flat-info
     :class: m-label m-flat m-info
 
+.. [al-info]
+
+.. figure:: {filename}/showcase/al-info/screenshot.png
+    :alt: Magnum AL Info screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/al-info.rst
+
+    Magnum AL Info :label-flat-info:`wasm`
+
+    Text utility printing out various information about Magnum and the OpenAL
+    implementation it's running on.
+
+.. [/al-info]
 .. [arealights]
 
 .. figure:: {filename}/showcase/arealights/screenshot.png
@@ -76,6 +89,22 @@
     Shows a rotating table full of cubes that you can shoot down.
 
 .. [/bullet]
+.. [gl-info]
+
+.. figure:: {filename}/showcase/gl-info/screenshot.png
+    :alt: Magnum GL Info screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/gl-info.rst
+
+    Magnum GL Info :label-flat-info:`wasm` :label-info:`asm.js`
+    :label-flat-success:`webgl1` :label-success:`webgl2`
+
+    Text utility printing info about Magnum OpenGL capabilities. Versions for
+    `WebGL 1 <{filename}/showcase/gl-info.rst>`__,
+    `asm.js WebGL 1 <{filename}/showcase/gl-info.rst>`__ and
+    `WebGL 2 <{filename}/showcase/gl-info-webgl2.rst>`__.
+
+.. [/gl-info]
 .. [picking]
 
 .. figure:: {filename}/showcase/picking/screenshot.png
@@ -102,48 +131,6 @@
     Displays an interactive cube.
 
 .. [/primitives]
-.. [magnum-al-info]
-
-.. figure:: {filename}/showcase/magnum-al-info/screenshot.png
-    :alt: Magnum AL Info screenshot
-    :figclass: m-figure m-fullwidth
-    :target: {filename}/showcase/magnum-al-info.rst
-
-    Magnum AL Info :label-flat-info:`wasm`
-
-    Text utility printing out various information about Magnum and the OpenAL
-    implementation it's running on.
-
-.. [/magnum-al-info]
-.. [magnum-gl-info]
-
-.. figure:: {filename}/showcase/magnum-gl-info/screenshot.png
-    :alt: Magnum GL Info screenshot
-    :figclass: m-figure m-fullwidth
-    :target: {filename}/showcase/magnum-gl-info.rst
-
-    Magnum GL Info :label-flat-info:`wasm` :label-info:`asm.js`
-    :label-flat-success:`webgl1` :label-success:`webgl2`
-
-    Text utility printing info about Magnum OpenGL capabilities. Versions for
-    `WebGL 1 <{filename}/showcase/magnum-gl-info.rst>`__,
-    `asm.js WebGL 1 <{filename}/showcase/magnum-gl-info.rst>`__,
-    and `WebGL 2 <{filename}/showcase/magnum-gl-info-webgl2.rst>`__.
-
-.. [/magnum-gl-info]
-.. [magnum-ui-gallery]
-
-.. figure:: {filename}/showcase/magnum-ui-gallery/screenshot.png
-    :alt: Magnum::Ui Gallery screenshot
-    :figclass: m-figure m-fullwidth
-    :target: {filename}/showcase/magnum-ui-gallery.rst
-
-    Magnum::Ui Gallery :label-flat-info:`wasm` :label-success:`webgl2` :label-primary:`ui`
-
-    A gallery of various widgets (buttons, labels, inputs, modals) provided by
-    the :dox:`Magnum::Ui` library.
-
-.. [/magnum-ui-gallery]
 .. [text]
 
 .. figure:: {filename}/showcase/text/screenshot.png
@@ -185,6 +172,19 @@
     require WebAssembly-capable browser is also available.
 
 .. [/triangle]
+.. [ui-gallery]
+
+.. figure:: {filename}/showcase/ui-gallery/screenshot.png
+    :alt: Magnum::Ui Gallery screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/ui-gallery.rst
+
+    Magnum::Ui Gallery :label-flat-info:`wasm` :label-success:`webgl2` :label-primary:`ui`
+
+    A gallery of various widgets (buttons, labels, inputs, modals) provided by
+    the :dox:`Magnum::Ui` library.
+
+.. [/ui-gallery]
 .. [viewer]
 
 .. figure:: {filename}/showcase/viewer/screenshot.png

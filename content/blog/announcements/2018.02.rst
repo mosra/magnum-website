@@ -76,8 +76,8 @@ WebGL implementation as well.
     .. container:: m-col-m-6
 
         .. include:: ../../showcase-figures.rst.in
-            :start-after: [magnum-gl-info]
-            :end-before: [/magnum-gl-info]
+            :start-after: [gl-info]
+            :end-before: [/gl-info]
 
 A bunch of code size optimizations is already in place and further size
 improvements are on the roadmap. Compilation to WebAssembly for better
@@ -241,8 +241,8 @@ provide some knobs and toggles for the
     .. container:: m-col-m-6
 
         .. include:: ../../showcase-figures.rst.in
-            :start-after: [magnum-ui-gallery]
-            :end-before: [/magnum-ui-gallery]
+            :start-after: [ui-gallery]
+            :end-before: [/ui-gallery]
 
     .. container:: m-col-m-6
 

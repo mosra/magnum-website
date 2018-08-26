@@ -141,14 +141,14 @@ also makes the Magnum Info utilities finally available on the web:
     .. container:: m-col-m-6
 
         .. include:: ../../showcase-figures.rst.in
-            :start-after: [magnum-gl-info]
-            :end-before: [/magnum-gl-info]
+            :start-after: [gl-info]
+            :end-before: [/gl-info]
 
     .. container:: m-col-m-6
 
         .. include:: ../../showcase-figures.rst.in
-            :start-after: [magnum-al-info]
-            :end-before: [/magnum-al-info]
+            :start-after: [al-info]
+            :end-before: [/al-info]
 
 Windowless applications for Emscripten are using the :dox:`Platform::WindowlessEglApplication`
 class, see its documentation for detailed usage guide. There is also a new
