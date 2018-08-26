@@ -101,8 +101,10 @@ for(var i = 0; i != args.length; ++i) {
 
 Module.setStatus('Downloading...');
 
-/* Capture keyboard only after a click */
+/* Capture keyboard only after a click. Capture it by default so I'm not
+   getting reports of "stuff not working".  */
 Module.keyboardListeningElement = Module.canvas;
 Module.canvas.addEventListener('mousedown', function(event) {
-    event.target.focus();
+    event.target.focus({preventScroll: true});
 });
+Module.canvas.focus({preventScroll: true});
