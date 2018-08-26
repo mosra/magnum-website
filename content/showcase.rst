@@ -10,7 +10,7 @@ should work, see the `introductory blog post <{filename}/blog/announcements/weba
 for more information. You can also use the
 `Magnum GL Info <{filename}/showcase/magnum-gl-info.rst>`_ utility to see if
 your browser is capable of running the demos; if you are unlucky and your
-browser isn't, you can at least try
+browser isn't capable, you can at least try the
 `asm.js version of the Triangle example <{filename}/showcase/triangle-asmjs.rst>`_.
 
 .. block-info:: Spotted a bug?

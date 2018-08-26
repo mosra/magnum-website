@@ -7,7 +7,7 @@ Area Lights Example
 
 A basic implementation of
 `Real-Time Polygonal-Light Shading with Linearly Transformed Cosines <https://eheitzresearch.wordpress.com/415-2/>`_
-by Eric Heitz, Jonathan Dupuy, Stephen Hill and David Neubelt.  Three lights
+by Eric Heitz, Jonathan Dupuy, Stephen Hill and David Neubelt. Three lights
 are displayed, each with different orientation and parameters.
 
 .. topic:: Key controls
