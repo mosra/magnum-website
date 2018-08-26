@@ -39,6 +39,6 @@ the :dox:`Magnum::Ui` library. It's possible to select among different themes:
 
 .. block-info:: Documentation
 
-    See the :dox:`Magnum::Ui` library documentation for more information.
+    See the :dox:`magnum-ui-gallery` app documentation for more information.
     Again, please note that this is an experimental feature and the
     documentation is not yet finished.
