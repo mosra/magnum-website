@@ -40,10 +40,11 @@ community --- not part of Magnum itself, but worth mentioning nevertheless.
 =========================
 
 Integrates :gh:`Dear ImGui <ocornut/imgui>`, an immediate-mode UI library, into
-Magnum. A fork of :gh:`denesik/MagnumImguiPort` with additional updates and a
+Magnum. Fork(s) of :gh:`denesik/MagnumImguiPort` with additional updates and a
 WebGL port.
 
--   **GitHub:** :gh:`lecopivo/magnum-imgui` (:gh:`lecopivo/MagnumImguiPort`)
+-   **GitHub:** :gh:`nnarain/magnum-imgui` (:gh:`lecopivo/magnum-imgui`
+    (:gh:`lecopivo/MagnumImguiPort`))
 -   **Demo:** https://lecopivo.github.io/MagnumImguiPort/
 -   **License:** :label-success:`MIT`
 -   **Platforms:** any
