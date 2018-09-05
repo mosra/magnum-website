@@ -1,7 +1,6 @@
 About the Project
 #################
 
-:breadcrumb: {filename}/contact.rst Contact Us
 :summary: Legal info, third party licenses and contributor credits
 
 `License`_

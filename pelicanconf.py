@@ -80,8 +80,8 @@ M_LINKS_NAVBAR1 = [('Features', 'features/', 'features', [
 
 M_LINKS_NAVBAR2 = [('Premium Services', 'premium/', 'premium', []),
                    ('Blog', M_BLOG_URL, '[blog]', []),
-                   ('Contact Us', 'contact/', 'contact', [
-                        ('GitHub', 'https://github.com/mosra/magnum', ''),
+                   ('GitHub', 'https://github.com/mosra/magnum', '', [
+                        ('Contact', 'contact/', 'contact'),
                         ('About', 'about/', 'about')])]
 
 M_LINKS_FOOTER1 = [('Magnum', '/'),
