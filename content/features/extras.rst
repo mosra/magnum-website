@@ -82,7 +82,21 @@ scenes.
 `Animation framework`_
 ======================
 
-*Coming soon.* Subscribe to :gh:`mosra/magnum#191` for updates.
+Layered architecture exposing everything from direct value interpolation over
+keyframe structures up to high-level animation-driven behavior and playback
+directly from loaded scene data.
+
+-   Defaults to easy-to-use high-level APIs but allows for fine-tuning of all
+    parameters including interpolator functions and extrapolation behavior
+-   Designed for cache-efficient memory access
+-   Ability to use different types for animation input and output (for spline
+    interpolation or on-the-fly keyframe data decompression)
+-   Ability to use different global time type and animation track time type
+
+.. note-dim::
+
+    See documentation of classes and functions in the :dox:`Animation`
+    namespace for details.
 
 `OpenGL wrapping layer`_
 ========================
