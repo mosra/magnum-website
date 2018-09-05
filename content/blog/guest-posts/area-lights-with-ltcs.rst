@@ -4,7 +4,7 @@ Area Lights with LTCs
 :date: 2018-01-15
 :category: Guest posts
 :cover: {filename}/img/blog/guest-posts/area-lights-with-ltcs.jpg
-:tags: C++, Rendering, PBR, OpenGL, Emscripten, WebGL
+:tags: C++, rendering, PBR, OpenGL, Emscripten, WebGL
 :author: Jonathan Hale
 :summary: A new Magnum example implements an analytic method for area light
     shading presented in the paper "Real-Time Polygonal-Light Shading with
