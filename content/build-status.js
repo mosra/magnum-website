@@ -101,7 +101,7 @@ function fetchTravisJobStatus(latestJobs) {
                 age = timeDiff(new Date(Date.parse(jobs[i][ageField])), now);
                 title = jobs[i]['state'] + ' @ ' + jobs[i][ageField];
             } else {
-                age = '';
+                age = '&nbsp;'; /* To avoid layout jumps */
                 title = jobs[i]['state'];
             }
 
