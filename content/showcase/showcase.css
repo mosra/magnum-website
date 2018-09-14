@@ -111,6 +111,9 @@
 #module {
   margin-bottom: -0.25rem; /* otherwise there's scrollbar w/ fullsize (why?) */
 }
+#container.fullsize #module:focus {
+  outline-width: 0;
+}
 #status, #status-description {
   position: absolute;
   text-align: center;
