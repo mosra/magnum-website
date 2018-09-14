@@ -226,7 +226,8 @@ advanced text shaping and layouting support.
 
 .. note-dim::
 
-    See documentation of the :dox:`Text` and :dox:`Ui` namespaces for details.
+    See documentation of the :dox:`Text`, :dox:`Ui` namespaces and the
+    :dox:`magnum-ui-gallery` app for details.
 
 `Audio`_
 ========
