@@ -28,7 +28,7 @@
    #expander          does aspect ratio preservation
    #listener          snaps to #expander edges
    #listener::before  does the border, which finally goes below the canvas */
-.m-container-inflatable > .m-row > [class*='m-col-'] > #container {
+.m-container-inflatable > .m-row > [class*='m-col-'] > #container:not(.fullsize) {
   margin: 1rem -1rem 1rem -1rem;
 }
 #sizer {
@@ -61,10 +61,15 @@
   border-color: #405363; /*var(--line-color)*/
 }
 
-/* Canvas size and aspect ratio knobs */
+/* Canvas size and aspect ratio knobs. The fullsize is done using a fixed
+   position instead of absolute because there are other relative-positioned
+   elements up the hierarchy (m.css grid layout) and so that wouldn't work.
+   It's also done in a way that makes the top navbar (and the dropdowns) still
+   visible. */
 #container.fullsize {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  z-index: 10; /* navbar dropdowns have 99999 */
+  top: 3rem;
   bottom: 0;
   left: 0;
   right: 0;
