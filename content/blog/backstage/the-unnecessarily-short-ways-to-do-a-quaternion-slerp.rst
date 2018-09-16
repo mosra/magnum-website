@@ -341,7 +341,8 @@ tuned for the next posts. Thank you for reading!
     Discussion: `Twitter <https://twitter.com/czmosra/status/1037416215172530177>`_,
     Reddit `r/cpp <https://www.reddit.com/r/cpp/comments/9d9ve7/optimizing_quaternion_interpolation_by_doing_less/>`_,
     `r/gamedev <https://www.reddit.com/r/gamedev/comments/9d9v85/optimizing_quaternion_interpolation_by_doing_less/>`_,
-    `Hacker News <https://news.ycombinator.com/item?id=17921048>`_
+    `Hacker News <https://news.ycombinator.com/item?id=17921048>`_,
+    `mailing list <https://groups.google.com/forum/#!topic/magnum-engine/ZqrrjCpu-PQ>`_
 
 .. _Animated Triangle: https://github.com/KhronosGroup/glTF-Sample-Models/tree/master/2.0/AnimatedTriangle
 .. _Unity Forum: https://forum.unity.com/threads/by-pass-the-shortest-route-aspect-of-quaternion-slerp.459429/
