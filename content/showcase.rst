@@ -107,6 +107,14 @@ isn't capable, you can at least try the
 
 .. container:: m-row m-container-inflate
 
+    .. container:: m-col-m-6 m-push-m-3
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [mouseinteraction]
+            :end-before: [/mouseinteraction]
+
+.. container:: m-row m-container-inflate
+
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in

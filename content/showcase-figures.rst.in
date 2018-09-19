@@ -105,6 +105,19 @@
     `WebGL 2 <{filename}/showcase/gl-info-webgl2.rst>`__.
 
 .. [/gl-info]
+.. [mouseinteraction]
+
+.. figure:: {filename}/showcase/mouseinteraction/screenshot.png
+    :alt: Mouse Interaction example screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/mouseinteraction.rst
+
+    Mouse Interaction Example :label-flat-info:`wasm` :label-success:`webgl2`
+
+    Blender-inspired depth-aware panning, zooming and rotation for easy scene
+    navigation.
+
+.. [/mouseinteraction]
 .. [picking]
 
 .. figure:: {filename}/showcase/picking/screenshot.png
