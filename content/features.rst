@@ -38,8 +38,8 @@ below. You can also click on various parts of the architecture diagram.
 -   **Windows** with both MSVC and MinGW, **Windows RT** (Store/Phone)
 -   **macOS**, **iOS**
 -   **Android**
--   **Web** (`WebAssembly <http://webassembly.org/>`_ or `asm.js <http://asmjs.org/>`_),
-    through `Emscripten <http://kripken.github.io/emscripten-site/>`_
+-   **Web** (`WebAssembly <https://webassembly.org/>`_ or `asm.js <http://asmjs.org/>`_),
+    through `Emscripten <https://kripken.github.io/emscripten-site/>`_
 
 .. note-dim::
 

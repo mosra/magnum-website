@@ -21,8 +21,8 @@ Supported platforms
 -   **Windows**, **Windows RT** (Store/Phone)
 -   **macOS**, **iOS**
 -   **Android**
--   **Web** (`asm.js <http://asmjs.org/>`_ or `WebAssembly <http://webassembly.org/>`_),
-    through `Emscripten <http://kripken.github.io/emscripten-site/>`_
+-   **Web** (`asm.js <http://asmjs.org/>`_ or `WebAssembly <https://webassembly.org/>`_),
+    through `Emscripten <https://kripken.github.io/emscripten-site/>`_
 
 See the `Build Status page <http://magnum.graphics/build-status/>`_ for
 detailed per-platform build status.

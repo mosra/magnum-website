@@ -28,7 +28,7 @@ Plugins importing general scene formats with mesh data, image data, scene
 hierarchy, material, light and camera properties.
 
 -   TGA, PNG, JPEG, GIF, EXR, HDR, BMP, DDS and other image formats
--   OBJ, Stanford PLY, COLLADA and `OpenGEX <http://opengex.org/>`_ scene
+-   OBJ, Stanford PLY, COLLADA and `OpenGEX <https://opengex.org/>`_ scene
     format parsers
 -   Plugin using `Assimp <http://assimp.org/>`_ for general file format support
 -   "Any importer" plugin delegating to other image / scene importer plugins

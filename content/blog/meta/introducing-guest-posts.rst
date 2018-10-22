@@ -62,7 +62,7 @@ a better alternative for you.
 -------------------------------
 
 In order to set up a local copy of the website you need Python 3 with
-`Pelican <https://getpelican.com/>`_, `Pyphen <http://pyphen.org/>`_ and
+`Pelican <https://getpelican.com/>`_, `Pyphen <https://pyphen.org/>`_ and
 `Pillow <https://pypi.python.org/pypi/Pillow>`_ packages installed and
 *optionally* some LaTeX distribution for math rendering.
 

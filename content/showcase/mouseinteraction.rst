@@ -38,7 +38,7 @@ mouse cursor for more convenient interaction with complex scenes.
 
 .. block-warning:: Doesn't work?
 
-    This example requires `WebAssembly <http://webassembly.org/>`_-capable
+    This example requires `WebAssembly <https://webassembly.org/>`_-capable
     browser with WebGL 2 enabled. See the `Showcase <{filename}/showcase.rst>`_
     page for more information; you can also report a bug either for the
     :gh:`example itself <mosra/magnum-examples>` or

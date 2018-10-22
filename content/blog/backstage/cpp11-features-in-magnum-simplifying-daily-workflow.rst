@@ -180,7 +180,7 @@ compile-time error:
 Other common units are distance and time units. Magnum doesn't impose any
 restriction on distance units, similarly to Blender, so whether :cpp:`1.0f` is
 one meter or one furlong depends on you (but you need to be consistent, of
-course). Time unit literals will be `part of C++14 <http://en.cppreference.com/w/cpp/chrono/operator%22%22h>`_.
+course). Time unit literals will be `part of C++14 <https://en.cppreference.com/w/cpp/chrono/operator%22%22h>`_.
 
 `Usage of SFINAE and type traits`_
 ----------------------------------

@@ -32,7 +32,7 @@ the :dox:`Magnum::Ui` library. It's possible to select among different themes:
 
 .. block-warning:: Doesn't work?
 
-    This example requires `WebAssembly <http://webassembly.org/>`_-capable
+    This example requires `WebAssembly <https://webassembly.org/>`_-capable
     browser with WebGL 2 enabled. See the `Showcase <{filename}/showcase.rst>`_
     page for more information; you can also report a bug either for the
     :gh:`UI library itself <mosra/magnum-extras>` or

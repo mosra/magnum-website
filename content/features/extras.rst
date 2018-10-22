@@ -42,7 +42,7 @@ themselves.
 `Signals and slots`_
 ====================
 
-Inspired by Qt's `signals and slots API <http://doc.qt.io/qt-5/signalsandslots.html>`_,
+Inspired by Qt's `signals and slots API <https://doc.qt.io/qt-5/signalsandslots.html>`_,
 provides an easy-to-use design pattern to connect listeners to events.
 Macro-less syntax using C++11 variadic templates, with full type safety and
 *no need for any preprocessor*.
@@ -61,7 +61,7 @@ Macro-less syntax using C++11 variadic templates, with full type safety and
 `Testing and benchmarking`_
 ===========================
 
-Borrowing initial ideas from Qt's `QTest <http://doc.qt.io/qt-5/qtest-overview.html>`_,
+Borrowing initial ideas from Qt's `QTest <https://doc.qt.io/qt-5/qtest-overview.html>`_,
 gives the user a clear API for creating automated unit tests, integration tests
 and benchmarks with *minimal use of macros* and no opaque magic behind the
 scenes.
@@ -256,7 +256,7 @@ improve interoperability with third-party libraries.
     integration of given library
 -   `Bullet Physics <https://bulletphysics.org/>`_ math type conversion, debug
     renderer implementation and scene graph integration
--   `DART Dynamics Animation and Robotics Toolkit <http://dartsim.github.io/>`_
+-   `DART Dynamics Animation and Robotics Toolkit <https://dartsim.github.io/>`_
     math type conversion and renderer for DART worlds
 -   `Oculus SDK <https://www.oculus.com/>`_ math type conversion and wrapper
     classes for full Oculus VR support in Magnum

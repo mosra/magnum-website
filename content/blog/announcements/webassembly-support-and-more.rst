@@ -25,7 +25,7 @@ Android (sigh). In the Magnum repository alone,
 :gh:`the amount of deleted code <mosra/magnum@2145ae9b969f058e39bcaa008c7e5f6bab57189e>`
 was almost 5k lines.
 
-On the other hand, adding support for `WebAssembly <http://webassembly.org/>`_
+On the other hand, adding support for `WebAssembly <https://webassembly.org/>`_
 was almost too easy. With Emscripten 1.37.9 and newer it just boils down to
 adding one new compiler and linker flag, different files are generated (but
 they are still loaded automatically from the main ``*.js`` file), and
@@ -209,7 +209,7 @@ wasm, gzipped               165.9 kB
     Note that the sizes are taken at the time of writing this article and
     there's still *a lot* to improve regarding code size in Magnum. Quite a few
     possible optimizations are explained in this excellent blog post:
-    `10 simple diet tricks for asm.js <http://floooh.github.io/2016/08/27/asmjs-diet.html>`_
+    `10 simple diet tricks for asm.js <https://floooh.github.io/2016/08/27/asmjs-diet.html>`_
     (It's not relevant to just asm.js, most of the tricks apply to WebAssembly
     as well).
 

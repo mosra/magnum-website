@@ -22,7 +22,7 @@ How to draw a red square in Magnum --- in one statement
 
 .. note-info::
 
-    Be sure to read the `original blog post <http://web.archive.org/web/20140328040855/http://blog.davidedmundson.co.uk/blog/>`_
+    Be sure to read the `original blog post <https://web.archive.org/web/20140328040855/http://blog.davidedmundson.co.uk/blog/>`_
     first so you can do a fair comparison.
 
     .. original URL no longer available: http://blog.davidedmundson.co.uk/blog/making-a-red-square-in-qtquick

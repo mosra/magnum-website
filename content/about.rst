@@ -54,7 +54,7 @@ apps:
     IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
     CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-    For more information, please refer to <http://unlicense.org/>
+    For more information, please refer to <https://unlicense.org/>
 
 `Third party software`_
 =======================
@@ -66,15 +66,15 @@ apps:
     https://github.com/mosra/flextgl. Copyright © 2011--2018 Thomas Weber,
     licensed under the `MIT license <https://raw.githubusercontent.com/mosra/flextgl/master/COPYING>`_.
 -   The :dox:`Audio` namespace depends on the **OpenAL** API ---
-    http://www.openal.org.
+    https://www.openal.org.
 -   The :dox:`Platform::GlfwApplication` class uses the **GLFW** library ---
-    http://www.glfw.org/, licensed under the
-    `zlib/libpng <http://www.glfw.org/license.html>`_ license.
+    https://www.glfw.org/, licensed under the
+    `zlib/libpng <https://www.glfw.org/license.html>`_ license.
 -   The :dox:`Platform::GlutApplication` class uses the **freeGLUT** library
     --- http://freeglut.sourceforge.net/, licensed under the MIT license.
 -   The :dox:`Platform::Sdl2Application` class uses the **SDL2** library ---
     https://www.libsdl.org/, licensed under the
-    `ZLIB license <http://www.gzip.org/zlib/zlib_license.html>`_.
+    `ZLIB license <https://zlib.net/zlib_license.html>`_.
 
 `Contributors`_
 ===============

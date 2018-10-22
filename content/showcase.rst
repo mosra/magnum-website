@@ -4,7 +4,7 @@ Showcase
 :cover: {filename}/img/cover-showcase.jpg
 :summary: Interactive WebGL showcase of Magnum capabilities
 
-Demos and examples on this page require `WebAssembly <http://webassembly.org/>`_-enabled
+Demos and examples on this page require `WebAssembly <https://webassembly.org/>`_-enabled
 browser with at least WebGL 1 working. All recent versions of major browsers
 should work, see the `introductory blog post <{filename}/blog/announcements/webassembly-support-and-more.rst>`__
 for more information. You can also use the

@@ -280,6 +280,6 @@ and optimizing of given code fragment and leave it for the linker.
 Reducing amount of exported symbols helps the linker (and also dynamic linker
 at runtime), as it doesn't have to process huge symbol table containing stuff
 that isn't used outside the library. See GCC's
-`documentation about visibility <http://gcc.gnu.org/wiki/Visibility>`_.
+`documentation about visibility <https://gcc.gnu.org/wiki/Visibility>`_.
 
 The next part will be about optimizing the build system.

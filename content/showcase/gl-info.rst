@@ -33,7 +33,7 @@ An `asm.js WebGL 1 version <{filename}/showcase/gl-info-asmjs.rst>`_ and
 
 .. block-warning:: Doesn't work?
 
-    This example requires `WebAssembly <http://webassembly.org/>`_-capable
+    This example requires `WebAssembly <https://webassembly.org/>`_-capable
     browser with WebGL 1 enabled, but if you don't have a WebAssembly-capable
     browser, you can try to run the classic
     `asm.js version <{filename}/showcase/gl-info-asmjs.rst>`_ instead. See the

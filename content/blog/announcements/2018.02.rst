@@ -134,7 +134,7 @@ It's of course also possible to use Vcpkg-installed packages with CMake. See
 -------------------
 
 Among other notable things is improved Unicode support on Windows. In line with
-the `UTF-8 Manifesto <http://utf8everywhere.org/>`_, all Magnum APIs were
+the `UTF-8 Manifesto <https://utf8everywhere.org/>`_, all Magnum APIs were
 designed to expect strings and paths encoded in UTF-8. This is now working
 properly also on Windows --- as long as you use Magnum APIs such as
 :dox:`Utility::Directory` or :dox:`Trade::AbstractImporter` to access the
@@ -409,7 +409,7 @@ that's handled with :dox:`Context::resetState() <GL::Context::resetState()>`.
 It's also possible to wrap externally created OpenGL objects using
 :dox:`*::wrap() <GL::Buffer::wrap()>` and, conversely, release their ownership
 with :dox:`release() <GL::Buffer::release()>`. A reduced example showing
-`rendering into QQuickFramebufferObject <http://blog.qt.io/blog/2015/05/11/integrating-custom-opengl-rendering-with-qt-quick-via-qquickframebufferobject/>`_:
+`rendering into QQuickFramebufferObject <https://blog.qt.io/blog/2015/05/11/integrating-custom-opengl-rendering-with-qt-quick-via-qquickframebufferobject/>`_:
 
 .. code:: c++
 
@@ -511,7 +511,7 @@ and also a simple Object Picking example:
             :end-before: [/picking]
 
 There's also a new experimental :dox:`DartIntegration` library being worked on
---- it integrates the `DART Dynamic Animation and Robotics Toolkit <http://dartsim.github.io/>`_
+--- it integrates the `DART Dynamic Animation and Robotics Toolkit <https://dartsim.github.io/>`_
 into Magnum in a similar way that's done with the Bullet Physics library. A
 first draft is already merged with second revision being currently in the
 works. This library alone deserves a blog post on its own --- stay tuned!

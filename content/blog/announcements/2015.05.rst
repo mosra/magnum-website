@@ -86,7 +86,7 @@ fairly powerful importer framework.
 `Initial OpenDDL/OpenGEX support`_
 ==================================
 
-Possibly the biggest new importer plugin is the `OpenGEX <http://www.opengex.org/>`_
+Possibly the biggest new importer plugin is the `OpenGEX <https://www.opengex.org/>`_
 format importer. If you haven't heard about it yet, it is a fairly new 3D scene
 file format based on the cleanly designed OpenDDL language. It aims to be a
 better alternative to the bloated XML-based COLLADA format and currently there

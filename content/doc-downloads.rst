@@ -15,7 +15,7 @@ bandwidth.
 
 If you have a project using Magnum and want to cross-link to Magnum
 documentation from your Doxygen docs, you can make use of the following
-`tag files <http://www.stack.nl/~dimitri/doxygen/manual/external.html>`_:
+`tag files <https://www.stack.nl/~dimitri/doxygen/manual/external.html>`_:
 
 -   `corrade.tag <http://doc.magnum.graphics/corrade.tag>`_ (:filesize:`{filename}/doc/corrade.tag`)
 -   `magnum.tag <http://doc.magnum.graphics/magnum.tag>`_ (:filesize:`{filename}/doc/magnum.tag`)
@@ -33,12 +33,12 @@ the files.
 
     Corrade and Magnum docs also cross-link to STL documentation at
     `cppreference.com <https://en.cppreference.com>`_. To do that in your
-    project as well, download `their tag file <http://en.cppreference.com/w/Cppreference:Archives>`_
+    project as well, download `their tag file <https://en.cppreference.com/w/Cppreference:Archives>`_
     and add a line like the following to your ``Doxyfile``:
 
     .. code:: ini
 
-        TAGFILES += stl.tag=http://en.cppreference.com/w/
+        TAGFILES += stl.tag=https://en.cppreference.com/w/
 
 .. note-success::
 
