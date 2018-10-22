@@ -40,6 +40,20 @@ isn't capable, you can at least try the
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
+            :start-after: [player]
+            :end-before: [/player]
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [ui-gallery]
+            :end-before: [/ui-gallery]
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
             :start-after: [box2d]
             :end-before: [/box2d]
 
@@ -68,16 +82,8 @@ isn't capable, you can at least try the
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [ui-gallery]
-            :end-before: [/ui-gallery]
-
-    .. container:: m-col-m-6
-
-        .. include:: showcase-figures.rst.in
             :start-after: [webvr]
             :end-before: [/webvr]
-
-.. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 
@@ -85,13 +91,13 @@ isn't capable, you can at least try the
             :start-after: [audio]
             :end-before: [/audio]
 
+.. container:: m-row m-container-inflate
+
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
             :start-after: [viewer]
             :end-before: [/viewer]
-
-.. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 
@@ -99,15 +105,15 @@ isn't capable, you can at least try the
             :start-after: [primitives]
             :end-before: [/primitives]
 
+.. container:: m-row m-container-inflate
+
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
             :start-after: [text]
             :end-before: [/text]
 
-.. container:: m-row m-container-inflate
-
-    .. container:: m-col-m-6 m-push-m-3
+    .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
             :start-after: [mouseinteraction]
@@ -142,5 +148,6 @@ isn't capable, you can at least try the
             :end-before: [/al-info]
 
 *Looking for more?* Not all demos are ported to HTML5 yet. See
-:dox:`Examples and Tutorials <example-index>` in the documentation --- there's
-an Oculus VR demo, shadow mapping, shader effects and more.
+:dox:`Examples and Tutorials <example-index>` and :dox:`Utilities <utilities>`
+in the documentation --- there's an Oculus VR demo, shadow mapping, shader
+effects, various tools and apps and more.

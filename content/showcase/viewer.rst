@@ -5,9 +5,9 @@ Viewer Example
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
-This is simply a viewer for 3D scene files, such as glTF or OpenGEX ones. Only
-triangle meshes with Phong shading and an optional diffuse texture are
-currently supported.
+A viewer for 3D scene files, such as glTF or OpenGEX ones, deliberately
+simplified for tutorial purposes. For a full-featured model viewer and
+animation player see the `Magnum Player <{filename}/showcase/player.rst>`_ app.
 
 .. topic:: Controls
 

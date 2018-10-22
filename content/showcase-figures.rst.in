@@ -131,6 +131,18 @@
     picking.
 
 .. [/picking]
+.. [player]
+
+.. figure:: {filename}/showcase/player/screenshot.jpg
+    :alt: Magnum Player screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/player.rst
+
+    Magnum Player :label-flat-info:`wasm` :label-success:`webgl2`
+
+    A viewer and player for animated glTF scenes. Drag&drop a file to load it.
+
+.. [/player]
 .. [primitives]
 
 .. figure:: {filename}/showcase/primitives/screenshot.png
