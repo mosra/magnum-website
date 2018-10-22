@@ -22,7 +22,7 @@ studies loosely based on existing Magnum users to help you decide.
             Magnum has a thin GPU abstraction and well-documented APIs for
             exploring the concepts behind vector math and 3D graphics.
 
-            .. button-success:: http://doc.magnum.graphics/magnum/examples-triangle.html
+            .. button-success:: https://doc.magnum.graphics/magnum/examples-triangle.html
                 :class: m-fullwidth
 
                 Start with the basics
@@ -39,7 +39,7 @@ studies loosely based on existing Magnum users to help you decide.
             Magnum provides you with a versatile multiplatform toolbox with
             everything you need to create a fast-to-download demo.
 
-            .. button-primary:: http://doc.magnum.graphics/magnum/examples-textured-triangle.html
+            .. button-primary:: https://doc.magnum.graphics/magnum/examples-textured-triangle.html
                 :class: m-fullwidth
 
                 See the shader workflow
@@ -58,7 +58,7 @@ studies loosely based on existing Magnum users to help you decide.
             ensure your time is well invested, ask us for
             `premium support <{filename}/premium.rst>`_.
 
-            .. button-warning:: http://doc.magnum.graphics/magnum/features.html
+            .. button-warning:: https://doc.magnum.graphics/magnum/features.html
                 :class: m-fullwidth
 
                 Explore the building blocks
@@ -80,7 +80,7 @@ studies loosely based on existing Magnum users to help you decide.
             `consulting and training <{filename}/premium.rst>`_ to get your
             team quickly up to speed.
 
-            .. button-info:: http://doc.magnum.graphics/magnum/examples-triangle-plain-glfw.html
+            .. button-info:: https://doc.magnum.graphics/magnum/examples-triangle-plain-glfw.html
                 :class: m-fullwidth
 
                 Integrate just the core

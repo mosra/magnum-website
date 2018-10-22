@@ -51,7 +51,7 @@ expectations anymore and I needed something to match the website theme. That
 led to creating a `m.css Doxygen theme <http://mcss.mosra.cz/doxygen/>`_, which
 uses XML output from Doxygen to produce a modern and responsive HTML5 markup.
 
-You can see the Doxygen theme live at http://doc.magnum.graphics. Please note
+You can see the Doxygen theme live at https://doc.magnum.graphics. Please note
 that the theme is still a work-in-progress and some features (such as symbol
 search) are yet to be implemented. The documentation content is gradually
 proofread, updated, and improved to match the new theme.

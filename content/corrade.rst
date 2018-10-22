@@ -11,7 +11,7 @@ Corrade
 Corrade is a multiplatform utility library written in C++11/C++14. It's used as
 a base for the Magnum graphics engine, among other things.
 
--   Documentation --- http://doc.magnum.graphics/corrade/
+-   Documentation --- https://doc.magnum.graphics/corrade/
 -   GitHub project page --- https://github.com/mosra/corrade
 
 Supported platforms
@@ -24,7 +24,7 @@ Supported platforms
 -   **Web** (`asm.js <http://asmjs.org/>`_ or `WebAssembly <https://webassembly.org/>`_),
     through `Emscripten <https://kripken.github.io/emscripten-site/>`_
 
-See the `Build Status page <http://magnum.graphics/build-status/>`_ for
+See the `Build Status page <https://magnum.graphics/build-status/>`_ for
 detailed per-platform build status.
 
 Features
@@ -40,8 +40,8 @@ Features
     handling and hot code reload
 -   Signal/slot connection library with full type safety
 
-Check also the `Feature Overview pages <http://magnum.graphics/features/>`_ for
-further information.
+Check also the `Feature Overview pages <https://magnum.graphics/features/>`_
+for further information.
 
 Documentation, getting started
 ==============================

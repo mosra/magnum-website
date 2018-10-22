@@ -1,13 +1,13 @@
 Magnum website
 ##############
 
-Content for http://magnum.graphics/.
+Content for https://magnum.graphics/.
 
 `Setting up a local copy`_
 ==========================
 
 In order to set up a local copy (for example
-`for writing a guest post <http://blog.magnum.graphics/blog/meta/introducing-guest-posts/>`_),
+`for writing a guest post <https://blog.magnum.graphics/blog/meta/introducing-guest-posts/>`_),
 you need Python 3 with `Pelican <https://getpelican.com/>`_,
 `Pyphen <http://pyphen.org/>`_ and `Pillow <https://pypi.python.org/pypi/Pillow>`_
 packages installed and *optionally* some LaTeX distribution for math rendering.

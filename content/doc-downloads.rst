@@ -4,7 +4,7 @@ Doc Downloads
 :summary: Downloads of Corrade and Magnum documentation
 
 Up-to-date documentation for Corrade and Magnum is actively maintained on
-http://doc.magnum.graphics/corrade/ and http://doc.magnum.graphics/magnum/.
+https://doc.magnum.graphics/corrade/ and https://doc.magnum.graphics/magnum/.
 While it's possible to scrape these for offline viewing, it's advised to build
 your own version locally instead. Guide how to do that is available
 :dox:`in the documentation <building-doc>`. Thank you for being nice to server
@@ -17,8 +17,8 @@ If you have a project using Magnum and want to cross-link to Magnum
 documentation from your Doxygen docs, you can make use of the following
 `tag files <https://www.stack.nl/~dimitri/doxygen/manual/external.html>`_:
 
--   `corrade.tag <http://doc.magnum.graphics/corrade.tag>`_ (:filesize:`{filename}/doc/corrade.tag`)
--   `magnum.tag <http://doc.magnum.graphics/magnum.tag>`_ (:filesize:`{filename}/doc/magnum.tag`)
+-   `corrade.tag <https://doc.magnum.graphics/corrade.tag>`_ (:filesize:`{filename}/doc/corrade.tag`)
+-   `magnum.tag <https://doc.magnum.graphics/magnum.tag>`_ (:filesize:`{filename}/doc/magnum.tag`)
 
 Download the files into your project and reference them from your ``Doxyfile``
 like shown below. If Doxygen complains about duplicate symbols, use just one of
@@ -26,8 +26,8 @@ the files.
 
 .. code:: ini
 
-    TAGFILES += corrade.tag=http://doc.magnum.graphics/corrade/ \
-                magnum.tag=http://doc.magnum.graphics/magnum/
+    TAGFILES += corrade.tag=https://doc.magnum.graphics/corrade/ \
+                magnum.tag=https://doc.magnum.graphics/magnum/
 
 .. block-info:: Linking to STL documentation
 

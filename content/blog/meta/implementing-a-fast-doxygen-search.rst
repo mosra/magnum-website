@@ -49,7 +49,7 @@ With not even 500 lines of pure JavaScript and roughly half a megabyte binary
 containing search data I'm able to search among all 7500 symbols of the Magnum
 engine faster than I can type.
 
-.. button-success:: http://doc.magnum.graphics/magnum/
+.. button-success:: https://doc.magnum.graphics/magnum/
 
     See it for yourself
 

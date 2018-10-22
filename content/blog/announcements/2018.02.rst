@@ -28,7 +28,7 @@ Magnum.
 Until very recently, Magnum lacked a central place with consistent design for
 showcasing the features, providing documentation and keeping you updated. You
 can read more in the `website announcement <{filename}/blog/meta/a-new-website-coming-soon.rst>`_
-post, be sure to also subscribe to `the blog Atom feed <http://blog.magnum.graphics/feeds/all.atom.xml>`_
+post, be sure to also subscribe to `the blog Atom feed <https://blog.magnum.graphics/feeds/all.atom.xml>`_
 to not miss any updates. The documentation got an overhaul in a similar style,
 with extra effort put into being fast, easy-to-read and with first-class search
 functionality. There's a blog post dedicated to
@@ -41,7 +41,7 @@ Magnum:
 
 .. image:: {filename}/img/blog/announcements/2018.02/opengl-search.png
     :alt: OpenGL symbol search
-    :target: http://doc.magnum.graphics/magnum/#search
+    :target: https://doc.magnum.graphics/magnum/#search
 
 Magnum wouldn't be anything without the great community that formed around it
 and community involvement is important also for the website content --- if you

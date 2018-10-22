@@ -5,7 +5,7 @@ from pelicanconf import *
 
 # Needs to have the scheme, otherwise feeds and social meta tags are broken.
 # All other URLs starting with // will be prepended with the scheme from here.
-SITEURL = 'http://magnum.graphics'
+SITEURL = 'https://magnum.graphics'
 M_BLOG_URL = '//blog.magnum.graphics'
 
 STATIC_URL = '//static.magnum.graphics/{path}'
@@ -54,7 +54,7 @@ M_LINKS_NAVBAR2[1] = ('Blog', M_BLOG_URL, '[blog]', [])
 assert M_LINKS_FOOTER3[1][0] == 'Blog Feed'
 M_LINKS_FOOTER3[1] = ('Blog Feed', M_BLOG_URL + '/feeds/all.atom.xml')
 
-M_SOCIAL_IMAGE = 'http://static.magnum.graphics/img/site.jpg'
+M_SOCIAL_IMAGE = '//static.magnum.graphics/img/site.jpg'
 
 M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600%7CSource+Sans+Pro:400,400i,600,600i&subset=latin-ext',
                STATIC_URL.format(path='m-dark.compiled.css')]

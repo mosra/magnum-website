@@ -57,7 +57,7 @@ time investment and finance further Magnum development.
         <tr>
           <td class="m-text-right m-text-middle">Price</td>
           <td><div class="m-button m-flat m-fullwidth">
-            <a href="http://doc.magnum.graphics/magnum/getting-started.html">
+            <a href="https://doc.magnum.graphics/magnum/getting-started.html">
               <div class="m-big">Free</div>
               <div class="m-small">Get started</div>
             </a>

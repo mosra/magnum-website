@@ -34,7 +34,7 @@ Magnum Engine
 
         .. container:: m-col-l-3 m-push-l-2 m-col-m-4 m-push-m-1 m-col-s-6 m-push-s-3 m-col-t-8 m-push-t-2
 
-            .. button-primary:: http://doc.magnum.graphics/magnum-ng/getting-started.html
+            .. button-primary:: https://doc.magnum.graphics/magnum-ng/getting-started.html
                 :class: m-fullwidth
 
                 Dive right in

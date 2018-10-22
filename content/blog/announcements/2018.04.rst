@@ -145,7 +145,7 @@ to render a triangle on screen without relying on Magnum OpenGL support at all.
         .. figure:: {filename}/showcase/triangle/screenshot.png
             :alt: sokol_gfx Triangle example screenshot
             :figclass: m-figure m-fullwidth
-            :target: http://doc.magnum.graphics/magnum/examples-triangle-sokol.html
+            :target: https://doc.magnum.graphics/magnum/examples-triangle-sokol.html
 
             Triangle using sokol_gfx
 
@@ -230,7 +230,7 @@ Thanks to :gh:`Squareys` (again!), we have a new fun example integrating the
         .. figure:: {filename}/img/blog/announcements/2018.04/leapmotion.gif
             :alt: Leap Motion example screenshot
             :figclass: m-fullwidth
-            :target: http://doc.magnum.graphics/magnum/examples-triangle-sokol.html
+            :target: https://doc.magnum.graphics/magnum/examples-triangle-sokol.html
 
             Leap Motion
 

@@ -38,11 +38,11 @@ RewriteRule ^(.*)$ /tmp/$1 [QSA,L]
 # doc.magnum.graphics/corrade-ng/ -> /corrade/
 RewriteCond %{HTTP_HOST} ^doc\.magnum\.graphics$ [NC]
 RewriteCond %{REQUEST_URI} ^/corrade-ng/
-RewriteRule ^corrade-ng/(.*)$ http://doc.magnum.graphics/corrade/$1 [R=301,QSA]
+RewriteRule ^corrade-ng/(.*)$ https://doc.magnum.graphics/corrade/$1 [R=301,QSA]
 
 # doc.magnum.graphics/magnum-ng/ -> /magnum/
 RewriteCond %{HTTP_HOST} ^doc\.magnum\.graphics$ [NC]
 RewriteCond %{REQUEST_URI} ^/magnum-ng/
-RewriteRule ^magnum-ng/(.*)$ http://doc.magnum.graphics/magnum/$1 [R=301,QSA]
+RewriteRule ^magnum-ng/(.*)$ https://doc.magnum.graphics/magnum/$1 [R=301,QSA]
 
 # kate: hl Apache Configuration
