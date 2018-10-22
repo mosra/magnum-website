@@ -121,6 +121,7 @@ repositories.
         -   :gh-name:`Eliot Saba <staticfloat>`
         -   :gh-name:`Émile Grégoire <emgre>`
         -   :gh-name:`Guillaume Giraud <Guillaume227>`
+        -   :gh-name:`Ivan P. <uzername>`
         -   :gh-name:`Jan Dupal <JanDupal>`
         -   :gh-name:`Janick Martinez Esturo <ph03>`
         -   :gh-name:`jaynus`
@@ -136,6 +137,7 @@ repositories.
         -   :gh-name:`Nathan Ollerenshaw <matjam>`
         -   :gh-name:`Nicholas "LB" Branden <LB-->`
         -   :gh-name:`Olga Turanksaya <olga-python>`
+        -   :gh-name:`Patrick Werner <boonto>`
         -   :gh-name:`Sam Spilsbury <smspillaz>`
         -   :gh-name:`Samuel Kogler <skogler>`
         -   :gh-name:`Séverin Lemaignan <severin-lemaignan>`
