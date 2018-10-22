@@ -86,6 +86,13 @@
       <arglist>(StaticArrayView&lt; size, T &gt; view)</arglist>
     </member>
     <member kind="function">
+      <type>constexpr ArrayView&lt; T &gt;</type>
+      <name>arrayView</name>
+      <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
+      <anchor>a3a43320e58651eafa9774e04c68545e5</anchor>
+      <arglist>(ArrayView&lt; T &gt; view)</arglist>
+    </member>
+    <member kind="function">
       <type>ArrayView&lt; U &gt;</type>
       <name>arrayCast</name>
       <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
@@ -126,6 +133,13 @@
       <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
       <anchor>a3cf428b256a5ed8941145e4d15ae8b45</anchor>
       <arglist>(T(&amp;data)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr StaticArrayView&lt; size, T &gt;</type>
+      <name>staticArrayView</name>
+      <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
+      <anchor>aeb96550df22942b8379e77d3942c88c4</anchor>
+      <arglist>(StaticArrayView&lt; size, T &gt; view)</arglist>
     </member>
     <member kind="function">
       <type>StaticArrayView&lt; size *sizeof(T)/sizeof(U), U &gt;</type>
@@ -1665,36 +1679,92 @@
       <type>std::string</type>
       <name>stripPrefix</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
-      <anchor>a6ee28cbd419602d233cb0d517f0f6695</anchor>
-      <arglist>(const std::string &amp;string, const char(&amp;prefix)[size])</arglist>
+      <anchor>a220d3903694aa0a90ec23540054c73cd</anchor>
+      <arglist>(std::string string, const char(&amp;prefix)[size])</arglist>
     </member>
     <member kind="function">
       <type>std::string</type>
       <name>stripPrefix</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
-      <anchor>aa7d42726ddf76ed15a26fb40548fedd7</anchor>
-      <arglist>(const std::string &amp;string, char prefix)</arglist>
+      <anchor>a6dbe4d041b412de515dfaf992f6778b0</anchor>
+      <arglist>(std::string string, char prefix)</arglist>
     </member>
     <member kind="function">
       <type>std::string</type>
       <name>stripSuffix</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
-      <anchor>a3c4cd4ef9dd5ba175b64ae4b1259bffb</anchor>
-      <arglist>(const std::string &amp;string, const std::string &amp;suffix)</arglist>
+      <anchor>a4913f68a09a3ad6dec44e8220d8d4c72</anchor>
+      <arglist>(std::string string, const std::string &amp;suffix)</arglist>
     </member>
     <member kind="function">
       <type>std::string</type>
       <name>stripSuffix</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
-      <anchor>a82b4f24fef3089683ca4cb42d1790078</anchor>
-      <arglist>(const std::string &amp;string, const char(&amp;suffix)[size])</arglist>
+      <anchor>ab70c0084c70b8dfc512283edb553c5fa</anchor>
+      <arglist>(std::string string, const char(&amp;suffix)[size])</arglist>
     </member>
     <member kind="function">
       <type>std::string</type>
       <name>stripSuffix</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
-      <anchor>a895f4585310a1df25ee76d9854783a27</anchor>
-      <arglist>(const std::string &amp;string, char suffix)</arglist>
+      <anchor>a376d68bfe85b7c6a6d4a4d87209fcd2b</anchor>
+      <arglist>(std::string string, char suffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceFirst</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>ae74814f4438913aa1300538529069d32</anchor>
+      <arglist>(std::string string, const std::string &amp;search, const std::string &amp;replace)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceFirst</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a4efbec885c01308ee148007ad21d42ad</anchor>
+      <arglist>(std::string string, const char(&amp;search)[searchSize], const char(&amp;replace)[replaceSize])</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceFirst</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>ac7fb659c24110adebb2955a75d290442</anchor>
+      <arglist>(std::string string, const char(&amp;search)[searchSize], const std::string &amp;replace)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceFirst</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a4d54d0ac8fb49d705ae692bc88fa2c85</anchor>
+      <arglist>(std::string string, const std::string &amp;search, const char(&amp;replace)[replaceSize])</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceAll</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>aef5cb78b1c8e6336abce1c5b94b6fbf0</anchor>
+      <arglist>(std::string string, const std::string &amp;search, const std::string &amp;replace)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceAll</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a6dd7b108947809be4906cab43e050f0b</anchor>
+      <arglist>(std::string string, const char(&amp;search)[searchSize], const char(&amp;replace)[replaceSize])</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceAll</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a3c0ad6e25f8092de0ac2737ff9c62ee7</anchor>
+      <arglist>(std::string string, const char(&amp;search)[searchSize], const std::string &amp;replace)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceAll</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a47b378ccf712482676488a771ec07f46</anchor>
+      <arglist>(std::string string, const std::string &amp;search, const char(&amp;replace)[replaceSize])</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -1726,10 +1796,10 @@
       <arglist>(className, typeExpression)                                              </arglist>
     </member>
     <member kind="typedef">
-      <type>std::integral_constant&lt; bool,(Implementation::HasMemberBegin&lt; T &gt;::value||Implementation::HasBegin&lt; T &gt;::value||Implementation::HasStdBegin&lt; T &gt;::value)&amp;&amp;(Implementation::HasMemberEnd&lt; T &gt;::value||Implementation::HasEnd&lt; T &gt;::value||Implementation::HasStdEnd&lt; T &gt;::value)&gt;</type>
+      <type>std::integral_constant&lt; bool, implementation-specific &gt;</type>
       <name>IsIterable</name>
       <anchorfile>namespaceCorrade_1_1Utility.html</anchorfile>
-      <anchor>a43561aa129a33d6c7aa6cb828dacdf46</anchor>
+      <anchor>a5b6f2707e54c886af00f4738ff83afa2</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -2287,6 +2357,20 @@
       <arglist>(std::size_t end) const</arglist>
     </member>
     <member kind="function">
+      <type>StaticArrayView&lt; viewSize, char &gt;</type>
+      <name>prefix</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Array.html</anchorfile>
+      <anchor>a09dd6511186942d0a86f932275c932c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>StaticArrayView&lt; viewSize, const char &gt;</type>
+      <name>prefix</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Array.html</anchorfile>
+      <anchor>a93358f8bca108473ee9c0b4001e5fd12</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
       <type>ArrayView&lt; char &gt;</type>
       <name>suffix</name>
       <anchorfile>classCorrade_1_1Containers_1_1Array.html</anchorfile>
@@ -2522,6 +2606,13 @@
       <arglist>(std::size_t end) const</arglist>
     </member>
     <member kind="function">
+      <type>StaticArrayView&lt; viewSize, const char &gt;</type>
+      <name>prefix</name>
+      <anchorfile>classCorrade_1_1Containers_1_1ArrayView.html</anchorfile>
+      <anchor>a955d90af613eb04499d08ae4f165ff3f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
       <type>ArrayView&lt; const char &gt;</type>
       <name>suffix</name>
       <anchorfile>classCorrade_1_1Containers_1_1ArrayView.html</anchorfile>
@@ -2569,6 +2660,13 @@
       <anchorfile>classCorrade_1_1Containers_1_1ArrayView.html</anchorfile>
       <anchor>ac450a49515ff20058552c732542b1b13</anchor>
       <arglist>(StaticArrayView&lt; size, const char &gt; view)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr ArrayView&lt; const char &gt;</type>
+      <name>arrayView</name>
+      <anchorfile>classCorrade_1_1Containers_1_1ArrayView.html</anchorfile>
+      <anchor>a3a43320e58651eafa9774e04c68545e5</anchor>
+      <arglist>(ArrayView&lt; const char &gt; view)</arglist>
     </member>
     <member kind="function">
       <type>ArrayView&lt; U &gt;</type>
@@ -2967,6 +3065,20 @@
       <arglist>(std::size_t end) const </arglist>
     </member>
     <member kind="function">
+      <type>StaticArrayView&lt; viewSize, T &gt;</type>
+      <name>prefix</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Array.html</anchorfile>
+      <anchor>a09dd6511186942d0a86f932275c932c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>StaticArrayView&lt; viewSize, const T &gt;</type>
+      <name>prefix</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Array.html</anchorfile>
+      <anchor>a93358f8bca108473ee9c0b4001e5fd12</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>ArrayView&lt; T &gt;</type>
       <name>suffix</name>
       <anchorfile>classCorrade_1_1Containers_1_1Array.html</anchorfile>
@@ -3205,6 +3317,13 @@
       <arglist>(std::size_t end) const </arglist>
     </member>
     <member kind="function">
+      <type>StaticArrayView&lt; viewSize, T &gt;</type>
+      <name>prefix</name>
+      <anchorfile>classCorrade_1_1Containers_1_1ArrayView.html</anchorfile>
+      <anchor>a955d90af613eb04499d08ae4f165ff3f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>ArrayView&lt; T &gt;</type>
       <name>suffix</name>
       <anchorfile>classCorrade_1_1Containers_1_1ArrayView.html</anchorfile>
@@ -3252,6 +3371,13 @@
       <anchorfile>classCorrade_1_1Containers_1_1ArrayView.html</anchorfile>
       <anchor>ac450a49515ff20058552c732542b1b13</anchor>
       <arglist>(StaticArrayView&lt; size, T &gt; view)</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr ArrayView&lt; T &gt;</type>
+      <name>arrayView</name>
+      <anchorfile>classCorrade_1_1Containers_1_1ArrayView.html</anchorfile>
+      <anchor>a3a43320e58651eafa9774e04c68545e5</anchor>
+      <arglist>(ArrayView&lt; T &gt; view)</arglist>
     </member>
     <member kind="function">
       <type>ArrayView&lt; U &gt;</type>
@@ -3749,7 +3875,7 @@
   <compound kind="class">
     <name>Corrade::Containers::Optional</name>
     <filename>classCorrade_1_1Containers_1_1Optional.html</filename>
-    <templarg></templarg>
+    <templarg>T</templarg>
     <member kind="function">
       <type></type>
       <name>Optional</name>
@@ -3812,6 +3938,13 @@
       <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
       <anchor>a6946a7975796cd2c4e6472e33ee679c6</anchor>
       <arglist>(Optional&lt; T &gt; &amp;&amp;other) noexcept(std::is_nothrow_move_assignable&lt; T &gt;::value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Optional&lt; T &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a36e2f775d6c9e4a209b24d1dda3f19b6</anchor>
+      <arglist>(NullOptT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -4354,6 +4487,20 @@
       <arglist>(std::size_t end) const </arglist>
     </member>
     <member kind="function">
+      <type>StaticArrayView&lt; viewSize, T &gt;</type>
+      <name>prefix</name>
+      <anchorfile>classCorrade_1_1Containers_1_1StaticArray.html</anchorfile>
+      <anchor>ab27469d19b85d064940e109a96eaa0ae</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>StaticArrayView&lt; viewSize, const T &gt;</type>
+      <name>prefix</name>
+      <anchorfile>classCorrade_1_1Containers_1_1StaticArray.html</anchorfile>
+      <anchor>ad079a7f9b8196bbdb76159daa6f8aea3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>ArrayView&lt; T &gt;</type>
       <name>suffix</name>
       <anchorfile>classCorrade_1_1Containers_1_1StaticArray.html</anchorfile>
@@ -4604,6 +4751,13 @@
       <arglist>(std::size_t end) const </arglist>
     </member>
     <member kind="function">
+      <type>StaticArrayView&lt; viewSize, T &gt;</type>
+      <name>prefix</name>
+      <anchorfile>classCorrade_1_1Containers_1_1StaticArrayView.html</anchorfile>
+      <anchor>a2fb186f3e4f8d03c1bb699f1e7067845</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>ArrayView&lt; T &gt;</type>
       <name>suffix</name>
       <anchorfile>classCorrade_1_1Containers_1_1StaticArrayView.html</anchorfile>
@@ -4630,6 +4784,13 @@
       <anchorfile>classCorrade_1_1Containers_1_1StaticArrayView.html</anchorfile>
       <anchor>a3cf428b256a5ed8941145e4d15ae8b45</anchor>
       <arglist>(T(&amp;data)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr StaticArrayView&lt; size, T &gt;</type>
+      <name>staticArrayView</name>
+      <anchorfile>classCorrade_1_1Containers_1_1StaticArrayView.html</anchorfile>
+      <anchor>aeb96550df22942b8379e77d3942c88c4</anchor>
+      <arglist>(StaticArrayView&lt; size, T &gt; view)</arglist>
     </member>
     <member kind="function">
       <type>StaticArrayView&lt; size *sizeof(T)/sizeof(U), U &gt;</type>
@@ -5319,6 +5480,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>PluginMetadata *</type>
+      <name>metadata</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1AbstractManager.html</anchorfile>
+      <anchor>a4717b5c7929f24ac6537ca5898d9472f</anchor>
+      <arglist>(const std::string &amp;plugin)</arglist>
+    </member>
+    <member kind="function">
       <type>const PluginMetadata *</type>
       <name>metadata</name>
       <anchorfile>classCorrade_1_1PluginManager_1_1AbstractManager.html</anchorfile>
@@ -5553,6 +5721,34 @@
     <name>Corrade::PluginManager::PluginMetadata</name>
     <filename>classCorrade_1_1PluginManager_1_1PluginMetadata.html</filename>
     <member kind="function">
+      <type></type>
+      <name>PluginMetadata</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1PluginMetadata.html</anchorfile>
+      <anchor>a9b02c82173fae3e0355c7af18c8405fa</anchor>
+      <arglist>(const PluginMetadata &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>PluginMetadata</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1PluginMetadata.html</anchorfile>
+      <anchor>ae16256b78496d9ac115920f316a3f5e9</anchor>
+      <arglist>(PluginMetadata &amp;&amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>PluginMetadata &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1PluginMetadata.html</anchorfile>
+      <anchor>a1587b877adb25856dd2d0ce50a267ab4</anchor>
+      <arglist>(const PluginMetadata &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>PluginMetadata &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1PluginMetadata.html</anchorfile>
+      <anchor>a150130388de0191333820fb98e509b49</anchor>
+      <arglist>(PluginMetadata &amp;&amp;)=delete</arglist>
+    </member>
+    <member kind="function">
       <type>std::string</type>
       <name>name</name>
       <anchorfile>classCorrade_1_1PluginManager_1_1PluginMetadata.html</anchorfile>
@@ -5586,6 +5782,13 @@
       <anchorfile>classCorrade_1_1PluginManager_1_1PluginMetadata.html</anchorfile>
       <anchor>ae998a6ccb557313441f65b7b07dade01</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>Utility::ConfigurationGroup &amp;</type>
+      <name>configuration</name>
+      <anchorfile>classCorrade_1_1PluginManager_1_1PluginMetadata.html</anchorfile>
+      <anchor>a8b50e0f370dda93101475937424b35a7</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>const Utility::ConfigurationGroup &amp;</type>
@@ -7870,6 +8073,234 @@
       <arglist>(Utility::Debug &amp;debug, EnumSet&lt; InternalFlag, typename std::underlying_type&lt; InternalFlag &gt;::type(~0) &gt; value, const char *empty, std::initializer_list&lt; InternalFlag &gt; enums)</arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>Optional&lt; Corrade::PluginManager::PluginMetadata &gt;</name>
+    <filename>classCorrade_1_1Containers_1_1Optional.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>ab0817945d9ae1c756a1a8d43b844a2d8</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>ac514d8d80de955a420761b2eba4acc10</anchor>
+      <arglist>(NullOptT) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a3457c40bc241ec7bd083085a87d559d6</anchor>
+      <arglist>(const Corrade::PluginManager::PluginMetadata &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a8a38b7b89a97e1a4823fcfae9c49605f</anchor>
+      <arglist>(Corrade::PluginManager::PluginMetadata &amp;&amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a0c3581fe10027150d9a1762e07be11f7</anchor>
+      <arglist>(InPlaceInitT, Args &amp;&amp;...args)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>aa9d04a3b7e025d6428552ee7a7b572af</anchor>
+      <arglist>(const Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;other) noexcept(std::is_nothrow_copy_constructible&lt; Corrade::PluginManager::PluginMetadata &gt;::value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a89c8a0260c48815b8938484ae455c592</anchor>
+      <arglist>(Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;&amp;other) noexcept(std::is_nothrow_move_constructible&lt; Corrade::PluginManager::PluginMetadata &gt;::value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a2dcb464863ceb583033a012f53c3a7ad</anchor>
+      <arglist>(const Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;other) noexcept(std::is_nothrow_copy_assignable&lt; Corrade::PluginManager::PluginMetadata &gt;::value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a6946a7975796cd2c4e6472e33ee679c6</anchor>
+      <arglist>(Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;&amp;other) noexcept(std::is_nothrow_move_assignable&lt; Corrade::PluginManager::PluginMetadata &gt;::value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a36e2f775d6c9e4a209b24d1dda3f19b6</anchor>
+      <arglist>(NullOptT) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>aca99a8049370de23ee82834babab94ee</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>abd7470c76c538ec5fc336e649c93b1f1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>ac806980a86d61a42fb769b6f0d728445</anchor>
+      <arglist>(const Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a4c3bf36def2b5ed90a42eb5d965774c9</anchor>
+      <arglist>(NullOptT) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a046b353c32075a990a14563d6b7ee53f</anchor>
+      <arglist>(const Corrade::PluginManager::PluginMetadata &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a4bb21112c42bd90a21c2af714b7d955f</anchor>
+      <arglist>(const Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a520051d7ef64917247e1bc6d213809df</anchor>
+      <arglist>(NullOptT) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a78f36add983b86f5961a641e555ea1bf</anchor>
+      <arglist>(const Corrade::PluginManager::PluginMetadata &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::PluginManager::PluginMetadata *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a000cfe22c91613c0acfb0816d06a3f5e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Corrade::PluginManager::PluginMetadata *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>ab9475f5852b9a21573ffc3627e584f4c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::PluginManager::PluginMetadata &amp;</type>
+      <name>operator*</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a69cd09fb7692a22375d9fe8919d2bce6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Corrade::PluginManager::PluginMetadata &amp;</type>
+      <name>operator*</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a7cb5e8d64a3d72817826a0f4a9b04f2f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::PluginManager::PluginMetadata &amp;</type>
+      <name>value</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>ad19c6d47aa093630ac3d9d4bd73e1866</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const Corrade::PluginManager::PluginMetadata &amp;</type>
+      <name>value</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>ad559755ee1ae4fd6fe86ed74aa9f4a8b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::PluginManager::PluginMetadata &amp;</type>
+      <name>emplace</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>aa87b1126c552acb7c224bd73feb245a5</anchor>
+      <arglist>(Args &amp;&amp;...args)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a8404f64fbb8bf4965462b97179e4ebaa</anchor>
+      <arglist>(NullOptT, const Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>aba65d386a0b9f9cfd54919c48bbd87e8</anchor>
+      <arglist>(const Corrade::PluginManager::PluginMetadata &amp;a, const Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a1c553d2af62a154653128d1d9ce46a7f</anchor>
+      <arglist>(NullOptT, const Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a19c44b59df82dbebce8c720ec88717f5</anchor>
+      <arglist>(const Corrade::PluginManager::PluginMetadata &amp;a, const Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;b)</arglist>
+    </member>
+    <member kind="function">
+      <type>Optional&lt; typename std::decay&lt; Corrade::PluginManager::PluginMetadata &gt;::type &gt;</type>
+      <name>optional</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>a71e22f3640eb28dd7b2f7b8339931224</anchor>
+      <arglist>(Corrade::PluginManager::PluginMetadata &amp;&amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>aa6b2e93a65009b7ac7278b36bcd760c9</anchor>
+      <arglist>(Utility::Debug &amp;debug, NullOptT)</arglist>
+    </member>
+    <member kind="function">
+      <type>Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>classCorrade_1_1Containers_1_1Optional.html</anchorfile>
+      <anchor>abb61d1d1f8de79a08d22cef7ef99cb36</anchor>
+      <arglist>(Utility::Debug &amp;debug, const Optional&lt; Corrade::PluginManager::PluginMetadata &gt; &amp;value)</arglist>
+    </member>
+  </compound>
   <compound kind="namespace">
     <name>Corrade</name>
     <filename>namespaceCorrade.html</filename>
@@ -7964,6 +8395,13 @@
       <arglist>(StaticArrayView&lt; size, T &gt; view)</arglist>
     </member>
     <member kind="function">
+      <type>constexpr ArrayView&lt; T &gt;</type>
+      <name>arrayView</name>
+      <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
+      <anchor>a3a43320e58651eafa9774e04c68545e5</anchor>
+      <arglist>(ArrayView&lt; T &gt; view)</arglist>
+    </member>
+    <member kind="function">
       <type>ArrayView&lt; U &gt;</type>
       <name>arrayCast</name>
       <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
@@ -8004,6 +8442,13 @@
       <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
       <anchor>a3cf428b256a5ed8941145e4d15ae8b45</anchor>
       <arglist>(T(&amp;data)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr StaticArrayView&lt; size, T &gt;</type>
+      <name>staticArrayView</name>
+      <anchorfile>namespaceCorrade_1_1Containers.html</anchorfile>
+      <anchor>aeb96550df22942b8379e77d3942c88c4</anchor>
+      <arglist>(StaticArrayView&lt; size, T &gt; view)</arglist>
     </member>
     <member kind="function">
       <type>StaticArrayView&lt; size *sizeof(T)/sizeof(U), U &gt;</type>
@@ -8271,10 +8716,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>std::integral_constant&lt; bool,(Implementation::HasMemberBegin&lt; T &gt;::value||Implementation::HasBegin&lt; T &gt;::value||Implementation::HasStdBegin&lt; T &gt;::value)&amp;&amp;(Implementation::HasMemberEnd&lt; T &gt;::value||Implementation::HasEnd&lt; T &gt;::value||Implementation::HasStdEnd&lt; T &gt;::value)&gt;</type>
+      <type>std::integral_constant&lt; bool, implementation-specific &gt;</type>
       <name>IsIterable</name>
       <anchorfile>namespaceCorrade_1_1Utility.html</anchorfile>
-      <anchor>a43561aa129a33d6c7aa6cb828dacdf46</anchor>
+      <anchor>a5b6f2707e54c886af00f4738ff83afa2</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -8803,36 +9248,92 @@
       <type>std::string</type>
       <name>stripPrefix</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
-      <anchor>a6ee28cbd419602d233cb0d517f0f6695</anchor>
-      <arglist>(const std::string &amp;string, const char(&amp;prefix)[size])</arglist>
+      <anchor>a220d3903694aa0a90ec23540054c73cd</anchor>
+      <arglist>(std::string string, const char(&amp;prefix)[size])</arglist>
     </member>
     <member kind="function">
       <type>std::string</type>
       <name>stripPrefix</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
-      <anchor>aa7d42726ddf76ed15a26fb40548fedd7</anchor>
-      <arglist>(const std::string &amp;string, char prefix)</arglist>
+      <anchor>a6dbe4d041b412de515dfaf992f6778b0</anchor>
+      <arglist>(std::string string, char prefix)</arglist>
     </member>
     <member kind="function">
       <type>std::string</type>
       <name>stripSuffix</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
-      <anchor>a3c4cd4ef9dd5ba175b64ae4b1259bffb</anchor>
-      <arglist>(const std::string &amp;string, const std::string &amp;suffix)</arglist>
+      <anchor>a4913f68a09a3ad6dec44e8220d8d4c72</anchor>
+      <arglist>(std::string string, const std::string &amp;suffix)</arglist>
     </member>
     <member kind="function">
       <type>std::string</type>
       <name>stripSuffix</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
-      <anchor>a82b4f24fef3089683ca4cb42d1790078</anchor>
-      <arglist>(const std::string &amp;string, const char(&amp;suffix)[size])</arglist>
+      <anchor>ab70c0084c70b8dfc512283edb553c5fa</anchor>
+      <arglist>(std::string string, const char(&amp;suffix)[size])</arglist>
     </member>
     <member kind="function">
       <type>std::string</type>
       <name>stripSuffix</name>
       <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
-      <anchor>a895f4585310a1df25ee76d9854783a27</anchor>
-      <arglist>(const std::string &amp;string, char suffix)</arglist>
+      <anchor>a376d68bfe85b7c6a6d4a4d87209fcd2b</anchor>
+      <arglist>(std::string string, char suffix)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceFirst</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>ae74814f4438913aa1300538529069d32</anchor>
+      <arglist>(std::string string, const std::string &amp;search, const std::string &amp;replace)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceFirst</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a4efbec885c01308ee148007ad21d42ad</anchor>
+      <arglist>(std::string string, const char(&amp;search)[searchSize], const char(&amp;replace)[replaceSize])</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceFirst</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>ac7fb659c24110adebb2955a75d290442</anchor>
+      <arglist>(std::string string, const char(&amp;search)[searchSize], const std::string &amp;replace)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceFirst</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a4d54d0ac8fb49d705ae692bc88fa2c85</anchor>
+      <arglist>(std::string string, const std::string &amp;search, const char(&amp;replace)[replaceSize])</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceAll</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>aef5cb78b1c8e6336abce1c5b94b6fbf0</anchor>
+      <arglist>(std::string string, const std::string &amp;search, const std::string &amp;replace)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceAll</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a6dd7b108947809be4906cab43e050f0b</anchor>
+      <arglist>(std::string string, const char(&amp;search)[searchSize], const char(&amp;replace)[replaceSize])</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceAll</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a3c0ad6e25f8092de0ac2737ff9c62ee7</anchor>
+      <arglist>(std::string string, const char(&amp;search)[searchSize], const std::string &amp;replace)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>replaceAll</name>
+      <anchorfile>namespaceCorrade_1_1Utility_1_1String.html</anchorfile>
+      <anchor>a47b378ccf712482676488a771ec07f46</anchor>
+      <arglist>(std::string string, const std::string &amp;search, const char(&amp;replace)[replaceSize])</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -9015,11 +9516,16 @@
     <docanchor file="corrade-changelog" title="Changes since 2018.04">corrade-changelog-latest</docanchor>
     <docanchor file="corrade-changelog" title="New features">corrade-changelog-latest-new</docanchor>
     <docanchor file="corrade-changelog" title="Containers library">corrade-changelog-latest-new-containers</docanchor>
+    <docanchor file="corrade-changelog" title="PluginManager library">corrade-changelog-latest-new-pluginmanager</docanchor>
     <docanchor file="corrade-changelog" title="Utility library">corrade-changelog-latest-new-utility</docanchor>
     <docanchor file="corrade-changelog" title="Changes and improvements">corrade-changelog-latest-changes</docanchor>
+    <docanchor file="corrade-changelog" title="Containers library">corrade-changelog-latest-changes-containers</docanchor>
+    <docanchor file="corrade-changelog" title="PluginManager library">corrade-changelog-latest-changes-pluginmanager</docanchor>
+    <docanchor file="corrade-changelog" title="TestSuite library">corrade-changelog-latest-changes-testsuite</docanchor>
     <docanchor file="corrade-changelog" title="Utility library">corrade-changelog-latest-changes-utility</docanchor>
     <docanchor file="corrade-changelog" title="Build system">corrade-changelog-latest-buildsystem</docanchor>
     <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-latest-bugfixes</docanchor>
+    <docanchor file="corrade-changelog" title="Documentation">corrade-changelog-latest-docs</docanchor>
     <docanchor file="corrade-changelog" title="2018.04">corrade-changelog-2018-04</docanchor>
     <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2018-04-dependencies</docanchor>
     <docanchor file="corrade-changelog" title="New features">corrade-changelog-2018-04-new</docanchor>
@@ -9155,9 +9661,9 @@
     <docanchor file="corrade-coding-style" title="Repository, branch and tag format">corrade-coding-style-git-branches</docanchor>
   </compound>
   <compound kind="page">
-    <name>configurationvalues</name>
+    <name>corrade-configurationvalues</name>
     <title>Configuration value parsers and writers for custom types</title>
-    <filename>configurationvalues</filename>
+    <filename>corrade-configurationvalues</filename>
   </compound>
   <compound kind="page">
     <name>interconnect</name>
