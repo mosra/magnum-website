@@ -14,8 +14,9 @@ mouse cursor for more convenient interaction with complex scenes.
     Position* enabled.
 
     -   :label-default:`mouse drag` rotates the scene around the cursor
-    -   :label-warning:`Shift` :label-default:`mouse drag` pans the scene at depth
-        of the cursor
+    -   :label-warning:`Shift` :label-default:`mouse drag` pans the scene at
+        depth of the cursor
+    -   :label-default:`mouse wheel` zooms in/out relative to cursor position
     -   :label-default:`Num 1` / :label-warning:`Ctrl` :label-default:`Num 1`
         switches to a front / back view
     -   :label-default:`Num 3` / :label-warning:`Ctrl` :label-default:`Num 3`
