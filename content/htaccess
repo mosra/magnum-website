@@ -10,6 +10,13 @@ AddType application/wasm .wasm
 # Subdomains
 RewriteEngine On
 
+# HTTPS. This is the only version that was working, all other I found (using
+# `%{HTTP_HOST}`, using `%{HTTPS} off`, ...) were redirecting
+# http://blog.magnum.graphics/ to https://blog.magnum.graphics/blog/ and making
+# me EXTREMELY ANGRY at 5 AM on a Monday morning.
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R=301,L]
+
 # ci.magnum.graphics -> /ci
 RewriteCond %{HTTP_HOST} ^ci\.magnum\.graphics$ [NC]
 RewriteCond %{REQUEST_URI} !^/ci/
