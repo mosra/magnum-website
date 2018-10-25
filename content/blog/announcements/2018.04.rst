@@ -152,7 +152,8 @@ to render a triangle on screen without relying on Magnum OpenGL support at all.
 
 The possibilities don't end here --- if the :gh:`bgfx <bkaradzic/bgfx>` library
 is your renderer of choice, you can still make use of the
-well-documented Magnum :dox:`Math` library, :dox:`SceneGraph` or the :dox:`OpenGexImporter <Trade::OpenGexImporter>` and other plugins. Or use the
+well-documented Magnum :dox:`Math` library, :dox:`SceneGraph` or the
+:dox:`OpenGexImporter <Trade::OpenGexImporter>` and other plugins. Or use the
 :dox:`TestSuite <TestSuite::Tester>` with Unreal Engine and compare your shader
 output against a ground truth using :dox:`DebugTools::CompareImage`, for
 example.
@@ -229,7 +230,7 @@ Thanks to :gh:`Squareys` (again!), we have a new fun example integrating the
         .. figure:: {filename}/img/blog/announcements/2018.04/leapmotion.gif
             :alt: Leap Motion example screenshot
             :figclass: m-fullwidth
-            :target: https://doc.magnum.graphics/magnum/examples-triangle-sokol.html
+            :target: https://doc.magnum.graphics/magnum/examples-leapmotion.html
 
             Leap Motion
 
