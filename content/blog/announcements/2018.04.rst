@@ -47,7 +47,8 @@ need any image decoding plugins or mesh import, you can use Magnum without any
 of that, with faster build times and smaller deploy sizes.
 
 To make the asset management APIs independent on OpenGL, there are now generic
-:dox:`PixelFormat` / :dox:`CompressedPixelFormat`, :dox:`MeshPrimitive`, :dox:`SamplerFilter`, :dox:`SamplerMipmap` and :dox:`SamplerWrapping` enums.
+:dox:`PixelFormat` / :dox:`CompressedPixelFormat`, :dox:`MeshPrimitive`,
+:dox:`SamplerFilter`, :dox:`SamplerMipmap` and :dox:`SamplerWrapping` enums.
 Each of these contains a set of most widely used formats/types and all image
 and scene importers now describe  data using those generic types. The new mesh
 primitive and sampler types retain their original naming, because that's in
