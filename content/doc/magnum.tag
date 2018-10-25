@@ -678,343 +678,6 @@
     <namespace>Magnum::Math</namespace>
   </compound>
   <compound kind="file">
-    <name>Enums.h</name>
-    <path>/home/mosra/Code/magnum-integration/src/Magnum/OvrIntegration/</path>
-    <filename>Enums_8h</filename>
-    <includes id="Magnum_8h" name="Magnum.h" local="no" imported="no">Magnum/Magnum.h</includes>
-    <class kind="struct">Magnum::OvrIntegration::Buttons</class>
-    <class kind="struct">Magnum::OvrIntegration::Touches</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::OvrIntegration</namespace>
-    <member kind="typedef">
-      <type>Containers::EnumSet&lt; TrackerFlag &gt;</type>
-      <name>TrackerFlags</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a96d457b1afd55fc8dbf7c4c5c8914108</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Containers::EnumSet&lt; StatusFlag &gt;</type>
-      <name>StatusFlags</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a3ecc95a048c433bfe45edab8ac88d15b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Corrade::Containers::EnumSet&lt; SessionStatusFlag &gt;</type>
-      <name>SessionStatusFlags</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a98bef84792091fda50bf4128a950af69</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Containers::EnumSet&lt; MirrorOption &gt;</type>
-      <name>MirrorOptions</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a3298045f21c3398a39dd6acfcbf5a1da</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>HmdType</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>ab8c9a8c7cce6ad0ef7ce2e1befecc41c</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca6adf97f83acf6453d4a6a4b1070f3754">None</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca47f84b7951ed9537b0a70c4e0047de81">DK1</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca66994daf724ae63030fbcc30d3655bef">DKHD</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca284bad9c648d4b9dbdf4baa703acb02d">DK2</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca834cb54b61bbed9d4296c995e4c5d8b2">CB</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca6311ae17c1ee52b36e68aaf4ad066387">Other</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca3bedec542f1401c2da728a90cc6fa1b2">E3_2015</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca28dd683b878e138a2c30a2cb3094306a">ES06</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41cab67df66fbe1fbfdd5becd15bbc4a8585">ES09</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41caf58b754169ac9c2928472f57f73e1610">ES11</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca5cd3d32886412288e18a345898146b8d">CV1</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>TrackingOrigin</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a6d5277b84d2b8c94d19de5cbeaa45fc7</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a6d5277b84d2b8c94d19de5cbeaa45fc7a16d89336a4617fb6b87763d4b56139b7">EyeLevel</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a6d5277b84d2b8c94d19de5cbeaa45fc7acbd6ea814849130b29ce44bc70114c4b">FloorLevel</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>TrackerFlag</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a0abd84c8f718932b3c2268e0e02310e7</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a0abd84c8f718932b3c2268e0e02310e7a2ec0d16e4ca169baedb9b2d50ec5c6d7">Connected</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a0abd84c8f718932b3c2268e0e02310e7a03b7e73d85589978f9c3a063b8246508">PoseTracked</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>Button</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a077525510ed427920eff7ae75ec5123f</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa7fc56270e7a70fa81a5935b72eacbe29">A</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa9d5ed678fe57bcca610140957afab571">B</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa02129bb861061d1a052c592e2dc6b383">X</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa57cec4137b614c87cb4e24a3d003a3e0">Y</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa787cce7d516ae441abe97ffff79b08c8">RThumb</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa41a810fe24d1ea211a55337eaaa1e3d2">RShoulder</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123faa459ba7fb2f974adf6eba980f35f8d14">LThumb</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fafe788e67252c3049b894226c0c6ca5aa">LShoulder</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa258f49887ef8d14ac268c92b02503aaa">Up</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa08a38277b0309070706f6652eeae9a53">Down</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa945d5e233cf7d6240f6b783b36a374ff">Left</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa92b09c7c48c520c3c55e497875da437c">Right</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123faf1851d5600eae616ee802a31ac74701b">Enter</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa0557fa923dcee4d0f86b1409f5c2167f">Back</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa685dec8174e7e1bbc0e7566fc30c72f0">VolUp</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa573c1456126efb9d131daea39f0c30ff">VolDown</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa8cf04a9734132302f96da8e113e80ce5">Home</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>Touch</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a5a7392511ba112942f2528ff415ffeac</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca7fc56270e7a70fa81a5935b72eacbe29">A</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca9d5ed678fe57bcca610140957afab571">B</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca02129bb861061d1a052c592e2dc6b383">X</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca57cec4137b614c87cb4e24a3d003a3e0">Y</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca787cce7d516ae441abe97ffff79b08c8">RThumb</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeacaa459ba7fb2f974adf6eba980f35f8d14">LThumb</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca0501589371e70c45f36658f9bb4b7843">RIndexTrigger</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca539fc444c6c42c09fec1c86daa96b8a2">LIndexTrigger</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeacacfe67b27ee94b2453d80c20089a65d9e">RIndexPointing</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeacad68850271da7c45858aa8df755601922">RThumbUp</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca522257548de440cb48251ce74a036633">LIndexPointing</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca3bbcb71d84685fa1383e07d91a3cf011">LThumbUp</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ControllerType</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>aad674320383d77fc5e7a9f028ea56843</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843a6adf97f83acf6453d4a6a4b1070f3754">None</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843a253c104ad721758c8c0654a6878f47ff">LTouch</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843a02f85d6ee062327d58a289335f56fca1">RTouch</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843af0f31c9700c6b10d8a20dc487b2ae6a8">Touch</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843af8508f576cd3f742dfc268258dcdf0dd">Remote</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843ad7a5c7a13c0838c399a34112f46676b6">XBox</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843a4d3d769b812b6faa6b76e1a8abaece2d">Active</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>StatusFlag</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a018508181e5fd5575105208b3c9f5a65</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a018508181e5fd5575105208b3c9f5a65a6a8886de54f4886e42898ef3b017442b">OrientationTracked</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a018508181e5fd5575105208b3c9f5a65ab7ddf1ada4f53b9481038b4bf8c6cc56">PositionTracked</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>SessionStatusFlag</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a05fe9e5cf2c3f76cad37febcfda1569f</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a05fe9e5cf2c3f76cad37febcfda1569fa149c5e61355c8de0943d094e18471195">IsVisible</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a05fe9e5cf2c3f76cad37febcfda1569fa173e3971d0e0a2e4de01a20ce02864a2">HmdPresent</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a05fe9e5cf2c3f76cad37febcfda1569fa7007260d2109c1b8a5614f339d6de495">HmdMounted</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a05fe9e5cf2c3f76cad37febcfda1569fa89dad51f4ce3c9e37a4581346d338a8a">DisplayLost</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a05fe9e5cf2c3f76cad37febcfda1569fae991b8c66aad662cea8ca5bdeb073dee">ShouldQuit</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a05fe9e5cf2c3f76cad37febcfda1569fa706fe46f20c4f4f109d18310acd81c72">ShouldRecenter</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>MirrorOption</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a9dff944a2e05defc83e91e2ce98ca7a4</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4a7a1920d61156abc05a60135aefe8bc67">Default</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4a1c07db0406abec4adeb373993bbaf223">PostDistortion</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4ac35d9d190345702a11cc451c6d42f275">LeftEyeOnly</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4a9d6d844ca936c88d43ad042269f64969">RightEyeOnly</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4a017ed27d843c069b6f807d0670965ca3">IncludeGuardian</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4a163cd5f4593cd178a7eef7aa98ce5b92">IncludeNotifications</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4a664f7011f202aa7a4bd25b1a08dc3c52">IncludeSystemGui</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>PerformanceHudMode</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a13dbe6c3cff28c02def2998200ae32ba</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a13dbe6c3cff28c02def2998200ae32baad15305d7a4e34e02489c74a5ef542f36">Off</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a13dbe6c3cff28c02def2998200ae32baaa753651df182d2d54712d863b9af4f0d">PerfSummary</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a13dbe6c3cff28c02def2998200ae32baa03eb527e4457d835779020ea5b946e4e">LatencyTiming</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a13dbe6c3cff28c02def2998200ae32baafa4e966fc32d9ddcd5084b98cbb26f4f">AppRenderTiming</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a13dbe6c3cff28c02def2998200ae32baa376814a1f428866975b538385cc67810">CompRenderTiming</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a13dbe6c3cff28c02def2998200ae32baa9db78fd43c596601aa891c5c656a078d">VersionInfo</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>DebugHudStereoMode</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a981bf665fe55ea30d79c251cb8dd3dae</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a981bf665fe55ea30d79c251cb8dd3daead15305d7a4e34e02489c74a5ef542f36">Off</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a981bf665fe55ea30d79c251cb8dd3daeae9017664588010860a92ceb5f8fcb824">Quad</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a981bf665fe55ea30d79c251cb8dd3daeace19873f7b7fd296a0c3b514c6562d37">QuadWithCrosshair</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a981bf665fe55ea30d79c251cb8dd3daeaab6e7a65e73a0fc5d343d78c616d7e6d">CrosshairAtInfinity</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>LayerHudMode</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a7457b8480db6553349312d38e10ee2d3</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a7457b8480db6553349312d38e10ee2d3ad15305d7a4e34e02489c74a5ef542f36">Off</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a7457b8480db6553349312d38e10ee2d3a4059b0251f66a18cb56f544728796875">Info</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ErrorType</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>adabeb393adcab6691d7250753ef6582c</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cadfa6c4e376d67452db5b14bb40d4d9a0">MemoryAllocationFailure</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca082b94968d127d17abb24a69da6cda56">InvalidSession</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cac85a251cc457840f1e032f1b733e9398">Timeout</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca9646ad3a1c3e708b4fa8b4b4270fbab6">NotInitialized</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca627251310d3384b591e4138be21145d5">InvalidParameter</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca112197d9297e3f816e50aa133dc6dd5e">ServiceError</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caff59267aa541879a068a88355d62f058">NoHmd</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cab4080bdf74febf04d578ff105cce9d3f">Unsupported</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca758b1a8856a2f8715b9c898ae0a57c14">DeviceUnavailable</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca49c2d0b56e40fadbdc0c2a9fd4315524">InvalidHeadsetOrientation</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca7eb9535c8784e5d2aa3a652471c1a7b4">ClientSkippedDestroy</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cae813f5801e9ff3e49091c0aafe8965a9">ClientSkippedShutdown</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cad509009f13c4de2c1177bc2d363b73e8">AudioDeviceNotFound</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cafc426c134912a0008fc9c7a48263c5df">AudioComError</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca223e06f5cb15fc701ea1e686f7934f4f">Initialize</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca7133af63cf13b9725dff98d146b3ccff">LibLoad</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca4491810b1469ebfe9ed1c40221d2c4d8">LibVersion</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caece78a70b624b88f562799ec52ddb02d">ServiceConnection</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca43ea2ee41bedd266ad7da264884ca5c5">ServiceVersion</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca4a9681314bd727c21cb6ed804911e6d7">IncompatibleOs</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca7ae7a1fe2dc931469a6534b9262d6fc4">DisplayInit</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca79ba98cd5eb4e6dae3995d81fd0e6ad4">ServerStart</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caf10363860dd5bc034f3078e1c30541b7">Reinitialization</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca9cc6505cca9015da503dfdd9bb62b7d0">MismatchedAdapters</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caad61a17a5106a6821235602778309b84">LeakingResources</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca5fa6776d2b97bf9fc75a006d96516129">ClientVersion</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca2680972d5946d0faa51f71d1a7ec8646">OutOfDateOs</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caf21d6d4d86c3d104e5ee7b120b1f90af">OutOfDateGfxDriver</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cac022b6a8e903db3815747953baa21b19">IncompatibleGpu</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca03ebe1b3b069f637eb93f06c30916350">NoValidVrDisplaySystem</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caec30c235d0eb792797af1aa1d11759a7">Obsolete</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caf9717c4a65ac4604bbf0a6e2288b3d87">DisabledOrDefaultAdapter</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cad516cecd05c0c1d9f6196a02d925617a">HybridGraphicsNotSupported</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca486fac754172c31f16df1fbadf62e4e8">DisplayManagerInit</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cac5a395ab4d788f57bd18171ccc9f78fa">TrackerDriverInit</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca89dad51f4ce3c9e37a4581346d338a8a">DisplayLost</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca01ac2fb3024f7f373266fa56ecb33ded">TextureSwapChainFull</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca21927b16639259e410f2054322ad64b8">TextureSwapChainInvalid</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca15452a9b0f2356c3dabe720a67728b3d">RuntimeException</enumvalue>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a650d4953f7d4d211f4d022d50d616538</anchor>
-      <arglist>(Debug &amp;debug, HmdType value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a73ce87139dacba79763659aaeebc170c</anchor>
-      <arglist>(Debug &amp;debug, TrackingOrigin value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a75fcd47c56139a2a51ac70f958ff8615</anchor>
-      <arglist>(Debug &amp;debug, TrackerFlag value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>ab05854774e0c74850a6258734e56e1f6</anchor>
-      <arglist>(Debug &amp;debug, Button value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>af1ee6d0c448e1a216f8414fc842687af</anchor>
-      <arglist>(Debug &amp;debug, Touch value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>aa8726fd40080c94c7dd03067313b095f</anchor>
-      <arglist>(Debug &amp;debug, ControllerType value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a79df2b6b9a2e08ae0a76732f970c7920</anchor>
-      <arglist>(Debug &amp;debug, StatusFlag value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>ae84582e8ef8bdf12136fbd05d443c4ca</anchor>
-      <arglist>(Debug &amp;debug, SessionStatusFlag value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a1790323104ce92acab9a4ad5fc784bfc</anchor>
-      <arglist>(Debug &amp;debug, MirrorOption value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a4d12129038f2a71b3f7ae7a4852b5755</anchor>
-      <arglist>(Debug &amp;debug, PerformanceHudMode value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a3bbf933e98ed3cf875a09525f71171f3</anchor>
-      <arglist>(Debug &amp;debug, DebugHudStereoMode value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>aa1582c7807ce82ce4c3dfcf394049404</anchor>
-      <arglist>(Debug &amp;debug, LayerHudMode value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
-      <anchor>a340c9be88a1f969d3a34dc53af11f808</anchor>
-      <arglist>(Debug &amp;debug, ErrorType value)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>OvrIntegration.h</name>
     <path>/home/mosra/Code/magnum-integration/src/Magnum/OvrIntegration/</path>
     <filename>OvrIntegration_8h</filename>
@@ -3690,15 +3353,15 @@
       <type>MeshPrimitive</type>
       <name>meshPrimitive</name>
       <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a56403274a6ece45156c518c2f38d2c89</anchor>
-      <arglist>(Magnum::MeshPrimitive)</arglist>
+      <anchor>a490b82a53ed07151dc0fc03ee4d3332e</anchor>
+      <arglist>(Magnum::MeshPrimitive primitive)</arglist>
     </member>
     <member kind="function">
       <type>MeshIndexType</type>
       <name>meshIndexType</name>
       <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>aec131d878c8081ffb074dc947c0a5da9</anchor>
-      <arglist>(Magnum::MeshIndexType)</arglist>
+      <anchor>ac702527f8d92c066c961f319d4f0788b</anchor>
+      <arglist>(Magnum::MeshIndexType type)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
@@ -4516,6 +4179,7 @@
     <name>Sampler.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
     <filename>GL_2Sampler_8h</filename>
+    <includes id="Array_8h" name="Array.h" local="yes" imported="no">Magnum/Array.h</includes>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <class kind="class">Magnum::GL::Sampler</class>
@@ -4618,8 +4282,8 @@
       <type>bool</type>
       <name>hasSamplerWrapping</name>
       <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>ab7203d2bf52a61bebe00ec690960afeb</anchor>
-      <arglist>(Magnum::SamplerWrapping wrappomg)</arglist>
+      <anchor>a68da07f6da40ae70bf4f68a5a5ff2ae7</anchor>
+      <arglist>(Magnum::SamplerWrapping wrapping)</arglist>
     </member>
     <member kind="function">
       <type>SamplerWrapping</type>
@@ -7520,18 +7184,32 @@
       <arglist>(Integral x, Integral y)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>std::enable_if&lt; std::is_arithmetic&lt; T &gt;::value, bool &gt;::type</type>
       <name>isInf</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ad58fc02d9ffa8b1e131ab55ac000bb5c</anchor>
+      <anchor>aba14106d1b41f32066f1e38b272fd5e4</anchor>
       <arglist>(T value)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>BoolVector&lt; size &gt;</type>
+      <name>isInf</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a53ef8cb0e28d9c59e6d72e4927e36e61</anchor>
+      <arglist>(const Vector&lt; size, T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::enable_if&lt; std::is_arithmetic&lt; T &gt;::value, bool &gt;::type</type>
       <name>isNan</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ae776050741a5f92fc482a204b69c6463</anchor>
+      <anchor>ab768023826366dfd94c01cce703e8b31</anchor>
       <arglist>(T value)</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt;</type>
+      <name>isNan</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a740f4050b4d66b0af6a7ec66639cfdaa</anchor>
+      <arglist>(const Vector&lt; size, T &gt; &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>T</type>
@@ -12026,11 +11704,453 @@
     <namespace>Magnum</namespace>
   </compound>
   <compound kind="file">
+    <name>Enums.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/Vk/</path>
+    <filename>src_2Magnum_2Vk_2Enums_8h</filename>
+    <includes id="Array_8h" name="Array.h" local="yes" imported="no">Magnum/Array.h</includes>
+    <includes id="Vulkan_8h" name="Vulkan.h" local="yes" imported="no">Magnum/Vk/Vulkan.h</includes>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::Vk</namespace>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasVkPrimitiveTopology</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a3868a55bd1daeee366e479b2a0fd1438</anchor>
+      <arglist>(Magnum::MeshPrimitive primitive)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkPrimitiveTopology</type>
+      <name>vkPrimitiveTopology</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a169ab6b4d8a914bbb301cfd75b626c66</anchor>
+      <arglist>(Magnum::MeshPrimitive primitive)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasVkIndexType</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a3ba452fb290467d930fe153027942990</anchor>
+      <arglist>(Magnum::MeshIndexType type)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkIndexType</type>
+      <name>vkIndexType</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a78c671a53fc75529aaeb2618b077700d</anchor>
+      <arglist>(Magnum::MeshIndexType type)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasVkFormat</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>ac82a207c9b17d10b87c6bd27440e485e</anchor>
+      <arglist>(Magnum::PixelFormat format)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasVkFormat</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>abf0edbce00dc9210fe89a56335a619cc</anchor>
+      <arglist>(Magnum::CompressedPixelFormat format)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkFormat</type>
+      <name>vkFormat</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a9039b79313fc2ad91f427a8ef3382f63</anchor>
+      <arglist>(Magnum::PixelFormat format)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkFormat</type>
+      <name>vkFormat</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a2479652926689c38bb03bd3243b60e71</anchor>
+      <arglist>(Magnum::CompressedPixelFormat format)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkFilter</type>
+      <name>vkFilter</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a88d6d498708916f4dc6e2839f5d2d91f</anchor>
+      <arglist>(Magnum::SamplerFilter filter)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkSamplerMipmapMode</type>
+      <name>vkSamplerMipmapMode</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>aad05615076c109d791a654adab94fa86</anchor>
+      <arglist>(Magnum::SamplerMipmap mipmap)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasVkSamplerAddressMode</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a7200c63b45fa88c7c77a7dc309219562</anchor>
+      <arglist>(Magnum::SamplerWrapping wrapping)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkSamplerAddressMode</type>
+      <name>vkSamplerAddressMode</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a2593b7a6403ed2203afba493dbfe40f4</anchor>
+      <arglist>(Magnum::SamplerWrapping wrapping)</arglist>
+    </member>
+    <member kind="function">
+      <type>Array&lt; dimensions, VkSamplerAddressMode &gt;</type>
+      <name>vkSamplerAddressMode</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a479364ca861fe421e7bff6a532a8c6dc</anchor>
+      <arglist>(const Array&lt; dimensions, Magnum::SamplerWrapping &gt; &amp;wrapping)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Enums.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/OvrIntegration/</path>
+    <filename>integration_2src_2Magnum_2OvrIntegration_2Enums_8h</filename>
+    <includes id="Magnum_8h" name="Magnum.h" local="no" imported="no">Magnum/Magnum.h</includes>
+    <class kind="struct">Magnum::OvrIntegration::Buttons</class>
+    <class kind="struct">Magnum::OvrIntegration::Touches</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::OvrIntegration</namespace>
+    <member kind="typedef">
+      <type>Containers::EnumSet&lt; TrackerFlag &gt;</type>
+      <name>TrackerFlags</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a96d457b1afd55fc8dbf7c4c5c8914108</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Containers::EnumSet&lt; StatusFlag &gt;</type>
+      <name>StatusFlags</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a3ecc95a048c433bfe45edab8ac88d15b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Corrade::Containers::EnumSet&lt; SessionStatusFlag &gt;</type>
+      <name>SessionStatusFlags</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a98bef84792091fda50bf4128a950af69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Containers::EnumSet&lt; MirrorOption &gt;</type>
+      <name>MirrorOptions</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a3298045f21c3398a39dd6acfcbf5a1da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>HmdType</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>ab8c9a8c7cce6ad0ef7ce2e1befecc41c</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca6adf97f83acf6453d4a6a4b1070f3754">None</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca47f84b7951ed9537b0a70c4e0047de81">DK1</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca66994daf724ae63030fbcc30d3655bef">DKHD</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca284bad9c648d4b9dbdf4baa703acb02d">DK2</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca834cb54b61bbed9d4296c995e4c5d8b2">CB</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca6311ae17c1ee52b36e68aaf4ad066387">Other</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca3bedec542f1401c2da728a90cc6fa1b2">E3_2015</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca28dd683b878e138a2c30a2cb3094306a">ES06</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41cab67df66fbe1fbfdd5becd15bbc4a8585">ES09</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41caf58b754169ac9c2928472f57f73e1610">ES11</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="ab8c9a8c7cce6ad0ef7ce2e1befecc41ca5cd3d32886412288e18a345898146b8d">CV1</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>TrackingOrigin</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a6d5277b84d2b8c94d19de5cbeaa45fc7</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a6d5277b84d2b8c94d19de5cbeaa45fc7a16d89336a4617fb6b87763d4b56139b7">EyeLevel</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a6d5277b84d2b8c94d19de5cbeaa45fc7acbd6ea814849130b29ce44bc70114c4b">FloorLevel</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>TrackerFlag</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a0abd84c8f718932b3c2268e0e02310e7</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a0abd84c8f718932b3c2268e0e02310e7a2ec0d16e4ca169baedb9b2d50ec5c6d7">Connected</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a0abd84c8f718932b3c2268e0e02310e7a03b7e73d85589978f9c3a063b8246508">PoseTracked</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>Button</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a077525510ed427920eff7ae75ec5123f</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa7fc56270e7a70fa81a5935b72eacbe29">A</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa9d5ed678fe57bcca610140957afab571">B</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa02129bb861061d1a052c592e2dc6b383">X</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa57cec4137b614c87cb4e24a3d003a3e0">Y</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa787cce7d516ae441abe97ffff79b08c8">RThumb</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa41a810fe24d1ea211a55337eaaa1e3d2">RShoulder</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123faa459ba7fb2f974adf6eba980f35f8d14">LThumb</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fafe788e67252c3049b894226c0c6ca5aa">LShoulder</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa258f49887ef8d14ac268c92b02503aaa">Up</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa08a38277b0309070706f6652eeae9a53">Down</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa945d5e233cf7d6240f6b783b36a374ff">Left</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa92b09c7c48c520c3c55e497875da437c">Right</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123faf1851d5600eae616ee802a31ac74701b">Enter</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa0557fa923dcee4d0f86b1409f5c2167f">Back</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa685dec8174e7e1bbc0e7566fc30c72f0">VolUp</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa573c1456126efb9d131daea39f0c30ff">VolDown</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a077525510ed427920eff7ae75ec5123fa8cf04a9734132302f96da8e113e80ce5">Home</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>Touch</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a5a7392511ba112942f2528ff415ffeac</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca7fc56270e7a70fa81a5935b72eacbe29">A</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca9d5ed678fe57bcca610140957afab571">B</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca02129bb861061d1a052c592e2dc6b383">X</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca57cec4137b614c87cb4e24a3d003a3e0">Y</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca787cce7d516ae441abe97ffff79b08c8">RThumb</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeacaa459ba7fb2f974adf6eba980f35f8d14">LThumb</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca0501589371e70c45f36658f9bb4b7843">RIndexTrigger</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca539fc444c6c42c09fec1c86daa96b8a2">LIndexTrigger</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeacacfe67b27ee94b2453d80c20089a65d9e">RIndexPointing</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeacad68850271da7c45858aa8df755601922">RThumbUp</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca522257548de440cb48251ce74a036633">LIndexPointing</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a5a7392511ba112942f2528ff415ffeaca3bbcb71d84685fa1383e07d91a3cf011">LThumbUp</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ControllerType</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>aad674320383d77fc5e7a9f028ea56843</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843a6adf97f83acf6453d4a6a4b1070f3754">None</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843a253c104ad721758c8c0654a6878f47ff">LTouch</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843a02f85d6ee062327d58a289335f56fca1">RTouch</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843af0f31c9700c6b10d8a20dc487b2ae6a8">Touch</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843af8508f576cd3f742dfc268258dcdf0dd">Remote</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843ad7a5c7a13c0838c399a34112f46676b6">XBox</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="aad674320383d77fc5e7a9f028ea56843a4d3d769b812b6faa6b76e1a8abaece2d">Active</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>StatusFlag</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a018508181e5fd5575105208b3c9f5a65</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a018508181e5fd5575105208b3c9f5a65a6a8886de54f4886e42898ef3b017442b">OrientationTracked</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a018508181e5fd5575105208b3c9f5a65ab7ddf1ada4f53b9481038b4bf8c6cc56">PositionTracked</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SessionStatusFlag</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a05fe9e5cf2c3f76cad37febcfda1569f</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a05fe9e5cf2c3f76cad37febcfda1569fa149c5e61355c8de0943d094e18471195">IsVisible</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a05fe9e5cf2c3f76cad37febcfda1569fa173e3971d0e0a2e4de01a20ce02864a2">HmdPresent</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a05fe9e5cf2c3f76cad37febcfda1569fa7007260d2109c1b8a5614f339d6de495">HmdMounted</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a05fe9e5cf2c3f76cad37febcfda1569fa89dad51f4ce3c9e37a4581346d338a8a">DisplayLost</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a05fe9e5cf2c3f76cad37febcfda1569fae991b8c66aad662cea8ca5bdeb073dee">ShouldQuit</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a05fe9e5cf2c3f76cad37febcfda1569fa706fe46f20c4f4f109d18310acd81c72">ShouldRecenter</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>MirrorOption</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a9dff944a2e05defc83e91e2ce98ca7a4</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4a7a1920d61156abc05a60135aefe8bc67">Default</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4a1c07db0406abec4adeb373993bbaf223">PostDistortion</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4ac35d9d190345702a11cc451c6d42f275">LeftEyeOnly</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4a9d6d844ca936c88d43ad042269f64969">RightEyeOnly</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4a017ed27d843c069b6f807d0670965ca3">IncludeGuardian</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4a163cd5f4593cd178a7eef7aa98ce5b92">IncludeNotifications</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a9dff944a2e05defc83e91e2ce98ca7a4a664f7011f202aa7a4bd25b1a08dc3c52">IncludeSystemGui</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>PerformanceHudMode</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a13dbe6c3cff28c02def2998200ae32ba</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a13dbe6c3cff28c02def2998200ae32baad15305d7a4e34e02489c74a5ef542f36">Off</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a13dbe6c3cff28c02def2998200ae32baaa753651df182d2d54712d863b9af4f0d">PerfSummary</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a13dbe6c3cff28c02def2998200ae32baa03eb527e4457d835779020ea5b946e4e">LatencyTiming</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a13dbe6c3cff28c02def2998200ae32baafa4e966fc32d9ddcd5084b98cbb26f4f">AppRenderTiming</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a13dbe6c3cff28c02def2998200ae32baa376814a1f428866975b538385cc67810">CompRenderTiming</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a13dbe6c3cff28c02def2998200ae32baa9db78fd43c596601aa891c5c656a078d">VersionInfo</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>DebugHudStereoMode</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a981bf665fe55ea30d79c251cb8dd3dae</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a981bf665fe55ea30d79c251cb8dd3daead15305d7a4e34e02489c74a5ef542f36">Off</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a981bf665fe55ea30d79c251cb8dd3daeae9017664588010860a92ceb5f8fcb824">Quad</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a981bf665fe55ea30d79c251cb8dd3daeace19873f7b7fd296a0c3b514c6562d37">QuadWithCrosshair</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a981bf665fe55ea30d79c251cb8dd3daeaab6e7a65e73a0fc5d343d78c616d7e6d">CrosshairAtInfinity</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>LayerHudMode</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a7457b8480db6553349312d38e10ee2d3</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a7457b8480db6553349312d38e10ee2d3ad15305d7a4e34e02489c74a5ef542f36">Off</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="a7457b8480db6553349312d38e10ee2d3a4059b0251f66a18cb56f544728796875">Info</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ErrorType</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>adabeb393adcab6691d7250753ef6582c</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cadfa6c4e376d67452db5b14bb40d4d9a0">MemoryAllocationFailure</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca082b94968d127d17abb24a69da6cda56">InvalidSession</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cac85a251cc457840f1e032f1b733e9398">Timeout</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca9646ad3a1c3e708b4fa8b4b4270fbab6">NotInitialized</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca627251310d3384b591e4138be21145d5">InvalidParameter</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca112197d9297e3f816e50aa133dc6dd5e">ServiceError</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caff59267aa541879a068a88355d62f058">NoHmd</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cab4080bdf74febf04d578ff105cce9d3f">Unsupported</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca758b1a8856a2f8715b9c898ae0a57c14">DeviceUnavailable</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca49c2d0b56e40fadbdc0c2a9fd4315524">InvalidHeadsetOrientation</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca7eb9535c8784e5d2aa3a652471c1a7b4">ClientSkippedDestroy</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cae813f5801e9ff3e49091c0aafe8965a9">ClientSkippedShutdown</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cad509009f13c4de2c1177bc2d363b73e8">AudioDeviceNotFound</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cafc426c134912a0008fc9c7a48263c5df">AudioComError</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca223e06f5cb15fc701ea1e686f7934f4f">Initialize</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca7133af63cf13b9725dff98d146b3ccff">LibLoad</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca4491810b1469ebfe9ed1c40221d2c4d8">LibVersion</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caece78a70b624b88f562799ec52ddb02d">ServiceConnection</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca43ea2ee41bedd266ad7da264884ca5c5">ServiceVersion</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca4a9681314bd727c21cb6ed804911e6d7">IncompatibleOs</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca7ae7a1fe2dc931469a6534b9262d6fc4">DisplayInit</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca79ba98cd5eb4e6dae3995d81fd0e6ad4">ServerStart</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caf10363860dd5bc034f3078e1c30541b7">Reinitialization</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca9cc6505cca9015da503dfdd9bb62b7d0">MismatchedAdapters</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caad61a17a5106a6821235602778309b84">LeakingResources</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca5fa6776d2b97bf9fc75a006d96516129">ClientVersion</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca2680972d5946d0faa51f71d1a7ec8646">OutOfDateOs</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caf21d6d4d86c3d104e5ee7b120b1f90af">OutOfDateGfxDriver</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cac022b6a8e903db3815747953baa21b19">IncompatibleGpu</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca03ebe1b3b069f637eb93f06c30916350">NoValidVrDisplaySystem</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caec30c235d0eb792797af1aa1d11759a7">Obsolete</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582caf9717c4a65ac4604bbf0a6e2288b3d87">DisabledOrDefaultAdapter</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cad516cecd05c0c1d9f6196a02d925617a">HybridGraphicsNotSupported</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca486fac754172c31f16df1fbadf62e4e8">DisplayManagerInit</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582cac5a395ab4d788f57bd18171ccc9f78fa">TrackerDriverInit</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca89dad51f4ce3c9e37a4581346d338a8a">DisplayLost</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca01ac2fb3024f7f373266fa56ecb33ded">TextureSwapChainFull</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca21927b16639259e410f2054322ad64b8">TextureSwapChainInvalid</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1OvrIntegration.html" anchor="adabeb393adcab6691d7250753ef6582ca15452a9b0f2356c3dabe720a67728b3d">RuntimeException</enumvalue>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a650d4953f7d4d211f4d022d50d616538</anchor>
+      <arglist>(Debug &amp;debug, HmdType value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a73ce87139dacba79763659aaeebc170c</anchor>
+      <arglist>(Debug &amp;debug, TrackingOrigin value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a75fcd47c56139a2a51ac70f958ff8615</anchor>
+      <arglist>(Debug &amp;debug, TrackerFlag value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>ab05854774e0c74850a6258734e56e1f6</anchor>
+      <arglist>(Debug &amp;debug, Button value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>af1ee6d0c448e1a216f8414fc842687af</anchor>
+      <arglist>(Debug &amp;debug, Touch value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>aa8726fd40080c94c7dd03067313b095f</anchor>
+      <arglist>(Debug &amp;debug, ControllerType value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a79df2b6b9a2e08ae0a76732f970c7920</anchor>
+      <arglist>(Debug &amp;debug, StatusFlag value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>ae84582e8ef8bdf12136fbd05d443c4ca</anchor>
+      <arglist>(Debug &amp;debug, SessionStatusFlag value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a1790323104ce92acab9a4ad5fc784bfc</anchor>
+      <arglist>(Debug &amp;debug, MirrorOption value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a4d12129038f2a71b3f7ae7a4852b5755</anchor>
+      <arglist>(Debug &amp;debug, PerformanceHudMode value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a3bbf933e98ed3cf875a09525f71171f3</anchor>
+      <arglist>(Debug &amp;debug, DebugHudStereoMode value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>aa1582c7807ce82ce4c3dfcf394049404</anchor>
+      <arglist>(Debug &amp;debug, LayerHudMode value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1OvrIntegration.html</anchorfile>
+      <anchor>a340c9be88a1f969d3a34dc53af11f808</anchor>
+      <arglist>(Debug &amp;debug, ErrorType value)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>Vk.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Vk/</path>
     <filename>Vk_8h</filename>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Vk</namespace>
+  </compound>
+  <compound kind="file">
+    <name>Vulkan.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/Vk/</path>
+    <filename>Vulkan_8h</filename>
   </compound>
   <compound kind="file">
     <name>AnyImporter.h</name>
@@ -31989,17 +32109,17 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator==</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a13b922251c81c7db9c2894f290670386</anchor>
+      <anchor>a26f6810a5fe65c61ea8e69ffff45c9a1</anchor>
       <arglist>(const Range&lt; dimensions, T &gt; &amp;other) const </arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator!=</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a92733cd0ee541eff518047cefe143662</anchor>
+      <anchor>ae845fcb814997b57fae4cec3772b48d1</anchor>
       <arglist>(const Range&lt; dimensions, T &gt; &amp;other) const </arglist>
     </member>
     <member kind="function">
@@ -32062,21 +32182,28 @@
       <type>Range&lt; dimensions, T &gt;</type>
       <name>translated</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a68d9e8d01c037336459189b76f912ad4</anchor>
+      <anchor>a2b0dacdde368035ab21df5e13721c565</anchor>
       <arglist>(const VectorType &amp;vector) const </arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, T &gt;</type>
       <name>padded</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a854aa4f39708f9ef839937836cd5eb00</anchor>
+      <anchor>a28d97c9898eacd2958a23cd1dc9fe22d</anchor>
       <arglist>(const VectorType &amp;padding) const </arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, T &gt;</type>
       <name>scaled</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a4065a6203ccc5f9609be0019878c111e</anchor>
+      <anchor>af97d4f291433969934e8161af19a4cfd</anchor>
+      <arglist>(const VectorType &amp;scaling) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Range&lt; dimensions, T &gt;</type>
+      <name>scaledFromCenter</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a75af5b1041226fb67b55ef7f6e922641</anchor>
       <arglist>(const VectorType &amp;scaling) const </arglist>
     </member>
     <member kind="function">
@@ -32135,6 +32262,7 @@
       <anchor>a1f3385fec96840d6f57368596e7b8fe5</anchor>
       <arglist>(Corrade::Utility::Debug &amp;debug, const Range&lt; dimensions, T &gt; &amp;value)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Math_1_1Range" title="Use in generic code">Math-Range-generic</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Math::Range2D</name>
@@ -53973,17 +54101,17 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator==</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a13b922251c81c7db9c2894f290670386</anchor>
+      <anchor>a26f6810a5fe65c61ea8e69ffff45c9a1</anchor>
       <arglist>(const Range&lt; dimensions, Float &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator!=</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a92733cd0ee541eff518047cefe143662</anchor>
+      <anchor>ae845fcb814997b57fae4cec3772b48d1</anchor>
       <arglist>(const Range&lt; dimensions, Float &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
@@ -54046,21 +54174,28 @@
       <type>Range&lt; dimensions, Float &gt;</type>
       <name>translated</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a68d9e8d01c037336459189b76f912ad4</anchor>
+      <anchor>a2b0dacdde368035ab21df5e13721c565</anchor>
       <arglist>(const VectorType &amp;vector) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, Float &gt;</type>
       <name>padded</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a854aa4f39708f9ef839937836cd5eb00</anchor>
+      <anchor>a28d97c9898eacd2958a23cd1dc9fe22d</anchor>
       <arglist>(const VectorType &amp;padding) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, Float &gt;</type>
       <name>scaled</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a4065a6203ccc5f9609be0019878c111e</anchor>
+      <anchor>af97d4f291433969934e8161af19a4cfd</anchor>
+      <arglist>(const VectorType &amp;scaling) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Range&lt; dimensions, Float &gt;</type>
+      <name>scaledFromCenter</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a75af5b1041226fb67b55ef7f6e922641</anchor>
       <arglist>(const VectorType &amp;scaling) const</arglist>
     </member>
     <member kind="function">
@@ -54194,17 +54329,17 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator==</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a13b922251c81c7db9c2894f290670386</anchor>
+      <anchor>a26f6810a5fe65c61ea8e69ffff45c9a1</anchor>
       <arglist>(const Range&lt; dimensions, Int &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator!=</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a92733cd0ee541eff518047cefe143662</anchor>
+      <anchor>ae845fcb814997b57fae4cec3772b48d1</anchor>
       <arglist>(const Range&lt; dimensions, Int &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
@@ -54267,21 +54402,28 @@
       <type>Range&lt; dimensions, Int &gt;</type>
       <name>translated</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a68d9e8d01c037336459189b76f912ad4</anchor>
+      <anchor>a2b0dacdde368035ab21df5e13721c565</anchor>
       <arglist>(const VectorType &amp;vector) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, Int &gt;</type>
       <name>padded</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a854aa4f39708f9ef839937836cd5eb00</anchor>
+      <anchor>a28d97c9898eacd2958a23cd1dc9fe22d</anchor>
       <arglist>(const VectorType &amp;padding) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, Int &gt;</type>
       <name>scaled</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a4065a6203ccc5f9609be0019878c111e</anchor>
+      <anchor>af97d4f291433969934e8161af19a4cfd</anchor>
+      <arglist>(const VectorType &amp;scaling) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Range&lt; dimensions, Int &gt;</type>
+      <name>scaledFromCenter</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a75af5b1041226fb67b55ef7f6e922641</anchor>
       <arglist>(const VectorType &amp;scaling) const</arglist>
     </member>
     <member kind="function">
@@ -54415,17 +54557,17 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator==</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a13b922251c81c7db9c2894f290670386</anchor>
+      <anchor>a26f6810a5fe65c61ea8e69ffff45c9a1</anchor>
       <arglist>(const Range&lt; dimensions, T &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator!=</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a92733cd0ee541eff518047cefe143662</anchor>
+      <anchor>ae845fcb814997b57fae4cec3772b48d1</anchor>
       <arglist>(const Range&lt; dimensions, T &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
@@ -54488,21 +54630,28 @@
       <type>Range&lt; dimensions, T &gt;</type>
       <name>translated</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a68d9e8d01c037336459189b76f912ad4</anchor>
+      <anchor>a2b0dacdde368035ab21df5e13721c565</anchor>
       <arglist>(const VectorType &amp;vector) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, T &gt;</type>
       <name>padded</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a854aa4f39708f9ef839937836cd5eb00</anchor>
+      <anchor>a28d97c9898eacd2958a23cd1dc9fe22d</anchor>
       <arglist>(const VectorType &amp;padding) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, T &gt;</type>
       <name>scaled</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a4065a6203ccc5f9609be0019878c111e</anchor>
+      <anchor>af97d4f291433969934e8161af19a4cfd</anchor>
+      <arglist>(const VectorType &amp;scaling) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Range&lt; dimensions, T &gt;</type>
+      <name>scaledFromCenter</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a75af5b1041226fb67b55ef7f6e922641</anchor>
       <arglist>(const VectorType &amp;scaling) const</arglist>
     </member>
     <member kind="function">
@@ -54636,17 +54785,17 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator==</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a13b922251c81c7db9c2894f290670386</anchor>
+      <anchor>a26f6810a5fe65c61ea8e69ffff45c9a1</anchor>
       <arglist>(const Range&lt; dimensions, T &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator!=</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a92733cd0ee541eff518047cefe143662</anchor>
+      <anchor>ae845fcb814997b57fae4cec3772b48d1</anchor>
       <arglist>(const Range&lt; dimensions, T &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
@@ -54709,21 +54858,28 @@
       <type>Range&lt; dimensions, T &gt;</type>
       <name>translated</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a68d9e8d01c037336459189b76f912ad4</anchor>
+      <anchor>a2b0dacdde368035ab21df5e13721c565</anchor>
       <arglist>(const VectorType &amp;vector) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, T &gt;</type>
       <name>padded</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a854aa4f39708f9ef839937836cd5eb00</anchor>
+      <anchor>a28d97c9898eacd2958a23cd1dc9fe22d</anchor>
       <arglist>(const VectorType &amp;padding) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, T &gt;</type>
       <name>scaled</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a4065a6203ccc5f9609be0019878c111e</anchor>
+      <anchor>af97d4f291433969934e8161af19a4cfd</anchor>
+      <arglist>(const VectorType &amp;scaling) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Range&lt; dimensions, T &gt;</type>
+      <name>scaledFromCenter</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a75af5b1041226fb67b55ef7f6e922641</anchor>
       <arglist>(const VectorType &amp;scaling) const</arglist>
     </member>
     <member kind="function">
@@ -54857,17 +55013,17 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator==</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a13b922251c81c7db9c2894f290670386</anchor>
+      <anchor>a26f6810a5fe65c61ea8e69ffff45c9a1</anchor>
       <arglist>(const Range&lt; dimensions, T &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator!=</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a92733cd0ee541eff518047cefe143662</anchor>
+      <anchor>ae845fcb814997b57fae4cec3772b48d1</anchor>
       <arglist>(const Range&lt; dimensions, T &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
@@ -54930,21 +55086,28 @@
       <type>Range&lt; dimensions, T &gt;</type>
       <name>translated</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a68d9e8d01c037336459189b76f912ad4</anchor>
+      <anchor>a2b0dacdde368035ab21df5e13721c565</anchor>
       <arglist>(const VectorType &amp;vector) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, T &gt;</type>
       <name>padded</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a854aa4f39708f9ef839937836cd5eb00</anchor>
+      <anchor>a28d97c9898eacd2958a23cd1dc9fe22d</anchor>
       <arglist>(const VectorType &amp;padding) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, T &gt;</type>
       <name>scaled</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a4065a6203ccc5f9609be0019878c111e</anchor>
+      <anchor>af97d4f291433969934e8161af19a4cfd</anchor>
+      <arglist>(const VectorType &amp;scaling) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Range&lt; dimensions, T &gt;</type>
+      <name>scaledFromCenter</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a75af5b1041226fb67b55ef7f6e922641</anchor>
       <arglist>(const VectorType &amp;scaling) const</arglist>
     </member>
     <member kind="function">
@@ -55078,17 +55241,17 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator==</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a13b922251c81c7db9c2894f290670386</anchor>
+      <anchor>a26f6810a5fe65c61ea8e69ffff45c9a1</anchor>
       <arglist>(const Range&lt; dimensions, T &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator!=</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a92733cd0ee541eff518047cefe143662</anchor>
+      <anchor>ae845fcb814997b57fae4cec3772b48d1</anchor>
       <arglist>(const Range&lt; dimensions, T &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
@@ -55151,21 +55314,28 @@
       <type>Range&lt; dimensions, T &gt;</type>
       <name>translated</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a68d9e8d01c037336459189b76f912ad4</anchor>
+      <anchor>a2b0dacdde368035ab21df5e13721c565</anchor>
       <arglist>(const VectorType &amp;vector) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, T &gt;</type>
       <name>padded</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a854aa4f39708f9ef839937836cd5eb00</anchor>
+      <anchor>a28d97c9898eacd2958a23cd1dc9fe22d</anchor>
       <arglist>(const VectorType &amp;padding) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, T &gt;</type>
       <name>scaled</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a4065a6203ccc5f9609be0019878c111e</anchor>
+      <anchor>af97d4f291433969934e8161af19a4cfd</anchor>
+      <arglist>(const VectorType &amp;scaling) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Range&lt; dimensions, T &gt;</type>
+      <name>scaledFromCenter</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a75af5b1041226fb67b55ef7f6e922641</anchor>
       <arglist>(const VectorType &amp;scaling) const</arglist>
     </member>
     <member kind="function">
@@ -55299,17 +55469,17 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator==</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a13b922251c81c7db9c2894f290670386</anchor>
+      <anchor>a26f6810a5fe65c61ea8e69ffff45c9a1</anchor>
       <arglist>(const Range&lt; dimensions, T &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
-      <type>constexpr bool</type>
+      <type>bool</type>
       <name>operator!=</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a92733cd0ee541eff518047cefe143662</anchor>
+      <anchor>ae845fcb814997b57fae4cec3772b48d1</anchor>
       <arglist>(const Range&lt; dimensions, T &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
@@ -55372,21 +55542,28 @@
       <type>Range&lt; dimensions, T &gt;</type>
       <name>translated</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a68d9e8d01c037336459189b76f912ad4</anchor>
+      <anchor>a2b0dacdde368035ab21df5e13721c565</anchor>
       <arglist>(const VectorType &amp;vector) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, T &gt;</type>
       <name>padded</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a854aa4f39708f9ef839937836cd5eb00</anchor>
+      <anchor>a28d97c9898eacd2958a23cd1dc9fe22d</anchor>
       <arglist>(const VectorType &amp;padding) const</arglist>
     </member>
     <member kind="function">
       <type>Range&lt; dimensions, T &gt;</type>
       <name>scaled</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a4065a6203ccc5f9609be0019878c111e</anchor>
+      <anchor>af97d4f291433969934e8161af19a4cfd</anchor>
+      <arglist>(const VectorType &amp;scaling) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Range&lt; dimensions, T &gt;</type>
+      <name>scaledFromCenter</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a75af5b1041226fb67b55ef7f6e922641</anchor>
       <arglist>(const VectorType &amp;scaling) const</arglist>
     </member>
     <member kind="function">
@@ -69144,15 +69321,15 @@
       <type>MeshPrimitive</type>
       <name>meshPrimitive</name>
       <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a56403274a6ece45156c518c2f38d2c89</anchor>
-      <arglist>(Magnum::MeshPrimitive)</arglist>
+      <anchor>a490b82a53ed07151dc0fc03ee4d3332e</anchor>
+      <arglist>(Magnum::MeshPrimitive primitive)</arglist>
     </member>
     <member kind="function">
       <type>MeshIndexType</type>
       <name>meshIndexType</name>
       <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>aec131d878c8081ffb074dc947c0a5da9</anchor>
-      <arglist>(Magnum::MeshIndexType)</arglist>
+      <anchor>ac702527f8d92c066c961f319d4f0788b</anchor>
+      <arglist>(Magnum::MeshIndexType type)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
@@ -69277,8 +69454,8 @@
       <type>bool</type>
       <name>hasSamplerWrapping</name>
       <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>ab7203d2bf52a61bebe00ec690960afeb</anchor>
-      <arglist>(Magnum::SamplerWrapping wrappomg)</arglist>
+      <anchor>a68da07f6da40ae70bf4f68a5a5ff2ae7</anchor>
+      <arglist>(Magnum::SamplerWrapping wrapping)</arglist>
     </member>
     <member kind="function">
       <type>SamplerWrapping</type>
@@ -69853,18 +70030,32 @@
       <arglist>(Integral x, Integral y)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>std::enable_if&lt; std::is_arithmetic&lt; T &gt;::value, bool &gt;::type</type>
       <name>isInf</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ad58fc02d9ffa8b1e131ab55ac000bb5c</anchor>
+      <anchor>aba14106d1b41f32066f1e38b272fd5e4</anchor>
       <arglist>(T value)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
+      <type>BoolVector&lt; size &gt;</type>
+      <name>isInf</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a53ef8cb0e28d9c59e6d72e4927e36e61</anchor>
+      <arglist>(const Vector&lt; size, T &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::enable_if&lt; std::is_arithmetic&lt; T &gt;::value, bool &gt;::type</type>
       <name>isNan</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ae776050741a5f92fc482a204b69c6463</anchor>
+      <anchor>ab768023826366dfd94c01cce703e8b31</anchor>
       <arglist>(T value)</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt;</type>
+      <name>isNan</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a740f4050b4d66b0af6a7ec66639cfdaa</anchor>
+      <arglist>(const Vector&lt; size, T &gt; &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>T</type>
@@ -74167,6 +74358,97 @@
   <compound kind="namespace">
     <name>Magnum::Vk</name>
     <filename>namespaceMagnum_1_1Vk.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasVkPrimitiveTopology</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a3868a55bd1daeee366e479b2a0fd1438</anchor>
+      <arglist>(Magnum::MeshPrimitive primitive)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkPrimitiveTopology</type>
+      <name>vkPrimitiveTopology</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a169ab6b4d8a914bbb301cfd75b626c66</anchor>
+      <arglist>(Magnum::MeshPrimitive primitive)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasVkIndexType</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a3ba452fb290467d930fe153027942990</anchor>
+      <arglist>(Magnum::MeshIndexType type)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkIndexType</type>
+      <name>vkIndexType</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a78c671a53fc75529aaeb2618b077700d</anchor>
+      <arglist>(Magnum::MeshIndexType type)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasVkFormat</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>ac82a207c9b17d10b87c6bd27440e485e</anchor>
+      <arglist>(Magnum::PixelFormat format)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasVkFormat</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>abf0edbce00dc9210fe89a56335a619cc</anchor>
+      <arglist>(Magnum::CompressedPixelFormat format)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkFormat</type>
+      <name>vkFormat</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a9039b79313fc2ad91f427a8ef3382f63</anchor>
+      <arglist>(Magnum::PixelFormat format)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkFormat</type>
+      <name>vkFormat</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a2479652926689c38bb03bd3243b60e71</anchor>
+      <arglist>(Magnum::CompressedPixelFormat format)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkFilter</type>
+      <name>vkFilter</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a88d6d498708916f4dc6e2839f5d2d91f</anchor>
+      <arglist>(Magnum::SamplerFilter filter)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkSamplerMipmapMode</type>
+      <name>vkSamplerMipmapMode</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>aad05615076c109d791a654adab94fa86</anchor>
+      <arglist>(Magnum::SamplerMipmap mipmap)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>hasVkSamplerAddressMode</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a7200c63b45fa88c7c77a7dc309219562</anchor>
+      <arglist>(Magnum::SamplerWrapping wrapping)</arglist>
+    </member>
+    <member kind="function">
+      <type>VkSamplerAddressMode</type>
+      <name>vkSamplerAddressMode</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a2593b7a6403ed2203afba493dbfe40f4</anchor>
+      <arglist>(Magnum::SamplerWrapping wrapping)</arglist>
+    </member>
+    <member kind="function">
+      <type>Array&lt; dimensions, VkSamplerAddressMode &gt;</type>
+      <name>vkSamplerAddressMode</name>
+      <anchorfile>namespaceMagnum_1_1Vk.html</anchorfile>
+      <anchor>a479364ca861fe421e7bff6a532a8c6dc</anchor>
+      <arglist>(const Array&lt; dimensions, Magnum::SamplerWrapping &gt; &amp;wrapping)</arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>std</name>
@@ -74275,31 +74557,33 @@
     <name>changelog</name>
     <title>Changelog</title>
     <filename>changelog</filename>
-    <docanchor file="changelog" title="Changes since 2018.04">changelog-latest</docanchor>
-    <docanchor file="changelog" title="New features">changelog-latest-new</docanchor>
-    <docanchor file="changelog" title="Animation library">changelog-latest-new-animation</docanchor>
-    <docanchor file="changelog" title="DebugTools library">changelog-latest-new-debugtools</docanchor>
-    <docanchor file="changelog" title="GL library">changelog-latest-new-gl</docanchor>
-    <docanchor file="changelog" title="Math library">changelog-latest-new-math</docanchor>
-    <docanchor file="changelog" title="Platform libraries">changelog-latest-new-platform</docanchor>
-    <docanchor file="changelog" title="Primitives library">changelog-latest-new-primitives</docanchor>
-    <docanchor file="changelog" title="SceneGraph library">changelog-latest-new-scenegraph</docanchor>
-    <docanchor file="changelog" title="Shaders library">changelog-latest-new-shaders</docanchor>
-    <docanchor file="changelog" title="Trade library">changelog-latest-new-trade</docanchor>
-    <docanchor file="changelog" title="Changes and improvements">changelog-latest-changes</docanchor>
-    <docanchor file="changelog" title="Audio library">changelog-latest-changes-audio</docanchor>
-    <docanchor file="changelog" title="GL library">changelog-latest-changes-gl</docanchor>
-    <docanchor file="changelog" title="Math library">changelog-latest-changes-math</docanchor>
-    <docanchor file="changelog" title="MeshTools library">changelog-latest-changes-meshtools</docanchor>
-    <docanchor file="changelog" title="Platform libraries">changelog-latest-changes-platform</docanchor>
-    <docanchor file="changelog" title="Shaders library">changelog-latest-changes-shaders</docanchor>
-    <docanchor file="changelog" title="TextureTools library">changelog-latest-changes-texturetools</docanchor>
-    <docanchor file="changelog" title="Trade library">changelog-latest-changes-trade</docanchor>
-    <docanchor file="changelog" title="Build system">changelog-latest-buildsystem</docanchor>
-    <docanchor file="changelog" title="Bug fixes">changelog-latest-bugfixes</docanchor>
-    <docanchor file="changelog" title="Documentation">changelog-latest-docs</docanchor>
-    <docanchor file="changelog" title="Deprecated APIs">changelog-latest-deprecated</docanchor>
-    <docanchor file="changelog" title="Potential compatibility breakages, removed APIs">changelog-latest-compatibility</docanchor>
+    <docanchor file="changelog">changelog-latest</docanchor>
+    <docanchor file="changelog" title="2018.10">changelog-2018-10</docanchor>
+    <docanchor file="changelog" title="New features">changelog-2018-10-new</docanchor>
+    <docanchor file="changelog" title="Animation library">changelog-2018-10-new-animation</docanchor>
+    <docanchor file="changelog" title="DebugTools library">changelog-2018-10-new-debugtools</docanchor>
+    <docanchor file="changelog" title="GL library">changelog-2018-10-new-gl</docanchor>
+    <docanchor file="changelog" title="Math library">changelog-2018-10-new-math</docanchor>
+    <docanchor file="changelog" title="Platform libraries">changelog-2018-10-new-platform</docanchor>
+    <docanchor file="changelog" title="Primitives library">changelog-2018-10-new-primitives</docanchor>
+    <docanchor file="changelog" title="SceneGraph library">changelog-2018-10-new-scenegraph</docanchor>
+    <docanchor file="changelog" title="Shaders library">changelog-2018-10-new-shaders</docanchor>
+    <docanchor file="changelog" title="Trade library">changelog-2018-10-new-trade</docanchor>
+    <docanchor file="changelog" title="Vk library">changelog-2018-10-new-vk</docanchor>
+    <docanchor file="changelog" title="Changes and improvements">changelog-2018-10-changes</docanchor>
+    <docanchor file="changelog" title="Audio library">changelog-2018-10-changes-audio</docanchor>
+    <docanchor file="changelog" title="GL library">changelog-2018-10-changes-gl</docanchor>
+    <docanchor file="changelog" title="Math library">changelog-2018-10-changes-math</docanchor>
+    <docanchor file="changelog" title="MeshTools library">changelog-2018-10-changes-meshtools</docanchor>
+    <docanchor file="changelog" title="Platform libraries">changelog-2018-10-changes-platform</docanchor>
+    <docanchor file="changelog" title="Shaders library">changelog-2018-10-changes-shaders</docanchor>
+    <docanchor file="changelog" title="TextureTools library">changelog-2018-10-changes-texturetools</docanchor>
+    <docanchor file="changelog" title="Trade library">changelog-2018-10-changes-trade</docanchor>
+    <docanchor file="changelog" title="Build system">changelog-2018-10-buildsystem</docanchor>
+    <docanchor file="changelog" title="Bug fixes">changelog-2018-10-bugfixes</docanchor>
+    <docanchor file="changelog" title="Documentation">changelog-2018-10-docs</docanchor>
+    <docanchor file="changelog" title="Deprecated APIs">changelog-2018-10-deprecated</docanchor>
+    <docanchor file="changelog" title="Potential compatibility breakages, removed APIs">changelog-2018-10-compatibility</docanchor>
     <docanchor file="changelog" title="2018.04">changelog-2018-04</docanchor>
     <docanchor file="changelog" title="Dependency changes">changelog-2018-04-dependencies</docanchor>
     <docanchor file="changelog" title="New features">changelog-2018-04-new</docanchor>
@@ -74377,6 +74661,7 @@
     <docanchor file="changelog-old" title="Changes">changelog-2013-10-changes</docanchor>
     <docanchor file="changelog-old" title="Bug fixes">changelog-2013-10-bugfixes</docanchor>
     <docanchor file="changelog-old" title="Deprecated APIs">changelog-2013-10-deprecated</docanchor>
+    <docanchor file="changelog-old" title="Documentation">changelog-2013-10-documentation</docanchor>
     <docanchor file="changelog-old" title="Potential compatibility breakages, removed APIs">changelog-2013-10-compatibility</docanchor>
     <docanchor file="changelog-old" title="2013.08">changelog-2013-08</docanchor>
   </compound>
@@ -74842,12 +75127,13 @@
     <name>changelog-plugins</name>
     <title>Plugins</title>
     <filename>changelog-plugins</filename>
-    <docanchor file="changelog-plugins" title="Changes since 2018.04">changelog-plugins-latest</docanchor>
-    <docanchor file="changelog-plugins" title="New features">changelog-plugins-latest-new</docanchor>
-    <docanchor file="changelog-plugins" title="Changes and improvements">changelog-plugins-latest-changes</docanchor>
-    <docanchor file="changelog-plugins" title="Build system">changelog-plugins-latest-buildsystem</docanchor>
-    <docanchor file="changelog-plugins" title="Bug fixes">changelog-plugins-latest-bugfixes</docanchor>
-    <docanchor file="changelog-plugins" title="Deprecated APIs">corrade-changelog-latest-deprecated</docanchor>
+    <docanchor file="changelog-plugins">changelog-plugins-latest</docanchor>
+    <docanchor file="changelog-plugins" title="2018.10">changelog-plugins-2018-10</docanchor>
+    <docanchor file="changelog-plugins" title="New features">changelog-plugins-2018-10-new</docanchor>
+    <docanchor file="changelog-plugins" title="Changes and improvements">changelog-plugins-2018-10-changes</docanchor>
+    <docanchor file="changelog-plugins" title="Build system">changelog-plugins-2018-10-buildsystem</docanchor>
+    <docanchor file="changelog-plugins" title="Bug fixes">changelog-plugins-2018-10-bugfixes</docanchor>
+    <docanchor file="changelog-plugins" title="Deprecated APIs">corrade-changelog-2018-10-deprecated</docanchor>
     <docanchor file="changelog-plugins" title="2018.04">changelog-plugins-2018-04</docanchor>
     <docanchor file="changelog-plugins" title="Dependency changes">changelog-plugins-2018-04-dependencies</docanchor>
     <docanchor file="changelog-plugins" title="New features">changelog-plugins-2018-04-new</docanchor>
@@ -74919,11 +75205,13 @@
     <name>changelog-integration</name>
     <title>Integration</title>
     <filename>changelog-integration</filename>
-    <docanchor file="changelog-integration" title="Changes since 2018.04">changelog-integration-latest</docanchor>
-    <docanchor file="changelog-integration" title="New features">changelog-integration-latest-new</docanchor>
-    <docanchor file="changelog-integration" title="Changes and improvements">changelog-integration-latest-changes</docanchor>
-    <docanchor file="changelog-integration" title="Build system">changelog-integration-latest-buildsystem</docanchor>
-    <docanchor file="changelog-integration" title="Deprecated APIs">changelog-integration-latest-deprecated</docanchor>
+    <docanchor file="changelog-integration">changelog-integration-latest</docanchor>
+    <docanchor file="changelog-integration" title="2018.10">changelog-integration-2018-10</docanchor>
+    <docanchor file="changelog-integration" title="New features">changelog-integration-2018-10-new</docanchor>
+    <docanchor file="changelog-integration" title="Changes and improvements">changelog-integration-2018-10-changes</docanchor>
+    <docanchor file="changelog-integration" title="Build system">changelog-integration-2018-10-buildsystem</docanchor>
+    <docanchor file="changelog-integration" title="Bug fixes">changelog-integration-2018-10-bugfixes</docanchor>
+    <docanchor file="changelog-integration" title="Deprecated APIs">changelog-integration-2018-10-deprecated</docanchor>
     <docanchor file="changelog-integration" title="2018.04">changelog-integration-2018-04</docanchor>
     <docanchor file="changelog-integration" title="Dependency changes">changelog-integration-2018-04-dependencies</docanchor>
     <docanchor file="changelog-integration" title="Changes and improvements">changelog-integration-2018-04-changes</docanchor>
@@ -75009,9 +75297,12 @@
     <name>changelog-examples</name>
     <title>Examples</title>
     <filename>changelog-examples</filename>
-    <docanchor file="changelog-examples" title="Changes since 2018.04">changelog-examples-latest</docanchor>
-    <docanchor file="changelog-examples" title="New features">changelog-examples-latest-new</docanchor>
-    <docanchor file="changelog-examples" title="Build system">changelog-examples-latest-buildsystem</docanchor>
+    <docanchor file="changelog-examples">changelog-examples-latest</docanchor>
+    <docanchor file="changelog-examples" title="2018.10">changelog-examples-2018-10</docanchor>
+    <docanchor file="changelog-examples" title="New features">changelog-examples-2018-10-new</docanchor>
+    <docanchor file="changelog-examples" title="Changes and improvements">changelog-examples-2018-10-changes</docanchor>
+    <docanchor file="changelog-examples" title="Build system">changelog-examples-2018-10-buildsystem</docanchor>
+    <docanchor file="changelog-examples" title="Documentation">changelog-examples-2018-10-documentation</docanchor>
     <docanchor file="changelog-examples" title="2018.04">changelog-examples-2018-04</docanchor>
     <docanchor file="changelog-examples" title="Dependency changes">changelog-examples-2018-04-dependencies</docanchor>
     <docanchor file="changelog-examples" title="New features">changelog-examples-2018-04-new</docanchor>
@@ -75179,11 +75470,12 @@
     <name>changelog-extras</name>
     <title>Extras</title>
     <filename>changelog-extras</filename>
-    <docanchor file="changelog-extras" title="Changes since 2018.04">changelog-extras-latest</docanchor>
-    <docanchor file="changelog-extras" title="New features">changelog-extras-latest-new</docanchor>
-    <docanchor file="changelog-extras" title="Changes and improvements">changelog-extras-latest-changes</docanchor>
-    <docanchor file="changelog-extras" title="Build system">changelog-extras-latest-buildsystem</docanchor>
-    <docanchor file="changelog-extras" title="Bug fixes">changelog-extras-latest-bugfixed</docanchor>
+    <docanchor file="changelog-extras">changelog-extras-latest</docanchor>
+    <docanchor file="changelog-extras" title="2018.10">changelog-extras-2018-10</docanchor>
+    <docanchor file="changelog-extras" title="New features">changelog-extras-2018-10-new</docanchor>
+    <docanchor file="changelog-extras" title="Changes and improvements">changelog-extras-2018-10-changes</docanchor>
+    <docanchor file="changelog-extras" title="Build system">changelog-extras-2018-10-buildsystem</docanchor>
+    <docanchor file="changelog-extras" title="Bug fixes">changelog-extras-2018-10-bugfixed</docanchor>
     <docanchor file="changelog-extras" title="2018.04">changelog-extras-2018-04</docanchor>
     <docanchor file="changelog-extras" title="Dependency changes">changelog-extras-2018-04-dependencies</docanchor>
     <docanchor file="changelog-extras" title="Build system">changelog-extras-2018-04-buildsystem</docanchor>

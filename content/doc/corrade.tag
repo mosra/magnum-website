@@ -9513,19 +9513,20 @@
     <name>corrade-changelog</name>
     <title>Changelog</title>
     <filename>corrade-changelog</filename>
-    <docanchor file="corrade-changelog" title="Changes since 2018.04">corrade-changelog-latest</docanchor>
-    <docanchor file="corrade-changelog" title="New features">corrade-changelog-latest-new</docanchor>
-    <docanchor file="corrade-changelog" title="Containers library">corrade-changelog-latest-new-containers</docanchor>
-    <docanchor file="corrade-changelog" title="PluginManager library">corrade-changelog-latest-new-pluginmanager</docanchor>
-    <docanchor file="corrade-changelog" title="Utility library">corrade-changelog-latest-new-utility</docanchor>
-    <docanchor file="corrade-changelog" title="Changes and improvements">corrade-changelog-latest-changes</docanchor>
-    <docanchor file="corrade-changelog" title="Containers library">corrade-changelog-latest-changes-containers</docanchor>
-    <docanchor file="corrade-changelog" title="PluginManager library">corrade-changelog-latest-changes-pluginmanager</docanchor>
-    <docanchor file="corrade-changelog" title="TestSuite library">corrade-changelog-latest-changes-testsuite</docanchor>
-    <docanchor file="corrade-changelog" title="Utility library">corrade-changelog-latest-changes-utility</docanchor>
-    <docanchor file="corrade-changelog" title="Build system">corrade-changelog-latest-buildsystem</docanchor>
-    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-latest-bugfixes</docanchor>
-    <docanchor file="corrade-changelog" title="Documentation">corrade-changelog-latest-docs</docanchor>
+    <docanchor file="corrade-changelog">corrade-changelog-latest</docanchor>
+    <docanchor file="corrade-changelog" title="2018.10">corrade-changelog-2018-10</docanchor>
+    <docanchor file="corrade-changelog" title="New features">corrade-changelog-2018-10-new</docanchor>
+    <docanchor file="corrade-changelog" title="Containers library">corrade-changelog-2018-10-new-containers</docanchor>
+    <docanchor file="corrade-changelog" title="PluginManager library">corrade-changelog-2018-10-new-pluginmanager</docanchor>
+    <docanchor file="corrade-changelog" title="Utility library">corrade-changelog-2018-10-new-utility</docanchor>
+    <docanchor file="corrade-changelog" title="Changes and improvements">corrade-changelog-2018-10-changes</docanchor>
+    <docanchor file="corrade-changelog" title="Containers library">corrade-changelog-2018-10-changes-containers</docanchor>
+    <docanchor file="corrade-changelog" title="PluginManager library">corrade-changelog-2018-10-changes-pluginmanager</docanchor>
+    <docanchor file="corrade-changelog" title="TestSuite library">corrade-changelog-2018-10-changes-testsuite</docanchor>
+    <docanchor file="corrade-changelog" title="Utility library">corrade-changelog-2018-10-changes-utility</docanchor>
+    <docanchor file="corrade-changelog" title="Build system">corrade-changelog-2018-10-buildsystem</docanchor>
+    <docanchor file="corrade-changelog" title="Bug fixes">corrade-changelog-2018-10-bugfixes</docanchor>
+    <docanchor file="corrade-changelog" title="Documentation">corrade-changelog-2018-10-docs</docanchor>
     <docanchor file="corrade-changelog" title="2018.04">corrade-changelog-2018-04</docanchor>
     <docanchor file="corrade-changelog" title="Dependency changes">corrade-changelog-2018-04-dependencies</docanchor>
     <docanchor file="corrade-changelog" title="New features">corrade-changelog-2018-04-new</docanchor>
