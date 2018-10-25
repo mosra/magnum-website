@@ -97,7 +97,7 @@ repositories.
 .. role:: gh-name-big(gh)
     :class: m-flat m-text m-big
 
-.. todo: reliably disable hyphenation here
+.. TODO: reliably disable hyphenation here
 
 .. container:: m-row
 
@@ -105,6 +105,7 @@ repositories.
 
         .. class:: m-block-dot-t m-spacing-150 m-text-center
 
+        -   :gh-name:`Alan <Alan-FGR>`
         -   :gh-name:`Alexander F Rødseth <xyproto>`
         -   :gh-name:`Alexey Yurchenko <alexesDev>`
         -   :gh-name-big:`Alice Margatroid <alicemargatroid>`
@@ -120,6 +121,7 @@ repositories.
         -   :gh-name:`dlardi`
         -   :gh-name:`Eliot Saba <staticfloat>`
         -   :gh-name:`Émile Grégoire <emgre>`
+        -   :gh-name:`Fabien Freling <ffreling>`
         -   :gh-name:`Guillaume Giraud <Guillaume227>`
         -   :gh-name:`Ivan P. <uzername>`
         -   :gh-name:`Jan Dupal <JanDupal>`
