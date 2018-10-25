@@ -1,0 +1,565 @@
+Magnum 2018.10 released --- with animation and Vulkan interop
+#############################################################
+
+:date: 2018-10-24
+:category: Announcements
+:cover: {filename}/img/blog/announcements/2018.10/cover.jpg
+:tags: animation, C++, Corrade, Emscripten, flextGL, GLM, glTF, HiDPI, math,
+    Vulkan, PBR, Vcpkg, WebAssembly, WebGL
+:summary: Among other highlights is a new glTF player app, HiDPI support,
+    spline interpolation, a Box2D example and productivity improvements all
+    across the board.
+
+.. |x| unicode:: U+00D7 .. nicer multiply sign
+.. |wink| replace:: 😉
+
+.. TODO: summary
+.. TODO: tags
+.. TODO: cover
+
+When looking at the changelog for the latest version, it's hard to believe that
+only six months passed since the last release, `2018.04 <{filename}/blog/announcements/2018.04.rst>`_.
+The list is --- as usual --- very long, so I'm only cherry-picking the most
+interesting bits. Scroll *way down* for the full detailed change lists.
+
+`Animation import and playback`_
+================================
+
+This long-awaited feature finally managed to rise to the top of the priority
+list and so the new release contains a brand-new :dox:`Animation` namespace.
+Some design ideas are borrowed from `Ozz-Animation <https://guillaumeblanc.github.io/ozz-animation/>`_,
+with one end goal being high-performance playback of animations imported from
+`glTF <https://www.khronos.org/gltf/>`_ files (with other formats coming
+later). The other goal is being able to quickly iterate on hand-crafted
+animations of arbitrary values when writing a gameplay or UI transitions.
+
+.. container:: m-col-l-7 m-right-l m-push-l-1
+
+    .. code-figure:: Hand-craft a color transition animation track ...
+
+        .. code:: c++
+
+            Animation::Track<Float, Color3> breathe{{
+                {0.0f, 0x3bd267_srgbf},
+                {0.9f, 0xacecbe_srgbf},
+                {1.8f, 0x3bd267_srgbf}
+            }, Math::lerp};
+
+            Color3 color = breathe.at(0.7f);
+
+The animation library supports interleaved or separate keyframe data for
+cache-optimized data access; :cpp:`float`\ s, :dox:`std::chrono`, frame index
+(or just anything) for representing time, and yes, you can also animate
+strings, enum values, :cpp:`bool`\ s or even the state of another animation ---
+and why not animating a time value to make the playback non-linear! There's a
+set of :dox:`builtin interpolation modes <Animation::interpolatorFor()>` ---
+constant, linear, spherical linear and spline-based; but you can also supply
+your own interpolator function if you need some ease-in/ease-out, or, for
+example, unpack a quaternion from a 10--10--10--2 representation first.
+
+At the moment the :dox:`Animation` library is marked as :label-success:`experimental`
+as its API is not set in stone yet. There's a lot to explain, so stay tuned for
+detailed introductory blogposts (and examples) for all features. For a brief
+overview, check the :dox:`Animation::Track` and :dox:`Animation::Player` class
+docs.
+
+.. container:: m-col-l-8 m-left-l m-pull-l-1
+
+    .. code-figure:: ... and then use it to animate shader color
+
+        .. code:: c++
+
+            Animation::Player<nanoseconds, Float> player;
+
+            player.addWithCallback(breathe,
+                [](Float, const Color3& c, Flat2D& shader) {
+                    shader.setColor(c);
+                }, shader);
+            player.setPlayCount(0) // repeat ∞ times
+                  .play(…);
+
+Animation import is done through the new :dox:`Trade::AnimationData` class and
+at the moment the :dox:`Trade::AbstractImporter` interfaces handle just basic
+object transformation. Skinning and morphing will need some more-or-less
+breaking changes to some :dox:`Trade` APIs and so these features are scheduled
+for next releases. Along with that, the goal for the :dox:`Trade` library is
+allowing zero-copy asset import --- for example playing back an animation
+directly from a memory-mapped glTF file, with no data copies in between. See
+:gh:`mosra/magnum#240` for further work in this area.
+
+.. container:: m-clearfix-l
+
+    ..
+
+.. block-warning:: The fun barely started!
+
+    I had to stop adding new features because the release would otherwise never
+    make it out. There's already more in the buffer --- builtin easing
+    functions, interpolator chaining and more. See :gh:`mosra/magnum#101`
+    :label-warning:`help wanted` for details. There's lot of small and
+    self-contained things to work on, so if you feel brave and want to help,
+    `let us know <{filename}/contact.rst>`_!
+
+.. scenegraph TRS transformation impl
+
+`Magnum Player`_
+================
+
+While the :dox:`Animation` API itself doesn't have any dedicated example yet,
+there's now a new app, :dox:`magnum-player`, that can play back a scene file
+you throw at it. The final goal for this app will be showcasing the full Magnum
+feature set --- debugging and introspection tools, material tweaking etc. Check
+out the online version below --- it supports multi-file drag&drop, so simply
+drop a glTF file on it to play it. If you don't have any glTF file handy,
+there's the official Khronos `glTF sample model repository <https://github.com/KhronosGroup/glTF-Sample-Models>`_
+on GitHub. `Sketchfab <https://sketchfab.com/>`_ also has 1000s of models
+downloadable as glTF.
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6 m-push-m-3 m-nopady
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [player]
+            :end-before: [/player]
+
+`Initial work on the Vulkan backend`_
+=====================================
+
+After the hard work of removing mandatory OpenGL dependency was done in
+2018.04, Magnum is slowly gaining bits and pieces needed for Vulkan support. In
+June I took over a maintainership of :gh:`flextGL <mosra/flextgl>` and added
+Vulkan support to it. Shortly after, Magnum gained a :dox:`Vk` library that
+provides platform-independent function pointer loading. It gives you a choice
+whether you want global function pointers (like with OpenGL) or manage them
+locally. See the `original post about flextGL <{filename}/blog/hacking/simple-efficient-vulkan-loading-with-flextgl.rst>`_
+for details.
+
+The :dox:`Vk` library also provides conversion of generic :dox:`PixelFormat`,
+:dox:`SamplerFilter`, :dox:`MeshPrimitive`, ... enums to Vulkan-specific
+:vktype:`Format`, :vktype:`Filter`, :vktype:`PrimitiveTopology`, ... values.
+That allows you to use Magnum asset management APIs to load image and scene
+data and use them directly without time-consuming manual format conversion.
+There is also a new example focused on rendering a simple triangle to an
+offscreen buffer using a handcrafted SPIR-V shader and then saving it as a PNG
+using the Magnum :dox:`PngImageConverter <Trade::PngImageConverter>` plugin.
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6 m-nopadt
+
+        .. figure:: {filename}/img/blog/announcements/2018.10/doc-vulkan.png
+            :alt: Vulkan functions in docs
+            :figclass: m-fullwidth
+            :target: https://doc.magnum.graphics/magnum/namespaceMagnum_1_1Vk.html
+
+            Vulkan API mapping
+
+            Like with OpenGL, Magnum documentation provides a helpful mapping
+            of Vulkan symbols to equivalent Magnum APIs. Just search for them.
+
+    .. container:: m-col-m-6 m-nopadt
+
+        .. figure:: {filename}/img/blog/announcements/2018.10/triangle-vulkan.png
+            :alt: Vulkan Triangle screenshot
+            :figclass: m-fullwidth
+            :target: https://doc.magnum.graphics/magnum/examples-triangle-vulkan.html
+
+            Vulkan Triangle
+
+            Directly uses Vulkan with hand-written SPIR-V to produce a triangle
+            offscreen, with sRGB-correct blending. That all in just 500 lines.
+
+.. block-success:: There will be more
+
+    Further additions like shader/SPIR-V tools, device/instance abstractions
+    and initial pieces of the Vulkan backend are scheduled for next releases.
+    Subscribe to :gh:`mosra/magnum#234` for updates.
+
+`HiDPI support`_
+================
+
+Long gone are the days of a standard 1024\ |x|\ 768 resolution and fixed 96 DPI
+--- dense screens are now a common feature for higher-end laptops and desktops.
+In the 2018.10 release, Magnum is DPI-aware on macOS, iOS, Linux and
+Emscripten. The usability goal is that requesting an 800\ |x|\ 600 window will
+make it the same *physical* size as an 800\ |x|\ 600 window would have on a 96
+DPI screen --- so basically with no extra involvement from the user. For web
+and mobile, Magnum simply ensures that for given canvas / screen size you'll
+get all the pixels that are there, with no scaling on top. If you have a HiDPI
+screen, check out the WebGL demos on the `Showcase <{filename}/showcase.rst>`_
+page --- everything should be nicely crisp. This topic is way more complex than
+it might seem, see :dox:`Platform-Sdl2Application-dpi` for a detailed overview
+of DPI-awareness on all platforms and what that means for you as a developer.
+
+Unfortunately out-of-the-box Windows support didn't make it to the release
+(though you are able to force arbitrary scaling with a ``--magnum-dpi-scaling``
+parameter). Full Android support and advanced things like DPI change events
+when dragging a window across differently dense monitors are also waiting to be
+done, see :gh:`mosra/magnum#243` :label-warning:`help wanted` for details.
+
+.. emscripten markup improvements (changing a css class to resize the canvas, used by player, Oops :( message, resizing canvas on window resize)
+
+`Math goodies`_
+===============
+
+Introduction of the :dox:`Animation` library required quite a few additions to
+the :dox:`Math` library --- there's a new :dox:`Math::CubicHermite` class for
+Cubic Hermite splines. As a generic base for TCB curves and Catmull-Rom splines
+they are easily convertible to and from :dox:`Math::Bezier`.
+
+.. raw:: html
+
+    <blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">Cubic spline interpolation is henceforth referred to as splerp</p>&mdash; Thew was shot with a gun by an unknown attacker (@AmazingThew) <a href="https://twitter.com/AmazingThew/status/812801106791149568?ref_src=twsrc%5Etfw">December 24, 2016</a></blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+And because spline storage is useless on its own, the zoo of interpolation
+functions got extended with :dox:`Math::splerp()` variants. Besides that, the
+existing :dox:`Math::lerp()` was extended to allow linear interpolation of
+:dox:`Math::CubicHermite` points, if you ever need that, and there's a new
+:dox:`Math::select()` utility that does constant interpolation of all existing
+math types. *And also strings, enums or booleans.* See the
+:dox:`full list in the documentation <transformations-interpolation>`. There's
+also a recent blog post about
+`neglected optimization opportunities in quaternion interpolation <{filename}/blog/backstage/the-unnecessarily-short-ways-to-do-a-quaternion-slerp.rst>`_.
+
+As a side-product of `Squareys' bachelor thesis <https://blog.squareys.de/dual-cone-view-culling-for-vr/>`_,
+Magnum gained a large collection of cone intersection functions in the
+:dox:`Math::Intersection` namespace. The :dox:`Math::Range` class got
+intersection methods as well, along with other niceties.
+
+Many projects either use or interface with the `GLM <https://glm.g-truc.net/>`_
+library and so it made sense to be interoperable with it. Simply include one of
+the headers in the :dox:`GlmIntegration` library and you'll get conversion of
+all vector, matrix and quaternion types and also an ability to print the GLM
+types using :dox:`Utility::Debug`:
+
+.. code:: c++
+
+    #include <Magnum/GlmIntegration/GtcIntegration.h>
+
+    …
+
+    glm::mat3 a = glm::mat3(Matrix4::rotation(35.0_degf));
+    Quaternion b = Quaternion(glm::quat{4.0f, 1.0f, 2.0f, 3.0f});
+    Debug{} << glm::ivec3{1, 42, -3}; // prints ivec3(1, 42, -3)
+
+Listing all the additions to Math library would be beyond overwhelming, jump
+to the `complete changelog`_ for the rest.
+
+`Little big details`_
+=====================
+
+.. code:: c++
+
+    GL::Mesh mesh = MeshTools::compile(
+        Primitives::gradientVertical2D(0x2f83cc_srgbf, 0x3bd267_srgbf));
+
+.. container:: m-col-m-4 m-right-m m-push-m-1
+
+    .. note-danger::
+
+        We're still unsure if the upcoming Vulkan backend will be able to do
+        similar amount of work in such a terse expression. That could be both
+        a bad and a good thing.
+
+*Yes*, it's now possible to get a :dox:`GL::Mesh` directly from
+:dox:`Trade::MeshData <Trade::MeshData3D>`
+:abbr:`with a single click <depends on how powerful is your autocomplete>` ---
+just use the brand new :dox:`MeshTools::compile()` reimplementation and it'll
+drag all :dox:`GL::Buffer` instances along with itself, without you needing to
+manage them. Of course there are flexibility tradeoffs, so when using the mesh
+APIs directly, you have the option of :dox:`GL::Mesh::addVertexBuffer()` either
+taking a non-owning reference to the buffer or fully taking over its ownership.
+
+There's a new :dox:`Containers::ScopedExit` class that simply calls a passed
+exit / close / destroy function on given value at the end of scope. Very useful
+when interacting with low-level C APIs and much easier than wrestling with
+:dox:`std::unique_ptr`, trying to convince it to do the same.
+
+.. code:: c++
+
+    int fd = open("file.dat", O_RDONLY);
+    Containers::ScopedExit e{fd, close};
+
+If you ever need to iterate on a array of interleaved values and take always
+the third value, there's now :dox:`Containers::StridedArrayView` that abstracts
+it away. It's used internally by the :dox:`Animation::TrackView` APIs to allow
+for both flexible and cache-efficient layout of keyframe data.
+
+There's a new :dox:`Utility::format() <Utility::formatString()>` family of
+functions for Python-style type-safe string formatting. The reason I'm adding
+this is because :dox:`std::ostream` (and to some extent :dox:`printf() <std::printf()>`)
+is notoriously inefficient, negatively affecting executable size especially on
+asm.js / WebAssembly targets. However the full implementation didn't make it
+into the release, only the surface APIs, Magnum is not ported away from streams
+*just yet* --- there will be a detailed post about all this later |wink|
+
+.. code:: c++
+
+    std::string s = Utility::formatString("path {{ fill: #{:6x}; stroke: #{:6x}; }}",
+        0x33ff00, 0x00aa55);
+    // path { fill: #33ff00; stroke: #00aa55; }
+
+More of an internal thing, the :dox:`DebugTools::CompareImage` utility got a
+:dox:`CompareImageToFile <DebugTools::CompareImageToFile>` counterpart,
+together with other combinations. In subsequent updates, these will get used
+for fuzzy shader output verification --- very important for implementing PBR
+shaders that are later on the roadmap.
+
+`Prototyping`_
+==============
+
+Shown above is a new :dox:`Primitives::gradient2D()` function (together with
+its 3D counterpart), useful for simple backdrops. The :dox:`Shaders::Phong`
+shader got a long-requested support for multiple lights and there's now alpha
+masking support in both :dox:`Shaders::Phong` and :dox:`Shaders::Flat` ---
+useful for quick'n'dirty prototyping when you don't want to bother yourself
+with depth sorting or OIT.
+
+`Asset management improvements`_
+================================
+
+Since the :dox:`TinyGltfImporter <Trade::TinyGltfImporter>` plugin initial
+release in 2018.04, it's receiving an endless stream of updates. While the
+biggest new feature is animation import, it also received support for
+multi-primitive meshes, name mapping for all data, camera aspect ratio import
+and various conformance fixes and performance improvements. It's now easier to
+:dox:`access its internal state <Trade-TinyGltfImporter-state>`, in case you
+want to parse custom glTF properties or access data that the importer does not
+support yet.
+
+To support loading data from memory, from :cpp:`AAssetManager` on Android or
+for example voa drag&drop on Emscripten, all scene and image importers now
+support :dox:`file loading callbacks <Trade-AbstractImporter-usage-callbacks>`.
+For you it means you can continue loading assets as usual --- using their
+filenames --- and only set up a different file callback for each platform. The
+implementation was done in a way that makes all existing (and future) plugins
+implicitly work with file callbacks, moreover the
+:dox:`TinyGltfImporter <Trade::TinyGltfImporter>`,
+:dox:`AssimpImporter <Trade::AssimpImporter>` and
+:dox:`OpenGexImporter <Trade::OpenGexImporter>` also use provided file
+callbacks for external data referenced from scene files (such as images or data
+buffers).
+
+There's finally a :dox:`JpegImageConverter <Trade::JpegImageConverter>` plugin
+for compressing JPEG files, using a libJPEG implementation of your choice ---
+be it the vanilla implementation, `libjpeg-turbo <https://libjpeg-turbo.org/>`_
+or, for example, :gh:`MozJPEG <mozilla/mozjpeg>`. Similarly, the
+:gh:`stb_image <nothings/stb>`\ -based :dox:`StbImageConverter <Trade::StbImageConverter>`
+got updated to support JPEG output as well --- and you can load either of them
+using the ``JpegImageConverter`` alias. Both plugins support specifying the
+output quality via a runtime setting; more encoding options may be added in the
+future.
+
+.. code:: c++
+
+    std::unique_ptr<Trade::AbstractImageConverter> converter =
+        manager.loadAndInstantiate("JpegImageConverter");
+    converter->configuration()->setValue("jpegQuality", 0.95f);
+
+Among other things, the :dox:`StbTrueTypeFont <Text::StbTrueTypeFont>` was
+updated to a new version of ``stb_truetype``, gaining OTF support, and you can
+now load it (along with the other :dox:`HarfBuzzFont <Text::HarfBuzzFont>` and
+:dox:`FreeTypeFont <Text::FreeTypeFont>` implementations) via the generic
+``OpenTypeFont`` alias.
+
+`There's always something to improve in the docs`_
+==================================================
+
+If you happen to be using Magnum with a buildsystem other than CMake, there's
+now a :dox:`high-level guide <custom-buildsystems>`, pointing out the biggest
+pain points. The :dox:`Math::Matrix4` and :dox:`Matrix3 <Math::Matrix3>` docs
+are improved with equations visualizing most operations; the
+:dox:`Math::Intersection` and :dox:`Math::Distance` functions and
+:dox:`Math::Constants` got updated equations as well.
+
+The :dox:`scenegraph` guide now has a visual intro, explaining the basic
+concepts; the :dox:`platforms-html5` and :dox:`platforms-android` guides
+were extended with further tips and troubleshooting items. Oh, and the
+:dox:`Shaders` and :dox:`Primitives` docs now have images that look properly
+crisp on HiDPi screens.
+
+.. image-grid::
+
+    {filename}/img/blog/announcements/2018.10/doc-custom-buildsystems.png
+    {filename}/img/blog/announcements/2018.10/doc-matrix.png
+    {filename}/img/blog/announcements/2018.10/doc-scenegraph.png
+    {filename}/img/blog/announcements/2018.10/doc-examples.png
+    {filename}/img/blog/announcements/2018.10/doc-intersection.png
+    {filename}/img/blog/announcements/2018.10/doc-gradient.png
+
+`Not all roads led to Rome`_
+============================
+
+Magnum is now over eight years old and it became apparent that some early
+functionality didn't stand the test of time --- either because it depended on
+a now-outdated toolkit, because the required time investment for continued
+maintenance was not worth it or simply because it was a design experiment that
+failed. The following libraries are now marked as deprecated, are not built by
+default (in case they ever were) and will be completely removed in about six
+months time.
+
+-   The :dox:`Shapes` :label-danger:`deprecated` library, together with
+    :dox:`DebugTools::ShapeRenderer` :label-danger:`deprecated` and the
+    :dox:`BulletIntegration::convertShape()` :label-danger:`deprecated`
+    function. Failed design experiment that couldn't ever be made performant
+    (and abusing :cpp:`%` operators for collision queries was just *plain
+    wrong*).
+
+    Related geometry algorithms were moved to :dox:`Math::Distance` and
+    :dox:`Math::Intersection` namespaces. If you need a full-fledged physics
+    library, please have look at `Bullet <https://bulletphysics.org>`_, which
+    has Magnum integration in :dox:`BulletIntegration` (together with debug
+    draw implemented in :dox:`BulletIntegration::DebugDraw`), or at
+    `Box2D <https://box2d.org/>`_, which has a :dox:`Magnum example <examples-box2d>`
+    as well.
+
+-   The :dox:`Platform::GlutApplication` :label-danger:`deprecated`
+    application. It's based on an outdated GLUT toolkit, has portability issues
+    and doesn't make sense on the path forward to Vulkan. Consider switching to
+    either :dox:`Platform::Sdl2Application` or :dox:`Platform::GlfwApplication`.
+
+-   The :dox:`Trade::ColladaImporter` :label-danger:`deprecated` plugin,
+    because it's based on an outdated Qt4 toolkit. Moreover, due to the sheer
+    complexity of the COLLADA format and poor conformance of various exporters
+    it's not feasible to maintain a builtin importer anymore. Consider either
+    using :dox:`AssimpImporter <Trade::AssimpImporter>` for COLLADA import or
+    switching to better-designed and better-supported formats such as glTF or
+    OpenGEX using :dox:`TinyGltfImporter <Trade::TinyGltfImporter>` or
+    :dox:`OpenGexImporter <Trade::OpenGexImporter>`. There's also the official
+    `COLLADA2GLTF <https://github.com/KhronosGroup/COLLADA2GLTF>`_ converter.
+
+.. block-danger:: Visual Studio 2017
+
+    With a heavy heart I have to say that recent updates of MSVC 2017 were
+    regressing instead of improving with their C++11 conformance, crashing with
+    Internal Compiler Error on code involving :cpp:`constexpr`. While we
+    managed to reproduce and work around all reported issues so far, it may
+    happen that your code triggers some new corner case. Try to update to the
+    latest version first and if the problem persists,
+    `let us know <{filename}/contact.rst>`_. Thank you and sorry for the bumps.
+
+    Note that MSVC 2015 is not affected by these.
+
+`New examples`_
+===============
+
+Two new examples were contributed by our great community, namely an integration
+of the `Box2D`_ physics engine and an advanced depth-aware mouse interaction
+example. Both are ported to WebGL and you can play with them right now:
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6 m-nopady
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [box2d]
+            :end-before: [/box2d]
+
+    .. container:: m-col-m-6 m-nopady
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [mouseinteraction]
+            :end-before: [/mouseinteraction]
+
+`HTTPS 🔒`_
+===========
+
+The Magnum website is never storing any cookies or doing user tracking (and
+doesn't plan to be doing that), so there's no need to be worried about your
+data being compromised. Nevertheless, it's now served over HTTPS, with a
+certificate from `Let's Encrypt <https://letsencrypt.org/>`_. Some tradeoffs
+were made as it's either full security or supporting the not-most-recent
+browsers (but not both), so if you experience any issues, please `let us know`_.
+
+.. class:: m-dim m-text m-em
+
+    Sometimes a
+    `hard kick <https://www.reddit.com/r/cpp/comments/9d9ve7/optimizing_quaternion_interpolation_by_doing_less/e5gv52h/>`_
+    is all it takes to get things done.
+
+`Contributions welcome`_
+========================
+
+Magnum is now partnering with a few universities with a goal of improving
+computer graphics courses by offering students things that are fun to play
+with. You're  invited to the party as well --- :gh:`each GitHub repository <mosra/magnum/labels/help wanted>`
+now has issues marked with a :label-warning:`help wanted` label and these
+issues are specifically picked to be self-contained, excercise a well-defined
+area of knowledge and to not require deep understanding of Magnum internals.
+The most rewarding among these are various examples, you can also implement a
+fancy algorithm, integrate support for a new file format or share your
+expertise in an area you know the best. If you pick something, `let us know`_
+and we'll help you get on the right path.
+
+There's also a possibility to write a `guest post <{filename}/blog/meta/introducing-guest-posts.rst>`_
+for this very blog and share interesting details about a Magnum-related thing
+you're working on.
+
+`Upgrading from previous versions`_
+===================================
+
+In contrast to 2018.04, this release is more of an evolutional one.
+Nevertheless, even though we're always going to extreme lengths to preserve
+backwards compatibility, it may happen that some changes will have negative
+affect on your code. Please check the *Deprecated APIs* and *Potential
+compatibility issues* sections in the `complete changelog`_ below for more
+information.
+
+Thanks to :gh:`matjam` there's now a
+`PPA repository <https://launchpad.net/~chrome/+archive/ubuntu/magnum.graphics>`_
+containing prebuilt packages for Ubuntu 14.04, 16.04 and 18.04. If you follow
+the `#movingtogitlab <https://twitter.com/hashtag/movingtogitlab>`_ movement,
+Magnum now has a `mirror on GitLab <https://gitlab.com/mosra/magnum>`_, but
+note that primary development, roadmap and milestone planning is still
+happening on GitHub and will stay there for the foreseeable future.
+
+The 2018.10 release is already available in :dox:`Homebrew <building-packages-brew>`
+and `ArchLinux AUR <https://aur.archlinux.org/packages/magnum-git/>`_. At the
+time of writing, the PPA repository, :dox:`Vcpkg <building-packages-vcpkg>` and
+:dox:`ArchLinux <building-packages-arch>` repos are not updated yet, we're
+working on getting the latest version there as well.
+
+`Complete changelog`_
+=====================
+
+It's longer than you might expect |wink|
+
+-   :dox:`Changes in Corrade 2018.10 <corrade-changelog-2018-10>`
+-   :dox:`Changes in Magnum 2018.10 <changelog-2018-10>`
+-   :dox:`Changes in Magnum Plugins 2018.10 <changelog-plugins-2018-10>`
+-   :dox:`Changes in Magnum Integration 2018.10 <changelog-integration-2018-10>`
+-   :dox:`Changes in Magnum Extras 2018.10 <changelog-extras-2018-10>`
+-   :dox:`Changes in Magnum Examples 2018.10 <changelog-examples-2018-10>`
+
+`Special thanks`_
+=================
+
+Lots of work in this release is done thanks to external contributors:
+
+-   **Jonathan Hale** (:gh:`Squareys`) --- tireless maintenance of *all things
+    VR*, intersection algorithms, glTF, OpenGEX, Assimp importer updates and
+    Vcpkg expertise
+-   :gh:`scturtle` --- the :dox:`examples-mouseinteraction` example
+-   **Michal Mikula** --- the :dox:`examples-box2d` example
+-   **Nathan Ollerenshaw** (:gh:`matjam`) --- Ubuntu PPA repository maintenance
+-   **Alexander F Rødseth** (:gh:`xyproto`) --- continued ArchLinux ``[community]``
+    package maintenance
+-   **Patrick Werner** (:gh:`boonto`) --- Android port of the
+    :dox:`examples-viewer` example
+-   **Ivan P.** (:gh:`uzername`) --- ongoing effort with improving the
+    documentation and making the library more approachable for newcomers
+
+Again thanks a lot to everyone, not to forget all people who reported issues,
+suggested improvements or just wrote encouraging messages on the
+`Gitter chat <https://gitter.im/mosra/magnum>`_. Cheers!
+
+.. note-dim::
+
+    Discussion: `Twitter <https://twitter.com/czmosra/status/1055128679444037632>`_,
+    Reddit `r/cpp <https://www.reddit.com/r/cpp/comments/9r15lz/magnum_engine_201810_released_with_animation_and/>`_,
+    `r/gamedev <https://www.reddit.com/r/gamedev/comments/9r15zr/magnum_engine_201810_released_with_animation_and/>`_,
+    `r/gltf <https://www.reddit.com/r/glTF/comments/9r17p4/magnum_engine_201810_released_with_animation_a/>`_,
+    `Hacker News <https://news.ycombinator.com/item?id=18293903>`_,
+    `mailing list <https://groups.google.com/d/topic/magnum-engine/BYr5XrTuF1Q>`_
