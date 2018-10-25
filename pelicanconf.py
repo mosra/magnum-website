@@ -148,7 +148,8 @@ PLUGINS = ['m.abbr',
            'm.link',
            'm.math',
            'm.metadata',
-           'm.plots']
+           'm.plots',
+           'm.vk']
 
 FORMATTED_FIELDS = ['summary', 'description', 'landing', 'badge', 'header', 'footer']
 

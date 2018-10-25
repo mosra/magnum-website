@@ -57,8 +57,7 @@ enforced by OpenGL legacy and made just a single :dox:`PixelFormat` enum.
 Naming of its values is a result of finding a good compromise between
 readability and clarity with unambiguous implicit mapping to GPU APIs. It
 resembles `MTLPixelFormat <https://developer.apple.com/documentation/metal/mtlpixelformat>`_
-the most, which itself is a more readable alternative to what
-`VkFormat <https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkFormat.html>`_
+the most, which itself is a more readable alternative to what :vktype:`Format`
 or `D3D formats <https://msdn.microsoft.com/en-us/library/windows/desktop/bb153349(v=vs.85).aspx>`_
 offer.
 
