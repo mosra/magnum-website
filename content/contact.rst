@@ -10,7 +10,6 @@ You can contact the team and follow the development via the following means:
 -   Gitter community chat --- https://gitter.im/mosra/magnum
 -   E-mail --- info@magnum.graphics
 -   `Blog feed <https://blog.magnum.graphics/feeds/all.atom.xml>`_
--   IRC --- join the ``#magnum-engine`` channel on freenode
 -   Google Groups mailing list --- magnum-engine@googlegroups.com
     (`archive <https://groups.google.com/forum/#!forum/magnum-engine>`_)
 -   Author's personal Twitter --- https://twitter.com/czmosra
