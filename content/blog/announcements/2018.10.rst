@@ -33,7 +33,7 @@ with one end goal being high-performance playback of animations imported from
 later). The other goal is being able to quickly iterate on hand-crafted
 animations of arbitrary values when writing a gameplay or UI transitions.
 
-.. container:: m-col-l-7 m-right-l m-push-l-1
+.. container:: m-right-m m-right-l m-container-inflate
 
     .. code-figure:: Hand-craft a color transition animation track ...
 
@@ -57,13 +57,17 @@ constant, linear, spherical linear and spline-based; but you can also supply
 your own interpolator function if you need some ease-in/ease-out, or, for
 example, unpack a quaternion from a 10--10--10--2 representation first.
 
+.. container:: m-clearfix-l
+
+    ..
+
 At the moment the :dox:`Animation` library is marked as :label-success:`experimental`
 as its API is not set in stone yet. There's a lot to explain, so stay tuned for
 detailed introductory blogposts (and examples) for all features. For a brief
 overview, check the :dox:`Animation::Track` and :dox:`Animation::Player` class
 docs.
 
-.. container:: m-col-l-8 m-left-l m-pull-l-1
+.. container:: m-left-m m-left-l m-container-inflate
 
     .. code-figure:: ... and then use it to animate shader color
 
@@ -255,7 +259,7 @@ to the `complete changelog`_ for the rest.
     GL::Mesh mesh = MeshTools::compile(
         Primitives::gradientVertical2D(0x2f83cc_srgbf, 0x3bd267_srgbf));
 
-.. container:: m-col-m-4 m-right-m m-push-m-1
+.. container:: m-col-m-4 m-right-m m-right-l m-container-inflate
 
     .. note-danger::
 
