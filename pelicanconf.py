@@ -165,9 +165,9 @@ M_SHOW_AUTHOR_LIST = True
 M_HTMLSANITY_SMART_QUOTES = True
 M_HTMLSANITY_HYPHENATION = True
 M_DOX_TAGFILES = [
-    ('doxygen/stl.tag', 'http://en.cppreference.com/w/', []),
-    ('content/doc/corrade.tag', 'https://doc.magnum.graphics/corrade/', ['Corrade::']),
-    ('content/doc/magnum.tag', 'https://doc.magnum.graphics/magnum/', ['Magnum::'])]
+    ('doxygen/stl.tag', 'https://en.cppreference.com/w/', [], ['m-flat']),
+    ('content/doc/corrade.tag', 'https://doc.magnum.graphics/corrade/', ['Corrade::'], ['m-flat', 'm-text', 'm-strong']),
+    ('content/doc/magnum.tag', 'https://doc.magnum.graphics/magnum/', ['Magnum::'], ['m-flat', 'm-text', 'm-strong'])]
 M_IMAGES_REQUIRE_ALT_TEXT = True
 M_METADATA_AUTHOR_PATH = 'blog/authors'
 M_METADATA_CATEGORY_PATH = 'blog/categories'
