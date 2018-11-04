@@ -2,6 +2,7 @@ New Magnum website is here --- a stepping stone for what is to come
 ###################################################################
 
 :date: 2018-01-03
+:modified: 2018-11-04
 :category: Meta
 :cover: {filename}/img/blog/new-website-is-here.jpg
 :tags: Doxygen, C++, m.css
@@ -9,6 +10,10 @@ New Magnum website is here --- a stepping stone for what is to come
     features and enables the team to share progress easier than before. Besides
     that, its development resulted in many valuable byproducts for both C++
     developers and web content publishers.
+
+.. note-success:: Content care: Nov 04, 2018
+
+    Updated status of PRs submitted to third-party projects.
 
 One of greatest strengths that developed in Magnum over time is its modularity
 and flexibility. Until now the capabilities were not really well communicated,
@@ -68,8 +73,8 @@ proofread, updated, and improved to match the new theme.
     mostly related to the XML output, majority of them already included in
     version 1.8.14 that was released in December 2017.
 -   `9 patches submitted to Pelican <https://github.com/getpelican/pelican/pulls?utf8=✓&q=is%3Apr+author%3Amosra+>`_,
-    improving support for sites spanning multiple subdomains, in large part
-    still waiting to be merged upstream.
+    improving support for sites spanning multiple subdomains. Most of these are
+    scheduled to be in the upcoming version 3.8.
 -   `2 patches to latex2svg <https://github.com/tuxu/latex2svg/pulls?utf8=✓&q=is%3Apr+author%3Amosra>`_
     that handles `math rendering in m.css <https://mcss.mosra.cz/admire/math>`_.
 -   I am maintaining a `friendly fork of Pygments <https://github.com/mosra/pygments>`_
