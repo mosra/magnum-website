@@ -214,7 +214,7 @@ they are easily convertible to and from :dox:`Math::Bezier`.
 
 .. raw:: html
 
-    <blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">Cubic spline interpolation is henceforth referred to as splerp</p>&mdash; Thew was shot with a gun by an unknown attacker (@AmazingThew) <a href="https://twitter.com/AmazingThew/status/812801106791149568?ref_src=twsrc%5Etfw">December 24, 2016</a></blockquote>
+    <blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">Cubic spline interpolation is henceforth referred to as splerp</p>&mdash; Thew (@AmazingThew) <a href="https://twitter.com/AmazingThew/status/812801106791149568?ref_src=twsrc%5Etfw">December 24, 2016</a></blockquote>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 And because spline storage is useless on its own, the zoo of interpolation
