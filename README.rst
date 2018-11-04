@@ -38,7 +38,7 @@ strictly require it to make life easier for you --- if LaTeX is not found, it
 will render math formulas as unformatted code instead.
 
 Next, make sure to clone the repository (or your fork of the repository)
-including submodules so `m.css <http://mcss.mosra.cz>`_ is properly included
+including submodules so `m.css <https://mcss.mosra.cz>`_ is properly included
 (use :sh:`git clone --recursive`, for example).
 
 That's it. Now you can build the website and start a webserver on
@@ -55,7 +55,7 @@ either need to reinstall Git with symlinks enabled (there's a checkbox for that
 in the installation wizard) or copy ``m.css/css/*.css`` to ``output/inc/*``,
 otherwise the built website will lack all styling. Sorry for the inconvenience.
 
-If you run into problems, please open an issue. The `m.css <http://mcss.mosra.cz>`_
+If you run into problems, please open an issue. The `m.css <https://mcss.mosra.cz>`_
 documentation might also help. Thank you.
 
 Pelican workarounds and publishing notes

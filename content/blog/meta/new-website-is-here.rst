@@ -35,9 +35,9 @@ put into the overall website performance and responsiveness.
     As a graphics developer I would be feeling *really bad* for presenting a
     designed-to-be-fast graphics engine with a sluggish website ;)
 
-The website is built using `m.css <http://mcss.mosra.cz>`_, a no-nonsense,
+The website is built using `m.css <https://mcss.mosra.cz>`_, a no-nonsense,
 no-JavaScript CSS framework. It was originally developed mainly to power this
-website, but thanks to its simplicity and lightweight approach it has already 
+website, but thanks to its simplicity and lightweight approach it has already
 been adopted by numerous people since its release in late October 2017. Besides
 CSS style, m.css provides a theme for `Pelican <http://docs.getpelican.com/en/stable/>`_
 static site generator and a bunch of useful plugins for generating nicely
@@ -48,8 +48,9 @@ highlighted code blocks, rendering math equations, and more.
 
 The builtin `Doxygen <https://doxygen.org>`_ HTML output didn't really serve my
 expectations anymore and I needed something to match the website theme. That
-led to creating a `m.css Doxygen theme <http://mcss.mosra.cz/doxygen/>`_, which
-uses XML output from Doxygen to produce a modern and responsive HTML5 markup.
+led to creating a `m.css Doxygen theme <https://mcss.mosra.cz/doxygen/>`_,
+which uses XML output from Doxygen to produce a modern and responsive HTML5
+markup.
 
 You can see the Doxygen theme live at https://doc.magnum.graphics. Please note
 that the theme is still a work-in-progress and some features (such as symbol
@@ -70,7 +71,7 @@ proofread, updated, and improved to match the new theme.
     improving support for sites spanning multiple subdomains, in large part
     still waiting to be merged upstream.
 -   `2 patches to latex2svg <https://github.com/tuxu/latex2svg/pulls?utf8=✓&q=is%3Apr+author%3Amosra>`_
-    that handles `math rendering in m.css <http://mcss.mosra.cz/admire/math>`_.
+    that handles `math rendering in m.css <https://mcss.mosra.cz/admire/math>`_.
 -   I am maintaining a `friendly fork of Pygments <https://github.com/mosra/pygments>`_
     with patches for improved C++ and GLSL syntax highlighting that are not
     integrated in any stable version yet.

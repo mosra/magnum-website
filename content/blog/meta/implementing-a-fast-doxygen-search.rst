@@ -76,7 +76,7 @@ to follow.
 `Initial implementation`_
 =========================
 
-The basic idea is: during output generation in the `m.css Doxygen theme <http://mcss.mosra.cz/doxygen/>`_,
+The basic idea is: during output generation in the `m.css Doxygen theme <https://mcss.mosra.cz/doxygen/>`_,
 take the input search data and preprocess them to a trie structure using simple
 nested Python :py:`dict`\ s. Then, once fully populated, linearize the trie to
 a binary file. The binary file will later be loaded using JavaScript in the
@@ -338,7 +338,7 @@ particular symbols. This is useful especially in the OpenGL wrapping layer of
 Magnum --- one can search for a well-known OpenGL symbol to get to know what
 API it corresponds to. This is exposed through custom ``@m_keywords``,
 ``@m_keyword`` and ``@m_enum_values_as_keywords`` commands, head over
-`to the docs <http://mcss.mosra.cz/doxygen/#theme-specific-commands>`_ for
+`to the docs <https://mcss.mosra.cz/doxygen/#theme-specific-commands>`_ for
 details. Self-explanatory example:
 
 .. code:: c++

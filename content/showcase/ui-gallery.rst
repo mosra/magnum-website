@@ -9,7 +9,7 @@ Magnum::Ui Gallery
 A gallery of various widgets (buttons, labels, text input, modals) provided by
 the :dox:`Magnum::Ui` library. It's possible to select among different themes:
 
--   `m.css dark theme <?>`_ (based on `m.css <http://mcss.mosra.cz>`_)
+-   `m.css dark theme <?>`_ (based on `m.css <https://mcss.mosra.cz>`_)
 -   `Default theme <?style=default>`_
 
 .. note-warning::

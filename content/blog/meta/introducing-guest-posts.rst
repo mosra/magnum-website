@@ -48,7 +48,7 @@ The content is written in reStructuredText and can be submitted via a
 pull-request to the :gh:`mosra/magnum-website` repository on GitHub. If you
 don't know :abbr:`reST <reStructuredText>` from Sphinx or other documentation
 systems, the m.css docs have a
-`basic introduction to writing reST markup <http://mcss.mosra.cz/pelican/writing-content/>`_.
+`basic introduction to writing reST markup <https://mcss.mosra.cz/pelican/writing-content/>`_.
 Or you can have a look at source files in the repository. For example, the
 whole original content of the Area Lights post is contained in the following
 commit: :gh:`mosra/magnum-website@fd3ef282258cf224f61cd83d1e0c1247dcb137ff`
@@ -94,7 +94,7 @@ On Windows and macOS pick some LaTeX distribution and make it available in the
     render math formulas as unformatted code instead.
 
 Next, make sure to clone the repository (or your fork of the repository)
-including submodules so `m.css <http://mcss.mosra.cz>`_ is properly included
+including submodules so `m.css <https://mcss.mosra.cz>`_ is properly included
 (use :sh:`git clone --recursive`, for example).
 
 That's it. Now you can build the website and start a webserver on

@@ -43,6 +43,6 @@ the files.
 .. note-success::
 
     In case you are wondering, the online Magnum docs are generated using the
-    `m.css Doxygen theme <http://mcss.mosra.cz/doxygen/>`_. It's also possible
+    `m.css Doxygen theme <https://mcss.mosra.cz/doxygen/>`_. It's also possible
     to conveniently link to Doxygen docs from your Pelican blog using
-    `a m.css plugin <http://mcss.mosra.cz/plugins/links/#doxygen-documentation>`_.
+    `a m.css plugin <https://mcss.mosra.cz/plugins/links/#doxygen-documentation>`_.
