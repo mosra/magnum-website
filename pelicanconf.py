@@ -182,4 +182,4 @@ PAGINATED_DIRECT_TEMPLATES = ['archives']
 
 SLUGIFY_SOURCE = 'basename'
 PATH_METADATA = '(blog/)?(?P<slug>.+).rst'
-SLUG_SUBSTITUTIONS = [('C++', 'cpp')]
+SLUG_REGEX_SUBSTITUTIONS = [('C\+\+', 'cpp')]

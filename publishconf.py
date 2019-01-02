@@ -64,8 +64,8 @@ OUTPUT_PATH = 'published/'
 
 FEED_ALL_ATOM = 'blog/feeds/all.atom.xml'
 FEED_ALL_ATOM_URL = '//blog.magnum.graphics/feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'blog/feeds/%s.atom.xml'
-CATEGORY_FEED_ATOM_URL = '//blog.magnum.graphics/feeds/%s.atom.xml'
+CATEGORY_FEED_ATOM = 'blog/feeds/{slug}.atom.xml'
+CATEGORY_FEED_ATOM_URL = '//blog.magnum.graphics/feeds/{slug}.atom.xml'
 
 FEED_MAX_ITEMS = 10
 
