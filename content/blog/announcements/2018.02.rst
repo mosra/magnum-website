@@ -3,7 +3,7 @@ Magnum 2018.02 released
 
 :date: 2018-02-20
 :category: Announcements
-:cover: {filename}/img/blog/announcements/2018.02/cover.jpg
+:cover: {static}/img/blog/announcements/2018.02/cover.jpg
 :tags: C++, OpenGL, WebGL, WebAssembly, NaCl, Android, iOS, ANGLE, UI, Metal,
     Vulkan, Qt, CMake, Assimp, DevIL, Vcpkg
 :summary: The new Magnum milestone brings WebGL 2.0 and WebAssembly, VR
@@ -39,7 +39,7 @@ One notable non-obvious feature is an ability to search using OpenGL or OpenAL
 API names --- very handy in case you are porting existing OpenGL code to
 Magnum:
 
-.. image:: {filename}/img/blog/announcements/2018.02/opengl-search.png
+.. image:: {static}/img/blog/announcements/2018.02/opengl-search.png
     :alt: OpenGL symbol search
     :target: https://doc.magnum.graphics/magnum/#search
 

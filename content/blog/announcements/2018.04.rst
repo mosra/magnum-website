@@ -3,7 +3,7 @@ Magnum 2018.04 released --- with custom renderer support
 
 :date: 2018-05-02
 :category: Announcements
-:cover: {filename}/img/blog/announcements/2018.04/cover.jpg
+:cover: {static}/img/blog/announcements/2018.04/cover.jpg
 :tags: Corrade, C++, OpenGL, Android, Metal, D3D, Vulkan, CMake, Assimp, Vcpkg,
     glTF
 :summary: The new release brings more flexibility to asset management and
@@ -142,7 +142,7 @@ to render a triangle on screen without relying on Magnum OpenGL support at all.
 
     .. container:: m-col-m-6 m-push-m-3
 
-        .. figure:: {filename}/showcase/triangle/screenshot.png
+        .. figure:: {static}/showcase/triangle/screenshot.png
             :alt: sokol_gfx Triangle example screenshot
             :figclass: m-figure m-fullwidth
             :target: https://doc.magnum.graphics/magnum/examples-triangle-sokol.html
@@ -228,7 +228,7 @@ Thanks to :gh:`Squareys` (again!), we have a new fun example integrating the
 
     .. container:: m-col-m-6 m-push-m-3
 
-        .. figure:: {filename}/img/blog/announcements/2018.04/leapmotion.gif
+        .. figure:: {static}/img/blog/announcements/2018.04/leapmotion.gif
             :alt: Leap Motion example screenshot
             :figclass: m-fullwidth
             :target: https://doc.magnum.graphics/magnum/examples-leapmotion.html
@@ -252,7 +252,7 @@ The :dox:`Primitives` namespace was simplified to a bunch of free functions
 instead of the OOP-heavy interface before. There are new cone, grid and 3D
 circle primitives and the documentation now shows how every primitive looks:
 
-.. image:: {filename}/img/blog/announcements/2018.04/primitives.jpg
+.. image:: {static}/img/blog/announcements/2018.04/primitives.jpg
     :alt: Primitives namespace documentation
 
 Among other things the :dox:`examples-ovr` example got simplified and there's a

@@ -1,7 +1,7 @@
 Premium Services
 ################
 
-:cover: {filename}/img/cover-premium.jpg
+:cover: {static}/img/cover-premium.jpg
 
 Magnum is free to use and is developed fully in the open by volunteers around
 the world. If you are developing a bigger product based on Magnum, consider

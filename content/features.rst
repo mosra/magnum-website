@@ -1,7 +1,7 @@
 Features
 ########
 
-:cover: {filename}/img/cover-features.jpg
+:cover: {static}/img/cover-features.jpg
 :summary: High-level overview of feature set offered by the Magnum engine
 
 .. role:: dox-dim(dox)

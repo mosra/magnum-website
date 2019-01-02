@@ -3,7 +3,7 @@ Plugins & Extensions
 
 :breadcrumb:
     {filename}/features.rst Features
-:cover: {filename}/img/cover-features-extensions.jpg
+:cover: {static}/img/cover-features-extensions.jpg
 :summary: Plugins for asset import and conversion offered by the Magnum engine
 :footer:
     .. note-dim::

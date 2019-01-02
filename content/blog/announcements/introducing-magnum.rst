@@ -254,7 +254,7 @@ Magnum is currently used in one small game and one bigger, yet unnanounced one
 and the functionality is demonstrated in various examples. See
 `showcase page <{filename}/showcase.rst>`_ for images and live applications.
 
-.. image:: {filename}/img/push-the-box.png
+.. image:: {static}/img/push-the-box.png
     :alt: Push The Box
 
 `Where can you get it`_

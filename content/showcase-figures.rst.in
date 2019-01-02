@@ -24,7 +24,7 @@
 
 .. [al-info]
 
-.. figure:: {filename}/showcase/al-info/screenshot.png
+.. figure:: {static}/showcase/al-info/screenshot.png
     :alt: Magnum AL Info screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/al-info.rst
@@ -37,7 +37,7 @@
 .. [/al-info]
 .. [arealights]
 
-.. figure:: {filename}/showcase/arealights/screenshot.png
+.. figure:: {static}/showcase/arealights/screenshot.png
     :alt: Area Lights example screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/arealights.rst
@@ -51,7 +51,7 @@
 .. [/arealights]
 .. [audio]
 
-.. figure:: {filename}/showcase/audio/screenshot.png
+.. figure:: {static}/showcase/audio/screenshot.png
     :alt: Audio example screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/audio.rst
@@ -65,7 +65,7 @@
 .. [/audio]
 .. [box2d]
 
-.. figure:: {filename}/showcase/box2d/screenshot.png
+.. figure:: {static}/showcase/box2d/screenshot.png
     :alt: Box2D example screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/box2d.rst
@@ -78,7 +78,7 @@
 .. [/box2d]
 .. [bullet]
 
-.. figure:: {filename}/showcase/bullet/screenshot.png
+.. figure:: {static}/showcase/bullet/screenshot.png
     :alt: Bullet Physics example screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/bullet.rst
@@ -91,7 +91,7 @@
 .. [/bullet]
 .. [gl-info]
 
-.. figure:: {filename}/showcase/gl-info/screenshot.png
+.. figure:: {static}/showcase/gl-info/screenshot.png
     :alt: Magnum GL Info screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/gl-info.rst
@@ -107,7 +107,7 @@
 .. [/gl-info]
 .. [mouseinteraction]
 
-.. figure:: {filename}/showcase/mouseinteraction/screenshot.png
+.. figure:: {static}/showcase/mouseinteraction/screenshot.png
     :alt: Mouse Interaction example screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/mouseinteraction.rst
@@ -120,7 +120,7 @@
 .. [/mouseinteraction]
 .. [picking]
 
-.. figure:: {filename}/showcase/picking/screenshot.png
+.. figure:: {static}/showcase/picking/screenshot.png
     :alt: Object picking example screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/picking.rst
@@ -133,7 +133,7 @@
 .. [/picking]
 .. [player]
 
-.. figure:: {filename}/showcase/player/screenshot.jpg
+.. figure:: {static}/showcase/player/screenshot.jpg
     :alt: Magnum Player screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/player.rst
@@ -145,7 +145,7 @@
 .. [/player]
 .. [primitives]
 
-.. figure:: {filename}/showcase/primitives/screenshot.png
+.. figure:: {static}/showcase/primitives/screenshot.png
     :alt: Primitives example screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/primitives.rst
@@ -158,7 +158,7 @@
 .. [/primitives]
 .. [text]
 
-.. figure:: {filename}/showcase/text/screenshot.png
+.. figure:: {static}/showcase/text/screenshot.png
     :alt: Text example screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/text.rst
@@ -171,7 +171,7 @@
 .. [/text]
 .. [textured-triangle]
 
-.. figure:: {filename}/showcase/textured-triangle/screenshot.png
+.. figure:: {static}/showcase/textured-triangle/screenshot.png
     :alt: Textured triangle example screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/textured-triangle.rst
@@ -184,7 +184,7 @@
 .. [/textured-triangle]
 .. [triangle]
 
-.. figure:: {filename}/showcase/triangle/screenshot.png
+.. figure:: {static}/showcase/triangle/screenshot.png
     :alt: Triangle example screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/triangle.rst
@@ -199,7 +199,7 @@
 .. [/triangle]
 .. [ui-gallery]
 
-.. figure:: {filename}/showcase/ui-gallery/screenshot.png
+.. figure:: {static}/showcase/ui-gallery/screenshot.png
     :alt: Magnum::Ui Gallery screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/ui-gallery.rst
@@ -212,7 +212,7 @@
 .. [/ui-gallery]
 .. [viewer]
 
-.. figure:: {filename}/showcase/viewer/screenshot.png
+.. figure:: {static}/showcase/viewer/screenshot.png
     :alt: Viewer example screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/viewer.rst
@@ -224,7 +224,7 @@
 .. [/viewer]
 .. [webvr]
 
-.. figure:: {filename}/showcase/webvr/screenshot.png
+.. figure:: {static}/showcase/webvr/screenshot.png
     :alt: WebVR example screenshot
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/webvr.rst

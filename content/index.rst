@@ -3,7 +3,7 @@ Magnum Engine
 
 :save_as: index.html
 :url:
-:cover: {filename}/img/cover.jpg
+:cover: {static}/img/cover.jpg
 :description: Lightweight and modular C++11/C++14 open-source graphics
     middleware for games and data visualization.
 :summary: Lightweight and modular C++11/C++14 graphics middleware for games and
@@ -54,7 +54,7 @@ Magnum Engine
 
     .. container:: m-col-m-4
 
-        .. figure: : {filename}/img/feature-6.png
+        .. figure: : {static}/img/feature-6.png
             :figclass: m-fullwidth m-warning
             :alt: Core features
 
@@ -72,7 +72,7 @@ Magnum Engine
 
     .. container:: m-col-m-4
 
-        .. figure: : {filename}/img/feature-9.png
+        .. figure: : {static}/img/feature-9.png
             :figclass: m-fullwidth m-info
             :alt: Feature
 
@@ -90,7 +90,7 @@ Magnum Engine
 
     .. container:: m-col-m-4
 
-        .. figure: : {filename}/img/feature-7.png
+        .. figure: : {static}/img/feature-7.png
             :figclass: m-fullwidth m-success
             :alt: Feature
 

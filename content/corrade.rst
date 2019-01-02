@@ -1,7 +1,7 @@
 Corrade
 #######
 
-:cover: {filename}/img/cover-corrade.jpg
+:cover: {static}/img/cover-corrade.jpg
 :summary: A multiplatform utility library written in C++11/C++14
 
 ..

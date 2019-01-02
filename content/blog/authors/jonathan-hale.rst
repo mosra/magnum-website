@@ -3,7 +3,7 @@ Jonathan "Squareys" Hale
 
 :twitter: @Squareys
 :twitter_id: 336599609
-:image: {filename}/img/authors/jonathan-hale.png
+:image: {static}/img/authors/jonathan-hale.png
 :summary: Lives for Virtual Reality, developer and project manager at Vhite
     Rabbit.
 :badge: Jonathan Hale lives for Virtual Reality. Developer and project manager

@@ -1,7 +1,7 @@
 Guest posts
 ###########
 
-:image: {filename}/img/site.jpg
+:image: {static}/img/site.jpg
 :badge:
     This is a guest post by an external author. Do you also have something
     interesting to say? A success story worth sharing? We'll be happy to

@@ -44,7 +44,7 @@ This snapshot contains experimental support for Android, see
 :dox:`Corrade <building-corrade-cross-android>` and :dox:`Magnum <building-cross-android>`
 building documentation. Initial platform support is in :dox:`Platform::AndroidApplication`.
 
-.. image:: {filename}/img/android.png
+.. image:: {static}/img/android.png
     :alt: Android Application
 
 `Windowless applications on Mac OS X and Windows`_

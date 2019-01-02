@@ -3,7 +3,7 @@ Area Lights with LTCs
 
 :date: 2018-01-15
 :category: Guest posts
-:cover: {filename}/img/blog/guest-posts/area-lights-with-ltcs.jpg
+:cover: {static}/img/blog/guest-posts/area-lights-with-ltcs.jpg
 :tags: C++, rendering, PBR, OpenGL, Emscripten, WebGL
 :author: Jonathan Hale
 :summary: A new Magnum example implements an analytic method for area light
@@ -65,7 +65,7 @@ will affect the color of the surface point: the more red, the higher the effect.
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/img/blog/guest-posts/area-lights-with-ltcs/brdf-mirror.png
+        .. figure:: {static}/img/blog/guest-posts/area-lights-with-ltcs/brdf-mirror.png
             :alt: Visualization of the BRDF of a nearly perfect mirror
             :figclass: m-flat
 
@@ -74,7 +74,7 @@ will affect the color of the surface point: the more red, the higher the effect.
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/img/blog/guest-posts/area-lights-with-ltcs/brdf-diffuse.png
+        .. figure:: {static}/img/blog/guest-posts/area-lights-with-ltcs/brdf-diffuse.png
             :alt: Visualization of the BRDF of a diffuse material
             :figclass: m-flat
 
@@ -127,7 +127,7 @@ skewing) and that this leaves the value of the integral unchanged.
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/img/blog/guest-posts/area-lights-with-ltcs/ltc-cosine.png
+        .. figure:: {static}/img/blog/guest-posts/area-lights-with-ltcs/ltc-cosine.png
             :alt: Visualization of a cosine distribution
             :figclass: m-flat
 
@@ -135,7 +135,7 @@ skewing) and that this leaves the value of the integral unchanged.
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/img/blog/guest-posts/area-lights-with-ltcs/ltc-isotropic.gif
+        .. figure:: {static}/img/blog/guest-posts/area-lights-with-ltcs/ltc-isotropic.gif
             :alt: Animation for scaling a cosine distribution
             :figclass: m-flat
 
@@ -149,7 +149,7 @@ skewing) and that this leaves the value of the integral unchanged.
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/img/blog/guest-posts/area-lights-with-ltcs/ltc-anisotropic.gif
+        .. figure:: {static}/img/blog/guest-posts/area-lights-with-ltcs/ltc-anisotropic.gif
             :alt: Animation for scaling a cosine distribution on one axis
             :figclass: m-flat
 
@@ -159,7 +159,7 @@ skewing) and that this leaves the value of the integral unchanged.
 
     .. container:: m-col-m-6
 
-        .. figure:: {filename}/img/blog/guest-posts/area-lights-with-ltcs/ltc-skewness.gif
+        .. figure:: {static}/img/blog/guest-posts/area-lights-with-ltcs/ltc-skewness.gif
             :alt: Animation for skewing a cosine distribution
             :figclass: m-flat
 
@@ -199,7 +199,7 @@ know how to integrate over. If we apply the inverse matrix to polygon, it is
 then in the space of the cosine distribution over which we can integrate
 instead.
 
-.. figure:: {filename}/img/blog/guest-posts/area-lights-with-ltcs/ltc-integration.gif
+.. figure:: {static}/img/blog/guest-posts/area-lights-with-ltcs/ltc-integration.gif
     :alt: Animation for transforming the polygonal light into cosine distribution space
     :figclass: m-flat
 

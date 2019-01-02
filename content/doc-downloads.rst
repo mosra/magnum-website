@@ -17,8 +17,8 @@ If you have a project using Magnum and want to cross-link to Magnum
 documentation from your Doxygen docs, you can make use of the following
 `tag files <https://www.stack.nl/~dimitri/doxygen/manual/external.html>`_:
 
--   `corrade.tag <https://doc.magnum.graphics/corrade.tag>`_ (:filesize:`{filename}/doc/corrade.tag`)
--   `magnum.tag <https://doc.magnum.graphics/magnum.tag>`_ (:filesize:`{filename}/doc/magnum.tag`)
+-   `corrade.tag <https://doc.magnum.graphics/corrade.tag>`_ (:filesize:`{static}/doc/corrade.tag`)
+-   `magnum.tag <https://doc.magnum.graphics/magnum.tag>`_ (:filesize:`{static}/doc/magnum.tag`)
 
 Download the files into your project and reference them from your ``Doxyfile``
 like shown below. If Doxygen complains about duplicate symbols, use just one of

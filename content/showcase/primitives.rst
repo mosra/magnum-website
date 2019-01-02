@@ -1,7 +1,7 @@
 Primitives Example
 ##################
 
-:css: {filename}/showcase/showcase.css
+:css: {static}/showcase/showcase.css
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
@@ -20,8 +20,8 @@ colored cube which can be rotated using mouse.
         <canvas id="module" tabindex="0"></canvas>
         <div id="status">Initialization...</div>
         <div id="status-description"></div>
-        <script async="async" src="{filename}/showcase/primitives/magnum-primitives.js"></script>
-        <script src="{filename}/showcase/EmscriptenApplication.js"></script>
+        <script async="async" src="{static}/showcase/primitives/magnum-primitives.js"></script>
+        <script src="{static}/showcase/EmscriptenApplication.js"></script>
       </div></div></div>
     </div>
 

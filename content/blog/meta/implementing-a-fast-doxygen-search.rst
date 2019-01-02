@@ -3,7 +3,7 @@ Implementing a fast Doxygen search
 
 :date: 2018-02-05
 :category: Meta
-:cover: {filename}/img/blog/meta/implementing-a-fast-doxygen-search/cover.jpg
+:cover: {static}/img/blog/meta/implementing-a-fast-doxygen-search/cover.jpg
 :tags: C++, Doxygen, m.css, OpenGL, JavaScript, Python
 :summary: Magnum docs were missing the search functionality for some time
     because I wanted to implement it *properly* for the new theme. The proper
@@ -26,7 +26,7 @@ Implementing a fast Doxygen search
 
     .. container:: m-col-m-8 m-push-m-2
 
-        .. image:: {filename}/img/blog/meta/implementing-a-fast-doxygen-search/animated.gif
+        .. image:: {static}/img/blog/meta/implementing-a-fast-doxygen-search/animated.gif
             :alt: Doxygen search GIF
 
 *"How hard can it be?"*

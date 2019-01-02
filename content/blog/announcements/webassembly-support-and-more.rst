@@ -3,7 +3,7 @@ WebAssembly support in Magnum --- and more
 
 :date: 2017-08-25
 :category: Announcements
-:cover: {filename}/img/blog/webassembly-support-and-more.jpg
+:cover: {static}/img/blog/webassembly-support-and-more.jpg
 :tags: C++, CMake, NaCl, Emscripten, WebAssembly, WebGL
 :summary: Along with dropped support for NaCl, Magnum now has first-class
     WebAssembly support. I also took this opportunity to overhaul the outdated

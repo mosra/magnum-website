@@ -1,7 +1,7 @@
 Mouse Interaction
 #################
 
-:css: {filename}/showcase/showcase.css
+:css: {static}/showcase/showcase.css
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
@@ -32,8 +32,8 @@ mouse cursor for more convenient interaction with complex scenes.
         <canvas id="module" tabindex="0"></canvas>
         <div id="status">Initialization...</div>
         <div id="status-description"></div>
-        <script async="async" src="{filename}/showcase/mouseinteraction/magnum-mouseinteraction.js"></script>
-        <script src="{filename}/showcase/EmscriptenApplication.js"></script>
+        <script async="async" src="{static}/showcase/mouseinteraction/magnum-mouseinteraction.js"></script>
+        <script src="{static}/showcase/EmscriptenApplication.js"></script>
       </div></div></div>
     </div>
 

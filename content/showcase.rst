@@ -1,7 +1,7 @@
 Showcase
 ########
 
-:cover: {filename}/img/cover-showcase.jpg
+:cover: {static}/img/cover-showcase.jpg
 :summary: Interactive WebGL showcase of Magnum capabilities
 
 Demos and examples on this page require `WebAssembly <https://webassembly.org/>`_-enabled
@@ -25,7 +25,7 @@ isn't capable, you can at least try the
 
     .. container:: m-col-m-6 m-push-m-3
 
-        .. figure:: {filename}/showcase/push-the-box/screenshot.png
+        .. figure:: {static}/showcase/push-the-box/screenshot.png
             :figclass: m-figure m-fullwidth
             :target: {filename}/showcase/push-the-box.rst
 

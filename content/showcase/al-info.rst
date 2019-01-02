@@ -1,7 +1,7 @@
 Magnum AL Info
 ##############
 
-:css: {filename}/showcase/showcase.css
+:css: {static}/showcase/showcase.css
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 :alias: /showcase/magnum-al-info/
@@ -22,8 +22,8 @@ you:
         <pre id="log"></pre>
         <div id="status">Initialization...</div>
         <div id="status-description"></div>
-        <script async="async" src="{filename}/showcase/al-info/magnum-al-info.js"></script>
-        <script src="{filename}/showcase/WindowlessEmscriptenApplication.js"></script>
+        <script async="async" src="{static}/showcase/al-info/magnum-al-info.js"></script>
+        <script src="{static}/showcase/WindowlessEmscriptenApplication.js"></script>
       </div></div></div>
     </div>
 

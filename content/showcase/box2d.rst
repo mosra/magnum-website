@@ -1,7 +1,7 @@
 Box2D Example
 #############
 
-:css: {filename}/showcase/showcase.css
+:css: {static}/showcase/showcase.css
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
@@ -19,8 +19,8 @@ more.
         <canvas id="module" tabindex="0"></canvas>
         <div id="status">Initialization...</div>
         <div id="status-description"></div>
-        <script async="async" src="{filename}/showcase/box2d/magnum-box2d.js"></script>
-        <script src="{filename}/showcase/EmscriptenApplication.js"></script>
+        <script async="async" src="{static}/showcase/box2d/magnum-box2d.js"></script>
+        <script src="{static}/showcase/EmscriptenApplication.js"></script>
       </div></div></div>
     </div>
 

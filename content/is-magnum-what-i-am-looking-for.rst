@@ -1,7 +1,7 @@
 "Is Magnum what I'm looking for?"
 #################################
 
-:cover: {filename}/img/cover-is-magnum-what-i-am-looking-for.jpg
+:cover: {static}/img/cover-is-magnum-what-i-am-looking-for.jpg
 :summary: Unsure if Magnum is the right fit for your project? Here are five
     case studies to help you decide.
 

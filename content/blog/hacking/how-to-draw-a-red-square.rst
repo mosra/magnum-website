@@ -34,7 +34,7 @@ Copy-pasting it into draw event of the :dox:`basic boostrap application <getting
 and doing a bunch of :cpp:`#include` and library linking bureaucracy will
 result in this image:
 
-.. image:: {filename}/img/red-square.png
+.. image:: {static}/img/red-square.png
     :alt: Magnum One Statement Red Square
 
 .. container:: m-col-m-5 m-right-m

@@ -3,7 +3,7 @@ Extra Functionality
 
 :breadcrumb:
     {filename}/features.rst Features
-:cover: {filename}/img/cover-features-extras.jpg
+:cover: {static}/img/cover-features-extras.jpg
 :summary: Non-core functionality offered by the Magnum engine
 :footer:
     .. note-dim::

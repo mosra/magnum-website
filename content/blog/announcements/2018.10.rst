@@ -3,7 +3,7 @@ Magnum 2018.10 released --- with animation and Vulkan interop
 
 :date: 2018-10-24
 :category: Announcements
-:cover: {filename}/img/blog/announcements/2018.10/cover.jpg
+:cover: {static}/img/blog/announcements/2018.10/cover.jpg
 :tags: animation, C++, Corrade, Emscripten, flextGL, GLM, glTF, HiDPI, math,
     Vulkan, PBR, Vcpkg, WebAssembly, WebGL
 :summary: Among other highlights is a new glTF player app, HiDPI support,
@@ -152,7 +152,7 @@ using the Magnum :dox:`PngImageConverter <Trade::PngImageConverter>` plugin.
 
     .. container:: m-col-m-6 m-nopadt
 
-        .. figure:: {filename}/img/blog/announcements/2018.10/doc-vulkan.png
+        .. figure:: {static}/img/blog/announcements/2018.10/doc-vulkan.png
             :alt: Vulkan functions in docs
             :figclass: m-fullwidth
             :target: https://doc.magnum.graphics/magnum/namespaceMagnum_1_1Vk.html
@@ -164,7 +164,7 @@ using the Magnum :dox:`PngImageConverter <Trade::PngImageConverter>` plugin.
 
     .. container:: m-col-m-6 m-nopadt
 
-        .. figure:: {filename}/img/blog/announcements/2018.10/triangle-vulkan.png
+        .. figure:: {static}/img/blog/announcements/2018.10/triangle-vulkan.png
             :alt: Vulkan Triangle screenshot
             :figclass: m-fullwidth
             :target: https://doc.magnum.graphics/magnum/examples-triangle-vulkan.html
@@ -386,12 +386,12 @@ crisp on HiDPi screens.
 
 .. image-grid::
 
-    {filename}/img/blog/announcements/2018.10/doc-custom-buildsystems.png
-    {filename}/img/blog/announcements/2018.10/doc-matrix.png
-    {filename}/img/blog/announcements/2018.10/doc-scenegraph.png
-    {filename}/img/blog/announcements/2018.10/doc-examples.png
-    {filename}/img/blog/announcements/2018.10/doc-intersection.png
-    {filename}/img/blog/announcements/2018.10/doc-gradient.png
+    {static}/img/blog/announcements/2018.10/doc-custom-buildsystems.png
+    {static}/img/blog/announcements/2018.10/doc-matrix.png
+    {static}/img/blog/announcements/2018.10/doc-scenegraph.png
+    {static}/img/blog/announcements/2018.10/doc-examples.png
+    {static}/img/blog/announcements/2018.10/doc-intersection.png
+    {static}/img/blog/announcements/2018.10/doc-gradient.png
 
 `Not all roads led to Rome`_
 ============================

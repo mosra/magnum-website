@@ -3,7 +3,7 @@ Community Contributions
 
 :breadcrumb:
     {filename}/features.rst Features
-:cover: {filename}/img/cover-features-community.jpg
+:cover: {static}/img/cover-features-community.jpg
 :summary: Libraries, tools, helpers and concept projects built by our awesome
     community.
 :footer:

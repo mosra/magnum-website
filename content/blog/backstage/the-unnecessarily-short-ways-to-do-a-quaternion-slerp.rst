@@ -3,7 +3,7 @@ The Unnecessarily Short Ways To Do a Quaternion Slerp
 
 :date: 2018-09-05
 :category: Backstage
-:cover: {filename}/img/blog/backstage/the-unnecessarily-short-ways-to-do-a-quaternion-slerp.jpg
+:cover: {static}/img/blog/backstage/the-unnecessarily-short-ways-to-do-a-quaternion-slerp.jpg
 :tags: C++, math, glTF, Unity 3D, Unreal Engine, Eigen, GLM, three.js,
     animation
 :summary: Coming to an established workflow for the first time is always an

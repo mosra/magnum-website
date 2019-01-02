@@ -1,7 +1,7 @@
 Magnum WebGL 1 Info
 ###################
 
-:css: {filename}/showcase/showcase.css
+:css: {static}/showcase/showcase.css
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 :alias: /showcase/magnum-gl-info/
@@ -26,8 +26,8 @@ An `asm.js WebGL 1 version <{filename}/showcase/gl-info-asmjs.rst>`_ and
         <pre id="log"></pre>
         <div id="status">Initialization...</div>
         <div id="status-description"></div>
-        <script async="async" src="{filename}/showcase/gl-info/magnum-gl-info.js"></script>
-        <script src="{filename}/showcase/WindowlessEmscriptenApplication.js"></script>
+        <script async="async" src="{static}/showcase/gl-info/magnum-gl-info.js"></script>
+        <script src="{static}/showcase/WindowlessEmscriptenApplication.js"></script>
       </div></div></div>
     </div>
 

@@ -4,7 +4,7 @@ New Magnum website is here --- a stepping stone for what is to come
 :date: 2018-01-03
 :modified: 2018-11-04
 :category: Meta
-:cover: {filename}/img/blog/new-website-is-here.jpg
+:cover: {static}/img/blog/new-website-is-here.jpg
 :tags: Doxygen, C++, m.css
 :summary: The new website does a better job at clearly presenting engine
     features and enables the team to share progress easier than before. Besides
