@@ -48,7 +48,7 @@ automatically rebuilt on changes in the input files.
 .. code:: sh
 
     cd magnum-website
-    make devserver
+    pelican -Dlr
 
 **Note:** If you are on Windows and you don't have Git symlinks enabled, you
 either need to reinstall Git with symlinks enabled (there's a checkbox for that
