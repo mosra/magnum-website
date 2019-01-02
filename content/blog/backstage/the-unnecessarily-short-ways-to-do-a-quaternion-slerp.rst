@@ -11,6 +11,9 @@ The Unnecessarily Short Ways To Do a Quaternion Slerp
     forever" insights forming my opinion yet. This time it's about quaternion
     interpolation and a sudden optimization opportunity.
 
+.. role:: cpp(code)
+    :language: cpp
+
 Traditionally, quaternion :dox:`slerp() <Math::slerp()>` in Magnum was done
 like this:
 

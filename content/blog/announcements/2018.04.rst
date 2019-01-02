@@ -10,6 +10,9 @@ Magnum 2018.04 released --- with custom renderer support
     rendering abstractions, improves plugin handling and showcases Leap Motion
     integration.
 
+.. role:: cpp(code)
+    :language: cpp
+
 Two months after the previous release, Magnum comes with the biggest change in
 five years of its public history. With 2018.04 the OpenGL wrapping layer and
 asset management APIs are no longer a core part of the library, but completely

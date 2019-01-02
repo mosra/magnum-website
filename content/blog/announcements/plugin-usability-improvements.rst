@@ -9,6 +9,11 @@ Plugin usability improvements
     Magnum with features that make plugin workflow nicer and open up new
     possibilities.
 
+.. role:: cpp(code)
+    :language: c++
+.. role:: cmake(code)
+    :language: cmake
+
 `Autodetected plugin paths`_
 ============================
 

@@ -9,6 +9,8 @@ Simple and efficient Vulkan loading with flextGL
     various headers just to call a few functions? FlextGL just learned Vulkan
     support and it's here to speed up your turnaround times.
 
+.. role:: cpp(code)
+    :language: cpp
 .. role:: wtf
     :class: m-label m-danger
 .. role:: lol

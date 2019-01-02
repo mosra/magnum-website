@@ -10,6 +10,9 @@ Magnum 2018.10 released --- with animation and Vulkan interop
     spline interpolation, a Box2D example and productivity improvements all
     across the board.
 
+.. role:: cpp(code)
+    :language: cpp
+
 .. |x| unicode:: U+00D7 .. nicer multiply sign
 .. |wink| replace:: 😉
 

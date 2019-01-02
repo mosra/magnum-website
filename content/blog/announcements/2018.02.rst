@@ -11,6 +11,9 @@ Magnum 2018.02 released
     library, improved testing capabilities, support for over 80 new asset
     formats, new examples and much more.
 
+.. role:: cpp(code)
+    :language: cpp
+
 With nearly three years of development since the previous release, I'm excited
 to announce the release of Magnum 2018.02. Lots of things happened, so I'll
 focus on the most prominent features, for a detailed list follow the changelog
