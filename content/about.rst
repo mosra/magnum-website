@@ -56,39 +56,16 @@ apps:
 
     For more information, please refer to <https://unlicense.org/>
 
-`Third party software`_
-=======================
-
--   Magnum makes use of the **OpenGL** and **WebGL** APIs ---
-    https://www.opengl.org/, https://www.khronos.org/webgl/
--   The :dox:`GL` and :dox:`Vk` namespaces internally use code generated using
-    the **flextGL** extension loader generator ---
-    https://github.com/mosra/flextgl. Copyright © 2011--2018 Thomas Weber,
-    licensed under the `MIT license <https://raw.githubusercontent.com/mosra/flextgl/master/COPYING>`_.
--   The :dox:`Audio` namespace depends on the **OpenAL** API ---
-    https://www.openal.org.
--   The :dox:`Platform::GlfwApplication` class uses the **GLFW** library ---
-    https://www.glfw.org/, licensed under the
-    `zlib/libpng <https://www.glfw.org/license.html>`_ license.
--   The :dox:`Platform::GlutApplication` class uses the **freeGLUT** library
-    --- http://freeglut.sourceforge.net/, licensed under the MIT license.
--   The :dox:`Platform::Sdl2Application` class uses the **SDL2** library ---
-    https://www.libsdl.org/, licensed under the
-    `ZLIB license <https://zlib.net/zlib_license.html>`_.
+Some Magnum libraries, plugins and executables depend on third-party software.
+A full list together with license info is maintained
+:dox:`in the documentation <credits-third-party>`.
 
 `Contributors`_
 ===============
 
 Listing only people with code contributions here, otherwise it would be too
 many :) Many thanks to everyone involved! Detailed info about contributors to
-each particular project can be seen in the ``CREDITS.md`` files in the
-:gh:`Corrade <mosra/corrade/blob/master/CREDITS.md>`,
-:gh:`Magnum <mosra/magnum/blob/master/CREDITS.md>`,
-:gh:`Magnum Plugins <mosra/magnum-plugins/blob/master/CREDITS.md>`,
-:gh:`Magnum Integration <mosra/magnum-integration/blob/master/CREDITS.md>`,
-:gh:`Magnum Extras <mosra/magnum-extras/blob/master/CREDITS.md>` and
-:gh:`Magnum Examples <mosra/magnum-examples/blob/master/CREDITS.md>`
-repositories.
+each particular project can be seen :dox:`in the documentation <credits-contributors>`.
 
 .. role:: name
     :class: m-text m-primary
@@ -114,6 +91,7 @@ repositories.
         -   :gh-name:`Ashwin Ravichandran <ashrko619>`
         -   :gh-name-big:`Bill Robinson <wivlaro>`
         -   :gh-name:`biosek`
+        -   :gh-name:`Borislav Stanimirov <iboB>`
         -   :gh-name:`Chris Chambers <chris-chambers>`
         -   :gh-name:`David Lin <davll>`
         -   :gh-name:`Denis Igorevich Lobanov <denislobanov>`
@@ -139,6 +117,7 @@ repositories.
         -   :gh-name:`Nathan Ollerenshaw <matjam>`
         -   :gh-name:`Nicholas "LB" Branden <LB-->`
         -   :gh-name:`Olga Turanksaya <olga-python>`
+        -   :gh-name:`Pascal Thomet <pthom>`
         -   :gh-name:`Patrick Werner <boonto>`
         -   :gh-name:`Sam Spilsbury <smspillaz>`
         -   :gh-name:`Samuel Kogler <skogler>`
@@ -148,6 +127,7 @@ repositories.
         -   :gh-name:`sigman78`
         -   :gh-name:`Steeve Morin <steeve>`
         -   :gh-name:`Stefan Wasilewski <smw>`
+        -   :gh-name:`Thomas Tissot-Dupont <dolphineye>`
         -   :gh-name:`Tobias Stein <NussknackerXXL>`
         -   :gh-name:`Travis Watkins <amaranth>`
         -   :gh-name:`xantares`
