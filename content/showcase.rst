@@ -49,7 +49,9 @@ isn't capable, you can at least try the
             :start-after: [ui-gallery]
             :end-before: [/ui-gallery]
 
-.. container:: m-row m-container-inflate
+    .. container:: m-clearfix-m
+
+        ..
 
     .. container:: m-col-m-6
 
@@ -63,7 +65,9 @@ isn't capable, you can at least try the
             :start-after: [bullet]
             :end-before: [/bullet]
 
-.. container:: m-row m-container-inflate
+    .. container:: m-clearfix-m
+
+        ..
 
     .. container:: m-col-m-6
 
@@ -77,7 +81,9 @@ isn't capable, you can at least try the
             :start-after: [arealights]
             :end-before: [/arealights]
 
-.. container:: m-row m-container-inflate
+    .. container:: m-clearfix-m
+
+        ..
 
     .. container:: m-col-m-6
 
@@ -91,7 +97,9 @@ isn't capable, you can at least try the
             :start-after: [audio]
             :end-before: [/audio]
 
-.. container:: m-row m-container-inflate
+    .. container:: m-clearfix-m
+
+        ..
 
     .. container:: m-col-m-6
 
@@ -105,7 +113,9 @@ isn't capable, you can at least try the
             :start-after: [primitives]
             :end-before: [/primitives]
 
-.. container:: m-row m-container-inflate
+    .. container:: m-clearfix-m
+
+        ..
 
     .. container:: m-col-m-6
 
@@ -119,7 +129,9 @@ isn't capable, you can at least try the
             :start-after: [mouseinteraction]
             :end-before: [/mouseinteraction]
 
-.. container:: m-row m-container-inflate
+    .. container:: m-clearfix-m
+
+        ..
 
     .. container:: m-col-m-6
 
@@ -133,7 +145,9 @@ isn't capable, you can at least try the
             :start-after: [textured-triangle]
             :end-before: [/textured-triangle]
 
-.. container:: m-row m-container-inflate
+    .. container:: m-clearfix-m
+
+        ..
 
     .. container:: m-col-m-6
 
