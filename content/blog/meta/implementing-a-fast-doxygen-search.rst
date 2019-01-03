@@ -2,6 +2,7 @@ Implementing a fast Doxygen search
 ##################################
 
 :date: 2018-02-05
+:modified: 2019-01-03
 :category: Meta
 :cover: {static}/img/blog/meta/implementing-a-fast-doxygen-search/cover.jpg
 :tags: C++, Doxygen, m.css, OpenGL, JavaScript, Python
@@ -21,6 +22,11 @@ Implementing a fast Doxygen search
     :language: py
 .. role:: language-cs
     :class: language-cs
+
+.. note-success:: Update: Jan 03, 2019
+
+    Based on comments, the `Bonus: Unicode`_ section was clarified to mention
+    canonical equivalence.
 
 .. container:: m-row
 
@@ -430,6 +436,20 @@ representation of :language-cs:`"ý"` and :language-cs:`"á"` is
 :py:`[0xc3, 0xbd]` and :py:`[0xc3, 0xa1]` respectively, sharing the same first
 byte :py:`0xc3`, which is then a single node in the trie. That means there's no
 need to have more that 8 bits to represent a character in the trie.
+
+.. note-info::
+
+    To be precise --- and as `/u/robin-m <https://www.reddit.com/user/robin-m>`_
+    pointed out on Reddit --- a fully conforming Unicode-aware implementation
+    would need to implement `canonical equivalence <https://en.wikipedia.org/wiki/Unicode_equivalence>`_
+    in order to have for example a combined ``á`` recognized the same way as
+    ``á`` composed separately out of ``a`` and ``´`` codepoints. As you might
+    have guessed, this is not an easy task to do and common implementations
+    include multiple-megabyte translation tables to achieve this.
+
+    Because there's a very rare chance this would ever be a problem (even the
+    need to search for UTF-8 is a rare scenario, as most symbols use ASCII
+    anyway), I decided to not bother with this.
 
 `Try it yourself`_
 ==================
