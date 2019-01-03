@@ -58,7 +58,9 @@ apps:
 
 Some Magnum libraries, plugins and executables depend on third-party software.
 A full list together with license info is maintained
-:dox:`in the documentation <credits-third-party>`.
+`in the documentation <https://doc.magnum.graphics/magnum/credits-third-party.html>`_
+
+.. TODO: wtf why :dox:`<credits-third-party>` won't work, DOXYGEN!!!!
 
 `Contributors`_
 ===============
