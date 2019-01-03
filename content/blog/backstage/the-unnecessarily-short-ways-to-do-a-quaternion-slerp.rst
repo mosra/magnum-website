@@ -14,6 +14,8 @@ The Unnecessarily Short Ways To Do a Quaternion Slerp
 .. role:: cpp(code)
     :language: cpp
 
+.. todo: update to use atan2, reflect that in code, credit the quaternionista
+
 Traditionally, quaternion :dox:`slerp() <Math::slerp()>` in Magnum was done
 like this:
 
