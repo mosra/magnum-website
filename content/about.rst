@@ -56,9 +56,12 @@ apps:
 
     For more information, please refer to <https://unlicense.org/>
 
+.. role:: link-dox(link)
+    :class: m-flat m-text m-strong
+
 Some Magnum libraries, plugins and executables depend on third-party software.
 A full list together with license info is maintained
-`in the documentation <https://doc.magnum.graphics/magnum/credits-third-party.html>`_
+:link-dox:`in the documentation <https://doc.magnum.graphics/magnum/credits-third-party.html>`.
 
 .. TODO: wtf why :dox:`<credits-third-party>` won't work, DOXYGEN!!!!
 
