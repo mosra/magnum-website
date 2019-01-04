@@ -178,8 +178,14 @@ if not shutil.which('latex'):
     M_MATH_RENDER_AS_CODE = True
 
 DIRECT_TEMPLATES = ['archives']
-PAGINATED_DIRECT_TEMPLATES = ['archives']
+PAGINATED_TEMPLATES = {'archives': None, 'tag': None, 'category': None, 'author': None}
 
 SLUGIFY_SOURCE = 'basename'
 PATH_METADATA = '(blog/)?(?P<slug>.+).rst'
-SLUG_REGEX_SUBSTITUTIONS = [('C\+\+', 'cpp')]
+SLUG_REGEX_SUBSTITUTIONS = [
+        (r'[^\w\s-]', ''),  # remove non-alphabetical/whitespace/'-' chars
+        (r'(?u)\A\s*', ''),  # strip leading whitespace
+        (r'(?u)\s*\Z', ''),  # strip trailing whitespace
+        (r'[-\s]+', '-'),  # reduce multiple whitespace or '-' to single '-'
+        (r'C\+\+', 'cpp'),
+    ]
