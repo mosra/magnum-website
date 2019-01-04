@@ -44,7 +44,7 @@ The website is built using `m.css <https://mcss.mosra.cz>`_, a no-nonsense,
 no-JavaScript CSS framework. It was originally developed mainly to power this
 website, but thanks to its simplicity and lightweight approach it has already
 been adopted by numerous people since its release in late October 2017. Besides
-CSS style, m.css provides a theme for `Pelican <http://docs.getpelican.com/en/stable/>`_
+CSS style, m.css provides a theme for `Pelican <https://docs.getpelican.com/en/stable/>`_
 static site generator and a bunch of useful plugins for generating nicely
 highlighted code blocks, rendering math equations, and more.
 
