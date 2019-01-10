@@ -2,6 +2,7 @@ Improved Doxygen documentation and search
 #########################################
 
 :date: 2019-01-03
+:modified: 2019-01-09
 :tags: C++, Doxygen, m.css, JavaScript, Python
 :summary: Whether you are browsing Magnum docs or use Doxygen for your own C++
     documentation, there's always a way to improve your workflow. This article
@@ -16,8 +17,11 @@ Improved Doxygen documentation and search
 .. |lrarrow| replace:: ↔
 .. |smile| replace:: 😊
 
-.. TODO: rename the file
+.. note-success:: Update: Jan 09, 2019
 
+    Support for :ini:`EXTRACT_PRIV_VIRTUAL` from :gh:`doxygen/doxygen#6729` has
+    been merged to Doxygen master. The option was named
+    :ini:`EXTRACT_PRIVATE_VIRTUAL` in the original patch.
 
 A year ago I switched Magnum docs to a theme written entirely from scratch,
 adding a `never-before-seen search functionality <{filename}/blog/meta/implementing-a-fast-doxygen-search.rst>`_
@@ -105,9 +109,8 @@ anymore!
 
     If you want to use this feature for your codebase, first make sure you have
     a build with :gh:`doxygen/doxygen#6729` included. Then enable
-    :ini:`EXTRACT_PRIVATE_VIRTUAL` in your ``Doxyfile`` (it's disabled by
-    default). The patch is not yet merged into ``master`` at the time of
-    writing this article.
+    :ini:`EXTRACT_PRIV_VIRTUAL` in your ``Doxyfile`` (it's disabled by
+    default).
 
 .. container:: m-clearfix-l
 
