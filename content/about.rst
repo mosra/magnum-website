@@ -99,6 +99,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Borislav Stanimirov <iboB>`
         -   :gh-name:`Chris Chambers <chris-chambers>`
         -   :gh-name:`David Lin <davll>`
+        -   :gh-name:`denesik`
         -   :gh-name:`Denis Igorevich Lobanov <denislobanov>`
         -   :name:`Gerhard de Clercq`
         -   :gh-name:`dlardi`
@@ -106,6 +107,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Émile Grégoire <emgre>`
         -   :gh-name:`Fabien Freling <ffreling>`
         -   :gh-name:`Guillaume Giraud <Guillaume227>`
+        -   :gh-name:`Guillaume Jacquemin <williamjcm>`
         -   :gh-name:`Ivan P. <uzername>`
         -   :gh-name:`Jan Dupal <JanDupal>`
         -   :gh-name:`Janick Martinez Esturo <ph03>`
@@ -116,9 +118,11 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name-big:`Konstantinos Chatzilygeroudis <costashatz>`
         -   :gh-name:`Krzysztof Szenk <Crisspl>`
         -   :gh-name:`Leon Moctezuma <leonidax>`
+        -   :gh-name:`Max Schwarz <xqms>`
         -   :gh-name:`Michael Dietschi <mdietsch>`
         -   :name:`Michal Mikula`
         -   :gh-name:`Miguel Martin <miguelmartin75>`
+        -   :gh-name:`Natesh Narain <nnarain>`
         -   :gh-name:`Nathan Ollerenshaw <matjam>`
         -   :gh-name:`Nicholas "LB" Branden <LB-->`
         -   :gh-name:`Olga Turanksaya <olga-python>`
@@ -128,12 +132,14 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Samuel Kogler <skogler>`
         -   :gh-name:`Séverin Lemaignan <severin-lemaignan>`
         -   :gh-name:`scturtle`
+        -   :gh-name:`ShaddyDC`
         -   :gh-name:`Siim Kallas <seemk>`
         -   :gh-name:`sigman78`
         -   :gh-name:`Steeve Morin <steeve>`
         -   :gh-name:`Stefan Wasilewski <smw>`
         -   :gh-name:`Thomas Tissot-Dupont <dolphineye>`
         -   :gh-name:`Tobias Stein <NussknackerXXL>`
+        -   :gh-name:`Tomáš Skřivan <lecopivo>`
         -   :gh-name:`Travis Watkins <amaranth>`
         -   :gh-name:`xantares`
 
