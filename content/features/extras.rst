@@ -260,8 +260,13 @@ improve interoperability with third-party libraries.
     math type conversion and renderer for DART worlds
 -   `Oculus SDK <https://www.oculus.com/>`_ math type conversion and wrapper
     classes for full Oculus VR support in Magnum
+-   `GLM <https://glm.g-truc.net/>`_ math library integration with conversion
+    for all types and debug output
+-   `Dear ImGui <https://github.com/ocornut/imgui>`_ integration with
+    Magnum-backed renderer and HiDPI support
 
 .. note-dim::
 
-    See documentation of the :dox:`BulletIntegration`, :dox:`DartIntegration`
-    and :dox:`OvrIntegration` namespaces for details.
+    See documentation of the :dox:`BulletIntegration`, :dox:`DartIntegration`,
+    :dox:`GlmIntegration`, :dox:`ImGuiIntegration` and :dox:`OvrIntegration`
+    namespaces for details.

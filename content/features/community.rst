@@ -17,11 +17,14 @@ Community Contributions
         possible that particular projects will get integrated into Magnum
         itself at some point.
 
-    .. note-success::
+    .. block-success:: Do you have something?
 
         The above list is not exhaustive --- have you created a Magnum addon
         and would like to have it listed here? Ping us at info@magnum.graphics,
-        we'll gladly mention it.
+        we'll gladly mention it. Note that some widely-used projects that used
+        to be listed here have since become an officially supported part of
+        Magnum --- see for example the :dox:`GlmIntegration` and the
+        :dox:`ImGuiIntegration` libraries.
 
     .. note-dim::
         :class: m-text-center
@@ -35,19 +38,6 @@ Community Contributions
 
 On top of everything else, there are libraries, tools and concepts built by the
 community --- not part of Magnum itself, but worth mentioning nevertheless.
-
-`Dear ImGui integration`_
-=========================
-
-Integrates :gh:`Dear ImGui <ocornut/imgui>`, an immediate-mode UI library, into
-Magnum. Fork(s) of :gh:`denesik/MagnumImguiPort` with additional updates and a
-WebGL port.
-
--   **GitHub:** :gh:`nnarain/magnum-imgui` (:gh:`lecopivo/magnum-imgui`
-    (:gh:`lecopivo/MagnumImguiPort`))
--   **Demo:** https://lecopivo.github.io/MagnumImguiPort/
--   **License:** :label-success:`MIT`
--   **Platforms:** any
 
 `libRocket integration`_
 ========================

@@ -94,12 +94,18 @@ isn't capable, you can at least try the
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [audio]
-            :end-before: [/audio]
+            :start-after: [imgui]
+            :end-before: [/imgui]
 
     .. container:: m-clearfix-m
 
         ..
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [audio]
+            :end-before: [/audio]
 
     .. container:: m-col-m-6
 
@@ -107,15 +113,15 @@ isn't capable, you can at least try the
             :start-after: [viewer]
             :end-before: [/viewer]
 
+    .. container:: m-clearfix-m
+
+        ..
+
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
             :start-after: [primitives]
             :end-before: [/primitives]
-
-    .. container:: m-clearfix-m
-
-        ..
 
     .. container:: m-col-m-6
 
@@ -123,15 +129,17 @@ isn't capable, you can at least try the
             :start-after: [text]
             :end-before: [/text]
 
-    .. container:: m-col-m-6
+    .. container:: m-clearfix-m
+
+        ..
+
+    .. container:: m-col-m-6 m-push-m-3
 
         .. include:: showcase-figures.rst.in
             :start-after: [mouseinteraction]
             :end-before: [/mouseinteraction]
 
-    .. container:: m-clearfix-m
-
-        ..
+.. container:: m-row m-container-inflate
 
     .. container:: m-col-m-6
 

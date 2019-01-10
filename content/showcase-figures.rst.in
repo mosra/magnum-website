@@ -105,6 +105,20 @@
     `WebGL 2 <{filename}/showcase/gl-info-webgl2.rst>`__.
 
 .. [/gl-info]
+.. [imgui]
+
+.. figure:: {static}/showcase/imgui/screenshot.png
+    :alt: ImGui example screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/imgui.rst
+
+    ImGui Example :label-flat-info:`wasm` :label-success:`webgl2`
+    :label-primary:`ui`
+
+    HiDPI-enabled immediate-mode GUI rendering using the
+    :gh:`Dear ImGui <ocornut/imgui>` library.
+
+.. [/imgui]
 .. [mouseinteraction]
 
 .. figure:: {static}/showcase/mouseinteraction/screenshot.png
