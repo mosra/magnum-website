@@ -7312,8 +7312,8 @@
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>classCorrade_1_1Utility_1_1Debug.html</anchorfile>
-      <anchor>ad47ac9679b65f559cba28daa54d51606</anchor>
-      <arglist>(unsigned int value)</arglist>
+      <anchor>ace984244c193e9c40a86f17df3e6be2b</anchor>
+      <arglist>(unsigned value)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>

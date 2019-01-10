@@ -546,6 +546,15 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>Integration.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/ImGuiIntegration/</path>
+    <filename>ImGuiIntegration_2Integration_8h</filename>
+    <includes id="Types_8h" name="Types.h" local="no" imported="no">Magnum/Types.h</includes>
+    <includes id="Math_2Vector_8h" name="Vector.h" local="no" imported="no">Magnum/Math/Vector.h</includes>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::Math</namespace>
+  </compound>
+  <compound kind="file">
     <name>MotionState.h</name>
     <path>/home/mosra/Code/magnum-integration/src/Magnum/BulletIntegration/</path>
     <filename>MotionState_8h</filename>
@@ -638,6 +647,33 @@
       <anchorfile>namespaceglm.html</anchorfile>
       <anchor>a990d160f10118373a348bd734493ebed</anchor>
       <arglist>(Corrade::Utility::Debug &amp;debug, const tdualquat&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Context.hpp</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/ImGuiIntegration/</path>
+    <filename>Context_8hpp</filename>
+    <includes id="ImGuiIntegration_2Integration_8h" name="Integration.h" local="yes" imported="no">Magnum/ImGuiIntegration/Integration.h</includes>
+    <includes id="integration_2src_2Magnum_2ImGuiIntegration_2Context_8h" name="Context.h" local="yes" imported="no">Magnum/ImGuiIntegration/Context.h</includes>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::ImGuiIntegration</namespace>
+  </compound>
+  <compound kind="file">
+    <name>Widgets.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/ImGuiIntegration/</path>
+    <filename>Widgets_8h</filename>
+    <includes id="Range_8h" name="Range.h" local="no" imported="no">Magnum/Math/Range.h</includes>
+    <includes id="Color_8h" name="Color.h" local="no" imported="no">Magnum/Math/Color.h</includes>
+    <includes id="GL_2Texture_8h" name="Texture.h" local="no" imported="no">Magnum/GL/Texture.h</includes>
+    <includes id="ImGuiIntegration_2Integration_8h" name="Integration.h" local="yes" imported="no">Magnum/ImGuiIntegration/Integration.h</includes>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::ImGuiIntegration</namespace>
+    <member kind="function">
+      <type>void</type>
+      <name>image</name>
+      <anchorfile>namespaceMagnum_1_1ImGuiIntegration.html</anchorfile>
+      <anchor>ae843621d2754d7d7645163fd4e2de80f</anchor>
+      <arglist>(GL::Texture2D &amp;texture, const Vector2 &amp;size, const Range2D &amp;uvRange={{}, Vector2{1.0f}}, const Color4 &amp;tintColor=Color4{1.0f}, const Color4 &amp;borderColor={})</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -2552,6 +2588,19 @@
     <path>/home/mosra/Code/magnum/src/Magnum/Platform/</path>
     <filename>src_2Magnum_2Platform_2Context_8h</filename>
     <includes id="GLContext_8h" name="GLContext.h" local="yes" imported="no">Magnum/Platform/GLContext.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Context.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/ImGuiIntegration/</path>
+    <filename>integration_2src_2Magnum_2ImGuiIntegration_2Context_8h</filename>
+    <includes id="Timeline_8h" name="Timeline.h" local="no" imported="no">Magnum/Timeline.h</includes>
+    <includes id="GL_2AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="no" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
+    <includes id="GL_2Texture_8h" name="Texture.h" local="no" imported="no">Magnum/GL/Texture.h</includes>
+    <includes id="GL_2Buffer_8h" name="Buffer.h" local="no" imported="no">Magnum/GL/Buffer.h</includes>
+    <includes id="GL_2Mesh_8h" name="Mesh.h" local="no" imported="no">Magnum/GL/Mesh.h</includes>
+    <class kind="class">Magnum::ImGuiIntegration::Context</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::ImGuiIntegration</namespace>
   </compound>
   <compound kind="file">
     <name>Context.h</name>
@@ -8768,14 +8817,14 @@
       <type>std::vector&lt; UnsignedInt &gt;</type>
       <name>combineIndexArrays</name>
       <anchorfile>namespaceMagnum_1_1MeshTools.html</anchorfile>
-      <anchor>a90e75eba0b7e4e9edb105db481e7992c</anchor>
+      <anchor>ad5474465b12e161040774798fe47e3b6</anchor>
       <arglist>(const std::vector&lt; std::reference_wrapper&lt; std::vector&lt; UnsignedInt &gt;&gt;&gt; &amp;arrays)</arglist>
     </member>
     <member kind="function">
       <type>std::vector&lt; UnsignedInt &gt;</type>
       <name>combineIndexArrays</name>
       <anchorfile>namespaceMagnum_1_1MeshTools.html</anchorfile>
-      <anchor>a1d768efd6cf17739c960ef5114d61492</anchor>
+      <anchor>afe462618d8a3fded321b91dfadb77e27</anchor>
       <arglist>(std::initializer_list&lt; std::reference_wrapper&lt; std::vector&lt; UnsignedInt &gt;&gt;&gt; arrays)</arglist>
     </member>
     <member kind="function">
@@ -9003,7 +9052,7 @@
   <compound kind="file">
     <name>Transform.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/MeshTools/</path>
-    <filename>MeshTools_2Transform_8h</filename>
+    <filename>Transform_8h</filename>
     <includes id="DualQuaternion_8h" name="DualQuaternion.h" local="yes" imported="no">Magnum/Math/DualQuaternion.h</includes>
     <includes id="DualComplex_8h" name="DualComplex.h" local="yes" imported="no">Magnum/Math/DualComplex.h</includes>
     <namespace>Magnum</namespace>
@@ -9077,20 +9126,6 @@
       <anchorfile>namespaceMagnum_1_1MeshTools.html</anchorfile>
       <anchor>a6a35b6df2232d8cbf17f612b52244851</anchor>
       <arglist>(const T &amp;transformation, U vectors)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Transform.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/TextureTools/</path>
-    <filename>TextureTools_2Transform_8h</filename>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::TextureTools</namespace>
-    <member kind="function">
-      <type>void</type>
-      <name>flip</name>
-      <anchorfile>namespaceMagnum_1_1TextureTools.html</anchorfile>
-      <anchor>ad3aa1e60a76053a22890ce5dbc6043dd</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -28718,6 +28753,177 @@
     <docanchor file="classMagnum_1_1ImageView" title="Implementation-specific formats">ImageView-usage-implementation-specific</docanchor>
   </compound>
   <compound kind="class">
+    <name>Magnum::ImGuiIntegration::Context</name>
+    <filename>classMagnum_1_1ImGuiIntegration_1_1Context.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Context</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a83d1808f9bce52874260251dfee4e6ba</anchor>
+      <arglist>(const Vector2 &amp;size, const Vector2i &amp;windowSize, const Vector2i &amp;framebufferSize)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Context</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>ae2ef6c96dca0671180497b61b379c83a</anchor>
+      <arglist>(const Vector2i &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Context</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>ac55344ed7b7fc465f42e38f4b5e557eb</anchor>
+      <arglist>(ImGuiContext &amp;context, const Vector2 &amp;size, const Vector2i &amp;windowSize, const Vector2i &amp;framebufferSize)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Context</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>ab77bae0278bc3728cce577ac5759759c</anchor>
+      <arglist>(ImGuiContext &amp;context, const Vector2i &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Context</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a24cfd4b00e8c78fb8d81d8682dd9a1de</anchor>
+      <arglist>(NoCreateT) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Context</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a3b23c5172ccfe9f2a48ae68240b1b7db</anchor>
+      <arglist>(const Context &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Context</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a3afa24382486bbdb260235de4371a7d1</anchor>
+      <arglist>(Context &amp;&amp;other) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Context</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a1f1def2849fb9c331eb4bf66ba0eede2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Context &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a3198ad993b94fc8e58499a24c44fc779</anchor>
+      <arglist>(const Context &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>Context &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>ac29c50703c036d68032f133a65612af4</anchor>
+      <arglist>(Context &amp;&amp;other) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>ImGuiContext *</type>
+      <name>context</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a5263d5f577418d5c44b006e91ec465fe</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ImGuiContext *</type>
+      <name>release</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a02a58ec766b44fb00b0f762ff54fbea3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>relayout</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a25e18ffcfd6008dab9d29049c55bfdc7</anchor>
+      <arglist>(const Vector2 &amp;size, const Vector2i &amp;windowSize, const Vector2i &amp;framebufferSize)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>relayout</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>ac4b1103fabf85016556b1bbd64a9a5bd</anchor>
+      <arglist>(const Vector2i &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>newFrame</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a34bc622fceb5b34da42bb4034865e8a1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>drawFrame</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a70f0c9c332e841b927136c6426af2106</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>handleMousePressEvent</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a6544580827a811ff73313b6dd1c2f5c9</anchor>
+      <arglist>(MouseEvent &amp;event)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>handleMouseReleaseEvent</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a087b39f38f5bc55f7401a4807e670aae</anchor>
+      <arglist>(MouseEvent &amp;event)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>handleMouseScrollEvent</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a9b948defa0d5605e41acfdf52475d1ba</anchor>
+      <arglist>(MouseScrollEvent &amp;event)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>handleMouseMoveEvent</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>a093c45899e7ddb078cb094a574b54c81</anchor>
+      <arglist>(MouseMoveEvent &amp;event)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>handleKeyPressEvent</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>aeec3125987be76fec174655ea8dcea5c</anchor>
+      <arglist>(KeyEvent &amp;event)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>handleKeyReleaseEvent</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>ab0be2d187eae4314c58581b84f3a6e7b</anchor>
+      <arglist>(KeyEvent &amp;event)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>handleTextInputEvent</name>
+      <anchorfile>classMagnum_1_1ImGuiIntegration_1_1Context.html</anchorfile>
+      <anchor>aba1ce77adc1789f2fdcebe6d7813b4d7</anchor>
+      <arglist>(TextInputEvent &amp;event)</arglist>
+    </member>
+    <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Usage">ImGuiIntegration-Context-usage</docanchor>
+    <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Rendering">ImGuiIntegration-Context-usage-rendering</docanchor>
+    <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Event handling">ImGuiIntegration-Context-usage-events</docanchor>
+    <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="DPI awareness">ImGuiIntegration-Context-dpi</docanchor>
+    <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="HiDPI fonts">ImGuiIntegration-Context-dpi-fonts</docanchor>
+    <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Multiple contexts">ImGuiIntegration-Context-multiple-contexts</docanchor>
+  </compound>
+  <compound kind="class">
     <name>Magnum::Math::Bezier</name>
     <filename>classMagnum_1_1Math_1_1Bezier.html</filename>
     <templarg>order</templarg>
@@ -36398,56 +36604,56 @@
       <anchor>a74589e540beef25d6f844f9febaf982d</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>viewportEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
       <anchor>a100681787cd65e3d4e1e17290b2b36b4</anchor>
       <arglist>(ViewportEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>viewportEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
       <anchor>a37464791fbdac271ce40819f28d69b23</anchor>
       <arglist>(const Vector2i &amp;size)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="pure">
+    <member kind="function" protection="private" virtualness="pure">
       <type>virtual void</type>
       <name>drawEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
       <anchor>af2c5853ec1ef59ee2a496b31a5ce1eb2</anchor>
       <arglist>()=0</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>keyPressEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
       <anchor>a5300a85c9cb15c3150fd967a842f4613</anchor>
       <arglist>(KeyEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>keyReleaseEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
       <anchor>a023100947ae0a6e4443d3876ac7cc0b1</anchor>
       <arglist>(KeyEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mousePressEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
       <anchor>a4fd5a53087603bb299fecf9e4a361862</anchor>
       <arglist>(MouseEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mouseReleaseEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
       <anchor>abed988d061fa8037c49744daefa42b69</anchor>
       <arglist>(MouseEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mouseMoveEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
@@ -36985,42 +37191,42 @@
       <anchor>a308e1560c581fe3edd12777fc3444beb</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>viewportEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
       <anchor>a0d2e9484d544d7b6bb477cc1232dbcb0</anchor>
       <arglist>(ViewportEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>viewportEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
       <anchor>afcdfe648357b272c838f624f42de3a2f</anchor>
       <arglist>(const Vector2i &amp;size)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="pure">
+    <member kind="function" protection="private" virtualness="pure">
       <type>virtual void</type>
       <name>drawEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
       <anchor>a75396810d496499ddb8fc1a45bf9d7fd</anchor>
       <arglist>()=0</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mousePressEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
       <anchor>a51370e0415a65b7cb967a6fa445a6a62</anchor>
       <arglist>(MouseEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mouseReleaseEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
       <anchor>aad71c338afe32ef72a6329f0e6d66814</anchor>
       <arglist>(MouseEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mouseMoveEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
@@ -37800,42 +38006,42 @@
       <anchor>ac78b59f00aa006b24a00a361f63d956a</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>exitEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>ae74e0dc5e258cfab172c180c5460bb54</anchor>
       <arglist>(ExitEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>viewportEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>a9c3f08e800f965aea55872c20f1cbc19</anchor>
       <arglist>(ViewportEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>viewportEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>a13ea90265fa30653f6e2c4123fe34acc</anchor>
       <arglist>(const Vector2i &amp;size)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="pure">
+    <member kind="function" protection="private" virtualness="pure">
       <type>virtual void</type>
       <name>drawEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>a5761ff4826f3d1facfef0e2eed3c90bd</anchor>
       <arglist>()=0</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>keyPressEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>afd3317ee8f0d8a8796906f9cfc402e83</anchor>
       <arglist>(KeyEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>keyReleaseEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
@@ -37849,28 +38055,28 @@
       <anchor>a6f3b26a38e9bce274a6fb77dccf59474</anchor>
       <arglist>(const Vector2i &amp;position)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mousePressEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>abe83afa1c9c5377195ea7d5994887668</anchor>
       <arglist>(MouseEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mouseReleaseEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>adac83b36392c0701ed1a7e1583a68b11</anchor>
       <arglist>(MouseEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mouseMoveEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>ae3ce8d14de628078a480cab77caa2efe</anchor>
       <arglist>(MouseMoveEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mouseScrollEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
@@ -37898,7 +38104,7 @@
       <anchor>a37032f7784b2a82e29ec8dd5960d16e7</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>textInputEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
@@ -38879,35 +39085,35 @@
       <anchor>a1b0407ee9f383569449f18a5013b7761</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>viewportEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
       <anchor>a096ddc6c6089b2dc5467c92bc86b0e2e</anchor>
       <arglist>(ViewportEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>viewportEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
       <anchor>aa44b0fa80c2a5a2a10d071069b784c5b</anchor>
       <arglist>(const Vector2i &amp;size)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="pure">
+    <member kind="function" protection="private" virtualness="pure">
       <type>virtual void</type>
       <name>drawEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
       <anchor>aee5b7e6a39ccaf1a669dff8d67a56558</anchor>
       <arglist>()=0</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>keyPressEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
       <anchor>a8c7b7ec051c98c01e531cef65df851bf</anchor>
       <arglist>(KeyEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>keyReleaseEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
@@ -38944,21 +39150,21 @@
       <anchor>a7ef086dcf29445f3e2004354dc0adab7</anchor>
       <arglist>(const Vector2i &amp;position)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mousePressEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
       <anchor>aa1b3478987d5b69d960f8bcf609ab01d</anchor>
       <arglist>(MouseEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mouseReleaseEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
       <anchor>a8e7405f446c56f1d5c774e0abf898158</anchor>
       <arglist>(MouseEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mouseMoveEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
@@ -39601,49 +39807,49 @@
       <anchor>a07b8148f0f212659259d060c7b6ad2bc</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>exitEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>a441d4172478d3b405eecd4e3fe3b8646</anchor>
       <arglist>(ExitEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>tickEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>a487227b0018f9999555595bbf8e8b8f5</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>viewportEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>a4da09dd168d20ec596428ec342e269f6</anchor>
       <arglist>(ViewportEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>viewportEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>afa87bd8a7a55f1d3cd88c920dcf8326b</anchor>
       <arglist>(const Vector2i &amp;size)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="pure">
+    <member kind="function" protection="private" virtualness="pure">
       <type>virtual void</type>
       <name>drawEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>af9354a5fca56b4c1aa5e95151e4f60c5</anchor>
       <arglist>()=0</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>keyPressEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>a6f5d00985cb306c5a510da091e45a7ca</anchor>
       <arglist>(KeyEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>keyReleaseEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
@@ -39664,35 +39870,35 @@
       <anchor>add8dcb7f6d2a04afc25dc88f4761a1d8</anchor>
       <arglist>(bool enabled)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mousePressEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>acef081f3f7b1d171336baed4c24af66b</anchor>
       <arglist>(MouseEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mouseReleaseEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>ab1bfe00e5e47fc4ab450542e56c61826</anchor>
       <arglist>(MouseEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mouseMoveEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>a49a81c84de790329bd4263c5366d28d3</anchor>
       <arglist>(MouseMoveEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>mouseScrollEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>a220138d8fec37f22282e1e6e856ae0d9</anchor>
       <arglist>(MouseScrollEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>multiGestureEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
@@ -39727,14 +39933,14 @@
       <anchor>a520389bdebe2c243cab7fde3aba4e883</anchor>
       <arglist>(const Range2Di &amp;rect)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>textInputEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>a42f61cd43beae72388d69479d242afdc</anchor>
       <arglist>(TextInputEvent &amp;event)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
+    <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
       <name>textEditingEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
@@ -66152,6 +66358,7 @@
     <namespace>Magnum::Extensions</namespace>
     <namespace>Magnum::GL</namespace>
     <namespace>Magnum::GlmIntegration</namespace>
+    <namespace>Magnum::ImGuiIntegration</namespace>
     <namespace>Magnum::Math</namespace>
     <namespace>Magnum::MeshTools</namespace>
     <namespace>Magnum::OpenDdl</namespace>
@@ -70290,6 +70497,18 @@
     <filename>namespaceMagnum_1_1GlmIntegration.html</filename>
   </compound>
   <compound kind="namespace">
+    <name>Magnum::ImGuiIntegration</name>
+    <filename>namespaceMagnum_1_1ImGuiIntegration.html</filename>
+    <class kind="class">Magnum::ImGuiIntegration::Context</class>
+    <member kind="function">
+      <type>void</type>
+      <name>image</name>
+      <anchorfile>namespaceMagnum_1_1ImGuiIntegration.html</anchorfile>
+      <anchor>ae843621d2754d7d7645163fd4e2de80f</anchor>
+      <arglist>(GL::Texture2D &amp;texture, const Vector2 &amp;size, const Range2D &amp;uvRange={{}, Vector2{1.0f}}, const Color4 &amp;tintColor=Color4{1.0f}, const Color4 &amp;borderColor={})</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
     <name>Magnum::Math</name>
     <filename>namespaceMagnum_1_1Math.html</filename>
     <namespace>Magnum::Math::Algorithms</namespace>
@@ -72029,25 +72248,25 @@
     <name>Magnum::MeshTools</name>
     <filename>namespaceMagnum_1_1MeshTools.html</filename>
     <member kind="function">
-      <type>std::pair&lt; std::vector&lt; UnsignedInt &gt;, std::vector&lt; UnsignedInt &gt; &gt;</type>
-      <name>combineIndexArrays</name>
-      <anchorfile>namespaceMagnum_1_1MeshTools.html</anchorfile>
-      <anchor>a17a53a7980104181355a5bc1b5fc89fb</anchor>
-      <arglist>(const std::vector&lt; UnsignedInt &gt; &amp;interleavedArrays, UnsignedInt stride)</arglist>
-    </member>
-    <member kind="function">
       <type>std::vector&lt; UnsignedInt &gt;</type>
       <name>combineIndexArrays</name>
       <anchorfile>namespaceMagnum_1_1MeshTools.html</anchorfile>
-      <anchor>a90e75eba0b7e4e9edb105db481e7992c</anchor>
+      <anchor>ad5474465b12e161040774798fe47e3b6</anchor>
       <arglist>(const std::vector&lt; std::reference_wrapper&lt; std::vector&lt; UnsignedInt &gt;&gt;&gt; &amp;arrays)</arglist>
     </member>
     <member kind="function">
       <type>std::vector&lt; UnsignedInt &gt;</type>
       <name>combineIndexArrays</name>
       <anchorfile>namespaceMagnum_1_1MeshTools.html</anchorfile>
-      <anchor>a1d768efd6cf17739c960ef5114d61492</anchor>
+      <anchor>afe462618d8a3fded321b91dfadb77e27</anchor>
       <arglist>(std::initializer_list&lt; std::reference_wrapper&lt; std::vector&lt; UnsignedInt &gt;&gt;&gt; arrays)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; std::vector&lt; UnsignedInt &gt;, std::vector&lt; UnsignedInt &gt; &gt;</type>
+      <name>combineIndexArrays</name>
+      <anchorfile>namespaceMagnum_1_1MeshTools.html</anchorfile>
+      <anchor>a17a53a7980104181355a5bc1b5fc89fb</anchor>
+      <arglist>(const std::vector&lt; UnsignedInt &gt; &amp;interleavedArrays, UnsignedInt stride)</arglist>
     </member>
     <member kind="function">
       <type>std::vector&lt; UnsignedInt &gt;</type>
@@ -74159,13 +74378,6 @@
       <anchor>adfb47ef9f973e8e24d567cc03dfc5a2b</anchor>
       <arglist>(GL::Texture2D &amp;input, GL::Texture2D &amp;output, const Range2Di &amp;rectangle, Int radius, const Vector2i &amp;imageSize=Vector2i{})</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>flip</name>
-      <anchorfile>namespaceMagnum_1_1TextureTools.html</anchorfile>
-      <anchor>ad3aa1e60a76053a22890ce5dbc6043dd</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="namespace">
     <name>Magnum::Trade</name>
@@ -75954,7 +76166,10 @@
     <filename>changelog-integration</filename>
     <docanchor file="changelog-integration" title="Changes since 2018.10">changelog-integration-latest</docanchor>
     <docanchor file="changelog-integration" title="Dependency changes">changelog-integration-latest-dependencies</docanchor>
-    <docanchor file="changelog-integration" title="Potential compatibility breakages, removed APIs">changelog-integration-integration-compatibility</docanchor>
+    <docanchor file="changelog-integration" title="New features">changelog-integration-latest-new</docanchor>
+    <docanchor file="changelog-integration" title="Bug fixes">changelog-integration-latest-bugfixes</docanchor>
+    <docanchor file="changelog-integration" title="Potential compatibility breakages, removed APIs">changelog-integration-latest-compatibility</docanchor>
+    <docanchor file="changelog-integration" title="Documentation">changelog-integration-latest-documentation</docanchor>
     <docanchor file="changelog-integration" title="2018.10">changelog-integration-2018-10</docanchor>
     <docanchor file="changelog-integration" title="New features">changelog-integration-2018-10-new</docanchor>
     <docanchor file="changelog-integration" title="Changes and improvements">changelog-integration-2018-10-changes</docanchor>
@@ -76048,6 +76263,7 @@
     <filename>changelog-examples</filename>
     <docanchor file="changelog-examples" title="Changes since 2018.10">changelog-examples-latest</docanchor>
     <docanchor file="changelog-examples" title="Dependency changes">changelog-examples-latest-dependencies</docanchor>
+    <docanchor file="changelog-examples" title="New features">changelog-examples-latest-new</docanchor>
     <docanchor file="changelog-examples" title="2018.10">changelog-examples-2018-10</docanchor>
     <docanchor file="changelog-examples" title="New features">changelog-examples-2018-10-new</docanchor>
     <docanchor file="changelog-examples" title="Changes and improvements">changelog-examples-2018-10-changes</docanchor>
@@ -76075,6 +76291,14 @@
     <docanchor file="examples-cubemap" title="Key controls">examples-cubemap-controls</docanchor>
     <docanchor file="examples-cubemap" title="Credits">examples-cubemap-credits</docanchor>
     <docanchor file="examples-cubemap" title="Source">examples-cubemap-source</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>examples-imgui</name>
+    <title>ImGui</title>
+    <filename>examples-imgui</filename>
+    <docanchor file="examples-imgui" title="Controls">examples-imgui-controls</docanchor>
+    <docanchor file="examples-imgui" title="Credits">examples-imgui-credits</docanchor>
+    <docanchor file="examples-imgui" title="Source">examples-imgui-source</docanchor>
   </compound>
   <compound kind="page">
     <name>examples-leapmotion</name>
