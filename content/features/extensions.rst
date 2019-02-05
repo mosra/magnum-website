@@ -28,9 +28,10 @@ Plugins importing general scene formats with mesh data, image data, scene
 hierarchy, material, light and camera properties.
 
 -   TGA, PNG, JPEG, GIF, EXR, HDR, BMP, DDS and other image formats
--   OBJ, Stanford PLY, COLLADA and `OpenGEX <https://opengex.org/>`_ scene
-    format parsers
--   Plugin using `Assimp <http://assimp.org/>`_ for general file format support
+-   `glTF <https://www.khronos.org/gltf/>`_, OBJ, Stanford PLY and
+    `OpenGEX <https://opengex.org/>`_ scene format parsers
+-   A plugin using `Assimp <http://assimp.org/>`_ for general file format
+    support
 -   "Any importer" plugin delegating to other image / scene importer plugins
     based on detected file format
 
@@ -44,7 +45,7 @@ hierarchy, material, light and camera properties.
 
 Plugins for converting image data between various formats.
 
--   Exporting raw image data as TGA, PNG, HDR, BMP or EXR
+-   Exporting raw image data as JPEG, TGA, PNG, HDR, BMP or EXR
 -   Interface for compressing raw image data into GPU-readable formats
 -   "Any image converter" plugin delegating to other converter plugins based on
     output file extension
@@ -59,7 +60,7 @@ Plugins for converting image data between various formats.
 
 Plugins importing audio data.
 
--   OGG Vorbis, WAV and FLAC support
+-   OGG Vorbis, AAC, WAV and FLAC support
 -   "Any importer" plugin delegating to other audio importer plugins based on
     detected file format
 
@@ -111,5 +112,6 @@ explicit conversion.
 
 .. note-dim::
 
-    This functionality is implemented by the :dox:`BulletIntegration` and
-    :dox:`OvrIntegration` libraries.
+    There's a builtin integration with Bullet, GLM, Vulkan and other
+    third-party APIs. See :dox:`the full list <types-thirdparty-integration>`
+    for a detailed overview.
