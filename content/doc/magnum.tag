@@ -176,7 +176,7 @@
     <path>/home/mosra/Code/magnum-extras/src/Magnum/Ui/</path>
     <filename>BasicUserInterface_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="no" imported="no">Magnum/Magnum.h</includes>
-    <includes id="Range_8h" name="Range.h" local="no" imported="no">Magnum/Math/Range.h</includes>
+    <includes id="Vector2_8h" name="Vector2.h" local="no" imported="no">Magnum/Math/Vector2.h</includes>
     <includes id="Ui_8h" name="Ui.h" local="yes" imported="no">Magnum/Ui/Ui.h</includes>
     <class kind="class">Magnum::Ui::AbstractUserInterface</class>
     <class kind="class">Magnum::Ui::BasicUserInterface</class>
@@ -431,7 +431,7 @@
     <includes id="GL_2Buffer_8h" name="Buffer.h" local="no" imported="no">Magnum/GL/Buffer.h</includes>
     <includes id="GL_2Mesh_8h" name="Mesh.h" local="no" imported="no">Magnum/GL/Mesh.h</includes>
     <includes id="VertexColor_8h" name="VertexColor.h" local="no" imported="no">Magnum/Shaders/VertexColor.h</includes>
-    <includes id="BulletIntegration_2Integration_8h" name="Integration.h" local="yes" imported="no">Magnum/BulletIntegration/Integration.h</includes>
+    <includes id="integration_2src_2Magnum_2BulletIntegration_2Integration_8h" name="Integration.h" local="yes" imported="no">Magnum/BulletIntegration/Integration.h</includes>
     <class kind="class">Magnum::BulletIntegration::DebugDraw</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::BulletIntegration</namespace>
@@ -442,117 +442,6 @@
       <anchor>a3ad6b49cdf01acc63fe23aac3711bb60</anchor>
       <arglist>(Debug &amp;debug, DebugDraw::Mode value)</arglist>
     </member>
-  </compound>
-  <compound kind="file">
-    <name>Integration.h</name>
-    <path>/home/mosra/Code/magnum-integration/src/Magnum/BulletIntegration/</path>
-    <filename>BulletIntegration_2Integration_8h</filename>
-    <includes id="RectangularMatrix_8h" name="RectangularMatrix.h" local="no" imported="no">Magnum/Math/RectangularMatrix.h</includes>
-    <includes id="Quaternion_8h" name="Quaternion.h" local="no" imported="no">Magnum/Math/Quaternion.h</includes>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Math</namespace>
-  </compound>
-  <compound kind="file">
-    <name>Integration.h</name>
-    <path>/home/mosra/Code/magnum-integration/src/Magnum/GlmIntegration/</path>
-    <filename>GlmIntegration_2Integration_8h</filename>
-    <includes id="RectangularMatrix_8h" name="RectangularMatrix.h" local="yes" imported="no">Magnum/Math/RectangularMatrix.h</includes>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Math</namespace>
-    <namespace>glm</namespace>
-    <member kind="function">
-      <type>Corrade::Utility::Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceglm.html</anchorfile>
-      <anchor>a30cf76751007173e49ff7cef42b136d9</anchor>
-      <arglist>(Corrade::Utility::Debug &amp;debug, const tvec2&lt; T, q &gt; &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Corrade::Utility::Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceglm.html</anchorfile>
-      <anchor>ac533b80b1781dd4253f50af3ed78ef97</anchor>
-      <arglist>(Corrade::Utility::Debug &amp;debug, const tvec3&lt; T, q &gt; &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Corrade::Utility::Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceglm.html</anchorfile>
-      <anchor>a8e3d489cd56144ef2af7f9a5014c0ba4</anchor>
-      <arglist>(Corrade::Utility::Debug &amp;debug, const tvec4&lt; T, q &gt; &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Corrade::Utility::Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceglm.html</anchorfile>
-      <anchor>a2dc0b50009622e8e6f20dcfb0a596ca9</anchor>
-      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat2x2&lt; T, q &gt; &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Corrade::Utility::Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceglm.html</anchorfile>
-      <anchor>a394b9a3f3df5771911903561dc800552</anchor>
-      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat2x3&lt; T, q &gt; &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Corrade::Utility::Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceglm.html</anchorfile>
-      <anchor>a56b110ab8d7db8c7614b78403b636da7</anchor>
-      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat2x4&lt; T, q &gt; &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Corrade::Utility::Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceglm.html</anchorfile>
-      <anchor>a62df7705d08190731d4b201369932477</anchor>
-      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat3x2&lt; T, q &gt; &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Corrade::Utility::Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceglm.html</anchorfile>
-      <anchor>a0763b838f503260ebdd45cec6a7ebde9</anchor>
-      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat3x3&lt; T, q &gt; &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Corrade::Utility::Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceglm.html</anchorfile>
-      <anchor>a66fe19ca0dbba500bb364631ff5875eb</anchor>
-      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat3x4&lt; T, q &gt; &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Corrade::Utility::Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceglm.html</anchorfile>
-      <anchor>a63467965b6a89cd527945ed0f2f6b66c</anchor>
-      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat4x2&lt; T, q &gt; &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Corrade::Utility::Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceglm.html</anchorfile>
-      <anchor>a4e9ba698fa6151dc9455d013c2bcbb2c</anchor>
-      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat4x3&lt; T, q &gt; &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Corrade::Utility::Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceglm.html</anchorfile>
-      <anchor>ac095fd8f379413589eb48db128b4de06</anchor>
-      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat4x4&lt; T, q &gt; &amp;value)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Integration.h</name>
-    <path>/home/mosra/Code/magnum-integration/src/Magnum/ImGuiIntegration/</path>
-    <filename>ImGuiIntegration_2Integration_8h</filename>
-    <includes id="Types_8h" name="Types.h" local="no" imported="no">Magnum/Types.h</includes>
-    <includes id="Math_2Vector_8h" name="Vector.h" local="no" imported="no">Magnum/Math/Vector.h</includes>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Math</namespace>
   </compound>
   <compound kind="file">
     <name>MotionState.h</name>
@@ -653,7 +542,7 @@
     <name>Context.hpp</name>
     <path>/home/mosra/Code/magnum-integration/src/Magnum/ImGuiIntegration/</path>
     <filename>Context_8hpp</filename>
-    <includes id="ImGuiIntegration_2Integration_8h" name="Integration.h" local="yes" imported="no">Magnum/ImGuiIntegration/Integration.h</includes>
+    <includes id="integration_2src_2Magnum_2ImGuiIntegration_2Integration_8h" name="Integration.h" local="yes" imported="no">Magnum/ImGuiIntegration/Integration.h</includes>
     <includes id="integration_2src_2Magnum_2ImGuiIntegration_2Context_8h" name="Context.h" local="yes" imported="no">Magnum/ImGuiIntegration/Context.h</includes>
     <namespace>Magnum</namespace>
     <namespace>Magnum::ImGuiIntegration</namespace>
@@ -665,7 +554,7 @@
     <includes id="Range_8h" name="Range.h" local="no" imported="no">Magnum/Math/Range.h</includes>
     <includes id="Color_8h" name="Color.h" local="no" imported="no">Magnum/Math/Color.h</includes>
     <includes id="GL_2Texture_8h" name="Texture.h" local="no" imported="no">Magnum/GL/Texture.h</includes>
-    <includes id="ImGuiIntegration_2Integration_8h" name="Integration.h" local="yes" imported="no">Magnum/ImGuiIntegration/Integration.h</includes>
+    <includes id="integration_2src_2Magnum_2ImGuiIntegration_2Integration_8h" name="Integration.h" local="yes" imported="no">Magnum/ImGuiIntegration/Integration.h</includes>
     <namespace>Magnum</namespace>
     <namespace>Magnum::ImGuiIntegration</namespace>
     <member kind="function">
@@ -704,14 +593,7 @@
     <name>Conversion.h</name>
     <path>/home/mosra/Code/magnum-integration/src/Magnum/OvrIntegration/</path>
     <filename>Conversion_8h</filename>
-    <includes id="Magnum_8h" name="Magnum.h" local="no" imported="no">Magnum/Magnum.h</includes>
-    <includes id="Range_8h" name="Range.h" local="no" imported="no">Magnum/Math/Range.h</includes>
-    <includes id="Math_2Vector_8h" name="Vector.h" local="no" imported="no">Magnum/Math/Vector.h</includes>
-    <includes id="Matrix4_8h" name="Matrix4.h" local="no" imported="no">Magnum/Math/Matrix4.h</includes>
-    <includes id="Quaternion_8h" name="Quaternion.h" local="no" imported="no">Magnum/Math/Quaternion.h</includes>
-    <includes id="DualQuaternion_8h" name="DualQuaternion.h" local="no" imported="no">Magnum/Math/DualQuaternion.h</includes>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Math</namespace>
+    <includes id="integration_2src_2Magnum_2OvrIntegration_2Integration_8h" name="Integration.h" local="yes" imported="no">Magnum/OvrIntegration/Integration.h</includes>
   </compound>
   <compound kind="file">
     <name>OvrIntegration.h</name>
@@ -3780,6 +3662,7 @@
     <name>MeshView.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
     <filename>GL_2MeshView_8h</filename>
+    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
     <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <class kind="class">Magnum::GL::MeshView</class>
@@ -8953,17 +8836,17 @@
     <namespace>Magnum</namespace>
     <namespace>Magnum::MeshTools</namespace>
     <member kind="function">
-      <type>std::pair&lt; std::unique_ptr&lt; GL::Buffer &gt;, GL::Mesh &gt;</type>
+      <type>GL::Mesh</type>
       <name>fullScreenTriangle</name>
       <anchorfile>namespaceMagnum_1_1MeshTools.html</anchorfile>
-      <anchor>a6d89b613608956dabba44aa81870e44c</anchor>
+      <anchor>aba8238805e0e572ea2edb8b2bca8c35c</anchor>
       <arglist>(GL::Version version)</arglist>
     </member>
     <member kind="function">
-      <type>std::pair&lt; std::unique_ptr&lt; GL::Buffer &gt;, GL::Mesh &gt;</type>
+      <type>GL::Mesh</type>
       <name>fullScreenTriangle</name>
       <anchorfile>namespaceMagnum_1_1MeshTools.html</anchorfile>
-      <anchor>a7ec9b5e63c4ac403518d096e8f3fb5a2</anchor>
+      <anchor>aac8edd8ee4844ebc192acd7c96e41d95</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -12471,6 +12354,128 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>Integration.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/Vk/</path>
+    <filename>src_2Magnum_2Vk_2Integration_8h</filename>
+    <includes id="Vulkan_8h" name="Vulkan.h" local="yes" imported="no">Magnum/Vk/Vulkan.h</includes>
+    <includes id="Range_8h" name="Range.h" local="yes" imported="no">Magnum/Math/Range.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Integration.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/BulletIntegration/</path>
+    <filename>integration_2src_2Magnum_2BulletIntegration_2Integration_8h</filename>
+    <includes id="RectangularMatrix_8h" name="RectangularMatrix.h" local="no" imported="no">Magnum/Math/RectangularMatrix.h</includes>
+    <includes id="Quaternion_8h" name="Quaternion.h" local="no" imported="no">Magnum/Math/Quaternion.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Integration.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/GlmIntegration/</path>
+    <filename>integration_2src_2Magnum_2GlmIntegration_2Integration_8h</filename>
+    <includes id="RectangularMatrix_8h" name="RectangularMatrix.h" local="yes" imported="no">Magnum/Math/RectangularMatrix.h</includes>
+    <namespace>glm</namespace>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceglm.html</anchorfile>
+      <anchor>a30cf76751007173e49ff7cef42b136d9</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const tvec2&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceglm.html</anchorfile>
+      <anchor>ac533b80b1781dd4253f50af3ed78ef97</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const tvec3&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceglm.html</anchorfile>
+      <anchor>a8e3d489cd56144ef2af7f9a5014c0ba4</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const tvec4&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceglm.html</anchorfile>
+      <anchor>a2dc0b50009622e8e6f20dcfb0a596ca9</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat2x2&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceglm.html</anchorfile>
+      <anchor>a394b9a3f3df5771911903561dc800552</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat2x3&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceglm.html</anchorfile>
+      <anchor>a56b110ab8d7db8c7614b78403b636da7</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat2x4&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceglm.html</anchorfile>
+      <anchor>a62df7705d08190731d4b201369932477</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat3x2&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceglm.html</anchorfile>
+      <anchor>a0763b838f503260ebdd45cec6a7ebde9</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat3x3&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceglm.html</anchorfile>
+      <anchor>a66fe19ca0dbba500bb364631ff5875eb</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat3x4&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceglm.html</anchorfile>
+      <anchor>a63467965b6a89cd527945ed0f2f6b66c</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat4x2&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceglm.html</anchorfile>
+      <anchor>a4e9ba698fa6151dc9455d013c2bcbb2c</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat4x3&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceglm.html</anchorfile>
+      <anchor>ac095fd8f379413589eb48db128b4de06</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const tmat4x4&lt; T, q &gt; &amp;value)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Integration.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/ImGuiIntegration/</path>
+    <filename>integration_2src_2Magnum_2ImGuiIntegration_2Integration_8h</filename>
+    <includes id="Types_8h" name="Types.h" local="no" imported="no">Magnum/Types.h</includes>
+    <includes id="Math_2Vector_8h" name="Vector.h" local="no" imported="no">Magnum/Math/Vector.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Integration.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/OvrIntegration/</path>
+    <filename>integration_2src_2Magnum_2OvrIntegration_2Integration_8h</filename>
+    <includes id="Range_8h" name="Range.h" local="no" imported="no">Magnum/Math/Range.h</includes>
+    <includes id="Math_2Vector_8h" name="Vector.h" local="no" imported="no">Magnum/Math/Vector.h</includes>
+    <includes id="Matrix4_8h" name="Matrix4.h" local="no" imported="no">Magnum/Math/Matrix4.h</includes>
+    <includes id="Quaternion_8h" name="Quaternion.h" local="no" imported="no">Magnum/Math/Quaternion.h</includes>
+    <includes id="DualQuaternion_8h" name="DualQuaternion.h" local="no" imported="no">Magnum/Math/DualQuaternion.h</includes>
+  </compound>
+  <compound kind="file">
     <name>Vk.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Vk/</path>
     <filename>Vk_8h</filename>
@@ -14126,8 +14131,8 @@
       <type>void</type>
       <name>draw</name>
       <anchorfile>classMagnum_1_1Ui_1_1BasicUserInterface.html</anchorfile>
-      <anchor>aac072592ef4cf82350f3d169e1caf7c6</anchor>
-      <arglist>(const std::array&lt; std::reference_wrapper&lt; AbstractUiShader &gt;, sizeof...(Layers)&gt; &amp;shaders)</arglist>
+      <anchor>a9f6ce47411b19f87a3706cf08301d51c</anchor>
+      <arglist>(const Containers::StaticArray&lt; sizeof...(Layers), Containers::Reference&lt; AbstractUiShader &gt;&gt; &amp;shaders)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16325,8 +16330,8 @@
       <type>static void</type>
       <name>advance</name>
       <anchorfile>classMagnum_1_1Animation_1_1Player.html</anchorfile>
-      <anchor>aee16732efa1bb1b8630b39742a652cbe</anchor>
-      <arglist>(T time, std::initializer_list&lt; std::reference_wrapper&lt; Player&lt; T, K &gt;&gt;&gt; players)</arglist>
+      <anchor>ada4fff2513ac8de1731ae803779913bd</anchor>
+      <arglist>(T time, std::initializer_list&lt; Containers::Reference&lt; Player&lt; T, K &gt;&gt;&gt; players)</arglist>
     </member>
     <docanchor file="classMagnum_1_1Animation_1_1Player" title="Setting up">Animation-Player-setup</docanchor>
     <docanchor file="classMagnum_1_1Animation_1_1Player" title="Animation playback">Animation-Player-playback</docanchor>
@@ -17845,8 +17850,8 @@
       <type>void</type>
       <name>update</name>
       <anchorfile>classMagnum_1_1Audio_1_1Listener.html</anchorfile>
-      <anchor>af5709fe812be779b6bd9ad44445def2b</anchor>
-      <arglist>(std::initializer_list&lt; std::reference_wrapper&lt; PlayableGroup&lt; dimensions &gt;&gt;&gt; groups)</arglist>
+      <anchor>a4f9695c678504ce93253378f501dc7ea</anchor>
+      <arglist>(std::initializer_list&lt; Containers::Reference&lt; PlayableGroup&lt; dimensions &gt;&gt;&gt; groups)</arglist>
     </member>
     <member kind="function">
       <type>Float</type>
@@ -20715,8 +20720,8 @@
       <type>void</type>
       <name>attachShaders</name>
       <anchorfile>classMagnum_1_1GL_1_1AbstractShaderProgram.html</anchorfile>
-      <anchor>acc4b803df63113559ec74d4caa97c803</anchor>
-      <arglist>(std::initializer_list&lt; std::reference_wrapper&lt; Shader &gt;&gt; shaders)</arglist>
+      <anchor>ae28c0eca833a03bb7eb687780d3548d9</anchor>
+      <arglist>(std::initializer_list&lt; Containers::Reference&lt; Shader &gt;&gt; shaders)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -21058,8 +21063,8 @@
       <type>static bool</type>
       <name>link</name>
       <anchorfile>classMagnum_1_1GL_1_1AbstractShaderProgram.html</anchorfile>
-      <anchor>a215ae952cd786138748373cc2e7fa1df</anchor>
-      <arglist>(std::initializer_list&lt; std::reference_wrapper&lt; AbstractShaderProgram &gt;&gt; shaders)</arglist>
+      <anchor>a9f4fd548985b7b85771ec9c74e282668</anchor>
+      <arglist>(std::initializer_list&lt; Containers::Reference&lt; AbstractShaderProgram &gt;&gt; shaders)</arglist>
     </member>
     <docanchor file="classMagnum_1_1GL_1_1AbstractShaderProgram" title="Subclassing workflow">GL-AbstractShaderProgram-subclassing</docanchor>
     <docanchor file="classMagnum_1_1GL_1_1AbstractShaderProgram" title="Binding attribute location">GL-AbstractShaderProgram-attribute-location</docanchor>
@@ -24073,6 +24078,13 @@
       <enumvalue file="classMagnum_1_1GL_1_1DefaultFramebuffer.html" anchor="a22497903dc2b1e725781dbd4454942a0ad821e7ccd4d4c25a491ba1a9ea248895">Stencil</enumvalue>
     </member>
     <member kind="function">
+      <type>constexpr</type>
+      <name>DefaultFramebuffer</name>
+      <anchorfile>classMagnum_1_1GL_1_1DefaultFramebuffer.html</anchorfile>
+      <anchor>a9a135e8ff6d2b20d1b282f0331e72cb6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type></type>
       <name>DefaultFramebuffer</name>
       <anchorfile>classMagnum_1_1GL_1_1DefaultFramebuffer.html</anchorfile>
@@ -24342,8 +24354,8 @@
       <type></type>
       <name>Framebuffer</name>
       <anchorfile>classMagnum_1_1GL_1_1Framebuffer.html</anchorfile>
-      <anchor>a6bc49de15cb74ab0a3dbcb85dc754368</anchor>
-      <arglist>(Framebuffer &amp;&amp;other) noexcept</arglist>
+      <anchor>af85088413c53fc660ebcd2551fcbc492</anchor>
+      <arglist>(Framebuffer &amp;&amp;) noexcept=default</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -24363,8 +24375,8 @@
       <type>Framebuffer &amp;</type>
       <name>operator=</name>
       <anchorfile>classMagnum_1_1GL_1_1Framebuffer.html</anchorfile>
-      <anchor>a914ca2e4b6f750be6ff8551722fa3add</anchor>
-      <arglist>(Framebuffer &amp;&amp;other) noexcept</arglist>
+      <anchor>a84f747ef74d87a6e613479bfa8bdb3c3</anchor>
+      <arglist>(Framebuffer &amp;&amp;) noexcept=default</arglist>
     </member>
     <member kind="function">
       <type>GLuint</type>
@@ -25255,15 +25267,15 @@
       <type>static void</type>
       <name>draw</name>
       <anchorfile>classMagnum_1_1GL_1_1MeshView.html</anchorfile>
-      <anchor>a247e29540446e0d9eb1b74c00fc0e553</anchor>
-      <arglist>(AbstractShaderProgram &amp;shader, std::initializer_list&lt; std::reference_wrapper&lt; MeshView &gt;&gt; meshes)</arglist>
+      <anchor>a844fb757598f884fd289701801496c5d</anchor>
+      <arglist>(AbstractShaderProgram &amp;shader, std::initializer_list&lt; Containers::Reference&lt; MeshView &gt;&gt; meshes)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
       <name>draw</name>
       <anchorfile>classMagnum_1_1GL_1_1MeshView.html</anchorfile>
-      <anchor>a6494b5bc37b1a35faa9171448ee84d84</anchor>
-      <arglist>(AbstractShaderProgram &amp;&amp;shader, std::initializer_list&lt; std::reference_wrapper&lt; MeshView &gt;&gt; meshes)</arglist>
+      <anchor>a4a1a8553be52277a14489a1497422e30</anchor>
+      <arglist>(AbstractShaderProgram &amp;&amp;shader, std::initializer_list&lt; Containers::Reference&lt; MeshView &gt;&gt; meshes)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -27025,8 +27037,8 @@
       <type>static bool</type>
       <name>compile</name>
       <anchorfile>classMagnum_1_1GL_1_1Shader.html</anchorfile>
-      <anchor>a9ec0b996db335471a7a7134066b0df9d</anchor>
-      <arglist>(std::initializer_list&lt; std::reference_wrapper&lt; Shader &gt;&gt; shaders)</arglist>
+      <anchor>a1bbdc698be3f3fbe288e3c7062692f84</anchor>
+      <arglist>(std::initializer_list&lt; Containers::Reference&lt; Shader &gt;&gt; shaders)</arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
@@ -28919,6 +28931,7 @@
     <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Usage">ImGuiIntegration-Context-usage</docanchor>
     <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Rendering">ImGuiIntegration-Context-usage-rendering</docanchor>
     <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Event handling">ImGuiIntegration-Context-usage-events</docanchor>
+    <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Text input">ImGuiIntegration-Context-usage-text-input</docanchor>
     <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="DPI awareness">ImGuiIntegration-Context-dpi</docanchor>
     <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="HiDPI fonts">ImGuiIntegration-Context-dpi-fonts</docanchor>
     <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Multiple contexts">ImGuiIntegration-Context-multiple-contexts</docanchor>
@@ -36986,6 +36999,34 @@
     <name>Magnum::Platform::AbstractXApplication::ViewportEvent</name>
     <filename>classMagnum_1_1Platform_1_1AbstractXApplication_1_1ViewportEvent.html</filename>
     <member kind="function">
+      <type></type>
+      <name>ViewportEvent</name>
+      <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication_1_1ViewportEvent.html</anchorfile>
+      <anchor>ad1922924c577483a51518853832b46b7</anchor>
+      <arglist>(const ViewportEvent &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ViewportEvent</name>
+      <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication_1_1ViewportEvent.html</anchorfile>
+      <anchor>ad3f35ccef1a7d4d5a4665c332b6cf8e9</anchor>
+      <arglist>(ViewportEvent &amp;&amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>ViewportEvent &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication_1_1ViewportEvent.html</anchorfile>
+      <anchor>a3357c0f812f04ef1ba00c4a3814bdc25</anchor>
+      <arglist>(const ViewportEvent &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>ViewportEvent &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication_1_1ViewportEvent.html</anchorfile>
+      <anchor>ae1b2537bc04495b75564a786f9acabc0</anchor>
+      <arglist>(ViewportEvent &amp;&amp;)=delete</arglist>
+    </member>
+    <member kind="function">
       <type>Vector2i</type>
       <name>windowSize</name>
       <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication_1_1ViewportEvent.html</anchorfile>
@@ -37090,8 +37131,8 @@
       <type>static void</type>
       <name>exec</name>
       <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
-      <anchor>a73b12c11ea115aaf9451583b89c23c70</anchor>
-      <arglist>(android_app *state, std::unique_ptr&lt; AndroidApplication &gt;(*instancer)(const Arguments &amp;))</arglist>
+      <anchor>aeb6233dd46dd16f8632d4d3d276fd445</anchor>
+      <arglist>(android_app *state, Containers::Pointer&lt; AndroidApplication &gt;(*instancer)(const Arguments &amp;))</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -37438,6 +37479,34 @@
   <compound kind="class">
     <name>Magnum::Platform::AndroidApplication::ViewportEvent</name>
     <filename>classMagnum_1_1Platform_1_1AndroidApplication_1_1ViewportEvent.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ViewportEvent</name>
+      <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication_1_1ViewportEvent.html</anchorfile>
+      <anchor>ad59ab83024a47129d76fa959c1fce4fe</anchor>
+      <arglist>(const ViewportEvent &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ViewportEvent</name>
+      <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication_1_1ViewportEvent.html</anchorfile>
+      <anchor>a815efaf5facfd5338f1fc7fa7b33ee69</anchor>
+      <arglist>(ViewportEvent &amp;&amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>ViewportEvent &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication_1_1ViewportEvent.html</anchorfile>
+      <anchor>a86d34353f495c26e7bfb97514f2cd1bd</anchor>
+      <arglist>(const ViewportEvent &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>ViewportEvent &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication_1_1ViewportEvent.html</anchorfile>
+      <anchor>abc6b790501fea1021ab1d2e53259c204</anchor>
+      <arglist>(ViewportEvent &amp;&amp;)=delete</arglist>
+    </member>
     <member kind="function">
       <type>Vector2i</type>
       <name>windowSize</name>
@@ -38008,13 +38077,6 @@
     </member>
     <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
-      <name>exitEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
-      <anchor>ae74e0dc5e258cfab172c180c5460bb54</anchor>
-      <arglist>(ExitEvent &amp;event)</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual void</type>
       <name>viewportEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>a9c3f08e800f965aea55872c20f1cbc19</anchor>
@@ -38110,6 +38172,13 @@
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>a8483f136c94f1fc651257fcf8c90f72b</anchor>
       <arglist>(TextInputEvent &amp;event)</arglist>
+    </member>
+    <member kind="function" protection="private" virtualness="virtual">
+      <type>virtual void</type>
+      <name>exitEvent</name>
+      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
+      <anchor>ae74e0dc5e258cfab172c180c5460bb54</anchor>
+      <arglist>(ExitEvent &amp;event)</arglist>
     </member>
     <docanchor file="classMagnum_1_1Platform_1_1GlfwApplication" title="Bootstrap application">Platform-GlfwApplication-bootstrap</docanchor>
     <docanchor file="classMagnum_1_1Platform_1_1GlfwApplication" title="General usage">Platform-GlfwApplication-usage</docanchor>
@@ -38645,6 +38714,7 @@
       <enumvalue file="classMagnum_1_1Platform_1_1GlfwApplication_1_1KeyEvent.html" anchor="a90b72544e22cdacf39831c53b39c4a48a32ba78fe43257d3e7f88e3935a8ea0d4">Plus</enumvalue>
       <enumvalue file="classMagnum_1_1Platform_1_1GlfwApplication_1_1KeyEvent.html" anchor="a90b72544e22cdacf39831c53b39c4a48a358cfe58715d680d9ab09f82e4010cbc">Slash</enumvalue>
       <enumvalue file="classMagnum_1_1Platform_1_1GlfwApplication_1_1KeyEvent.html" anchor="a90b72544e22cdacf39831c53b39c4a48aadaaee4b22041c27198d410c68d952c9">Percent</enumvalue>
+      <enumvalue file="classMagnum_1_1Platform_1_1GlfwApplication_1_1KeyEvent.html" anchor="a90b72544e22cdacf39831c53b39c4a48a9806fa37a3ecd39bf637c203aa011ed0">Semicolon</enumvalue>
       <enumvalue file="classMagnum_1_1Platform_1_1GlfwApplication_1_1KeyEvent.html" anchor="a90b72544e22cdacf39831c53b39c4a48a02c46eec0a232f46ee7080dfb78a65de">Smicolon</enumvalue>
       <enumvalue file="classMagnum_1_1Platform_1_1GlfwApplication_1_1KeyEvent.html" anchor="a90b72544e22cdacf39831c53b39c4a48af5f286e73bda105e538310b3190f75c5">Equal</enumvalue>
       <enumvalue file="classMagnum_1_1Platform_1_1GlfwApplication_1_1KeyEvent.html" anchor="a90b72544e22cdacf39831c53b39c4a48ad7ed4ee1df437474d005188535f74875">Zero</enumvalue>
@@ -38912,6 +38982,34 @@
   <compound kind="class">
     <name>Magnum::Platform::GlfwApplication::ViewportEvent</name>
     <filename>classMagnum_1_1Platform_1_1GlfwApplication_1_1ViewportEvent.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ViewportEvent</name>
+      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1ViewportEvent.html</anchorfile>
+      <anchor>a982edc5967148891bd45b386f72d8587</anchor>
+      <arglist>(const ViewportEvent &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ViewportEvent</name>
+      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1ViewportEvent.html</anchorfile>
+      <anchor>a8c1bdeb6aec24e4da306ac1235cb3a28</anchor>
+      <arglist>(ViewportEvent &amp;&amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>ViewportEvent &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1ViewportEvent.html</anchorfile>
+      <anchor>aaf5b130fdea8ab9aa23b439d15e9a72c</anchor>
+      <arglist>(const ViewportEvent &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>ViewportEvent &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1ViewportEvent.html</anchorfile>
+      <anchor>ad0ccedd73baa33e8727a6d2005a99a0b</anchor>
+      <arglist>(ViewportEvent &amp;&amp;)=delete</arglist>
+    </member>
     <member kind="function">
       <type>Vector2i</type>
       <name>windowSize</name>
@@ -39809,20 +39907,6 @@
     </member>
     <member kind="function" protection="private" virtualness="virtual">
       <type>virtual void</type>
-      <name>exitEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
-      <anchor>a441d4172478d3b405eecd4e3fe3b8646</anchor>
-      <arglist>(ExitEvent &amp;event)</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual void</type>
-      <name>tickEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
-      <anchor>a487227b0018f9999555595bbf8e8b8f5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual void</type>
       <name>viewportEvent</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>a4da09dd168d20ec596428ec342e269f6</anchor>
@@ -39946,6 +40030,27 @@
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>af700c9491a5c748a897001d373b2be6a</anchor>
       <arglist>(TextEditingEvent &amp;event)</arglist>
+    </member>
+    <member kind="function" protection="private" virtualness="virtual">
+      <type>virtual void</type>
+      <name>exitEvent</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
+      <anchor>a441d4172478d3b405eecd4e3fe3b8646</anchor>
+      <arglist>(ExitEvent &amp;event)</arglist>
+    </member>
+    <member kind="function" protection="private" virtualness="virtual">
+      <type>virtual void</type>
+      <name>tickEvent</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
+      <anchor>a487227b0018f9999555595bbf8e8b8f5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="private" virtualness="virtual">
+      <type>virtual void</type>
+      <name>anyEvent</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
+      <anchor>afcaac66718ddfcf624155cdf4af4d438</anchor>
+      <arglist>(SDL_Event &amp;event)</arglist>
     </member>
     <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="Bootstrap application">Platform-Sdl2Application-bootstrap</docanchor>
     <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="Bootstrap application for Emscripten">Platform-Sdl2Application-bootstrap-emscripten</docanchor>
@@ -40199,6 +40304,13 @@
       <anchor>af3a2a406f763dd46b7e355d71e1d0903</anchor>
       <arglist>(bool accepted=true)</arglist>
     </member>
+    <member kind="function">
+      <type>const SDL_Event &amp;</type>
+      <name>event</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1ExitEvent.html</anchorfile>
+      <anchor>a7831f9772e467350e00befe5dba76cce</anchor>
+      <arglist>() const</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Magnum::Platform::Sdl2Application::GLConfiguration</name>
@@ -40413,6 +40525,13 @@
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1InputEvent.html</anchorfile>
       <anchor>a32f98bcf019844dc25f07cffd804be66</anchor>
       <arglist>(bool accepted=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>const SDL_Event &amp;</type>
+      <name>event</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1InputEvent.html</anchorfile>
+      <anchor>a8c24a4e06b3c321bd4a322dfe575e807</anchor>
+      <arglist>() const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40756,6 +40875,13 @@
       <anchor>a5cc6021435616529a4f6c020de71e56c</anchor>
       <arglist>() const</arglist>
     </member>
+    <member kind="function">
+      <type>const SDL_Event &amp;</type>
+      <name>event</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1MultiGestureEvent.html</anchorfile>
+      <anchor>a3b9150395d938d1e856b663619fa2285</anchor>
+      <arglist>() const</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Magnum::Platform::Sdl2Application::TextEditingEvent</name>
@@ -40823,6 +40949,13 @@
       <anchor>aa1b30e0fcc28065d2c894fb5c20e2f8a</anchor>
       <arglist>() const</arglist>
     </member>
+    <member kind="function">
+      <type>const SDL_Event &amp;</type>
+      <name>event</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1TextEditingEvent.html</anchorfile>
+      <anchor>ae282b1a5c6c509f459703b4c1300f325</anchor>
+      <arglist>() const</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Magnum::Platform::Sdl2Application::TextInputEvent</name>
@@ -40876,10 +41009,45 @@
       <anchor>a411fcd638ec4d8fbc67b488f5c36a7aa</anchor>
       <arglist>() const</arglist>
     </member>
+    <member kind="function">
+      <type>const SDL_Event &amp;</type>
+      <name>event</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1TextInputEvent.html</anchorfile>
+      <anchor>a6bf48077ef3cdecfeb26572f7f33b7c4</anchor>
+      <arglist>() const</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>Magnum::Platform::Sdl2Application::ViewportEvent</name>
     <filename>classMagnum_1_1Platform_1_1Sdl2Application_1_1ViewportEvent.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ViewportEvent</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1ViewportEvent.html</anchorfile>
+      <anchor>a1c2acfff56c3f45e6fe779f00d6bc9fe</anchor>
+      <arglist>(const ViewportEvent &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ViewportEvent</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1ViewportEvent.html</anchorfile>
+      <anchor>a8f6dead840631f65abc72805ed4fb00b</anchor>
+      <arglist>(ViewportEvent &amp;&amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>ViewportEvent &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1ViewportEvent.html</anchorfile>
+      <anchor>a775dcae59a5ac19cb29ca905798bb916</anchor>
+      <arglist>(const ViewportEvent &amp;)=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>ViewportEvent &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1ViewportEvent.html</anchorfile>
+      <anchor>afc442ac57f93cc1e58a7e131f0852f81</anchor>
+      <arglist>(ViewportEvent &amp;&amp;)=delete</arglist>
+    </member>
     <member kind="function">
       <type>Vector2i</type>
       <name>windowSize</name>
@@ -40899,6 +41067,13 @@
       <name>dpiScaling</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1ViewportEvent.html</anchorfile>
       <anchor>a95232053c70311464130a1797d17c180</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>const SDL_Event &amp;</type>
+      <name>event</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1ViewportEvent.html</anchorfile>
+      <anchor>ad884026398321a36b1727ab6fdc745aa</anchor>
       <arglist>() const</arglist>
     </member>
   </compound>
@@ -47217,17 +47392,17 @@
       <arglist>(GlyphCache &amp;cache, const std::string &amp;characters)</arglist>
     </member>
     <member kind="function">
-      <type>std::unique_ptr&lt; GlyphCache &gt;</type>
+      <type>Containers::Pointer&lt; GlyphCache &gt;</type>
       <name>createGlyphCache</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>a3e6e8241e9f3b7451db5c334deb708a1</anchor>
+      <anchor>a0cdd0ee426ee8b74dd53c072d05c16c5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>std::unique_ptr&lt; AbstractLayouter &gt;</type>
+      <type>Containers::Pointer&lt; AbstractLayouter &gt;</type>
       <name>layout</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>a2dfcc646a9deed562406beeedbf3c4f8</anchor>
+      <anchor>a76f291991a4bb22f00c72baaaed3f283</anchor>
       <arglist>(const GlyphCache &amp;cache, Float size, const std::string &amp;text)</arglist>
     </member>
     <member kind="function" static="yes">
@@ -47308,17 +47483,17 @@
       <arglist>(GlyphCache &amp;cache, const std::u32string &amp;characters)</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual std::unique_ptr&lt; GlyphCache &gt;</type>
+      <type>virtual Containers::Pointer&lt; GlyphCache &gt;</type>
       <name>doCreateGlyphCache</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>acd32e6ef729f632fe6b75ffd65e2f187</anchor>
+      <anchor>a67ed1d4f4bd75e79dd97b53a432c7156</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="private" virtualness="pure">
-      <type>virtual std::unique_ptr&lt; AbstractLayouter &gt;</type>
+      <type>virtual Containers::Pointer&lt; AbstractLayouter &gt;</type>
       <name>doLayout</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>a56f63723d8aab143f27df0b6a085a858</anchor>
+      <anchor>aaa23295bf50d8d844bca097de3b91ac6</anchor>
       <arglist>(const GlyphCache &amp;cache, Float size, const std::string &amp;text)=0</arglist>
     </member>
     <docanchor file="classMagnum_1_1Text_1_1AbstractFont" title="Usage">Text-AbstractFont-usage</docanchor>
@@ -47443,24 +47618,24 @@
       <arglist>(GlyphCache &amp;cache, const std::string &amp;filename) const</arglist>
     </member>
     <member kind="function">
-      <type>std::unique_ptr&lt; GlyphCache &gt;</type>
+      <type>Containers::Pointer&lt; GlyphCache &gt;</type>
       <name>importGlyphCacheFromData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a89644bc196eb9f914ed07d74308cfbb7</anchor>
+      <anchor>a7541fde807d518057b6a1e27d0ad38f5</anchor>
       <arglist>(const std::vector&lt; std::pair&lt; std::string, Containers::ArrayView&lt; const char &gt;&gt;&gt; &amp;data) const</arglist>
     </member>
     <member kind="function">
-      <type>std::unique_ptr&lt; GlyphCache &gt;</type>
+      <type>Containers::Pointer&lt; GlyphCache &gt;</type>
       <name>importGlyphCacheFromSingleData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>ad958c07af03527773f57aaa96ba65791</anchor>
+      <anchor>a225e0f4b617370171cf22117cc07df97</anchor>
       <arglist>(Containers::ArrayView&lt; const char &gt; data) const</arglist>
     </member>
     <member kind="function">
-      <type>std::unique_ptr&lt; GlyphCache &gt;</type>
+      <type>Containers::Pointer&lt; GlyphCache &gt;</type>
       <name>importGlyphCacheFromFile</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a453d3464013a371e7cceb5321e0c2166</anchor>
+      <anchor>af6050b594b2d93c01d70bbe0f7c4e769</anchor>
       <arglist>(const std::string &amp;filename) const</arglist>
     </member>
     <member kind="function" static="yes">
@@ -47527,24 +47702,24 @@
       <arglist>(GlyphCache &amp;cache, const std::string &amp;filename) const</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual std::unique_ptr&lt; GlyphCache &gt;</type>
+      <type>virtual Containers::Pointer&lt; GlyphCache &gt;</type>
       <name>doImportGlyphCacheFromData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>aeea81ac560f2b28cf753a58a07deef31</anchor>
+      <anchor>a9ad4087cd48981d9d8bc03188c4310ac</anchor>
       <arglist>(const std::vector&lt; std::pair&lt; std::string, Containers::ArrayView&lt; const char &gt;&gt;&gt; &amp;data) const</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual std::unique_ptr&lt; GlyphCache &gt;</type>
+      <type>virtual Containers::Pointer&lt; GlyphCache &gt;</type>
       <name>doImportGlyphCacheFromSingleData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a54c004bdb998c6f118bae73309eaa153</anchor>
+      <anchor>a568d5683f4a6c0919c8ff763b6e4d47d</anchor>
       <arglist>(Containers::ArrayView&lt; const char &gt; data) const</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual std::unique_ptr&lt; GlyphCache &gt;</type>
+      <type>virtual Containers::Pointer&lt; GlyphCache &gt;</type>
       <name>doImportGlyphCacheFromFile</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a38053bdac99e9eff6f661aa9c9118ccd</anchor>
+      <anchor>ac265ae6f1c2e8b90b7d49ec87ee56368</anchor>
       <arglist>(const std::string &amp;filename) const</arglist>
     </member>
     <docanchor file="classMagnum_1_1Text_1_1AbstractFontConverter" title="Subclassing">Text-AbstractFontConverter-subclassing</docanchor>
@@ -48472,10 +48647,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::unique_ptr&lt; ObjectData2D &gt;</type>
+      <type>Containers::Pointer&lt; ObjectData2D &gt;</type>
       <name>object2D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a6569e2f48521188d8d73185ef921fca2</anchor>
+      <anchor>a08375763dc0aa24619517abac91cfeb6</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -48500,10 +48675,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::unique_ptr&lt; ObjectData3D &gt;</type>
+      <type>Containers::Pointer&lt; ObjectData3D &gt;</type>
       <name>object3D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>ab4852d7f7c512406c34523d8614efde0</anchor>
+      <anchor>ae6b38b20045feb7a4406199137d1f73f</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -48584,10 +48759,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::unique_ptr&lt; AbstractMaterialData &gt;</type>
+      <type>Containers::Pointer&lt; AbstractMaterialData &gt;</type>
       <name>material</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a67467cbd29c8e3a5e37a9c88b0a22fda</anchor>
+      <anchor>a30c0e2a568308617b85c78e07eec638f</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -48906,10 +49081,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual std::unique_ptr&lt; ObjectData2D &gt;</type>
+      <type>virtual Containers::Pointer&lt; ObjectData2D &gt;</type>
       <name>doObject2D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a22f16dd82ae6331df67d6c231ccbe5a9</anchor>
+      <anchor>aa06ef39a256dfe043a8605172d782084</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
@@ -48934,10 +49109,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual std::unique_ptr&lt; ObjectData3D &gt;</type>
+      <type>virtual Containers::Pointer&lt; ObjectData3D &gt;</type>
       <name>doObject3D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>aa1ccb3e1dc9c8aa6b795b2e0bd063507</anchor>
+      <anchor>ad337774f4ea81f06252becff06eb81ff</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
@@ -49018,10 +49193,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual std::unique_ptr&lt; AbstractMaterialData &gt;</type>
+      <type>virtual Containers::Pointer&lt; AbstractMaterialData &gt;</type>
       <name>doMaterial</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a733adb6105f583bca96a36bd91cc8630</anchor>
+      <anchor>a42000316aa333e9c1c7fe2fe986cc0b5</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
@@ -49298,10 +49473,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::unique_ptr&lt; ObjectData2D &gt;</type>
+      <type>Containers::Pointer&lt; ObjectData2D &gt;</type>
       <name>object2D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a6569e2f48521188d8d73185ef921fca2</anchor>
+      <anchor>a08375763dc0aa24619517abac91cfeb6</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -49326,10 +49501,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::unique_ptr&lt; ObjectData3D &gt;</type>
+      <type>Containers::Pointer&lt; ObjectData3D &gt;</type>
       <name>object3D</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>ab4852d7f7c512406c34523d8614efde0</anchor>
+      <anchor>ae6b38b20045feb7a4406199137d1f73f</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -49410,10 +49585,10 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
-      <type>std::unique_ptr&lt; AbstractMaterialData &gt;</type>
+      <type>Containers::Pointer&lt; AbstractMaterialData &gt;</type>
       <name>material</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a67467cbd29c8e3a5e37a9c88b0a22fda</anchor>
+      <anchor>a30c0e2a568308617b85c78e07eec638f</anchor>
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <member kind="function">
@@ -52408,8 +52583,8 @@
       <type>void</type>
       <name>draw</name>
       <anchorfile>classMagnum_1_1Ui_1_1BasicUserInterface.html</anchorfile>
-      <anchor>aac072592ef4cf82350f3d169e1caf7c6</anchor>
-      <arglist>(const std::array&lt; std::reference_wrapper&lt; AbstractUiShader &gt;, sizeof...(Layers)&gt; &amp;shaders)</arglist>
+      <anchor>a9f6ce47411b19f87a3706cf08301d51c</anchor>
+      <arglist>(const Containers::StaticArray&lt; sizeof...(Layers), Containers::Reference&lt; AbstractUiShader &gt;&gt; &amp;shaders)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -53135,8 +53310,8 @@
       <type>static bool</type>
       <name>allValid</name>
       <anchorfile>classMagnum_1_1Ui_1_1ValidatedInput.html</anchorfile>
-      <anchor>a049345563bed9cb4d026d3566aea89d4</anchor>
-      <arglist>(std::initializer_list&lt; std::reference_wrapper&lt; const ValidatedInput &gt;&gt; inputs)</arglist>
+      <anchor>a087a952b439f4e53ee3155718ded6839</anchor>
+      <arglist>(std::initializer_list&lt; Containers::Reference&lt; const ValidatedInput &gt;&gt; inputs)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -53216,43 +53391,43 @@
       <type>static void</type>
       <name>disable</name>
       <anchorfile>classMagnum_1_1Ui_1_1Widget.html</anchorfile>
-      <anchor>af38a80ca570b3215c3f0b64127ab44ff</anchor>
-      <arglist>(std::initializer_list&lt; std::reference_wrapper&lt; Widget &gt;&gt; widgets)</arglist>
+      <anchor>abc738eb369f374220bfffc101dac19a1</anchor>
+      <arglist>(std::initializer_list&lt; Containers::Reference&lt; Widget &gt;&gt; widgets)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
       <name>enable</name>
       <anchorfile>classMagnum_1_1Ui_1_1Widget.html</anchorfile>
-      <anchor>a8a602624f5a738970749c1a33339f74a</anchor>
-      <arglist>(std::initializer_list&lt; std::reference_wrapper&lt; Widget &gt;&gt; widgets)</arglist>
+      <anchor>a1ab3eaa2479561cf64f4eed9a6e83c21</anchor>
+      <arglist>(std::initializer_list&lt; Containers::Reference&lt; Widget &gt;&gt; widgets)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
       <name>setEnabled</name>
       <anchorfile>classMagnum_1_1Ui_1_1Widget.html</anchorfile>
-      <anchor>a629f8638a3f71074472f9a96e02bdba2</anchor>
-      <arglist>(bool enabled, std::initializer_list&lt; std::reference_wrapper&lt; Widget &gt;&gt; widgets)</arglist>
+      <anchor>ac4bfb95313f66167b4bc3e18aa6c9b19</anchor>
+      <arglist>(bool enabled, std::initializer_list&lt; Containers::Reference&lt; Widget &gt;&gt; widgets)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
       <name>hide</name>
       <anchorfile>classMagnum_1_1Ui_1_1Widget.html</anchorfile>
-      <anchor>a822ab97e814f262f684ceecab62b8bf9</anchor>
-      <arglist>(std::initializer_list&lt; std::reference_wrapper&lt; Widget &gt;&gt; widgets)</arglist>
+      <anchor>a47f4652ea49a00cccc7be0941aa99632</anchor>
+      <arglist>(std::initializer_list&lt; Containers::Reference&lt; Widget &gt;&gt; widgets)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
       <name>show</name>
       <anchorfile>classMagnum_1_1Ui_1_1Widget.html</anchorfile>
-      <anchor>a275694b90f44f8e86bf965c2325e781f</anchor>
-      <arglist>(std::initializer_list&lt; std::reference_wrapper&lt; Widget &gt;&gt; widgets)</arglist>
+      <anchor>a4f797b73ad576aedb933181059a877f8</anchor>
+      <arglist>(std::initializer_list&lt; Containers::Reference&lt; Widget &gt;&gt; widgets)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
       <name>setVisible</name>
       <anchorfile>classMagnum_1_1Ui_1_1Widget.html</anchorfile>
-      <anchor>aaf9db04fba15ef836c4e6b5f1bab911c</anchor>
-      <arglist>(bool visible, std::initializer_list&lt; std::reference_wrapper&lt; Widget &gt;&gt; widgets)</arglist>
+      <anchor>a4407d637e62e18e97ea2f8ca46f9c3c2</anchor>
+      <arglist>(bool visible, std::initializer_list&lt; Containers::Reference&lt; Widget &gt;&gt; widgets)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>AbstractPlane &amp;</type>
@@ -72346,17 +72521,17 @@
       <arglist>(std::vector&lt; UnsignedInt &gt; &amp;indices, std::vector&lt; Vector3 &gt; &amp;normals)</arglist>
     </member>
     <member kind="function">
-      <type>std::pair&lt; std::unique_ptr&lt; GL::Buffer &gt;, GL::Mesh &gt;</type>
+      <type>GL::Mesh</type>
       <name>fullScreenTriangle</name>
       <anchorfile>namespaceMagnum_1_1MeshTools.html</anchorfile>
-      <anchor>a6d89b613608956dabba44aa81870e44c</anchor>
+      <anchor>aba8238805e0e572ea2edb8b2bca8c35c</anchor>
       <arglist>(GL::Version version)</arglist>
     </member>
     <member kind="function">
-      <type>std::pair&lt; std::unique_ptr&lt; GL::Buffer &gt;, GL::Mesh &gt;</type>
+      <type>GL::Mesh</type>
       <name>fullScreenTriangle</name>
       <anchorfile>namespaceMagnum_1_1MeshTools.html</anchorfile>
-      <anchor>a7ec9b5e63c4ac403518d096e8f3fb5a2</anchor>
+      <anchor>aac8edd8ee4844ebc192acd7c96e41d95</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -75482,22 +75657,26 @@
     <name>changelog</name>
     <title>Changelog</title>
     <filename>changelog</filename>
-    <docanchor file="changelog" title="Changes since 2018.10">changelog-latest</docanchor>
-    <docanchor file="changelog" title="Dependency changes">changelog-latest-dependencies</docanchor>
-    <docanchor file="changelog" title="New features">changelog-latest-new</docanchor>
-    <docanchor file="changelog" title="Animation library">changelog-latest-new-animation</docanchor>
-    <docanchor file="changelog" title="Math library">changelog-latest-new-math</docanchor>
-    <docanchor file="changelog" title="Platform libraries">changelog-latest-new-platform</docanchor>
-    <docanchor file="changelog" title="Changes and improvements">changelog-latest-changes</docanchor>
-    <docanchor file="changelog" title="Audio library">changelog-latest-changes-audio</docanchor>
-    <docanchor file="changelog" title="GL library">changelog-latest-changes-gl</docanchor>
-    <docanchor file="changelog" title="Platform libraries">changelog-latest-changes-platform</docanchor>
-    <docanchor file="changelog" title="TextureTools library">changelog-latest-changes-texturetools</docanchor>
-    <docanchor file="changelog" title="Build system">changelog-latest-buildsystem</docanchor>
-    <docanchor file="changelog" title="Bug fixes">changelog-latest-bugfixes</docanchor>
-    <docanchor file="changelog" title="Documentation">changelog-latest-docs</docanchor>
-    <docanchor file="changelog" title="Deprecated APIs">changelog-latest-deprecated</docanchor>
-    <docanchor file="changelog" title="Potential compatibility breakages, removed APIs">changelog-latest-compatibility</docanchor>
+    <docanchor file="changelog">changelog-latest</docanchor>
+    <docanchor file="changelog" title="2019.01">changelog-2019-01</docanchor>
+    <docanchor file="changelog" title="Dependency changes">changelog-2019-01-dependencies</docanchor>
+    <docanchor file="changelog" title="New features">changelog-2019-01-new</docanchor>
+    <docanchor file="changelog" title="Animation library">changelog-2019-01-new-animation</docanchor>
+    <docanchor file="changelog" title="Math library">changelog-2019-01-new-math</docanchor>
+    <docanchor file="changelog" title="Platform libraries">changelog-2019-01-new-platform</docanchor>
+    <docanchor file="changelog" title="Vk library">changelog-2019-01-new-vk</docanchor>
+    <docanchor file="changelog" title="Changes and improvements">changelog-2019-01-changes</docanchor>
+    <docanchor file="changelog" title="Audio library">changelog-2019-01-changes-audio</docanchor>
+    <docanchor file="changelog" title="GL library">changelog-2019-01-changes-gl</docanchor>
+    <docanchor file="changelog" title="Platform libraries">changelog-2019-01-changes-platform</docanchor>
+    <docanchor file="changelog" title="Text library">changelog-2019-01-changes-text</docanchor>
+    <docanchor file="changelog" title="TextureTools library">changelog-2019-01-changes-texturetools</docanchor>
+    <docanchor file="changelog" title="Trade library">changelog-2019-01-changes-trade</docanchor>
+    <docanchor file="changelog" title="Build system">changelog-2019-01-buildsystem</docanchor>
+    <docanchor file="changelog" title="Bug fixes">changelog-2019-01-bugfixes</docanchor>
+    <docanchor file="changelog" title="Documentation">changelog-2019-01-docs</docanchor>
+    <docanchor file="changelog" title="Deprecated APIs">changelog-2019-01-deprecated</docanchor>
+    <docanchor file="changelog" title="Potential compatibility breakages, removed APIs">changelog-2019-01-compatibility</docanchor>
     <docanchor file="changelog" title="2018.10">changelog-2018-10</docanchor>
     <docanchor file="changelog" title="New features">changelog-2018-10-new</docanchor>
     <docanchor file="changelog" title="Animation library">changelog-2018-10-new-animation</docanchor>
@@ -75678,6 +75857,7 @@
     <docanchor file="building" title="Prepared packages">building-packages</docanchor>
     <docanchor file="building" title="Vcpkg packages on Windows">building-packages-vcpkg</docanchor>
     <docanchor file="building" title="ArchLinux packages">building-packages-arch</docanchor>
+    <docanchor file="building" title="MSYS2 packages">building-packages-msys</docanchor>
     <docanchor file="building" title="Packages for Debian, Ubuntu and derivatives">building-packages-deb</docanchor>
     <docanchor file="building" title="Gentoo Linux ebuilds">building-packages-gentoo</docanchor>
     <docanchor file="building" title="Homebrew formulas for macOS">building-packages-brew</docanchor>
@@ -76016,6 +76196,7 @@
     <docanchor file="transformations" title="Transformation properties and conversion">transformations-properties</docanchor>
     <docanchor file="transformations" title="Transformation interpolation">transformations-interpolation</docanchor>
     <docanchor file="transformations" title="Normalizing transformations">transformations-normalization</docanchor>
+    <docanchor file="transformations" title="Model/view terminology and Magnum">transformations-modelview</docanchor>
   </compound>
   <compound kind="page">
     <name>troubleshooting</name>
@@ -76027,7 +76208,7 @@
   </compound>
   <compound kind="page">
     <name>types</name>
-    <title>Type system</title>
+    <title>Math type system</title>
     <filename>types</filename>
     <docanchor file="types" title="Builtin types">types-builtin</docanchor>
     <docanchor file="types" title="Matrix/vector types">types-matrix</docanchor>
@@ -76035,6 +76216,7 @@
     <docanchor file="types" title="Special types">types-special</docanchor>
     <docanchor file="types" title="Other types">types-other</docanchor>
     <docanchor file="types" title="Initialization">types-initialization</docanchor>
+    <docanchor file="types" title="Integration with types from 3rd party APIs">types-thirdparty-integration</docanchor>
   </compound>
   <compound kind="page">
     <name>building-plugins</name>
@@ -76043,6 +76225,7 @@
     <docanchor file="building-plugins" title="Prepared packages">building-plugins-packages</docanchor>
     <docanchor file="building-plugins" title="Vcpkg packages on Windows">building-plugins-packages-vcpkg</docanchor>
     <docanchor file="building-plugins" title="ArchLinux packages">building-plugins-packages-arch</docanchor>
+    <docanchor file="building-plugins" title="MSYS2 packages">building-plugins-packages-msys</docanchor>
     <docanchor file="building-plugins" title="Packages for Debian, Ubuntu and derivatives">building-plugins-packages-deb</docanchor>
     <docanchor file="building-plugins" title="Gentoo Linux ebuilds">building-plugins-packages-gentoo</docanchor>
     <docanchor file="building-plugins" title="Homebrew formulas for macOS">building-plugins-packages-brew</docanchor>
@@ -76082,11 +76265,13 @@
     <name>changelog-plugins</name>
     <title>Plugins</title>
     <filename>changelog-plugins</filename>
-    <docanchor file="changelog-plugins" title="Changes since 2018.10">changelog-plugins-latest</docanchor>
-    <docanchor file="changelog-plugins" title="Dependency changes">changelog-plugins-latest-dependencies</docanchor>
-    <docanchor file="changelog-plugins" title="New features">changelog-plugins-latest-new</docanchor>
-    <docanchor file="changelog-plugins" title="Changes and improvements">changelog-plugins-latest-changes</docanchor>
-    <docanchor file="changelog-plugins" title="Potential compatibility breakages, removed APIs">changelog-plugins-latest-compatibility</docanchor>
+    <docanchor file="changelog-plugins">changelog-plugins-latest</docanchor>
+    <docanchor file="changelog-plugins" title="2019.01">changelog-plugins-2019-01</docanchor>
+    <docanchor file="changelog-plugins" title="Dependency changes">changelog-plugins-2019-01-dependencies</docanchor>
+    <docanchor file="changelog-plugins" title="New features">changelog-plugins-2019-01-new</docanchor>
+    <docanchor file="changelog-plugins" title="Changes and improvements">changelog-plugins-2019-01-changes</docanchor>
+    <docanchor file="changelog-plugins" title="Build system">changelog-plugins-2019-01-buildsystem</docanchor>
+    <docanchor file="changelog-plugins" title="Potential compatibility breakages, removed APIs">changelog-plugins-2019-01-compatibility</docanchor>
     <docanchor file="changelog-plugins" title="2018.10">changelog-plugins-2018-10</docanchor>
     <docanchor file="changelog-plugins" title="New features">changelog-plugins-2018-10-new</docanchor>
     <docanchor file="changelog-plugins" title="Changes and improvements">changelog-plugins-2018-10-changes</docanchor>
@@ -76164,12 +76349,14 @@
     <name>changelog-integration</name>
     <title>Integration</title>
     <filename>changelog-integration</filename>
-    <docanchor file="changelog-integration" title="Changes since 2018.10">changelog-integration-latest</docanchor>
-    <docanchor file="changelog-integration" title="Dependency changes">changelog-integration-latest-dependencies</docanchor>
-    <docanchor file="changelog-integration" title="New features">changelog-integration-latest-new</docanchor>
-    <docanchor file="changelog-integration" title="Bug fixes">changelog-integration-latest-bugfixes</docanchor>
-    <docanchor file="changelog-integration" title="Potential compatibility breakages, removed APIs">changelog-integration-latest-compatibility</docanchor>
-    <docanchor file="changelog-integration" title="Documentation">changelog-integration-latest-documentation</docanchor>
+    <docanchor file="changelog-integration">changelog-integration-latest</docanchor>
+    <docanchor file="changelog-integration" title="2019.01">changelog-integration-2019-01</docanchor>
+    <docanchor file="changelog-integration" title="Dependency changes">changelog-integration-2019-01-dependencies</docanchor>
+    <docanchor file="changelog-integration" title="New features">changelog-integration-2019-01-new</docanchor>
+    <docanchor file="changelog-integration" title="Bug fixes">changelog-integration-2019-01-bugfixes</docanchor>
+    <docanchor file="changelog-integration" title="Deprecated APIs">changelog-integration-2019-01-deprecated</docanchor>
+    <docanchor file="changelog-integration" title="Potential compatibility breakages, removed APIs">changelog-integration-2019-01-compatibility</docanchor>
+    <docanchor file="changelog-integration" title="Documentation">changelog-integration-2019-01-documentation</docanchor>
     <docanchor file="changelog-integration" title="2018.10">changelog-integration-2018-10</docanchor>
     <docanchor file="changelog-integration" title="New features">changelog-integration-2018-10-new</docanchor>
     <docanchor file="changelog-integration" title="Changes and improvements">changelog-integration-2018-10-changes</docanchor>
@@ -76261,9 +76448,12 @@
     <name>changelog-examples</name>
     <title>Examples</title>
     <filename>changelog-examples</filename>
-    <docanchor file="changelog-examples" title="Changes since 2018.10">changelog-examples-latest</docanchor>
-    <docanchor file="changelog-examples" title="Dependency changes">changelog-examples-latest-dependencies</docanchor>
-    <docanchor file="changelog-examples" title="New features">changelog-examples-latest-new</docanchor>
+    <docanchor file="changelog-examples">changelog-examples-latest</docanchor>
+    <docanchor file="changelog-examples" title="2019.01">changelog-examples-2019-01</docanchor>
+    <docanchor file="changelog-examples" title="Dependency changes">changelog-examples-2019-01-dependencies</docanchor>
+    <docanchor file="changelog-examples" title="New features">changelog-examples-2019-01-new</docanchor>
+    <docanchor file="changelog-examples" title="Changes and improvements">changelog-examples-2019-01-changes</docanchor>
+    <docanchor file="changelog-examples" title="Documentation">changelog-examples-2019-01-documentation</docanchor>
     <docanchor file="changelog-examples" title="2018.10">changelog-examples-2018-10</docanchor>
     <docanchor file="changelog-examples" title="New features">changelog-examples-2018-10-new</docanchor>
     <docanchor file="changelog-examples" title="Changes and improvements">changelog-examples-2018-10-changes</docanchor>
@@ -76444,8 +76634,9 @@
     <name>changelog-extras</name>
     <title>Extras</title>
     <filename>changelog-extras</filename>
-    <docanchor file="changelog-extras" title="Changes since 2018.10">changelog-extras-latest</docanchor>
-    <docanchor file="changelog-extras" title="Dependency changes">changelog-extras-latest-dependencies</docanchor>
+    <docanchor file="changelog-extras">changelog-extras-latest</docanchor>
+    <docanchor file="changelog-extras" title="2019.01">changelog-extras-2019-01</docanchor>
+    <docanchor file="changelog-extras" title="Dependency changes">changelog-extras-2019-01-dependencies</docanchor>
     <docanchor file="changelog-extras" title="2018.10">changelog-extras-2018-10</docanchor>
     <docanchor file="changelog-extras" title="New features">changelog-extras-2018-10-new</docanchor>
     <docanchor file="changelog-extras" title="Changes and improvements">changelog-extras-2018-10-changes</docanchor>
