@@ -9,6 +9,9 @@ Introducing Magnum, a multiplatform 2D/3D graphics engine
     think it's the time to release this beast into wild. Say hello to Magnum,
     modular graphics engine written in C++11 and OpenGL.
 
+.. role:: cpp(code)
+    :language: c++
+
 Magnum started as a simple wrapper to simplify vector/matrix operations so I
 could learn and play with OpenGL API without writing too much boilerplate code.
 Over the time it expanded into actually usable graphics engine. Its goal is to

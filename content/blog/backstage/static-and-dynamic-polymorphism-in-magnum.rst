@@ -10,6 +10,9 @@ Static and dynamic polymorphism in Magnum
     is possible to handle polymorphism the most effective way for each use
     case. As a result, virtual calls are in Magnum used very sparingly.
 
+.. role:: cpp(code)
+    :language: c++
+
 .. block-primary:: Backstage
 
     This article is part of a series describing the *how* and *why* behind
