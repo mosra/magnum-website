@@ -1,0 +1,382 @@
+Magnum 2019.01 released
+#######################
+
+:date: 2019-02-05
+:modified: 2019-02-05
+:category: Announcements
+:cover: {static}/img/blog/announcements/2019.01/cover.jpg
+:tags: animation, CMake, C++, Doxygen, OpenGL, UI, ImGui, Vcpkg, Vulkan, WebGL,
+    Android, Emscripten
+:summary: The new version puts a focus on usability with tweakable constants
+    for live coding, ImGui integration, new packages, Gradle-less Android
+    development, compile time speedup and other general polishing.
+
+.. role:: cpp(code)
+    :language: c++
+.. role:: cmake(code)
+    :language: cmake
+.. role:: s
+    :class: m-text m-s
+
+.. note-success:: Update
+
+    The release notes accidentally forgot to mention
+    `Gradle-less Android builds <#android-development-but-without-the-pain>`_.
+    That's fixed now.
+
+`Tweakable constants for live coding`_
+======================================
+
+While Magnum supported code hot-reload through its :dox:`PluginManager` library
+from the very beginning, now there's a new, much faster --- but also more
+restricted --- counterpart to it. In the context of live coding, 90% iterations
+is done *on the data*, fiddling with values until they *feel right*. Even
+waiting few seconds for code to recompile after each such iteration is still
+very time-consuming and often the process is abruptly ended when the value is
+"good enough". So, what if we wouldn't need to recompile?
+
+.. raw:: html
+
+    <blockquote class="twitter-tweet tw-align-center" data-lang="en" data-dnt="true"><p lang="en" dir="ltr">Hot code reload? Check! With instant feedback? Sure! And visual input in the editor? Um … yes, of course! This is how my workflow with <a href="https://twitter.com/hashtag/MagnumEngine?src=hash&amp;ref_src=twsrc%5Etfw">#MagnumEngine</a> and <a href="https://twitter.com/hashtag/KDevelop?src=hash&amp;ref_src=twsrc%5Etfw">#KDevelop</a> looks like now. In pure C++. 😎 <a href="https://twitter.com/hashtag/cpp?src=hash&amp;ref_src=twsrc%5Etfw">#cpp</a> <a href="https://twitter.com/hashtag/cplusplus?src=hash&amp;ref_src=twsrc%5Etfw">#cplusplus</a> <a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> <a href="https://twitter.com/hashtag/livereload?src=hash&amp;ref_src=twsrc%5Etfw">#livereload</a> <a href="https://t.co/o45TiSsQsu">pic.twitter.com/o45TiSsQsu</a></p>&mdash; Vladimír Vondruš (@czmosra) <a href="https://twitter.com/czmosra/status/1059841188583366656?ref_src=twsrc%5Etfw">November 6, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+:dox:`Utility::Tweakable` is responsible for all the magic shown in the above
+video and the gist of it is an ability to update a running application with
+constants from modified source code --- without recompilation. The video also
+shows an advanced IDE integration with a color picker, however the basic
+approach of code changes being reflected
+:abbr:`immediately <basically the next frame, so under 16 ms>` works with any
+editor.
+
+This feature is still very experimental, on the roadmap is a support for hot
+code reload and tweakable constants under Emscripten and on Android, we also
+plan on releasing IDE integration plugins similar to the one above once they
+reach a more mature state.
+
+`ImGui integration is now official`_
+====================================
+
+Integration of :gh:`Dear ImGui <ocornut/imgui>` into Magnum started as a
+community project and got so widely used with multiple forked versions that it
+made sense to turn it into an officially maintained library. It's now available
+as :dox:`ImGuiIntegration`, part of the
+:gh:`magnum-integration <mosra/magnum-integration>` repository. The
+corresponding example is integrated as well and has a WebGL 2 version
+available:
+
+.. container:: m-row
+
+    .. container:: m-col-m-6 m-push-m-3
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [imgui]
+            :end-before: [/imgui]
+
+Instead of having the ImGui sources bundled with Magnum, there's a new
+:gh:`FindImGui.cmake <mosra/magnum-integration/blob/master/modules/FindImGui.cmake>`
+module that takes care of finding the sources and compiling them as part of
+:dox:`ImGuiIntegration`. That gives you the possibility of always being on
+exactly the version (or a fork) you need and the flexibility to bundle it your
+own way. Some packaging systems (such as Vcpkg) provide ImGui as a library,
+that's supported too.
+
+`Animation easings library`_
+============================
+
+The animation library, which debuted in the 2018.10 release, received a
+collection of various easing functions to add life to your animations. To
+provide a complete and correct reference for not just Magnum users, the
+functions are also well-documented, with a corresponding math equation, plot
+and the equivalent Bézier representation, if it exists. See the :dox:`Animation::Easing` namespace for yourself. Usage is straighforward ---
+simply modify the interpolation factor parameter with them:
+
+.. code:: c++
+
+    Vector3 result = Math::lerp(a, b, Animation::Easing::bounceIn(t));
+
+.. image:: {static}/img/blog/announcements/2019.01/easing.png
+    :alt: Animation::Easing documentation
+    :scale: 50%
+
+`Android development, but without the pain`_
+============================================
+
+Contrary to popular belief, neither Android Studio nor Gradle is required to
+develop apps for Android. With 2019.01, there's a new CMake macro :cmake:`android_create_apk()` that allows you to create an APK directly from
+CMake, without needing to touch Gradle at all:
+
+.. code:: cmake
+
+    find_package(Magnum REQUIRED AndroidApplication)
+
+    add_library(my-application SHARED MyApp.cpp)
+    target_link_libraries(my-application PRIVATE
+        Magnum::Magnum
+        Magnum::Application)
+
+    android_create_apk(my-application AndroidManifest.xml)
+
+As a bonus, using this macro also adds a new build target which allows you to
+build, install, package, sign and deploy an APK to a device with a single
+command --- for example when using Ninja:
+
+.. code:: shell-session
+
+    $ ninja my-application-deploy
+    [5/5] Installing my-application.apk
+    Success
+
+This functionality is currently experimental and very limited, but it can save
+you several seconds on each deploy compared to equivalent workflow using
+Gradle. See the *very extensive* :dox:`Android building docs <platforms-android>`
+for more information.
+
+`Dropping GCC 4.7 and CMake 2.8.12 support`_
+============================================
+
+With Ubuntu 14.04 going away *even* on Travis CI, it was a time to say goodbye
+to compatibility with the old CMake 2.8.12. However, version 3.0 had some
+issues with imported targets, so the minimal required version is now 3.1. All
+sufficiently modern Linux distributions (except Debian Jessie) are already on
+versions past 3.1, so this should not be a problem --- and if not, you can
+always download and use an official CMake binary on affected systems.
+
+While at it, support for GCC 4.7 was dropped as well, since this is the last
+compiler that didn't support rvalue overloads for :cpp:`this`. Minimal version
+is now 4.8.1, since 4.8 is still used on CentOS 7 and we don't want to prevent
+Magnum from being used on server side as well.
+
+As far as C++ standard goes, Magnum is going to stay on C++11 for the
+foreseeable future. Except for extended :cpp:`constexpr`, neither C++14 nor
+C++17 offers anything that would lead to significant improvements on the
+library side and the minor advantages are not worth the compile time slowdowns
+due to `increase in STL header bloat <https://twitter.com/czmosra/status/1085993965529255936>`_.
+However, Magnum is not forbidding *you* to jump to newer C++ standards --- if
+you need the recent features, feel free to use them.
+
+`Ongoing compile-time and binary size improvements`_
+====================================================
+
+Speaking of STL header bloat, and not entirely unrelated to the recent outrage
+about "The State Of C++", Magnum is undergoing a general update that aims for
+shortened compile times and smaller binary sizes, especially in WebAssembly
+builds. Right now, this is mainly about reducing the amount of STL includes in
+headers and because :s:`not all` basically no STL containers can be easily
+forward-declared, it means replacing them with custom alternatives.
+
+As not all updates can be made in a backwards-compatible way, the change is
+happening gradually --- this release replaces most uses of
+:dox:`std::unique_ptr` and :dox:`std::reference_wrapper` with
+:dox:`Containers::Pointer` and :dox:`Containers::Reference` in order to avoid
+heavy ``<memory>`` and ``<functional>`` includes and the work will continue in
+future releases.
+
+.. block-success:: Is it worth the bother?
+
+    While header bloat is not the only thing contributing to long compile
+    times, it's responsible for quite a large portion --- and is thus also the
+    "low hanging fruit" when it comes to compile time optimizations. There's
+    still a lot do in the Magnum codebase and while removing the dependency on ``<memory>`` and ``<functional>`` is currently not resulting in any
+    significant compile-time speed up when building Magnum itself, projects
+    using Magnum reported compile times being shorter by 20--30% as a result of
+    this change.
+
+As with all other design decisions in Magnum, this doesn't mean the engine will
+now unconditionally *force* you to use some alien types. Instead, you have a
+choice --- if you feel more comfortable using standard types, your team is not
+ready to learn yet another API or you're interacting with a 3rd party lib that
+uses them anyway, just keep using them, the new Magnum pointer and reference
+types are implicitly convertible to and from the STL equivalents. On the other
+hand, if you really care about your compile times and debug performance, the
+new types are for you --- and you're encouraged to use them elsewhere as well,
+not just when interacting with Magnum.
+
+.. note-primary::
+
+    More details and reasoning behind the new pointer and reference types
+    is provided `in a dedicated article <{filename}/blog/backstage/lightweight-stl-compatible-unique-pointer.rst>`_.
+
+`Single-header versions of Magnum APIs`_
+========================================
+
+A related ongoing project, which is basically a side-product of the above
+"header diet" work, is availability of various Magnum APIs as single-header
+libraries --- with a focus on ease of integration, fast compile times and small
+file sizes, while inheriting >99% test coverage and extensive documentation
+that's own to the Magnum project itself.
+
+Combining all that is only possible because the functionality is primarily
+maintained, documented and tested as part of Magnum, where it can make use of
+all the infrastructure and tooling. Selected functionality is then extracted
+:dox:`via a script <acme>` that strips it of comments, verbose documentation
+blocks and rarely used functionality. The result is a small self-contained
+file, however still with the confidence of all code paths being properly tested
+and documented.
+
+The :gh:`magnum-singles <mosra/magnum-singles>` repository is a new home for
+the single-header versions of various Magnum APIs. At the moment the following
+low-level containers are present:
+
+.. class:: m-table m-fullwidth
+
+====================== === ================ ======================================
+Library                LoC Preprocessed LoC Description
+====================== === ================ ======================================
+`CorradeOptional.h`_   328 2742             See :dox:`Containers::Optional` docs
+`CorradePointer.h`_    259 2321             See :dox:`Containers::Pointer` docs
+`CorradeReference.h`_  115 1639             See :dox:`Containers::Reference` docs
+`CorradeScopeGuard.h`_ 108 26               See :dox:`Containers::ScopeGuard` docs
+====================== === ================ ======================================
+
+More libraries are to come as the header cleanup advances further. The general
+rule for exposing a feature as a single-header library is how much it inflates
+*after preprocessing* --- currently the soft upper limit is 10k lines. For
+comparison, not even the ``<string>`` header fits in there, as it has 12k; on
+the other hand I'm pretty confident I can squeeze the whole :dox:`Math` library
+under this limit.
+
+`Vulkan++`_
+===========
+
+.. TODO: ugh doxygen you stupid $&@!
+
+As another small piece of the Vulkan puzzle, the new
+:dox:`Magnum/Vk/Integration.h </home/mosra/Code/magnum/src/Magnum/Vk/Integration.h>`
+header provides conversion between basic Vulkan types and their equivalents
+from the :dox:`Math` library, together with :dox:`enum translation </home/mosra/Code/magnum/src/Magnum/Vk/Enums.h>`
+contributing to a smoother interaction with raw Vulkan code.
+
+.. code:: c++
+
+    VkOffset2D a{64, 32};
+    Vector2i b(a);
+
+    using namespace Math::Literals;
+    VkClearColorValue c = VkClearColorValue(0x5297d7_srgbf);
+
+Since Magnum now provides math integration for quite a few libraries, including
+ImGui, there's :dox:`a full list <types-thirdparty-integration>` providing
+detailed information about available conversions for every third-party API.
+
+`Quality-of-Life improvements in the documentation`_
+====================================================
+
+The Magnum documentation received a larger update, mainly related to search
+functionality. It's now also showing the corresponding :cpp:`#include` for each
+API --- and that's not just classes, but also free functions, types and
+single-file namespaces. `Details in this article. <{filename}/blog/meta/improved-doxygen-documentation-and-search.rst>`_
+
+.. image:: {static}/img/blog/meta/improved-doxygen-documentation-and-search/includes.png
+    :alt: Include information for free namespace members
+    :scale: 50%
+
+`Hunter, MSYS2 and Conan packages`_
+===================================
+
+Thanks to our dedicated community, Corrade, Magnum and Magnum Plugins now have
+`MSYS2 <https://www.msys2.org/>`_ packages. These are based off the ArchLinux
+``PKGBUILD``\ s (since both use ``pacman`` as the package manager) and there's
+both a in-source package, building the currently checked out working tree; and
+a stable one, downloading a release tarball.
+
+Apart from MSYS2, Corrade is now available in both `Conan <https://conan.io/>`_
+and `Hunter <https://hunter.sh/>`_ package managers. While Hunter is
+CMake-based and works directly from inside the CMake build directory without
+any additional dependencies, Conan is buildsystem-independent, but requires you
+to install the Conan client first. Due to various reasons (such as requiring a
+release tag as a prerequisite), Conan / Hunter packages for Magnum and other
+related projects are not yet available at the time of writing, but will
+:gh:`appear <mosra/magnum#302>` :gh:`soon <mosra/magnum#304>`.
+
+Packages in other repositories such as ArchLinux, Vcpkg and Homebrew are also
+scheduled to be updated soon.
+
+`Updating from previous versions`_
+==================================
+
+If you build Magnum with :dox:`BUILD_DEPRECATED <MAGNUM_BUILD_DEPRECATED>`
+enabled (the default), most of the above-mentioned changes related to
+:dox:`std::unique_ptr`, :dox:`std::reference_wrapper` etc. should not result in
+any source-breaking changes --- standard types used in your code will still
+work as before. However, due to the general header cleanup, you might end up
+with a bunch of "incomplete type" errors, as definitons formerly transitively
+included from other headers won't be present anymore. In particular, due to
+removal of long-deprecated features, the :dox:`Containers::Optional` type is
+now only forward-declared in all importer plugin APIs, so you may need to add a
+bunch of these to your codebases:
+
+.. code:: c++
+
+    #include <Corrade/Containers/Optional.h>
+
+In order to keep your code forward compatible, the rule should be to always
+explicitly include all types that you use in the particular source file and not
+rely on the definitions being present due to internal engine header structure.
+In practice this is quite hard to achieve, on the other hand due to the
+evolving nature of the library, there's not much Magnum itself can do to
+prevent such breakages.
+
+This version also starts to remove APIs deprecated in 2018.02 (the first
+release after three years without stable updates), meaning if you still have
+codebases that are from before this version, these will definitely not work
+anymore. The recommended upgrade path is, as always, going through the stable
+versions one-by-one and fixing errors and deprecation warnings as they appear
+--- jumping straight to latest won't be nowhere near a smooth upgrade
+experience.
+
+For a complete overview of newly deprecated features and possible compatibility
+breakages, check the changelogs listed below.
+
+`Complete changelog`_
+=====================
+
+There's many more little things --- improved :cpp:`constexpr` support for array
+view classes, new importer plugin for AAC audio files, ability to switch to the
+standard C :cpp:`assert()` macro for assertions etc. See the full changelogs
+for more:
+
+-   :dox:`Changes in Corrade 2019.01 <corrade-changelog-2019-01>`
+-   :dox:`Changes in Magnum 2019.01 <changelog-2019-01>`
+-   :dox:`Changes in Magnum Plugins 2019.01 <changelog-plugins-2019-01>`
+-   :dox:`Changes in Magnum Integration 2019.01 <changelog-integration-2019-01>`
+-   :dox:`Changes in Magnum Extras 2019.01 <changelog-extras-2019-01>`
+-   :dox:`Changes in Magnum Examples 2019.01 <changelog-examples-2019-01>`
+
+`Special thanks`_
+=================
+
+Many things in this release wouldn't be possible without dedication of several
+contributors:
+
+-   **Jonathan Hale** (:gh:`Squareys`), **Guillaume Jacquemin** (:gh:`williamjcm`),
+    :gh:`denesik`, **Natesh Narain** (:gh:`nnarain`),
+    **Tomáš Skřivan** (:gh:`lecopivo`) and :gh:`ShaddyDC` --- the
+    :dox:`ImGuiIntegration` library and a corresponding :dox:`example <examples-imgui>`
+-   **Max Schwarz** (:gh:`xqms`) --- fixes and clarifications in the
+    :dox:`BulletIntegration` library and memory leak plugs in the corresponding
+    :dox:`example <examples-bullet>`
+-   **Borislav Stanimirov** (:gh:`iboB`) --- strict weak ordering for :dox:`Math`
+    types
+-   **Guillaume Jacquemin** (:gh:`williamjcm`) --- MSYS2 packages
+-   **Pascal Thomet** (:gh:`pthom`), **Ruslan Baratov** (:gh:`ruslo`) ---
+    Hunter packages
+-   **Fred Helmesjö** (:gh:`helmesjo`), **Michael "Croydon" Keck** (:gh:`Croydon`)
+    --- Conan packages
+-   **Alexander F Rødseth** (:gh:`xyproto`) --- continued ArchLinux ``[community]``
+    package maintenance
+-   **Erik Wijmans** (:gh:`erikwijmans`) --- NVidia-specific workarounds for
+    headless EGL contexts
+-   **Steeve Morin** (:gh:`steeve`), **Fabien Freling** (:gh:`ffreling`) and
+    **Thomas Tissot-Dupont** (:gh:`dolphineye`) --- iOS- and Android-specific
+    driver workarounds and improvements
+
+.. note-dim::
+
+    Discussion: `Twitter <https://twitter.com/czmosra/status/1092806808580882433>`_,
+    Reddit `r/cpp <https://www.reddit.com/r/cpp/comments/anf2cs/magnum_engine_201901_released_with_tweakable/>`_,
+    `r/gamedev <https://www.reddit.com/r/gamedev/comments/anf2ze/magnum_engine_201901_released_with_c_tweakable/>`_,
+    `Hacker News <https://news.ycombinator.com/item?id=19086056>`_
+
+.. _CorradeOptional.h: https://github.com/mosra/magnum-singles/blob/master/CorradeOptional.h
+.. _CorradePointer.h: https://github.com/mosra/magnum-singles/blob/master/CorradePointer.h
+.. _CorradeReference.h: https://github.com/mosra/magnum-singles/blob/master/CorradeReference.h
+.. _CorradeScopeGuard.h: https://github.com/mosra/magnum-singles/blob/master/CorradeScopeGuard.h
