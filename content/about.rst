@@ -105,7 +105,9 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`dlardi`
         -   :gh-name:`Eliot Saba <staticfloat>`
         -   :gh-name:`Émile Grégoire <emgre>`
+        -   :gh-name:`Erik Wijmans <erikwijmans>`
         -   :gh-name:`Fabien Freling <ffreling>`
+        -   :gh-name:`Fred Helmesjö <helmesjo>`
         -   :gh-name:`Guillaume Giraud <Guillaume227>`
         -   :gh-name:`Guillaume Jacquemin <williamjcm>`
         -   :gh-name:`Ivan P. <uzername>`
@@ -119,6 +121,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Krzysztof Szenk <Crisspl>`
         -   :gh-name:`Leon Moctezuma <leonidax>`
         -   :gh-name:`Max Schwarz <xqms>`
+        -   :gh-name:`Michael "Croydon" Keck <Croydon>`
         -   :gh-name:`Michael Dietschi <mdietsch>`
         -   :name:`Michal Mikula`
         -   :gh-name:`Miguel Martin <miguelmartin75>`
