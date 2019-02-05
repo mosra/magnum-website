@@ -163,7 +163,7 @@ function fetchLatestAppveyorJobs(project, branch) {
                 type = 'm-success';
                 status = '✔';
                 ageField = 'finished';
-            } else if(jobs[i]['status'] == 'queued') {
+            } else if(jobs[i]['status'] == 'queued' || jobs[i]['status'] == 'starting') {
                 type = 'm-info';
                 status = '…';
                 ageField = 'created';
