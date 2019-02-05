@@ -2,7 +2,8 @@ Improved Doxygen documentation and search
 #########################################
 
 :date: 2019-01-03
-:modified: 2019-01-09
+:modified: 2019-01-12
+:category: Meta
 :tags: C++, Doxygen, m.css, JavaScript, Python
 :summary: Whether you are browsing Magnum docs or use Doxygen for your own C++
     documentation, there's always a way to improve your workflow. This article
@@ -17,11 +18,14 @@ Improved Doxygen documentation and search
 .. |lrarrow| replace:: ↔
 .. |smile| replace:: 😊
 
-.. note-success:: Update: Jan 09, 2019
+.. note-success:: Update: Jan 12, 2019
 
     Support for :ini:`EXTRACT_PRIV_VIRTUAL` from :gh:`doxygen/doxygen#6729` has
-    been merged to Doxygen master. The option was named
-    :ini:`EXTRACT_PRIVATE_VIRTUAL` in the original patch.
+    been merged to Doxygen master (the option was named
+    :ini:`EXTRACT_PRIVATE_VIRTUAL` in the original patch); a fix for
+    :cpp:`#include` information is now integrated in
+    :gh:`doxygen/doxygen@7f40e488e27bcea4bb15045df05479dc5fbd9d6d` (formerly
+    :gh:`doxygen/doxygen#6722`).
 
 A year ago I switched Magnum docs to a theme written entirely from scratch,
 adding a `never-before-seen search functionality <{filename}/blog/meta/implementing-a-fast-doxygen-search.rst>`_
@@ -58,8 +62,8 @@ especially in large namespaces such as :dox:`Math` or :dox:`GL`.
 
     Implementing this feature uncovered a Doxygen bug, so if you plan to use
     this feature on your codebase, make sure to have a version with
-    :gh:`doxygen/doxygen#6722` included (not yet merged into ``master`` at the
-    time of writing this article).
+    :gh:`doxygen/doxygen@7f40e488e27bcea4bb15045df05479dc5fbd9d6d` (formerly
+    :gh:`doxygen/doxygen#6722`) included.
 
 `Parsing additional function attributes`_
 =========================================
