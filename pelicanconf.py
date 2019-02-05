@@ -91,7 +91,7 @@ M_LINKS_FOOTER1 = [('Magnum', '/'),
                    ('Community Contributions', 'features/community/'),
                    ('Showcase', 'showcase/'),
                    ('Premium Services', 'premium/'),
-                   ('Build Status', 'build-status/')]
+                   ('“Is Magnum what I’m looking for?”', '/is-magnum-what-i-am-looking-for/')]
 
 M_LINKS_FOOTER2 = [('Docs', '//doc.magnum.graphics/'),
                    ('Getting Started', '//doc.magnum.graphics/magnum/getting-started.html'),
@@ -105,7 +105,8 @@ M_LINKS_FOOTER3 = [('Contact Us', 'contact/'),
                    ('Gitter', 'https://gitter.im/mosra/magnum'),
                    ('Twitter', 'https://twitter.com/czmosra'),
                    ('Google Groups', 'https://groups.google.com/forum/#!forum/magnum-engine'),
-                   ('About the Project', 'about/')]
+                   ('About the Project', 'about/'),
+                   ('Build Status', 'build-status/')]
 
 M_CSS_FILES = ['https://fonts.googleapis.com/css?family=Source+Code+Pro:400,400i,600%7CSource+Sans+Pro:400,400i,600,600i&subset=latin-ext',
                'static/m-dark.css']
