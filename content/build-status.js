@@ -5,7 +5,10 @@ var projects = [['mosra/corrade', 'master'],
                 ['mosra/magnum-integration', 'master'],
                 ['mosra/magnum-examples', 'master'],
                 ['mosra/magnum-examples', 'ports'],
-                ['mosra/magnum-bootstrap', 'master']];
+                ['mosra/magnum-bootstrap', 'master'],
+                ['mosra/magnum-singles', 'master'],
+                ['mosra/flextgl', 'master'],
+                ['mosra/homebrew-magnum', 'master']];
 var latestTravisJobs = [];
 var travisDone = 0;
 var travisJobIdRe = /JOBID=([a-zA-Z0-9-]+)/
@@ -16,7 +19,7 @@ var appveyorJobIdRe = /APPVEYOR_JOB_NAME=([a-zA-Z0-9-]+)/
 /* Ability to override the projects via query string */
 if(location.search) {
     let params = new URLSearchParams(location.search);
-    projects = []
+    projects = [];
     for(let p of params) projects.push(p);
 }
 
@@ -197,7 +200,11 @@ function fetchLatestAppveyorJobs(project, branch) {
 function fetch() {
     for(var i = 0; i != projects.length; ++i) {
         fetchLatestTravisJobs(projects[i][0], projects[i][1]);
-        fetchLatestAppveyorJobs(projects[i][0], projects[i][1]);
+        /* These are not on AppVeyor */
+        if(projects[i][0].indexOf('flextgl') === -1 &&
+           projects[i][0].indexOf('homebrew') === -1 &&
+           projects[i][0].indexOf('magnum-singles') === -1)
+            fetchLatestAppveyorJobs(projects[i][0], projects[i][1]);
     }
 }
 

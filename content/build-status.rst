@@ -37,7 +37,7 @@ Build Status
 Show builds for:
 
 -   `master branch <{filename}/build-status.rst>`_
--   `next branch <{filename}/build-status.rst?mosra/corrade=next&mosra/magnum=next&mosra/magnum-plugins=next&mosra/magnum-extras=next&mosra/magnum-integration=next&mosra/magnum-examples=next&mosra/magnum-examples=ports-next&mosra/magnum-bootstrap=next>`_
+-   `next branch <{filename}/build-status.rst?mosra/corrade=next&mosra/magnum=next&mosra/magnum-plugins=next&mosra/magnum-extras=next&mosra/magnum-integration=next&mosra/magnum-examples=next&mosra/magnum-examples=ports-next&mosra/magnum-bootstrap=next&mosra/flextgl=next&mosra/magnum-singles=next&mosra/homebrew-magnum=next>`_
 
 `Main repositories`_
 ====================
@@ -48,6 +48,26 @@ Show builds for:
 
         .. raw:: html
             :file: build-status.html
+
+`Related projects`_
+===================
+
+.. container:: m-row
+
+    .. container:: m-col-m-4
+
+        .. raw:: html
+            :file: build-status-flextgl.html
+
+    .. container:: m-col-m-4
+
+        .. raw:: html
+            :file: build-status-singles.html
+
+    .. container:: m-col-m-4
+
+        .. raw:: html
+            :file: build-status-brew.html
 
 `Bootstrap projects`_
 =====================
