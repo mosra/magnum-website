@@ -5,8 +5,8 @@ ImGui Example
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
-Integration of :gh:`Dear ImGui <ocornut/imgui>` into Magnum. Shows the ImGui
-demo window and two other example windows which demonstrate rendering of
+Integration of :gh:`Dear ImGui <ocornut/imgui>` into Magnum. Shows the Dear
+ImGui demo window and two other example windows which demonstrate rendering of
 immediate-mode GUI using the HiDPI-enabled :dox:`ImGuiIntegration` library.
 
 .. note-success:: WebGL 2
