@@ -40061,6 +40061,7 @@
     <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="Linux specifics">Platform-Sdl2Application-usage-linux</docanchor>
     <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="iOS specifics">Platform-Sdl2Application-usage-ios</docanchor>
     <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="Emscripten specifics">Platform-Sdl2Application-usage-emscripten</docanchor>
+    <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="OpenGL ES specifics">Platform-Sdl2Application-usage-gles</docanchor>
     <docanchor file="classMagnum_1_1Platform_1_1Sdl2Application" title="DPI awareness">Platform-Sdl2Application-dpi</docanchor>
   </compound>
   <compound kind="struct">
@@ -75657,7 +75658,12 @@
     <name>changelog</name>
     <title>Changelog</title>
     <filename>changelog</filename>
-    <docanchor file="changelog">changelog-latest</docanchor>
+    <docanchor file="changelog" title="Changes since 2019.01">changelog-latest</docanchor>
+    <docanchor file="changelog" title="Changes and improvements">changelog-latest-changes</docanchor>
+    <docanchor file="changelog" title="Audio library">changelog-latest-changes-audio</docanchor>
+    <docanchor file="changelog" title="Platform libraries">changelog-latest-changes-platform</docanchor>
+    <docanchor file="changelog" title="Trade library">changelog-latest-changes-trade</docanchor>
+    <docanchor file="changelog" title="Bug fixes">changelog-latest-bugfixes</docanchor>
     <docanchor file="changelog" title="2019.01">changelog-2019-01</docanchor>
     <docanchor file="changelog" title="Dependency changes">changelog-2019-01-dependencies</docanchor>
     <docanchor file="changelog" title="New features">changelog-2019-01-new</docanchor>
@@ -75855,6 +75861,7 @@
     <title>Downloading and building</title>
     <filename>building</filename>
     <docanchor file="building" title="Prepared packages">building-packages</docanchor>
+    <docanchor file="building" title="Hunter package">building-packages-hunter</docanchor>
     <docanchor file="building" title="Vcpkg packages on Windows">building-packages-vcpkg</docanchor>
     <docanchor file="building" title="ArchLinux packages">building-packages-arch</docanchor>
     <docanchor file="building" title="MSYS2 packages">building-packages-msys</docanchor>
@@ -76112,6 +76119,7 @@
     <filename>platforms-macos</filename>
     <docanchor file="platforms-macos" title="Bundle creation">platforms-macos-bundle</docanchor>
     <docanchor file="platforms-macos" title="HiDPI (Retina) support">platforms-macos-hidpi</docanchor>
+    <docanchor file="platforms-macos" title="Clang version mapping">platforms-macos-clang-version-mapping</docanchor>
     <docanchor file="platforms-macos" title="Best practices">platforms-macos-opengl-best-practices</docanchor>
     <docanchor file="platforms-macos" title="Setting up macOS build on Travis CI">platforms-macos-travis</docanchor>
     <docanchor file="platforms-macos" title="Troubleshooting">platforms-macos-troubleshooting</docanchor>
@@ -76122,6 +76130,7 @@
     <filename>platforms-windows</filename>
     <docanchor file="platforms-windows" title="HiDPI support">platforms-windows-hidpi</docanchor>
     <docanchor file="platforms-windows" title="Windows RT">platforms-windows-rt</docanchor>
+    <docanchor file="platforms-windows" title="MSVC version mapping">platforms-windows-msvc-version-mapping</docanchor>
   </compound>
   <compound kind="page">
     <name>plugins</name>
@@ -76265,7 +76274,10 @@
     <name>changelog-plugins</name>
     <title>Plugins</title>
     <filename>changelog-plugins</filename>
-    <docanchor file="changelog-plugins">changelog-plugins-latest</docanchor>
+    <docanchor file="changelog-plugins" title="Changes since 2019.01">changelog-plugins-latest</docanchor>
+    <docanchor file="changelog-plugins" title="Changes and improvements">changelog-plugins-latest-changes</docanchor>
+    <docanchor file="changelog-plugins" title="Build system">changelog-plugins-latest-buildsystem</docanchor>
+    <docanchor file="changelog-plugins" title="Bug fixes">changelog-plugins-latest-bugfixes</docanchor>
     <docanchor file="changelog-plugins" title="2019.01">changelog-plugins-2019-01</docanchor>
     <docanchor file="changelog-plugins" title="Dependency changes">changelog-plugins-2019-01-dependencies</docanchor>
     <docanchor file="changelog-plugins" title="New features">changelog-plugins-2019-01-new</docanchor>
