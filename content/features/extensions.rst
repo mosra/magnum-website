@@ -30,8 +30,8 @@ hierarchy, material, light and camera properties.
 -   TGA, PNG, JPEG, GIF, EXR, HDR, BMP, DDS and other image formats
 -   `glTF <https://www.khronos.org/gltf/>`_, OBJ, Stanford PLY and
     `OpenGEX <https://opengex.org/>`_ scene format parsers
--   A plugin using `Assimp <http://assimp.org/>`_ for general file format
-    support
+-   A plugin using `Assimp <http://assimp.org/>`_ for COLLADA, FBX and other
+    general file format support
 -   "Any importer" plugin delegating to other image / scene importer plugins
     based on detected file format
 

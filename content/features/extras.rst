@@ -120,7 +120,15 @@ recent extensions.
 `Vulkan wrapping layer`_
 ========================
 
-*Coming soon.* Subscribe to :gh:`mosra/magnum#234` for updates.
+*In progress.* Subscribe to :gh:`mosra/magnum#234` for updates.
+
+-   Conversion between Magnum format enums and Vulkan equivalents for easier
+    asset management
+-   Integration of Vulkan math types
+
+.. note-dim::
+
+    See documentation of the :dox:`Vk` namespace for details.
 
 `Platform integration`_
 =======================
