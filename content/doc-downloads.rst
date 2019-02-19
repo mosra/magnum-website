@@ -33,8 +33,8 @@ the files.
 
     Corrade and Magnum docs also cross-link to STL documentation at
     `cppreference.com <https://en.cppreference.com>`_. To do that in your
-    project as well, download `their tag file <https://en.cppreference.com/w/Cppreference:Archives>`_
-    and add a line like the following to your ``Doxyfile``:
+    project as well, download `their tag file <https://en.cppreference.com/w/Cppreference:Archives>`_ (look in the ``html-book-*`` archives for an
+    up-to-date version) and add a line like the following to your ``Doxyfile``:
 
     .. code:: ini
 
