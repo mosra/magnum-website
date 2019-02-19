@@ -2,13 +2,13 @@ Magnum 2019.01 released
 #######################
 
 :date: 2019-02-05
-:modified: 2019-02-05
+:modified: 2019-02-12
 :category: Announcements
 :cover: {static}/img/blog/announcements/2019.01/cover.jpg
 :tags: animation, CMake, C++, Doxygen, OpenGL, UI, ImGui, Vcpkg, Vulkan, WebGL,
     Android, Emscripten
 :summary: The new version puts a focus on usability with tweakable constants
-    for live coding, ImGui integration, new packages, Gradle-less Android
+    for live coding, Dear ImGui integration, new packages, Gradle-less Android
     development, compile time speedup and other general polishing.
 
 .. role:: cpp(code)
@@ -18,11 +18,12 @@ Magnum 2019.01 released
 .. role:: s
     :class: m-text m-s
 
-.. note-success:: Update
+.. note-success:: Content care: Feb 12th, 2019
 
     The release notes accidentally forgot to mention
     `Gradle-less Android builds <#android-development-but-without-the-pain>`_.
-    That's fixed now.
+    That's fixed now. Besides that, Hunter, Homebrew and Vcpkg packages for
+    2019.01 are now ready.
 
 `Tweakable constants for live coding`_
 ======================================
@@ -52,8 +53,8 @@ code reload and tweakable constants under Emscripten and on Android, we also
 plan on releasing IDE integration plugins similar to the one above once they
 reach a more mature state.
 
-`ImGui integration is now official`_
-====================================
+`Dear ImGui integration is now official`_
+=========================================
 
 Integration of :gh:`Dear ImGui <ocornut/imgui>` into Magnum started as a
 community project and got so widely used with multiple forked versions that it
@@ -71,13 +72,13 @@ available:
             :start-after: [imgui]
             :end-before: [/imgui]
 
-Instead of having the ImGui sources bundled with Magnum, there's a new
+Instead of having the Dear ImGui sources bundled with Magnum, there's a new
 :gh:`FindImGui.cmake <mosra/magnum-integration/blob/master/modules/FindImGui.cmake>`
 module that takes care of finding the sources and compiling them as part of
 :dox:`ImGuiIntegration`. That gives you the possibility of always being on
 exactly the version (or a fork) you need and the flexibility to bundle it your
-own way. Some packaging systems (such as Vcpkg) provide ImGui as a library,
-that's supported too.
+own way. Some packaging systems (such as Vcpkg) provide Dear ImGui as a
+library, that's supported too.
 
 `Animation easings library`_
 ============================
@@ -278,17 +279,15 @@ Thanks to our dedicated community, Corrade, Magnum and Magnum Plugins now have
 both a in-source package, building the currently checked out working tree; and
 a stable one, downloading a release tarball.
 
-Apart from MSYS2, Corrade is now available in both `Conan <https://conan.io/>`_
+Apart from MSYS2, Magnum is now available in both `Conan <https://conan.io/>`_
 and `Hunter <https://hunter.sh/>`_ package managers. While Hunter is
 CMake-based and works directly from inside the CMake build directory without
 any additional dependencies, Conan is buildsystem-independent, but requires you
-to install the Conan client first. Due to various reasons (such as requiring a
-release tag as a prerequisite), Conan / Hunter packages for Magnum and other
-related projects are not yet available at the time of writing, but will
-:gh:`appear <mosra/magnum#302>` :gh:`soon <mosra/magnum#304>`.
+to install the Conan client first. Note that while Corrade for Conan is already
+there, the Magnum package is :gh:`still work-in-progress <mosra/magnum#304>`.
 
-Packages in other repositories such as ArchLinux, Vcpkg and Homebrew are also
-scheduled to be updated soon.
+Homebrew and Vcpkg packages are already on the latest version, ArchLinux
+packages are scheduled to be updated soon.
 
 `Updating from previous versions`_
 ==================================
@@ -301,12 +300,14 @@ work as before. However, due to the general header cleanup, you might end up
 with a bunch of "incomplete type" errors, as definitons formerly transitively
 included from other headers won't be present anymore. In particular, due to
 removal of long-deprecated features, the :dox:`Containers::Optional` type is
-now only forward-declared in all importer plugin APIs, so you may need to add a
-bunch of these to your codebases:
+now only forward-declared in all importer plugin APIs, and similarly it is with
+:dox:`Containers::Reference`, so you may need to add some of these to your
+codebases:
 
 .. code:: c++
 
     #include <Corrade/Containers/Optional.h>
+    #include <Corrade/Containers/Reference.h>
 
 In order to keep your code forward compatible, the rule should be to always
 explicitly include all types that you use in the particular source file and not
@@ -361,8 +362,9 @@ contributors:
     Hunter packages
 -   **Fred Helmesjö** (:gh:`helmesjo`), **Michael "Croydon" Keck** (:gh:`Croydon`)
     --- Conan packages
--   **Alexander F Rødseth** (:gh:`xyproto`) --- continued ArchLinux ``[community]``
-    package maintenance
+-   **Jonathan Hale** (:gh:`Squareys`) --- continued Vcpkg package maintenance
+-   **Alexander F Rødseth** (:gh:`xyproto`) --- continued ArchLinux
+    ``[community]`` package maintenance
 -   **Erik Wijmans** (:gh:`erikwijmans`) --- NVidia-specific workarounds for
     headless EGL contexts
 -   **Steeve Morin** (:gh:`steeve`), **Fabien Freling** (:gh:`ffreling`) and
