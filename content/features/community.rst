@@ -39,6 +39,15 @@ Community Contributions
 On top of everything else, there are libraries, tools and concepts built by the
 community --- not part of Magnum itself, but worth mentioning nevertheless.
 
+`Magnum Tips`_
+==============
+
+Collection of useful snippets and handy editor-like utilities for Magnum.
+
+-   **GitHub:** :gh:`alexesDev/magnum-tips`
+-   **License:** :label-primary:`UNLICENSE`
+-   **Platforms:** any
+
 `libRocket integration`_
 ========================
 
