@@ -134,6 +134,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Patrick Werner <boonto>`
         -   :gh-name:`Sam Spilsbury <smspillaz>`
         -   :gh-name:`Samuel Kogler <skogler>`
+        -   :gh-name:`Selot`
         -   :gh-name:`Séverin Lemaignan <severin-lemaignan>`
         -   :gh-name:`scturtle`
         -   :gh-name:`ShaddyDC`
