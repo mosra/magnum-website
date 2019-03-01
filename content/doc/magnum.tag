@@ -553,7 +553,7 @@
     <filename>Widgets_8h</filename>
     <includes id="Range_8h" name="Range.h" local="no" imported="no">Magnum/Math/Range.h</includes>
     <includes id="Color_8h" name="Color.h" local="no" imported="no">Magnum/Math/Color.h</includes>
-    <includes id="GL_2Texture_8h" name="Texture.h" local="no" imported="no">Magnum/GL/Texture.h</includes>
+    <includes id="GL_8h" name="GL.h" local="no" imported="no">Magnum/GL/GL.h</includes>
     <includes id="integration_2src_2Magnum_2ImGuiIntegration_2Integration_8h" name="Integration.h" local="yes" imported="no">Magnum/ImGuiIntegration/Integration.h</includes>
     <namespace>Magnum</namespace>
     <namespace>Magnum::ImGuiIntegration</namespace>
@@ -563,6 +563,13 @@
       <anchorfile>namespaceMagnum_1_1ImGuiIntegration.html</anchorfile>
       <anchor>ae843621d2754d7d7645163fd4e2de80f</anchor>
       <arglist>(GL::Texture2D &amp;texture, const Vector2 &amp;size, const Range2D &amp;uvRange={{}, Vector2{1.0f}}, const Color4 &amp;tintColor=Color4{1.0f}, const Color4 &amp;borderColor={})</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>imageButton</name>
+      <anchorfile>namespaceMagnum_1_1ImGuiIntegration.html</anchorfile>
+      <anchor>a6cca662c778c7e52336ffa46f79c9348</anchor>
+      <arglist>(GL::Texture2D &amp;texture, const Vector2 &amp;size, const Range2D &amp;uvRange={{}, Vector2{1.0f}}, Int framePadding=-1, const Color4 &amp;backgroundColor={}, const Color4 &amp;tintColor=Color4{1.0f})</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -3240,6 +3247,44 @@
       <enumvalue file="namespaceMagnum.html" anchor="aabe552f4e54e32a9706638e6423af077abad08a863dfd6ade28fd8ef69b15005a">Resident</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="aabe552f4e54e32a9706638e6423af077ae1ba155a9f2e8c3be94020eef32a0301">Manual</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="aabe552f4e54e32a9706638e6423af077a3dbff95bbc40eaab0fb54197ff7f56c6">ReferenceCounted</enumvalue>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Screenshot.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/DebugTools/</path>
+    <filename>Screenshot_8h</filename>
+    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
+    <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
+    <includes id="Trade_8h" name="Trade.h" local="yes" imported="no">Magnum/Trade/Trade.h</includes>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::DebugTools</namespace>
+    <member kind="function">
+      <type>bool</type>
+      <name>screenshot</name>
+      <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
+      <anchor>a66cd81ac668af7f8dffcd27ee47b2019</anchor>
+      <arglist>(GL::AbstractFramebuffer &amp;framebuffer, const std::string &amp;filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>screenshot</name>
+      <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
+      <anchor>a55b3076fc8e5c4de5aa79b544bb46424</anchor>
+      <arglist>(PluginManager::Manager&lt; Trade::AbstractImageConverter &gt; &amp;manager, GL::AbstractFramebuffer &amp;framebuffer, const std::string &amp;filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>screenshot</name>
+      <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
+      <anchor>a7882f4d876628589eda4f0f16322e4f8</anchor>
+      <arglist>(GL::AbstractFramebuffer &amp;framebuffer, PixelFormat format, const std::string &amp;filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>screenshot</name>
+      <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
+      <anchor>add0b77dda13df585e51a7c0e7f3c4098</anchor>
+      <arglist>(PluginManager::Manager&lt; Trade::AbstractImageConverter &gt; &amp;manager, GL::AbstractFramebuffer &amp;framebuffer, const PixelFormat format, const std::string &amp;filename)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -16008,6 +16053,13 @@
       <type>void</type>
       <name>set</name>
       <anchorfile>classMagnum_1_1AbstractResourceLoader.html</anchorfile>
+      <anchor>ae29ad7f2a2f463549677e16d78e8d60c</anchor>
+      <arglist>(ResourceKey key, Containers::Pointer&lt; T &gt; data, ResourceDataState state, ResourcePolicy policy)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>set</name>
+      <anchorfile>classMagnum_1_1AbstractResourceLoader.html</anchorfile>
       <anchor>ae31f970e395abd81027f79831445155e</anchor>
       <arglist>(ResourceKey key, U &amp;&amp;data, ResourceDataState state, ResourcePolicy policy)</arglist>
     </member>
@@ -16017,6 +16069,13 @@
       <anchorfile>classMagnum_1_1AbstractResourceLoader.html</anchorfile>
       <anchor>ae08d87863dbbb8eea76f236fce9cabf7</anchor>
       <arglist>(ResourceKey key, T *data)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>set</name>
+      <anchorfile>classMagnum_1_1AbstractResourceLoader.html</anchorfile>
+      <anchor>ab087ee9964275ab4c191f256163f7c15</anchor>
+      <arglist>(ResourceKey key, Containers::Pointer&lt; T &gt; data)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -16665,8 +16724,8 @@
       <type></type>
       <name>TrackView</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>aa73c1a080ad824feee001708f38127d8</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Interpolator interpolator, Extrapolation extrapolation=Extrapolation::Extrapolated) noexcept</arglist>
+      <anchor>af53fb00f77b895511a647ce833386a1a</anchor>
+      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Interpolator interpolator, Extrapolation extrapolation=Extrapolation::Constant) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -16679,8 +16738,8 @@
       <type></type>
       <name>TrackView</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>aa19069dc60c1265daae50b3aa972846d</anchor>
-      <arglist>(Containers::ArrayView&lt; const std::pair&lt; K, V &gt;&gt; data, Interpolator interpolator, Extrapolation extrapolation=Extrapolation::Extrapolated) noexcept</arglist>
+      <anchor>acdf7afcc295e9edbc8c0e035f7fb7cd1</anchor>
+      <arglist>(Containers::ArrayView&lt; const std::pair&lt; K, V &gt;&gt; data, Interpolator interpolator, Extrapolation extrapolation=Extrapolation::Constant) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -16693,8 +16752,8 @@
       <type></type>
       <name>TrackView</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>ae47a55715775f79951e0676040ff1e65</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Interpolation interpolation, Interpolator interpolator, Extrapolation extrapolation=Extrapolation::Extrapolated) noexcept</arglist>
+      <anchor>a78d72d3aef275106ba3b890057d6a56a</anchor>
+      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Interpolation interpolation, Interpolator interpolator, Extrapolation extrapolation=Extrapolation::Constant) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -16707,8 +16766,8 @@
       <type></type>
       <name>TrackView</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>a5b7bb537016cbc7be4fd916897dde370</anchor>
-      <arglist>(Containers::ArrayView&lt; const std::pair&lt; K, V &gt;&gt; data, Interpolation interpolation, Interpolator interpolator, Extrapolation extrapolation=Extrapolation::Extrapolated) noexcept</arglist>
+      <anchor>ae945636d286b4a59c85d7ce4c185d243</anchor>
+      <arglist>(Containers::ArrayView&lt; const std::pair&lt; K, V &gt;&gt; data, Interpolation interpolation, Interpolator interpolator, Extrapolation extrapolation=Extrapolation::Constant) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -16721,8 +16780,8 @@
       <type></type>
       <name>TrackView</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>aa420158302c17559b563567ff1085147</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Interpolation interpolation, Extrapolation extrapolation=Extrapolation::Extrapolated) noexcept</arglist>
+      <anchor>a88159884f5001f3204d2a47243603333</anchor>
+      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Interpolation interpolation, Extrapolation extrapolation=Extrapolation::Constant) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -16735,8 +16794,8 @@
       <type></type>
       <name>TrackView</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>a6c4832dc83542665b3049ddb86344977</anchor>
-      <arglist>(Containers::ArrayView&lt; const std::pair&lt; K, V &gt;&gt; data, Interpolation interpolation, Extrapolation extrapolation=Extrapolation::Extrapolated) noexcept</arglist>
+      <anchor>a3e1addb96b3507349b0c75ac153fb0c2</anchor>
+      <arglist>(Containers::ArrayView&lt; const std::pair&lt; K, V &gt;&gt; data, Interpolation interpolation, Extrapolation extrapolation=Extrapolation::Constant) noexcept</arglist>
     </member>
     <member kind="function">
       <type>Interpolator</type>
@@ -19937,6 +19996,13 @@
     </member>
     <member kind="function">
       <type>constexpr Float</type>
+      <name>size</name>
+      <anchorfile>classMagnum_1_1DebugTools_1_1ForceRendererOptions.html</anchorfile>
+      <anchor>a70236c5296f5ad7be7fae62eee6a9bac</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr Float</type>
       <name>scale</name>
       <anchorfile>classMagnum_1_1DebugTools_1_1ForceRendererOptions.html</anchorfile>
       <anchor>ac1d4f5ed5cc46a9fbd56d72f4db10b29</anchor>
@@ -20187,6 +20253,20 @@
       <anchorfile>classMagnum_1_1GL_1_1AbstractFramebuffer.html</anchorfile>
       <anchor>ab43f16d6e2cbfc6e92529657ffa4711d</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>PixelFormat</type>
+      <name>implementationColorReadFormat</name>
+      <anchorfile>classMagnum_1_1GL_1_1AbstractFramebuffer.html</anchorfile>
+      <anchor>a61c6330d5c1f8026d1295757569d441e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>PixelType</type>
+      <name>implementationColorReadType</name>
+      <anchorfile>classMagnum_1_1GL_1_1AbstractFramebuffer.html</anchorfile>
+      <anchor>a2464cc666198aca8b77e0f6ccc86f6c1</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>AbstractFramebuffer &amp;</type>
@@ -29241,6 +29321,13 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>BoolVector&lt; size &gt;</type>
+      <name>operator!</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>afcb151424bc10947f5a1c10d5f9e74ad</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
       <type>BoolVector&lt; size &gt; &amp;</type>
       <name>operator&amp;=</name>
       <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
@@ -29255,6 +29342,13 @@
       <arglist>(const BoolVector&lt; size &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
+      <type>BoolVector&lt; size &gt;</type>
+      <name>operator &amp;&amp;</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a59fc1338b42c90c64fc0de2b0233bde8</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
       <type>BoolVector&lt; size &gt; &amp;</type>
       <name>operator|=</name>
       <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
@@ -29266,6 +29360,13 @@
       <name>operator|</name>
       <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
       <anchor>aaa584e4819e8aa52a8332997a79f84af</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt;</type>
+      <name>operator||</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a01f549325b2a2f11e7538ac53d806e35</anchor>
       <arglist>(const BoolVector&lt; size &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
@@ -29289,6 +29390,7 @@
       <anchor>a05ecfedf1ed791f07d32b7d45d978432</anchor>
       <arglist>(Corrade::Utility::Debug &amp;debug, const BoolVector&lt; size &gt; &amp;value)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Math_1_1BoolVector" title="Boolean operations">Math-BoolVector-boolean</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Math::Color3</name>
@@ -42746,6 +42848,13 @@
       <type>ResourceManager&lt; Types... &gt; &amp;</type>
       <name>set</name>
       <anchorfile>classMagnum_1_1ResourceManager.html</anchorfile>
+      <anchor>ab50d4926359443131d873811e75d555e</anchor>
+      <arglist>(ResourceKey key, Containers::Pointer&lt; T &gt; &amp;&amp;data, ResourceDataState state, ResourcePolicy policy)</arglist>
+    </member>
+    <member kind="function">
+      <type>ResourceManager&lt; Types... &gt; &amp;</type>
+      <name>set</name>
+      <anchorfile>classMagnum_1_1ResourceManager.html</anchorfile>
       <anchor>a88eda953e109318ed301ccb91830a024</anchor>
       <arglist>(ResourceKey key, U &amp;&amp;data, ResourceDataState state, ResourcePolicy policy)</arglist>
     </member>
@@ -42755,6 +42864,13 @@
       <anchorfile>classMagnum_1_1ResourceManager.html</anchorfile>
       <anchor>a960eb341f146cebba3429f0cc32f4ea1</anchor>
       <arglist>(ResourceKey key, T *data)</arglist>
+    </member>
+    <member kind="function">
+      <type>ResourceManager&lt; Types... &gt; &amp;</type>
+      <name>set</name>
+      <anchorfile>classMagnum_1_1ResourceManager.html</anchorfile>
+      <anchor>afcca05c352f4270ce76c9d1e010ea277</anchor>
+      <arglist>(ResourceKey key, Containers::Pointer&lt; T &gt; &amp;&amp;data)</arglist>
     </member>
     <member kind="function">
       <type>ResourceManager&lt; Types... &gt; &amp;</type>
@@ -42783,6 +42899,13 @@
       <anchorfile>classMagnum_1_1ResourceManager.html</anchorfile>
       <anchor>a3dddc7be574c010c93b36601640d6404</anchor>
       <arglist>(T *data)</arglist>
+    </member>
+    <member kind="function">
+      <type>ResourceManager&lt; Types... &gt; &amp;</type>
+      <name>setFallback</name>
+      <anchorfile>classMagnum_1_1ResourceManager.html</anchorfile>
+      <anchor>a70de658d50e34a588a06abd1c10099fd</anchor>
+      <arglist>(Containers::Pointer&lt; T &gt; &amp;&amp;data)</arglist>
     </member>
     <member kind="function">
       <type>ResourceManager&lt; Types... &gt; &amp;</type>
@@ -42839,6 +42962,13 @@
       <anchorfile>classMagnum_1_1ResourceManager.html</anchorfile>
       <anchor>a8d4ce90a9cf2dc1328721e418f8e0a31</anchor>
       <arglist>(AbstractResourceLoader&lt; T &gt; *loader)</arglist>
+    </member>
+    <member kind="function">
+      <type>ResourceManager&lt; Types... &gt; &amp;</type>
+      <name>setLoader</name>
+      <anchorfile>classMagnum_1_1ResourceManager.html</anchorfile>
+      <anchor>a77f4fc71a8341b8b02716bcb43b324df</anchor>
+      <arglist>(Containers::Pointer&lt; AbstractResourceLoader&lt; T &gt;&gt; &amp;&amp;loader)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static ResourceManager&lt; Types... &gt; &amp;</type>
@@ -56963,94 +57093,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Resource&lt; GL::Buffer &gt;</name>
-    <filename>classMagnum_1_1Resource.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ab6e1f1b111342c493675cdeee71559a8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>aadfc7b76c1a904524f94b88bd3e4b9ec</anchor>
-      <arglist>(const Resource&lt; GL::Buffer, GL::Buffer &gt; &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a28c9e646a89ef0e1b7aaf41bd2126a49</anchor>
-      <arglist>(Resource&lt; GL::Buffer, GL::Buffer &gt; &amp;&amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>acaa03453bcac81107851500b0cbf2391</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Resource&lt; GL::Buffer, GL::Buffer &gt; &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a8f59ed76d3e4eb888959dba5efb853bd</anchor>
-      <arglist>(const Resource&lt; GL::Buffer, GL::Buffer &gt; &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>Resource&lt; GL::Buffer, GL::Buffer &gt; &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ac990bb8ae690e0a3b2df1126f7e9d064</anchor>
-      <arglist>(Resource&lt; GL::Buffer, GL::Buffer &gt; &amp;&amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>ResourceKey</type>
-      <name>key</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a6b2fbf46f0f26789f94b189ef641e5bb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ResourceState</type>
-      <name>state</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a6b5f26c073b9b9a03f2f66362c714e73</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator bool</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a20a00427fdb3862f1f00adadb604d15c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator GL::Buffer *</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ac17914776e1ab6dc20cd7ee443ed301f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>GL::Buffer &amp;</type>
-      <name>operator *</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ac0cdc90f2971b9ecccb358d2c2454b76</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>GL::Buffer *</type>
-      <name>operator-&gt;</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a918bd916f8acbf70781b2f9af133e8b8</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Resource&lt; GL::Mesh &gt;</name>
     <filename>classMagnum_1_1Resource.html</filename>
     <member kind="function">
@@ -69479,6 +69521,34 @@
       <arglist>(GL::Buffer &amp;buffer)</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>screenshot</name>
+      <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
+      <anchor>a66cd81ac668af7f8dffcd27ee47b2019</anchor>
+      <arglist>(GL::AbstractFramebuffer &amp;framebuffer, const std::string &amp;filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>screenshot</name>
+      <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
+      <anchor>a55b3076fc8e5c4de5aa79b544bb46424</anchor>
+      <arglist>(PluginManager::Manager&lt; Trade::AbstractImageConverter &gt; &amp;manager, GL::AbstractFramebuffer &amp;framebuffer, const std::string &amp;filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>screenshot</name>
+      <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
+      <anchor>a7882f4d876628589eda4f0f16322e4f8</anchor>
+      <arglist>(GL::AbstractFramebuffer &amp;framebuffer, PixelFormat format, const std::string &amp;filename)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>screenshot</name>
+      <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
+      <anchor>add0b77dda13df585e51a7c0e7f3c4098</anchor>
+      <arglist>(PluginManager::Manager&lt; Trade::AbstractImageConverter &gt; &amp;manager, GL::AbstractFramebuffer &amp;framebuffer, const PixelFormat format, const std::string &amp;filename)</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>textureSubImage</name>
       <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
@@ -70682,6 +70752,13 @@
       <anchorfile>namespaceMagnum_1_1ImGuiIntegration.html</anchorfile>
       <anchor>ae843621d2754d7d7645163fd4e2de80f</anchor>
       <arglist>(GL::Texture2D &amp;texture, const Vector2 &amp;size, const Range2D &amp;uvRange={{}, Vector2{1.0f}}, const Color4 &amp;tintColor=Color4{1.0f}, const Color4 &amp;borderColor={})</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>imageButton</name>
+      <anchorfile>namespaceMagnum_1_1ImGuiIntegration.html</anchorfile>
+      <anchor>a6cca662c778c7e52336ffa46f79c9348</anchor>
+      <arglist>(GL::Texture2D &amp;texture, const Vector2 &amp;size, const Range2D &amp;uvRange={{}, Vector2{1.0f}}, Int framePadding=-1, const Color4 &amp;backgroundColor={}, const Color4 &amp;tintColor=Color4{1.0f})</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -75659,11 +75736,16 @@
     <title>Changelog</title>
     <filename>changelog</filename>
     <docanchor file="changelog" title="Changes since 2019.01">changelog-latest</docanchor>
+    <docanchor file="changelog" title="New features">changelog-latest-new</docanchor>
+    <docanchor file="changelog" title="DebugTools library">changelog-latest-new-debugtools</docanchor>
+    <docanchor file="changelog" title="GL library">changelog-latest-new-gl</docanchor>
     <docanchor file="changelog" title="Changes and improvements">changelog-latest-changes</docanchor>
     <docanchor file="changelog" title="Audio library">changelog-latest-changes-audio</docanchor>
+    <docanchor file="changelog" title="DebugTools library">changelog-latest-changes-debugtools</docanchor>
     <docanchor file="changelog" title="Platform libraries">changelog-latest-changes-platform</docanchor>
     <docanchor file="changelog" title="Trade library">changelog-latest-changes-trade</docanchor>
     <docanchor file="changelog" title="Bug fixes">changelog-latest-bugfixes</docanchor>
+    <docanchor file="changelog" title="Deprecated APIs">changelog-latest-deprecated</docanchor>
     <docanchor file="changelog" title="2019.01">changelog-2019-01</docanchor>
     <docanchor file="changelog" title="Dependency changes">changelog-2019-01-dependencies</docanchor>
     <docanchor file="changelog" title="New features">changelog-2019-01-new</docanchor>
@@ -76320,6 +76402,7 @@
     <docanchor file="building-integration" title="Prepared packages">building-integration-packages</docanchor>
     <docanchor file="building-integration" title="Vcpkg packages on Windows">building-integration-packages-vcpkg</docanchor>
     <docanchor file="building-integration" title="ArchLinux packages">building-integration-packages-arch</docanchor>
+    <docanchor file="building-integration" title="MSYS2 packages">building-integration-packages-msys</docanchor>
     <docanchor file="building-integration" title="Packages for Debian, Ubuntu and derivatives">building-integration-packages-deb</docanchor>
     <docanchor file="building-integration" title="Gentoo Linux ebuilds">building-integration-packages-gentoo</docanchor>
     <docanchor file="building-integration" title="Homebrew formulas for macOS">building-integration-packages-brew</docanchor>
@@ -76361,7 +76444,11 @@
     <name>changelog-integration</name>
     <title>Integration</title>
     <filename>changelog-integration</filename>
-    <docanchor file="changelog-integration">changelog-integration-latest</docanchor>
+    <docanchor file="changelog-integration" title="Changes since 2019.01">changelog-integration-latest</docanchor>
+    <docanchor file="changelog-integration" title="New features">changelog-integration-latest-new</docanchor>
+    <docanchor file="changelog-integration" title="Build system">changelog-integration-latest-buildsystem</docanchor>
+    <docanchor file="changelog-integration" title="Bug fixes">changelog-integration-latest-bugfixes</docanchor>
+    <docanchor file="changelog-integration" title="Documentation">changelog-integration-latest-documentation</docanchor>
     <docanchor file="changelog-integration" title="2019.01">changelog-integration-2019-01</docanchor>
     <docanchor file="changelog-integration" title="Dependency changes">changelog-integration-2019-01-dependencies</docanchor>
     <docanchor file="changelog-integration" title="New features">changelog-integration-2019-01-new</docanchor>
