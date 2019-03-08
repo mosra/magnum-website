@@ -5,7 +5,7 @@ Magnum 2018.04 released --- with custom renderer support
 :category: Announcements
 :cover: {static}/img/blog/announcements/2018.04/cover.jpg
 :tags: Corrade, C++, OpenGL, Android, Metal, D3D, Vulkan, CMake, Assimp, Vcpkg,
-    glTF
+    glTF, VR
 :summary: The new release brings more flexibility to asset management and
     rendering abstractions, improves plugin handling and showcases Leap Motion
     integration.

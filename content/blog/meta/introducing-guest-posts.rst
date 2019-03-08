@@ -4,7 +4,7 @@ Introducing Guest Posts
 :date: 2018-01-22
 :category: Meta
 :cover: {static}/img/blog/introducing-guest-posts.jpg
-:tags: m.css, WebGL, WebVR
+:tags: m.css, WebGL, VR
 :summary: One of the goals while building the new Magnum website was to lower
     the barrier for contributing content. With Git and GitHub it's already very
     easy to contribute code to the project itself, so why not extend that to

@@ -4,7 +4,7 @@ Plugin usability improvements
 :date: 2018-03-27
 :category: Announcements
 :cover: {static}/img/blog/announcements/plugin-usability-improvements.jpg
-:tags: C++, CMake, Corrade, glTF, Assimp, DevIL, Vulkan, Vcpkg
+:tags: C++, CMake, Corrade, glTF, Assimp, Vulkan, Vcpkg
 :summary: I made a brief detour on the way to Vulkan support and equipped
     Magnum with features that make plugin workflow nicer and open up new
     possibilities.

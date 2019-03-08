@@ -5,7 +5,7 @@ Magnum 2018.02 released
 :category: Announcements
 :cover: {static}/img/blog/announcements/2018.02/cover.jpg
 :tags: C++, OpenGL, WebGL, WebAssembly, NaCl, Android, iOS, ANGLE, UI, Metal,
-    Vulkan, Qt, CMake, Assimp, DevIL, Vcpkg
+    Vulkan, Qt, CMake, Assimp, Vcpkg, VR
 :summary: The new Magnum milestone brings WebGL 2.0 and WebAssembly, VR
     support, lots of niceties for Windows users, iOS port, new experimental UI
     library, improved testing capabilities, support for over 80 new asset
