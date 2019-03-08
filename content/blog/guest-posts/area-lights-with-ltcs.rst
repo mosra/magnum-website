@@ -2,7 +2,7 @@ Area Lights with LTCs
 #####################
 
 :date: 2018-01-15
-:category: Guest posts
+:category: Guest Posts
 :cover: {static}/img/blog/guest-posts/area-lights-with-ltcs.jpg
 :tags: C++, rendering, PBR, OpenGL, Emscripten, WebGL
 :author: Jonathan Hale
