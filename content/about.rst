@@ -142,6 +142,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`sigman78`
         -   :gh-name:`Steeve Morin <steeve>`
         -   :gh-name:`Stefan Wasilewski <smw>`
+        -   :gh-name:`Thibault Jochem <Tryum>`
         -   :gh-name:`Thomas Tissot-Dupont <dolphineye>`
         -   :gh-name:`Tobias Stein <NussknackerXXL>`
         -   :gh-name:`Tomáš Skřivan <lecopivo>`
