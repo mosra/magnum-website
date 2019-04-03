@@ -1,0 +1,210 @@
+<table class="m-table m-fullwidth">
+<thead>
+  <tr>
+    <th></th>
+    <th>libstdc++ 8.2</th>
+    <th>libc++ 7.0.1</th>
+    <th>MSVC STL 2017</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/utility/pair" class="m-flat">std::pair</a> <a href="#id16" class="m-footnote">1</a><br/>
+      <span class="m-text m-small"><code>&lt;utility&gt;</code></span>
+    </th>
+    <td class="m-success m-text-center">
+      …<br/>
+      <span class="m-text m-small">2 197 LoC</span>
+    </td>
+    <td class="m-warning m-text-center">
+      …<br/>
+      <span class="m-text m-small">4 265 LoC</span>
+    </td>
+    <td class="m-success m-text-center">
+      …<br/>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/utility/initializer_list" class="m-flat">std::initializer_list</a> <a href="#id16" class="m-footnote">1</a><br/>
+      <span class="m-text m-small"><code>&lt;initializer_list&gt;</code></span>
+    </th>
+    <td class="m-success m-text-center">
+      …<br/>
+      <span class="m-text m-small">53 LoC</span>
+    </td>
+    <td class="m-success m-text-center">
+      …<br/>
+      <span class="m-text m-small">101 LoC</span>
+    </td>
+    <td class="m-success m-text-center">
+      …<br/>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/container/list" class="m-flat">std::list</a> <a href="#id17" class="m-footnote">2</a><br/>
+      <span class="m-text m-small"><code>&lt;list&gt;</code>, 6 749 LoC</span>
+    </th>
+    <td class="m-danger m-text-center">
+      ✘<br/>
+    </td>
+    <td class="m-danger m-text-center">
+      ✘<br/>
+    </td>
+    <td class="m-danger m-text-center">
+      ✘<br/>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/container/forward_list" class="m-flat">std::forward_list</a> <a href="#id17" class="m-footnote">2</a><br/>
+      <span class="m-text m-small"><code>&lt;forward_list&gt;</code>, 7 036 LoC</span>
+    </th>
+    <td class="m-danger m-text-center">
+      ✘<br/>
+    </td>
+    <td class="m-danger m-text-center">
+      ✘<br/>
+    </td>
+    <td class="m-danger m-text-center">
+      ✘<br/>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/string/basic_string" class="m-flat">std::string</a><br/>
+      <span class="m-text m-small"><code>&lt;string&gt;</code>, 11 576 LoC</span>
+    </th>
+    <td class="m-success m-text-center">
+      ✔ <a href="#id18" class="m-footnote">3</a><br/>
+      <span class="m-text m-small"><code>&lt;bits/stringfwd.h&gt;</code>, 47 LoC</span>
+    </td>
+    <td class="m-success m-text-center">
+      ✔ <a href="#id19" class="m-footnote">4</a><br/>
+      <span class="m-text m-small"><code>&lt;iosfwd&gt;</code>, 741 LoC</span>
+    </td>
+    <td class="m-danger m-text-center">
+      ✘ <a href="#id20" class="m-footnote">5</a><br/>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/string/basic_string_view" class="m-flat">std::string_view</a> <a href="#id21" class="m-footnote">6</a><br/>
+      <span class="m-text m-small"><code>&lt;string_view&gt;</code>, <abbr title="C++17">7 876 LoC</abbr></span>
+    </th>
+    <td class="m-danger m-text-center">
+      ✘ <br/>
+    </td>
+    <td class="m-danger m-text-center">
+      ✘ <br/>
+    </td>
+    <td class="m-danger m-text-center">
+      ✘ <br/>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/container/array" class="m-flat">std::array</a><br/>
+      <span class="m-text m-small"><code>&lt;array&gt;</code>, 15 003 LoC</span>
+    </th>
+    <td class="m-danger m-text-center">
+      ✘ <a href="#id22" class="m-footnote">7</a><br/>
+    </td>
+    <td class="m-success m-text-center">
+      ✔ <a href="#id23" class="m-footnote">8</a><br/>
+      <span class="m-text m-small"><code>&lt;__tuple&gt;</code>, 2 455 LoC</span>
+    </td>
+    <td class="m-success m-text-center">
+      ✔ <a href="#id24" class="m-footnote">9</a><br/>
+      <span class="m-text m-small"><code>&lt;utility&gt;</code></span>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/utility/tuple" class="m-flat">std::tuple</a><br/>
+      <span class="m-text m-small"><code>&lt;tuple&gt;</code>, 13 444 LoC</span>
+    </th>
+    <td class="m-success m-text-center">
+      ✔ <a href="#id25" class="m-footnote">10</a><br/>
+      <span class="m-text m-small"><code>&lt;type_traits&gt;</code>, 1 615 LoC</span>
+    </td>
+    <td class="m-success m-text-center">
+      ✔ <a href="#id23" class="m-footnote">8</a><br/>
+      <span class="m-text m-small"><code>&lt;__tuple&gt;</code>, 2 455 LoC</span>
+    </td>
+    <td class="m-success m-text-center">
+      ✔ <a href="#id24" class="m-footnote">9</a><br/>
+      <span class="m-text m-small"><code>&lt;utility&gt;</code></span>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/container/vector" class="m-flat">std::vector</a><br/>
+      <span class="m-text m-small"><code>&lt;vector&gt;</code>, 8 613 LoC</span>
+    </th>
+    <td class="m-danger m-text-center">
+      ✘ <a href="#id26" class="m-footnote">11</a><br/>
+    </td>
+    <td class="m-success m-text-center">
+      ✔ <a href="#id27" class="m-footnote">12</a><br/>
+      <span class="m-text m-small"><code>&lt;iosfwd&gt;</code>, 741 LoC</span>
+    </td>
+    <td class="m-danger m-text-center">
+      ✘ <a href="#id26" class="m-footnote">11</a><br/>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/container/span" class="m-flat">std::span</a><br/>
+      <span class="m-text m-small"><code>&lt;span&gt;</code>, <abbr title="C++20, libc++">21 696 LoC</abbr></span>
+    </th>
+    <td class="m-dim m-text-center">
+      ∅ <a href="#id28" class="m-footnote">13</a><br/>
+    </td>
+    <td class="m-danger m-text-center">
+      ✘ <a href="#id29" class="m-footnote">14</a><br/>
+    </td>
+    <td class="m-dim m-text-center">
+      ∅ <a href="#id28" class="m-footnote">13</a><br/>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/container/set" class="m-flat">std::[multi]set</a> <a href="#id30" class="m-footnote">15</a><br/>
+      <span class="m-text m-small"><code>&lt;set&gt;</code>, 8 170 LoC</span>
+    </th>
+    <td class="m-danger m-text-center">✘</td>
+    <td class="m-danger m-text-center">✘</td>
+    <td class="m-danger m-text-center">✘</td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/container/map" class="m-flat">std::[multi]map</a> <a href="#id30" class="m-footnote">15</a><br/>
+      <span class="m-text m-small"><code>&lt;map&gt;</code>, 15 796 LoC</span>
+    </th>
+    <td class="m-danger m-text-center">✘</td>
+    <td class="m-danger m-text-center">✘</td>
+    <td class="m-danger m-text-center">✘</td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/container/unordered_set" class="m-flat">std::unordered_[multi]set</a> <a href="#id30" class="m-footnote">15</a><br/>
+      <span class="m-text m-small"><code>&lt;unordered_set&gt;</code>, 17 114 LoC</span>
+    </th>
+    <td class="m-danger m-text-center">✘</td>
+    <td class="m-danger m-text-center">✘</td>
+    <td class="m-danger m-text-center">✘</td>
+  </tr>
+  <tr>
+    <th>
+      <a href="https://en.cppreference.com/w/cpp/container/unordered_map" class="m-flat">std::unordered_[multi]map</a> <a href="#id30" class="m-footnote">15</a><br/>
+      <span class="m-text m-small"><code>&lt;unordered_map&gt;</code>, 17 180 LoC</span>
+    </th>
+    <td class="m-danger m-text-center">✘</td>
+    <td class="m-danger m-text-center">✘</td>
+    <td class="m-danger m-text-center">✘</td>
+  </tr>
+</tbody>
+</table>

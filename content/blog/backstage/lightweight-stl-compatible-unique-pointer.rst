@@ -4,7 +4,7 @@ Lightweight but still STL-compatible unique pointer
 :date: 2019-01-16
 :modified: 2019-01-28
 :category: Backstage
-:tags: C++
+:tags: C++, singles
 :summary: Magnum got a new unique pointer implementation that's much more
     lightweight with better debug performance and compile times, but is still
     fully compatible with :dox:`std::unique_ptr`.

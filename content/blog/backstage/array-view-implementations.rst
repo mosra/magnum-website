@@ -4,7 +4,7 @@ Array view implementations in Magnum
 :date: 2019-02-18
 :modified: 2019-02-19
 :category: Backstage
-:tags: C++, Corrade, Eigen, GLM, ImGui, Vulkan
+:tags: C++, Corrade, Eigen, GLM, ImGui, Vulkan, singles
 :summary: Similarly to the pointer and reference wrappers
     `described in the last article <{filename}lightweight-stl-compatible-unique-pointer.rst>`_,
     Magnum's array views recently received STL compatibility as well. Let's
