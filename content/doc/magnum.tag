@@ -4,7 +4,7 @@
     <name>AbstractUiShader.h</name>
     <path>/home/mosra/Code/magnum-extras/src/Magnum/Ui/</path>
     <filename>AbstractUiShader_8h</filename>
-    <includes id="GL_2AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="no" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
+    <includes id="AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="no" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
     <includes id="Matrix3_8h" name="Matrix3.h" local="no" imported="no">Magnum/Math/Matrix3.h</includes>
     <class kind="class">Magnum::Ui::AbstractUiShader</class>
     <namespace>Magnum</namespace>
@@ -331,7 +331,7 @@
     <path>/home/mosra/Code/magnum-extras/src/Magnum/Ui/</path>
     <filename>UserInterface_8h</filename>
     <includes id="GL_2Buffer_8h" name="Buffer.h" local="no" imported="no">Magnum/GL/Buffer.h</includes>
-    <includes id="GL_2Texture_8h" name="Texture.h" local="no" imported="no">Magnum/GL/Texture.h</includes>
+    <includes id="Texture_8h" name="Texture.h" local="no" imported="no">Magnum/GL/Texture.h</includes>
     <includes id="Text_8h" name="Text.h" local="no" imported="no">Magnum/Text/Text.h</includes>
     <includes id="AbstractUiShader_8h" name="AbstractUiShader.h" local="yes" imported="no">Magnum/Ui/AbstractUiShader.h</includes>
     <includes id="BasicUserInterface_8h" name="BasicUserInterface.h" local="yes" imported="no">Magnum/Ui/BasicUserInterface.h</includes>
@@ -391,37 +391,6 @@
       <anchorfile>namespaceMagnum_1_1Ui.html</anchorfile>
       <anchor>ad24ec2ad8310d61add110dbe738e8566</anchor>
       <arglist>(Debug &amp;debug, WidgetFlags value)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>ConvertShape.h</name>
-    <path>/home/mosra/Code/magnum-integration/src/Magnum/BulletIntegration/</path>
-    <filename>ConvertShape_8h</filename>
-    <includes id="Magnum_8h" name="Magnum.h" local="no" imported="no">Magnum/Magnum.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="no" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <includes id="SceneGraph_8h" name="SceneGraph.h" local="no" imported="no">Magnum/SceneGraph/SceneGraph.h</includes>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::BulletIntegration</namespace>
-    <member kind="function">
-      <type>Shapes::AbstractShape3D *</type>
-      <name>convertShape</name>
-      <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>a1dde6f0e2a6682369e75b7ab8e7ebe89</anchor>
-      <arglist>(SceneGraph::AbstractBasicObject3D&lt; btScalar &gt; &amp;object, const btCollisionShape &amp;shape, Shapes::ShapeGroup3D *shapes=nullptr)</arglist>
-    </member>
-    <member kind="function">
-      <type>Shapes::Shape&lt; Shapes::Box3D &gt; *</type>
-      <name>convertShape</name>
-      <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>abdb0da4dbc47010da441ffaa2ae21c9f</anchor>
-      <arglist>(SceneGraph::AbstractBasicObject3D&lt; btScalar &gt; &amp;object, const btBoxShape &amp;box, Shapes::ShapeGroup3D *shapes=nullptr)</arglist>
-    </member>
-    <member kind="function">
-      <type>Shapes::Shape&lt; Shapes::Sphere3D &gt; *</type>
-      <name>convertShape</name>
-      <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>af4a9aaecf5768855ae183b32b8ba29fa</anchor>
-      <arglist>(SceneGraph::AbstractBasicObject3D&lt; btScalar &gt; &amp;object, const btSphereShape &amp;sphere, Shapes::ShapeGroup3D *shapes=nullptr)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -508,6 +477,15 @@
     <class kind="class">Magnum::DartIntegration::World</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::DartIntegration</namespace>
+  </compound>
+  <compound kind="file">
+    <name>GeometryIntegration.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/EigenIntegration/</path>
+    <filename>GeometryIntegration_8h</filename>
+    <includes id="Quaternion_8h" name="Quaternion.h" local="no" imported="no">Magnum/Math/Quaternion.h</includes>
+    <includes id="integration_2src_2Magnum_2EigenIntegration_2Integration_8h" name="Integration.h" local="yes" imported="no">Magnum/EigenIntegration/Integration.h</includes>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::Math</namespace>
   </compound>
   <compound kind="file">
     <name>GtcIntegration.h</name>
@@ -614,7 +592,7 @@
     <name>Session.h</name>
     <path>/home/mosra/Code/magnum-integration/src/Magnum/OvrIntegration/</path>
     <filename>Session_8h</filename>
-    <includes id="GL_2Texture_8h" name="Texture.h" local="no" imported="no">Magnum/GL/Texture.h</includes>
+    <includes id="Texture_8h" name="Texture.h" local="no" imported="no">Magnum/GL/Texture.h</includes>
     <includes id="Conversion_8h" name="Conversion.h" local="yes" imported="no">Magnum/OvrIntegration/Conversion.h</includes>
     <includes id="OvrIntegration_8h" name="OvrIntegration.h" local="yes" imported="no">Magnum/OvrIntegration/OvrIntegration.h</includes>
     <class kind="class">Magnum::OvrIntegration::PoseState</class>
@@ -747,7 +725,7 @@
     <member kind="enumvalue">
       <name>UnknownIdentifier</name>
       <anchorfile>namespaceMagnum_1_1OpenDdl.html</anchorfile>
-      <anchor>ad05cec250b41b8c4b7388975c58ef0b4a04e754b073ff12e4cd5c65c74b0f73c4</anchor>
+      <anchor>a531226bc34f25ada135b161606257b8aa04e754b073ff12e4cd5c65c74b0f73c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -823,15 +801,6 @@
     <filename>AssimpImporter_8h</filename>
     <includes id="Trade_2AbstractImporter_8h" name="AbstractImporter.h" local="no" imported="no">Magnum/Trade/AbstractImporter.h</includes>
     <class kind="class">Magnum::Trade::AssimpImporter</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Trade</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ColladaImporter.h</name>
-    <path>/home/mosra/Code/magnum-plugins/src/MagnumPlugins/ColladaImporter/</path>
-    <filename>ColladaImporter_8h</filename>
-    <includes id="Trade_2AbstractImporter_8h" name="AbstractImporter.h" local="no" imported="no">Magnum/Trade/AbstractImporter.h</includes>
-    <class kind="class">Magnum::Trade::ColladaImporter</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Trade</namespace>
   </compound>
@@ -936,373 +905,373 @@
     <member kind="enumvalue">
       <name>Animation</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03af6304a6d8f2b01e13c2c03605012974f</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4af6304a6d8f2b01e13c2c03605012974f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Atten</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a3315a33f9cb5091a3b345490b505ad98</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a3315a33f9cb5091a3b345490b505ad98</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BoneCountArray</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a5e03287e50a9f6c52a96e9640a421c39</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a5e03287e50a9f6c52a96e9640a421c39</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BoneIndexArray</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a714317d24ba7565cdf496364d16a9685</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a714317d24ba7565cdf496364d16a9685</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BoneNode</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a7befe320b8fca7e7dcdec2b0f9d499e4</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a7befe320b8fca7e7dcdec2b0f9d499e4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BoneRefArray</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a6812f44800f182c8e94f5491cac105c6</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a6812f44800f182c8e94f5491cac105c6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BoneWeightArray</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a56ee38e9394b75f64e62e6ced8742b54</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a56ee38e9394b75f64e62e6ced8742b54</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CameraNode</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a79f93a7971247339463c3443d84cc6ed</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a79f93a7971247339463c3443d84cc6ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CameraObject</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a9d30b4eba79b224629783fff2d715542</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a9d30b4eba79b224629783fff2d715542</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Clip</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a5e5ba5fbc4f9f16da02dbc66e58e275a</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a5e5ba5fbc4f9f16da02dbc66e58e275a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Color</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03aa305118a547fad84e384a955e9f0a1b1</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4aa305118a547fad84e384a955e9f0a1b1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Extension</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a449c75f33e58cc2eb597c310cfeb5fac</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a449c75f33e58cc2eb597c310cfeb5fac</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>GeometryNode</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03aa8b521e7303f947b6399cd3cd89add8d</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4aa8b521e7303f947b6399cd3cd89add8d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>GeometryObject</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03ab9c0282c868cfceb40b18595ec09229e</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4ab9c0282c868cfceb40b18595ec09229e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IndexArray</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a6f887a76d1a7c1feec058b6246e83416</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a6f887a76d1a7c1feec058b6246e83416</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Key</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a6dad8335d3b0813d55a4c60ef049ffc8</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a6dad8335d3b0813d55a4c60ef049ffc8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>LightNode</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03ac8d133985294c96dff732ffbbee59552</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4ac8d133985294c96dff732ffbbee59552</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>LightObject</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a5de337af814f611451f4beeefdcc9da3</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a5de337af814f611451f4beeefdcc9da3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Material</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a2982962fd9e99b00b4359b514aee881a</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a2982962fd9e99b00b4359b514aee881a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MaterialRef</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03af39c57ecb85b2f39f559f692771ac749</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4af39c57ecb85b2f39f559f692771ac749</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Mesh</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a6d661040b1fb0e10b974fe00b7bf3f8c</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a6d661040b1fb0e10b974fe00b7bf3f8c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Metric</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a72fedae492949f109c5a671714ea11e6</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a72fedae492949f109c5a671714ea11e6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Morph</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a8226a1c8b12b430b159901155419f1b8</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a8226a1c8b12b430b159901155419f1b8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MorphWeight</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a9fc57ac008463f0658dd45d2da01c799</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a9fc57ac008463f0658dd45d2da01c799</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Name</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a9fb68c4b6dde8bbfa5a0338529adc39a</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a9fb68c4b6dde8bbfa5a0338529adc39a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Node</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03adf1cf043fcf03377aa66d637fa39452b</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4adf1cf043fcf03377aa66d637fa39452b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>ObjectRef</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a49193eba0a0ec0e3b7896fa9aeed31ff</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a49193eba0a0ec0e3b7896fa9aeed31ff</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Param</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03afa110c5e2ac4a8bc1fa05c1f44690fda</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4afa110c5e2ac4a8bc1fa05c1f44690fda</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Rotation</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03afea1cb9c8299c7ec22c61165fc21c689</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4afea1cb9c8299c7ec22c61165fc21c689</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Scale</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a55d05b90c547fdab267e7b295fee5b87</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a55d05b90c547fdab267e7b295fee5b87</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Skeleton</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03af6d3ca18ff250a79bc6baba3dc217b0b</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4af6d3ca18ff250a79bc6baba3dc217b0b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Skin</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a7e6348fd496b7cf7023295dc02d08063</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a7e6348fd496b7cf7023295dc02d08063</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Texture</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a3d7bd43b2ed5863a1ba7e13e929b34f0</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a3d7bd43b2ed5863a1ba7e13e929b34f0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Time</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a25494f92a1dc0c0fb91402b35a7fa813</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a25494f92a1dc0c0fb91402b35a7fa813</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Track</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a794e6449746fc499f0a1e63cd1a02962</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a794e6449746fc499f0a1e63cd1a02962</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Transform</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03ae734064831130b08157f87eb2fec5c31</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4ae734064831130b08157f87eb2fec5c31</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Translation</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a914fd569607f44f239d3f603a4d13ea9</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a914fd569607f44f239d3f603a4d13ea9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Value</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a13a96ad06820240b8ffb3f97164232a0</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a13a96ad06820240b8ffb3f97164232a0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>VertexArray</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03ac135467232e5951ff43f8067e418447f</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4ac135467232e5951ff43f8067e418447f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>applic</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a9a26f4e136d781b2c1848520ae3141f1</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a9a26f4e136d781b2c1848520ae3141f1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>attrib</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a516e438559e8f2bab01700d47aa6f197</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a516e438559e8f2bab01700d47aa6f197</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>begin</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466ae6626e94c1015e5b49fd45e1dd92d35d</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313ae6626e94c1015e5b49fd45e1dd92d35d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>clip</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a2dce971eae3a260036e6d9713d772486</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a2dce971eae3a260036e6d9713d772486</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>curve</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466ad557c97bc0247e863099b2921b606775</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313ad557c97bc0247e863099b2921b606775</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>end</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a7d34c05f5781373d6c7fac56d18f7d53</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a7d34c05f5781373d6c7fac56d18f7d53</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>front</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a8a5263bb2eed3a692e0f4f195a82e18c</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a8a5263bb2eed3a692e0f4f195a82e18c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>index</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466aadc159aa83eeca7f6445d433a33e2aae</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313aadc159aa83eeca7f6445d433a33e2aae</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>key</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a9bf1cb45e2b8651c9e22d7446abcd4fc</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a9bf1cb45e2b8651c9e22d7446abcd4fc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>kind</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466ac06e90780bba6ce7025c18dadf06d184</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313ac06e90780bba6ce7025c18dadf06d184</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>lod</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a193e71c288b7ae8e54e47b42e20921fb</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a193e71c288b7ae8e54e47b42e20921fb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>material</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a154577709fcaa2cd5c0c7f938cb623e5</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a154577709fcaa2cd5c0c7f938cb623e5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>morph</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466ac552ac8ad16bad93b1b626ff5a87c0ac</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313ac552ac8ad16bad93b1b626ff5a87c0ac</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>motion_blur</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a224f46f7716477f92e775f86fdad3f61</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a224f46f7716477f92e775f86fdad3f61</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>object</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466ae8c5cec062765c72668d1e378c168087</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313ae8c5cec062765c72668d1e378c168087</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>primitive</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a8153a3da7f9d0d647723ecba0a285ce2</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a8153a3da7f9d0d647723ecba0a285ce2</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>restart</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a71f9f08ca8c42c41b73c0e637b653bba</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a71f9f08ca8c42c41b73c0e637b653bba</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>shadow</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466aded2827f0f93ee44c700b4b3e12ec82e</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313aded2827f0f93ee44c700b4b3e12ec82e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>target</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a596bb86cf21072c10f8650dab16d390d</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a596bb86cf21072c10f8650dab16d390d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>texcoord</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a33f759f009a97cf9ef59b5995aa3ffb8</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a33f759f009a97cf9ef59b5995aa3ffb8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>two_sided</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a821084236c6eedf8d87a18d4b172f187</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a821084236c6eedf8d87a18d4b172f187</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>type</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a418aa48c09c18d8ea99d0917ee51ef7c</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a418aa48c09c18d8ea99d0917ee51ef7c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>visible</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466aa998be9a9713013727605f355b066820</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313aa998be9a9713013727605f355b066820</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1389,294 +1358,12 @@
     <namespace>Magnum::Trade</namespace>
   </compound>
   <compound kind="file">
-    <name>AbstractFramebuffer.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>AbstractFramebuffer_8h</filename>
-    <includes id="GL_2AbstractFramebuffer_8h" name="AbstractFramebuffer.h" local="yes" imported="no">Magnum/GL/AbstractFramebuffer.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>AbstractFramebuffer.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2AbstractFramebuffer_8h</filename>
-    <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
-    <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
-    <includes id="Range_8h" name="Range.h" local="yes" imported="no">Magnum/Math/Range.h</includes>
-    <class kind="class">Magnum::GL::AbstractFramebuffer</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Containers::EnumSet&lt; FramebufferClear &gt;</type>
-      <name>FramebufferClearMask</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>ab01cae3ec614cfc08dc9cb57b7474bbe</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Containers::EnumSet&lt; FramebufferBlit &gt;</type>
-      <name>FramebufferBlitMask</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a31205b9572d4cd97ed30455a17ace1d7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::FramebufferClear</type>
-      <name>FramebufferClear</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ac62ba24bc8ba66ad3d27822e9dd8c570</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::FramebufferClearMask</type>
-      <name>FramebufferClearMask</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a40aacfa4fc300bd885fe89b65f7ac988</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::FramebufferBlit</type>
-      <name>FramebufferBlit</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ac2e857af04c513e948470a35f328f6f1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::FramebufferBlitMask</type>
-      <name>FramebufferBlitMask</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a70c7054c2bf605a23f13e433a986e055</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::FramebufferBlitFilter</type>
-      <name>FramebufferBlitFilter</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>af4557643ec84d86663d9e8f79e58b11c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::FramebufferTarget</type>
-      <name>FramebufferTarget</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a757234133f6a4429b67c31563c8c386e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::AbstractFramebuffer</type>
-      <name>AbstractFramebuffer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ac09b9f14920cba4a9f6c1bfa5d187e3c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>FramebufferClear</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a84c9d96fc42070ef5cd7238baac5def3</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a84c9d96fc42070ef5cd7238baac5def3acb5feb1b7314637725a2e73bdc9f7295">Color</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a84c9d96fc42070ef5cd7238baac5def3a675056ad1441b6375b2c5abd48c27ef1">Depth</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a84c9d96fc42070ef5cd7238baac5def3ad821e7ccd4d4c25a491ba1a9ea248895">Stencil</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>FramebufferBlit</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a7b31579beaad957300391508ac385877</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a7b31579beaad957300391508ac385877acb5feb1b7314637725a2e73bdc9f7295">Color</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a7b31579beaad957300391508ac385877a675056ad1441b6375b2c5abd48c27ef1">Depth</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a7b31579beaad957300391508ac385877ad821e7ccd4d4c25a491ba1a9ea248895">Stencil</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>FramebufferBlitFilter</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a3b5bb8f87a28f939bd015e1cc76c7f2c</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a3b5bb8f87a28f939bd015e1cc76c7f2ca60494f02d440f316319dd0fad40ad007">Nearest</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a3b5bb8f87a28f939bd015e1cc76c7f2ca32a843da6ea40ab3b17a3421ccdf671b">Linear</enumvalue>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>FramebufferTarget</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a4eed8d34b2909ba469a622ce860b43f0</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a4eed8d34b2909ba469a622ce860b43f0a7a1a5f3e79fdc91edf2f5ead9d66abb4">Read</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a4eed8d34b2909ba469a622ce860b43f0a2d03c2d5a7ec65ef4619e0582c272ec2">Draw</enumvalue>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>AbstractObject.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>AbstractObject_8h</filename>
-    <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>AbstractObject.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2AbstractObject_8h</filename>
-    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
-    <class kind="class">Magnum::GL::AbstractObject</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Containers::EnumSet&lt; ObjectFlag &gt;</type>
-      <name>ObjectFlags</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a2538f8905d17b9d887491e9211ca8755</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::ObjectFlag</type>
-      <name>ObjectFlag</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>aa7728baa155d0195c1359bd2e84b36a6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::ObjectFlags</type>
-      <name>ObjectFlags</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>abe05b4789e16f5e28fcdb0d1c299aa82</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::AbstractObject</type>
-      <name>AbstractObject</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a2047380c82680b5c3ce5fb2685b00b00</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ObjectFlag</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>ac3ca8b3f7b3943f4220ff066d02ae4d2</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ac3ca8b3f7b3943f4220ff066d02ae4d2a0eceeb45861f9585dd7a97a3e36f85c6">Created</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ac3ca8b3f7b3943f4220ff066d02ae4d2a50dd1297fc0f8a96753257b224b1e5b8">DeleteOnDestruction</enumvalue>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>AbstractObject.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/SceneGraph/</path>
-    <filename>SceneGraph_2AbstractObject_8h</filename>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="SceneGraph_8h" name="SceneGraph.h" local="yes" imported="no">Magnum/SceneGraph/SceneGraph.h</includes>
-    <class kind="class">Magnum::SceneGraph::AbstractObject</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::SceneGraph</namespace>
-    <member kind="typedef">
-      <type>AbstractObject&lt; 2, T &gt;</type>
-      <name>AbstractBasicObject2D</name>
-      <anchorfile>namespaceMagnum_1_1SceneGraph.html</anchorfile>
-      <anchor>a9ba6f965849b32eec2a4bf716f57c0f6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>AbstractBasicObject2D&lt; Float &gt;</type>
-      <name>AbstractObject2D</name>
-      <anchorfile>namespaceMagnum_1_1SceneGraph.html</anchorfile>
-      <anchor>a4dc2f3b5d4fa5de326d57fd394bc02f8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>AbstractObject&lt; 3, T &gt;</type>
-      <name>AbstractBasicObject3D</name>
-      <anchorfile>namespaceMagnum_1_1SceneGraph.html</anchorfile>
-      <anchor>afcd46917ca137989e38c5f756a1d020b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>AbstractBasicObject3D&lt; Float &gt;</type>
-      <name>AbstractObject3D</name>
-      <anchorfile>namespaceMagnum_1_1SceneGraph.html</anchorfile>
-      <anchor>aebce906e64701c696f6ee3b2b01ae348</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>AbstractQuery.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>AbstractQuery_8h</filename>
-    <includes id="GL_2AbstractQuery_8h" name="AbstractQuery.h" local="yes" imported="no">Magnum/GL/AbstractQuery.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>AbstractQuery.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2AbstractQuery_8h</filename>
-    <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
-    <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
-    <class kind="class">Magnum::GL::AbstractQuery</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::AbstractQuery</type>
-      <name>AbstractQuery</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a9a45f77cd3c20568f72aeafce9fe6fa2</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>AbstractResourceLoader.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/</path>
     <filename>AbstractResourceLoader_8h</filename>
     <includes id="ResourceManager_8h" name="ResourceManager.h" local="yes" imported="no">Magnum/ResourceManager.h</includes>
     <class kind="class">Magnum::AbstractResourceLoader</class>
     <namespace>Magnum</namespace>
-  </compound>
-  <compound kind="file">
-    <name>AbstractShaderProgram.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>AbstractShaderProgram_8h</filename>
-    <includes id="GL_2AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="yes" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>AbstractShaderProgram.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2AbstractShaderProgram_8h</filename>
-    <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
-    <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
-    <includes id="GL_2Attribute_8h" name="Attribute.h" local="yes" imported="no">Magnum/GL/Attribute.h</includes>
-    <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
-    <class kind="class">Magnum::GL::AbstractShaderProgram</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::AbstractShaderProgram</type>
-      <name>AbstractShaderProgram</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>adc86d8619526986d7728b15c9d5fac09</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>AbstractTexture.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>AbstractTexture_8h</filename>
-    <includes id="GL_2AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>AbstractTexture.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2AbstractTexture_8h</filename>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
-    <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
-    <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
-    <class kind="class">Magnum::GL::AbstractTexture</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::AbstractTexture</type>
-      <name>AbstractTexture</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a6c0c9b3633b2953d6a476d4897f31e2b</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>Animation.h</name>
@@ -2132,51 +1819,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>Attribute.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>Attribute_8h</filename>
-    <includes id="GL_2Attribute_8h" name="Attribute.h" local="yes" imported="no">Magnum/GL/Attribute.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>Attribute.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2Attribute_8h</filename>
-    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
-    <class kind="class">Magnum::GL::Attribute</class>
-    <class kind="class">Magnum::GL::DynamicAttribute</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::Attribute&lt; location, T &gt;</type>
-      <name>Attribute</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>afc5676fb1670cfcdbf7dc2d95edcdbd5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::DynamicAttribute</type>
-      <name>DynamicAttribute</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ab07d47d63c3cce3c8a2a10f1c3c6946e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a0eb7a0597aa54dac06f74058f7591913</anchor>
-      <arglist>(Debug &amp;debug, Attribute&lt; T &gt;::Components)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a74a95cad0d549a952ac6a097e5c92b0b</anchor>
-      <arglist>(Debug &amp;debug, Attribute&lt; T &gt;::DataType)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>AbstractImporter.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Audio/</path>
     <filename>Audio_2AbstractImporter_8h</filename>
@@ -2192,18 +1834,16 @@
     <filename>Trade_2AbstractImporter_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="Trade_8h" name="Trade.h" local="yes" imported="no">Magnum/Trade/Trade.h</includes>
+    <includes id="FileCallback_8h" name="FileCallback.h" local="yes" imported="no">Magnum/FileCallback.h</includes>
     <class kind="class">Magnum::Trade::AbstractImporter</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Trade</namespace>
-    <member kind="enumeration">
-      <type></type>
+    <member kind="typedef">
+      <type>InputFileCallbackPolicy</type>
       <name>ImporterFileCallbackPolicy</name>
       <anchorfile>namespaceMagnum_1_1Trade.html</anchorfile>
-      <anchor>af9a8bd3c6961615c1ffe72f45a394ba6</anchor>
+      <anchor>a4f346999e9e7d01b160fdefd9916eebf</anchor>
       <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1Trade.html" anchor="af9a8bd3c6961615c1ffe72f45a394ba6a21a5bcd08cdd088335d18f69f74653cb">LoadTemporary</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Trade.html" anchor="af9a8bd3c6961615c1ffe72f45a394ba6aec8db16682dce388085f20c20903b0cf">LoadPernament</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Trade.html" anchor="af9a8bd3c6961615c1ffe72f45a394ba6ad3d2e617335f08df83599665eef8a418">Close</enumvalue>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
@@ -2218,13 +1858,6 @@
       <anchorfile>namespaceMagnum_1_1Trade.html</anchorfile>
       <anchor>af013d6d5cd121a77359f53e7d3ccbdf4</anchor>
       <arglist>(Debug &amp;debug, AbstractImageConverter::Features value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1Trade.html</anchorfile>
-      <anchor>af2de5edbc894166844a62c6825119214</anchor>
-      <arglist>(Debug &amp;debug, ImporterFileCallbackPolicy value)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -2248,12 +1881,6 @@
   </compound>
   <compound kind="file">
     <name>Buffer.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>Buffer_8h</filename>
-    <includes id="GL_2Buffer_8h" name="Buffer.h" local="yes" imported="no">Magnum/GL/Buffer.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>Buffer.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
     <filename>GL_2Buffer_8h</filename>
     <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
@@ -2262,20 +1889,6 @@
     <class kind="class">Magnum::GL::Buffer</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferUsage</type>
-      <name>BufferUsage</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ad5ff579e344f7bfada18fc04ed5dd09c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Buffer</type>
-      <name>Buffer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a499f60d95b2d3bf590b1f532b94aff5c</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="enumeration">
       <type></type>
       <name>BufferUsage</name>
@@ -2384,18 +1997,13 @@
   </compound>
   <compound kind="file">
     <name>Context.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>src_2Magnum_2Context_8h</filename>
-    <includes id="src_2Magnum_2GL_2Context_8h" name="Context.h" local="yes" imported="no">Magnum/GL/Context.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>Context.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
     <filename>src_2Magnum_2GL_2Context_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
+    <includes id="BoolVector_8h" name="BoolVector.h" local="yes" imported="no">Magnum/Math/BoolVector.h</includes>
     <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
     <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <class kind="class">Magnum::GL::Extension</class>
     <class kind="class">Magnum::GL::Context</class>
     <namespace>Magnum</namespace>
@@ -2414,34 +2022,6 @@
       <anchorfile>src_2Magnum_2GL_2Context_8h.html</anchorfile>
       <anchor>abd755e7fcddc40b82313ff4608d6c8ff</anchor>
       <arglist>(extension)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>MAGNUM_ASSERT_VERSION_SUPPORTED</name>
-      <anchorfile>src_2Magnum_2GL_2Context_8h.html</anchorfile>
-      <anchor>a43dfc57e99498cfd4c03755d334ae2e8</anchor>
-      <arglist>(version)</arglist>
-    </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>MAGNUM_ASSERT_EXTENSION_SUPPORTED</name>
-      <anchorfile>src_2Magnum_2GL_2Context_8h.html</anchorfile>
-      <anchor>a3c3b05437f93e6ac8b43ac95ac410f63</anchor>
-      <arglist>(extension)</arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Extension</type>
-      <name>Extension</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ac2190a3fd94a312c7dfbbe49c9703fd1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Context</type>
-      <name>Context</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a9af7c1b397445ab9dac44b84ac01d2da</anchor>
-      <arglist></arglist>
     </member>
     <member kind="function">
       <type>Debug &amp;</type>
@@ -2474,17 +2054,11 @@
   </compound>
   <compound kind="file">
     <name>Context.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Platform/</path>
-    <filename>src_2Magnum_2Platform_2Context_8h</filename>
-    <includes id="GLContext_8h" name="GLContext.h" local="yes" imported="no">Magnum/Platform/GLContext.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>Context.h</name>
     <path>/home/mosra/Code/magnum-integration/src/Magnum/ImGuiIntegration/</path>
     <filename>integration_2src_2Magnum_2ImGuiIntegration_2Context_8h</filename>
     <includes id="Timeline_8h" name="Timeline.h" local="no" imported="no">Magnum/Timeline.h</includes>
-    <includes id="GL_2AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="no" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
-    <includes id="GL_2Texture_8h" name="Texture.h" local="no" imported="no">Magnum/GL/Texture.h</includes>
+    <includes id="AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="no" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
+    <includes id="Texture_8h" name="Texture.h" local="no" imported="no">Magnum/GL/Texture.h</includes>
     <includes id="GL_2Buffer_8h" name="Buffer.h" local="no" imported="no">Magnum/GL/Buffer.h</includes>
     <includes id="GL_2Mesh_8h" name="Mesh.h" local="no" imported="no">Magnum/GL/Mesh.h</includes>
     <class kind="class">Magnum::ImGuiIntegration::Context</class>
@@ -2536,19 +2110,12 @@
   </compound>
   <compound kind="file">
     <name>Extensions.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>Extensions_8h</filename>
-    <includes id="GL_2Extensions_8h" name="Extensions.h" local="yes" imported="no">Magnum/GL/Extensions.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>Extensions.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
     <filename>GL_2Extensions_8h</filename>
-    <includes id="GL_2Version_8h" name="Version.h" local="yes" imported="no">Magnum/GL/Version.h</includes>
+    <includes id="Version_8h" name="Version.h" local="yes" imported="no">Magnum/GL/Version.h</includes>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
     <namespace>Magnum::GL::Extensions</namespace>
-    <namespace>Magnum::Extensions</namespace>
   </compound>
   <compound kind="file">
     <name>Listener.h</name>
@@ -2657,17 +2224,10 @@
     <filename>GL_2Renderer_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <class kind="class">Magnum::GL::Renderer</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::Renderer</type>
-      <name>Renderer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ad2609fdd9319ee6bd55198d17457abcf</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
@@ -2689,12 +2249,6 @@
       <anchor>a41f92605fac305549dc1f4bdb6957fa7</anchor>
       <arglist>(Debug &amp;debug, Renderer::GraphicsResetStatus value)</arglist>
     </member>
-  </compound>
-  <compound kind="file">
-    <name>Renderer.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>Renderer_8h</filename>
-    <includes id="GL_2Renderer_8h" name="Renderer.h" local="yes" imported="no">Magnum/GL/Renderer.h</includes>
   </compound>
   <compound kind="file">
     <name>Renderer.h</name>
@@ -2744,359 +2298,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>BufferImage.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>BufferImage_8h</filename>
-    <includes id="GL_2BufferImage_8h" name="BufferImage.h" local="yes" imported="no">Magnum/GL/BufferImage.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>BufferImage.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2BufferImage_8h</filename>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="PixelStorage_8h" name="PixelStorage.h" local="yes" imported="no">Magnum/PixelStorage.h</includes>
-    <includes id="GL_2Buffer_8h" name="Buffer.h" local="yes" imported="no">Magnum/GL/Buffer.h</includes>
-    <includes id="Vector4_8h" name="Vector4.h" local="yes" imported="no">Magnum/Math/Vector4.h</includes>
-    <class kind="class">Magnum::GL::BufferImage</class>
-    <class kind="class">Magnum::GL::CompressedBufferImage</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>BufferImage&lt; 1 &gt;</type>
-      <name>BufferImage1D</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>ab21826e2c7241f872cb2c41badd3befc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>BufferImage&lt; 2 &gt;</type>
-      <name>BufferImage2D</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a27593b6df921b51ca094cb26d5df5243</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>BufferImage&lt; 3 &gt;</type>
-      <name>BufferImage3D</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>aa9af14bf86aedc496e7d929a8d8a012f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CompressedBufferImage&lt; 1 &gt;</type>
-      <name>CompressedBufferImage1D</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a3cc59639b0f7023257750c19e49c9eee</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CompressedBufferImage&lt; 2 &gt;</type>
-      <name>CompressedBufferImage2D</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a4f87f1e4919aa2eff5082afeaf16de57</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CompressedBufferImage&lt; 3 &gt;</type>
-      <name>CompressedBufferImage3D</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a0decb20094b0d5054f3d87e3d0c955a8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferImage&lt; dimensions &gt;</type>
-      <name>BufferImage</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a9b01746ef2949284863e3d9bf91b4588</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferImage1D</type>
-      <name>BufferImage1D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a6dbaf1005ea0c4494580391672d54e21</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferImage2D</type>
-      <name>BufferImage2D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a3188f1ef0e9420f6a56a089e354d03b8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferImage3D</type>
-      <name>BufferImage3D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a87d7d390e6cb3e916d584822bbb3bb5b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferImage&lt; dimensions &gt;</type>
-      <name>CompressedBufferImage</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a21b25535853dcd0cbddf5e8352ab8c9f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::CompressedBufferImage1D</type>
-      <name>CompressedBufferImage1D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a53cb5e4178008f36a1559551263fc376</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::CompressedBufferImage2D</type>
-      <name>CompressedBufferImage2D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>aee0cc52dc93a23fbd1f4f4a9a35d2df1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::CompressedBufferImage3D</type>
-      <name>CompressedBufferImage3D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ad911cb9ea625a74e8cd9d3b53d30bede</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>BufferTexture.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>BufferTexture_8h</filename>
-    <includes id="GL_2BufferTexture_8h" name="BufferTexture.h" local="yes" imported="no">Magnum/GL/BufferTexture.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>BufferTexture.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2BufferTexture_8h</filename>
-    <includes id="GL_2AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
-    <class kind="class">Magnum::GL::BufferTexture</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferTexture</type>
-      <name>BufferTexture</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>af061967892b80b099da6c7c541fe2745</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>BufferTextureFormat.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>BufferTextureFormat_8h</filename>
-    <includes id="GL_2BufferTextureFormat_8h" name="BufferTextureFormat.h" local="yes" imported="no">Magnum/GL/BufferTextureFormat.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>BufferTextureFormat.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2BufferTextureFormat_8h</filename>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferTextureFormat</type>
-      <name>BufferTextureFormat</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a2413882bfc2422f1dfd0c0434bc79bb3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>BufferTextureFormat</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a8123583510befde47788d7998cb67878</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878acfff813d86d447fa2a9c858650ebbb90">R8</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a0367a93b9e3e7aa2fbe9802d80298e46">RG8</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ab4b279046a02077466fa26cabb00c642">RGBA8</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a9a486e1a3c543c7c58e1cc8086dc4239">R16</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a2b66caa416f0a28686ade3fc30ab223a">RG16</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a50989efe15b375dce8ba3a5714fe2543">RGBA16</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a477722a31a67b4a8f4bdb09e796e343b">R8UI</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a65264dd5d010ab021cbec10f07f97ed5">RG8UI</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878aeb843f86a572765b9be8a71bd9563bea">RGBA8UI</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a1ab8b9cd2509e2ccf930739d6d29ff35">R8I</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878af16a55975b8a8daa365e5b3cb116a001">RG8I</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ab99d001604e415e4ea7f107daaffd6dd">RGBA8I</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ac13d06830e39e268be15adfae07d9eb0">R16UI</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a4475a780df31a86ece088a8aac082b12">RG16UI</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ae418a751a46186248578aecf3f30a26c">RGBA16UI</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a3bf53b9d9aca5ddf22161b4c9d362f3f">R16I</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878af0c6bc16df3d36b62adc241a797148de">RG16I</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a3d8d82a913260a439bf38ed05d6d2f46">RGBA16I</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a2c102dbf18ef5770d3beb5385661c1c2">R32UI</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ac16ead63f9b07b5c97635edac05412cd">RG32UI</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ae240d3e394b6a7cfa467efe512e96bb4">RGB32UI</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ac050956335d883e2f6ed07cc6b0c90d8">RGBA32UI</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a88996871eb63291d92c2f9d83219648a">R32I</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a56014c7d6ebfadbff4d0d4d3c20a0243">RG32I</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a8305c7f5432d31774cceb858c966b22e">RGB32I</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a9f87275b4130dd118085dd75ee6a7ac1">RGBA32I</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a8dfbaada0d68227f5c299c2aa637df68">R16F</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ad28539b874a2bc4c5d40f49b375af474">RG16F</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878aa29d843695056f9c171a9eb702d6910a">RGBA16F</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878aca70b53fb0610461a2327973614a76ce">R32F</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ab968b93cd3c34fc9583050ce7e267394">RG32F</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ad8936cc7055546f79128b9dbfb8c8bbb">RGB32F</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a703a7a81e586669c930e3dcaf3e8c428">RGBA32F</enumvalue>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>CubeMapTexture.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>CubeMapTexture_8h</filename>
-    <includes id="GL_2CubeMapTexture_8h" name="CubeMapTexture.h" local="yes" imported="no">Magnum/GL/CubeMapTexture.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>CubeMapTexture.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2CubeMapTexture_8h</filename>
-    <includes id="Array_8h" name="Array.h" local="yes" imported="no">Magnum/Array.h</includes>
-    <includes id="Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/Sampler.h</includes>
-    <includes id="GL_2AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
-    <includes id="GL_2Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/GL/Sampler.h</includes>
-    <includes id="Vector2_8h" name="Vector2.h" local="yes" imported="no">Magnum/Math/Vector2.h</includes>
-    <class kind="class">Magnum::GL::CubeMapTexture</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::CubeMapCoordinate</type>
-      <name>CubeMapCoordinate</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>aaa6fad67039a66fa1bd806c75082d33c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::CubeMapTexture</type>
-      <name>CubeMapTexture</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>acbc71b060792cbe422cf8b8a0e243e9a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>CubeMapCoordinate</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>ae7e757e675322bf695a525cab0b86b3f</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ae7e757e675322bf695a525cab0b86b3fa9f082d04c481aab268b9f614d2ffd129">PositiveX</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ae7e757e675322bf695a525cab0b86b3fa963a8a64a09d54efc81b136ca6be21b2">NegativeX</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ae7e757e675322bf695a525cab0b86b3fac53c385ced96bd629c0f45a902aceba3">PositiveY</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ae7e757e675322bf695a525cab0b86b3fae4d5f02ceecd15caf66e9f0b2393c86b">NegativeY</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ae7e757e675322bf695a525cab0b86b3fa1921c16ffdafaf04e378ca1b6774c0ce">PositiveZ</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ae7e757e675322bf695a525cab0b86b3fada76df034cd139bd515761c8bb8e3090">NegativeZ</enumvalue>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>CubeMapTextureArray.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>CubeMapTextureArray_8h</filename>
-    <includes id="GL_2CubeMapTextureArray_8h" name="CubeMapTextureArray.h" local="yes" imported="no">Magnum/GL/CubeMapTextureArray.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>CubeMapTextureArray.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2CubeMapTextureArray_8h</filename>
-    <includes id="Array_8h" name="Array.h" local="yes" imported="no">Magnum/Array.h</includes>
-    <includes id="Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/Sampler.h</includes>
-    <includes id="GL_2AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
-    <includes id="GL_2Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/GL/Sampler.h</includes>
-    <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
-    <class kind="class">Magnum::GL::CubeMapTextureArray</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::CubeMapTextureArray</type>
-      <name>CubeMapTextureArray</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>af7e61fd977317f64cf43e172bf4fd68e</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>DebugOutput.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>DebugOutput_8h</filename>
-    <includes id="GL_2DebugOutput_8h" name="DebugOutput.h" local="yes" imported="no">Magnum/GL/DebugOutput.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>DebugOutput.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2DebugOutput_8h</filename>
-    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
-    <class kind="class">Magnum::GL::DebugOutput</class>
-    <class kind="class">Magnum::GL::DebugMessage</class>
-    <class kind="class">Magnum::GL::DebugGroup</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::DebugOutput</type>
-      <name>DebugOutput</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ab5d40e8eda3dd11de87af17a72929e68</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::DebugMessage</type>
-      <name>DebugMessage</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a67ee3f6ccaa020a3ea4317ae3122c0fa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::DebugGroup</type>
-      <name>DebugGroup</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a956e756b3755797b1fc50dff7f2b2823</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a8ebfbeb18914398a29b94bb905a2d27d</anchor>
-      <arglist>(Debug &amp;debug, DebugOutput::Source value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a46414fbbd0eb0fa569512e82d9ee9e22</anchor>
-      <arglist>(Debug &amp;debug, DebugOutput::Type value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a89d1fd21bfaa208055a8c0c9520776e2</anchor>
-      <arglist>(Debug &amp;debug, DebugOutput::Severity value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a757e23b71bfbb06869da1eba3b7d45da</anchor>
-      <arglist>(Debug &amp;debug, DebugMessage::Source value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>ab1f7b8a72a9a538560f8f0606ca1f4a8</anchor>
-      <arglist>(Debug &amp;debug, DebugMessage::Type value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>ac94d5fde25c824e3f7cafb1c0ff7cb13</anchor>
-      <arglist>(Debug &amp;debug, DebugGroup::Source value)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>BufferData.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/DebugTools/</path>
     <filename>BufferData_8h</filename>
@@ -3123,7 +2324,6 @@
     <path>/home/mosra/Code/magnum/src/Magnum/DebugTools/</path>
     <filename>CompareImage_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
     <includes id="Vector2_8h" name="Vector2.h" local="yes" imported="no">Magnum/Math/Vector2.h</includes>
     <includes id="Trade_8h" name="Trade.h" local="yes" imported="no">Magnum/Trade/Trade.h</includes>
     <class kind="class">Magnum::DebugTools::CompareImage</class>
@@ -3288,35 +2488,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>ShapeRenderer.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/DebugTools/</path>
-    <filename>ShapeRenderer_8h</filename>
-    <includes id="Resource_8h" name="Resource.h" local="yes" imported="no">Magnum/Resource.h</includes>
-    <includes id="Color_8h" name="Color.h" local="yes" imported="no">Magnum/Math/Color.h</includes>
-    <includes id="Drawable_8h" name="Drawable.h" local="yes" imported="no">Magnum/SceneGraph/Drawable.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <includes id="DebugTools_8h" name="DebugTools.h" local="yes" imported="no">Magnum/DebugTools/DebugTools.h</includes>
-    <class kind="class">Magnum::DebugTools::ShapeRenderer</class>
-    <class kind="class">Magnum::DebugTools::ShapeRendererOptions</class>
-    <class kind="class">Magnum::DebugTools::ShapeRenderer</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::DebugTools</namespace>
-    <member kind="typedef">
-      <type>ShapeRenderer&lt; 2 &gt;</type>
-      <name>ShapeRenderer2D</name>
-      <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
-      <anchor>ab0b120fd9a7cd20ab8692227d00d0dd4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ShapeRenderer&lt; 3 &gt;</type>
-      <name>ShapeRenderer3D</name>
-      <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
-      <anchor>a41482458e69f86bf0e21c3ea541df7d8</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>TextureImage.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/DebugTools/</path>
     <filename>TextureImage_8h</filename>
@@ -3382,35 +2553,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>DefaultFramebuffer.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>DefaultFramebuffer_8h</filename>
-    <includes id="GL_2DefaultFramebuffer_8h" name="DefaultFramebuffer.h" local="yes" imported="no">Magnum/GL/DefaultFramebuffer.h</includes>
-  </compound>
-  <compound kind="file">
-    <name>DefaultFramebuffer.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2DefaultFramebuffer_8h</filename>
-    <includes id="GL_2AbstractFramebuffer_8h" name="AbstractFramebuffer.h" local="yes" imported="no">Magnum/GL/AbstractFramebuffer.h</includes>
-    <class kind="class">Magnum::GL::DefaultFramebuffer</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::DefaultFramebuffer</type>
-      <name>DefaultFramebuffer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a7bc47b4b09c5dc52c6f4ec3d088aaf32</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>a67c85d774decf9566ce34f0861b88198</anchor>
-      <arglist>(Debug &amp;debug, DefaultFramebuffer::Status value)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>DimensionTraits.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/</path>
     <filename>DimensionTraits_8h</filename>
@@ -3441,17 +2583,443 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>Framebuffer.h</name>
+    <name>FileCallback.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>Framebuffer_8h</filename>
-    <includes id="GL_2Framebuffer_8h" name="Framebuffer.h" local="yes" imported="no">Magnum/GL/Framebuffer.h</includes>
+    <filename>FileCallback_8h</filename>
+    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
+    <namespace>Magnum</namespace>
+    <member kind="enumeration">
+      <type></type>
+      <name>InputFileCallbackPolicy</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>ad1e6da3c6e20d9bc3d488f0126c5c21d</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum.html" anchor="ad1e6da3c6e20d9bc3d488f0126c5c21da21a5bcd08cdd088335d18f69f74653cb">LoadTemporary</enumvalue>
+      <enumvalue file="namespaceMagnum.html" anchor="ad1e6da3c6e20d9bc3d488f0126c5c21da3abc4c0a3801b18b2ac7bd4f661c1f46">LoadPermanent</enumvalue>
+      <enumvalue file="namespaceMagnum.html" anchor="ad1e6da3c6e20d9bc3d488f0126c5c21daec8db16682dce388085f20c20903b0cf">LoadPernament</enumvalue>
+      <enumvalue file="namespaceMagnum.html" anchor="ad1e6da3c6e20d9bc3d488f0126c5c21dad3d2e617335f08df83599665eef8a418">Close</enumvalue>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a9f1425b2c32a25dda5169157fe875a33</anchor>
+      <arglist>(Debug &amp;debug, InputFileCallbackPolicy value)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>AbstractFramebuffer.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>AbstractFramebuffer_8h</filename>
+    <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
+    <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
+    <includes id="Range_8h" name="Range.h" local="yes" imported="no">Magnum/Math/Range.h</includes>
+    <class kind="class">Magnum::GL::AbstractFramebuffer</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+    <member kind="typedef">
+      <type>Containers::EnumSet&lt; FramebufferClear &gt;</type>
+      <name>FramebufferClearMask</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>ab01cae3ec614cfc08dc9cb57b7474bbe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Containers::EnumSet&lt; FramebufferBlit &gt;</type>
+      <name>FramebufferBlitMask</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a31205b9572d4cd97ed30455a17ace1d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FramebufferClear</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a84c9d96fc42070ef5cd7238baac5def3</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a84c9d96fc42070ef5cd7238baac5def3acb5feb1b7314637725a2e73bdc9f7295">Color</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a84c9d96fc42070ef5cd7238baac5def3a675056ad1441b6375b2c5abd48c27ef1">Depth</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a84c9d96fc42070ef5cd7238baac5def3ad821e7ccd4d4c25a491ba1a9ea248895">Stencil</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FramebufferBlit</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a7b31579beaad957300391508ac385877</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a7b31579beaad957300391508ac385877acb5feb1b7314637725a2e73bdc9f7295">Color</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a7b31579beaad957300391508ac385877a675056ad1441b6375b2c5abd48c27ef1">Depth</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a7b31579beaad957300391508ac385877ad821e7ccd4d4c25a491ba1a9ea248895">Stencil</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FramebufferBlitFilter</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a3b5bb8f87a28f939bd015e1cc76c7f2c</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a3b5bb8f87a28f939bd015e1cc76c7f2ca60494f02d440f316319dd0fad40ad007">Nearest</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a3b5bb8f87a28f939bd015e1cc76c7f2ca32a843da6ea40ab3b17a3421ccdf671b">Linear</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>FramebufferTarget</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a4eed8d34b2909ba469a622ce860b43f0</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a4eed8d34b2909ba469a622ce860b43f0a7a1a5f3e79fdc91edf2f5ead9d66abb4">Read</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a4eed8d34b2909ba469a622ce860b43f0a2d03c2d5a7ec65ef4619e0582c272ec2">Draw</enumvalue>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>AbstractObject.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>GL_2AbstractObject_8h</filename>
+    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <class kind="class">Magnum::GL::AbstractObject</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+    <member kind="typedef">
+      <type>Containers::EnumSet&lt; ObjectFlag &gt;</type>
+      <name>ObjectFlags</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a2538f8905d17b9d887491e9211ca8755</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ObjectFlag</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>ac3ca8b3f7b3943f4220ff066d02ae4d2</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ac3ca8b3f7b3943f4220ff066d02ae4d2a0eceeb45861f9585dd7a97a3e36f85c6">Created</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ac3ca8b3f7b3943f4220ff066d02ae4d2a50dd1297fc0f8a96753257b224b1e5b8">DeleteOnDestruction</enumvalue>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>AbstractObject.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/SceneGraph/</path>
+    <filename>SceneGraph_2AbstractObject_8h</filename>
+    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
+    <includes id="SceneGraph_8h" name="SceneGraph.h" local="yes" imported="no">Magnum/SceneGraph/SceneGraph.h</includes>
+    <class kind="class">Magnum::SceneGraph::AbstractObject</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::SceneGraph</namespace>
+    <member kind="typedef">
+      <type>AbstractObject&lt; 2, T &gt;</type>
+      <name>AbstractBasicObject2D</name>
+      <anchorfile>namespaceMagnum_1_1SceneGraph.html</anchorfile>
+      <anchor>a9ba6f965849b32eec2a4bf716f57c0f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>AbstractBasicObject2D&lt; Float &gt;</type>
+      <name>AbstractObject2D</name>
+      <anchorfile>namespaceMagnum_1_1SceneGraph.html</anchorfile>
+      <anchor>a4dc2f3b5d4fa5de326d57fd394bc02f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>AbstractObject&lt; 3, T &gt;</type>
+      <name>AbstractBasicObject3D</name>
+      <anchorfile>namespaceMagnum_1_1SceneGraph.html</anchorfile>
+      <anchor>afcd46917ca137989e38c5f756a1d020b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>AbstractBasicObject3D&lt; Float &gt;</type>
+      <name>AbstractObject3D</name>
+      <anchorfile>namespaceMagnum_1_1SceneGraph.html</anchorfile>
+      <anchor>aebce906e64701c696f6ee3b2b01ae348</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>AbstractQuery.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>AbstractQuery_8h</filename>
+    <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
+    <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
+    <class kind="class">Magnum::GL::AbstractQuery</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+  </compound>
+  <compound kind="file">
+    <name>AbstractShaderProgram.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>AbstractShaderProgram_8h</filename>
+    <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
+    <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
+    <includes id="Attribute_8h" name="Attribute.h" local="yes" imported="no">Magnum/GL/Attribute.h</includes>
+    <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
+    <class kind="class">Magnum::GL::AbstractShaderProgram</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+  </compound>
+  <compound kind="file">
+    <name>AbstractTexture.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>AbstractTexture_8h</filename>
+    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
+    <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
+    <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
+    <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
+    <class kind="class">Magnum::GL::AbstractTexture</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+  </compound>
+  <compound kind="file">
+    <name>Attribute.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>Attribute_8h</filename>
+    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <class kind="class">Magnum::GL::Attribute</class>
+    <class kind="class">Magnum::GL::DynamicAttribute</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a0eb7a0597aa54dac06f74058f7591913</anchor>
+      <arglist>(Debug &amp;debug, Attribute&lt; T &gt;::Components)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a74a95cad0d549a952ac6a097e5c92b0b</anchor>
+      <arglist>(Debug &amp;debug, Attribute&lt; T &gt;::DataType)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>BufferImage.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>BufferImage_8h</filename>
+    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
+    <includes id="PixelStorage_8h" name="PixelStorage.h" local="yes" imported="no">Magnum/PixelStorage.h</includes>
+    <includes id="GL_2Buffer_8h" name="Buffer.h" local="yes" imported="no">Magnum/GL/Buffer.h</includes>
+    <includes id="Vector4_8h" name="Vector4.h" local="yes" imported="no">Magnum/Math/Vector4.h</includes>
+    <class kind="class">Magnum::GL::BufferImage</class>
+    <class kind="class">Magnum::GL::CompressedBufferImage</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+    <member kind="typedef">
+      <type>BufferImage&lt; 1 &gt;</type>
+      <name>BufferImage1D</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>ab21826e2c7241f872cb2c41badd3befc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BufferImage&lt; 2 &gt;</type>
+      <name>BufferImage2D</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a27593b6df921b51ca094cb26d5df5243</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BufferImage&lt; 3 &gt;</type>
+      <name>BufferImage3D</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>aa9af14bf86aedc496e7d929a8d8a012f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CompressedBufferImage&lt; 1 &gt;</type>
+      <name>CompressedBufferImage1D</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a3cc59639b0f7023257750c19e49c9eee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CompressedBufferImage&lt; 2 &gt;</type>
+      <name>CompressedBufferImage2D</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a4f87f1e4919aa2eff5082afeaf16de57</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CompressedBufferImage&lt; 3 &gt;</type>
+      <name>CompressedBufferImage3D</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a0decb20094b0d5054f3d87e3d0c955a8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>BufferTexture.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>BufferTexture_8h</filename>
+    <includes id="AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
+    <class kind="class">Magnum::GL::BufferTexture</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+  </compound>
+  <compound kind="file">
+    <name>BufferTextureFormat.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>BufferTextureFormat_8h</filename>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+    <member kind="enumeration">
+      <type></type>
+      <name>BufferTextureFormat</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a8123583510befde47788d7998cb67878</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878acfff813d86d447fa2a9c858650ebbb90">R8</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a0367a93b9e3e7aa2fbe9802d80298e46">RG8</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ab4b279046a02077466fa26cabb00c642">RGBA8</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a9a486e1a3c543c7c58e1cc8086dc4239">R16</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a2b66caa416f0a28686ade3fc30ab223a">RG16</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a50989efe15b375dce8ba3a5714fe2543">RGBA16</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a477722a31a67b4a8f4bdb09e796e343b">R8UI</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a65264dd5d010ab021cbec10f07f97ed5">RG8UI</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878aeb843f86a572765b9be8a71bd9563bea">RGBA8UI</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a1ab8b9cd2509e2ccf930739d6d29ff35">R8I</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878af16a55975b8a8daa365e5b3cb116a001">RG8I</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ab99d001604e415e4ea7f107daaffd6dd">RGBA8I</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ac13d06830e39e268be15adfae07d9eb0">R16UI</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a4475a780df31a86ece088a8aac082b12">RG16UI</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ae418a751a46186248578aecf3f30a26c">RGBA16UI</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a3bf53b9d9aca5ddf22161b4c9d362f3f">R16I</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878af0c6bc16df3d36b62adc241a797148de">RG16I</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a3d8d82a913260a439bf38ed05d6d2f46">RGBA16I</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a2c102dbf18ef5770d3beb5385661c1c2">R32UI</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ac16ead63f9b07b5c97635edac05412cd">RG32UI</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ae240d3e394b6a7cfa467efe512e96bb4">RGB32UI</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ac050956335d883e2f6ed07cc6b0c90d8">RGBA32UI</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a88996871eb63291d92c2f9d83219648a">R32I</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a56014c7d6ebfadbff4d0d4d3c20a0243">RG32I</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a8305c7f5432d31774cceb858c966b22e">RGB32I</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a9f87275b4130dd118085dd75ee6a7ac1">RGBA32I</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a8dfbaada0d68227f5c299c2aa637df68">R16F</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ad28539b874a2bc4c5d40f49b375af474">RG16F</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878aa29d843695056f9c171a9eb702d6910a">RGBA16F</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878aca70b53fb0610461a2327973614a76ce">R32F</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ab968b93cd3c34fc9583050ce7e267394">RG32F</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878ad8936cc7055546f79128b9dbfb8c8bbb">RGB32F</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="a8123583510befde47788d7998cb67878a703a7a81e586669c930e3dcaf3e8c428">RGBA32F</enumvalue>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CubeMapTexture.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>CubeMapTexture_8h</filename>
+    <includes id="Array_8h" name="Array.h" local="yes" imported="no">Magnum/Array.h</includes>
+    <includes id="Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/Sampler.h</includes>
+    <includes id="AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
+    <includes id="GL_2Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/GL/Sampler.h</includes>
+    <includes id="Vector2_8h" name="Vector2.h" local="yes" imported="no">Magnum/Math/Vector2.h</includes>
+    <class kind="class">Magnum::GL::CubeMapTexture</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+    <member kind="enumeration">
+      <type></type>
+      <name>CubeMapCoordinate</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>ae7e757e675322bf695a525cab0b86b3f</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ae7e757e675322bf695a525cab0b86b3fa9f082d04c481aab268b9f614d2ffd129">PositiveX</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ae7e757e675322bf695a525cab0b86b3fa963a8a64a09d54efc81b136ca6be21b2">NegativeX</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ae7e757e675322bf695a525cab0b86b3fac53c385ced96bd629c0f45a902aceba3">PositiveY</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ae7e757e675322bf695a525cab0b86b3fae4d5f02ceecd15caf66e9f0b2393c86b">NegativeY</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ae7e757e675322bf695a525cab0b86b3fa1921c16ffdafaf04e378ca1b6774c0ce">PositiveZ</enumvalue>
+      <enumvalue file="namespaceMagnum_1_1GL.html" anchor="ae7e757e675322bf695a525cab0b86b3fada76df034cd139bd515761c8bb8e3090">NegativeZ</enumvalue>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CubeMapTextureArray.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>CubeMapTextureArray_8h</filename>
+    <includes id="Array_8h" name="Array.h" local="yes" imported="no">Magnum/Array.h</includes>
+    <includes id="Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/Sampler.h</includes>
+    <includes id="AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
+    <includes id="GL_2Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/GL/Sampler.h</includes>
+    <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
+    <class kind="class">Magnum::GL::CubeMapTextureArray</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+  </compound>
+  <compound kind="file">
+    <name>DebugOutput.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>DebugOutput_8h</filename>
+    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <class kind="class">Magnum::GL::DebugOutput</class>
+    <class kind="class">Magnum::GL::DebugMessage</class>
+    <class kind="class">Magnum::GL::DebugGroup</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a8ebfbeb18914398a29b94bb905a2d27d</anchor>
+      <arglist>(Debug &amp;debug, DebugOutput::Source value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a46414fbbd0eb0fa569512e82d9ee9e22</anchor>
+      <arglist>(Debug &amp;debug, DebugOutput::Type value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a89d1fd21bfaa208055a8c0c9520776e2</anchor>
+      <arglist>(Debug &amp;debug, DebugOutput::Severity value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a757e23b71bfbb06869da1eba3b7d45da</anchor>
+      <arglist>(Debug &amp;debug, DebugMessage::Source value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>ab1f7b8a72a9a538560f8f0606ca1f4a8</anchor>
+      <arglist>(Debug &amp;debug, DebugMessage::Type value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>ac94d5fde25c824e3f7cafb1c0ff7cb13</anchor>
+      <arglist>(Debug &amp;debug, DebugGroup::Source value)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>DefaultFramebuffer.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
+    <filename>DefaultFramebuffer_8h</filename>
+    <includes id="AbstractFramebuffer_8h" name="AbstractFramebuffer.h" local="yes" imported="no">Magnum/GL/AbstractFramebuffer.h</includes>
+    <class kind="class">Magnum::GL::DefaultFramebuffer</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::GL</namespace>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
+      <anchor>a67c85d774decf9566ce34f0861b88198</anchor>
+      <arglist>(Debug &amp;debug, DefaultFramebuffer::Status value)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>Framebuffer.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2Framebuffer_8h</filename>
+    <filename>Framebuffer_8h</filename>
     <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
-    <includes id="GL_2AbstractFramebuffer_8h" name="AbstractFramebuffer.h" local="yes" imported="no">Magnum/GL/AbstractFramebuffer.h</includes>
+    <includes id="AbstractFramebuffer_8h" name="AbstractFramebuffer.h" local="yes" imported="no">Magnum/GL/AbstractFramebuffer.h</includes>
     <class kind="class">Magnum::GL::Framebuffer</class>
     <class kind="class">Magnum::GL::Framebuffer::ColorAttachment</class>
     <class kind="class">Magnum::GL::Framebuffer::DrawAttachment</class>
@@ -3459,13 +3027,6 @@
     <class kind="class">Magnum::GL::Framebuffer::InvalidationAttachment</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::Framebuffer</type>
-      <name>Framebuffer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a8289fd2efd49cb486360ca58179e12b5</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
@@ -3485,24 +3046,10 @@
   <compound kind="file">
     <name>ImageFormat.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2ImageFormat_8h</filename>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <filename>ImageFormat_8h</filename>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::ImageAccess</type>
-      <name>ImageAccess</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a0f43770daa94dc170e8ecfa98a4ff6f0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::ImageFormat</type>
-      <name>ImageFormat</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ac3c23285f2fbdf6c74285559ad44c1a7</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="enumeration">
       <type></type>
       <name>ImageAccess</name>
@@ -3561,30 +3108,17 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>ImageFormat.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>ImageFormat_8h</filename>
-    <includes id="GL_2ImageFormat_8h" name="ImageFormat.h" local="yes" imported="no">Magnum/GL/ImageFormat.h</includes>
-  </compound>
-  <compound kind="file">
     <name>Mesh.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
     <filename>GL_2Mesh_8h</filename>
     <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
     <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
-    <includes id="GL_2Attribute_8h" name="Attribute.h" local="yes" imported="no">Magnum/GL/Attribute.h</includes>
+    <includes id="Attribute_8h" name="Attribute.h" local="yes" imported="no">Magnum/GL/Attribute.h</includes>
     <includes id="GL_2Buffer_8h" name="Buffer.h" local="yes" imported="no">Magnum/GL/Buffer.h</includes>
     <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
     <class kind="class">Magnum::GL::Mesh</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::Mesh</type>
-      <name>Mesh</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a3c3a2a76e6726ed6ee89fa07be424998</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="enumeration">
       <type></type>
       <name>MeshPrimitive</name>
@@ -3648,7 +3182,6 @@
     <path>/home/mosra/Code/magnum/src/Magnum/</path>
     <filename>Mesh_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_2Mesh_8h" name="Mesh.h" local="yes" imported="no">Magnum/GL/Mesh.h</includes>
     <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::MeshPrimitive &gt;</class>
     <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::MeshIndexType &gt;</class>
     <namespace>Magnum</namespace>
@@ -3665,11 +3198,6 @@
       <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa7ca66fdfaad3eb33fc65d7490178f856">Triangles</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa1da0b9ead8b051940a89214bae22831c">TriangleStrip</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa18d58fde618e4a30e2dfdc122e693047">TriangleFan</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa72ba2961719d09dc64d6088bb7b6e13a">LinesAdjacency</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa826457761e4d352b8f54d7d47b80dbaa">LineStripAdjacency</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa17eff3f9b5c0afdaacaeaf79238e36d5">TrianglesAdjacency</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa6b682fd6550f90f75722e4a7d38f3949">TriangleStripAdjacency</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fac4d283323af70979073f5cb6145f3a4b">Patches</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -3706,33 +3234,20 @@
   <compound kind="file">
     <name>MeshView.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2MeshView_8h</filename>
+    <filename>MeshView_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <class kind="class">Magnum::GL::MeshView</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::MeshView</type>
-      <name>MeshView</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>afe395ebc660f6d62a106796aa563dc5b</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>MeshView.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>MeshView_8h</filename>
-    <includes id="GL_2MeshView_8h" name="MeshView.h" local="yes" imported="no">Magnum/GL/MeshView.h</includes>
   </compound>
   <compound kind="file">
     <name>MultisampleTexture.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2MultisampleTexture_8h</filename>
+    <filename>MultisampleTexture_8h</filename>
     <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="GL_2AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
+    <includes id="AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
     <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
     <class kind="class">Magnum::GL::MultisampleTexture</class>
     <namespace>Magnum</namespace>
@@ -3751,34 +3266,6 @@
       <anchor>abb6076d2f85102b7b1736fb8df961bce</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>Magnum::GL::MultisampleTextureSampleLocations</type>
-      <name>MultisampleTextureSampleLocations</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>af506c62d472a7b7aeab7356381c53748</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::MultisampleTexture&lt; dimensions &gt;</type>
-      <name>MultisampleTexture</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ad0b6b3b8103bf9f9cc94217411efade8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::MultisampleTexture2D</type>
-      <name>MultisampleTexture2D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a10dc109e417c8b14c5369eeb02ef201c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::MultisampleTexture2DArray</type>
-      <name>MultisampleTexture2DArray</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a0eecadd1171dc09225fcf5d0d174a84a</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="enumeration">
       <type></type>
       <name>MultisampleTextureSampleLocations</name>
@@ -3790,74 +3277,35 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>MultisampleTexture.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>MultisampleTexture_8h</filename>
-    <includes id="GL_2MultisampleTexture_8h" name="MultisampleTexture.h" local="yes" imported="no">Magnum/GL/MultisampleTexture.h</includes>
-  </compound>
-  <compound kind="file">
     <name>OpenGL.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2OpenGL_8h</filename>
-  </compound>
-  <compound kind="file">
-    <name>OpenGL.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
     <filename>OpenGL_8h</filename>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
   </compound>
   <compound kind="file">
     <name>OpenGLTester.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2OpenGLTester_8h</filename>
+    <filename>OpenGLTester_8h</filename>
     <includes id="GL_2Renderer_8h" name="Renderer.h" local="yes" imported="no">Magnum/GL/Renderer.h</includes>
-    <includes id="GL_2TimeQuery_8h" name="TimeQuery.h" local="yes" imported="no">Magnum/GL/TimeQuery.h</includes>
+    <includes id="TimeQuery_8h" name="TimeQuery.h" local="yes" imported="no">Magnum/GL/TimeQuery.h</includes>
     <class kind="class">Magnum::GL::OpenGLTester</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
     <member kind="define">
       <type>#define</type>
       <name>MAGNUM_VERIFY_NO_GL_ERROR</name>
-      <anchorfile>GL_2OpenGLTester_8h.html</anchorfile>
+      <anchorfile>OpenGLTester_8h.html</anchorfile>
       <anchor>adbb51f69f7073df87427ecdd98420e6b</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="define">
-      <type>#define</type>
-      <name>MAGNUM_VERIFY_NO_ERROR</name>
-      <anchorfile>GL_2OpenGLTester_8h.html</anchorfile>
-      <anchor>acd44b697ab59b3250ec9b99319e2846a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::OpenGLTester</type>
-      <name>OpenGLTester</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ab7832845db1a34d9629be65a2b3f06ff</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>OpenGLTester.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>OpenGLTester_8h</filename>
-    <includes id="GL_2OpenGLTester_8h" name="OpenGLTester.h" local="yes" imported="no">Magnum/GL/OpenGLTester.h</includes>
   </compound>
   <compound kind="file">
     <name>PixelFormat.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
     <filename>GL_2PixelFormat_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::PixelType</type>
-      <name>PixelType</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a61bca5781befa85ae769f3fb9ae6dbf0</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="enumeration">
       <type></type>
       <name>PixelFormat</name>
@@ -4009,13 +3457,6 @@
       <arglist>(PixelFormat format, PixelType type)</arglist>
     </member>
     <member kind="function">
-      <type>UnsignedInt</type>
-      <name>pixelSize</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>ab734f05b5213546afaaaac32914cc3d3</anchor>
-      <arglist>(Magnum::PixelFormat format, PixelType type)</arglist>
-    </member>
-    <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
@@ -4056,7 +3497,6 @@
     <path>/home/mosra/Code/magnum/src/Magnum/</path>
     <filename>PixelFormat_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_2PixelFormat_8h" name="PixelFormat.h" local="yes" imported="no">Magnum/GL/PixelFormat.h</includes>
     <namespace>Magnum</namespace>
     <member kind="enumeration">
       <type></type>
@@ -4112,29 +3552,6 @@
       <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24ab968b93cd3c34fc9583050ce7e267394">RG32F</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24ad8936cc7055546f79128b9dbfb8c8bbb">RGB32F</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a703a7a81e586669c930e3dcaf3e8c428">RGBA32F</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24aee38e4d5dd68c4e440825018d549cb47">Red</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24ad382816a3cbeed082c9e216e7392eed1">Green</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a9594eec95be70e7b1710f730fdda33d9">Blue</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a280f73691109aeaa235ffddd2d154d9b">Luminance</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24abac953e88f6d79514b0b6fc42eb6f3b7">RG</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a780701651d86fd20708e81e7ad48c078">LuminanceAlpha</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a889574aebacda6bfd3e534e2b49b8028">RGB</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24aea3495a278957dc58165e48a8945469f">RGBA</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a2ad5640ebdec72fc79531d1778c6c2dc">BGR</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a5a1fe3c61c9e2fd6dbbc823589f6e697">BGRA</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a1f3f09bca5728eb7af4ea263ae84b9f1">SRGB</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a5dfd728b3bee2ad053d22203c3e8f2b8">SRGBAlpha</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a3774ed2915a508b6652a18b368a82a40">RedInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a108f898baf120f2b888ce842b430ad41">GreenInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a02f2197d037a51e8791768a670ea5ca9">BlueInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24ac614904b10b846a993192fd483fd0f8d">RGInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a893f9d29983ee73833f207885e688927">RGBInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a5beae36e40eb87168d14300e4b38a966">RGBAInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24afc927856045b7f1d1bf641aeb660aa5f">BGRInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a29874b26b860b0ddc3f3b447fc96849f">BGRAInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a19c8f1ee3a700e77e87053eee47f6bc8">DepthComponent</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24ac07ade4f9906db3ee8e4e7053dac1dee">StencilIndex</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a2fa8076285272883c91e14402975a441">DepthStencil</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -4146,60 +3563,6 @@
       <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a7e444ac8255d7a9fea6946bad447bd2f">Bc1RGBAUnorm</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a38ed31f589a9300614a3367af7308434">Bc2RGBAUnorm</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aae2fbdf1f86d5b9b719f51dfae8e995f">Bc3RGBAUnorm</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aee38e4d5dd68c4e440825018d549cb47">Red</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0abac953e88f6d79514b0b6fc42eb6f3b7">RG</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a889574aebacda6bfd3e534e2b49b8028">RGB</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aea3495a278957dc58165e48a8945469f">RGBA</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aa3bed52b596f3b91bee25aa10394d27f">RedRgtc1</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a62a8382f8aa2f858c49e427277a50872">RGRgtc2</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a75771c41918045589327f8283c8e352b">SignedRedRgtc1</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a8fd2f045102ec87ada6ce64504fba872">SignedRGRgtc2</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ab7916cd38ad43474594d62f109fbf184">RGBBptcUnsignedFloat</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ac7dd302cf140a18d635bbc80e1d5e783">RGBBptcSignedFloat</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a7dd6aed4d4b349a913acdf49d5152e6f">RGBABptcUnorm</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ae7dbe7b43bd444b07f3cb60d3bd85413">SRGBAlphaBptcUnorm</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a2b383b452d4df4e2a7b7c749d5809f9f">RGB8Etc2</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a8eab3b04a17e67eed15dc5ac8315dc08">SRGB8Etc2</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a355cb5853c206ddfcf3fd3d27b91a9b1">RGB8PunchthroughAlpha1Etc2</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ace1e71dfb30dc15b2e56605daf8d0ce7">SRGB8PunchthroughAlpha1Etc2</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a98348631c6532dca147ed76111c3ca13">RGBA8Etc2Eac</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a0725b0958585442fa72335c352a4f31b">SRGB8Alpha8Etc2Eac</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a1adfe9f5f9890951fdd91d9ed0f6d782">R11Eac</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ac30713a6d506c10c43c7bcaa69fcbac5">SignedR11Eac</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a45ebf94b3877605e10852bcc28f4fcaa">RG11Eac</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ae7fb874dcd270f657787a2df8ca76fdf">SignedRG11Eac</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a202cb4f41f66d0b27bfc6f968f5d4e64">RGBS3tcDxt1</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a5651aff1d9255d714952c05ddc992f47">RGBAS3tcDxt1</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ab1b608a98cb05d81c057fb369922718d">RGBAS3tcDxt3</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a2a3b16cfc97107c276f6d8e5d1f1f311">RGBAS3tcDxt5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a4d54b5762d22b6cccbde8ecd2fadcf45">RGBAAstc4x4</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aca48b83bf02a4c74f477b92c766ee7b0">SRGB8Alpha8Astc4x4</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aa2b69ce26a065fc75905a70d03829757">RGBAAstc5x4</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a9b3927d698dd5349e8eb9f68e9c6c6a1">SRGB8Alpha8Astc5x4</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a8867cb489f247c08bcfc0a5b42726414">RGBAAstc5x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a1860eb6d1eb2911ba7f5e6afd715b1b2">SRGB8Alpha8Astc5x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ac905ed9f991dc301e8a713b9edc420bc">RGBAAstc6x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a77632c655108204cc7496ce98fe192d8">SRGB8Alpha8Astc6x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a6622396055bf65a5993a6cb9cf66265f">RGBAAstc6x6</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a960bc98e3d2ceacfad471d1db50ffc76">SRGB8Alpha8Astc6x6</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0af7f012ccc372ef62e682256dbd93aefb">RGBAAstc8x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a1d8b727d6330b5cd196d7197cbc2c626">SRGB8Alpha8Astc8x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aae5be3648e3d9ceb03d30b49251c0629">RGBAAstc8x6</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0afc2666906090246eefb829972ead8280">SRGB8Alpha8Astc8x6</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a43204df6edcc8d05b25e7efb58934f46">RGBAAstc8x8</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aaef0fa49535ce0cfac9dc45cbf22dc6f">SRGB8Alpha8Astc8x8</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a6d0c85423c4abf4c177c93447a4b7777">RGBAAstc10x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a0f413861153fe70fc44eb26acf2eaa99">SRGB8Alpha8Astc10x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ad034ed7edf6c7208a351589ed2e5f17a">RGBAAstc10x6</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a98ce333cbad0ca0b10b47673ba3c9610">SRGB8Alpha8Astc10x6</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a5d145bbb1f4d7494d1ef3c2a554a2691">RGBAAstc10x8</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0acb5ca548816c10b8e9328ffdfe4c584a">SRGB8Alpha8Astc10x8</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a01f17158c3d1005268197fdd4990749d">RGBAAstc10x10</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a7db9b87a93dfa09f1bd47035f34028ce">SRGB8Alpha8Astc10x10</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a939449aabd0a436676eb40d18dc2cd10">RGBAAstc12x10</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a7b95d2f5ff8e629c4799a667d7b21fc9">SRGB8Alpha8Astc12x10</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a202b3c29a027a3edfd8df16f1bc65544">RGBAAstc12x12</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a2635212e4b84e4b77fd26175e564d013">SRGB8Alpha8Astc12x12</enumvalue>
     </member>
     <member kind="function">
       <type>UnsignedInt</type>
@@ -4268,89 +3631,43 @@
   <compound kind="file">
     <name>PrimitiveQuery.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2PrimitiveQuery_8h</filename>
-    <includes id="GL_2AbstractQuery_8h" name="AbstractQuery.h" local="yes" imported="no">Magnum/GL/AbstractQuery.h</includes>
+    <filename>PrimitiveQuery_8h</filename>
+    <includes id="AbstractQuery_8h" name="AbstractQuery.h" local="yes" imported="no">Magnum/GL/AbstractQuery.h</includes>
     <class kind="class">Magnum::GL::PrimitiveQuery</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::PrimitiveQuery</type>
-      <name>PrimitiveQuery</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ad0e6a03b233f4aa2c70b6228c696fe94</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>PrimitiveQuery.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>PrimitiveQuery_8h</filename>
-    <includes id="GL_2PrimitiveQuery_8h" name="PrimitiveQuery.h" local="yes" imported="no">Magnum/GL/PrimitiveQuery.h</includes>
   </compound>
   <compound kind="file">
     <name>RectangleTexture.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2RectangleTexture_8h</filename>
+    <filename>RectangleTexture_8h</filename>
     <includes id="Array_8h" name="Array.h" local="yes" imported="no">Magnum/Array.h</includes>
     <includes id="Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/Sampler.h</includes>
-    <includes id="GL_2AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
+    <includes id="AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
     <includes id="GL_2Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/GL/Sampler.h</includes>
     <includes id="Vector2_8h" name="Vector2.h" local="yes" imported="no">Magnum/Math/Vector2.h</includes>
     <class kind="class">Magnum::GL::RectangleTexture</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::RectangleTexture</type>
-      <name>RectangleTexture</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a2df1f49d0ae1326baf64cf2bbe334796</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>RectangleTexture.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>RectangleTexture_8h</filename>
-    <includes id="GL_2RectangleTexture_8h" name="RectangleTexture.h" local="yes" imported="no">Magnum/GL/RectangleTexture.h</includes>
   </compound>
   <compound kind="file">
     <name>Renderbuffer.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2Renderbuffer_8h</filename>
+    <filename>Renderbuffer_8h</filename>
     <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
     <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
     <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
     <class kind="class">Magnum::GL::Renderbuffer</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::Renderbuffer</type>
-      <name>Renderbuffer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>afcefbe6aab851279873e4d0485d5209e</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Renderbuffer.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>Renderbuffer_8h</filename>
-    <includes id="GL_2Renderbuffer_8h" name="Renderbuffer.h" local="yes" imported="no">Magnum/GL/Renderbuffer.h</includes>
   </compound>
   <compound kind="file">
     <name>RenderbufferFormat.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2RenderbufferFormat_8h</filename>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <filename>RenderbufferFormat_8h</filename>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::RenderbufferFormat</type>
-      <name>RenderbufferFormat</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a27e6c974a87676a504dc3f097d0fdef6</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="enumeration">
       <type></type>
       <name>RenderbufferFormat</name>
@@ -4414,32 +3731,13 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>RenderbufferFormat.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>RenderbufferFormat_8h</filename>
-    <includes id="GL_2RenderbufferFormat_8h" name="RenderbufferFormat.h" local="yes" imported="no">Magnum/GL/RenderbufferFormat.h</includes>
-  </compound>
-  <compound kind="file">
     <name>SampleQuery.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2SampleQuery_8h</filename>
-    <includes id="GL_2AbstractQuery_8h" name="AbstractQuery.h" local="yes" imported="no">Magnum/GL/AbstractQuery.h</includes>
+    <filename>SampleQuery_8h</filename>
+    <includes id="AbstractQuery_8h" name="AbstractQuery.h" local="yes" imported="no">Magnum/GL/AbstractQuery.h</includes>
     <class kind="class">Magnum::GL::SampleQuery</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::SampleQuery</type>
-      <name>SampleQuery</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ad0f4e740e7b012356fcb6f871073517b</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>SampleQuery.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>SampleQuery_8h</filename>
-    <includes id="GL_2SampleQuery_8h" name="SampleQuery.h" local="yes" imported="no">Magnum/GL/SampleQuery.h</includes>
   </compound>
   <compound kind="file">
     <name>Sampler.h</name>
@@ -4447,9 +3745,8 @@
     <filename>GL_2Sampler_8h</filename>
     <includes id="Array_8h" name="Array.h" local="yes" imported="no">Magnum/Array.h</includes>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <class kind="class">Magnum::GL::Sampler</class>
-    <class kind="struct">Magnum::Sampler</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
     <member kind="enumeration">
@@ -4599,7 +3896,6 @@
     <path>/home/mosra/Code/magnum/src/Magnum/</path>
     <filename>Sampler_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_2Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/GL/Sampler.h</includes>
     <namespace>Magnum</namespace>
     <member kind="enumeration">
       <type></type>
@@ -4657,19 +3953,12 @@
   <compound kind="file">
     <name>Shader.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2Shader_8h</filename>
+    <filename>Shader_8h</filename>
     <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
     <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
     <class kind="class">Magnum::GL::Shader</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::Shader</type>
-      <name>Shader</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a5b21ef7d0977b38c105f065c832c5853</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
@@ -4679,19 +3968,13 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>Shader.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>Shader_8h</filename>
-    <includes id="GL_2Shader_8h" name="Shader.h" local="yes" imported="no">Magnum/GL/Shader.h</includes>
-  </compound>
-  <compound kind="file">
     <name>Texture.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2Texture_8h</filename>
+    <filename>Texture_8h</filename>
     <includes id="Array_8h" name="Array.h" local="yes" imported="no">Magnum/Array.h</includes>
     <includes id="Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/Sampler.h</includes>
     <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="GL_2AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
+    <includes id="AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
     <includes id="GL_2Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/GL/Sampler.h</includes>
     <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
     <class kind="class">Magnum::GL::Texture</class>
@@ -4718,49 +4001,15 @@
       <anchor>a6346a4e43ba5119977909a7ce348bc9a</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Texture&lt; dimensions &gt;</type>
-      <name>Texture</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a99680032ac8a2f87a7aa2b23c608dbeb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Texture1D</type>
-      <name>Texture1D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a09a9b3908405d57d4bba5dc5b009516b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Texture2D</type>
-      <name>Texture2D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a5d57e2262e5493761c626416fcbb5bea</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Texture3D</type>
-      <name>Texture3D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>aedc1219f6673626419e725d7f03fa11c</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Texture.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>Texture_8h</filename>
-    <includes id="GL_2Texture_8h" name="Texture.h" local="yes" imported="no">Magnum/GL/Texture.h</includes>
   </compound>
   <compound kind="file">
     <name>TextureArray.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2TextureArray_8h</filename>
+    <filename>TextureArray_8h</filename>
     <includes id="Array_8h" name="Array.h" local="yes" imported="no">Magnum/Array.h</includes>
     <includes id="Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/Sampler.h</includes>
     <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="GL_2AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
+    <includes id="AbstractTexture_8h" name="AbstractTexture.h" local="yes" imported="no">Magnum/GL/AbstractTexture.h</includes>
     <includes id="GL_2Sampler_8h" name="Sampler.h" local="yes" imported="no">Magnum/GL/Sampler.h</includes>
     <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
     <class kind="class">Magnum::GL::TextureArray</class>
@@ -4780,48 +4029,14 @@
       <anchor>a7c9f5d6fb84cc057c47844cc748008f2</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>Magnum::GL::TextureArray&lt; dimensions &gt;</type>
-      <name>TextureArray</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>af5449088ee48a6b5d2f5e75de1b7e19a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Texture1DArray</type>
-      <name>Texture1DArray</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a5a48bbdd767ab8863702a11771bfeba5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Texture2DArray</type>
-      <name>Texture2DArray</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a2f09a3e384d73896c8a1fec6377189de</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>TextureArray.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>TextureArray_8h</filename>
-    <includes id="GL_2TextureArray_8h" name="TextureArray.h" local="yes" imported="no">Magnum/GL/TextureArray.h</includes>
   </compound>
   <compound kind="file">
     <name>TextureFormat.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2TextureFormat_8h</filename>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <filename>TextureFormat_8h</filename>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::TextureFormat</type>
-      <name>TextureFormat</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a8c21ad96952a73ac7f2d6ab3fe5f974f</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="enumeration">
       <type></type>
       <name>TextureFormat</name>
@@ -4966,71 +4181,32 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>TextureFormat.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>TextureFormat_8h</filename>
-    <includes id="GL_2TextureFormat_8h" name="TextureFormat.h" local="yes" imported="no">Magnum/GL/TextureFormat.h</includes>
-  </compound>
-  <compound kind="file">
     <name>TimeQuery.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2TimeQuery_8h</filename>
-    <includes id="GL_2AbstractQuery_8h" name="AbstractQuery.h" local="yes" imported="no">Magnum/GL/AbstractQuery.h</includes>
+    <filename>TimeQuery_8h</filename>
+    <includes id="AbstractQuery_8h" name="AbstractQuery.h" local="yes" imported="no">Magnum/GL/AbstractQuery.h</includes>
     <class kind="class">Magnum::GL::TimeQuery</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::TimeQuery</type>
-      <name>TimeQuery</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a8995467f4957d512f74eeb68c2b53a7c</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>TimeQuery.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>TimeQuery_8h</filename>
-    <includes id="GL_2TimeQuery_8h" name="TimeQuery.h" local="yes" imported="no">Magnum/GL/TimeQuery.h</includes>
   </compound>
   <compound kind="file">
     <name>TransformFeedback.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2TransformFeedback_8h</filename>
+    <filename>TransformFeedback_8h</filename>
     <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
     <includes id="GL_2AbstractObject_8h" name="AbstractObject.h" local="yes" imported="no">Magnum/GL/AbstractObject.h</includes>
     <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
     <class kind="class">Magnum::GL::TransformFeedback</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::TransformFeedback</type>
-      <name>TransformFeedback</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ac254d7da58c87628a7f1d28524366e40</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>TransformFeedback.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>TransformFeedback_8h</filename>
-    <includes id="GL_2TransformFeedback_8h" name="TransformFeedback.h" local="yes" imported="no">Magnum/GL/TransformFeedback.h</includes>
   </compound>
   <compound kind="file">
     <name>Version.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/GL/</path>
-    <filename>GL_2Version_8h</filename>
+    <filename>Version_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <namespace>Magnum</namespace>
     <namespace>Magnum::GL</namespace>
-    <member kind="typedef">
-      <type>Magnum::GL::Version</type>
-      <name>Version</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a8157bc6dc5966d8a1aa4e84d28b6b74d</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="enumeration">
       <type></type>
       <name>Version</name>
@@ -5083,33 +4259,6 @@
       <anchor>a3182f08d7ea54aad15c2e7465bf2bf53</anchor>
       <arglist>(Debug &amp;debug, Version value)</arglist>
     </member>
-    <member kind="function">
-      <type>constexpr GL::Version</type>
-      <name>version</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a2e5b7ec90c4963619aa89a38d15962ec</anchor>
-      <arglist>(Int major, Int minor)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; Int, Int &gt;</type>
-      <name>version</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a68ae1fd02ad44cdb11ca9806d1749d6e</anchor>
-      <arglist>(GL::Version version)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr bool</type>
-      <name>isVersionES</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a23d283ca8f0d79fbe8d954ddc4c9f072</anchor>
-      <arglist>(GL::Version version)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Version.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/</path>
-    <filename>Version_8h</filename>
-    <includes id="GL_2Version_8h" name="Version.h" local="yes" imported="no">Magnum/GL/Version.h</includes>
   </compound>
   <compound kind="file">
     <name>Image.h</name>
@@ -5169,7 +4318,6 @@
     <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
     <includes id="PixelStorage_8h" name="PixelStorage.h" local="yes" imported="no">Magnum/PixelStorage.h</includes>
     <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
-    <includes id="PixelFormat_8h" name="PixelFormat.h" local="yes" imported="no">Magnum/PixelFormat.h</includes>
     <class kind="class">Magnum::ImageView</class>
     <class kind="class">Magnum::CompressedImageView</class>
     <namespace>Magnum</namespace>
@@ -5222,7 +4370,6 @@
     <filename>Magnum_8h</filename>
     <includes id="Types_8h" name="Types.h" local="yes" imported="no">Magnum/Types.h</includes>
     <includes id="Math_8h" name="Math.h" local="yes" imported="no">Magnum/Math/Math.h</includes>
-    <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
     <namespace>Magnum</namespace>
     <member kind="define">
       <type>#define</type>
@@ -5446,6 +4593,13 @@
       <name>Color4</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
       <anchor>a5cb8f674ed695b93b434b44bd7c96805</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::ColorHsv&lt; Float &gt;</type>
+      <name>ColorHsv</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a3f2e0a0f0f64660057e1af647fd34456</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -6090,6 +5244,13 @@
       <name>Color4</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
       <anchor>a5cb8f674ed695b93b434b44bd7c96805</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::ColorHsv&lt; Float &gt;</type>
+      <name>ColorHsv</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a3f2e0a0f0f64660057e1af647fd34456</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -6714,8 +5875,6 @@
     <includes id="Unit_8h" name="Unit.h" local="yes" imported="no">Magnum/Math/Unit.h</includes>
     <class kind="class">Magnum::Math::Deg</class>
     <class kind="class">Magnum::Math::Rad</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Deg&lt; T &gt; &gt;</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Rad&lt; T &gt; &gt;</class>
     <class kind="struct">Corrade::Utility::TweakableParser&lt; Magnum::Math::Deg&lt; Magnum::Float &gt; &gt;</class>
     <class kind="struct">Corrade::Utility::TweakableParser&lt; Magnum::Math::Deg&lt; Magnum::Double &gt; &gt;</class>
     <class kind="struct">Corrade::Utility::TweakableParser&lt; Magnum::Math::Rad&lt; Magnum::Float &gt; &gt;</class>
@@ -6772,7 +5931,6 @@
     <filename>Bezier_8h</filename>
     <includes id="Math_2Vector_8h" name="Vector.h" local="yes" imported="no">Magnum/Math/Vector.h</includes>
     <class kind="class">Magnum::Math::Bezier</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Bezier&lt; order, dimensions, T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="typedef">
@@ -6852,8 +6010,7 @@
     <includes id="Vector4_8h" name="Vector4.h" local="yes" imported="no">Magnum/Math/Vector4.h</includes>
     <class kind="class">Magnum::Math::Color3</class>
     <class kind="class">Magnum::Math::Color4</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Color3&lt; T &gt; &gt;</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Color4&lt; T &gt; &gt;</class>
+    <class kind="struct">Magnum::Math::ColorHsv</class>
     <class kind="struct">Corrade::Utility::TweakableParser&lt; Magnum::Math::Color3&lt; Magnum::UnsignedByte &gt; &gt;</class>
     <class kind="struct">Corrade::Utility::TweakableParser&lt; Magnum::Math::Color4&lt; Magnum::UnsignedByte &gt; &gt;</class>
     <class kind="struct">Corrade::Utility::TweakableParser&lt; Magnum::Math::Color3&lt; Magnum::Float &gt; &gt;</class>
@@ -6874,6 +6031,13 @@
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
       <anchor>a95bff66ce9604939340d44686f857aa6</anchor>
       <arglist>(const Vector3&lt; T &gt; &amp;xyz)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a89bc10efa4914f4bd586cf6f493ee898</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const ColorHsv&lt; T &gt; &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>constexpr Color3&lt; UnsignedByte &gt;</type>
@@ -6953,7 +6117,6 @@
     <includes id="Matrix_8h" name="Matrix.h" local="yes" imported="no">Magnum/Math/Matrix.h</includes>
     <includes id="Vector2_8h" name="Vector2.h" local="yes" imported="no">Magnum/Math/Vector2.h</includes>
     <class kind="class">Magnum::Math::Complex</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Complex&lt; T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="function">
@@ -6998,6 +6161,47 @@
       <anchor>a673cbf89633bedbae0a30457b9bfaceb</anchor>
       <arglist>(Corrade::Utility::Debug &amp;debug, const Complex&lt; T &gt; &amp;value)</arglist>
     </member>
+  </compound>
+  <compound kind="file">
+    <name>ConfigurationValue.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/Math/</path>
+    <filename>ConfigurationValue_8h</filename>
+    <includes id="Angle_8h" name="Angle.h" local="yes" imported="no">Magnum/Math/Angle.h</includes>
+    <includes id="Bezier_8h" name="Bezier.h" local="yes" imported="no">Magnum/Math/Bezier.h</includes>
+    <includes id="Color_8h" name="Color.h" local="yes" imported="no">Magnum/Math/Color.h</includes>
+    <includes id="Complex_8h" name="Complex.h" local="yes" imported="no">Magnum/Math/Complex.h</includes>
+    <includes id="DualComplex_8h" name="DualComplex.h" local="yes" imported="no">Magnum/Math/DualComplex.h</includes>
+    <includes id="DualQuaternion_8h" name="DualQuaternion.h" local="yes" imported="no">Magnum/Math/DualQuaternion.h</includes>
+    <includes id="Matrix_8h" name="Matrix.h" local="yes" imported="no">Magnum/Math/Matrix.h</includes>
+    <includes id="Matrix3_8h" name="Matrix3.h" local="yes" imported="no">Magnum/Math/Matrix3.h</includes>
+    <includes id="Matrix4_8h" name="Matrix4.h" local="yes" imported="no">Magnum/Math/Matrix4.h</includes>
+    <includes id="Range_8h" name="Range.h" local="yes" imported="no">Magnum/Math/Range.h</includes>
+    <includes id="RectangularMatrix_8h" name="RectangularMatrix.h" local="yes" imported="no">Magnum/Math/RectangularMatrix.h</includes>
+    <includes id="Quaternion_8h" name="Quaternion.h" local="yes" imported="no">Magnum/Math/Quaternion.h</includes>
+    <includes id="Math_2Vector_8h" name="Vector.h" local="yes" imported="no">Magnum/Math/Vector.h</includes>
+    <includes id="Vector2_8h" name="Vector2.h" local="yes" imported="no">Magnum/Math/Vector2.h</includes>
+    <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
+    <includes id="Vector4_8h" name="Vector4.h" local="yes" imported="no">Magnum/Math/Vector4.h</includes>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Deg&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Rad&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Vector&lt; size, T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Vector2&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Vector3&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Vector4&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Color3&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Color4&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::RectangularMatrix&lt; cols, rows, T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Matrix&lt; size, T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Matrix3&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Matrix4&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Range&lt; dimensions, T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Range2D&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Range3D&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Complex&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::DualComplex&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Quaternion&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::DualQuaternion&lt; T &gt; &gt;</class>
+    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Bezier&lt; order, dimensions, T &gt; &gt;</class>
   </compound>
   <compound kind="file">
     <name>Constants.h</name>
@@ -7352,7 +6556,6 @@
     <includes id="Dual_8h" name="Dual.h" local="yes" imported="no">Magnum/Math/Dual.h</includes>
     <includes id="Matrix3_8h" name="Matrix3.h" local="yes" imported="no">Magnum/Math/Matrix3.h</includes>
     <class kind="class">Magnum::Math::DualComplex</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::DualComplex&lt; T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="function">
@@ -7372,7 +6575,6 @@
     <includes id="Matrix4_8h" name="Matrix4.h" local="yes" imported="no">Magnum/Math/Matrix4.h</includes>
     <includes id="Quaternion_8h" name="Quaternion.h" local="yes" imported="no">Magnum/Math/Quaternion.h</includes>
     <class kind="class">Magnum::Math::DualQuaternion</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::DualQuaternion&lt; T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="function">
@@ -7419,6 +6621,7 @@
     <path>/home/mosra/Code/magnum/src/Magnum/Math/</path>
     <filename>Functions_8h</filename>
     <includes id="Math_2Vector_8h" name="Vector.h" local="yes" imported="no">Magnum/Math/Vector.h</includes>
+    <includes id="FunctionsBatch_8h" name="FunctionsBatch.h" local="yes" imported="no">Magnum/Math/FunctionsBatch.h</includes>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="function">
@@ -7563,27 +6766,6 @@
     </member>
     <member kind="function">
       <type>T</type>
-      <name>min</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a2d23039b9bd85f9c16274321ddf55d1d</anchor>
-      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>min</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ae9a92854975b2f250004249044e1bfcf</anchor>
-      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>min</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a96d63ce830679d3516755e875a87a23d</anchor>
-      <arglist>(const T(&amp;array)[size])</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
       <name>max</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
       <anchor>a1065191724e603162437b335db0c490d</anchor>
@@ -7597,53 +6779,11 @@
       <arglist>(const Vector&lt; size, T &gt; &amp;value, T max)</arglist>
     </member>
     <member kind="function">
-      <type>T</type>
-      <name>max</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a6cab078020edfc1f5487665d4926ba2d</anchor>
-      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>max</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a37e8a2e2b6ce6a039cc6d41c1bc6ded1</anchor>
-      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>max</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ad1f165cde9ca7992987fe78b9f2c180a</anchor>
-      <arglist>(const T(&amp;array)[size])</arglist>
-    </member>
-    <member kind="function">
       <type>std::pair&lt; T, T &gt;</type>
       <name>minmax</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
       <anchor>a160f3c051c7fee9a17f036ddd5fea320</anchor>
       <arglist>(const T &amp;a, const T &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; T, T &gt;</type>
-      <name>minmax</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>afffc709fd33b5319addb8b0fec9e1254</anchor>
-      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; T, T &gt;</type>
-      <name>minmax</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a31ca6cb241a516d8b652b0d39cb5909e</anchor>
-      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; T, T &gt;</type>
-      <name>minmax</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ac2bf61d8aec6fa605c73b03d8337df5c</anchor>
-      <arglist>(const T(&amp;array)[size])</arglist>
     </member>
     <member kind="function">
       <type>T</type>
@@ -7787,27 +6927,6 @@
     </member>
     <member kind="function">
       <type>T</type>
-      <name>min</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a2d23039b9bd85f9c16274321ddf55d1d</anchor>
-      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>min</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ae9a92854975b2f250004249044e1bfcf</anchor>
-      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>min</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a96d63ce830679d3516755e875a87a23d</anchor>
-      <arglist>(const T(&amp;array)[size])</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
       <name>max</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
       <anchor>a1065191724e603162437b335db0c490d</anchor>
@@ -7821,53 +6940,11 @@
       <arglist>(const Vector&lt; size, T &gt; &amp;value, T max)</arglist>
     </member>
     <member kind="function">
-      <type>T</type>
-      <name>max</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a6cab078020edfc1f5487665d4926ba2d</anchor>
-      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>max</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a37e8a2e2b6ce6a039cc6d41c1bc6ded1</anchor>
-      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>max</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ad1f165cde9ca7992987fe78b9f2c180a</anchor>
-      <arglist>(const T(&amp;array)[size])</arglist>
-    </member>
-    <member kind="function">
       <type>std::pair&lt; T, T &gt;</type>
       <name>minmax</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
       <anchor>a160f3c051c7fee9a17f036ddd5fea320</anchor>
       <arglist>(const T &amp;a, const T &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; T, T &gt;</type>
-      <name>minmax</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>afffc709fd33b5319addb8b0fec9e1254</anchor>
-      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; T, T &gt;</type>
-      <name>minmax</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a31ca6cb241a516d8b652b0d39cb5909e</anchor>
-      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; T, T &gt;</type>
-      <name>minmax</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ac2bf61d8aec6fa605c73b03d8337df5c</anchor>
-      <arglist>(const T(&amp;array)[size])</arglist>
     </member>
     <member kind="function">
       <type>T</type>
@@ -7980,6 +7057,77 @@
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
       <anchor>a9a133d200079708110f9f8ae0c93a950</anchor>
       <arglist>(const T &amp;a, const T &amp;b, const T &amp;c)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>FunctionsBatch.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/Math/</path>
+    <filename>FunctionsBatch_8h</filename>
+    <includes id="Functions_8h" name="Functions.h" local="yes" imported="no">Magnum/Math/Functions.h</includes>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::Math</namespace>
+    <member kind="function">
+      <type>T</type>
+      <name>min</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a2d23039b9bd85f9c16274321ddf55d1d</anchor>
+      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>min</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>ae9a92854975b2f250004249044e1bfcf</anchor>
+      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>min</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a96d63ce830679d3516755e875a87a23d</anchor>
+      <arglist>(const T(&amp;array)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>max</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a6cab078020edfc1f5487665d4926ba2d</anchor>
+      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>max</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a37e8a2e2b6ce6a039cc6d41c1bc6ded1</anchor>
+      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>max</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>ad1f165cde9ca7992987fe78b9f2c180a</anchor>
+      <arglist>(const T(&amp;array)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; T, T &gt;</type>
+      <name>minmax</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>afffc709fd33b5319addb8b0fec9e1254</anchor>
+      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; T, T &gt;</type>
+      <name>minmax</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a31ca6cb241a516d8b652b0d39cb5909e</anchor>
+      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; T, T &gt;</type>
+      <name>minmax</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>ac2bf61d8aec6fa605c73b03d8337df5c</anchor>
+      <arglist>(const T(&amp;array)[size])</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -8220,7 +7368,6 @@
     <filename>Matrix_8h</filename>
     <includes id="RectangularMatrix_8h" name="RectangularMatrix.h" local="yes" imported="no">Magnum/Math/RectangularMatrix.h</includes>
     <class kind="class">Magnum::Math::Matrix</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Matrix&lt; size, T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="typedef">
@@ -8252,7 +7399,6 @@
     <includes id="Matrix_8h" name="Matrix.h" local="yes" imported="no">Magnum/Math/Matrix.h</includes>
     <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
     <class kind="class">Magnum::Math::Matrix3</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Matrix3&lt; T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
   </compound>
@@ -8263,7 +7409,6 @@
     <includes id="Matrix_8h" name="Matrix.h" local="yes" imported="no">Magnum/Math/Matrix.h</includes>
     <includes id="Vector4_8h" name="Vector4.h" local="yes" imported="no">Magnum/Math/Vector4.h</includes>
     <class kind="class">Magnum::Math::Matrix4</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Matrix4&lt; T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
   </compound>
@@ -8339,7 +7484,6 @@
     <includes id="TypeTraits_8h" name="TypeTraits.h" local="yes" imported="no">Magnum/Math/TypeTraits.h</includes>
     <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
     <class kind="class">Magnum::Math::Quaternion</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Quaternion&lt; T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="function">
@@ -8401,9 +7545,6 @@
     <class kind="class">Magnum::Math::Range</class>
     <class kind="class">Magnum::Math::Range2D</class>
     <class kind="class">Magnum::Math::Range3D</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Range&lt; dimensions, T &gt; &gt;</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Range2D&lt; T &gt; &gt;</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Range3D&lt; T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="typedef">
@@ -8448,7 +7589,6 @@
     <filename>RectangularMatrix_8h</filename>
     <includes id="Math_2Vector_8h" name="Vector.h" local="yes" imported="no">Magnum/Math/Vector.h</includes>
     <class kind="class">Magnum::Math::RectangularMatrix</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::RectangularMatrix&lt; cols, rows, T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="typedef">
@@ -8623,7 +7763,6 @@
     <includes id="BoolVector_8h" name="BoolVector.h" local="yes" imported="no">Magnum/Math/BoolVector.h</includes>
     <includes id="TypeTraits_8h" name="TypeTraits.h" local="yes" imported="no">Magnum/Math/TypeTraits.h</includes>
     <class kind="class">Magnum::Math::Vector</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Vector&lt; size, T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="function">
@@ -8681,7 +7820,6 @@
     <filename>Vector2_8h</filename>
     <includes id="Math_2Vector_8h" name="Vector.h" local="yes" imported="no">Magnum/Math/Vector.h</includes>
     <class kind="class">Magnum::Math::Vector2</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Vector2&lt; T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="function">
@@ -8699,7 +7837,6 @@
     <includes id="Vector2_8h" name="Vector2.h" local="yes" imported="no">Magnum/Math/Vector2.h</includes>
     <includes id="Swizzle_8h" name="Swizzle.h" local="yes" imported="no">Magnum/Math/Swizzle.h</includes>
     <class kind="class">Magnum::Math::Vector3</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Vector3&lt; T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="function">
@@ -8716,7 +7853,6 @@
     <filename>Vector4_8h</filename>
     <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
     <class kind="class">Magnum::Math::Vector4</class>
-    <class kind="struct">Corrade::Utility::ConfigurationValue&lt; Magnum::Math::Vector4&lt; T &gt; &gt;</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Math</namespace>
     <member kind="function">
@@ -9062,7 +8198,6 @@
     <filename>PixelStorage_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
-    <includes id="GL_2PixelFormat_8h" name="PixelFormat.h" local="yes" imported="no">Magnum/GL/PixelFormat.h</includes>
     <class kind="class">Magnum::PixelStorage</class>
     <class kind="class">Magnum::CompressedPixelStorage</class>
     <namespace>Magnum</namespace>
@@ -9119,17 +8254,10 @@
     <path>/home/mosra/Code/magnum/src/Magnum/Platform/</path>
     <filename>GLContext_8h</filename>
     <includes id="src_2Magnum_2GL_2Context_8h" name="Context.h" local="yes" imported="no">Magnum/GL/Context.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <class kind="class">Magnum::Platform::GLContext</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Platform</namespace>
-    <member kind="typedef">
-      <type>GLContext</type>
-      <name>Context</name>
-      <anchorfile>namespaceMagnum_1_1Platform.html</anchorfile>
-      <anchor>a326904eccb797bd1c017f3c7c65ca3a4</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>GlfwApplication.h</name>
@@ -9159,35 +8287,6 @@
       <name>MAGNUM_GLFWAPPLICATION_MAIN</name>
       <anchorfile>GlfwApplication_8h.html</anchorfile>
       <anchor>a3c0e9825ae849fad7cbad857b781a3f3</anchor>
-      <arglist>(className)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>GlutApplication.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Platform/</path>
-    <filename>GlutApplication_8h</filename>
-    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
-    <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
-    <includes id="Vector2_8h" name="Vector2.h" local="yes" imported="no">Magnum/Math/Vector2.h</includes>
-    <includes id="Platform_8h" name="Platform.h" local="yes" imported="no">Magnum/Platform/Platform.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
-    <class kind="class">Magnum::Platform::GlutApplication</class>
-    <class kind="struct">Magnum::Platform::GlutApplication::Arguments</class>
-    <class kind="class">Magnum::Platform::GlutApplication::GLConfiguration</class>
-    <class kind="class">Magnum::Platform::GlutApplication::Configuration</class>
-    <class kind="class">Magnum::Platform::GlutApplication::ViewportEvent</class>
-    <class kind="class">Magnum::Platform::GlutApplication::InputEvent</class>
-    <class kind="class">Magnum::Platform::GlutApplication::KeyEvent</class>
-    <class kind="class">Magnum::Platform::GlutApplication::MouseEvent</class>
-    <class kind="class">Magnum::Platform::GlutApplication::MouseMoveEvent</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Platform</namespace>
-    <member kind="define">
-      <type>#define</type>
-      <name>MAGNUM_GLUTAPPLICATION_MAIN</name>
-      <anchorfile>GlutApplication_8h.html</anchorfile>
-      <anchor>a2d34b453b5c4229f04696cd471dea674</anchor>
       <arglist>(className)</arglist>
     </member>
   </compound>
@@ -9283,7 +8382,7 @@
     <filename>WindowlessCglApplication_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <includes id="Platform_8h" name="Platform.h" local="yes" imported="no">Magnum/Platform/Platform.h</includes>
     <class kind="class">Magnum::Platform::WindowlessCglContext</class>
     <class kind="class">Magnum::Platform::WindowlessCglContext::Configuration</class>
@@ -9304,7 +8403,7 @@
     <path>/home/mosra/Code/magnum/src/Magnum/Platform/</path>
     <filename>WindowlessEglApplication_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
     <includes id="Platform_8h" name="Platform.h" local="yes" imported="no">Magnum/Platform/Platform.h</includes>
     <class kind="class">Magnum::Platform::WindowlessEglContext</class>
@@ -9327,7 +8426,7 @@
     <filename>WindowlessGlxApplication_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <includes id="Platform_8h" name="Platform.h" local="yes" imported="no">Magnum/Platform/Platform.h</includes>
     <class kind="class">Magnum::Platform::WindowlessGlxContext</class>
     <class kind="class">Magnum::Platform::WindowlessGlxContext::Configuration</class>
@@ -9349,7 +8448,7 @@
     <filename>WindowlessIosApplication_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <includes id="Platform_8h" name="Platform.h" local="yes" imported="no">Magnum/Platform/Platform.h</includes>
     <class kind="class">Magnum::Platform::WindowlessIosContext</class>
     <class kind="class">Magnum::Platform::WindowlessIosContext::Configuration</class>
@@ -9371,7 +8470,7 @@
     <filename>WindowlessWglApplication_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <includes id="Platform_8h" name="Platform.h" local="yes" imported="no">Magnum/Platform/Platform.h</includes>
     <class kind="class">Magnum::Platform::WindowlessWglContext</class>
     <class kind="class">Magnum::Platform::WindowlessWglContext::Configuration</class>
@@ -9393,7 +8492,7 @@
     <filename>WindowlessWindowsEglApplication_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="Tags_8h" name="Tags.h" local="yes" imported="no">Magnum/Tags.h</includes>
-    <includes id="GL_2OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
+    <includes id="OpenGL_8h" name="OpenGL.h" local="yes" imported="no">Magnum/GL/OpenGL.h</includes>
     <includes id="Platform_8h" name="Platform.h" local="yes" imported="no">Magnum/Platform/Platform.h</includes>
     <class kind="class">Magnum::Platform::WindowlessWindowsEglContext</class>
     <class kind="class">Magnum::Platform::WindowlessWindowsEglContext::Configuration</class>
@@ -9451,7 +8550,7 @@
   <compound kind="file">
     <name>Capsule.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Primitives/</path>
-    <filename>Primitives_2Capsule_8h</filename>
+    <filename>Capsule_8h</filename>
     <includes id="Trade_8h" name="Trade.h" local="yes" imported="no">Magnum/Trade/Trade.h</includes>
     <class kind="struct">Magnum::Primitives::Capsule2D</class>
     <class kind="struct">Magnum::Primitives::Capsule3D</class>
@@ -9486,45 +8585,6 @@
       <anchorfile>namespaceMagnum_1_1Primitives.html</anchorfile>
       <anchor>aeb898af80f38bad7be7b46f500f882c9</anchor>
       <arglist>(UnsignedInt hemisphereRings, UnsignedInt cylinderRings, UnsignedInt segments, Float halfLength)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Capsule.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>Shapes_2Capsule_8h</filename>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <class kind="class">Magnum::Shapes::Capsule</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="typedef">
-      <type>Capsule&lt; 2 &gt;</type>
-      <name>Capsule2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a49c72e6f71ae4286014afd8959554f8f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Capsule&lt; 3 &gt;</type>
-      <name>Capsule3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a8907faf93164878a8b75181845a72599</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>afe98277240394e274783626ac4420be1</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const Capsule&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a839afd5e87c4726add6835ee314e16d0</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;a, const Capsule&lt; dimensions &gt; &amp;b)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -9660,7 +8720,7 @@
   <compound kind="file">
     <name>Cylinder.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Primitives/</path>
-    <filename>Primitives_2Cylinder_8h</filename>
+    <filename>Cylinder_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="Trade_8h" name="Trade.h" local="yes" imported="no">Magnum/Trade/Trade.h</includes>
     <class kind="struct">Magnum::Primitives::Cylinder</class>
@@ -9695,45 +8755,6 @@
       <anchorfile>namespaceMagnum_1_1Primitives.html</anchorfile>
       <anchor>a68fb64ba061321af4b5ed191c037c83f</anchor>
       <arglist>(UnsignedInt rings, UnsignedInt segments, Float halfLength)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Cylinder.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>Shapes_2Cylinder_8h</filename>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <class kind="class">Magnum::Shapes::Cylinder</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="typedef">
-      <type>Cylinder&lt; 2 &gt;</type>
-      <name>Cylinder2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a69e19df0c90bda9b3a8b94060d09b9e4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Cylinder&lt; 3 &gt;</type>
-      <name>Cylinder3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ae610d08005a9a849c13674cb039c0e6d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a175327c41a1cf77afe589e9f75942a72</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const Cylinder&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a6a0f05766a099f0af8852618d356f970</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;a, const Cylinder&lt; dimensions &gt; &amp;b)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -9846,7 +8867,7 @@
   <compound kind="file">
     <name>Line.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Primitives/</path>
-    <filename>Primitives_2Line_8h</filename>
+    <filename>Line_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <includes id="Trade_8h" name="Trade.h" local="yes" imported="no">Magnum/Trade/Trade.h</includes>
     <class kind="struct">Magnum::Primitives::Line2D</class>
@@ -9883,31 +8904,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>Line.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>Shapes_2Line_8h</filename>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <class kind="class">Magnum::Shapes::Line</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="typedef">
-      <type>Line&lt; 2 &gt;</type>
-      <name>Line2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a95d1765b3254cb2ff8a8a947c7e5bd12</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Line&lt; 3 &gt;</type>
-      <name>Line3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>addab11a15ce16cba2e73cdc924d50ed1</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>Plane.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Primitives/</path>
     <filename>src_2Magnum_2Primitives_2Plane_8h</filename>
@@ -9937,31 +8933,6 @@
       <anchorfile>namespaceMagnum_1_1Primitives.html</anchorfile>
       <anchor>a3b10f846773a54ce153737c4b0cf537a</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Plane.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>src_2Magnum_2Shapes_2Plane_8h</filename>
-    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <class kind="class">Magnum::Shapes::Plane</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a736526a5aefa690b865f94d7c245915d</anchor>
-      <arglist>(const Line3D &amp;a, const Plane &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a0d75eb4350f0ba0ea4c338c3dccbedf7</anchor>
-      <arglist>(const LineSegment3D &amp;a, const Plane &amp;b)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -10852,7 +9823,7 @@
     <name>AbstractVector.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Shaders/</path>
     <filename>AbstractVector_8h</filename>
-    <includes id="GL_2AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="yes" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
+    <includes id="AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="yes" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
     <includes id="Generic_8h" name="Generic.h" local="yes" imported="no">Magnum/Shaders/Generic.h</includes>
     <class kind="class">Magnum::Shaders::AbstractVector</class>
     <namespace>Magnum</namespace>
@@ -10904,7 +9875,7 @@
     <path>/home/mosra/Code/magnum/src/Magnum/Shaders/</path>
     <filename>Flat_8h</filename>
     <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="GL_2AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="yes" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
+    <includes id="AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="yes" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
     <includes id="Color_8h" name="Color.h" local="yes" imported="no">Magnum/Math/Color.h</includes>
     <includes id="Matrix3_8h" name="Matrix3.h" local="yes" imported="no">Magnum/Math/Matrix3.h</includes>
     <includes id="Matrix4_8h" name="Matrix4.h" local="yes" imported="no">Magnum/Math/Matrix4.h</includes>
@@ -10945,7 +9916,7 @@
     <name>Generic.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Shaders/</path>
     <filename>Generic_8h</filename>
-    <includes id="GL_2Attribute_8h" name="Attribute.h" local="yes" imported="no">Magnum/GL/Attribute.h</includes>
+    <includes id="Attribute_8h" name="Attribute.h" local="yes" imported="no">Magnum/GL/Attribute.h</includes>
     <class kind="struct">Magnum::Shaders::Generic</class>
     <class kind="struct">Magnum::Shaders::Generic::Color</class>
     <namespace>Magnum</namespace>
@@ -10969,7 +9940,7 @@
     <name>MeshVisualizer.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Shaders/</path>
     <filename>MeshVisualizer_8h</filename>
-    <includes id="GL_2AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="yes" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
+    <includes id="AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="yes" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
     <includes id="Color_8h" name="Color.h" local="yes" imported="no">Magnum/Math/Color.h</includes>
     <includes id="Matrix4_8h" name="Matrix4.h" local="yes" imported="no">Magnum/Math/Matrix4.h</includes>
     <class kind="class">Magnum::Shaders::MeshVisualizer</class>
@@ -10994,7 +9965,7 @@
     <name>Phong.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Shaders/</path>
     <filename>Phong_8h</filename>
-    <includes id="GL_2AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="yes" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
+    <includes id="AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="yes" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
     <includes id="Color_8h" name="Color.h" local="yes" imported="no">Magnum/Math/Color.h</includes>
     <includes id="Matrix4_8h" name="Matrix4.h" local="yes" imported="no">Magnum/Math/Matrix4.h</includes>
     <includes id="Generic_8h" name="Generic.h" local="yes" imported="no">Magnum/Shaders/Generic.h</includes>
@@ -11029,7 +10000,7 @@
     <path>/home/mosra/Code/magnum/src/Magnum/Shaders/</path>
     <filename>VertexColor_8h</filename>
     <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="GL_2AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="yes" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
+    <includes id="AbstractShaderProgram_8h" name="AbstractShaderProgram.h" local="yes" imported="no">Magnum/GL/AbstractShaderProgram.h</includes>
     <includes id="Color_8h" name="Color.h" local="yes" imported="no">Magnum/Math/Color.h</includes>
     <includes id="Matrix3_8h" name="Matrix3.h" local="yes" imported="no">Magnum/Math/Matrix3.h</includes>
     <includes id="Matrix4_8h" name="Matrix4.h" local="yes" imported="no">Magnum/Math/Matrix4.h</includes>
@@ -11053,355 +10024,30 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>AbstractShape.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>AbstractShape_8h</filename>
-    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="AbstractGroupedFeature_8h" name="AbstractGroupedFeature.h" local="yes" imported="no">Magnum/SceneGraph/AbstractGroupedFeature.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <class kind="class">Magnum::Shapes::AbstractShape</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="typedef">
-      <type>AbstractShape&lt; 2 &gt;</type>
-      <name>AbstractShape2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a4e9bd6031c70fccf84a9661aaccb9c2a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>AbstractShape&lt; 3 &gt;</type>
-      <name>AbstractShape3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a589b851550fda74ad7592f9082b26faf</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>AxisAlignedBox.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>AxisAlignedBox_8h</filename>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <class kind="class">Magnum::Shapes::AxisAlignedBox</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="typedef">
-      <type>AxisAlignedBox&lt; 2 &gt;</type>
-      <name>AxisAlignedBox2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>af671fda1e375e094c0a1b50ff53827e3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>AxisAlignedBox&lt; 3 &gt;</type>
-      <name>AxisAlignedBox3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a6611bb4233c9ec6413a27dcb3e9a9edb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>aa36acc3128bae09e1d48650ea0cdf860</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const AxisAlignedBox&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Box.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>Box_8h</filename>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="Matrix3_8h" name="Matrix3.h" local="yes" imported="no">Magnum/Math/Matrix3.h</includes>
-    <includes id="Matrix4_8h" name="Matrix4.h" local="yes" imported="no">Magnum/Math/Matrix4.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <class kind="class">Magnum::Shapes::Box</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="typedef">
-      <type>Box&lt; 2 &gt;</type>
-      <name>Box2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a7065289e32f576d8a0e95e928ba11ab7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Box&lt; 3 &gt;</type>
-      <name>Box3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ac2cbcad614385662ad4beb489103322c</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Collision.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>Collision_8h</filename>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="Vector2_8h" name="Vector2.h" local="yes" imported="no">Magnum/Math/Vector2.h</includes>
-    <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <class kind="class">Magnum::Shapes::Collision</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="typedef">
-      <type>Collision&lt; 2 &gt;</type>
-      <name>Collision2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ab42be56c2cbaa9fb9d853e1925cfc942</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Collision&lt; 3 &gt;</type>
-      <name>Collision3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>aad83dc8f52a9c5505a631895ccc783a7</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Composition.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>Composition_8h</filename>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <class kind="class">Magnum::Shapes::Composition</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="typedef">
-      <type>Composition&lt; 2 &gt;</type>
-      <name>Composition2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>aab6bffea5f17a4c03028ba6df318978f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Composition&lt; 3 &gt;</type>
-      <name>Composition3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>afbbc5e4d464900be422ef093f835174f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>CompositionOperation</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ad8f610d090659171824e09764135758a</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1Shapes.html" anchor="ad8f610d090659171824e09764135758aaa74c05d080620f087c4e523977230666">Not</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Shapes.html" anchor="ad8f610d090659171824e09764135758aac33315685a0cba3ce53be378b3c7874b">And</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Shapes.html" anchor="ad8f610d090659171824e09764135758aa3a2d5fe857d8f9541136a124c2edec6c">Or</enumvalue>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>aa9ee062abdca1154e74d91f50647abab</anchor>
-      <arglist>(Debug &amp;debug, typename Composition&lt; dimensions &gt;::Type value)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>LineSegment.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>LineSegment_8h</filename>
-    <includes id="Shapes_2Line_8h" name="Line.h" local="yes" imported="no">Magnum/Shapes/Line.h</includes>
-    <class kind="class">Magnum::Shapes::LineSegment</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="typedef">
-      <type>LineSegment&lt; 2 &gt;</type>
-      <name>LineSegment2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a73a4ce53fdcd2df8d86e3ebcd7290155</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>LineSegment&lt; 3 &gt;</type>
-      <name>LineSegment3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a1db64426401b7bf7cf8953324625fd79</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Point.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>Point_8h</filename>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <class kind="class">Magnum::Shapes::Point</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="typedef">
-      <type>Point&lt; 2 &gt;</type>
-      <name>Point2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a0f6c4e41cbb0354048a669cd8e08d93c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Point&lt; 3 &gt;</type>
-      <name>Point3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a5f04d8003aaee50f746fdcfada20c2d5</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Shape.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>Shape_8h</filename>
-    <includes id="AbstractShape_8h" name="AbstractShape.h" local="yes" imported="no">Magnum/Shapes/AbstractShape.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <class kind="class">Magnum::Shapes::Shape</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-  </compound>
-  <compound kind="file">
-    <name>ShapeGroup.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>ShapeGroup_8h</filename>
-    <includes id="FeatureGroup_8h" name="FeatureGroup.h" local="yes" imported="no">Magnum/SceneGraph/FeatureGroup.h</includes>
-    <includes id="AbstractShape_8h" name="AbstractShape.h" local="yes" imported="no">Magnum/Shapes/AbstractShape.h</includes>
-    <class kind="class">Magnum::Shapes::ShapeGroup</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="typedef">
-      <type>ShapeGroup&lt; 2 &gt;</type>
-      <name>ShapeGroup2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>abf008c2731d6a6746882143df020136b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ShapeGroup&lt; 3 &gt;</type>
-      <name>ShapeGroup3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ab1ff04fca24ca9c36a1ee80b80fc0489</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Shapes.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>Shapes_8h</filename>
-    <includes id="Types_8h" name="Types.h" local="yes" imported="no">Magnum/Types.h</includes>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-  </compound>
-  <compound kind="file">
-    <name>Sphere.h</name>
-    <path>/home/mosra/Code/magnum/src/Magnum/Shapes/</path>
-    <filename>Sphere_8h</filename>
-    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
-    <includes id="Vector3_8h" name="Vector3.h" local="yes" imported="no">Magnum/Math/Vector3.h</includes>
-    <includes id="Shapes_8h" name="Shapes.h" local="yes" imported="no">Magnum/Shapes/Shapes.h</includes>
-    <includes id="Collision_8h" name="Collision.h" local="yes" imported="no">Magnum/Shapes/Collision.h</includes>
-    <class kind="class">Magnum::Shapes::Sphere</class>
-    <class kind="class">Magnum::Shapes::InvertedSphere</class>
-    <namespace>Magnum</namespace>
-    <namespace>Magnum::Shapes</namespace>
-    <member kind="typedef">
-      <type>Sphere&lt; 2 &gt;</type>
-      <name>Sphere2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a08c1fd6379b146defeb4d94568596c06</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Sphere&lt; 3 &gt;</type>
-      <name>Sphere3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a21ba78b6c1e081d95f2a294f0731ee64</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>InvertedSphere&lt; 2 &gt;</type>
-      <name>InvertedSphere2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a626326e606fd477e0d17423c241a5424</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>InvertedSphere&lt; 3 &gt;</type>
-      <name>InvertedSphere3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a6ed406193adc0e3cea8d58aaea086bd4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a8b92f87abd7091bb18db7d2a588bd554</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const Sphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a661f9284aa5c40e8252ac116f7eea984</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const InvertedSphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ae83451d613cff0466b2781b751864d3f</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const Sphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>add309ac34f5949efeb8a3cc4a8c21b84</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const InvertedSphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>adbea395f5e0ca3c22cdac2afbb7e7735</anchor>
-      <arglist>(const Line&lt; dimensions &gt; &amp;a, const Sphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>aadd405df874fc45add6de71c650de5a4</anchor>
-      <arglist>(const LineSegment&lt; dimensions &gt; &amp;a, const Sphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ac7f0f50e112678da6e80ba5c5eef3e51</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;a, const InvertedSphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ae54fc2987b79b7716f336df639814933</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;a, const InvertedSphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>AbstractFont.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Text/</path>
     <filename>AbstractFont_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_2Texture_8h" name="Texture.h" local="yes" imported="no">Magnum/GL/Texture.h</includes>
     <includes id="Text_8h" name="Text.h" local="yes" imported="no">Magnum/Text/Text.h</includes>
     <class kind="class">Magnum::Text::AbstractFont</class>
     <class kind="struct">Magnum::Text::AbstractFont::Metrics</class>
     <class kind="class">Magnum::Text::AbstractLayouter</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Text</namespace>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1Text.html</anchorfile>
+      <anchor>a7fa35f3ab0a4527b5e719d0dd5cf84ca</anchor>
+      <arglist>(Debug &amp;debug, AbstractFont::Feature value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1Text.html</anchorfile>
+      <anchor>a93a05e290c110f57d63c674953393f44</anchor>
+      <arglist>(Debug &amp;debug, AbstractFont::Features value)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>AbstractFontConverter.h</name>
@@ -11412,6 +10058,31 @@
     <class kind="class">Magnum::Text::AbstractFontConverter</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Text</namespace>
+  </compound>
+  <compound kind="file">
+    <name>AbstractGlyphCache.h</name>
+    <path>/home/mosra/Code/magnum/src/Magnum/Text/</path>
+    <filename>AbstractGlyphCache_8h</filename>
+    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
+    <includes id="Range_8h" name="Range.h" local="yes" imported="no">Magnum/Math/Range.h</includes>
+    <class kind="class">Magnum::Text::AbstractGlyphCache</class>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::Text</namespace>
+    <member kind="typedef">
+      <type>Containers::EnumSet&lt; GlyphCacheFeature &gt;</type>
+      <name>GlyphCacheFeatures</name>
+      <anchorfile>namespaceMagnum_1_1Text.html</anchorfile>
+      <anchor>a94ddecd6c5bc8f53ce09021c01cdd128</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>GlyphCacheFeature</name>
+      <anchorfile>namespaceMagnum_1_1Text.html</anchorfile>
+      <anchor>a7f26cc446d372d930e996c37fb356455</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1Text.html" anchor="a7f26cc446d372d930e996c37fb356455ac65e06981d6f8f3d1e13791a39d346df">ImageDownload</enumvalue>
+    </member>
   </compound>
   <compound kind="file">
     <name>Alignment.h</name>
@@ -11455,8 +10126,8 @@
     <name>GlyphCache.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Text/</path>
     <filename>GlyphCache_8h</filename>
-    <includes id="Range_8h" name="Range.h" local="yes" imported="no">Magnum/Math/Range.h</includes>
-    <includes id="GL_2Texture_8h" name="Texture.h" local="yes" imported="no">Magnum/GL/Texture.h</includes>
+    <includes id="Texture_8h" name="Texture.h" local="yes" imported="no">Magnum/GL/Texture.h</includes>
+    <includes id="AbstractGlyphCache_8h" name="AbstractGlyphCache.h" local="yes" imported="no">Magnum/Text/AbstractGlyphCache.h</includes>
     <class kind="class">Magnum::Text::GlyphCache</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Text</namespace>
@@ -11748,7 +10419,6 @@
     <path>/home/mosra/Code/magnum/src/Magnum/Trade/</path>
     <filename>MeshData2D_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
     <class kind="class">Magnum::Trade::MeshData2D</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Trade</namespace>
@@ -11758,7 +10428,6 @@
     <path>/home/mosra/Code/magnum/src/Magnum/Trade/</path>
     <filename>MeshData3D_8h</filename>
     <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
-    <includes id="GL_8h" name="GL.h" local="yes" imported="no">Magnum/GL/GL.h</includes>
     <class kind="class">Magnum::Trade::MeshData3D</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Trade</namespace>
@@ -11952,6 +10621,7 @@
     <path>/home/mosra/Code/magnum/src/Magnum/Trade/</path>
     <filename>Trade_8h</filename>
     <includes id="Types_8h" name="Types.h" local="yes" imported="no">Magnum/Types.h</includes>
+    <includes id="Magnum_8h" name="Magnum.h" local="yes" imported="no">Magnum/Magnum.h</includes>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Trade</namespace>
   </compound>
@@ -12414,6 +11084,36 @@
   </compound>
   <compound kind="file">
     <name>Integration.h</name>
+    <path>/home/mosra/Code/magnum-integration/src/Magnum/EigenIntegration/</path>
+    <filename>integration_2src_2Magnum_2EigenIntegration_2Integration_8h</filename>
+    <includes id="RectangularMatrix_8h" name="RectangularMatrix.h" local="no" imported="no">Magnum/Math/RectangularMatrix.h</includes>
+    <namespace>Magnum</namespace>
+    <namespace>Magnum::Math</namespace>
+    <namespace>Magnum::EigenIntegration</namespace>
+    <member kind="function">
+      <type>To</type>
+      <name>eigenCast</name>
+      <anchorfile>namespaceMagnum_1_1EigenIntegration.html</anchorfile>
+      <anchor>ad9aecc7f99cc5abbc3fe7ecd02d45775</anchor>
+      <arglist>(const Math::RectangularMatrix&lt; cols, rows, T &gt; &amp;from)</arglist>
+    </member>
+    <member kind="function">
+      <type>To</type>
+      <name>eigenCast</name>
+      <anchorfile>namespaceMagnum_1_1EigenIntegration.html</anchorfile>
+      <anchor>a37ab544f0aab67b5a6900f9169f1b0c9</anchor>
+      <arglist>(const Math::BoolVector&lt; size &gt; &amp;from)</arglist>
+    </member>
+    <member kind="function">
+      <type>To</type>
+      <name>eigenCast</name>
+      <anchorfile>namespaceMagnum_1_1EigenIntegration.html</anchorfile>
+      <anchor>a8ff52517df4864df1fe1bc105544cfea</anchor>
+      <arglist>(const Math::Vector&lt; size, T &gt; &amp;from)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Integration.h</name>
     <path>/home/mosra/Code/magnum-integration/src/Magnum/GlmIntegration/</path>
     <filename>integration_2src_2Magnum_2GlmIntegration_2Integration_8h</filename>
     <includes id="RectangularMatrix_8h" name="RectangularMatrix.h" local="yes" imported="no">Magnum/Math/RectangularMatrix.h</includes>
@@ -12573,7 +11273,6 @@
     <path>/home/mosra/Code/magnum/src/MagnumPlugins/MagnumFont/</path>
     <filename>MagnumFont_8h</filename>
     <includes id="AbstractFont_8h" name="AbstractFont.h" local="yes" imported="no">Magnum/Text/AbstractFont.h</includes>
-    <includes id="Trade_8h" name="Trade.h" local="yes" imported="no">Magnum/Trade/Trade.h</includes>
     <class kind="class">Magnum::Text::MagnumFont</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Text</namespace>
@@ -12948,39 +11647,6 @@
   <compound kind="class">
     <name>AbstractFeatureGroup&lt; dimensions, Float &gt;</name>
     <filename>classMagnum_1_1SceneGraph_1_1AbstractFeatureGroup.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>AbstractGroupedFeature&lt; dimensions, AbstractShape&lt; dimensions &gt;, Float &gt;</name>
-    <filename>classMagnum_1_1SceneGraph_1_1AbstractGroupedFeature.html</filename>
-    <base>AbstractFeature&lt; dimensions, Float &gt;</base>
-    <member kind="function">
-      <type></type>
-      <name>AbstractGroupedFeature</name>
-      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractGroupedFeature.html</anchorfile>
-      <anchor>a2c0d4b144aea6e54c7a12fb0a8965827</anchor>
-      <arglist>(AbstractObject&lt; dimensions, Float &gt; &amp;object, FeatureGroup&lt; dimensions, AbstractShape&lt; dimensions &gt;, Float &gt; *group=nullptr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~AbstractGroupedFeature</name>
-      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractGroupedFeature.html</anchorfile>
-      <anchor>ad05374ec9886805cd53d6f32f0a2dedd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>FeatureGroup&lt; dimensions, AbstractShape&lt; dimensions &gt;, Float &gt; *</type>
-      <name>group</name>
-      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractGroupedFeature.html</anchorfile>
-      <anchor>a670e9a5ed8e81ed9ea5b819e3af01ee6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const FeatureGroup&lt; dimensions, AbstractShape&lt; dimensions &gt;, Float &gt; *</type>
-      <name>group</name>
-      <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractGroupedFeature.html</anchorfile>
-      <anchor>a3382ca1d30c0cc075a37c7c44908c9d0</anchor>
-      <arglist>() const</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>AbstractGroupedFeature&lt; dimensions, Animable&lt; dimensions, T &gt;, T &gt;</name>
@@ -13386,73 +12052,6 @@
       <anchorfile>classMagnum_1_1SceneGraph_1_1AbstractObject.html</anchorfile>
       <anchor>a355409a5a8fb73443fbced50092462dd</anchor>
       <arglist>(const std::vector&lt; std::reference_wrapper&lt; AbstractObject&lt; dimensions, Transformation::Type &gt;&gt;&gt; &amp;objects)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>AbstractShape&lt; T::Dimensions &gt;</name>
-    <filename>classMagnum_1_1Shapes_1_1AbstractShape.html</filename>
-    <base>AbstractGroupedFeature&lt; dimensions, AbstractShape&lt; dimensions &gt;, Float &gt;</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>Type</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a5326f2287b1c17a9bd8a2058a4011e77</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a9c54623b4663fc287a0aab112f425d67af4c9b50d1bb4cd079845d57b0eac27f4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>AbstractShape</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a5e329f672734a57ebdc07e92e9198871</anchor>
-      <arglist>(SceneGraph::AbstractObject&lt; dimensions, Float &gt; &amp;object, ShapeGroup&lt; dimensions &gt; *group=nullptr)</arglist>
-    </member>
-    <member kind="function">
-      <type>ShapeGroup&lt; dimensions &gt; *</type>
-      <name>group</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a60203f20d8f2814ffcb8d82a7e231a37</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ShapeGroup&lt; dimensions &gt; *</type>
-      <name>group</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a1e6a0872dbde20ffbb2a3459f09e15d1</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Type</type>
-      <name>type</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>ac7ef3ccc6ed8c6cb2bfc04fb1c2f477c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>collides</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>ad41e7b52151157c1af6a874b1af186e1</anchor>
-      <arglist>(const AbstractShape&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>collision</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>aea4eae37cea8f426b97f39216d33c8c2</anchor>
-      <arglist>(const AbstractShape&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>markDirty</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a95c1ecf29ab5c338141a2dbb2672f3d3</anchor>
-      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14181,6 +12780,218 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>BoolVector&lt; Implementation::ExtensionCount &gt;</name>
+    <filename>classMagnum_1_1Math_1_1BoolVector.html</filename>
+    <member kind="enumvalue">
+      <name>Size</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>ad43cfac37b674bed68ea964c859c91c1a1687d1927ae165da75b463cbb593afaa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DataSize</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>ad43cfac37b674bed68ea964c859c91c1a1a7ca87098d157b8f6e5f874301ccad4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>BoolVector</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a8f89dac5226c1e2fe8caff1cdbb6177b</anchor>
+      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>BoolVector</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>aafc0cf95b7259bba289f7823ddab53ae</anchor>
+      <arglist>(NoInitT) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>BoolVector</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a25ea1a7ad197a44d95723680a7ab2384</anchor>
+      <arglist>(UnsignedByte first, T... next) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>BoolVector</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a1ee5b3eb0414b0d5e41e8d9319a21fa6</anchor>
+      <arglist>(T value) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>BoolVector</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a6136560a767709ac53cc836c63328a59</anchor>
+      <arglist>(const U &amp;other) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>BoolVector</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a32e0d0dd79dd34de89cd30ed5b0d9407</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;) noexcept=default</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>operator U</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a9a8566df74e806c251f8fa620c93e1f3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>UnsignedByte *</type>
+      <name>data</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>ad941981e7c128f15ca06c4dd2fbd7332</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr const UnsignedByte *</type>
+      <name>data</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a3b04b1691259ce1fe001f970582c8b48</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr bool</type>
+      <name>operator[]</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a6ef644e93df29a37d3da4eebf1139a08</anchor>
+      <arglist>(std::size_t i) const</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt; &amp;</type>
+      <name>set</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>ac0607188a716c624baa30ed44a5c735f</anchor>
+      <arglist>(std::size_t i, bool value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a4826c2edde3a42d743038ae253fcd783</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a8292a7da3f1ab74667c4ee655292dbc0</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>ad2e2f271fe2148b01fb3f82cd12cc58c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>all</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a85d0ab7ff56d7594e9d3ec7d400202dd</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>none</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a49d407193c1abce5f005939d7a5fc513</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>any</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a6c5d7b57ea3ac2a0b03d902836e144e8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt;</type>
+      <name>operator~</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>ad4e84e4ba2c021f6eac0e882425ca741</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt;</type>
+      <name>operator!</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>afcb151424bc10947f5a1c10d5f9e74ad</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt; &amp;</type>
+      <name>operator&amp;=</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>ab4fabb0a2db04517c4f22fc9f358b4fc</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt;</type>
+      <name>operator &amp;</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a353ec9869645a293dad68ca6f7969da1</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt;</type>
+      <name>operator &amp;&amp;</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a59fc1338b42c90c64fc0de2b0233bde8</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt; &amp;</type>
+      <name>operator|=</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>aadd51582e168a144e95fa9784a43e134</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt;</type>
+      <name>operator|</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>aaa584e4819e8aa52a8332997a79f84af</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt;</type>
+      <name>operator||</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a01f549325b2a2f11e7538ac53d806e35</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt; &amp;</type>
+      <name>operator^=</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a712c1369f006c5c6939b1c1986a7556e</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>BoolVector&lt; size &gt;</type>
+      <name>operator^</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>aa81df850f66d455d6b2c5546aacb56c7</anchor>
+      <arglist>(const BoolVector&lt; size &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>a05ecfedf1ed791f07d32b7d45d978432</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const BoolVector&lt; size &gt; &amp;value)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>Color4&lt; Float &gt;</name>
     <filename>classMagnum_1_1Math_1_1Color4.html</filename>
     <base>Vector4&lt; Float &gt;</base>
@@ -14192,10 +13003,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>Color3&lt; Float &gt;::Hsv</type>
+      <type>std::tuple&lt; Deg&lt; FloatingPointType &gt;, FloatingPointType, FloatingPointType &gt;</type>
       <name>Hsv</name>
       <anchorfile>classMagnum_1_1Math_1_1Color4.html</anchorfile>
-      <anchor>a816c7e5d93d8763b4499d8b83ce14cfa</anchor>
+      <anchor>abeef62268e3583126a95e558a79e1233</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -14262,10 +13073,10 @@
       <arglist>(const Vector&lt; 4, Float &gt; &amp;other) noexcept</arglist>
     </member>
     <member kind="function">
-      <type>Hsv</type>
+      <type>ColorHsv&lt; FloatingPointType &gt;</type>
       <name>toHsv</name>
       <anchorfile>classMagnum_1_1Math_1_1Color4.html</anchorfile>
-      <anchor>adbce0bc1dbe6673255487789bd468dde</anchor>
+      <anchor>aa4ece001536738f1acb2160d165ff2b5</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -14363,8 +13174,8 @@
       <type>static Color4&lt; Float &gt;</type>
       <name>fromHsv</name>
       <anchorfile>classMagnum_1_1Math_1_1Color4.html</anchorfile>
-      <anchor>a8febf22ced9cd7338e3ddf6dc95e3b10</anchor>
-      <arglist>(const Hsv &amp;hsv, Float a=Implementation::fullChannel&lt; Float &gt;())</arglist>
+      <anchor>a3ee58ac0c7e6dc617af4ebc00b4417b4</anchor>
+      <arglist>(const ColorHsv&lt; FloatingPointType &gt; &amp;hsv, Float a=Implementation::fullChannel&lt; Float &gt;())</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static Color4&lt; Float &gt;</type>
@@ -15677,60 +14488,6 @@
       <anchorfile>classMagnum_1_1Math_1_1Dual.html</anchorfile>
       <anchor>adf84b1bff280ad75079c8774ca25cbec</anchor>
       <arglist>(const Dual&lt; Rad&lt; Quaternion&lt; T &gt; &gt;&gt; &amp;angle)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>FeatureGroup&lt; dimensions, AbstractShape&lt; dimensions &gt;, Float &gt;</name>
-    <filename>classMagnum_1_1SceneGraph_1_1FeatureGroup.html</filename>
-    <base>AbstractFeatureGroup&lt; dimensions, Float &gt;</base>
-    <member kind="function">
-      <type></type>
-      <name>~FeatureGroup</name>
-      <anchorfile>classMagnum_1_1SceneGraph_1_1FeatureGroup.html</anchorfile>
-      <anchor>a352fd0f8f6d4a53a5780773a16e00b09</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isEmpty</name>
-      <anchorfile>classMagnum_1_1SceneGraph_1_1FeatureGroup.html</anchorfile>
-      <anchor>aa55204b99b7ea4cf78170d8fa654ae51</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::size_t</type>
-      <name>size</name>
-      <anchorfile>classMagnum_1_1SceneGraph_1_1FeatureGroup.html</anchorfile>
-      <anchor>af34f1faeabbdf16a30bfddd3d4627076</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>AbstractShape&lt; dimensions &gt; &amp;</type>
-      <name>operator[]</name>
-      <anchorfile>classMagnum_1_1SceneGraph_1_1FeatureGroup.html</anchorfile>
-      <anchor>a2da5b140149a69381b8e252f606ed232</anchor>
-      <arglist>(std::size_t index)</arglist>
-    </member>
-    <member kind="function">
-      <type>const AbstractShape&lt; dimensions &gt; &amp;</type>
-      <name>operator[]</name>
-      <anchorfile>classMagnum_1_1SceneGraph_1_1FeatureGroup.html</anchorfile>
-      <anchor>ab08e5838efde6a98aa9ca0e172765f87</anchor>
-      <arglist>(std::size_t index) const</arglist>
-    </member>
-    <member kind="function">
-      <type>FeatureGroup&lt; dimensions, AbstractShape&lt; dimensions &gt;, Float &gt; &amp;</type>
-      <name>add</name>
-      <anchorfile>classMagnum_1_1SceneGraph_1_1FeatureGroup.html</anchorfile>
-      <anchor>a2091e5d70dde6675b31a52527ce9513b</anchor>
-      <arglist>(AbstractShape&lt; dimensions &gt; &amp;feature)</arglist>
-    </member>
-    <member kind="function">
-      <type>FeatureGroup&lt; dimensions, AbstractShape&lt; dimensions &gt;, Float &gt; &amp;</type>
-      <name>remove</name>
-      <anchorfile>classMagnum_1_1SceneGraph_1_1FeatureGroup.html</anchorfile>
-      <anchor>a527ccb9c991144fc37fada509aaf4901</anchor>
-      <arglist>(AbstractShape&lt; dimensions &gt; &amp;feature)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17602,13 +16359,6 @@
     </member>
     <member kind="function">
       <type>std::string</type>
-      <name>hrtfSpecifier</name>
-      <anchorfile>classMagnum_1_1Audio_1_1Context.html</anchorfile>
-      <anchor>a93ac60a253fd26fd5231c6680f41cc72</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::string</type>
       <name>deviceSpecifierString</name>
       <anchorfile>classMagnum_1_1Audio_1_1Context.html</anchorfile>
       <anchor>a445e6cd7bf3deb51200cbd243e6acee5</anchor>
@@ -19343,20 +18093,6 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>void</type>
-      <name>setData</name>
-      <anchorfile>classMagnum_1_1CompressedImage.html</anchorfile>
-      <anchor>a6fefc22785c5a9ff29022182247c40a2</anchor>
-      <arglist>(CompressedPixelStorage storage, CompressedPixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::Array&lt; char &gt; &amp;&amp;data)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setData</name>
-      <anchorfile>classMagnum_1_1CompressedImage.html</anchorfile>
-      <anchor>a0d6d96ec19a8a6a3336e148d22549d2c</anchor>
-      <arglist>(CompressedPixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::Array&lt; char &gt; &amp;&amp;data)</arglist>
-    </member>
-    <member kind="function">
       <type>Containers::Array&lt; char &gt;</type>
       <name>release</name>
       <anchorfile>classMagnum_1_1CompressedImage.html</anchorfile>
@@ -20139,76 +18875,7 @@
   <compound kind="class">
     <name>Magnum::DebugTools::ResourceManager</name>
     <filename>classMagnum_1_1DebugTools_1_1ResourceManager.html</filename>
-    <base>ResourceManager&lt; Magnum::Implementation::ResourceManagerLocalInstance, GL::AbstractShaderProgram, GL::Buffer, GL::Mesh, GL::MeshView, DebugTools::ForceRendererOptions, DebugTools::ObjectRendererOptions, DebugTools::ShapeRendererOptions &gt;</base>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::DebugTools::ShapeRenderer</name>
-    <filename>classMagnum_1_1DebugTools_1_1ShapeRenderer.html</filename>
-    <templarg>dimensions</templarg>
-    <base>Drawable&lt; dimensions, Float &gt;</base>
-    <member kind="function">
-      <type></type>
-      <name>ShapeRenderer</name>
-      <anchorfile>classMagnum_1_1DebugTools_1_1ShapeRenderer.html</anchorfile>
-      <anchor>aaa210f947039f9027c584c0859b0c5b6</anchor>
-      <arglist>(Shapes::AbstractShape&lt; dimensions &gt; &amp;shape, ResourceKey options=ResourceKey(), SceneGraph::DrawableGroup&lt; dimensions, Float &gt; *drawables=nullptr)</arglist>
-    </member>
-    <docanchor file="classMagnum_1_1DebugTools_1_1ShapeRenderer" title="Basic usage">DebugTools-ShapeRenderer-usage</docanchor>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::DebugTools::ShapeRendererOptions</name>
-    <filename>classMagnum_1_1DebugTools_1_1ShapeRendererOptions.html</filename>
-    <member kind="enumeration">
-      <type></type>
-      <name>RenderMode</name>
-      <anchorfile>classMagnum_1_1DebugTools_1_1ShapeRendererOptions.html</anchorfile>
-      <anchor>aae7b1a38fd0295f79a5b171ea8540565</anchor>
-      <arglist></arglist>
-      <enumvalue file="classMagnum_1_1DebugTools_1_1ShapeRendererOptions.html" anchor="aae7b1a38fd0295f79a5b171ea8540565a33e42d0f3b166a4c405127e4412fbef2">Wireframe</enumvalue>
-      <enumvalue file="classMagnum_1_1DebugTools_1_1ShapeRendererOptions.html" anchor="aae7b1a38fd0295f79a5b171ea8540565ae41480b6bbfbf7407974a88d3d34f4fa">Solid</enumvalue>
-    </member>
-    <member kind="function">
-      <type>constexpr RenderMode</type>
-      <name>renderMode</name>
-      <anchorfile>classMagnum_1_1DebugTools_1_1ShapeRendererOptions.html</anchorfile>
-      <anchor>a39e475a6ae2fcc9d53fbeac2982fd28c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ShapeRendererOptions &amp;</type>
-      <name>setRenderMode</name>
-      <anchorfile>classMagnum_1_1DebugTools_1_1ShapeRendererOptions.html</anchorfile>
-      <anchor>ab3ee5fee77c69955c68d571e10706f12</anchor>
-      <arglist>(RenderMode mode)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Color4</type>
-      <name>color</name>
-      <anchorfile>classMagnum_1_1DebugTools_1_1ShapeRendererOptions.html</anchorfile>
-      <anchor>aded1eae486f34038739d84973e548c32</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ShapeRendererOptions &amp;</type>
-      <name>setColor</name>
-      <anchorfile>classMagnum_1_1DebugTools_1_1ShapeRendererOptions.html</anchorfile>
-      <anchor>aa35caa614af616875a77e6b88528af2b</anchor>
-      <arglist>(const Color4 &amp;color)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Float</type>
-      <name>pointSize</name>
-      <anchorfile>classMagnum_1_1DebugTools_1_1ShapeRendererOptions.html</anchorfile>
-      <anchor>a142382510b651f2fcd19745ed9015e49</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ShapeRendererOptions &amp;</type>
-      <name>setPointSize</name>
-      <anchorfile>classMagnum_1_1DebugTools_1_1ShapeRendererOptions.html</anchorfile>
-      <anchor>a5c4d7b855c246f072a06d721e2e63671</anchor>
-      <arglist>(Float size)</arglist>
-    </member>
+    <base>ResourceManager&lt; Magnum::Implementation::ResourceManagerLocalInstance, GL::AbstractShaderProgram, GL::Buffer, GL::Mesh, GL::MeshView, DebugTools::ForceRendererOptions, DebugTools::ObjectRendererOptions &gt;</base>
   </compound>
   <compound kind="struct">
     <name>Magnum::DimensionTraits</name>
@@ -21617,7 +20284,7 @@
       <type>Buffer &amp;</type>
       <name>setTargetHint</name>
       <anchorfile>classMagnum_1_1GL_1_1Buffer.html</anchorfile>
-      <anchor>ae344e4b624a0a172e7da9839b3fdb14d</anchor>
+      <anchor>aa72ec6484852faaa2e82655c317319c5</anchor>
       <arglist>(TargetHint hint)</arglist>
     </member>
     <member kind="function">
@@ -21649,24 +20316,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>Containers::Array&lt; T &gt;</type>
-      <name>data</name>
-      <anchorfile>classMagnum_1_1GL_1_1Buffer.html</anchorfile>
-      <anchor>a795a2bc443e91181cb4fb665c7746c3f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
       <type>Containers::Array&lt; char &gt;</type>
       <name>subData</name>
       <anchorfile>classMagnum_1_1GL_1_1Buffer.html</anchorfile>
       <anchor>a10375e2ba8610bae58ac2eaa3f6bf5c5</anchor>
-      <arglist>(GLintptr offset, GLsizeiptr size)</arglist>
-    </member>
-    <member kind="function">
-      <type>Containers::Array&lt; T &gt;</type>
-      <name>subData</name>
-      <anchorfile>classMagnum_1_1GL_1_1Buffer.html</anchorfile>
-      <anchor>aa8ac736c498fbf213823a9707eed2467</anchor>
       <arglist>(GLintptr offset, GLsizeiptr size)</arglist>
     </member>
     <member kind="function">
@@ -21740,13 +20393,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>T *</type>
-      <name>map</name>
-      <anchorfile>classMagnum_1_1GL_1_1Buffer.html</anchorfile>
-      <anchor>a20774c785caafbbd40bbaae46ec0d47a</anchor>
-      <arglist>(MapAccess access)</arglist>
-    </member>
-    <member kind="function">
       <type>Containers::ArrayView&lt; char &gt;</type>
       <name>map</name>
       <anchorfile>classMagnum_1_1GL_1_1Buffer.html</anchorfile>
@@ -21759,13 +20405,6 @@
       <anchorfile>classMagnum_1_1GL_1_1Buffer.html</anchorfile>
       <anchor>a00d5d05cae9aa05d4870023415cde10b</anchor>
       <arglist>(GLintptr offset, GLsizeiptr length, MapFlags flags={})</arglist>
-    </member>
-    <member kind="function">
-      <type>T *</type>
-      <name>map</name>
-      <anchorfile>classMagnum_1_1GL_1_1Buffer.html</anchorfile>
-      <anchor>a001da67d46fb563c78b461354f28155c</anchor>
-      <arglist>(GLintptr offset, GLsizeiptr length, MapFlags flags)</arglist>
     </member>
     <member kind="function">
       <type>Buffer &amp;</type>
@@ -21925,20 +20564,6 @@
       <type></type>
       <name>BufferImage</name>
       <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
-      <anchor>a63d698f3a2ff648d29fa9ccd330855f7</anchor>
-      <arglist>(PixelStorage storage, Magnum::PixelFormat format, PixelType type, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data, BufferUsage usage)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>BufferImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
-      <anchor>a3517d5a210a70080479594ee05421f4f</anchor>
-      <arglist>(Magnum::PixelFormat format, PixelType type, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data, BufferUsage usage)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>BufferImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
       <anchor>ae100bd593da7c95c916fc10c70f1e33a</anchor>
       <arglist>(PixelStorage storage, Magnum::PixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data, BufferUsage usage)</arglist>
     </member>
@@ -21967,20 +20592,6 @@
       <type></type>
       <name>BufferImage</name>
       <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
-      <anchor>a11cb1d62bdaecb5fb021ec8b6d2eaac5</anchor>
-      <arglist>(PixelStorage storage, Magnum::PixelFormat format, PixelType type, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Buffer &amp;&amp;buffer, std::size_t dataSize) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>BufferImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
-      <anchor>a6a8c1ea0b991fc45f493fc785f17efbf</anchor>
-      <arglist>(Magnum::PixelFormat format, PixelType type, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Buffer &amp;&amp;buffer, std::size_t dataSize) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>BufferImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
       <anchor>aedf334b1b3fa3c87d84c267829726421</anchor>
       <arglist>(PixelStorage storage, Magnum::PixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Buffer &amp;&amp;buffer, std::size_t dataSize) noexcept</arglist>
     </member>
@@ -22004,20 +20615,6 @@
       <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
       <anchor>a1650c5abf0907fc909fe842bf5af81b3</anchor>
       <arglist>(PixelFormat format, PixelType type)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>BufferImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
-      <anchor>a46f3de621dd8dd3519724513f5b32acd</anchor>
-      <arglist>(PixelStorage storage, Magnum::PixelFormat format, PixelType type)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>BufferImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
-      <anchor>a31ae1c9273718ea94e99124e2d401c08</anchor>
-      <arglist>(Magnum::PixelFormat format, PixelType type)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -22137,20 +20734,6 @@
       <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
       <anchor>ad07a01e2ad9da7e3e2c9a704f0210ed3</anchor>
       <arglist>(PixelFormat format, PixelType type, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data, BufferUsage usage)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setData</name>
-      <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
-      <anchor>a2e6e7bafb38a4a99fa5f2bdd729364d1</anchor>
-      <arglist>(PixelStorage storage, Magnum::PixelFormat format, PixelType type, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data, BufferUsage usage)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setData</name>
-      <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
-      <anchor>a14e0626ac64ad9be5b7fa7500c0a4bfb</anchor>
-      <arglist>(Magnum::PixelFormat format, PixelType type, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data, BufferUsage usage)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -22506,11 +21089,13 @@
       <anchor>ae2ac949e357c9c61ea6afc05ec0d824a</anchor>
       <arglist></arglist>
       <enumvalue file="classMagnum_1_1GL_1_1Context.html" anchor="ae2ac949e357c9c61ea6afc05ec0d824aabfd16f84e6b719aba6717bf2f3eb3580">Amd</enumvalue>
-      <enumvalue file="classMagnum_1_1GL_1_1Context.html" anchor="ae2ac949e357c9c61ea6afc05ec0d824aa48af4341f745163f945fa838eeabb062">AMD</enumvalue>
+      <enumvalue file="classMagnum_1_1GL_1_1Context.html" anchor="ae2ac949e357c9c61ea6afc05ec0d824aa45f4ce6c3306644b1efe333f4f8d6929">Angle</enumvalue>
       <enumvalue file="classMagnum_1_1GL_1_1Context.html" anchor="ae2ac949e357c9c61ea6afc05ec0d824aaaa0278f8d48aeb5309eec13da03ad8eb">IntelWindows</enumvalue>
       <enumvalue file="classMagnum_1_1GL_1_1Context.html" anchor="ae2ac949e357c9c61ea6afc05ec0d824aa2260b669d1c515bc489704f350fe023f">Mesa</enumvalue>
       <enumvalue file="classMagnum_1_1GL_1_1Context.html" anchor="ae2ac949e357c9c61ea6afc05ec0d824aa1e529e65e1dff87960b1e50a924321a1">NVidia</enumvalue>
       <enumvalue file="classMagnum_1_1GL_1_1Context.html" anchor="ae2ac949e357c9c61ea6afc05ec0d824aa0b1a0acb1197a3d749100f0f947cf41b">Svga3D</enumvalue>
+      <enumvalue file="classMagnum_1_1GL_1_1Context.html" anchor="ae2ac949e357c9c61ea6afc05ec0d824aaabe2e9b531ea10ba959ceebe5b259116">SwiftShader</enumvalue>
+      <enumvalue file="classMagnum_1_1GL_1_1Context.html" anchor="ae2ac949e357c9c61ea6afc05ec0d824aa8f54f73ecbfc23b69ce01f69f5b1b23e">ArmMali</enumvalue>
     </member>
     <member kind="typedef">
       <type>Containers::EnumSet&lt; Flag &gt;</type>
@@ -22749,13 +21334,6 @@
     <name>Magnum::GL::CubeMapTexture</name>
     <filename>classMagnum_1_1GL_1_1CubeMapTexture.html</filename>
     <base>Magnum::GL::AbstractTexture</base>
-    <member kind="typedef">
-      <type>CubeMapCoordinate</type>
-      <name>Coordinate</name>
-      <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
-      <anchor>a44fa613c161a616503e0932d1a343414</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>CubeMapTexture</name>
@@ -24796,13 +23374,6 @@
     <name>Magnum::GL::Mesh</name>
     <filename>classMagnum_1_1GL_1_1Mesh.html</filename>
     <base>Magnum::GL::AbstractObject</base>
-    <member kind="typedef">
-      <type>Magnum::MeshIndexType</type>
-      <name>IndexType</name>
-      <anchorfile>classMagnum_1_1GL_1_1Mesh.html</anchorfile>
-      <anchor>ae50786f374ed9881b1b52b367342e900</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>Mesh</name>
@@ -24913,13 +23484,6 @@
       <name>indexTypeSize</name>
       <anchorfile>classMagnum_1_1GL_1_1Mesh.html</anchorfile>
       <anchor>a5fa9fd4e1b004c503a01e00ef933085e</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::size_t</type>
-      <name>indexSize</name>
-      <anchorfile>classMagnum_1_1GL_1_1Mesh.html</anchorfile>
-      <anchor>a05fbc96f3ea4ed4e04b7e653d38b8989</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -25159,13 +23723,6 @@
       <anchorfile>classMagnum_1_1GL_1_1Mesh.html</anchorfile>
       <anchor>a3395ae3ea69e090acd9e824690f7effa</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static std::size_t</type>
-      <name>indexSize</name>
-      <anchorfile>classMagnum_1_1GL_1_1Mesh.html</anchorfile>
-      <anchor>a62d4b5a50d0d3a9662f490c41a224a19</anchor>
-      <arglist>(Magnum::MeshIndexType type)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static Mesh</type>
@@ -28551,13 +27108,6 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>GL::PixelType</type>
-      <name>type</name>
-      <anchorfile>classMagnum_1_1Image.html</anchorfile>
-      <anchor>a87d7cca8e7852e9fa471e7541fbeea10</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
       <type>UnsignedInt</type>
       <name>pixelSize</name>
       <anchorfile>classMagnum_1_1Image.html</anchorfile>
@@ -28619,20 +27169,6 @@
       <anchorfile>classMagnum_1_1Image.html</anchorfile>
       <anchor>aa74b0f1e3f6915eae3aa26355415383f</anchor>
       <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setData</name>
-      <anchorfile>classMagnum_1_1Image.html</anchorfile>
-      <anchor>ab4287a14a40beab9cec68c0a4179a122</anchor>
-      <arglist>(PixelStorage storage, T format, U formatExtra, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::Array&lt; char &gt; &amp;&amp;data)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setData</name>
-      <anchorfile>classMagnum_1_1Image.html</anchorfile>
-      <anchor>a90cef1a7fbb7a754834c67c9385f55a4</anchor>
-      <arglist>(T format, U formatExtra, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::Array&lt; char &gt; &amp;&amp;data)</arglist>
     </member>
     <member kind="function">
       <type>Containers::Array&lt; char &gt;</type>
@@ -28790,13 +27326,6 @@
       <name>formatExtra</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
       <anchor>a9da27a115e0beb193f583cef36204072</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>GL::PixelType</type>
-      <name>type</name>
-      <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a7fc5ca83a8d88a95df269513fe137252</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -29461,10 +27990,10 @@
       <arglist>(const Vector&lt; 3, T &gt; &amp;other) noexcept</arglist>
     </member>
     <member kind="function">
-      <type>Hsv</type>
+      <type>ColorHsv&lt; FloatingPointType &gt;</type>
       <name>toHsv</name>
       <anchorfile>classMagnum_1_1Math_1_1Color3.html</anchorfile>
-      <anchor>a0586947ba0d2a4de80aee7fa1dac3d9c</anchor>
+      <anchor>a5d18fe79285510431b55dab09de1dd9c</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -29562,8 +28091,8 @@
       <type>static Color3&lt; T &gt;</type>
       <name>fromHsv</name>
       <anchorfile>classMagnum_1_1Math_1_1Color3.html</anchorfile>
-      <anchor>a23f0c1a7e9c2b7252e20f3ed3afed952</anchor>
-      <arglist>(const Hsv &amp;hsv)</arglist>
+      <anchor>a2d06c178f7b2f03f5a2d975e2588e601</anchor>
+      <arglist>(const ColorHsv&lt; FloatingPointType &gt; &amp;hsv)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static Color3&lt; T &gt;</type>
@@ -29663,10 +28192,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>Color3&lt; T &gt;::Hsv</type>
+      <type>std::tuple&lt; Deg&lt; FloatingPointType &gt;, FloatingPointType, FloatingPointType &gt;</type>
       <name>Hsv</name>
       <anchorfile>classMagnum_1_1Math_1_1Color4.html</anchorfile>
-      <anchor>a816c7e5d93d8763b4499d8b83ce14cfa</anchor>
+      <anchor>abeef62268e3583126a95e558a79e1233</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -29733,10 +28262,10 @@
       <arglist>(const Vector&lt; 4, T &gt; &amp;other) noexcept</arglist>
     </member>
     <member kind="function">
-      <type>Hsv</type>
+      <type>ColorHsv&lt; FloatingPointType &gt;</type>
       <name>toHsv</name>
       <anchorfile>classMagnum_1_1Math_1_1Color4.html</anchorfile>
-      <anchor>adbce0bc1dbe6673255487789bd468dde</anchor>
+      <anchor>aa4ece001536738f1acb2160d165ff2b5</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -29834,8 +28363,8 @@
       <type>static Color4&lt; T &gt;</type>
       <name>fromHsv</name>
       <anchorfile>classMagnum_1_1Math_1_1Color4.html</anchorfile>
-      <anchor>a8febf22ced9cd7338e3ddf6dc95e3b10</anchor>
-      <arglist>(const Hsv &amp;hsv, T a=Implementation::fullChannel&lt; T &gt;())</arglist>
+      <anchor>a3ee58ac0c7e6dc617af4ebc00b4417b4</anchor>
+      <arglist>(const ColorHsv&lt; FloatingPointType &gt; &amp;hsv, T a=Implementation::fullChannel&lt; T &gt;())</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static Color4&lt; T &gt;</type>
@@ -29927,6 +28456,109 @@
       <anchorfile>classMagnum_1_1Math_1_1Color4.html</anchorfile>
       <anchor>a338890901a6aa2d1e80e689f9b2532a4</anchor>
       <arglist>(Corrade::Utility::Debug &amp;debug, const Color4&lt; UnsignedByte &gt; &amp;value)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>Magnum::Math::ColorHsv</name>
+    <filename>structMagnum_1_1Math_1_1ColorHsv.html</filename>
+    <templarg></templarg>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>ColorHsv</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>a4a9b0acc8e3e89b9fa5e21de8f5bbbe9</anchor>
+      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ColorHsv</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>afa618dcc1298bf07203e1bef7a4a4755</anchor>
+      <arglist>(NoInitT) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>ColorHsv</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>a37de8af3e1665f7e993e57e9e736a07a</anchor>
+      <arglist>(Deg&lt; T &gt; hue, T saturation, T value) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>ColorHsv</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>a3b3182c9525f9081c396bce34daba445</anchor>
+      <arglist>(const ColorHsv&lt; U &gt; &amp;other) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>ColorHsv</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>afb1b74c548b765ee42a2c1ca1e201201</anchor>
+      <arglist>(std::tuple&lt; Deg&lt; T &gt;, T, T &gt; hsv) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>operator std::tuple&lt; Deg&lt; T &gt;, T, T &gt;</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>a49c9da1eb4c77c33f1f6ce3a21f14eeb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator std::tuple&lt; Deg&lt; T &gt; &amp;, T &amp;, T &amp; &gt;</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>abaa3c6c6f831fe794aba0a4de0007a6e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>operator std::tuple&lt; const Deg&lt; T &gt; &amp;, const T &amp;, const T &amp; &gt;</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>ac0d332a7270bab5837c58259f7fc304b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>a8e056f634521287186b7731403a23319</anchor>
+      <arglist>(const ColorHsv&lt; T &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>ab4ccf6c71029be78f9b087a835311353</anchor>
+      <arglist>(const ColorHsv&lt; T &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="variable">
+      <type>Deg&lt; T &gt;</type>
+      <name>hue</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>a072d583b68f36f9dfb49e8ee8a6971bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>T</type>
+      <name>saturation</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>a21b27a5995ecdefbfe5058c874af61b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>T</type>
+      <name>value</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>abc6fa98b2cfe255d19ae05fdcb4c2c9f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>a89bc10efa4914f4bd586cf6f493ee898</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const ColorHsv&lt; T &gt; &amp;value)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31421,6 +30053,48 @@
       <anchorfile>classMagnum_1_1Math_1_1Frustum.html</anchorfile>
       <anchor>aee6847764bc2a07c1c200237a6a9446a</anchor>
       <arglist>(std::size_t i) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector4&lt; T &gt; *</type>
+      <name>begin</name>
+      <anchorfile>classMagnum_1_1Math_1_1Frustum.html</anchorfile>
+      <anchor>a99677c6077aec38b4fc44d14adf4a636</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr const Vector4&lt; T &gt; *</type>
+      <name>begin</name>
+      <anchorfile>classMagnum_1_1Math_1_1Frustum.html</anchorfile>
+      <anchor>a9f81386af1c76f5174876ec79a7e0ebf</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr const Vector4&lt; T &gt; *</type>
+      <name>cbegin</name>
+      <anchorfile>classMagnum_1_1Math_1_1Frustum.html</anchorfile>
+      <anchor>adb5832fe04715ee7a5bc392d5ad9ded2</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector4&lt; T &gt; *</type>
+      <name>end</name>
+      <anchorfile>classMagnum_1_1Math_1_1Frustum.html</anchorfile>
+      <anchor>a7e0c0fc51b1855d73c8ddfc5d8158d7a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr const Vector4&lt; T &gt; *</type>
+      <name>end</name>
+      <anchorfile>classMagnum_1_1Math_1_1Frustum.html</anchorfile>
+      <anchor>a17493a8663bc410978c4e96156035d5d</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr const Vector4&lt; T &gt; *</type>
+      <name>cend</name>
+      <anchorfile>classMagnum_1_1Math_1_1Frustum.html</anchorfile>
+      <anchor>a4938a3db9e0dfbab87360124ba8723aa</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>constexpr Vector4&lt; T &gt;</type>
@@ -36553,34 +35227,6 @@
       <anchor>ad7188b0bfaa4c50207d254382eb9b16e</anchor>
       <arglist>(std::size_t pixelSize, const Vector3i &amp;size) const</arglist>
     </member>
-    <member kind="function">
-      <type>std::tuple&lt; Math::Vector3&lt; std::size_t &gt;, Math::Vector3&lt; std::size_t &gt;, std::size_t &gt;</type>
-      <name>dataProperties</name>
-      <anchorfile>classMagnum_1_1PixelStorage.html</anchorfile>
-      <anchor>a34b2a1258700b058cd307124cbfc2a9d</anchor>
-      <arglist>(GL::PixelFormat format, GL::PixelType type, const Vector3i &amp;size) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::tuple&lt; Math::Vector3&lt; std::size_t &gt;, Math::Vector3&lt; std::size_t &gt;, std::size_t &gt;</type>
-      <name>dataProperties</name>
-      <anchorfile>classMagnum_1_1PixelStorage.html</anchorfile>
-      <anchor>aef0db688a68dea81c9bb9e1921cb8a92</anchor>
-      <arglist>(PixelFormat format, GL::PixelType type, const Vector3i &amp;size) const</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static std::size_t</type>
-      <name>pixelSize</name>
-      <anchorfile>classMagnum_1_1PixelStorage.html</anchorfile>
-      <anchor>a7dfc42fca3b068196f52d53e5c78d66e</anchor>
-      <arglist>(GL::PixelFormat format, GL::PixelType type)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static std::size_t</type>
-      <name>pixelSize</name>
-      <anchorfile>classMagnum_1_1PixelStorage.html</anchorfile>
-      <anchor>aeebd626db5bb849600fab2c69d8a516d</anchor>
-      <arglist>(PixelFormat format, GL::PixelType type)</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>Magnum::Platform::AbstractXApplication</name>
@@ -36657,20 +35303,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>void</type>
-      <name>createContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
-      <anchor>afcf8d155e9c78a93ccb6b8f1e6e5a42d</anchor>
-      <arglist>(const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>createContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
-      <anchor>a3a2c99ccdda330e31b9d309587fe5a5e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
       <type>bool</type>
       <name>tryCreate</name>
       <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
@@ -36682,13 +35314,6 @@
       <name>tryCreate</name>
       <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
       <anchor>abeb4aca3da62cc77f14e12c03d7c3e42</anchor>
-      <arglist>(const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>tryCreateContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication.html</anchorfile>
-      <anchor>aa06b7571ab54621d3e4390688026aed3</anchor>
       <arglist>(const Configuration &amp;configuration)</arglist>
     </member>
     <member kind="function">
@@ -36831,20 +35456,6 @@
       <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication_1_1Configuration.html</anchorfile>
       <anchor>aa24dae5c5aa6e797543503db938f41b8</anchor>
       <arglist>(const Vector2i &amp;size)</arglist>
-    </member>
-    <member kind="function">
-      <type>GL::Version</type>
-      <name>version</name>
-      <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication_1_1Configuration.html</anchorfile>
-      <anchor>ab8faf96a353316d2cf4e9324d6cb5512</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setVersion</name>
-      <anchorfile>classMagnum_1_1Platform_1_1AbstractXApplication_1_1Configuration.html</anchorfile>
-      <anchor>a49ddac06dc3a5c1c102a4e08da1d8586</anchor>
-      <arglist>(GL::Version version)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -37191,13 +35802,6 @@
       <type></type>
       <name>AndroidApplication</name>
       <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
-      <anchor>a3be643bec8200e6f17a4b37cb001ba0b</anchor>
-      <arglist>(const Arguments &amp;arguments, std::nullptr_t)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>AndroidApplication</name>
-      <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
       <anchor>aa0fdb76a85a84bf49063c5f464d53d27</anchor>
       <arglist>(const AndroidApplication &amp;)=delete</arglist>
     </member>
@@ -37258,20 +35862,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>void</type>
-      <name>createContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
-      <anchor>a530f4be0b52a4722f22d965c81a288f9</anchor>
-      <arglist>(const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>createContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
-      <anchor>aef92496c0a84ae0c6b2042c52fd0917a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
       <type>bool</type>
       <name>tryCreate</name>
       <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
@@ -37283,13 +35873,6 @@
       <name>tryCreate</name>
       <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
       <anchor>ab00414f6776116917e4df0834ad5640c</anchor>
-      <arglist>(const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>tryCreateContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication.html</anchorfile>
-      <anchor>aa027b536661ded310396461f405070f2</anchor>
       <arglist>(const Configuration &amp;configuration)</arglist>
     </member>
     <member kind="function">
@@ -37404,13 +35987,6 @@
       <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication_1_1Configuration.html</anchorfile>
       <anchor>a82e2c923bd358531afa0e19d3da4e809</anchor>
       <arglist>(const Vector2i &amp;size)</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setVersion</name>
-      <anchorfile>classMagnum_1_1Platform_1_1AndroidApplication_1_1Configuration.html</anchorfile>
-      <anchor>aaa557b09ad1436acbd8b55d7da241ca4</anchor>
-      <arglist>(GL::Version)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38020,13 +36596,6 @@
       <type></type>
       <name>GlfwApplication</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
-      <anchor>a150c7e81fe69c218cea508517daa7046</anchor>
-      <arglist>(const Arguments &amp;arguments, std::nullptr_t)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>GlfwApplication</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>a6e5f3dd9d4e4b68b950d75d915545ec8</anchor>
       <arglist>(const GlfwApplication &amp;)=delete</arglist>
     </member>
@@ -38094,20 +36663,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>void</type>
-      <name>createContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
-      <anchor>a1b58f002ec280bf476792324ee299867</anchor>
-      <arglist>(const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>createContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
-      <anchor>ad1d8ab1571b8f65c6a62d409998fa999</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
       <type>bool</type>
       <name>tryCreate</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
@@ -38119,13 +36674,6 @@
       <name>tryCreate</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>a05f4653f31ba2d564320496adaf4bba1</anchor>
-      <arglist>(const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>tryCreateContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
-      <anchor>a3752ecdeacf04277799caef2932c387c</anchor>
       <arglist>(const Configuration &amp;configuration)</arglist>
     </member>
     <member kind="function">
@@ -38352,20 +36900,6 @@
       <enumvalue file="classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html" anchor="ae9dffa3324ddf42435d2e27c7ea5160bab9f5c797ebbf55adccdd8539a65a0241">Disabled</enumvalue>
     </member>
     <member kind="typedef">
-      <type>GLConfiguration::Flag</type>
-      <name>Flag</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html</anchorfile>
-      <anchor>ad86bb7ea8f01ed886a34b50c06e7af49</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>GLConfiguration::Flags</type>
-      <name>Flags</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html</anchorfile>
-      <anchor>a2cc808b3a565e9574bc7d663344c1915</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
       <type>Containers::EnumSet&lt; WindowFlag &gt;</type>
       <name>WindowFlags</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html</anchorfile>
@@ -38448,62 +36982,6 @@
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html</anchorfile>
       <anchor>a7902d60a5fe76a062ae6f393f9d8288a</anchor>
       <arglist>(CursorMode cursorMode)</arglist>
-    </member>
-    <member kind="function">
-      <type>GLConfiguration::Flags</type>
-      <name>flags</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html</anchorfile>
-      <anchor>a6ed7e626db1569ad3b0bd3a85bafae21</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setFlags</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html</anchorfile>
-      <anchor>a0f492f0d38a4cbbbf058f80bcc86e11c</anchor>
-      <arglist>(GLConfiguration::Flags flags)</arglist>
-    </member>
-    <member kind="function">
-      <type>GL::Version</type>
-      <name>version</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html</anchorfile>
-      <anchor>a88df9d120ef682bc690ba50f4f936b25</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setVersion</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html</anchorfile>
-      <anchor>ab6de91d04394c43252677ad384d72873</anchor>
-      <arglist>(GL::Version version)</arglist>
-    </member>
-    <member kind="function">
-      <type>Int</type>
-      <name>sampleCount</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html</anchorfile>
-      <anchor>a6b89279003c503176bcf0bb2690c260e</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setSampleCount</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html</anchorfile>
-      <anchor>a5341054edf3d30478192929b323a4b1e</anchor>
-      <arglist>(Int count)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isSRGBCapable</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html</anchorfile>
-      <anchor>acd50c0573f140c9e6573eca400ac125f</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setSRGBCapable</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication_1_1Configuration.html</anchorfile>
-      <anchor>a884ad862d38ece36e78d18b0eda10cb5</anchor>
-      <arglist>(bool enabled)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -39135,632 +37613,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Magnum::Platform::GlutApplication</name>
-    <filename>classMagnum_1_1Platform_1_1GlutApplication.html</filename>
-    <class kind="struct">Magnum::Platform::GlutApplication::Arguments</class>
-    <class kind="class">Magnum::Platform::GlutApplication::Configuration</class>
-    <class kind="class">Magnum::Platform::GlutApplication::GLConfiguration</class>
-    <class kind="class">Magnum::Platform::GlutApplication::InputEvent</class>
-    <class kind="class">Magnum::Platform::GlutApplication::KeyEvent</class>
-    <class kind="class">Magnum::Platform::GlutApplication::MouseEvent</class>
-    <class kind="class">Magnum::Platform::GlutApplication::MouseMoveEvent</class>
-    <class kind="class">Magnum::Platform::GlutApplication::ViewportEvent</class>
-    <member kind="function">
-      <type></type>
-      <name>GlutApplication</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>aac79b99e3f9d7107948ffac42f8f5d09</anchor>
-      <arglist>(const Arguments &amp;arguments, const Configuration &amp;configuration, const GLConfiguration &amp;glConfiguration)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>GlutApplication</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a55842138d41d6d8ff6ebeb18b581e6ce</anchor>
-      <arglist>(const Arguments &amp;arguments, const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>GlutApplication</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>af356fc2c8b4524f4f74bf29235123428</anchor>
-      <arglist>(const Arguments &amp;arguments)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>GlutApplication</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>ae8dfa3bd6b35b57be9cdf2ff0dd6fd48</anchor>
-      <arglist>(const Arguments &amp;arguments, NoCreateT)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>GlutApplication</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>ae39e27eb26ac3d39f7ea3ede6539e2c2</anchor>
-      <arglist>(const Arguments &amp;arguments, std::nullptr_t)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>GlutApplication</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a3a322c939035228c036639008e2fe85d</anchor>
-      <arglist>(const GlutApplication &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>GlutApplication</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>aeaf2228d7e3c7e1ccf09786b7d884e11</anchor>
-      <arglist>(GlutApplication &amp;&amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type>GlutApplication &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>af7472da3683d62c0d17f667fbac631eb</anchor>
-      <arglist>(const GlutApplication &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type>GlutApplication &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a85854dd245ede1bb0a450893a8c1cfab</anchor>
-      <arglist>(GlutApplication &amp;&amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>exec</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a2d401ae5c4202016b3a614bcaa873cda</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>create</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a171c12e38aaf8249288465976492520e</anchor>
-      <arglist>(const Configuration &amp;configuration, const GLConfiguration &amp;glConfiguration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>create</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>aaa0f38da9fc838b94ae9a572c64f501f</anchor>
-      <arglist>(const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>create</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>aa2c0068dc95edf3aa4f71e5c3219acc4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>createContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>ab7b5b0949e94b5870ac315229d526a56</anchor>
-      <arglist>(const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>createContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a28a02787bc816285037d6008c1fe6eb0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>tryCreate</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a97021e53b43340af1e6fd31ec1c0d717</anchor>
-      <arglist>(const Configuration &amp;configuration, const GLConfiguration &amp;glConfiguration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>tryCreate</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a360d2b2ec9c073cfb1a8b3a76e63bf80</anchor>
-      <arglist>(const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>tryCreateContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a97a879cdee4fd2ab7d30a26c3fa63fdf</anchor>
-      <arglist>(const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>swapBuffers</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>ae571b79ace8a788856773e1adee998b9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>redraw</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a1b0407ee9f383569449f18a5013b7761</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual void</type>
-      <name>viewportEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a096ddc6c6089b2dc5467c92bc86b0e2e</anchor>
-      <arglist>(ViewportEvent &amp;event)</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual void</type>
-      <name>viewportEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>aa44b0fa80c2a5a2a10d071069b784c5b</anchor>
-      <arglist>(const Vector2i &amp;size)</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="pure">
-      <type>virtual void</type>
-      <name>drawEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>aee5b7e6a39ccaf1a669dff8d67a56558</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual void</type>
-      <name>keyPressEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a8c7b7ec051c98c01e531cef65df851bf</anchor>
-      <arglist>(KeyEvent &amp;event)</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual void</type>
-      <name>keyReleaseEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a0f77fb738e5f2485c39b1239097b3e66</anchor>
-      <arglist>(KeyEvent &amp;event)</arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>MouseCursor</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a4151e704bb857dbc3b64184352a8ebf1</anchor>
-      <arglist></arglist>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication.html" anchor="a4151e704bb857dbc3b64184352a8ebf1a7a1920d61156abc05a60135aefe8bc67">Default</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication.html" anchor="a4151e704bb857dbc3b64184352a8ebf1a6adf97f83acf6453d4a6a4b1070f3754">None</enumvalue>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setMouseTracking</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>ad5965e1c6b28153353f6a4aaf2e7c05b</anchor>
-      <arglist>(bool enabled)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setMouseCursor</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>acb9c234eddf85656c9a50a308cb901d2</anchor>
-      <arglist>(MouseCursor cursor)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>warpMouseCursor</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a7ef086dcf29445f3e2004354dc0adab7</anchor>
-      <arglist>(const Vector2i &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mousePressEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>aa1b3478987d5b69d960f8bcf609ab01d</anchor>
-      <arglist>(MouseEvent &amp;event)</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mouseReleaseEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a8e7405f446c56f1d5c774e0abf898158</anchor>
-      <arglist>(MouseEvent &amp;event)</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual void</type>
-      <name>mouseMoveEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication.html</anchorfile>
-      <anchor>a6a18e2aa4321e61ce4fe4e759f477570</anchor>
-      <arglist>(MouseMoveEvent &amp;event)</arglist>
-    </member>
-    <docanchor file="classMagnum_1_1Platform_1_1GlutApplication" title="General usage">Platform-GlutApplication-usage</docanchor>
-  </compound>
-  <compound kind="struct">
-    <name>Magnum::Platform::GlutApplication::Arguments</name>
-    <filename>structMagnum_1_1Platform_1_1GlutApplication_1_1Arguments.html</filename>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Arguments</name>
-      <anchorfile>structMagnum_1_1Platform_1_1GlutApplication_1_1Arguments.html</anchorfile>
-      <anchor>a4eeb285a5ee71313c117f616b8030e3e</anchor>
-      <arglist>(int &amp;argc, char **argv) noexcept</arglist>
-    </member>
-    <member kind="variable">
-      <type>int &amp;</type>
-      <name>argc</name>
-      <anchorfile>structMagnum_1_1Platform_1_1GlutApplication_1_1Arguments.html</anchorfile>
-      <anchor>ada7da8dcca6b9ba5c00b5d8334a55624</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>char **</type>
-      <name>argv</name>
-      <anchorfile>structMagnum_1_1Platform_1_1GlutApplication_1_1Arguments.html</anchorfile>
-      <anchor>a505438315db94d7875b22c1a2fc4aa74</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Platform::GlutApplication::Configuration</name>
-    <filename>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</filename>
-    <member kind="typedef">
-      <type>GLConfiguration::Flag</type>
-      <name>Flag</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</anchorfile>
-      <anchor>a6c04786c7ee9b465f6f5b22ff06d2176</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>GLConfiguration::Flags</type>
-      <name>Flags</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</anchorfile>
-      <anchor>a523c9e5213138d9d8fc35566796dbc09</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>std::string</type>
-      <name>title</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</anchorfile>
-      <anchor>af9be7cb69ef011d2f410ce5186266b5a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setTitle</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</anchorfile>
-      <anchor>a44126c317a127e585274fce955cefd44</anchor>
-      <arglist>(std::string title)</arglist>
-    </member>
-    <member kind="function">
-      <type>Vector2i</type>
-      <name>size</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</anchorfile>
-      <anchor>afd70d5ea0a3ce0612363882700f2cbed</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setSize</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</anchorfile>
-      <anchor>ac283f84e623491abb7ca17254f0e7014</anchor>
-      <arglist>(const Vector2i &amp;size)</arglist>
-    </member>
-    <member kind="function">
-      <type>GLConfiguration::Flags</type>
-      <name>flags</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</anchorfile>
-      <anchor>ac88a4a4139f2945127b0ed1e44642b0e</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setFlags</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</anchorfile>
-      <anchor>a22bada98467335258d90968514928f3e</anchor>
-      <arglist>(GLConfiguration::Flags flags)</arglist>
-    </member>
-    <member kind="function">
-      <type>GL::Version</type>
-      <name>version</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</anchorfile>
-      <anchor>a000e47ec0acbd46f3479a1c45ba5f310</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setVersion</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</anchorfile>
-      <anchor>a9236d8cfb7f1ab5fa0bd792fc70ae35e</anchor>
-      <arglist>(GL::Version version)</arglist>
-    </member>
-    <member kind="function">
-      <type>Int</type>
-      <name>sampleCount</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</anchorfile>
-      <anchor>ac6c43d51c15827d76f590d2ad37903c4</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setSampleCount</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1Configuration.html</anchorfile>
-      <anchor>a7886a96f1c46f5517239ea38818065f5</anchor>
-      <arglist>(Int count)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Platform::GlutApplication::GLConfiguration</name>
-    <filename>classMagnum_1_1Platform_1_1GlutApplication_1_1GLConfiguration.html</filename>
-    <member kind="enumeration">
-      <type></type>
-      <name>Flag</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1GLConfiguration.html</anchorfile>
-      <anchor>a649d3134e051f4d458520d0f017bbf33</anchor>
-      <arglist></arglist>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1GLConfiguration.html" anchor="a649d3134e051f4d458520d0f017bbf33aa603905470e2a5b8c13e96b579ef0dba">Debug</enumvalue>
-    </member>
-    <member kind="typedef">
-      <type>Containers::EnumSet&lt; Flag &gt;</type>
-      <name>Flags</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1GLConfiguration.html</anchorfile>
-      <anchor>a2aaeb2237ee2c7e349067ae944a9ba36</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>Flags</type>
-      <name>flags</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1GLConfiguration.html</anchorfile>
-      <anchor>a82cab341c789fa6383df99c4f7e164ff</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>GLConfiguration &amp;</type>
-      <name>setFlags</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1GLConfiguration.html</anchorfile>
-      <anchor>af92c3a0d7dd8ed122a20efae3bd0e453</anchor>
-      <arglist>(Flags flags)</arglist>
-    </member>
-    <member kind="function">
-      <type>GL::Version</type>
-      <name>version</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1GLConfiguration.html</anchorfile>
-      <anchor>a9791e4e90a64531e8bc6dd108be9bddf</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>GLConfiguration &amp;</type>
-      <name>setVersion</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1GLConfiguration.html</anchorfile>
-      <anchor>a15c1628c2b509c843f23e48633428abf</anchor>
-      <arglist>(GL::Version version)</arglist>
-    </member>
-    <member kind="function">
-      <type>Int</type>
-      <name>sampleCount</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1GLConfiguration.html</anchorfile>
-      <anchor>a62b2876681b5e2c407d31098a8afa13f</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>GLConfiguration &amp;</type>
-      <name>setSampleCount</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1GLConfiguration.html</anchorfile>
-      <anchor>ad7b9160eb4c732335a5daa0439b2b825</anchor>
-      <arglist>(Int count)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Platform::GlutApplication::InputEvent</name>
-    <filename>classMagnum_1_1Platform_1_1GlutApplication_1_1InputEvent.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>InputEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1InputEvent.html</anchorfile>
-      <anchor>ae83557a31ad3552fa6afd76856ee306c</anchor>
-      <arglist>(const InputEvent &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>InputEvent</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1InputEvent.html</anchorfile>
-      <anchor>af8837a4959651217760dfdb02fc48afa</anchor>
-      <arglist>(InputEvent &amp;&amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type>InputEvent &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1InputEvent.html</anchorfile>
-      <anchor>ab587b43b612ad27128ee23977376032f</anchor>
-      <arglist>(const InputEvent &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type>InputEvent &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1InputEvent.html</anchorfile>
-      <anchor>af047c319ac12451431b453b9c094c425</anchor>
-      <arglist>(InputEvent &amp;&amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setAccepted</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1InputEvent.html</anchorfile>
-      <anchor>a9f6e5fcb9a8963897e7376a1629ba4b1</anchor>
-      <arglist>(bool accepted=true)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isAccepted</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1InputEvent.html</anchorfile>
-      <anchor>a3d6b878f6854d2b0eec634b1468277c0</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Platform::GlutApplication::KeyEvent</name>
-    <filename>classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html</filename>
-    <base>Magnum::Platform::GlutApplication::InputEvent</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>Key</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html</anchorfile>
-      <anchor>ac5382577d505155198ef65863ef6bec1</anchor>
-      <arglist></arglist>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a91f4253ca587ca8ac4e63b9ceb351f5d">Esc</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a258f49887ef8d14ac268c92b02503aaa">Up</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a08a38277b0309070706f6652eeae9a53">Down</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a945d5e233cf7d6240f6b783b36a374ff">Left</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a92b09c7c48c520c3c55e497875da437c">Right</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1ae1dffc8709f31a4987c8a88334107e89">F1</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1afe5c3684dce76cdd9f7f42430868aa74">F2</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a4b6bf4b531770872d4328ce69bef5627">F3</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1ae7e0e72401a9f2718ed0f39f2861d702">F4</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a37f438df6a6d5ba4c17ef8ca58562f00">F5</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a1faf42f2823f184eb2c9f0dffe5d73f2">F6</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a47489eb597b7db34caa24b1fc78fc839">F7</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a4787509ad9f9d747a81a30e9dde3d4a7">F8</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a892a245e287c163080b23db737d3c4c9">F9</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1ab213ce22ca6ad4eda8db82966b9b6e5a">F10</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a643b0662422d1d0dffa3fca2e2bf28a8">F11</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1ae902674982fc99aa343cdd94da7476c3">F12</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a8cf04a9734132302f96da8e113e80ce5">Home</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a87557f11575c0ad78e4e28abedc13b6e">End</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a9b869c510c75c5827ac82e49d4340927">PageUp</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1aee3677bcca83ece9384b01e43952bf33">PageDown</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1ad511f8439ecde36647437fbba67a4394">Space</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a58be47db9455679e6a44df2eff9c9fa6">Comma</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a1901606ea069a83dc7beea17881ef95a">Period</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a453fb623e752c5993f65bc410fd74fe5">Minus</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a32ba78fe43257d3e7f88e3935a8ea0d4">Plus</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a358cfe58715d680d9ab09f82e4010cbc">Slash</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1aadaaee4b22041c27198d410c68d952c9">Percent</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1af5f286e73bda105e538310b3190f75c5">Equal</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1ad7ed4ee1df437474d005188535f74875">Zero</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a06c2cea18679d64399783748fa367bdd">One</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1aaada29daee1d64ed0fe907043855cb7e">Two</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1aca8a2087e5557e317599344687a57391">Three</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a981b8fcee42e1e726a67a2b9a98ea6e9">Four</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1ae5d9de39f7ca1ba2637e5640af3ae8aa">Five</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1ae6fbc0b9673f8c86726688d7607fc8f5">Six</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a12e67aac3e7f9227cc35f8f047d7dc74">Seven</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1abaca0ca6729684fd54206793ae4b5bd5">Eight</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a24db11216549ee55172c33cf3def2f3f">Nine</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a7fc56270e7a70fa81a5935b72eacbe29">A</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a9d5ed678fe57bcca610140957afab571">B</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a0d61f8370cad1d412f80b84d143e1257">C</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1af623e75af30e62bbd73d6df5b50bb7b5">D</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a3a3ea00cfc35332cedf6e5e9a32e94da">E</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a800618943025315f869e4e1f09471012">F</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1adfcf28d0734569a6a693bc8194de62bf">G</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1ac1d9f50f86825a1a2302ec2449c17196">H</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1add7536794b63bf90eccfd37f9b147d7f">I</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1aff44570aca8241914870afbc310cdb85">J</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1aa5f3c6a11b03839d46af9fb43c97c188">K</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1ad20caec3b48a1eef164cb4ca81ba2587">L</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a69691c7bdcc3ce6d5d8a1361f22d04ac">M</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a8d9c307cb7f3c4a32822a51922d1ceaa">N</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1af186217753c37b9b9f958d906208506e">O</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a44c29edb103a2872f519ad0c9a0fdaaa">P</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1af09564c9ca56850d4cd6b3319e541aee">Q</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1ae1e1d3d40573127e9ee0480caf1283d6">R</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a5dbc98dcc983a70728bd082d1a47546e">S</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1ab9ece18c950afbfa6b0fdbfa4ff731d3">T</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a4c614360da93c0a041b22e537de151eb">U</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a5206560a306a2e085a437fd258eb57ce">V</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a61e9c06ea9a85a5088a499df6458d276">W</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a02129bb861061d1a052c592e2dc6b383">X</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a57cec4137b614c87cb4e24a3d003a3e0">Y</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html" anchor="ac5382577d505155198ef65863ef6bec1a21c2e59531c8710156d34a3c30ac81d5">Z</enumvalue>
-    </member>
-    <member kind="function">
-      <type>Key</type>
-      <name>key</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html</anchorfile>
-      <anchor>aea56a56548065d945e9cf0b5c74a482a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Vector2i</type>
-      <name>position</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1KeyEvent.html</anchorfile>
-      <anchor>a837bb1f73df5401f6a9d52dbbaa40385</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Platform::GlutApplication::MouseEvent</name>
-    <filename>classMagnum_1_1Platform_1_1GlutApplication_1_1MouseEvent.html</filename>
-    <base>Magnum::Platform::GlutApplication::InputEvent</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>Button</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1MouseEvent.html</anchorfile>
-      <anchor>abf9af54eefb9d796daf07a5ac1225cfc</anchor>
-      <arglist></arglist>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1MouseEvent.html" anchor="abf9af54eefb9d796daf07a5ac1225cfca945d5e233cf7d6240f6b783b36a374ff">Left</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1MouseEvent.html" anchor="abf9af54eefb9d796daf07a5ac1225cfcab1ca34f82e83c52b010f86955f264e05">Middle</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1MouseEvent.html" anchor="abf9af54eefb9d796daf07a5ac1225cfca92b09c7c48c520c3c55e497875da437c">Right</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1MouseEvent.html" anchor="abf9af54eefb9d796daf07a5ac1225cfca050f568559dcada95ba3ecb63de39971">WheelUp</enumvalue>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1MouseEvent.html" anchor="abf9af54eefb9d796daf07a5ac1225cfca95cf2a3dc58aff6d85e53738a089d9d1">WheelDown</enumvalue>
-    </member>
-    <member kind="function">
-      <type>Button</type>
-      <name>button</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1MouseEvent.html</anchorfile>
-      <anchor>a9c5f510a78e4cf659c715e832ceade5f</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Vector2i</type>
-      <name>position</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1MouseEvent.html</anchorfile>
-      <anchor>a26f952c2c791579535bec14c99f22d32</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Platform::GlutApplication::MouseMoveEvent</name>
-    <filename>classMagnum_1_1Platform_1_1GlutApplication_1_1MouseMoveEvent.html</filename>
-    <base>Magnum::Platform::GlutApplication::InputEvent</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>Button</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1MouseMoveEvent.html</anchorfile>
-      <anchor>aff098631710a12b27aed35858293e71c</anchor>
-      <arglist></arglist>
-      <enumvalue file="classMagnum_1_1Platform_1_1GlutApplication_1_1MouseMoveEvent.html" anchor="aff098631710a12b27aed35858293e71ca945d5e233cf7d6240f6b783b36a374ff">Left</enumvalue>
-    </member>
-    <member kind="typedef">
-      <type>Containers::EnumSet&lt; Button &gt;</type>
-      <name>Buttons</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1MouseMoveEvent.html</anchorfile>
-      <anchor>afab099c940b22c66df36a5caa8c51b7e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>Vector2i</type>
-      <name>position</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1MouseMoveEvent.html</anchorfile>
-      <anchor>a6d92249d10d62cd39321eb8dca94f0a8</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Buttons</type>
-      <name>buttons</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1MouseMoveEvent.html</anchorfile>
-      <anchor>aecc94641868af8d8de0795b542cb9396</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Platform::GlutApplication::ViewportEvent</name>
-    <filename>classMagnum_1_1Platform_1_1GlutApplication_1_1ViewportEvent.html</filename>
-    <member kind="function">
-      <type>Vector2i</type>
-      <name>windowSize</name>
-      <anchorfile>classMagnum_1_1Platform_1_1GlutApplication_1_1ViewportEvent.html</anchorfile>
-      <anchor>a8c6881d60299c8b37ff72333d0fc6a80</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Magnum::Platform::GlxApplication</name>
     <filename>classMagnum_1_1Platform_1_1GlxApplication.html</filename>
     <base>Magnum::Platform::AbstractXApplication</base>
@@ -39881,6 +37733,13 @@
       <anchor>aaf7814899eda4398287ad5a61a40a784</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>SDL_GLContext</type>
+      <name>glContext</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
+      <anchor>a27d11abc1f8f50d583da721b5ece8f1f</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>create</name>
@@ -39903,20 +37762,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>void</type>
-      <name>createContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
-      <anchor>aaa1d690f48d26e8fde547e430ad38c78</anchor>
-      <arglist>(const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>createContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
-      <anchor>a73e3e21dac7015503a1346fc41d6c401</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
       <type>bool</type>
       <name>tryCreate</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
@@ -39928,13 +37773,6 @@
       <name>tryCreate</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>a38a2875f7f785dfa5afe7b34118e59b4</anchor>
-      <arglist>(const Configuration &amp;configuration)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>tryCreateContext</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
-      <anchor>afaf3e25c5ba26c738077f7020f3fd6e5</anchor>
       <arglist>(const Configuration &amp;configuration)</arglist>
     </member>
     <member kind="function">
@@ -40222,20 +38060,6 @@
       <enumvalue file="classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html" anchor="ae020962789140b0a76f57d9a93d4f5bba7a1920d61156abc05a60135aefe8bc67">Default</enumvalue>
     </member>
     <member kind="typedef">
-      <type>GLConfiguration::Flag</type>
-      <name>Flag</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html</anchorfile>
-      <anchor>ab453e11b43c476276b7f0285cabd5b11</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>GLConfiguration::Flags</type>
-      <name>Flags</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html</anchorfile>
-      <anchor>a5e2118d2d36034e9977c8972136bc7df</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
       <type>Containers::EnumSet&lt; WindowFlag &gt;</type>
       <name>WindowFlags</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html</anchorfile>
@@ -40304,62 +38128,6 @@
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html</anchorfile>
       <anchor>a52f1e601a16f78b6870de3e9da61224b</anchor>
       <arglist>(WindowFlags flags)</arglist>
-    </member>
-    <member kind="function">
-      <type>GLConfiguration::Flags</type>
-      <name>flags</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html</anchorfile>
-      <anchor>a7df10685009d11862181b08360f8874f</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setFlags</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html</anchorfile>
-      <anchor>ad3618f4ed7548b7dd4a18bccb61ed22a</anchor>
-      <arglist>(GLConfiguration::Flags flags)</arglist>
-    </member>
-    <member kind="function">
-      <type>GL::Version</type>
-      <name>version</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html</anchorfile>
-      <anchor>af7a43ecae8b1acdc3c748d5bab9c0573</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setVersion</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html</anchorfile>
-      <anchor>a2850cf9a0eddd5411e6cc7b186c2ec21</anchor>
-      <arglist>(GL::Version version)</arglist>
-    </member>
-    <member kind="function">
-      <type>Int</type>
-      <name>sampleCount</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html</anchorfile>
-      <anchor>a63dabe74e4d6a84708c7b02e79e35bd3</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setSampleCount</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html</anchorfile>
-      <anchor>a5faba5de2c1c18f283c2fb194a226778</anchor>
-      <arglist>(Int count)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isSRGBCapable</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html</anchorfile>
-      <anchor>ae12cc37418f5039743f8dd20b84b4867</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Configuration &amp;</type>
-      <name>setSRGBCapable</name>
-      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application_1_1Configuration.html</anchorfile>
-      <anchor>a4eff60325bb8b8d3bf13c1dbd5d8480e</anchor>
-      <arglist>(bool enabled)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42978,59 +40746,6 @@
       <arglist>()</arglist>
     </member>
     <docanchor file="classMagnum_1_1ResourceManager" title="Usage">ResourceMananger-usage</docanchor>
-  </compound>
-  <compound kind="struct">
-    <name>Magnum::Sampler</name>
-    <filename>structMagnum_1_1Sampler.html</filename>
-    <member kind="typedef">
-      <type>SamplerFilter</type>
-      <name>Filter</name>
-      <anchorfile>structMagnum_1_1Sampler.html</anchorfile>
-      <anchor>a0ea13856e21b3e45ab2141728ae8be8a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>SamplerMipmap</type>
-      <name>Mipmap</name>
-      <anchorfile>structMagnum_1_1Sampler.html</anchorfile>
-      <anchor>a574af76c11b908155269e9b8b216bd7a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>SamplerWrapping</type>
-      <name>Wrapping</name>
-      <anchorfile>structMagnum_1_1Sampler.html</anchorfile>
-      <anchor>abec1d07f27a79a739ac69261a2d29973</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>GL::SamplerCompareMode</type>
-      <name>CompareMode</name>
-      <anchorfile>structMagnum_1_1Sampler.html</anchorfile>
-      <anchor>a56f0c0e08c09f7e72ffe18cc15801a70</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>GL::SamplerCompareFunction</type>
-      <name>CompareFunction</name>
-      <anchorfile>structMagnum_1_1Sampler.html</anchorfile>
-      <anchor>a6d93e90fd71ce23333ade054af94ffdd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>GL::SamplerDepthStencilMode</type>
-      <name>DepthStencilMode</name>
-      <anchorfile>structMagnum_1_1Sampler.html</anchorfile>
-      <anchor>ad794ba68e8739ce1611b97c44b6b75f3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static Float</type>
-      <name>maxMaxAnisotropy</name>
-      <anchorfile>structMagnum_1_1Sampler.html</anchorfile>
-      <anchor>a13c8d550ca17daf8e81e0752953a8fd2</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>Magnum::SceneGraph::AbstractBasicTranslationRotation2D</name>
@@ -46205,1197 +43920,6 @@
     <docanchor file="classMagnum_1_1Shaders_1_1VertexColor" title="Example usage">Shaders-VertexColor-example</docanchor>
   </compound>
   <compound kind="class">
-    <name>Magnum::Shapes::AbstractShape</name>
-    <filename>classMagnum_1_1Shapes_1_1AbstractShape.html</filename>
-    <templarg>dimensions</templarg>
-    <base>AbstractGroupedFeature&lt; dimensions, AbstractShape&lt; dimensions &gt;, Float &gt;</base>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a9c54623b4663fc287a0aab112f425d67af4c9b50d1bb4cd079845d57b0eac27f4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>Type</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a5326f2287b1c17a9bd8a2058a4011e77</anchor>
-      <arglist></arglist>
-      <enumvalue file="classMagnum_1_1Shapes_1_1AbstractShape.html" anchor="a5326f2287b1c17a9bd8a2058a4011e77a2a3cd5946cfd317eb99c3d32e35e2d4c">Point</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1AbstractShape.html" anchor="a5326f2287b1c17a9bd8a2058a4011e77a4803e6b9e63dabf04de980788d6a13c4">Line</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1AbstractShape.html" anchor="a5326f2287b1c17a9bd8a2058a4011e77aad66f0c8f4c94b14a7eafa0d363da1c1">LineSegment</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1AbstractShape.html" anchor="a5326f2287b1c17a9bd8a2058a4011e77ab7095f057db3fefa7325ad93a04e14fd">Sphere</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1AbstractShape.html" anchor="a5326f2287b1c17a9bd8a2058a4011e77a4880c0f12c06dd6d142e7a40b041bf1a">Capsule</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1AbstractShape.html" anchor="a5326f2287b1c17a9bd8a2058a4011e77a1e9ef3dc3d71dc3385b317ce34aa23eb">AxisAlignedBox</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1AbstractShape.html" anchor="a5326f2287b1c17a9bd8a2058a4011e77a3cfce651e667ab85486dd42a8185f98a">Box</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1AbstractShape.html" anchor="a5326f2287b1c17a9bd8a2058a4011e77a53eff24a355b7ae55f0aa2bef39bb24c">Composition</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1AbstractShape.html" anchor="a5326f2287b1c17a9bd8a2058a4011e77a0d3adee051531c15b3509b4d4d75ce7b">Plane</enumvalue>
-    </member>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a9c54623b4663fc287a0aab112f425d67af4c9b50d1bb4cd079845d57b0eac27f4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>AbstractShape</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a5e329f672734a57ebdc07e92e9198871</anchor>
-      <arglist>(SceneGraph::AbstractObject&lt; dimensions, Float &gt; &amp;object, ShapeGroup&lt; dimensions &gt; *group=nullptr)</arglist>
-    </member>
-    <member kind="function">
-      <type>ShapeGroup&lt; dimensions &gt; *</type>
-      <name>group</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a60203f20d8f2814ffcb8d82a7e231a37</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>const ShapeGroup&lt; dimensions &gt; *</type>
-      <name>group</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a1e6a0872dbde20ffbb2a3459f09e15d1</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Type</type>
-      <name>type</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>ac7ef3ccc6ed8c6cb2bfc04fb1c2f477c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>collides</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>ad41e7b52151157c1af6a874b1af186e1</anchor>
-      <arglist>(const AbstractShape&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>collision</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>aea4eae37cea8f426b97f39216d33c8c2</anchor>
-      <arglist>(const AbstractShape&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>markDirty</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AbstractShape.html</anchorfile>
-      <anchor>a95c1ecf29ab5c338141a2dbb2672f3d3</anchor>
-      <arglist>() override</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::AxisAlignedBox</name>
-    <filename>classMagnum_1_1Shapes_1_1AxisAlignedBox.html</filename>
-    <templarg>dimensions</templarg>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AxisAlignedBox.html</anchorfile>
-      <anchor>a8b74032429f68414a9c1ac1b1e4d2e38ae80a46b9dcace6d2fbb4ac4c667bdcb9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AxisAlignedBox.html</anchorfile>
-      <anchor>a8b74032429f68414a9c1ac1b1e4d2e38ae80a46b9dcace6d2fbb4ac4c667bdcb9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>AxisAlignedBox</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AxisAlignedBox.html</anchorfile>
-      <anchor>a60001731baec852204076b9340fca06b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>AxisAlignedBox</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AxisAlignedBox.html</anchorfile>
-      <anchor>a8831e348d6d59cbef21984d88ec76592</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;min, const typename DimensionTraits&lt; dimensions, Float &gt;::VectorType &amp;max)</arglist>
-    </member>
-    <member kind="function">
-      <type>AxisAlignedBox&lt; dimensions &gt;</type>
-      <name>transformed</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AxisAlignedBox.html</anchorfile>
-      <anchor>aa7d2b4806f1eb57a897fe0c542d5d180</anchor>
-      <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;matrix) const</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr VectorTypeFor&lt; dimensions, Float &gt;</type>
-      <name>min</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AxisAlignedBox.html</anchorfile>
-      <anchor>ab45dc95cc591a88c2ab6afa3a072b7cf</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setMin</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AxisAlignedBox.html</anchorfile>
-      <anchor>a15ec965e30d4d00b179b9b503609decc</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;min)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr VectorTypeFor&lt; dimensions, Float &gt;</type>
-      <name>max</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AxisAlignedBox.html</anchorfile>
-      <anchor>aed434f39d8fc6e85e8db9087bd26e838</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setMax</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AxisAlignedBox.html</anchorfile>
-      <anchor>a23db451912210ffcf7cf78a747135e03</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;max)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1AxisAlignedBox.html</anchorfile>
-      <anchor>a488acc9131466e83e62f4e80e9361912</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::Box</name>
-    <filename>classMagnum_1_1Shapes_1_1Box.html</filename>
-    <templarg>dimensions</templarg>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Box.html</anchorfile>
-      <anchor>a2f02a9a12524c2f70e943e6721bddaebaed6479c417f375ecf541674512e8e1da</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Box.html</anchorfile>
-      <anchor>a2f02a9a12524c2f70e943e6721bddaebaed6479c417f375ecf541674512e8e1da</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Box</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Box.html</anchorfile>
-      <anchor>ae30e8f8668ab45b6ff458f3250b55fb3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Box</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Box.html</anchorfile>
-      <anchor>afd5b235ee8f555631f2885eb41a81d8d</anchor>
-      <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;transformation)</arglist>
-    </member>
-    <member kind="function">
-      <type>Box&lt; dimensions &gt;</type>
-      <name>transformed</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Box.html</anchorfile>
-      <anchor>a7f1203accac807b3b74743806cbe0e09</anchor>
-      <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;matrix) const</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr MatrixTypeFor&lt; dimensions, Float &gt;</type>
-      <name>transformation</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Box.html</anchorfile>
-      <anchor>a4828d0f53ea701aa08630b091637cdfc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setTransformation</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Box.html</anchorfile>
-      <anchor>a823c848b97c7ad05e95d31dee559044e</anchor>
-      <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;transformation)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::Capsule</name>
-    <filename>classMagnum_1_1Shapes_1_1Capsule.html</filename>
-    <templarg>dimensions</templarg>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>ad80c0d6c921b1770a7b1810c44d94d3cab2df17bc2f1b216b65185cd3dcdafd8c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>ad80c0d6c921b1770a7b1810c44d94d3cab2df17bc2f1b216b65185cd3dcdafd8c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Capsule</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>adaef1f4cbcb7237da89875f5365d88a9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Capsule</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>a31a7b77ea72ae26184a83470f723ef45</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;a, const VectorTypeFor&lt; dimensions, Float &gt; &amp;b, Float radius)</arglist>
-    </member>
-    <member kind="function">
-      <type>Capsule&lt; dimensions &gt;</type>
-      <name>transformed</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>ad6d8f5191311dafbb63b11d346ecb6a2</anchor>
-      <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;matrix) const</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr VectorTypeFor&lt; dimensions, Float &gt;</type>
-      <name>a</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>a29dd8b88782189239a8d2acb0f744816</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setA</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>a4a934c7913f53fb1d2769042532f28f1</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;a)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr VectorTypeFor&lt; dimensions, Float &gt;</type>
-      <name>b</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>aab1b472f7e606ad596a458ff699085a1</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setB</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>a25ba6dc6f2da0d6a06243c445950ab46</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Float</type>
-      <name>radius</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>a9d18f0597f9435f0fcf0e5f69569a2e1</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setRadius</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>a5e005bb9a03882c9cb9130e5989a5b2c</anchor>
-      <arglist>(Float radius)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>af3b931cd554e306baa93634172daa458</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Capsule.html</anchorfile>
-      <anchor>adf847b93b96814a3238cdbdd5ffb33b9</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::Collision</name>
-    <filename>classMagnum_1_1Shapes_1_1Collision.html</filename>
-    <templarg>dimensions</templarg>
-    <member kind="function">
-      <type></type>
-      <name>Collision</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Collision.html</anchorfile>
-      <anchor>ac2d06999928ec006a7526def3d99d077</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Collision</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Collision.html</anchorfile>
-      <anchor>aa61be64a0529d991f8326267521d2256</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;position, const VectorTypeFor&lt; dimensions, Float &gt; &amp;separationNormal, Float separationDistance) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator bool</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Collision.html</anchorfile>
-      <anchor>aa65a177b69b00a8c6c3ceb7ee07a788c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>VectorTypeFor&lt; dimensions, Float &gt;</type>
-      <name>position</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Collision.html</anchorfile>
-      <anchor>a47a8c477f59c13729a817a2e15c59270</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>VectorTypeFor&lt; dimensions, Float &gt;</type>
-      <name>separationNormal</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Collision.html</anchorfile>
-      <anchor>aec6903103adddd9aafc4a92dec5492da</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Float</type>
-      <name>separationDistance</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Collision.html</anchorfile>
-      <anchor>a73594da2740d5f33577c9b449be5d474</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>flipped</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Collision.html</anchorfile>
-      <anchor>ad3e05d0ab18c886ad18e13789e11627d</anchor>
-      <arglist>() const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::Composition</name>
-    <filename>classMagnum_1_1Shapes_1_1Composition.html</filename>
-    <templarg>dimensions</templarg>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>adbacb7e2e60ed9302de7657f8621af80a9fd19a540d18645a1883bf5ffa104380</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>Type</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>ad8ce3554340c076d76d9e4156993913a</anchor>
-      <arglist></arglist>
-      <enumvalue file="classMagnum_1_1Shapes_1_1Composition.html" anchor="ad8ce3554340c076d76d9e4156993913aa2a3cd5946cfd317eb99c3d32e35e2d4c">Point</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1Composition.html" anchor="ad8ce3554340c076d76d9e4156993913aa4803e6b9e63dabf04de980788d6a13c4">Line</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1Composition.html" anchor="ad8ce3554340c076d76d9e4156993913aaad66f0c8f4c94b14a7eafa0d363da1c1">LineSegment</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1Composition.html" anchor="ad8ce3554340c076d76d9e4156993913aab7095f057db3fefa7325ad93a04e14fd">Sphere</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1Composition.html" anchor="ad8ce3554340c076d76d9e4156993913aa96e1b1fe018e6f5a42237a5a66148559">InvertedSphere</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1Composition.html" anchor="ad8ce3554340c076d76d9e4156993913aa2ec2c2961c7ce5a114d969c1f562a563">Cylinder</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1Composition.html" anchor="ad8ce3554340c076d76d9e4156993913aa4880c0f12c06dd6d142e7a40b041bf1a">Capsule</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1Composition.html" anchor="ad8ce3554340c076d76d9e4156993913aa1e9ef3dc3d71dc3385b317ce34aa23eb">AxisAlignedBox</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1Composition.html" anchor="ad8ce3554340c076d76d9e4156993913aa3cfce651e667ab85486dd42a8185f98a">Box</enumvalue>
-      <enumvalue file="classMagnum_1_1Shapes_1_1Composition.html" anchor="ad8ce3554340c076d76d9e4156993913aa0d3adee051531c15b3509b4d4d75ce7b">Plane</enumvalue>
-    </member>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>adbacb7e2e60ed9302de7657f8621af80a9fd19a540d18645a1883bf5ffa104380</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Composition</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>a7ca23187205bc55669d1059de376b3c9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Composition</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>aca1e8bbe5627a8f6c65214673a6c9b8f</anchor>
-      <arglist>(CompositionOperation operation, T &amp;&amp;a)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Composition</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>acc47d57a397e11287b5bcf846a25a78f</anchor>
-      <arglist>(CompositionOperation operation, T &amp;&amp;a, U &amp;&amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Composition</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>a697aeb8514c34a058adb1db7aa5dfba3</anchor>
-      <arglist>(const Composition&lt; dimensions &gt; &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Composition</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>a9362bf3a2f76fa109a2de0a7065d622e</anchor>
-      <arglist>(Composition&lt; dimensions &gt; &amp;&amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composition&lt; dimensions &gt; &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>a6ae879c8e772fe94fe9b85327991b21c</anchor>
-      <arglist>(const Composition&lt; dimensions &gt; &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composition&lt; dimensions &gt; &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>ac2b41d89e2c6f258e581e8dde973b63d</anchor>
-      <arglist>(Composition&lt; dimensions &gt; &amp;&amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composition&lt; dimensions &gt;</type>
-      <name>transformed</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>afe07adea8e5dffab0e753274f2e7ad7c</anchor>
-      <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;matrix) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::size_t</type>
-      <name>size</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>aad7038db11811a8101994239219c5a6c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Type</type>
-      <name>type</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>a5710f3fff400d3813689b75ac8f9f9dc</anchor>
-      <arglist>(std::size_t i) const</arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>get</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>ae8a7997f2a6d5d30e68b7a307af8a122</anchor>
-      <arglist>(std::size_t i) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>a5afe12bd39246c0a64a7649fce69ca3f</anchor>
-      <arglist>(const T &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>aa9ee062abdca1154e74d91f50647abab</anchor>
-      <arglist>(Debug &amp;debug, typename Composition&lt; dimensions &gt;::Type value)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>af6d9b3794d57d6e070eade09b7f52904</anchor>
-      <arglist>(const T &amp;a, const Composition&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composition&lt; T::Dimensions &gt;</type>
-      <name>operator!</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>a6455c40230c9cb5ca57938d91923bcd1</anchor>
-      <arglist>(T a)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composition&lt; T::Dimensions &gt;</type>
-      <name>operator &amp;&amp;</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>a42d4ca16923d221963428cf73b1bd4f6</anchor>
-      <arglist>(T a, T b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Composition&lt; T::Dimensions &gt;</type>
-      <name>operator||</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Composition.html</anchorfile>
-      <anchor>a02f7ec970304152f482e4919fe9206be</anchor>
-      <arglist>(T a, T b)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::Cylinder</name>
-    <filename>classMagnum_1_1Shapes_1_1Cylinder.html</filename>
-    <templarg>dimensions</templarg>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>aa1a8bc7837f1c1b5e99dc67335d58355ab79a59bf7f6d0febd5f0d3dba6d1331b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>aa1a8bc7837f1c1b5e99dc67335d58355ab79a59bf7f6d0febd5f0d3dba6d1331b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Cylinder</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>a1934524fcc8842bd0399912827fe520c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Cylinder</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>a0e337dd93359bfbce0924ef5590ae991</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;a, const VectorTypeFor&lt; dimensions, Float &gt; &amp;b, Float radius)</arglist>
-    </member>
-    <member kind="function">
-      <type>Cylinder&lt; dimensions &gt;</type>
-      <name>transformed</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>a8068c7f7aa324733be3674ef86718ed1</anchor>
-      <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;matrix) const</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr VectorTypeFor&lt; dimensions, Float &gt;</type>
-      <name>a</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>af80d5da32da0312de1bb9130b4ce110c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setA</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>a85bc00aa5849231977adcc4874e6562c</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;a)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr VectorTypeFor&lt; dimensions, Float &gt;</type>
-      <name>b</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>aa59796119bf0fc2b9300e55d042a69f7</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setB</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>a03ee58baae726c42fb08a2a03afaf705</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Float</type>
-      <name>radius</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>aef7e27946fe8aee76fedad99428d4b37</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setRadius</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>a001122834a27fd479cb10fedb7e02f27</anchor>
-      <arglist>(Float radius)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>a4783179d8eb345eb10ec35b690cb47ba</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Cylinder.html</anchorfile>
-      <anchor>a01b55d0d6a3cb174e32c9f892b43be98</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::InvertedSphere</name>
-    <filename>classMagnum_1_1Shapes_1_1InvertedSphere.html</filename>
-    <templarg>dimensions</templarg>
-    <base>Magnum::Shapes::Sphere</base>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>InvertedSphere</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1InvertedSphere.html</anchorfile>
-      <anchor>ae02ca8f3fdf019d54d154e70a7799ce9</anchor>
-      <arglist>()=default</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>InvertedSphere</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1InvertedSphere.html</anchorfile>
-      <anchor>ab6af7626570d57af61f4a2ed69c963c9</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;position, Float radius)</arglist>
-    </member>
-    <member kind="function">
-      <type>InvertedSphere&lt; dimensions &gt;</type>
-      <name>transformed</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1InvertedSphere.html</anchorfile>
-      <anchor>aed3221274c04088964f96ecdf9c731a5</anchor>
-      <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;matrix) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1InvertedSphere.html</anchorfile>
-      <anchor>a4d1eef4cc24866f9ef9fe5b315b8e2e1</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1InvertedSphere.html</anchorfile>
-      <anchor>aa9e87ca067508ef83ebf947f15dcc405</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1InvertedSphere.html</anchorfile>
-      <anchor>af4beef210fe0e670b429bfa8bfd250f8</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1InvertedSphere.html</anchorfile>
-      <anchor>afc5902199dc3f0902f6b7999c5a313cd</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::Line</name>
-    <filename>classMagnum_1_1Shapes_1_1Line.html</filename>
-    <templarg>dimensions</templarg>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Line.html</anchorfile>
-      <anchor>a1c9f9b9a79d0f8049d96fe322760160da46b33154f5d3d6ecdd6a7f27de67ea19</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Line.html</anchorfile>
-      <anchor>a1c9f9b9a79d0f8049d96fe322760160da46b33154f5d3d6ecdd6a7f27de67ea19</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Line</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Line.html</anchorfile>
-      <anchor>a15ed03bfdfcf8f1524f538d91008c2c8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Line</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Line.html</anchorfile>
-      <anchor>a44def606d323b26ce61038e22215165e</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;a, const typename DimensionTraits&lt; dimensions, Float &gt;::VectorType &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Line&lt; dimensions &gt;</type>
-      <name>transformed</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Line.html</anchorfile>
-      <anchor>a447baac66e848f0c5f622f3df50df745</anchor>
-      <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;matrix) const</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr VectorTypeFor&lt; dimensions, Float &gt;</type>
-      <name>a</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Line.html</anchorfile>
-      <anchor>a68912cc75fc6df7722ae6044e2023da3</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setA</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Line.html</anchorfile>
-      <anchor>a5d3c2580a7e2dda83b2e60da831d7b7b</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;a)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr VectorTypeFor&lt; dimensions, Float &gt;</type>
-      <name>b</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Line.html</anchorfile>
-      <anchor>a0e5bde27501ad376e9218f6d1ad05609</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setB</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Line.html</anchorfile>
-      <anchor>ad9c1f6b2cda2d1c3da48c317a1f20300</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Line.html</anchorfile>
-      <anchor>a736526a5aefa690b865f94d7c245915d</anchor>
-      <arglist>(const Line3D &amp;a, const Plane &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Line.html</anchorfile>
-      <anchor>adbea395f5e0ca3c22cdac2afbb7e7735</anchor>
-      <arglist>(const Line&lt; dimensions &gt; &amp;a, const Sphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::LineSegment</name>
-    <filename>classMagnum_1_1Shapes_1_1LineSegment.html</filename>
-    <templarg>dimensions</templarg>
-    <base>Magnum::Shapes::Line</base>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>LineSegment</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1LineSegment.html</anchorfile>
-      <anchor>ad040403b841b460884b7f2740214cc82</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>LineSegment</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1LineSegment.html</anchorfile>
-      <anchor>a0602ff5e2d0dfe3416d4f39a13af6a9b</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;a, const VectorTypeFor&lt; dimensions, Float &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>LineSegment&lt; dimensions &gt;</type>
-      <name>transformed</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1LineSegment.html</anchorfile>
-      <anchor>a49dd5547c3cae6b88229a4ee0c8d9bb0</anchor>
-      <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;matrix) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1LineSegment.html</anchorfile>
-      <anchor>a0d75eb4350f0ba0ea4c338c3dccbedf7</anchor>
-      <arglist>(const LineSegment3D &amp;a, const Plane &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1LineSegment.html</anchorfile>
-      <anchor>aadd405df874fc45add6de71c650de5a4</anchor>
-      <arglist>(const LineSegment&lt; dimensions &gt; &amp;a, const Sphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::Plane</name>
-    <filename>classMagnum_1_1Shapes_1_1Plane.html</filename>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Plane.html</anchorfile>
-      <anchor>ab94c47ca33f63ea092319b694b42e378a4f015b36479d0ca87b6af4eaf0e6e8c1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Plane.html</anchorfile>
-      <anchor>ab94c47ca33f63ea092319b694b42e378a4f015b36479d0ca87b6af4eaf0e6e8c1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Plane</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Plane.html</anchorfile>
-      <anchor>a382a4af064a32f1ebe39fa22ba53f07a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Plane</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Plane.html</anchorfile>
-      <anchor>a2d6477fd8929be295cab30d1a61cc826</anchor>
-      <arglist>(const Vector3 &amp;position, const Vector3 &amp;normal)</arglist>
-    </member>
-    <member kind="function">
-      <type>Plane</type>
-      <name>transformed</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Plane.html</anchorfile>
-      <anchor>a39a6b81a525329c2cdc8832ef3adaea7</anchor>
-      <arglist>(const Matrix4 &amp;matrix) const</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Vector3</type>
-      <name>position</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Plane.html</anchorfile>
-      <anchor>a144e767f06eb23c7909093753edbff12</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setPosition</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Plane.html</anchorfile>
-      <anchor>a2e02717d6e76fe8a349eef4ff23853a8</anchor>
-      <arglist>(const Vector3 &amp;position)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Vector3</type>
-      <name>normal</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Plane.html</anchorfile>
-      <anchor>a613b4324828769b1e09cf1838840dbab</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setNormal</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Plane.html</anchorfile>
-      <anchor>adf44394fcd39cdf705ea57a66399416a</anchor>
-      <arglist>(const Vector3 &amp;normal)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Plane.html</anchorfile>
-      <anchor>a90d5ad3bdae56433b9e03e0e09d39be5</anchor>
-      <arglist>(const Line3D &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Plane.html</anchorfile>
-      <anchor>adc2268212bdf9d1830768dac7be903a7</anchor>
-      <arglist>(const LineSegment3D &amp;other) const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::Point</name>
-    <filename>classMagnum_1_1Shapes_1_1Point.html</filename>
-    <templarg>dimensions</templarg>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>acd716a5b1bfa9c7808e083f1d3335fb4a1e2a2446f423677020b39b9bf515b51e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>acd716a5b1bfa9c7808e083f1d3335fb4a1e2a2446f423677020b39b9bf515b51e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Point</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>aa4db7d4a271bb711da03edcd2c971e95</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Point</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>ab42310cb40f4fb9b1e5e402b5b1b0999</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;position)</arglist>
-    </member>
-    <member kind="function">
-      <type>Point&lt; dimensions &gt;</type>
-      <name>transformed</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>a0b387c4bbffc7fbd43e0ac7c8b6ed23e</anchor>
-      <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;matrix) const</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr VectorTypeFor&lt; dimensions, Float &gt;</type>
-      <name>position</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>a620a3828e51d7922057d644b31a4628a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setPosition</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>a706f902411f033fddefb12d92b3418bb</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;position)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>aa36acc3128bae09e1d48650ea0cdf860</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const AxisAlignedBox&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>afe98277240394e274783626ac4420be1</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const Capsule&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>a175327c41a1cf77afe589e9f75942a72</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const Cylinder&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>a8b92f87abd7091bb18db7d2a588bd554</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const Sphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>a661f9284aa5c40e8252ac116f7eea984</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const InvertedSphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>ae83451d613cff0466b2781b751864d3f</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const Sphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Point.html</anchorfile>
-      <anchor>add309ac34f5949efeb8a3cc4a8c21b84</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const InvertedSphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::Shape</name>
-    <filename>classMagnum_1_1Shapes_1_1Shape.html</filename>
-    <templarg></templarg>
-    <base>AbstractShape&lt; T::Dimensions &gt;</base>
-    <member kind="function">
-      <type></type>
-      <name>Shape</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Shape.html</anchorfile>
-      <anchor>a5bc249ff78bdfcb5d6f53a256123d704</anchor>
-      <arglist>(SceneGraph::AbstractObject&lt; T::Dimensions, Float &gt; &amp;object, const T &amp;shape, ShapeGroup&lt; T::Dimensions &gt; *group=nullptr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Shape</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Shape.html</anchorfile>
-      <anchor>aa3f69210d043a92308b6d72f1e1da51a</anchor>
-      <arglist>(SceneGraph::AbstractObject&lt; T::Dimensions, Float &gt; &amp;object, T &amp;&amp;shape, ShapeGroup&lt; T::Dimensions &gt; *group=nullptr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Shape</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Shape.html</anchorfile>
-      <anchor>a1dbbf2eee1297ac2e82a77d875ee5139</anchor>
-      <arglist>(SceneGraph::AbstractObject&lt; T::Dimensions, Float &gt; &amp;object, ShapeGroup&lt; T::Dimensions &gt; *group=nullptr)</arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>shape</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Shape.html</anchorfile>
-      <anchor>a0ac96ac22fa5df8ae0a864f7b03f3dad</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Shape&lt; T &gt; &amp;</type>
-      <name>setShape</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Shape.html</anchorfile>
-      <anchor>aff652ad7589b5c4e02a69e69fc4cc1a1</anchor>
-      <arglist>(const T &amp;shape)</arglist>
-    </member>
-    <member kind="function">
-      <type>const T &amp;</type>
-      <name>transformedShape</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Shape.html</anchorfile>
-      <anchor>a043bfa2bbf5640bb1d3545afa45a301e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>clean</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Shape.html</anchorfile>
-      <anchor>a3d978f6a88788f2ba674ec6284796782</anchor>
-      <arglist>(const MatrixTypeFor&lt; T::Dimensions, Float &gt; &amp;absoluteTransformationMatrix) override</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::ShapeGroup</name>
-    <filename>classMagnum_1_1Shapes_1_1ShapeGroup.html</filename>
-    <templarg>dimensions</templarg>
-    <base>FeatureGroup&lt; dimensions, AbstractShape&lt; dimensions &gt;, Float &gt;</base>
-    <member kind="function">
-      <type></type>
-      <name>ShapeGroup</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1ShapeGroup.html</anchorfile>
-      <anchor>abfdf5814a4992baf82608b315ac6c703</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>isDirty</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1ShapeGroup.html</anchorfile>
-      <anchor>abd093c36d68f222df8b4853f820b7598</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setDirty</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1ShapeGroup.html</anchorfile>
-      <anchor>af4e8102537fdd6d443cda76016db428d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setClean</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1ShapeGroup.html</anchorfile>
-      <anchor>a04496f57c69d545ae3cc3a4931d6cb67</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>AbstractShape&lt; dimensions &gt; *</type>
-      <name>firstCollision</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1ShapeGroup.html</anchorfile>
-      <anchor>aeae5e9eeb6e7a67bcd330bfa121c9e93</anchor>
-      <arglist>(const AbstractShape&lt; dimensions &gt; &amp;shape)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Magnum::Shapes::Sphere</name>
-    <filename>classMagnum_1_1Shapes_1_1Sphere.html</filename>
-    <templarg>dimensions</templarg>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>a3b0fd859689a831a47d8fd1405f3e490adbf7f9210ab7f7ead4bca264db2001bf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>a3b0fd859689a831a47d8fd1405f3e490adbf7f9210ab7f7ead4bca264db2001bf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Sphere</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>a82b0af2c5066033277acadef8b227a1e</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr</type>
-      <name>Sphere</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>aa323eb23fdb652015ed7d52fe46e1fd1</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;position, Float radius)</arglist>
-    </member>
-    <member kind="function">
-      <type>Sphere&lt; dimensions &gt;</type>
-      <name>transformed</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>a34b59b15ff5aa44b8ea5eddd3874f62d</anchor>
-      <arglist>(const MatrixTypeFor&lt; dimensions, Float &gt; &amp;matrix) const</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr VectorTypeFor&lt; dimensions, Float &gt;</type>
-      <name>position</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>ac2295f5e99a019c03745b2317f3f3656</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setPosition</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>a786537fb391907c77ba39e5279981f45</anchor>
-      <arglist>(const VectorTypeFor&lt; dimensions, Float &gt; &amp;position)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr Float</type>
-      <name>radius</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>a9be7563b062bd92526b574f46a384e26</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>setRadius</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>a362b8d0f2270b755f95d19d1ff681773</anchor>
-      <arglist>(Float radius)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>a2e2a03e01ea564f82c8f87f44ecb40ce</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>aaa630e44e78ef4ceceaa89d740404be6</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>acddd43d69c843b4c9d1333627d3989bb</anchor>
-      <arglist>(const Line&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>ac73099ea03cecc050cc66c792828d9a4</anchor>
-      <arglist>(const LineSegment&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>ac4b8f6fd52dc79a6445cb991707d22d1</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>a163c4b303ead3942265d3769a9a4c1b8</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>a839afd5e87c4726add6835ee314e16d0</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;a, const Capsule&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>a6a0f05766a099f0af8852618d356f970</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;a, const Cylinder&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>ac7f0f50e112678da6e80ba5c5eef3e51</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;a, const InvertedSphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>classMagnum_1_1Shapes_1_1Sphere.html</anchorfile>
-      <anchor>ae54fc2987b79b7716f336df639814933</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;a, const InvertedSphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Magnum::Text::AbstractFont</name>
     <filename>classMagnum_1_1Text_1_1AbstractFont.html</filename>
     <base>Corrade::PluginManager::AbstractPlugin</base>
@@ -47407,6 +43931,7 @@
       <anchor>ad71b70a7763ae6634e05a25ba83e4be3</anchor>
       <arglist></arglist>
       <enumvalue file="classMagnum_1_1Text_1_1AbstractFont.html" anchor="ad71b70a7763ae6634e05a25ba83e4be3ad81dcb96c7ab3ee3608397d0b0a9071c">OpenData</enumvalue>
+      <enumvalue file="classMagnum_1_1Text_1_1AbstractFont.html" anchor="ad71b70a7763ae6634e05a25ba83e4be3abc0472654189df29a514f8ed0ebd0fc6">FileCallback</enumvalue>
       <enumvalue file="classMagnum_1_1Text_1_1AbstractFont.html" anchor="ad71b70a7763ae6634e05a25ba83e4be3a1e1c1bd7f9cc7129802e1f00d2b171bd">MultiFile</enumvalue>
       <enumvalue file="classMagnum_1_1Text_1_1AbstractFont.html" anchor="ad71b70a7763ae6634e05a25ba83e4be3aa098f39d36d4fbcebceeb378e5757d64">PreparedGlyphCache</enumvalue>
     </member>
@@ -47439,11 +43964,46 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>auto</type>
+      <name>fileCallback</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
+      <anchor>af80bfac4e0fdf98b5f3d0cc6e7c80a82</anchor>
+      <arglist>() const -&gt; Containers::Optional&lt; Containers::ArrayView&lt; const char &gt;&gt;(*)(const std::string &amp;, InputFileCallbackPolicy, void *)</arglist>
+    </member>
+    <member kind="function">
+      <type>void *</type>
+      <name>fileCallbackUserData</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
+      <anchor>a5ee0ac3129566d189e10bae6b6c6ea8a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFileCallback</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
+      <anchor>abdbe09755ba5076e2f474586b61b4e10</anchor>
+      <arglist>(Containers::Optional&lt; Containers::ArrayView&lt; const char &gt;&gt;(*callback)(const std::string &amp;, InputFileCallbackPolicy, void *), void *userData=nullptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setFileCallback</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
+      <anchor>a57c6d3221567645810973a9720223edf</anchor>
+      <arglist>(Containers::Optional&lt; Containers::ArrayView&lt; const char &gt;&gt;(*callback)(const std::string &amp;, InputFileCallbackPolicy, T &amp;), T &amp;userData)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>isOpened</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
       <anchor>aecfe968e36bb48c83070c9fd02df6b59</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>openData</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
+      <anchor>a8e8e2959d185c59166b199ce44ddb9b4</anchor>
+      <arglist>(Containers::ArrayView&lt; const char &gt; data, Float size)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -47519,22 +44079,22 @@
       <type>void</type>
       <name>fillGlyphCache</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>a8e8f48396af65c0f39aadbf07b1873fe</anchor>
-      <arglist>(GlyphCache &amp;cache, const std::string &amp;characters)</arglist>
+      <anchor>a73756c236e338a5c69e31d30df65bc3a</anchor>
+      <arglist>(AbstractGlyphCache &amp;cache, const std::string &amp;characters)</arglist>
     </member>
     <member kind="function">
-      <type>Containers::Pointer&lt; GlyphCache &gt;</type>
+      <type>Containers::Pointer&lt; AbstractGlyphCache &gt;</type>
       <name>createGlyphCache</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>a0cdd0ee426ee8b74dd53c072d05c16c5</anchor>
+      <anchor>a4079f72a1400fa0e61476612e464b99c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>Containers::Pointer&lt; AbstractLayouter &gt;</type>
       <name>layout</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>a76f291991a4bb22f00c72baaaed3f283</anchor>
-      <arglist>(const GlyphCache &amp;cache, Float size, const std::string &amp;text)</arglist>
+      <anchor>a64375d92db4269c3eb0bd250c213c94d</anchor>
+      <arglist>(const AbstractGlyphCache &amp;cache, Float size, const std::string &amp;text)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static std::string</type>
@@ -47550,12 +44110,26 @@
       <anchor>a40370b4c0f73159af3a49fa2e40acece</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual Metrics</type>
+      <name>doOpenFile</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
+      <anchor>a0a7feb093b570d5a4f3fc17662a40aa0</anchor>
+      <arglist>(const std::string &amp;filename, Float size)</arglist>
+    </member>
     <member kind="function" protection="private" virtualness="pure">
       <type>virtual Features</type>
       <name>doFeatures</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
       <anchor>a9bee9980bfcf4493ef4020cc56bb07e4</anchor>
       <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="private" virtualness="virtual">
+      <type>virtual void</type>
+      <name>doSetFileCallback</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
+      <anchor>a7af9adb178ba452909b482cd806f1449</anchor>
+      <arglist>(Containers::Optional&lt; Containers::ArrayView&lt; const char &gt;&gt;(*callback)(const std::string &amp;, InputFileCallbackPolicy, void *), void *userData)</arglist>
     </member>
     <member kind="function" protection="private" virtualness="pure">
       <type>virtual bool</type>
@@ -47568,22 +44142,8 @@
       <type>virtual Metrics</type>
       <name>doOpenData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>a4feacaf5cfea8bcdcab44fbb43cc9c55</anchor>
-      <arglist>(const std::vector&lt; std::pair&lt; std::string, Containers::ArrayView&lt; const char &gt;&gt;&gt; &amp;data, Float size)</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual Metrics</type>
-      <name>doOpenSingleData</name>
-      <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>adddb8a0c061196b7214f5c4bd4925c2c</anchor>
+      <anchor>a5f3f2fed5c7d02f00c7298deb799f68e</anchor>
       <arglist>(Containers::ArrayView&lt; const char &gt; data, Float size)</arglist>
-    </member>
-    <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual Metrics</type>
-      <name>doOpenFile</name>
-      <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>a0a7feb093b570d5a4f3fc17662a40aa0</anchor>
-      <arglist>(const std::string &amp;filename, Float size)</arglist>
     </member>
     <member kind="function" protection="private" virtualness="pure">
       <type>virtual void</type>
@@ -47610,24 +44170,39 @@
       <type>virtual void</type>
       <name>doFillGlyphCache</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>af5bc5e615a643e068c2a95d42468dc44</anchor>
-      <arglist>(GlyphCache &amp;cache, const std::u32string &amp;characters)</arglist>
+      <anchor>ac620ca3a322b9397bc73d8b1576f9462</anchor>
+      <arglist>(AbstractGlyphCache &amp;cache, const std::u32string &amp;characters)</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual Containers::Pointer&lt; GlyphCache &gt;</type>
+      <type>virtual Containers::Pointer&lt; AbstractGlyphCache &gt;</type>
       <name>doCreateGlyphCache</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>a67ed1d4f4bd75e79dd97b53a432c7156</anchor>
+      <anchor>ad9fb251abd40f7b02c7cafc366a0570d</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="private" virtualness="pure">
       <type>virtual Containers::Pointer&lt; AbstractLayouter &gt;</type>
       <name>doLayout</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
-      <anchor>aaa23295bf50d8d844bca097de3b91ac6</anchor>
-      <arglist>(const GlyphCache &amp;cache, Float size, const std::string &amp;text)=0</arglist>
+      <anchor>a4a39a55790c489c26706f90f895c721b</anchor>
+      <arglist>(const AbstractGlyphCache &amp;cache, Float size, const std::string &amp;text)=0</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
+      <anchor>a7fa35f3ab0a4527b5e719d0dd5cf84ca</anchor>
+      <arglist>(Debug &amp;debug, AbstractFont::Feature value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractFont.html</anchorfile>
+      <anchor>a93a05e290c110f57d63c674953393f44</anchor>
+      <arglist>(Debug &amp;debug, AbstractFont::Features value)</arglist>
     </member>
     <docanchor file="classMagnum_1_1Text_1_1AbstractFont" title="Usage">Text-AbstractFont-usage</docanchor>
+    <docanchor file="classMagnum_1_1Text_1_1AbstractFont" title="Loading data from memory, using file callbacks">Text-AbstractFont-usage-callbacks</docanchor>
     <docanchor file="classMagnum_1_1Text_1_1AbstractFont" title="Subclassing">Text-AbstractFont-subclassing</docanchor>
   </compound>
   <compound kind="struct">
@@ -47710,63 +44285,63 @@
       <type>std::vector&lt; std::pair&lt; std::string, Containers::Array&lt; char &gt; &gt; &gt;</type>
       <name>exportFontToData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a8bab55f66f6a72eb8ca8e6c3f0879ff9</anchor>
-      <arglist>(AbstractFont &amp;font, GlyphCache &amp;cache, const std::string &amp;filename, const std::string &amp;characters) const</arglist>
+      <anchor>a7ee5f2d840e851b8057a335ef8ad98b0</anchor>
+      <arglist>(AbstractFont &amp;font, AbstractGlyphCache &amp;cache, const std::string &amp;filename, const std::string &amp;characters) const</arglist>
     </member>
     <member kind="function">
       <type>Containers::Array&lt; char &gt;</type>
       <name>exportFontToSingleData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a92b9f275c268e4bb3cb968ebb64c3ac3</anchor>
-      <arglist>(AbstractFont &amp;font, GlyphCache &amp;cache, const std::string &amp;characters) const</arglist>
+      <anchor>a6940861098aa28345c66688642f5be33</anchor>
+      <arglist>(AbstractFont &amp;font, AbstractGlyphCache &amp;cache, const std::string &amp;characters) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>exportFontToFile</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>aca02a8923a17c0204f47480109800137</anchor>
-      <arglist>(AbstractFont &amp;font, GlyphCache &amp;cache, const std::string &amp;filename, const std::string &amp;characters) const</arglist>
+      <anchor>ad53ccf65524005d18c8d777a358b4d54</anchor>
+      <arglist>(AbstractFont &amp;font, AbstractGlyphCache &amp;cache, const std::string &amp;filename, const std::string &amp;characters) const</arglist>
     </member>
     <member kind="function">
       <type>std::vector&lt; std::pair&lt; std::string, Containers::Array&lt; char &gt; &gt; &gt;</type>
       <name>exportGlyphCacheToData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a7ea6ef4830dd13c3a8c4427784d2c40f</anchor>
-      <arglist>(GlyphCache &amp;cache, const std::string &amp;filename) const</arglist>
+      <anchor>aa7d0a976dd309e1c7fd483d7b7254cd9</anchor>
+      <arglist>(AbstractGlyphCache &amp;cache, const std::string &amp;filename) const</arglist>
     </member>
     <member kind="function">
       <type>Containers::Array&lt; char &gt;</type>
       <name>exportGlyphCacheToSingleData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a37b015be93541124447859496b46849a</anchor>
-      <arglist>(GlyphCache &amp;cache) const</arglist>
+      <anchor>ad8e8c45a4006e39182ce86119f37398c</anchor>
+      <arglist>(AbstractGlyphCache &amp;cache) const</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>exportGlyphCacheToFile</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>ac8d0bee19b0ed0eb1724fcb8bd7adebb</anchor>
-      <arglist>(GlyphCache &amp;cache, const std::string &amp;filename) const</arglist>
+      <anchor>aed8d8152c6fc8945e57613b148f8be67</anchor>
+      <arglist>(AbstractGlyphCache &amp;cache, const std::string &amp;filename) const</arglist>
     </member>
     <member kind="function">
-      <type>Containers::Pointer&lt; GlyphCache &gt;</type>
+      <type>Containers::Pointer&lt; AbstractGlyphCache &gt;</type>
       <name>importGlyphCacheFromData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a7541fde807d518057b6a1e27d0ad38f5</anchor>
+      <anchor>af929f14bcc5165cf6b1a8767d27c2030</anchor>
       <arglist>(const std::vector&lt; std::pair&lt; std::string, Containers::ArrayView&lt; const char &gt;&gt;&gt; &amp;data) const</arglist>
     </member>
     <member kind="function">
-      <type>Containers::Pointer&lt; GlyphCache &gt;</type>
+      <type>Containers::Pointer&lt; AbstractGlyphCache &gt;</type>
       <name>importGlyphCacheFromSingleData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a225e0f4b617370171cf22117cc07df97</anchor>
+      <anchor>add0615ef8e18d41e91ece0f92f7b8783</anchor>
       <arglist>(Containers::ArrayView&lt; const char &gt; data) const</arglist>
     </member>
     <member kind="function">
-      <type>Containers::Pointer&lt; GlyphCache &gt;</type>
+      <type>Containers::Pointer&lt; AbstractGlyphCache &gt;</type>
       <name>importGlyphCacheFromFile</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>af6050b594b2d93c01d70bbe0f7c4e769</anchor>
+      <anchor>ad92788bc58a677529addb16ad6f7362d</anchor>
       <arglist>(const std::string &amp;filename) const</arglist>
     </member>
     <member kind="function" static="yes">
@@ -47794,66 +44369,176 @@
       <type>virtual std::vector&lt; std::pair&lt; std::string, Containers::Array&lt; char &gt; &gt; &gt;</type>
       <name>doExportFontToData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a0b0fc80eed3cb26fadc45fac62b14899</anchor>
-      <arglist>(AbstractFont &amp;font, GlyphCache &amp;cache, const std::string &amp;filename, const std::u32string &amp;characters) const</arglist>
+      <anchor>a5e6953aeb67c50426a2c51a96898d288</anchor>
+      <arglist>(AbstractFont &amp;font, AbstractGlyphCache &amp;cache, const std::string &amp;filename, const std::u32string &amp;characters) const</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
       <type>virtual Containers::Array&lt; char &gt;</type>
       <name>doExportFontToSingleData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>aab708ef05b74e91b1c3cbaabb502c8c9</anchor>
-      <arglist>(AbstractFont &amp;font, GlyphCache &amp;cache, const std::u32string &amp;characters) const</arglist>
+      <anchor>a1cb277db308a1791b073c3bb96c59a01</anchor>
+      <arglist>(AbstractFont &amp;font, AbstractGlyphCache &amp;cache, const std::u32string &amp;characters) const</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
       <type>virtual bool</type>
       <name>doExportFontToFile</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a69310a6ec1aa384c1f4706436e2a6aa4</anchor>
-      <arglist>(AbstractFont &amp;font, GlyphCache &amp;cache, const std::string &amp;filename, const std::u32string &amp;characters) const</arglist>
+      <anchor>a3dafe20b733aa8f2e06fd6389b6723be</anchor>
+      <arglist>(AbstractFont &amp;font, AbstractGlyphCache &amp;cache, const std::string &amp;filename, const std::u32string &amp;characters) const</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
       <type>virtual std::vector&lt; std::pair&lt; std::string, Containers::Array&lt; char &gt; &gt; &gt;</type>
       <name>doExportGlyphCacheToData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a8a5c68892892b46d5fcaabeb5b4fad47</anchor>
-      <arglist>(GlyphCache &amp;cache, const std::string &amp;filename) const</arglist>
+      <anchor>ab4fd31934cd54935e196b2e93da9d182</anchor>
+      <arglist>(AbstractGlyphCache &amp;cache, const std::string &amp;filename) const</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
       <type>virtual Containers::Array&lt; char &gt;</type>
       <name>doExportGlyphCacheToSingleData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>ac159f21704c3302a7ac21bded4706d06</anchor>
-      <arglist>(GlyphCache &amp;cache) const</arglist>
+      <anchor>abca694af3c3688f9ba5a867e53063ee2</anchor>
+      <arglist>(AbstractGlyphCache &amp;cache) const</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
       <type>virtual bool</type>
       <name>doExportGlyphCacheToFile</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a4858894b1e340993a4aa4888ecf6404c</anchor>
-      <arglist>(GlyphCache &amp;cache, const std::string &amp;filename) const</arglist>
+      <anchor>a1e33562a532e8d0821279baf371145ee</anchor>
+      <arglist>(AbstractGlyphCache &amp;cache, const std::string &amp;filename) const</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual Containers::Pointer&lt; GlyphCache &gt;</type>
+      <type>virtual Containers::Pointer&lt; AbstractGlyphCache &gt;</type>
       <name>doImportGlyphCacheFromData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a9ad4087cd48981d9d8bc03188c4310ac</anchor>
+      <anchor>abbe9cc1af5517c5d1be65c048e68b6ab</anchor>
       <arglist>(const std::vector&lt; std::pair&lt; std::string, Containers::ArrayView&lt; const char &gt;&gt;&gt; &amp;data) const</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual Containers::Pointer&lt; GlyphCache &gt;</type>
+      <type>virtual Containers::Pointer&lt; AbstractGlyphCache &gt;</type>
       <name>doImportGlyphCacheFromSingleData</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>a568d5683f4a6c0919c8ff763b6e4d47d</anchor>
+      <anchor>ad881989e7fadb625bcb14755d5089282</anchor>
       <arglist>(Containers::ArrayView&lt; const char &gt; data) const</arglist>
     </member>
     <member kind="function" protection="private" virtualness="virtual">
-      <type>virtual Containers::Pointer&lt; GlyphCache &gt;</type>
+      <type>virtual Containers::Pointer&lt; AbstractGlyphCache &gt;</type>
       <name>doImportGlyphCacheFromFile</name>
       <anchorfile>classMagnum_1_1Text_1_1AbstractFontConverter.html</anchorfile>
-      <anchor>ac265ae6f1c2e8b90b7d49ec87ee56368</anchor>
+      <anchor>a1bb711251b240937920389faea2bd58a</anchor>
       <arglist>(const std::string &amp;filename) const</arglist>
     </member>
     <docanchor file="classMagnum_1_1Text_1_1AbstractFontConverter" title="Subclassing">Text-AbstractFontConverter-subclassing</docanchor>
+  </compound>
+  <compound kind="class">
+    <name>Magnum::Text::AbstractGlyphCache</name>
+    <filename>classMagnum_1_1Text_1_1AbstractGlyphCache.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>AbstractGlyphCache</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>a171cdfbd569ff69eedc902f37f029fbf</anchor>
+      <arglist>(const Vector2i &amp;size, const Vector2i &amp;padding={})</arglist>
+    </member>
+    <member kind="function">
+      <type>GlyphCacheFeatures</type>
+      <name>features</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>aa685877efe9cdc42482feed3676d7d72</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector2i</type>
+      <name>textureSize</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>a0118eb8e29541bdcd49e7881b0637517</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector2i</type>
+      <name>padding</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>ab93773c81fc12197ae655b0527d5fa70</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::size_t</type>
+      <name>glyphCount</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>a899ff63046c480bc5735a3ea6eca76b4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; Vector2i, Range2Di &gt;</type>
+      <name>operator[]</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>a3e967a50abce73bdf3530818c5a53247</anchor>
+      <arglist>(UnsignedInt glyph) const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::unordered_map&lt; UnsignedInt, std::pair&lt; Vector2i, Range2Di &gt; &gt;::const_iterator</type>
+      <name>begin</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>ab603a3036008092aae073616e4aae555</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::unordered_map&lt; UnsignedInt, std::pair&lt; Vector2i, Range2Di &gt; &gt;::const_iterator</type>
+      <name>end</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>a2f7b5385b3487cce0c30c9b0a04fb755</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; Range2Di &gt;</type>
+      <name>reserve</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>ac709e71f5eb98e37f3d1efb1440d63b8</anchor>
+      <arglist>(const std::vector&lt; Vector2i &gt; &amp;sizes)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>insert</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>afe2becb2f0d80ba3171a62e16fa8e8be</anchor>
+      <arglist>(UnsignedInt glyph, const Vector2i &amp;position, const Range2Di &amp;rectangle)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setImage</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>a4fd5d9386327aa755f4e58d557ca8ae2</anchor>
+      <arglist>(const Vector2i &amp;offset, const ImageView2D &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>Image2D</type>
+      <name>image</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>a72376053597094035d7ea1e1924e7f59</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="private" virtualness="pure">
+      <type>virtual GlyphCacheFeatures</type>
+      <name>doFeatures</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>a788bd5b1db6cfb1dfc6f14e879c9d855</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="private" virtualness="pure">
+      <type>virtual void</type>
+      <name>doSetImage</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>a32f53d498c98652fc7b74476077c0d3c</anchor>
+      <arglist>(const Vector2i &amp;offset, const ImageView2D &amp;image)=0</arglist>
+    </member>
+    <member kind="function" protection="private" virtualness="virtual">
+      <type>virtual Image2D</type>
+      <name>doImage</name>
+      <anchorfile>classMagnum_1_1Text_1_1AbstractGlyphCache.html</anchorfile>
+      <anchor>afa2471091ed553e642ddbed3d9acd0b1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <docanchor file="classMagnum_1_1Text_1_1AbstractGlyphCache" title="Subclassing">Text-AbstractGlyphCache-subclassing</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::Text::AbstractLayouter</name>
@@ -47989,13 +44674,6 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>setImage</name>
-      <anchorfile>classMagnum_1_1Text_1_1DistanceFieldGlyphCache.html</anchorfile>
-      <anchor>a5a7afacdbe28dcd6bb2f1a4f2c2b576f</anchor>
-      <arglist>(const Vector2i &amp;offset, const ImageView2D &amp;image) override</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
       <name>setDistanceFieldImage</name>
       <anchorfile>classMagnum_1_1Text_1_1DistanceFieldGlyphCache.html</anchorfile>
       <anchor>ad6df87163895423be3c8648911c57750</anchor>
@@ -48039,6 +44717,7 @@
   <compound kind="class">
     <name>Magnum::Text::GlyphCache</name>
     <filename>classMagnum_1_1Text_1_1GlyphCache.html</filename>
+    <base>Magnum::Text::AbstractGlyphCache</base>
     <member kind="function">
       <type></type>
       <name>GlyphCache</name>
@@ -48068,74 +44747,11 @@
       <arglist>(const Vector2i &amp;size, const Vector2i &amp;padding={})</arglist>
     </member>
     <member kind="function">
-      <type>Vector2i</type>
-      <name>textureSize</name>
-      <anchorfile>classMagnum_1_1Text_1_1GlyphCache.html</anchorfile>
-      <anchor>a1bf61d5ca7a5436c0c30277c277bee8c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>Vector2i</type>
-      <name>padding</name>
-      <anchorfile>classMagnum_1_1Text_1_1GlyphCache.html</anchorfile>
-      <anchor>aeab5c52764ed2a234c49bd6900162d20</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::size_t</type>
-      <name>glyphCount</name>
-      <anchorfile>classMagnum_1_1Text_1_1GlyphCache.html</anchorfile>
-      <anchor>a087e0b5b847ce410edc2c72ead26b3bc</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
       <type>GL::Texture2D &amp;</type>
       <name>texture</name>
       <anchorfile>classMagnum_1_1Text_1_1GlyphCache.html</anchorfile>
       <anchor>ad0f11975fb1c93bb2d18418ad263685b</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; Vector2i, Range2Di &gt;</type>
-      <name>operator[]</name>
-      <anchorfile>classMagnum_1_1Text_1_1GlyphCache.html</anchorfile>
-      <anchor>afe55a51763d6c13f233efecec7dbb7fb</anchor>
-      <arglist>(UnsignedInt glyph) const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::unordered_map&lt; UnsignedInt, std::pair&lt; Vector2i, Range2Di &gt; &gt;::const_iterator</type>
-      <name>begin</name>
-      <anchorfile>classMagnum_1_1Text_1_1GlyphCache.html</anchorfile>
-      <anchor>ae08fda4f7c615f3309dc4d20949568b8</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::unordered_map&lt; UnsignedInt, std::pair&lt; Vector2i, Range2Di &gt; &gt;::const_iterator</type>
-      <name>end</name>
-      <anchorfile>classMagnum_1_1Text_1_1GlyphCache.html</anchorfile>
-      <anchor>ab39a530a70d64ab9ff014d49e178098f</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>std::vector&lt; Range2Di &gt;</type>
-      <name>reserve</name>
-      <anchorfile>classMagnum_1_1Text_1_1GlyphCache.html</anchorfile>
-      <anchor>a50d0448f6d68569d2779070807b2a7e6</anchor>
-      <arglist>(const std::vector&lt; Vector2i &gt; &amp;sizes)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>insert</name>
-      <anchorfile>classMagnum_1_1Text_1_1GlyphCache.html</anchorfile>
-      <anchor>a819487cb4e19c655d51102f65917d9cf</anchor>
-      <arglist>(UnsignedInt glyph, const Vector2i &amp;position, const Range2Di &amp;rectangle)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>setImage</name>
-      <anchorfile>classMagnum_1_1Text_1_1GlyphCache.html</anchorfile>
-      <anchor>af0144585f641e15cdef310f16692a5d7</anchor>
-      <arglist>(const Vector2i &amp;offset, const ImageView2D &amp;image)</arglist>
     </member>
     <docanchor file="classMagnum_1_1Text_1_1GlyphCache" title="Usage">Text-GlyphCache-usage</docanchor>
   </compound>
@@ -48571,8 +45187,8 @@
       <type>auto</type>
       <name>fileCallback</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a6502780f402d70f7bcf4f2e2c4ac306d</anchor>
-      <arglist>() const -&gt; Containers::Optional&lt; Containers::ArrayView&lt; const char &gt;&gt;(*)(const std::string &amp;, ImporterFileCallbackPolicy, void *)</arglist>
+      <anchor>ae1cca1ddeba7a00d5fe5c9251b6f8b82</anchor>
+      <arglist>() const -&gt; Containers::Optional&lt; Containers::ArrayView&lt; const char &gt;&gt;(*)(const std::string &amp;, InputFileCallbackPolicy, void *)</arglist>
     </member>
     <member kind="function">
       <type>void *</type>
@@ -48585,15 +45201,15 @@
       <type>void</type>
       <name>setFileCallback</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a6b5595bf01679bed9b8f848364efc819</anchor>
-      <arglist>(Containers::Optional&lt; Containers::ArrayView&lt; const char &gt;&gt;(*callback)(const std::string &amp;, ImporterFileCallbackPolicy, void *), void *userData=nullptr)</arglist>
+      <anchor>adc2889e9ba4c89df2f0f559c94f44c3c</anchor>
+      <arglist>(Containers::Optional&lt; Containers::ArrayView&lt; const char &gt;&gt;(*callback)(const std::string &amp;, InputFileCallbackPolicy, void *), void *userData=nullptr)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setFileCallback</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>a4db8e29f2756e926fa58b39db355aef4</anchor>
-      <arglist>(Containers::Optional&lt; Containers::ArrayView&lt; const char &gt;&gt;(*callback)(const std::string &amp;, ImporterFileCallbackPolicy, T &amp;), T &amp;userData)</arglist>
+      <anchor>aaf23e4e6817f4e8238bbec990c85b153</anchor>
+      <arglist>(Containers::Optional&lt; Containers::ArrayView&lt; const char &gt;&gt;(*callback)(const std::string &amp;, InputFileCallbackPolicy, T &amp;), T &amp;userData)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -49040,8 +45656,8 @@
       <type>virtual void</type>
       <name>doSetFileCallback</name>
       <anchorfile>classMagnum_1_1Trade_1_1AbstractImporter.html</anchorfile>
-      <anchor>aeceb159bcb33c6805ae38f8f8f1dc633</anchor>
-      <arglist>(Containers::Optional&lt; Containers::ArrayView&lt; const char &gt;&gt;(*callback)(const std::string &amp;, ImporterFileCallbackPolicy, void *), void *userData)</arglist>
+      <anchor>a7760d89ebbdb70d74e72089563b11daa</anchor>
+      <arglist>(Containers::Optional&lt; Containers::ArrayView&lt; const char &gt;&gt;(*callback)(const std::string &amp;, InputFileCallbackPolicy, void *), void *userData)</arglist>
     </member>
     <member kind="function" protection="private" virtualness="pure">
       <type>virtual bool</type>
@@ -49835,7 +46451,7 @@
       <arglist>(UnsignedInt id)</arglist>
     </member>
     <docanchor file="classMagnum_1_1Trade_1_1AbstractImporter" title="Usage">Trade-AbstractImporter-usage</docanchor>
-    <docanchor file="classMagnum_1_1Trade_1_1AbstractImporter" title="Loading data from memory">Trade-AbstractImporter-usage-callbacks</docanchor>
+    <docanchor file="classMagnum_1_1Trade_1_1AbstractImporter" title="Loading data from memory, using file callbacks">Trade-AbstractImporter-usage-callbacks</docanchor>
     <docanchor file="classMagnum_1_1Trade_1_1AbstractImporter" title="Internal importer state">Trade-AbstractImporter-usage-state</docanchor>
     <docanchor file="classMagnum_1_1Trade_1_1AbstractImporter" title="Polymorphic imported data types">Trade-AbstractImporter-usage-casting</docanchor>
     <docanchor file="classMagnum_1_1Trade_1_1AbstractImporter" title="Subclassing">Trade-AbstractImporter-subclassing</docanchor>
@@ -50321,35 +46937,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Magnum::Trade::ColladaImporter</name>
-    <filename>classMagnum_1_1Trade_1_1ColladaImporter.html</filename>
-    <base>Magnum::Trade::AbstractImporter</base>
-    <member kind="function">
-      <type></type>
-      <name>ColladaImporter</name>
-      <anchorfile>classMagnum_1_1Trade_1_1ColladaImporter.html</anchorfile>
-      <anchor>a981f7c03eff52b38b6e42278895223cb</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ColladaImporter</name>
-      <anchorfile>classMagnum_1_1Trade_1_1ColladaImporter.html</anchorfile>
-      <anchor>ac8f9e24ee597d87aae987046ff46e7f5</anchor>
-      <arglist>(PluginManager::Manager&lt; AbstractImporter &gt; &amp;manager)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ColladaImporter</name>
-      <anchorfile>classMagnum_1_1Trade_1_1ColladaImporter.html</anchorfile>
-      <anchor>a09f746b7c4bca109d92c1f0832607e03</anchor>
-      <arglist>(PluginManager::AbstractManager &amp;manager, const std::string &amp;plugin)</arglist>
-    </member>
-    <docanchor file="classMagnum_1_1Trade_1_1ColladaImporter" title="Behavior and limitations">Trade-ColladaImporter-limitations</docanchor>
-    <docanchor file="classMagnum_1_1Trade_1_1ColladaImporter" title="Mesh import">Trade-ColladaImporter-limitations-meshes</docanchor>
-    <docanchor file="classMagnum_1_1Trade_1_1ColladaImporter" title="Material import">Trade-ColladaImporter-limitations-materials</docanchor>
-  </compound>
-  <compound kind="class">
     <name>Magnum::Trade::DdsImporter</name>
     <filename>classMagnum_1_1Trade_1_1DdsImporter.html</filename>
     <base>Magnum::Trade::AbstractImporter</base>
@@ -50394,13 +46981,13 @@
     <member kind="enumvalue">
       <name>Dimensions</name>
       <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
-      <anchor>a7c50be59fa8a3d76ebc2981806e3903da2a6a6de5208390ddfe99713c3a7e2a67</anchor>
+      <anchor>a301884b1ba2577917e5219ee9dcaf7bea2a6a6de5208390ddfe99713c3a7e2a67</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Dimensions</name>
       <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
-      <anchor>a7c50be59fa8a3d76ebc2981806e3903da2a6a6de5208390ddfe99713c3a7e2a67</anchor>
+      <anchor>a301884b1ba2577917e5219ee9dcaf7bea2a6a6de5208390ddfe99713c3a7e2a67</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -50444,13 +47031,6 @@
       <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
       <anchor>afe82444fa520dfbc2904c1764d690810</anchor>
       <arglist>(PixelStorage storage, T format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::Array&lt; char &gt; &amp;&amp;data, const void *importerState=nullptr) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>ImageData</name>
-      <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
-      <anchor>ab67dfa11368ef233e656862a8e317a37</anchor>
-      <arglist>(PixelFormat format, GL::PixelType type, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::Array&lt; char &gt; &amp;&amp;data, const void *importerState=nullptr) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -50548,13 +47128,6 @@
       <name>formatExtra</name>
       <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
       <anchor>a11de41b4e263b194198b097b3ad9d2d1</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>GL::PixelType</type>
-      <name>type</name>
-      <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
-      <anchor>a802880d90d6b85dfc71a879107b43864</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -51574,19 +48147,19 @@
     <member kind="enumvalue">
       <name>AmbientTextureID</name>
       <anchorfile>classMagnum_1_1Trade_1_1PhongMaterialData.html</anchorfile>
-      <anchor>a161166696f070a19d919a3c9698197b2a60525165e4b63ce3d6b958d7f57833fc</anchor>
+      <anchor>a197d13cd411b30a64313fd2f15aee1d5a60525165e4b63ce3d6b958d7f57833fc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>DiffuseTextureID</name>
       <anchorfile>classMagnum_1_1Trade_1_1PhongMaterialData.html</anchorfile>
-      <anchor>a161166696f070a19d919a3c9698197b2a8ce0cffb8630f599dd0adb1c5e696b0d</anchor>
+      <anchor>a197d13cd411b30a64313fd2f15aee1d5a8ce0cffb8630f599dd0adb1c5e696b0d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SpecularTextureID</name>
       <anchorfile>classMagnum_1_1Trade_1_1PhongMaterialData.html</anchorfile>
-      <anchor>a161166696f070a19d919a3c9698197b2a3d470e854c71c4b6e4849c09a4d36f47</anchor>
+      <anchor>a197d13cd411b30a64313fd2f15aee1d5a3d470e854c71c4b6e4849c09a4d36f47</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -51610,19 +48183,19 @@
     <member kind="enumvalue">
       <name>AmbientTextureID</name>
       <anchorfile>classMagnum_1_1Trade_1_1PhongMaterialData.html</anchorfile>
-      <anchor>a161166696f070a19d919a3c9698197b2a60525165e4b63ce3d6b958d7f57833fc</anchor>
+      <anchor>a197d13cd411b30a64313fd2f15aee1d5a60525165e4b63ce3d6b958d7f57833fc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>DiffuseTextureID</name>
       <anchorfile>classMagnum_1_1Trade_1_1PhongMaterialData.html</anchorfile>
-      <anchor>a161166696f070a19d919a3c9698197b2a8ce0cffb8630f599dd0adb1c5e696b0d</anchor>
+      <anchor>a197d13cd411b30a64313fd2f15aee1d5a8ce0cffb8630f599dd0adb1c5e696b0d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>SpecularTextureID</name>
       <anchorfile>classMagnum_1_1Trade_1_1PhongMaterialData.html</anchorfile>
-      <anchor>a161166696f070a19d919a3c9698197b2a3d470e854c71c4b6e4849c09a4d36f47</anchor>
+      <anchor>a197d13cd411b30a64313fd2f15aee1d5a3d470e854c71c4b6e4849c09a4d36f47</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -56917,270 +53490,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt;</name>
-    <filename>classMagnum_1_1Resource.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ab6e1f1b111342c493675cdeee71559a8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>aadfc7b76c1a904524f94b88bd3e4b9ec</anchor>
-      <arglist>(const Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a28c9e646a89ef0e1b7aaf41bd2126a49</anchor>
-      <arglist>(Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;&amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>acaa03453bcac81107851500b0cbf2391</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a8f59ed76d3e4eb888959dba5efb853bd</anchor>
-      <arglist>(const Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ac990bb8ae690e0a3b2df1126f7e9d064</anchor>
-      <arglist>(Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;&amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>ResourceKey</type>
-      <name>key</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a6b2fbf46f0f26789f94b189ef641e5bb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ResourceState</type>
-      <name>state</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a6b5f26c073b9b9a03f2f66362c714e73</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator bool</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a20a00427fdb3862f1f00adadb604d15c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator Magnum::Shaders::Flat&lt; dimensions &gt; *</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ac17914776e1ab6dc20cd7ee443ed301f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Magnum::Shaders::Flat&lt; dimensions &gt; &amp;</type>
-      <name>operator *</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ac0cdc90f2971b9ecccb358d2c2454b76</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Magnum::Shaders::Flat&lt; dimensions &gt; *</type>
-      <name>operator-&gt;</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a918bd916f8acbf70781b2f9af133e8b8</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt;</name>
-    <filename>classMagnum_1_1Resource.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ab6e1f1b111342c493675cdeee71559a8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>aadfc7b76c1a904524f94b88bd3e4b9ec</anchor>
-      <arglist>(const Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a28c9e646a89ef0e1b7aaf41bd2126a49</anchor>
-      <arglist>(Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;&amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>acaa03453bcac81107851500b0cbf2391</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a8f59ed76d3e4eb888959dba5efb853bd</anchor>
-      <arglist>(const Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ac990bb8ae690e0a3b2df1126f7e9d064</anchor>
-      <arglist>(Resource&lt; GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;&amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>ResourceKey</type>
-      <name>key</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a6b2fbf46f0f26789f94b189ef641e5bb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ResourceState</type>
-      <name>state</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a6b5f26c073b9b9a03f2f66362c714e73</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator bool</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a20a00427fdb3862f1f00adadb604d15c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator Magnum::Shaders::VertexColor&lt; dimensions &gt; *</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ac17914776e1ab6dc20cd7ee443ed301f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Magnum::Shaders::VertexColor&lt; dimensions &gt; &amp;</type>
-      <name>operator *</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ac0cdc90f2971b9ecccb358d2c2454b76</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Magnum::Shaders::VertexColor&lt; dimensions &gt; *</type>
-      <name>operator-&gt;</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a918bd916f8acbf70781b2f9af133e8b8</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>Resource&lt; GL::Mesh &gt;</name>
-    <filename>classMagnum_1_1Resource.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ab6e1f1b111342c493675cdeee71559a8</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>aadfc7b76c1a904524f94b88bd3e4b9ec</anchor>
-      <arglist>(const Resource&lt; GL::Mesh, GL::Mesh &gt; &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a28c9e646a89ef0e1b7aaf41bd2126a49</anchor>
-      <arglist>(Resource&lt; GL::Mesh, GL::Mesh &gt; &amp;&amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~Resource</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>acaa03453bcac81107851500b0cbf2391</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Resource&lt; GL::Mesh, GL::Mesh &gt; &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a8f59ed76d3e4eb888959dba5efb853bd</anchor>
-      <arglist>(const Resource&lt; GL::Mesh, GL::Mesh &gt; &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>Resource&lt; GL::Mesh, GL::Mesh &gt; &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ac990bb8ae690e0a3b2df1126f7e9d064</anchor>
-      <arglist>(Resource&lt; GL::Mesh, GL::Mesh &gt; &amp;&amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>ResourceKey</type>
-      <name>key</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a6b2fbf46f0f26789f94b189ef641e5bb</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>ResourceState</type>
-      <name>state</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a6b5f26c073b9b9a03f2f66362c714e73</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator bool</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a20a00427fdb3862f1f00adadb604d15c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator GL::Mesh *</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ac17914776e1ab6dc20cd7ee443ed301f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>GL::Mesh &amp;</type>
-      <name>operator *</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>ac0cdc90f2971b9ecccb358d2c2454b76</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>GL::Mesh *</type>
-      <name>operator-&gt;</name>
-      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
-      <anchor>a918bd916f8acbf70781b2f9af133e8b8</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>Resource&lt; Magnum::DebugTools::ForceRendererOptions &gt;</name>
     <filename>classMagnum_1_1Resource.html</filename>
     <member kind="function">
@@ -57357,7 +53666,7 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>Resource&lt; Magnum::DebugTools::ShapeRendererOptions &gt;</name>
+    <name>Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt;</name>
     <filename>classMagnum_1_1Resource.html</filename>
     <member kind="function">
       <type></type>
@@ -57371,14 +53680,14 @@
       <name>Resource</name>
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
       <anchor>aadfc7b76c1a904524f94b88bd3e4b9ec</anchor>
-      <arglist>(const Resource&lt; Magnum::DebugTools::ShapeRendererOptions, Magnum::DebugTools::ShapeRendererOptions &gt; &amp;other)</arglist>
+      <arglist>(const Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;other)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>Resource</name>
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
       <anchor>a28c9e646a89ef0e1b7aaf41bd2126a49</anchor>
-      <arglist>(Resource&lt; Magnum::DebugTools::ShapeRendererOptions, Magnum::DebugTools::ShapeRendererOptions &gt; &amp;&amp;other)</arglist>
+      <arglist>(Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;&amp;other)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -57388,18 +53697,18 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>Resource&lt; Magnum::DebugTools::ShapeRendererOptions, Magnum::DebugTools::ShapeRendererOptions &gt; &amp;</type>
+      <type>Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;</type>
       <name>operator=</name>
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
       <anchor>a8f59ed76d3e4eb888959dba5efb853bd</anchor>
-      <arglist>(const Resource&lt; Magnum::DebugTools::ShapeRendererOptions, Magnum::DebugTools::ShapeRendererOptions &gt; &amp;other)</arglist>
+      <arglist>(const Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;other)</arglist>
     </member>
     <member kind="function">
-      <type>Resource&lt; Magnum::DebugTools::ShapeRendererOptions, Magnum::DebugTools::ShapeRendererOptions &gt; &amp;</type>
+      <type>Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;</type>
       <name>operator=</name>
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
       <anchor>ac990bb8ae690e0a3b2df1126f7e9d064</anchor>
-      <arglist>(Resource&lt; Magnum::DebugTools::ShapeRendererOptions, Magnum::DebugTools::ShapeRendererOptions &gt; &amp;&amp;other)</arglist>
+      <arglist>(Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;&amp;other)</arglist>
     </member>
     <member kind="function">
       <type>ResourceKey</type>
@@ -57424,20 +53733,20 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>operator Magnum::DebugTools::ShapeRendererOptions *</name>
+      <name>operator Magnum::Shaders::Flat&lt; dimensions &gt; *</name>
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
       <anchor>ac17914776e1ab6dc20cd7ee443ed301f</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>Magnum::DebugTools::ShapeRendererOptions &amp;</type>
+      <type>Magnum::Shaders::Flat&lt; dimensions &gt; &amp;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
       <anchor>ac0cdc90f2971b9ecccb358d2c2454b76</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type>Magnum::DebugTools::ShapeRendererOptions *</type>
+      <type>Magnum::Shaders::Flat&lt; dimensions &gt; *</type>
       <name>operator-&gt;</name>
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
       <anchor>a918bd916f8acbf70781b2f9af133e8b8</anchor>
@@ -57445,492 +53754,188 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ResourceManager&lt; Magnum::Implementation::ResourceManagerLocalInstance, GL::AbstractShaderProgram, GL::Buffer, GL::Mesh, GL::MeshView, DebugTools::ForceRendererOptions, DebugTools::ObjectRendererOptions, DebugTools::ShapeRendererOptions &gt;</name>
+    <name>Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt;</name>
+    <filename>classMagnum_1_1Resource.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Resource</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ab6e1f1b111342c493675cdeee71559a8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Resource</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>aadfc7b76c1a904524f94b88bd3e4b9ec</anchor>
+      <arglist>(const Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Resource</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a28c9e646a89ef0e1b7aaf41bd2126a49</anchor>
+      <arglist>(Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;&amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Resource</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>acaa03453bcac81107851500b0cbf2391</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a8f59ed76d3e4eb888959dba5efb853bd</anchor>
+      <arglist>(const Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ac990bb8ae690e0a3b2df1126f7e9d064</anchor>
+      <arglist>(Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;&amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>ResourceKey</type>
+      <name>key</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a6b2fbf46f0f26789f94b189ef641e5bb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ResourceState</type>
+      <name>state</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a6b5f26c073b9b9a03f2f66362c714e73</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a20a00427fdb3862f1f00adadb604d15c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator Magnum::Shaders::VertexColor&lt; dimensions &gt; *</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ac17914776e1ab6dc20cd7ee443ed301f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Magnum::Shaders::VertexColor&lt; dimensions &gt; &amp;</type>
+      <name>operator *</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ac0cdc90f2971b9ecccb358d2c2454b76</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Magnum::Shaders::VertexColor&lt; dimensions &gt; *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a918bd916f8acbf70781b2f9af133e8b8</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Resource&lt; Magnum::GL::Mesh &gt;</name>
+    <filename>classMagnum_1_1Resource.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Resource</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ab6e1f1b111342c493675cdeee71559a8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Resource</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>aadfc7b76c1a904524f94b88bd3e4b9ec</anchor>
+      <arglist>(const Resource&lt; Magnum::GL::Mesh, Magnum::GL::Mesh &gt; &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Resource</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a28c9e646a89ef0e1b7aaf41bd2126a49</anchor>
+      <arglist>(Resource&lt; Magnum::GL::Mesh, Magnum::GL::Mesh &gt; &amp;&amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Resource</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>acaa03453bcac81107851500b0cbf2391</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Resource&lt; Magnum::GL::Mesh, Magnum::GL::Mesh &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a8f59ed76d3e4eb888959dba5efb853bd</anchor>
+      <arglist>(const Resource&lt; Magnum::GL::Mesh, Magnum::GL::Mesh &gt; &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>Resource&lt; Magnum::GL::Mesh, Magnum::GL::Mesh &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ac990bb8ae690e0a3b2df1126f7e9d064</anchor>
+      <arglist>(Resource&lt; Magnum::GL::Mesh, Magnum::GL::Mesh &gt; &amp;&amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>ResourceKey</type>
+      <name>key</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a6b2fbf46f0f26789f94b189ef641e5bb</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ResourceState</type>
+      <name>state</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a6b5f26c073b9b9a03f2f66362c714e73</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator bool</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a20a00427fdb3862f1f00adadb604d15c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator Magnum::GL::Mesh *</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ac17914776e1ab6dc20cd7ee443ed301f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Magnum::GL::Mesh &amp;</type>
+      <name>operator *</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ac0cdc90f2971b9ecccb358d2c2454b76</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Magnum::GL::Mesh *</type>
+      <name>operator-&gt;</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a918bd916f8acbf70781b2f9af133e8b8</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ResourceManager&lt; Magnum::Implementation::ResourceManagerLocalInstance, GL::AbstractShaderProgram, GL::Buffer, GL::Mesh, GL::MeshView, DebugTools::ForceRendererOptions, DebugTools::ObjectRendererOptions &gt;</name>
     <filename>classMagnum_1_1ResourceManager.html</filename>
   </compound>
   <compound kind="struct">
     <name>std::hash&lt; Magnum::ResourceKey &gt;</name>
     <filename>structstd_1_1hash_3_01Magnum_1_1ResourceKey_01_4.html</filename>
-  </compound>
-  <compound kind="class">
-    <name>Texture&lt; 2 &gt;</name>
-    <filename>classMagnum_1_1GL_1_1Texture.html</filename>
-    <base>Magnum::GL::AbstractTexture</base>
-    <member kind="enumvalue">
-      <name>Dimensions</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>af1d7bb0e7a587492b266c2cbc2ea986aa514cb35aa815831ef6f22ecb46b559af</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Texture</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a9b891860a813ff8635a59d255005a95a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Texture</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>adb7efbf43c45ccf6771a3b0a502c8f73</anchor>
-      <arglist>(NoCreateT) noexcept</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Texture</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a9269b2dd0d2702b3aaa9361d900689a5</anchor>
-      <arglist>(const Texture&lt; dimensions &gt; &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>Texture</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>af58beed8450892c97fa8656d5e2d649b</anchor>
-      <arglist>(Texture&lt; dimensions &gt; &amp;&amp;) noexcept=default</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a01a7c3ee7a162762185328c9e476e81a</anchor>
-      <arglist>(const Texture&lt; dimensions &gt; &amp;)=delete</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a8c1cece1db1999d149f939a151a6bf57</anchor>
-      <arglist>(Texture&lt; dimensions &gt; &amp;&amp;) noexcept=default</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>bindImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a6db159283a62f9e6919aa01d54da0e60</anchor>
-      <arglist>(Int imageUnit, Int level, ImageAccess access, ImageFormat format)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>bindImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a11b0e7c1d220e10445b513aac9f0daea</anchor>
-      <arglist>(Int imageUnit, Int level, Int layer, ImageAccess access, ImageFormat format)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>bindImageLayered</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a56fe5984fe4e589cfa2b387857b69a37</anchor>
-      <arglist>(Int imageUnit, Int level, ImageAccess access, ImageFormat format)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setBaseLevel</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a1d0475b3c245a9d86e7b2c489c5a8353</anchor>
-      <arglist>(Int level)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setMaxLevel</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a31461f990ff2980eb59792323cc07c9d</anchor>
-      <arglist>(Int level)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setMinificationFilter</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a13b90348d30ac672b58cac7e00e863f9</anchor>
-      <arglist>(SamplerFilter filter, SamplerMipmap mipmap=SamplerMipmap::Base)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setMinificationFilter</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a9747a716602dde369d323ab428985670</anchor>
-      <arglist>(Magnum::SamplerFilter filter, Magnum::SamplerMipmap mipmap=Magnum::SamplerMipmap::Base)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setMagnificationFilter</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a9d139af52629631bccf0d5ef7bbefc52</anchor>
-      <arglist>(SamplerFilter filter)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setMagnificationFilter</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a8fab22c5419a9ed476f34d38016094e3</anchor>
-      <arglist>(Magnum::SamplerFilter filter)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setMinLod</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a0a01d04ebc16a406bbf0638e4931659e</anchor>
-      <arglist>(Float lod)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setMaxLod</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ae022ea004cf90424e09db2a223fedd54</anchor>
-      <arglist>(Float lod)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setLodBias</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a02cc1d55073cd58de0cc1cbf1804a7fd</anchor>
-      <arglist>(Float bias)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setWrapping</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a0500782fb95e20bca856b6ed2f4cc255</anchor>
-      <arglist>(const Array&lt; dimensions, SamplerWrapping &gt; &amp;wrapping)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setWrapping</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a1be6072464258a12337fa2373342fcf5</anchor>
-      <arglist>(const Array&lt; dimensions, Magnum::SamplerWrapping &gt; &amp;wrapping)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setBorderColor</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>af731753579b3c11430defd25fb599639</anchor>
-      <arglist>(const Color4 &amp;color)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setBorderColor</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a1d1f24277f134189646e65a21bc5e74d</anchor>
-      <arglist>(const Vector4ui &amp;color)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setBorderColor</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a2dcf7937991f955b1a970462c3f9a9d6</anchor>
-      <arglist>(const Vector4i &amp;color)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setMaxAnisotropy</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a857fb8c57f68c77e5c93808c632ab901</anchor>
-      <arglist>(Float anisotropy)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setSrgbDecode</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a76815a9c8ba88c8e46b8fa4730451c27</anchor>
-      <arglist>(bool decode)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setSRGBDecode</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ab8795730f84df8b1c54682b13213f20e</anchor>
-      <arglist>(bool decode)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setSwizzle</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a3a2f9a1f3e33dd64d86e5c6931426efd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setCompareMode</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>aa1940ba0e91e18c40ec1f71dceded45c</anchor>
-      <arglist>(SamplerCompareMode mode)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setCompareFunction</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a1f8ed8e67d6e695ee95f63c36504b144</anchor>
-      <arglist>(SamplerCompareFunction function)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setDepthStencilMode</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>aeba6984d1ebf3ac89e55613de6388867</anchor>
-      <arglist>(SamplerDepthStencilMode mode)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setStorage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a77f4822b1023b22d70d04cb5f2684c56</anchor>
-      <arglist>(Int levels, TextureFormat internalFormat, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size)</arglist>
-    </member>
-    <member kind="function">
-      <type>VectorTypeFor&lt; dimensions, Int &gt;</type>
-      <name>imageSize</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ad3701277ef093f71129ffd00b0bd0a74</anchor>
-      <arglist>(Int level)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>image</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ac3e66e40414dbf96bd609e7b8653346e</anchor>
-      <arglist>(Int level, Image&lt; dimensions &gt; &amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Image&lt; dimensions &gt;</type>
-      <name>image</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a5a07c0e98128da6c777c0c518de2c8e8</anchor>
-      <arglist>(Int level, Image&lt; dimensions &gt; &amp;&amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>image</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a7068dafa28faab0b12316e920ca5442f</anchor>
-      <arglist>(Int level, BufferImage&lt; dimensions &gt; &amp;image, BufferUsage usage)</arglist>
-    </member>
-    <member kind="function">
-      <type>BufferImage&lt; dimensions &gt;</type>
-      <name>image</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ae6f02e78f2c99e5c415fa0c5454631d0</anchor>
-      <arglist>(Int level, BufferImage&lt; dimensions &gt; &amp;&amp;image, BufferUsage usage)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>compressedImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>aea9014e7bb009be9a43ca4c8deae5864</anchor>
-      <arglist>(Int level, CompressedImage&lt; dimensions &gt; &amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>CompressedImage&lt; dimensions &gt;</type>
-      <name>compressedImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a8153fd9d12bf5406c729e6a7d3114c4a</anchor>
-      <arglist>(Int level, CompressedImage&lt; dimensions &gt; &amp;&amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>compressedImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>af314a47b45f61d6a7653d7109c16e4ba</anchor>
-      <arglist>(Int level, CompressedBufferImage&lt; dimensions &gt; &amp;image, BufferUsage usage)</arglist>
-    </member>
-    <member kind="function">
-      <type>CompressedBufferImage&lt; dimensions &gt;</type>
-      <name>compressedImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ad3ad7b47694f192f3b4984964311647d</anchor>
-      <arglist>(Int level, CompressedBufferImage&lt; dimensions &gt; &amp;&amp;image, BufferUsage usage)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>subImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a1c137d45443f51b628f26fab2af92b43</anchor>
-      <arglist>(Int level, const RangeTypeFor&lt; dimensions, Int &gt; &amp;range, Image&lt; dimensions &gt; &amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Image&lt; dimensions &gt;</type>
-      <name>subImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>af0f8c31d6861dd977d09bcdaefd3efde</anchor>
-      <arglist>(Int level, const RangeTypeFor&lt; dimensions, Int &gt; &amp;range, Image&lt; dimensions &gt; &amp;&amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>subImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ad21fce402fab6dd1f07a5a92a2315c40</anchor>
-      <arglist>(Int level, const RangeTypeFor&lt; dimensions, Int &gt; &amp;range, BufferImage&lt; dimensions &gt; &amp;image, BufferUsage usage)</arglist>
-    </member>
-    <member kind="function">
-      <type>BufferImage&lt; dimensions &gt;</type>
-      <name>subImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>aa16c8bdacd9dfb905a9ddeaac70958eb</anchor>
-      <arglist>(Int level, const RangeTypeFor&lt; dimensions, Int &gt; &amp;range, BufferImage&lt; dimensions &gt; &amp;&amp;image, BufferUsage usage)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>compressedSubImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a88b68f888dc3a9f972da43de4ed35e19</anchor>
-      <arglist>(Int level, const RangeTypeFor&lt; dimensions, Int &gt; &amp;range, CompressedImage&lt; dimensions &gt; &amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>CompressedImage&lt; dimensions &gt;</type>
-      <name>compressedSubImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a92b896c3cda4cb6f62c7b697bc530731</anchor>
-      <arglist>(Int level, const RangeTypeFor&lt; dimensions, Int &gt; &amp;range, CompressedImage&lt; dimensions &gt; &amp;&amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>compressedSubImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a3f7b6d55c4d166f6a2917c98aaed2365</anchor>
-      <arglist>(Int level, const RangeTypeFor&lt; dimensions, Int &gt; &amp;range, CompressedBufferImage&lt; dimensions &gt; &amp;image, BufferUsage usage)</arglist>
-    </member>
-    <member kind="function">
-      <type>CompressedBufferImage&lt; dimensions &gt;</type>
-      <name>compressedSubImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>af2a09f793bc3836865f27d9753a23fba</anchor>
-      <arglist>(Int level, const RangeTypeFor&lt; dimensions, Int &gt; &amp;range, CompressedBufferImage&lt; dimensions &gt; &amp;&amp;image, BufferUsage usage)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ac7962eedd04b32285391da1fc84b2dd7</anchor>
-      <arglist>(Int level, TextureFormat internalFormat, const ImageView&lt; dimensions &gt; &amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a528d7b778cfde23294ba79f1b87438a5</anchor>
-      <arglist>(Int level, TextureFormat internalFormat, BufferImage&lt; dimensions &gt; &amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a7d586cc2e547227729fa2e63d5db2845</anchor>
-      <arglist>(Int level, TextureFormat internalFormat, BufferImage&lt; dimensions &gt; &amp;&amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setCompressedImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a57ed66d4b889a22be2ee40ac4f0fcf10</anchor>
-      <arglist>(Int level, const CompressedImageView&lt; dimensions &gt; &amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setCompressedImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a28401742236deab8fa0a7995357a05b8</anchor>
-      <arglist>(Int level, CompressedBufferImage&lt; dimensions &gt; &amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setCompressedImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a17a234cf3d109f8f5bfd2c1e143a14ba</anchor>
-      <arglist>(Int level, CompressedBufferImage&lt; dimensions &gt; &amp;&amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setSubImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ad3bb523a881dd4fac66c535dd069dbb4</anchor>
-      <arglist>(Int level, const VectorTypeFor&lt; dimensions, Int &gt; &amp;offset, const ImageView&lt; dimensions &gt; &amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setSubImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a07f87dbe913e144ecdb70a1121e2ca91</anchor>
-      <arglist>(Int level, const VectorTypeFor&lt; dimensions, Int &gt; &amp;offset, BufferImage&lt; dimensions &gt; &amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setSubImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a2ec952eccc74e027080a29c2be809782</anchor>
-      <arglist>(Int level, const VectorTypeFor&lt; dimensions, Int &gt; &amp;offset, BufferImage&lt; dimensions &gt; &amp;&amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setCompressedSubImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ad0966a995394f7dae2a5547b0810051b</anchor>
-      <arglist>(Int level, const VectorTypeFor&lt; dimensions, Int &gt; &amp;offset, const CompressedImageView&lt; dimensions &gt; &amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setCompressedSubImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a650b662a00524c28c90a5c836ca3d3cc</anchor>
-      <arglist>(Int level, const VectorTypeFor&lt; dimensions, Int &gt; &amp;offset, CompressedBufferImage&lt; dimensions &gt; &amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>setCompressedSubImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a82c801de19db3c22b867dbcd4ee4df2e</anchor>
-      <arglist>(Int level, const VectorTypeFor&lt; dimensions, Int &gt; &amp;offset, CompressedBufferImage&lt; dimensions &gt; &amp;&amp;image)</arglist>
-    </member>
-    <member kind="function">
-      <type>Texture&lt; dimensions &gt; &amp;</type>
-      <name>generateMipmap</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a7917e69afe4af2149b2780f12ba8c90d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invalidateImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ab2b02df2afdd40b73fe883545702fd34</anchor>
-      <arglist>(Int level)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>invalidateSubImage</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>adc9ccdd441088101f41637fe6386c9ee</anchor>
-      <arglist>(Int level, const VectorTypeFor&lt; dimensions, Int &gt; &amp;offset, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static VectorTypeFor&lt; dimensions, Int &gt;</type>
-      <name>maxSize</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>aa73a617525fb75f124668e098a5923a4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static VectorTypeFor&lt; dimensions, Int &gt;</type>
-      <name>compressedBlockSize</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a861ebbf408140db08e78f52d37a498f4</anchor>
-      <arglist>(TextureFormat format)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static Int</type>
-      <name>compressedBlockDataSize</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>af0e6b7bf0260943e2d040f90dc91f97e</anchor>
-      <arglist>(TextureFormat format)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static Texture&lt; dimensions &gt;</type>
-      <name>wrap</name>
-      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a88eb81320bf6a5ad699659e53b6dff7b</anchor>
-      <arglist>(GLuint id, ObjectFlags flags={})</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>TrackViewStorage&lt; Float &gt;</name>
@@ -66573,7 +62578,7 @@
     <namespace>Magnum::BulletIntegration</namespace>
     <namespace>Magnum::DartIntegration</namespace>
     <namespace>Magnum::DebugTools</namespace>
-    <namespace>Magnum::Extensions</namespace>
+    <namespace>Magnum::EigenIntegration</namespace>
     <namespace>Magnum::GL</namespace>
     <namespace>Magnum::GlmIntegration</namespace>
     <namespace>Magnum::ImGuiIntegration</namespace>
@@ -66585,7 +62590,6 @@
     <namespace>Magnum::Primitives</namespace>
     <namespace>Magnum::SceneGraph</namespace>
     <namespace>Magnum::Shaders</namespace>
-    <namespace>Magnum::Shapes</namespace>
     <namespace>Magnum::Text</namespace>
     <namespace>Magnum::TextureTools</namespace>
     <namespace>Magnum::Trade</namespace>
@@ -66607,7 +62611,6 @@
     <class kind="class">Magnum::Resource</class>
     <class kind="class">Magnum::ResourceKey</class>
     <class kind="class">Magnum::ResourceManager</class>
-    <class kind="struct">Magnum::Sampler</class>
     <class kind="class">Magnum::Timeline</class>
     <member kind="typedef">
       <type>typename DimensionTraits&lt; dimensions, T &gt;::VectorType</type>
@@ -66628,461 +62631,6 @@
       <name>MatrixTypeFor</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
       <anchor>a66bd8e5ed82475aaa74ae683a28875d5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::FramebufferClear</type>
-      <name>FramebufferClear</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ac62ba24bc8ba66ad3d27822e9dd8c570</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::FramebufferClearMask</type>
-      <name>FramebufferClearMask</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a40aacfa4fc300bd885fe89b65f7ac988</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::FramebufferBlit</type>
-      <name>FramebufferBlit</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ac2e857af04c513e948470a35f328f6f1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::FramebufferBlitMask</type>
-      <name>FramebufferBlitMask</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a70c7054c2bf605a23f13e433a986e055</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::FramebufferBlitFilter</type>
-      <name>FramebufferBlitFilter</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>af4557643ec84d86663d9e8f79e58b11c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::FramebufferTarget</type>
-      <name>FramebufferTarget</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a757234133f6a4429b67c31563c8c386e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::AbstractFramebuffer</type>
-      <name>AbstractFramebuffer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ac09b9f14920cba4a9f6c1bfa5d187e3c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::ObjectFlag</type>
-      <name>ObjectFlag</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>aa7728baa155d0195c1359bd2e84b36a6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::ObjectFlags</type>
-      <name>ObjectFlags</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>abe05b4789e16f5e28fcdb0d1c299aa82</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::AbstractObject</type>
-      <name>AbstractObject</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a2047380c82680b5c3ce5fb2685b00b00</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::AbstractQuery</type>
-      <name>AbstractQuery</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a9a45f77cd3c20568f72aeafce9fe6fa2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::AbstractShaderProgram</type>
-      <name>AbstractShaderProgram</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>adc86d8619526986d7728b15c9d5fac09</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::AbstractTexture</type>
-      <name>AbstractTexture</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a6c0c9b3633b2953d6a476d4897f31e2b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Attribute&lt; location, T &gt;</type>
-      <name>Attribute</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>afc5676fb1670cfcdbf7dc2d95edcdbd5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::DynamicAttribute</type>
-      <name>DynamicAttribute</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ab07d47d63c3cce3c8a2a10f1c3c6946e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferUsage</type>
-      <name>BufferUsage</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ad5ff579e344f7bfada18fc04ed5dd09c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Buffer</type>
-      <name>Buffer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a499f60d95b2d3bf590b1f532b94aff5c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferImage&lt; dimensions &gt;</type>
-      <name>BufferImage</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a9b01746ef2949284863e3d9bf91b4588</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferImage1D</type>
-      <name>BufferImage1D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a6dbaf1005ea0c4494580391672d54e21</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferImage2D</type>
-      <name>BufferImage2D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a3188f1ef0e9420f6a56a089e354d03b8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferImage3D</type>
-      <name>BufferImage3D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a87d7d390e6cb3e916d584822bbb3bb5b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferImage&lt; dimensions &gt;</type>
-      <name>CompressedBufferImage</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a21b25535853dcd0cbddf5e8352ab8c9f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::CompressedBufferImage1D</type>
-      <name>CompressedBufferImage1D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a53cb5e4178008f36a1559551263fc376</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::CompressedBufferImage2D</type>
-      <name>CompressedBufferImage2D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>aee0cc52dc93a23fbd1f4f4a9a35d2df1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::CompressedBufferImage3D</type>
-      <name>CompressedBufferImage3D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ad911cb9ea625a74e8cd9d3b53d30bede</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferTexture</type>
-      <name>BufferTexture</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>af061967892b80b099da6c7c541fe2745</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::BufferTextureFormat</type>
-      <name>BufferTextureFormat</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a2413882bfc2422f1dfd0c0434bc79bb3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Extension</type>
-      <name>Extension</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ac2190a3fd94a312c7dfbbe49c9703fd1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Context</type>
-      <name>Context</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a9af7c1b397445ab9dac44b84ac01d2da</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::CubeMapCoordinate</type>
-      <name>CubeMapCoordinate</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>aaa6fad67039a66fa1bd806c75082d33c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::CubeMapTexture</type>
-      <name>CubeMapTexture</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>acbc71b060792cbe422cf8b8a0e243e9a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::CubeMapTextureArray</type>
-      <name>CubeMapTextureArray</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>af7e61fd977317f64cf43e172bf4fd68e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::DebugOutput</type>
-      <name>DebugOutput</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ab5d40e8eda3dd11de87af17a72929e68</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::DebugMessage</type>
-      <name>DebugMessage</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a67ee3f6ccaa020a3ea4317ae3122c0fa</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::DebugGroup</type>
-      <name>DebugGroup</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a956e756b3755797b1fc50dff7f2b2823</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::DefaultFramebuffer</type>
-      <name>DefaultFramebuffer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a7bc47b4b09c5dc52c6f4ec3d088aaf32</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Framebuffer</type>
-      <name>Framebuffer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a8289fd2efd49cb486360ca58179e12b5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::ImageAccess</type>
-      <name>ImageAccess</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a0f43770daa94dc170e8ecfa98a4ff6f0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::ImageFormat</type>
-      <name>ImageFormat</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ac3c23285f2fbdf6c74285559ad44c1a7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Mesh</type>
-      <name>Mesh</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a3c3a2a76e6726ed6ee89fa07be424998</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::MeshView</type>
-      <name>MeshView</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>afe395ebc660f6d62a106796aa563dc5b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::MultisampleTextureSampleLocations</type>
-      <name>MultisampleTextureSampleLocations</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>af506c62d472a7b7aeab7356381c53748</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::MultisampleTexture&lt; dimensions &gt;</type>
-      <name>MultisampleTexture</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ad0b6b3b8103bf9f9cc94217411efade8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::MultisampleTexture2D</type>
-      <name>MultisampleTexture2D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a10dc109e417c8b14c5369eeb02ef201c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::MultisampleTexture2DArray</type>
-      <name>MultisampleTexture2DArray</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a0eecadd1171dc09225fcf5d0d174a84a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::OpenGLTester</type>
-      <name>OpenGLTester</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ab7832845db1a34d9629be65a2b3f06ff</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::PixelType</type>
-      <name>PixelType</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a61bca5781befa85ae769f3fb9ae6dbf0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::PrimitiveQuery</type>
-      <name>PrimitiveQuery</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ad0e6a03b233f4aa2c70b6228c696fe94</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::RectangleTexture</type>
-      <name>RectangleTexture</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a2df1f49d0ae1326baf64cf2bbe334796</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Renderbuffer</type>
-      <name>Renderbuffer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>afcefbe6aab851279873e4d0485d5209e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::RenderbufferFormat</type>
-      <name>RenderbufferFormat</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a27e6c974a87676a504dc3f097d0fdef6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Renderer</type>
-      <name>Renderer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ad2609fdd9319ee6bd55198d17457abcf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::SampleQuery</type>
-      <name>SampleQuery</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ad0f4e740e7b012356fcb6f871073517b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Shader</type>
-      <name>Shader</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a5b21ef7d0977b38c105f065c832c5853</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Texture&lt; dimensions &gt;</type>
-      <name>Texture</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a99680032ac8a2f87a7aa2b23c608dbeb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Texture1D</type>
-      <name>Texture1D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a09a9b3908405d57d4bba5dc5b009516b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Texture2D</type>
-      <name>Texture2D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a5d57e2262e5493761c626416fcbb5bea</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Texture3D</type>
-      <name>Texture3D</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>aedc1219f6673626419e725d7f03fa11c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::TextureArray&lt; dimensions &gt;</type>
-      <name>TextureArray</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>af5449088ee48a6b5d2f5e75de1b7e19a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Texture1DArray</type>
-      <name>Texture1DArray</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a5a48bbdd767ab8863702a11771bfeba5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Texture2DArray</type>
-      <name>Texture2DArray</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a2f09a3e384d73896c8a1fec6377189de</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::TextureFormat</type>
-      <name>TextureFormat</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a8c21ad96952a73ac7f2d6ab3fe5f974f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::TimeQuery</type>
-      <name>TimeQuery</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a8995467f4957d512f74eeb68c2b53a7c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::TransformFeedback</type>
-      <name>TransformFeedback</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ac254d7da58c87628a7f1d28524366e40</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Magnum::GL::Version</type>
-      <name>Version</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a8157bc6dc5966d8a1aa4e84d28b6b74d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -67314,6 +62862,13 @@
       <name>Color4</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
       <anchor>a5cb8f674ed695b93b434b44bd7c96805</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::ColorHsv&lt; Float &gt;</type>
+      <name>ColorHsv</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a3f2e0a0f0f64660057e1af647fd34456</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -67815,6 +63370,17 @@
     </member>
     <member kind="enumeration">
       <type></type>
+      <name>InputFileCallbackPolicy</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>ad1e6da3c6e20d9bc3d488f0126c5c21d</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum.html" anchor="ad1e6da3c6e20d9bc3d488f0126c5c21da21a5bcd08cdd088335d18f69f74653cb">LoadTemporary</enumvalue>
+      <enumvalue file="namespaceMagnum.html" anchor="ad1e6da3c6e20d9bc3d488f0126c5c21da3abc4c0a3801b18b2ac7bd4f661c1f46">LoadPermanent</enumvalue>
+      <enumvalue file="namespaceMagnum.html" anchor="ad1e6da3c6e20d9bc3d488f0126c5c21daec8db16682dce388085f20c20903b0cf">LoadPernament</enumvalue>
+      <enumvalue file="namespaceMagnum.html" anchor="ad1e6da3c6e20d9bc3d488f0126c5c21dad3d2e617335f08df83599665eef8a418">Close</enumvalue>
+    </member>
+    <member kind="enumeration">
+      <type></type>
       <name>MeshPrimitive</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
       <anchor>a52379a327f55566ec9aa4c72eaacbc0f</anchor>
@@ -67826,11 +63392,6 @@
       <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa7ca66fdfaad3eb33fc65d7490178f856">Triangles</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa1da0b9ead8b051940a89214bae22831c">TriangleStrip</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa18d58fde618e4a30e2dfdc122e693047">TriangleFan</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa72ba2961719d09dc64d6088bb7b6e13a">LinesAdjacency</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa826457761e4d352b8f54d7d47b80dbaa">LineStripAdjacency</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa17eff3f9b5c0afdaacaeaf79238e36d5">TrianglesAdjacency</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fa6b682fd6550f90f75722e4a7d38f3949">TriangleStripAdjacency</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a52379a327f55566ec9aa4c72eaacbc0fac4d283323af70979073f5cb6145f3a4b">Patches</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -67896,29 +63457,6 @@
       <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24ab968b93cd3c34fc9583050ce7e267394">RG32F</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24ad8936cc7055546f79128b9dbfb8c8bbb">RGB32F</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a703a7a81e586669c930e3dcaf3e8c428">RGBA32F</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24aee38e4d5dd68c4e440825018d549cb47">Red</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24ad382816a3cbeed082c9e216e7392eed1">Green</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a9594eec95be70e7b1710f730fdda33d9">Blue</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a280f73691109aeaa235ffddd2d154d9b">Luminance</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24abac953e88f6d79514b0b6fc42eb6f3b7">RG</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a780701651d86fd20708e81e7ad48c078">LuminanceAlpha</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a889574aebacda6bfd3e534e2b49b8028">RGB</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24aea3495a278957dc58165e48a8945469f">RGBA</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a2ad5640ebdec72fc79531d1778c6c2dc">BGR</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a5a1fe3c61c9e2fd6dbbc823589f6e697">BGRA</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a1f3f09bca5728eb7af4ea263ae84b9f1">SRGB</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a5dfd728b3bee2ad053d22203c3e8f2b8">SRGBAlpha</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a3774ed2915a508b6652a18b368a82a40">RedInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a108f898baf120f2b888ce842b430ad41">GreenInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a02f2197d037a51e8791768a670ea5ca9">BlueInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24ac614904b10b846a993192fd483fd0f8d">RGInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a893f9d29983ee73833f207885e688927">RGBInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a5beae36e40eb87168d14300e4b38a966">RGBAInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24afc927856045b7f1d1bf641aeb660aa5f">BGRInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a29874b26b860b0ddc3f3b447fc96849f">BGRAInteger</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a19c8f1ee3a700e77e87053eee47f6bc8">DepthComponent</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24ac07ade4f9906db3ee8e4e7053dac1dee">StencilIndex</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a0f3e774f6adcfb4b7d06df036c378c24a2fa8076285272883c91e14402975a441">DepthStencil</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -67930,60 +63468,6 @@
       <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a7e444ac8255d7a9fea6946bad447bd2f">Bc1RGBAUnorm</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a38ed31f589a9300614a3367af7308434">Bc2RGBAUnorm</enumvalue>
       <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aae2fbdf1f86d5b9b719f51dfae8e995f">Bc3RGBAUnorm</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aee38e4d5dd68c4e440825018d549cb47">Red</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0abac953e88f6d79514b0b6fc42eb6f3b7">RG</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a889574aebacda6bfd3e534e2b49b8028">RGB</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aea3495a278957dc58165e48a8945469f">RGBA</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aa3bed52b596f3b91bee25aa10394d27f">RedRgtc1</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a62a8382f8aa2f858c49e427277a50872">RGRgtc2</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a75771c41918045589327f8283c8e352b">SignedRedRgtc1</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a8fd2f045102ec87ada6ce64504fba872">SignedRGRgtc2</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ab7916cd38ad43474594d62f109fbf184">RGBBptcUnsignedFloat</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ac7dd302cf140a18d635bbc80e1d5e783">RGBBptcSignedFloat</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a7dd6aed4d4b349a913acdf49d5152e6f">RGBABptcUnorm</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ae7dbe7b43bd444b07f3cb60d3bd85413">SRGBAlphaBptcUnorm</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a2b383b452d4df4e2a7b7c749d5809f9f">RGB8Etc2</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a8eab3b04a17e67eed15dc5ac8315dc08">SRGB8Etc2</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a355cb5853c206ddfcf3fd3d27b91a9b1">RGB8PunchthroughAlpha1Etc2</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ace1e71dfb30dc15b2e56605daf8d0ce7">SRGB8PunchthroughAlpha1Etc2</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a98348631c6532dca147ed76111c3ca13">RGBA8Etc2Eac</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a0725b0958585442fa72335c352a4f31b">SRGB8Alpha8Etc2Eac</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a1adfe9f5f9890951fdd91d9ed0f6d782">R11Eac</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ac30713a6d506c10c43c7bcaa69fcbac5">SignedR11Eac</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a45ebf94b3877605e10852bcc28f4fcaa">RG11Eac</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ae7fb874dcd270f657787a2df8ca76fdf">SignedRG11Eac</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a202cb4f41f66d0b27bfc6f968f5d4e64">RGBS3tcDxt1</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a5651aff1d9255d714952c05ddc992f47">RGBAS3tcDxt1</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ab1b608a98cb05d81c057fb369922718d">RGBAS3tcDxt3</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a2a3b16cfc97107c276f6d8e5d1f1f311">RGBAS3tcDxt5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a4d54b5762d22b6cccbde8ecd2fadcf45">RGBAAstc4x4</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aca48b83bf02a4c74f477b92c766ee7b0">SRGB8Alpha8Astc4x4</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aa2b69ce26a065fc75905a70d03829757">RGBAAstc5x4</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a9b3927d698dd5349e8eb9f68e9c6c6a1">SRGB8Alpha8Astc5x4</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a8867cb489f247c08bcfc0a5b42726414">RGBAAstc5x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a1860eb6d1eb2911ba7f5e6afd715b1b2">SRGB8Alpha8Astc5x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ac905ed9f991dc301e8a713b9edc420bc">RGBAAstc6x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a77632c655108204cc7496ce98fe192d8">SRGB8Alpha8Astc6x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a6622396055bf65a5993a6cb9cf66265f">RGBAAstc6x6</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a960bc98e3d2ceacfad471d1db50ffc76">SRGB8Alpha8Astc6x6</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0af7f012ccc372ef62e682256dbd93aefb">RGBAAstc8x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a1d8b727d6330b5cd196d7197cbc2c626">SRGB8Alpha8Astc8x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aae5be3648e3d9ceb03d30b49251c0629">RGBAAstc8x6</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0afc2666906090246eefb829972ead8280">SRGB8Alpha8Astc8x6</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a43204df6edcc8d05b25e7efb58934f46">RGBAAstc8x8</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0aaef0fa49535ce0cfac9dc45cbf22dc6f">SRGB8Alpha8Astc8x8</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a6d0c85423c4abf4c177c93447a4b7777">RGBAAstc10x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a0f413861153fe70fc44eb26acf2eaa99">SRGB8Alpha8Astc10x5</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0ad034ed7edf6c7208a351589ed2e5f17a">RGBAAstc10x6</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a98ce333cbad0ca0b10b47673ba3c9610">SRGB8Alpha8Astc10x6</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a5d145bbb1f4d7494d1ef3c2a554a2691">RGBAAstc10x8</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0acb5ca548816c10b8e9328ffdfe4c584a">SRGB8Alpha8Astc10x8</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a01f17158c3d1005268197fdd4990749d">RGBAAstc10x10</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a7db9b87a93dfa09f1bd47035f34028ce">SRGB8Alpha8Astc10x10</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a939449aabd0a436676eb40d18dc2cd10">RGBAAstc12x10</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a7b95d2f5ff8e629c4799a667d7b21fc9">SRGB8Alpha8Astc12x10</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a202b3c29a027a3edfd8df16f1bc65544">RGBAAstc12x12</enumvalue>
-      <enumvalue file="namespaceMagnum.html" anchor="a6aa5c7abd3ed7e272d99436adf5131e0a2635212e4b84e4b77fd26175e564d013">SRGB8Alpha8Astc12x12</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -68081,25 +63565,11 @@
       <arglist>(Debug &amp;debug, const Array3D&lt; T &gt; &amp;value)</arglist>
     </member>
     <member kind="function">
-      <type>constexpr GL::Version</type>
-      <name>version</name>
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a2e5b7ec90c4963619aa89a38d15962ec</anchor>
-      <arglist>(Int major, Int minor)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; Int, Int &gt;</type>
-      <name>version</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a68ae1fd02ad44cdb11ca9806d1749d6e</anchor>
-      <arglist>(GL::Version version)</arglist>
-    </member>
-    <member kind="function">
-      <type>constexpr bool</type>
-      <name>isVersionES</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a23d283ca8f0d79fbe8d954ddc4c9f072</anchor>
-      <arglist>(GL::Version version)</arglist>
+      <anchor>a9f1425b2c32a25dda5169157fe875a33</anchor>
+      <arglist>(Debug &amp;debug, InputFileCallbackPolicy value)</arglist>
     </member>
     <member kind="function">
       <type>UnsignedInt</type>
@@ -68219,13 +63689,6 @@
       <anchorfile>namespaceMagnum.html</anchorfile>
       <anchor>a90ea80228405d6e8e13bf551bf55662d</anchor>
       <arglist>(Debug &amp;debug, SamplerWrapping value)</arglist>
-    </member>
-    <member kind="variable">
-      <type>GL::DefaultFramebuffer &amp;</type>
-      <name>defaultFramebuffer</name>
-      <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>ae0327957028588149bc146953263bdd9</anchor>
-      <arglist></arglist>
     </member>
     <member kind="variable">
       <type>constexpr NoCreateT</type>
@@ -68379,6 +63842,13 @@
       <name>Color4</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
       <anchor>a5cb8f674ed695b93b434b44bd7c96805</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::ColorHsv&lt; Float &gt;</type>
+      <name>ColorHsv</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a3f2e0a0f0f64660057e1af647fd34456</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -69388,27 +64858,6 @@
     <class kind="class">Magnum::BulletIntegration::DebugDraw</class>
     <class kind="class">Magnum::BulletIntegration::MotionState</class>
     <member kind="function">
-      <type>Shapes::AbstractShape3D *</type>
-      <name>convertShape</name>
-      <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>a1dde6f0e2a6682369e75b7ab8e7ebe89</anchor>
-      <arglist>(SceneGraph::AbstractBasicObject3D&lt; btScalar &gt; &amp;object, const btCollisionShape &amp;shape, Shapes::ShapeGroup3D *shapes=nullptr)</arglist>
-    </member>
-    <member kind="function">
-      <type>Shapes::Shape&lt; Shapes::Box3D &gt; *</type>
-      <name>convertShape</name>
-      <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>abdb0da4dbc47010da441ffaa2ae21c9f</anchor>
-      <arglist>(SceneGraph::AbstractBasicObject3D&lt; btScalar &gt; &amp;object, const btBoxShape &amp;box, Shapes::ShapeGroup3D *shapes=nullptr)</arglist>
-    </member>
-    <member kind="function">
-      <type>Shapes::Shape&lt; Shapes::Sphere3D &gt; *</type>
-      <name>convertShape</name>
-      <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
-      <anchor>af4a9aaecf5768855ae183b32b8ba29fa</anchor>
-      <arglist>(SceneGraph::AbstractBasicObject3D&lt; btScalar &gt; &amp;object, const btSphereShape &amp;sphere, Shapes::ShapeGroup3D *shapes=nullptr)</arglist>
-    </member>
-    <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1BulletIntegration.html</anchorfile>
@@ -69462,8 +64911,6 @@
     <class kind="class">Magnum::DebugTools::ObjectRendererOptions</class>
     <class kind="class">Magnum::DebugTools::Profiler</class>
     <class kind="class">Magnum::DebugTools::ResourceManager</class>
-    <class kind="class">Magnum::DebugTools::ShapeRenderer</class>
-    <class kind="class">Magnum::DebugTools::ShapeRendererOptions</class>
     <member kind="typedef">
       <type>ForceRenderer&lt; 2 &gt;</type>
       <name>ForceRenderer2D</name>
@@ -69490,20 +64937,6 @@
       <name>ObjectRenderer3D</name>
       <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
       <anchor>a784fac03e2e3837cd90f088564eadc3c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ShapeRenderer&lt; 2 &gt;</type>
-      <name>ShapeRenderer2D</name>
-      <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
-      <anchor>ab0b120fd9a7cd20ab8692227d00d0dd4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ShapeRenderer&lt; 3 &gt;</type>
-      <name>ShapeRenderer3D</name>
-      <anchorfile>namespaceMagnum_1_1DebugTools.html</anchorfile>
-      <anchor>a41482458e69f86bf0e21c3ea541df7d8</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -69606,8 +65039,29 @@
     </member>
   </compound>
   <compound kind="namespace">
-    <name>Magnum::Extensions</name>
-    <filename>namespaceMagnum_1_1Extensions.html</filename>
+    <name>Magnum::EigenIntegration</name>
+    <filename>namespaceMagnum_1_1EigenIntegration.html</filename>
+    <member kind="function">
+      <type>To</type>
+      <name>eigenCast</name>
+      <anchorfile>namespaceMagnum_1_1EigenIntegration.html</anchorfile>
+      <anchor>ad9aecc7f99cc5abbc3fe7ecd02d45775</anchor>
+      <arglist>(const Math::RectangularMatrix&lt; cols, rows, T &gt; &amp;from)</arglist>
+    </member>
+    <member kind="function">
+      <type>To</type>
+      <name>eigenCast</name>
+      <anchorfile>namespaceMagnum_1_1EigenIntegration.html</anchorfile>
+      <anchor>a37ab544f0aab67b5a6900f9169f1b0c9</anchor>
+      <arglist>(const Math::BoolVector&lt; size &gt; &amp;from)</arglist>
+    </member>
+    <member kind="function">
+      <type>To</type>
+      <name>eigenCast</name>
+      <anchorfile>namespaceMagnum_1_1EigenIntegration.html</anchorfile>
+      <anchor>a8ff52517df4864df1fe1bc105544cfea</anchor>
+      <arglist>(const Math::Vector&lt; size, T &gt; &amp;from)</arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>Magnum::GL</name>
@@ -70552,13 +66006,6 @@
       <arglist>(PixelFormat format, PixelType type)</arglist>
     </member>
     <member kind="function">
-      <type>UnsignedInt</type>
-      <name>pixelSize</name>
-      <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
-      <anchor>ab734f05b5213546afaaaac32914cc3d3</anchor>
-      <arglist>(Magnum::PixelFormat format, PixelType type)</arglist>
-    </member>
-    <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1GL.html</anchorfile>
@@ -70773,6 +66220,7 @@
     <class kind="class">Magnum::Math::BoolVector</class>
     <class kind="class">Magnum::Math::Color3</class>
     <class kind="class">Magnum::Math::Color4</class>
+    <class kind="struct">Magnum::Math::ColorHsv</class>
     <class kind="class">Magnum::Math::Complex</class>
     <class kind="struct">Magnum::Math::Constants</class>
     <class kind="class">Magnum::Math::CubicHermite</class>
@@ -71009,6 +66457,13 @@
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
       <anchor>a95bff66ce9604939340d44686f857aa6</anchor>
       <arglist>(const Vector3&lt; T &gt; &amp;xyz)</arglist>
+    </member>
+    <member kind="function">
+      <type>Corrade::Utility::Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a89bc10efa4914f4bd586cf6f493ee898</anchor>
+      <arglist>(Corrade::Utility::Debug &amp;debug, const ColorHsv&lt; T &gt; &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>T</type>
@@ -71305,6 +66760,69 @@
       <arglist>(T value)</arglist>
     </member>
     <member kind="function">
+      <type>T</type>
+      <name>min</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a2d23039b9bd85f9c16274321ddf55d1d</anchor>
+      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>min</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>ae9a92854975b2f250004249044e1bfcf</anchor>
+      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>min</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a96d63ce830679d3516755e875a87a23d</anchor>
+      <arglist>(const T(&amp;array)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>max</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a6cab078020edfc1f5487665d4926ba2d</anchor>
+      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>max</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a37e8a2e2b6ce6a039cc6d41c1bc6ded1</anchor>
+      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>max</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>ad1f165cde9ca7992987fe78b9f2c180a</anchor>
+      <arglist>(const T(&amp;array)[size])</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; T, T &gt;</type>
+      <name>minmax</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>afffc709fd33b5319addb8b0fec9e1254</anchor>
+      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; T, T &gt;</type>
+      <name>minmax</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>a31ca6cb241a516d8b652b0d39cb5909e</anchor>
+      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::pair&lt; T, T &gt;</type>
+      <name>minmax</name>
+      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
+      <anchor>ac2bf61d8aec6fa605c73b03d8337df5c</anchor>
+      <arglist>(const T(&amp;array)[size])</arglist>
+    </member>
+    <member kind="function">
       <type>Corrade::Utility::Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
@@ -71537,27 +67055,6 @@
     </member>
     <member kind="function">
       <type>T</type>
-      <name>min</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a2d23039b9bd85f9c16274321ddf55d1d</anchor>
-      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>min</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ae9a92854975b2f250004249044e1bfcf</anchor>
-      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>min</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a96d63ce830679d3516755e875a87a23d</anchor>
-      <arglist>(const T(&amp;array)[size])</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
       <name>max</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
       <anchor>a1065191724e603162437b335db0c490d</anchor>
@@ -71571,53 +67068,11 @@
       <arglist>(const Vector&lt; size, T &gt; &amp;value, T max)</arglist>
     </member>
     <member kind="function">
-      <type>T</type>
-      <name>max</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a6cab078020edfc1f5487665d4926ba2d</anchor>
-      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>max</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a37e8a2e2b6ce6a039cc6d41c1bc6ded1</anchor>
-      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>max</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ad1f165cde9ca7992987fe78b9f2c180a</anchor>
-      <arglist>(const T(&amp;array)[size])</arglist>
-    </member>
-    <member kind="function">
       <type>std::pair&lt; T, T &gt;</type>
       <name>minmax</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
       <anchor>a160f3c051c7fee9a17f036ddd5fea320</anchor>
       <arglist>(const T &amp;a, const T &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; T, T &gt;</type>
-      <name>minmax</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>afffc709fd33b5319addb8b0fec9e1254</anchor>
-      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; T, T &gt;</type>
-      <name>minmax</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a31ca6cb241a516d8b652b0d39cb5909e</anchor>
-      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; T, T &gt;</type>
-      <name>minmax</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ac2bf61d8aec6fa605c73b03d8337df5c</anchor>
-      <arglist>(const T(&amp;array)[size])</arglist>
     </member>
     <member kind="function">
       <type>T</type>
@@ -71782,27 +67237,6 @@
     </member>
     <member kind="function">
       <type>T</type>
-      <name>min</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a2d23039b9bd85f9c16274321ddf55d1d</anchor>
-      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>min</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ae9a92854975b2f250004249044e1bfcf</anchor>
-      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>min</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a96d63ce830679d3516755e875a87a23d</anchor>
-      <arglist>(const T(&amp;array)[size])</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
       <name>max</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
       <anchor>a1065191724e603162437b335db0c490d</anchor>
@@ -71816,53 +67250,11 @@
       <arglist>(const Vector&lt; size, T &gt; &amp;value, T max)</arglist>
     </member>
     <member kind="function">
-      <type>T</type>
-      <name>max</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a6cab078020edfc1f5487665d4926ba2d</anchor>
-      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>max</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a37e8a2e2b6ce6a039cc6d41c1bc6ded1</anchor>
-      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
-    </member>
-    <member kind="function">
-      <type>T</type>
-      <name>max</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ad1f165cde9ca7992987fe78b9f2c180a</anchor>
-      <arglist>(const T(&amp;array)[size])</arglist>
-    </member>
-    <member kind="function">
       <type>std::pair&lt; T, T &gt;</type>
       <name>minmax</name>
       <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
       <anchor>a160f3c051c7fee9a17f036ddd5fea320</anchor>
       <arglist>(const T &amp;a, const T &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; T, T &gt;</type>
-      <name>minmax</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>afffc709fd33b5319addb8b0fec9e1254</anchor>
-      <arglist>(Corrade::Containers::ArrayView&lt; const T &gt; range)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; T, T &gt;</type>
-      <name>minmax</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>a31ca6cb241a516d8b652b0d39cb5909e</anchor>
-      <arglist>(std::initializer_list&lt; T &gt; list)</arglist>
-    </member>
-    <member kind="function">
-      <type>std::pair&lt; T, T &gt;</type>
-      <name>minmax</name>
-      <anchorfile>namespaceMagnum_1_1Math.html</anchorfile>
-      <anchor>ac2bf61d8aec6fa605c73b03d8337df5c</anchor>
-      <arglist>(const T(&amp;array)[size])</arglist>
     </member>
     <member kind="function">
       <type>T</type>
@@ -72779,7 +68171,7 @@
     <member kind="enumvalue">
       <name>UnknownIdentifier</name>
       <anchorfile>namespaceMagnum_1_1OpenDdl.html</anchorfile>
-      <anchor>ad05cec250b41b8c4b7388975c58ef0b4a04e754b073ff12e4cd5c65c74b0f73c4</anchor>
+      <anchor>a531226bc34f25ada135b161606257b8aa04e754b073ff12e4cd5c65c74b0f73c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -73225,7 +68617,6 @@
     <class kind="class">Magnum::Platform::BasicScreenedApplication</class>
     <class kind="class">Magnum::Platform::GLContext</class>
     <class kind="class">Magnum::Platform::GlfwApplication</class>
-    <class kind="class">Magnum::Platform::GlutApplication</class>
     <class kind="class">Magnum::Platform::GlxApplication</class>
     <class kind="class">Magnum::Platform::Sdl2Application</class>
     <class kind="class">Magnum::Platform::WindowlessCglApplication</class>
@@ -73241,13 +68632,6 @@
     <class kind="class">Magnum::Platform::WindowlessWindowsEglApplication</class>
     <class kind="class">Magnum::Platform::WindowlessWindowsEglContext</class>
     <class kind="class">Magnum::Platform::XEglApplication</class>
-    <member kind="typedef">
-      <type>GLContext</type>
-      <name>Context</name>
-      <anchorfile>namespaceMagnum_1_1Platform.html</anchorfile>
-      <anchor>a326904eccb797bd1c017f3c7c65ca3a4</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="namespace">
     <name>Magnum::Primitives</name>
@@ -74241,333 +69625,11 @@
     </member>
   </compound>
   <compound kind="namespace">
-    <name>Magnum::Shapes</name>
-    <filename>namespaceMagnum_1_1Shapes.html</filename>
-    <class kind="class">Magnum::Shapes::AbstractShape</class>
-    <class kind="class">Magnum::Shapes::AxisAlignedBox</class>
-    <class kind="class">Magnum::Shapes::Box</class>
-    <class kind="class">Magnum::Shapes::Capsule</class>
-    <class kind="class">Magnum::Shapes::Collision</class>
-    <class kind="class">Magnum::Shapes::Composition</class>
-    <class kind="class">Magnum::Shapes::Cylinder</class>
-    <class kind="class">Magnum::Shapes::InvertedSphere</class>
-    <class kind="class">Magnum::Shapes::Line</class>
-    <class kind="class">Magnum::Shapes::LineSegment</class>
-    <class kind="class">Magnum::Shapes::Plane</class>
-    <class kind="class">Magnum::Shapes::Point</class>
-    <class kind="class">Magnum::Shapes::Shape</class>
-    <class kind="class">Magnum::Shapes::ShapeGroup</class>
-    <class kind="class">Magnum::Shapes::Sphere</class>
-    <member kind="typedef">
-      <type>AbstractShape&lt; 2 &gt;</type>
-      <name>AbstractShape2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a4e9bd6031c70fccf84a9661aaccb9c2a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>AbstractShape&lt; 3 &gt;</type>
-      <name>AbstractShape3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a589b851550fda74ad7592f9082b26faf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>AxisAlignedBox&lt; 2 &gt;</type>
-      <name>AxisAlignedBox2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>af671fda1e375e094c0a1b50ff53827e3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>AxisAlignedBox&lt; 3 &gt;</type>
-      <name>AxisAlignedBox3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a6611bb4233c9ec6413a27dcb3e9a9edb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Box&lt; 2 &gt;</type>
-      <name>Box2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a7065289e32f576d8a0e95e928ba11ab7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Box&lt; 3 &gt;</type>
-      <name>Box3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ac2cbcad614385662ad4beb489103322c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Capsule&lt; 2 &gt;</type>
-      <name>Capsule2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a49c72e6f71ae4286014afd8959554f8f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Capsule&lt; 3 &gt;</type>
-      <name>Capsule3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a8907faf93164878a8b75181845a72599</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Collision&lt; 2 &gt;</type>
-      <name>Collision2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ab42be56c2cbaa9fb9d853e1925cfc942</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Collision&lt; 3 &gt;</type>
-      <name>Collision3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>aad83dc8f52a9c5505a631895ccc783a7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Composition&lt; 2 &gt;</type>
-      <name>Composition2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>aab6bffea5f17a4c03028ba6df318978f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Composition&lt; 3 &gt;</type>
-      <name>Composition3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>afbbc5e4d464900be422ef093f835174f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Cylinder&lt; 2 &gt;</type>
-      <name>Cylinder2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a69e19df0c90bda9b3a8b94060d09b9e4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Cylinder&lt; 3 &gt;</type>
-      <name>Cylinder3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ae610d08005a9a849c13674cb039c0e6d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Line&lt; 2 &gt;</type>
-      <name>Line2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a95d1765b3254cb2ff8a8a947c7e5bd12</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Line&lt; 3 &gt;</type>
-      <name>Line3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>addab11a15ce16cba2e73cdc924d50ed1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>LineSegment&lt; 2 &gt;</type>
-      <name>LineSegment2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a73a4ce53fdcd2df8d86e3ebcd7290155</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>LineSegment&lt; 3 &gt;</type>
-      <name>LineSegment3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a1db64426401b7bf7cf8953324625fd79</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Point&lt; 2 &gt;</type>
-      <name>Point2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a0f6c4e41cbb0354048a669cd8e08d93c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Point&lt; 3 &gt;</type>
-      <name>Point3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a5f04d8003aaee50f746fdcfada20c2d5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ShapeGroup&lt; 2 &gt;</type>
-      <name>ShapeGroup2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>abf008c2731d6a6746882143df020136b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ShapeGroup&lt; 3 &gt;</type>
-      <name>ShapeGroup3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ab1ff04fca24ca9c36a1ee80b80fc0489</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Sphere&lt; 2 &gt;</type>
-      <name>Sphere2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a08c1fd6379b146defeb4d94568596c06</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>Sphere&lt; 3 &gt;</type>
-      <name>Sphere3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a21ba78b6c1e081d95f2a294f0731ee64</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>InvertedSphere&lt; 2 &gt;</type>
-      <name>InvertedSphere2D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a626326e606fd477e0d17423c241a5424</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>InvertedSphere&lt; 3 &gt;</type>
-      <name>InvertedSphere3D</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a6ed406193adc0e3cea8d58aaea086bd4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>CompositionOperation</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ad8f610d090659171824e09764135758a</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1Shapes.html" anchor="ad8f610d090659171824e09764135758aaa74c05d080620f087c4e523977230666">Not</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Shapes.html" anchor="ad8f610d090659171824e09764135758aac33315685a0cba3ce53be378b3c7874b">And</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Shapes.html" anchor="ad8f610d090659171824e09764135758aa3a2d5fe857d8f9541136a124c2edec6c">Or</enumvalue>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>aa36acc3128bae09e1d48650ea0cdf860</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const AxisAlignedBox&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>afe98277240394e274783626ac4420be1</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const Capsule&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a839afd5e87c4726add6835ee314e16d0</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;a, const Capsule&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>aa9ee062abdca1154e74d91f50647abab</anchor>
-      <arglist>(Debug &amp;debug, typename Composition&lt; dimensions &gt;::Type value)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a175327c41a1cf77afe589e9f75942a72</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const Cylinder&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a6a0f05766a099f0af8852618d356f970</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;a, const Cylinder&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a736526a5aefa690b865f94d7c245915d</anchor>
-      <arglist>(const Line3D &amp;a, const Plane &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a0d75eb4350f0ba0ea4c338c3dccbedf7</anchor>
-      <arglist>(const LineSegment3D &amp;a, const Plane &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a8b92f87abd7091bb18db7d2a588bd554</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const Sphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>a661f9284aa5c40e8252ac116f7eea984</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const InvertedSphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ae83451d613cff0466b2781b751864d3f</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const Sphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>add309ac34f5949efeb8a3cc4a8c21b84</anchor>
-      <arglist>(const Point&lt; dimensions &gt; &amp;a, const InvertedSphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>adbea395f5e0ca3c22cdac2afbb7e7735</anchor>
-      <arglist>(const Line&lt; dimensions &gt; &amp;a, const Sphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>aadd405df874fc45add6de71c650de5a4</anchor>
-      <arglist>(const LineSegment&lt; dimensions &gt; &amp;a, const Sphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator%</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ac7f0f50e112678da6e80ba5c5eef3e51</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;a, const InvertedSphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-    <member kind="function">
-      <type>Collision&lt; dimensions &gt;</type>
-      <name>operator/</name>
-      <anchorfile>namespaceMagnum_1_1Shapes.html</anchorfile>
-      <anchor>ae54fc2987b79b7716f336df639814933</anchor>
-      <arglist>(const Sphere&lt; dimensions &gt; &amp;a, const InvertedSphere&lt; dimensions &gt; &amp;b)</arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
     <name>Magnum::Text</name>
     <filename>namespaceMagnum_1_1Text.html</filename>
     <class kind="class">Magnum::Text::AbstractFont</class>
     <class kind="class">Magnum::Text::AbstractFontConverter</class>
+    <class kind="class">Magnum::Text::AbstractGlyphCache</class>
     <class kind="class">Magnum::Text::AbstractLayouter</class>
     <class kind="class">Magnum::Text::AbstractRenderer</class>
     <class kind="class">Magnum::Text::DistanceFieldGlyphCache</class>
@@ -74578,6 +69640,13 @@
     <class kind="class">Magnum::Text::MagnumFontConverter</class>
     <class kind="class">Magnum::Text::Renderer</class>
     <class kind="class">Magnum::Text::StbTrueTypeFont</class>
+    <member kind="typedef">
+      <type>Containers::EnumSet&lt; GlyphCacheFeature &gt;</type>
+      <name>GlyphCacheFeatures</name>
+      <anchorfile>namespaceMagnum_1_1Text.html</anchorfile>
+      <anchor>a94ddecd6c5bc8f53ce09021c01cdd128</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>Renderer&lt; 2 &gt;</type>
       <name>Renderer2D</name>
@@ -74591,6 +69660,14 @@
       <anchorfile>namespaceMagnum_1_1Text.html</anchorfile>
       <anchor>a4b69f1bb3ee0486ceed6c41cfebfcb81</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>GlyphCacheFeature</name>
+      <anchorfile>namespaceMagnum_1_1Text.html</anchorfile>
+      <anchor>a7f26cc446d372d930e996c37fb356455</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespaceMagnum_1_1Text.html" anchor="a7f26cc446d372d930e996c37fb356455ac65e06981d6f8f3d1e13791a39d346df">ImageDownload</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -74611,6 +69688,20 @@
       <enumvalue file="namespaceMagnum_1_1Text.html" anchor="afe5ab4c9617fdc70eefe5b871e5ee81baef3f989c5b8b37ec01e0d588d00db0f3">MiddleLeftIntegral</enumvalue>
       <enumvalue file="namespaceMagnum_1_1Text.html" anchor="afe5ab4c9617fdc70eefe5b871e5ee81bafc989b7f4c3942a8d586054d11e9bf29">MiddleCenterIntegral</enumvalue>
       <enumvalue file="namespaceMagnum_1_1Text.html" anchor="afe5ab4c9617fdc70eefe5b871e5ee81baf4e3acd109cd0c34ceed8ed3e6b73846">MiddleRightIntegral</enumvalue>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1Text.html</anchorfile>
+      <anchor>a7fa35f3ab0a4527b5e719d0dd5cf84ca</anchor>
+      <arglist>(Debug &amp;debug, AbstractFont::Feature value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Debug &amp;</type>
+      <name>operator&lt;&lt;</name>
+      <anchorfile>namespaceMagnum_1_1Text.html</anchorfile>
+      <anchor>a93a05e290c110f57d63c674953393f44</anchor>
+      <arglist>(Debug &amp;debug, AbstractFont::Features value)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -74646,7 +69737,6 @@
     <class kind="class">Magnum::Trade::AnySceneImporter</class>
     <class kind="class">Magnum::Trade::AssimpImporter</class>
     <class kind="class">Magnum::Trade::CameraData</class>
-    <class kind="class">Magnum::Trade::ColladaImporter</class>
     <class kind="class">Magnum::Trade::DdsImporter</class>
     <class kind="class">Magnum::Trade::DevIlImageImporter</class>
     <class kind="class">Magnum::Trade::ImageData</class>
@@ -74673,6 +69763,13 @@
     <class kind="class">Magnum::Trade::TgaImageConverter</class>
     <class kind="class">Magnum::Trade::TgaImporter</class>
     <class kind="class">Magnum::Trade::TinyGltfImporter</class>
+    <member kind="typedef">
+      <type>InputFileCallbackPolicy</type>
+      <name>ImporterFileCallbackPolicy</name>
+      <anchorfile>namespaceMagnum_1_1Trade.html</anchorfile>
+      <anchor>a4f346999e9e7d01b160fdefd9916eebf</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>ImageData&lt; 1 &gt;</type>
       <name>ImageData1D</name>
@@ -74707,16 +69804,6 @@
       <anchorfile>namespaceMagnum_1_1Trade.html</anchorfile>
       <anchor>a2fbbdc803324132091fd20b1e363cb65</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ImporterFileCallbackPolicy</name>
-      <anchorfile>namespaceMagnum_1_1Trade.html</anchorfile>
-      <anchor>af9a8bd3c6961615c1ffe72f45a394ba6</anchor>
-      <arglist></arglist>
-      <enumvalue file="namespaceMagnum_1_1Trade.html" anchor="af9a8bd3c6961615c1ffe72f45a394ba6a21a5bcd08cdd088335d18f69f74653cb">LoadTemporary</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Trade.html" anchor="af9a8bd3c6961615c1ffe72f45a394ba6aec8db16682dce388085f20c20903b0cf">LoadPernament</enumvalue>
-      <enumvalue file="namespaceMagnum_1_1Trade.html" anchor="af9a8bd3c6961615c1ffe72f45a394ba6ad3d2e617335f08df83599665eef8a418">Close</enumvalue>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -74853,13 +69940,6 @@
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
       <anchorfile>namespaceMagnum_1_1Trade.html</anchorfile>
-      <anchor>af2de5edbc894166844a62c6825119214</anchor>
-      <arglist>(Debug &amp;debug, ImporterFileCallbackPolicy value)</arglist>
-    </member>
-    <member kind="function">
-      <type>Debug &amp;</type>
-      <name>operator&lt;&lt;</name>
-      <anchorfile>namespaceMagnum_1_1Trade.html</anchorfile>
       <anchor>aa496c4bdc948dbfd58efa04b130f0f52</anchor>
       <arglist>(Debug &amp;debug, MaterialType value)</arglist>
     </member>
@@ -74982,373 +70062,373 @@
     <member kind="enumvalue">
       <name>Animation</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03af6304a6d8f2b01e13c2c03605012974f</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4af6304a6d8f2b01e13c2c03605012974f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Atten</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a3315a33f9cb5091a3b345490b505ad98</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a3315a33f9cb5091a3b345490b505ad98</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BoneCountArray</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a5e03287e50a9f6c52a96e9640a421c39</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a5e03287e50a9f6c52a96e9640a421c39</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BoneIndexArray</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a714317d24ba7565cdf496364d16a9685</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a714317d24ba7565cdf496364d16a9685</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BoneNode</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a7befe320b8fca7e7dcdec2b0f9d499e4</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a7befe320b8fca7e7dcdec2b0f9d499e4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BoneRefArray</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a6812f44800f182c8e94f5491cac105c6</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a6812f44800f182c8e94f5491cac105c6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>BoneWeightArray</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a56ee38e9394b75f64e62e6ced8742b54</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a56ee38e9394b75f64e62e6ced8742b54</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CameraNode</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a79f93a7971247339463c3443d84cc6ed</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a79f93a7971247339463c3443d84cc6ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>CameraObject</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a9d30b4eba79b224629783fff2d715542</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a9d30b4eba79b224629783fff2d715542</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Clip</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a5e5ba5fbc4f9f16da02dbc66e58e275a</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a5e5ba5fbc4f9f16da02dbc66e58e275a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Color</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03aa305118a547fad84e384a955e9f0a1b1</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4aa305118a547fad84e384a955e9f0a1b1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Extension</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a449c75f33e58cc2eb597c310cfeb5fac</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a449c75f33e58cc2eb597c310cfeb5fac</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>GeometryNode</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03aa8b521e7303f947b6399cd3cd89add8d</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4aa8b521e7303f947b6399cd3cd89add8d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>GeometryObject</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03ab9c0282c868cfceb40b18595ec09229e</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4ab9c0282c868cfceb40b18595ec09229e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>IndexArray</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a6f887a76d1a7c1feec058b6246e83416</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a6f887a76d1a7c1feec058b6246e83416</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Key</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a6dad8335d3b0813d55a4c60ef049ffc8</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a6dad8335d3b0813d55a4c60ef049ffc8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>LightNode</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03ac8d133985294c96dff732ffbbee59552</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4ac8d133985294c96dff732ffbbee59552</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>LightObject</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a5de337af814f611451f4beeefdcc9da3</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a5de337af814f611451f4beeefdcc9da3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Material</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a2982962fd9e99b00b4359b514aee881a</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a2982962fd9e99b00b4359b514aee881a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MaterialRef</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03af39c57ecb85b2f39f559f692771ac749</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4af39c57ecb85b2f39f559f692771ac749</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Mesh</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a6d661040b1fb0e10b974fe00b7bf3f8c</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a6d661040b1fb0e10b974fe00b7bf3f8c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Metric</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a72fedae492949f109c5a671714ea11e6</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a72fedae492949f109c5a671714ea11e6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Morph</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a8226a1c8b12b430b159901155419f1b8</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a8226a1c8b12b430b159901155419f1b8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>MorphWeight</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a9fc57ac008463f0658dd45d2da01c799</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a9fc57ac008463f0658dd45d2da01c799</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Name</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a9fb68c4b6dde8bbfa5a0338529adc39a</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a9fb68c4b6dde8bbfa5a0338529adc39a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Node</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03adf1cf043fcf03377aa66d637fa39452b</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4adf1cf043fcf03377aa66d637fa39452b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>ObjectRef</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a49193eba0a0ec0e3b7896fa9aeed31ff</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a49193eba0a0ec0e3b7896fa9aeed31ff</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Param</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03afa110c5e2ac4a8bc1fa05c1f44690fda</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4afa110c5e2ac4a8bc1fa05c1f44690fda</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Rotation</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03afea1cb9c8299c7ec22c61165fc21c689</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4afea1cb9c8299c7ec22c61165fc21c689</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Scale</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a55d05b90c547fdab267e7b295fee5b87</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a55d05b90c547fdab267e7b295fee5b87</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Skeleton</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03af6d3ca18ff250a79bc6baba3dc217b0b</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4af6d3ca18ff250a79bc6baba3dc217b0b</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Skin</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a7e6348fd496b7cf7023295dc02d08063</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a7e6348fd496b7cf7023295dc02d08063</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Texture</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a3d7bd43b2ed5863a1ba7e13e929b34f0</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a3d7bd43b2ed5863a1ba7e13e929b34f0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Time</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a25494f92a1dc0c0fb91402b35a7fa813</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a25494f92a1dc0c0fb91402b35a7fa813</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Track</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a794e6449746fc499f0a1e63cd1a02962</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a794e6449746fc499f0a1e63cd1a02962</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Transform</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03ae734064831130b08157f87eb2fec5c31</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4ae734064831130b08157f87eb2fec5c31</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Translation</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a914fd569607f44f239d3f603a4d13ea9</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a914fd569607f44f239d3f603a4d13ea9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Value</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03a13a96ad06820240b8ffb3f97164232a0</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4a13a96ad06820240b8ffb3f97164232a0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>VertexArray</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>afcd553c3675497045e87ce3b40541f03ac135467232e5951ff43f8067e418447f</anchor>
+      <anchor>aa3e03f34c57d04ba0831cef8e55f4ff4ac135467232e5951ff43f8067e418447f</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>applic</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a9a26f4e136d781b2c1848520ae3141f1</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a9a26f4e136d781b2c1848520ae3141f1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>attrib</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a516e438559e8f2bab01700d47aa6f197</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a516e438559e8f2bab01700d47aa6f197</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>begin</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466ae6626e94c1015e5b49fd45e1dd92d35d</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313ae6626e94c1015e5b49fd45e1dd92d35d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>clip</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a2dce971eae3a260036e6d9713d772486</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a2dce971eae3a260036e6d9713d772486</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>curve</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466ad557c97bc0247e863099b2921b606775</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313ad557c97bc0247e863099b2921b606775</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>end</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a7d34c05f5781373d6c7fac56d18f7d53</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a7d34c05f5781373d6c7fac56d18f7d53</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>front</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a8a5263bb2eed3a692e0f4f195a82e18c</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a8a5263bb2eed3a692e0f4f195a82e18c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>index</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466aadc159aa83eeca7f6445d433a33e2aae</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313aadc159aa83eeca7f6445d433a33e2aae</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>key</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a9bf1cb45e2b8651c9e22d7446abcd4fc</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a9bf1cb45e2b8651c9e22d7446abcd4fc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>kind</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466ac06e90780bba6ce7025c18dadf06d184</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313ac06e90780bba6ce7025c18dadf06d184</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>lod</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a193e71c288b7ae8e54e47b42e20921fb</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a193e71c288b7ae8e54e47b42e20921fb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>material</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a154577709fcaa2cd5c0c7f938cb623e5</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a154577709fcaa2cd5c0c7f938cb623e5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>morph</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466ac552ac8ad16bad93b1b626ff5a87c0ac</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313ac552ac8ad16bad93b1b626ff5a87c0ac</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>motion_blur</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a224f46f7716477f92e775f86fdad3f61</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a224f46f7716477f92e775f86fdad3f61</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>object</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466ae8c5cec062765c72668d1e378c168087</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313ae8c5cec062765c72668d1e378c168087</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>primitive</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a8153a3da7f9d0d647723ecba0a285ce2</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a8153a3da7f9d0d647723ecba0a285ce2</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>restart</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a71f9f08ca8c42c41b73c0e637b653bba</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a71f9f08ca8c42c41b73c0e637b653bba</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>shadow</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466aded2827f0f93ee44c700b4b3e12ec82e</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313aded2827f0f93ee44c700b4b3e12ec82e</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>target</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a596bb86cf21072c10f8650dab16d390d</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a596bb86cf21072c10f8650dab16d390d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>texcoord</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a33f759f009a97cf9ef59b5995aa3ffb8</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a33f759f009a97cf9ef59b5995aa3ffb8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>two_sided</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a821084236c6eedf8d87a18d4b172f187</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a821084236c6eedf8d87a18d4b172f187</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>type</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466a418aa48c09c18d8ea99d0917ee51ef7c</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313a418aa48c09c18d8ea99d0917ee51ef7c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>visible</name>
       <anchorfile>namespaceMagnum_1_1Trade_1_1OpenGex.html</anchorfile>
-      <anchor>a99bfa087be80c98f32aa7f772c293466aa998be9a9713013727605f355b066820</anchor>
+      <anchor>a0ae08f6034fbe247bdd01d8d1ace8313aa998be9a9713013727605f355b066820</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -75739,13 +70819,25 @@
     <docanchor file="changelog" title="New features">changelog-latest-new</docanchor>
     <docanchor file="changelog" title="DebugTools library">changelog-latest-new-debugtools</docanchor>
     <docanchor file="changelog" title="GL library">changelog-latest-new-gl</docanchor>
+    <docanchor file="changelog" title="Math library">changelog-latest-new-math</docanchor>
+    <docanchor file="changelog" title="Platform libraries">changelog-latest-new-platform</docanchor>
+    <docanchor file="changelog" title="Text library">changelog-latest-new-text</docanchor>
     <docanchor file="changelog" title="Changes and improvements">changelog-latest-changes</docanchor>
+    <docanchor file="changelog" title="Animation library">changelog-latest-changes-animation</docanchor>
     <docanchor file="changelog" title="Audio library">changelog-latest-changes-audio</docanchor>
     <docanchor file="changelog" title="DebugTools library">changelog-latest-changes-debugtools</docanchor>
+    <docanchor file="changelog" title="GL library">changelog-latest-changes-gl</docanchor>
+    <docanchor file="changelog" title="Math library">changelog-latest-changes-math</docanchor>
+    <docanchor file="changelog" title="MeshTools library">changelog-latest-changes-meshtools</docanchor>
+    <docanchor file="changelog" title="TextureTools library">changelog-latest-changes-texturetools</docanchor>
     <docanchor file="changelog" title="Platform libraries">changelog-latest-changes-platform</docanchor>
+    <docanchor file="changelog" title="Text library">changelog-latest-changes-text</docanchor>
     <docanchor file="changelog" title="Trade library">changelog-latest-changes-trade</docanchor>
+    <docanchor file="changelog" title="Build system">changelog-latest-buildsystem</docanchor>
     <docanchor file="changelog" title="Bug fixes">changelog-latest-bugfixes</docanchor>
+    <docanchor file="changelog" title="Documentation">changelog-latest-docs</docanchor>
     <docanchor file="changelog" title="Deprecated APIs">changelog-latest-deprecated</docanchor>
+    <docanchor file="changelog" title="Potential compatibility breakages, removed APIs">changelog-latest-compatibility</docanchor>
     <docanchor file="changelog" title="2019.01">changelog-2019-01</docanchor>
     <docanchor file="changelog" title="Dependency changes">changelog-2019-01-dependencies</docanchor>
     <docanchor file="changelog" title="New features">changelog-2019-01-new</docanchor>
@@ -75917,7 +71009,6 @@
     <docanchor file="coding-style" title="Doxygen documentation">coding-style-documentation</docanchor>
     <docanchor file="coding-style" title="Special documentation commands">coding-style-documentation-commands</docanchor>
     <docanchor file="coding-style" title="Code">coding-style-documentation-commands-code</docanchor>
-    <docanchor file="coding-style" title="Shape collision operators">coding-style-documentation-commands-collisionoperator</docanchor>
     <docanchor file="coding-style" title="Links to OpenGL, Vulkan and OpenAL extensions">coding-style-documentation-commands-extension</docanchor>
     <docanchor file="coding-style" title="Links to related OpenGL, Vulkan, OpenAL functions and definitions">coding-style-documentation-commands-ref</docanchor>
     <docanchor file="coding-style" title="Classes and functions requiring specific OpenGL, Vulkan, OpenAL version or extensions">coding-style-documentation-commands-requires</docanchor>
@@ -76136,6 +71227,7 @@
     <docanchor file="platforms-android" title="Running tests on the emulator">platforms-android-travis-run</docanchor>
     <docanchor file="platforms-android" title="APK bundle creation">platforms-android-travis-bundle</docanchor>
     <docanchor file="platforms-android" title="Troubleshooting">platforms-android-troubleshooting</docanchor>
+    <docanchor file="platforms-android" title="ADB fails when more devices are connected">platforms-android-troubleshooting-multiple-devices</docanchor>
     <docanchor file="platforms-android" title="Signing the APK using CMake fails">platforms-android-troubleshooting-signing-failed</docanchor>
     <docanchor file="platforms-android" title="Gradle CMake can&apos;t find dependencies">platforms-android-troubleshooting-cant-find</docanchor>
     <docanchor file="platforms-android" title="App can&apos;t launch">platforms-android-troubleshooting-cant-launch</docanchor>
@@ -76167,6 +71259,8 @@
     <docanchor file="platforms-html5" title="Context menu">platforms-html5-events-contextmenu</docanchor>
     <docanchor file="platforms-html5" title="Terminal output, environment and command-line arguments">platforms-html5-environment</docanchor>
     <docanchor file="platforms-html5" title="Differences between WebGL and OpenGL ES">platforms-html5-webgl</docanchor>
+    <docanchor file="platforms-html5" title="Compilation time / code size tradeoffs">platforms-html5-code-size</docanchor>
+    <docanchor file="platforms-html5" title="Server-side compression">platforms-html5-code-size-server</docanchor>
     <docanchor file="platforms-html5" title="Troubleshooting">platforms-html5-troubleshooting</docanchor>
     <docanchor file="platforms-html5" title="Setting up Emscripten on macOS">platforms-html5-troubleshooting-macos</docanchor>
     <docanchor file="platforms-html5" title="First Emscripten run takes long or fails">platforms-html5-troubleshooting-bootstrap</docanchor>
@@ -76259,17 +71353,11 @@
     <docanchor file="shaders" title="Generic vertex attributes">shaders-generic</docanchor>
   </compound>
   <compound kind="page">
-    <name>shapes</name>
-    <title>Collision detection</title>
-    <filename>shapes</filename>
-    <docanchor file="shapes" title="Available shapes">shapes-collection</docanchor>
-    <docanchor file="shapes" title="One-dimensional shapes">shapes-1D</docanchor>
-    <docanchor file="shapes" title="Two-dimensional shapes">shapes-2D</docanchor>
-    <docanchor file="shapes" title="Three-dimensional shapes">shapes-3D</docanchor>
-    <docanchor file="shapes" title="Creating shape compositions">shapes-composition</docanchor>
-    <docanchor file="shapes" title="Providing simplified version of shape for better performance">shapes-simplification</docanchor>
-    <docanchor file="shapes" title="Detecting shape collisions">shapes-collisions</docanchor>
-    <docanchor file="shapes" title="Integration with scene graph">shapes-scenegraph</docanchor>
+    <name>singles</name>
+    <title>Single-header libraries</title>
+    <filename>singles</filename>
+    <docanchor file="singles" title="Behavior">singles-behavior</docanchor>
+    <docanchor file="singles" title="Customization points">singles-customization</docanchor>
   </compound>
   <compound kind="page">
     <name>transformations</name>
@@ -76360,6 +71448,7 @@
     <docanchor file="changelog-plugins" title="Changes and improvements">changelog-plugins-latest-changes</docanchor>
     <docanchor file="changelog-plugins" title="Build system">changelog-plugins-latest-buildsystem</docanchor>
     <docanchor file="changelog-plugins" title="Bug fixes">changelog-plugins-latest-bugfixes</docanchor>
+    <docanchor file="changelog-plugins" title="Potential compatibility breakages, removed APIs">changelog-plugins-latest-compatibility</docanchor>
     <docanchor file="changelog-plugins" title="2019.01">changelog-plugins-2019-01</docanchor>
     <docanchor file="changelog-plugins" title="Dependency changes">changelog-plugins-2019-01-dependencies</docanchor>
     <docanchor file="changelog-plugins" title="New features">changelog-plugins-2019-01-new</docanchor>
@@ -76446,8 +71535,10 @@
     <filename>changelog-integration</filename>
     <docanchor file="changelog-integration" title="Changes since 2019.01">changelog-integration-latest</docanchor>
     <docanchor file="changelog-integration" title="New features">changelog-integration-latest-new</docanchor>
+    <docanchor file="changelog-integration" title="Changes and improvements">changelog-integration-latest-changes</docanchor>
     <docanchor file="changelog-integration" title="Build system">changelog-integration-latest-buildsystem</docanchor>
     <docanchor file="changelog-integration" title="Bug fixes">changelog-integration-latest-bugfixes</docanchor>
+    <docanchor file="changelog-integration" title="Potential compatibility breakages, removed APIs">changelog-integration-latest-compatibility</docanchor>
     <docanchor file="changelog-integration" title="Documentation">changelog-integration-latest-documentation</docanchor>
     <docanchor file="changelog-integration" title="2019.01">changelog-integration-2019-01</docanchor>
     <docanchor file="changelog-integration" title="Dependency changes">changelog-integration-2019-01-dependencies</docanchor>
@@ -76547,7 +71638,8 @@
     <name>changelog-examples</name>
     <title>Examples</title>
     <filename>changelog-examples</filename>
-    <docanchor file="changelog-examples">changelog-examples-latest</docanchor>
+    <docanchor file="changelog-examples" title="Changes since 2019.01">changelog-examples-latest</docanchor>
+    <docanchor file="changelog-examples" title="Bug fixes">changelog-examples-latest-bugfixes</docanchor>
     <docanchor file="changelog-examples" title="2019.01">changelog-examples-2019-01</docanchor>
     <docanchor file="changelog-examples" title="Dependency changes">changelog-examples-2019-01-dependencies</docanchor>
     <docanchor file="changelog-examples" title="New features">changelog-examples-2019-01-new</docanchor>
@@ -76733,7 +71825,8 @@
     <name>changelog-extras</name>
     <title>Extras</title>
     <filename>changelog-extras</filename>
-    <docanchor file="changelog-extras">changelog-extras-latest</docanchor>
+    <docanchor file="changelog-extras" title="Changes since 2019.01">changelog-extras-latest</docanchor>
+    <docanchor file="changelog-extras" title="Build system">changelog-extras-latest-buildsystem</docanchor>
     <docanchor file="changelog-extras" title="2019.01">changelog-extras-2019-01</docanchor>
     <docanchor file="changelog-extras" title="Dependency changes">changelog-extras-2019-01-dependencies</docanchor>
     <docanchor file="changelog-extras" title="2018.10">changelog-extras-2018-10</docanchor>
