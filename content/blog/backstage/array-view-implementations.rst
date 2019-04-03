@@ -11,6 +11,8 @@ Array view implementations in Magnum
     take that as an opportunity to compare them with the standard
     implementation in |span|.
 
+.. role:: cpp(code)
+    :language: c++
 .. role:: s
     :class: m-text m-s
 

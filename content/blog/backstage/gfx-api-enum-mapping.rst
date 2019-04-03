@@ -9,6 +9,8 @@ How Magnum does GFX API enum mapping
     from a generic API-agnostic value to the one used by a particular
     implementation, in the fastest-possible and most robust way.
 
+.. role:: cpp(code)
+    :language: c++
 .. role:: s
     :class: m-text m-s
 
