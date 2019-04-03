@@ -98,6 +98,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`biosek`
         -   :gh-name:`Borislav Stanimirov <iboB>`
         -   :gh-name:`Chris Chambers <chris-chambers>`
+        -   :gh-name:`Daniel Bloor <Bluer01>`
         -   :gh-name:`David Lin <davll>`
         -   :gh-name:`denesik`
         -   :gh-name:`Denis Igorevich Lobanov <denislobanov>`
