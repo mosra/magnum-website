@@ -406,12 +406,11 @@ failed. The following libraries are now marked as deprecated, are not built by
 default (in case they ever were) and will be completely removed in about six
 months time.
 
--   The :dox:`Shapes` :label-danger:`deprecated` library, together with
-    :dox:`DebugTools::ShapeRenderer` :label-danger:`deprecated` and the
-    :dox:`BulletIntegration::convertShape()` :label-danger:`deprecated`
-    function. Failed design experiment that couldn't ever be made performant
-    (and abusing :cpp:`%` operators for collision queries was just *plain
-    wrong*).
+-   The ``Shapes`` :label-dim:`obsolete` library, together with
+    ``DebugTools::ShapeRenderer`` :label-dim:`obsolete` and the
+    ``BulletIntegration::convertShape()`` :label-dim:`obsolete` function.
+    Failed design experiment that couldn't ever be made performant (and abusing
+    :cpp:`%` operators for collision queries was just *plain wrong*).
 
     Related geometry algorithms were moved to :dox:`Math::Distance` and
     :dox:`Math::Intersection` namespaces. If you need a full-fledged physics
@@ -421,16 +420,16 @@ months time.
     `Box2D <https://box2d.org/>`_, which has a :dox:`Magnum example <examples-box2d>`
     as well.
 
--   The :dox:`Platform::GlutApplication` :label-danger:`deprecated`
-    application. It's based on an outdated GLUT toolkit, has portability issues
-    and doesn't make sense on the path forward to Vulkan. Consider switching to
-    either :dox:`Platform::Sdl2Application` or :dox:`Platform::GlfwApplication`.
+-   The ``Platform::GlutApplication`` :label-dim:`obsolete` application. It's
+    based on an outdated GLUT toolkit, has portability issues and doesn't make
+    sense on the path forward to Vulkan. Consider switching to either
+    :dox:`Platform::Sdl2Application` or :dox:`Platform::GlfwApplication`.
 
--   The :dox:`Trade::ColladaImporter` :label-danger:`deprecated` plugin,
-    because it's based on an outdated Qt4 toolkit. Moreover, due to the sheer
-    complexity of the COLLADA format and poor conformance of various exporters
-    it's not feasible to maintain a builtin importer anymore. Consider either
-    using :dox:`AssimpImporter <Trade::AssimpImporter>` for COLLADA import or
+-   The ``ColladaImporter`` :label-dim:`obsolete` plugin, because it's based on
+    an outdated Qt4 toolkit. Moreover, due to the sheer complexity of the
+    COLLADA format and poor conformance of various exporters it's not feasible
+    to maintain a builtin importer anymore. Consider either using
+    :dox:`AssimpImporter <Trade::AssimpImporter>` for COLLADA import or
     switching to better-designed and better-supported formats such as glTF or
     OpenGEX using :dox:`TinyGltfImporter <Trade::TinyGltfImporter>` or
     :dox:`OpenGexImporter <Trade::OpenGexImporter>`. There's also the official

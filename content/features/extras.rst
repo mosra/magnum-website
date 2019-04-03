@@ -200,7 +200,7 @@ prototyping a game, debugging a glitch or measuring your app performance.
 
     See documentation of the :dox:`shaders`, :dox:`debug-tools`,
     :dox:`Primitives`, :dox:`Shaders`, :dox:`DebugTools` namespaces and the
-    :dox:`OpenGLTester` class for details.
+    :dox:`GL::OpenGLTester` class for details.
 
 `Scene graph functionality`_
 ============================
@@ -217,8 +217,8 @@ scene objects.
 
 .. note-dim::
 
-    See documentation of the :dox:`scenegraph`, :dox:`shapes` and
-    :dox:`SceneGraph`, :dox:`Shapes` namespaces for details.
+    See documentation of the :dox:`scenegraph` and :dox:`SceneGraph` namespace
+    for details.
 
 `Text and UI`_
 ==============

@@ -2,6 +2,7 @@ Area Lights with LTCs
 #####################
 
 :date: 2018-01-15
+:modified: 2019-04-03
 :category: Guest Posts
 :cover: {static}/img/blog/guest-posts/area-lights-with-ltcs.jpg
 :tags: C++, rendering, PBR, OpenGL, Emscripten, WebGL
@@ -14,6 +15,11 @@ Area Lights with LTCs
 .. role:: cpp(code)
     :language: c++
     :class: highlight
+
+.. note-success:: Content care: Apr 03, 2019
+
+    Code snippets and documentation links were updated to match current state
+    of the Magnum API.
 
 The code is available through the :dox:`examples-arealights` example page in
 the documentation and the example has also a live web version linked below.
@@ -239,14 +245,16 @@ Corrade to compile it in your ``CMakeLists.txt``...
 
     add_executable(magnum-arealights AreaLightsExample.cpp ${AreaLights_RESOURCES})
 
+.. class:: m-noindent
+
 ... and then loading the texture from the resource memory using
 :dox:`DdsImporter <Trade::DdsImporter>`:
 
 .. code:: c++
 
     /* Load the DdsImporter plugin */
-    PluginManager::Manager<Trade::AbstractImporter> manager{MAGNUM_PLUGINS_IMPORTER_DIR};
-    std::unique_ptr<Trade::AbstractImporter> importer =
+    PluginManager::Manager<Trade::AbstractImporter> manager;
+    Containers::Pointer<Trade::AbstractImporter> importer =
         manager.loadAndInstantiate("DdsImporter");
     if(!importer) std::exit(1);
 
@@ -258,10 +266,10 @@ Corrade to compile it in your ``CMakeLists.txt``...
     /* Set texture data and parameters */
     Containers::Optional<Trade::ImageData2D> image = importer->image2D(0);
     CORRADE_INTERNAL_ASSERT(image);
-    _ltcMat.setWrapping(Sampler::Wrapping::ClampToEdge)
-        .setMagnificationFilter(Sampler::Filter::Linear)
-        .setMinificationFilter(Sampler::Filter::Linear)
-        .setStorage(1, TextureFormat::RGBA32F, image->size())
+    _ltcMat.setWrapping(SamplerWrapping::ClampToEdge)
+        .setMagnificationFilter(SamplerFilter::Linear)
+        .setMinificationFilter(SamplerFilter::Linear)
+        .setStorage(1, GL::TextureFormat::RGBA32F, image->size())
         .setSubImage(0, {}, *image);
 
     /* Bind the texture for use in the shader */
@@ -274,7 +282,7 @@ During shader development, you will not want to restart your application every
 time you make a change to the GLSL shader code. It is rather nice to be able to
 just hit :label-default:`F5` and see the changes immediately instead.
 
-It turns out that if you implemented an :dox:`AbstractShaderProgram`,
+It turns out that if you implemented an :dox:`GL::AbstractShaderProgram`,
 hot-reloading is just a matter of reinstantiating it:
 
 .. code:: c++
@@ -285,13 +293,13 @@ hot-reloading is just a matter of reinstantiating it:
 Yes, it is that simple.
 
 Often you will compile your shader files as resources in Magnum (as done in the
-example). To use shaders from a resource in your :dox:`AbstractShaderProgram`
+example). To use shaders from a resource in your :dox:`GL::AbstractShaderProgram`
 you would again make use of :dox:`Utility::Resource`:
 
 .. code:: c++
 
-    Shader vert{version, Shader::Type::Vertex};
-    Shader frag{version, Shader::Type::Fragment};
+    GL::Shader vert{version, GL::Shader::Type::Vertex};
+    GL::Shader frag{version, GL::Shader::Type::Fragment};
 
     /* Load shaders from compiled-in resource */
     Utility::Resource rs("arealights-data");

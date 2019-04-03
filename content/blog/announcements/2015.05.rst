@@ -93,7 +93,7 @@ better alternative to the bloated XML-based COLLADA format and currently there
 are exporters from 3Ds Max, Maya and Blender.
 
 Current OpenGEX importer implementation in Magnum covers the same feature set
-as the :dox:`ColladaImporter <Trade::ColladaImporter>` plugin, but with faster
+as the ``ColladaImporter`` :label-dim:`obsolete` plugin, but with faster
 and more robust implementation and hopefully with less bugs and uncovered
 corner cases. The future of the COLLADA importer is uncertain and it will
 probably be deprecated in favor of the new OpenGEX importer, because COLLADA

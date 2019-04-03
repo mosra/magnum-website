@@ -91,14 +91,15 @@ story).
 All classes with similar use cases in Magnum are statically polymorphic. It
 means that you can for example swap transformation representation from
 :dox:`DualQuaternion` to :dox:`Matrix4`, easily switch to different platform
-toolkit (replace :dox:`Platform::GlutApplication` with :dox:`Platform::Sdl2Application`)
+toolkit (replace :dox:`Platform::GlfwApplication` with :dox:`Platform::Sdl2Application`)
 or use faster in-memory image representation on modern graphics cards
-(:dox:`BufferImage2D` instead of :dox:`Image2D`). In most cases you can do that
-without any additional changes to method calls and everything will just work.
+(:dox:`GL::BufferImage2D` instead of :dox:`Image2D`). In most cases you can do
+that without any additional changes to method calls and everything will just
+work.
 
 Not everything can be conveniently done without sublcassing. To avoid having
 virtual destructor, the base destructor is made protected (as is the case with
-:dox:`AbstractFramebuffer` and other classes which are not meant to be
+:dox:`GL::AbstractFramebuffer` and other classes which are not meant to be
 instantiated directly). Also, it's possible to cheat a little with primitive
 types for math structures, as only the base class contains the actual data and
 the destructors in subclasses are basically a no-op (for example :dox:`Math::Color4`,

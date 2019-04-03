@@ -177,8 +177,8 @@ is equivalent to calling the command-line version of the application as
 
 The program name is prepended to the argument list (to become ``argv[0]``)
 automatically by Emscripten and is hardcoded to ``./this.program``. All
-``--magnum-*`` options :dox:`supported by the engine <Context>` are working on
-Emscripten-compiled applications as well.
+``--magnum-*`` options :dox:`supported by the engine <GL::Context>` are working
+on Emscripten-compiled applications as well.
 :dox:`More info in the docs. <Platform::WindowlessEglApplication>`
 
 Size comparison to asm.js

@@ -484,8 +484,8 @@ included it is possible to have seamless integration with, for example,
 ===================================
 
 The OpenGL wrapping layer received updates for full compute shader support with
-SSBOs and image load/store, there's a new :dox:`TransformFeedback` class and
-completed uniform buffer support, among many other things.
+SSBOs and image load/store, there's a new :dox:`TransformFeedback <GL::TransformFeedback>`
+class and completed uniform buffer support, among many other things.
 
 Improvements were made to make it possible to have multiple independent
 thread-local instances of Magnum, for example in case where one Magnum context
