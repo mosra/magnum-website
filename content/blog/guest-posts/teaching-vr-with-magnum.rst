@@ -2,6 +2,7 @@ Teaching VR with Magnum
 #######################
 
 :date: 2019-03-11
+:modified: 2019-04-09
 :author: Markus Wiedemann
 :category: Guest Posts
 :tags: C++, rendering, OpenGL, Vcpkg, PBR, VR
@@ -11,11 +12,13 @@ Teaching VR with Magnum
     `CAVE <https://en.wikipedia.org/wiki/Cave_automatic_virtual_environment>`_-like
     environment, a room-scale five-sided projection installation.
 
-.. :status: draft can't do as the blurbs won't be included
-
 .. |wink| replace:: 😉
 .. role:: cpp(code)
     :language: cpp
+
+.. note-success:: Update: Apr 09, 2019
+
+    Updated project links at the bottom with sources for two more games.
 
 Teaching about virtual reality always benefits from practical experience. For
 that, a big part of the lecture Virtual Reality, hosted at the
@@ -147,6 +150,8 @@ the public.
 
     -   `TimeGunVR <https://gitlab.com/TimeGunVR>`_ by Konstantin Gomm and
         Sergey Mitchenko
+    -   `Bowling God <https://gitlab.lrz.de/wiedemann/vorlesung_vr_projekte/tree/master/sebastian_peralta_friedburg_bowling_god>`_
+        by Sebastian Peralta Friedburg
     -   `We Arrr Pirates <https://gitlab.lrz.de/wiedemann/vorlesung_vr_projekte/tree/master/yannick_weiss_we_arrr_pirates>`_
         by Yannick Weiss
 
