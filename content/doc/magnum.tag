@@ -1684,15 +1684,15 @@
       <type>R</type>
       <name>interpolate</name>
       <anchorfile>namespaceMagnum_1_1Animation.html</anchorfile>
-      <anchor>ae400ccb9ce42aa518ea5ff137613b6fe</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Extrapolation before, Extrapolation after, R(*interpolator)(const V &amp;, const V &amp;, Float), K frame, std::size_t &amp;hint)</arglist>
+      <anchor>af41a638940b3dad82022e00207a86b9d</anchor>
+      <arglist>(const Containers::StridedArrayView1D&lt; const K &gt; &amp;keys, const Containers::StridedArrayView1D&lt; const V &gt; &amp;values, Extrapolation before, Extrapolation after, R(*interpolator)(const V &amp;, const V &amp;, Float), K frame, std::size_t &amp;hint)</arglist>
     </member>
     <member kind="function">
       <type>R</type>
       <name>interpolateStrict</name>
       <anchorfile>namespaceMagnum_1_1Animation.html</anchorfile>
-      <anchor>ac8f918c75790a864b1a43fa25404cf04</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, R(*interpolator)(const V &amp;, const V &amp;, Float), K frame, std::size_t &amp;hint)</arglist>
+      <anchor>a428c4d01d812c2c8159044c6e8da987e</anchor>
+      <arglist>(const Containers::StridedArrayView1D&lt; const K &gt; &amp;keys, const Containers::StridedArrayView1D&lt; const V &gt; &amp;values, R(*interpolator)(const V &amp;, const V &amp;, Float), K frame, std::size_t &amp;hint)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
@@ -2007,7 +2007,6 @@
     <class kind="class">Magnum::GL::Extension</class>
     <class kind="class">Magnum::GL::Context</class>
     <namespace>Magnum</namespace>
-    <namespace>Magnum::Platform</namespace>
     <namespace>Magnum::GL</namespace>
     <member kind="define">
       <type>#define</type>
@@ -4519,6 +4518,27 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>Math::BoolVector&lt; 2 &gt;</type>
+      <name>BoolVector2</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>afc5f5955d48bb8a4edbf20309fce63dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::BoolVector&lt; 3 &gt;</type>
+      <name>BoolVector3</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a339fdabda899980a33990aa2e3c8a98a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::BoolVector&lt; 4 &gt;</type>
+      <name>BoolVector4</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a931bd102da709344ae82507d5a4f1f84</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>Math::Vector2&lt; Float &gt;</type>
       <name>Vector2</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
@@ -5167,6 +5187,27 @@
       <name>Half</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
       <anchor>ae9ad232db78b650420d4a56d3d67f0e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::BoolVector&lt; 2 &gt;</type>
+      <name>BoolVector2</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>afc5f5955d48bb8a4edbf20309fce63dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::BoolVector&lt; 3 &gt;</type>
+      <name>BoolVector3</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a339fdabda899980a33990aa2e3c8a98a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::BoolVector&lt; 4 &gt;</type>
+      <name>BoolVector4</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a931bd102da709344ae82507d5a4f1f84</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -12798,8 +12839,15 @@
       <type>constexpr</type>
       <name>BoolVector</name>
       <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
-      <anchor>a8f89dac5226c1e2fe8caff1cdbb6177b</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a5aedb24f182c55947dd77b5a71412570</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>BoolVector</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>af6fb45b087c7175e6f7d8c282af9e8ce</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -13283,8 +13331,15 @@
       <type>constexpr</type>
       <name>Complex</name>
       <anchorfile>classMagnum_1_1Math_1_1Complex.html</anchorfile>
-      <anchor>a56eef832fc64c4d4bad2da36ec27b1a2</anchor>
-      <arglist>(IdentityInitT=IdentityInit) noexcept</arglist>
+      <anchor>a84ca1871d9a1ebd42206e55c6a98e7dd</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Complex</name>
+      <anchorfile>classMagnum_1_1Math_1_1Complex.html</anchorfile>
+      <anchor>a37087d820ab87abce18a3437963bdf6e</anchor>
+      <arglist>(IdentityInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
@@ -14817,7 +14872,7 @@
       <type>void</type>
       <name>set</name>
       <anchorfile>classMagnum_1_1AbstractResourceLoader.html</anchorfile>
-      <anchor>ae31f970e395abd81027f79831445155e</anchor>
+      <anchor>a4564756a83d5389a756cd8d4da66ee7f</anchor>
       <arglist>(ResourceKey key, U &amp;&amp;data, ResourceDataState state, ResourcePolicy policy)</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -14838,7 +14893,7 @@
       <type>void</type>
       <name>set</name>
       <anchorfile>classMagnum_1_1AbstractResourceLoader.html</anchorfile>
-      <anchor>a8df409668475d1e0970d5dc7057fce71</anchor>
+      <anchor>a79a83fab4d7b2e365d90cb90c1afc20d</anchor>
       <arglist>(ResourceKey key, U &amp;&amp;data)</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -15365,17 +15420,17 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Containers::StridedArrayView&lt; const K &gt;</type>
+      <type>Containers::StridedArrayView1D&lt; const K &gt;</type>
       <name>keys</name>
       <anchorfile>classMagnum_1_1Animation_1_1Track.html</anchorfile>
-      <anchor>ac51c33ede9bb456a2b9a918b9d526538</anchor>
+      <anchor>a56cc368d0107529acb63459d315d32af</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Containers::StridedArrayView&lt; const V &gt;</type>
+      <type>Containers::StridedArrayView1D&lt; const V &gt;</type>
       <name>values</name>
       <anchorfile>classMagnum_1_1Animation_1_1Track.html</anchorfile>
-      <anchor>a63444d01fbf3ec491dd2e92fa79417c3</anchor>
+      <anchor>a9764c6468532a5c55d3cc0b13e8e95ca</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -15474,15 +15529,15 @@
       <type></type>
       <name>TrackView</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>a1fd6f17943a222c65d8920ea45bcebdf</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Interpolator interpolator, Extrapolation before, Extrapolation after) noexcept</arglist>
+      <anchor>a718b312aef8cc80fa433839522e6d8b4</anchor>
+      <arglist>(const Containers::StridedArrayView1D&lt; const K &gt; &amp;keys, const Containers::StridedArrayView1D&lt; const V &gt; &amp;values, Interpolator interpolator, Extrapolation before, Extrapolation after) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TrackView</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>af53fb00f77b895511a647ce833386a1a</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Interpolator interpolator, Extrapolation extrapolation=Extrapolation::Constant) noexcept</arglist>
+      <anchor>a09934448fb44aecdf2310df88f2f47f9</anchor>
+      <arglist>(const Containers::StridedArrayView1D&lt; const K &gt; &amp;keys, const Containers::StridedArrayView1D&lt; const V &gt; &amp;values, Interpolator interpolator, Extrapolation extrapolation=Extrapolation::Constant) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -15502,15 +15557,15 @@
       <type></type>
       <name>TrackView</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>afa2e339107f8f6c25ee0ec31c8551fe2</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Interpolation interpolation, Interpolator interpolator, Extrapolation before, Extrapolation after) noexcept</arglist>
+      <anchor>ac542d7567c972fff06e5de11f7f454a2</anchor>
+      <arglist>(const Containers::StridedArrayView1D&lt; const K &gt; &amp;keys, const Containers::StridedArrayView1D&lt; const V &gt; &amp;values, Interpolation interpolation, Interpolator interpolator, Extrapolation before, Extrapolation after) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TrackView</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>a78d72d3aef275106ba3b890057d6a56a</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Interpolation interpolation, Interpolator interpolator, Extrapolation extrapolation=Extrapolation::Constant) noexcept</arglist>
+      <anchor>ab8538066d5c95761dd6907bc609f57eb</anchor>
+      <arglist>(const Containers::StridedArrayView1D&lt; const K &gt; &amp;keys, const Containers::StridedArrayView1D&lt; const V &gt; &amp;values, Interpolation interpolation, Interpolator interpolator, Extrapolation extrapolation=Extrapolation::Constant) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -15530,15 +15585,15 @@
       <type></type>
       <name>TrackView</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>a8249adda5c289e8543b226ccde4dd2e6</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Interpolation interpolation, Extrapolation before, Extrapolation after) noexcept</arglist>
+      <anchor>a9f6fbf1c9cf16b940ec07a557cf1c1a8</anchor>
+      <arglist>(const Containers::StridedArrayView1D&lt; const K &gt; &amp;keys, const Containers::StridedArrayView1D&lt; const V &gt; &amp;values, Interpolation interpolation, Extrapolation before, Extrapolation after) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TrackView</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>a88159884f5001f3204d2a47243603333</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Interpolation interpolation, Extrapolation extrapolation=Extrapolation::Constant) noexcept</arglist>
+      <anchor>a56e70705896a82ea587dcd6423166395</anchor>
+      <arglist>(const Containers::StridedArrayView1D&lt; const K &gt; &amp;keys, const Containers::StridedArrayView1D&lt; const V &gt; &amp;values, Interpolation interpolation, Extrapolation extrapolation=Extrapolation::Constant) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -15562,10 +15617,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Containers::StridedArrayView&lt; const V &gt;</type>
+      <type>Containers::StridedArrayView1D&lt; const V &gt;</type>
       <name>values</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackView.html</anchorfile>
-      <anchor>a1a9dc7a03bfc1a971e233b0edff93278</anchor>
+      <anchor>a6236bf55eda3a0cb05a3832bb2b32827</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -15665,10 +15720,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Containers::StridedArrayView&lt; const K &gt;</type>
+      <type>Containers::StridedArrayView1D&lt; const K &gt;</type>
       <name>keys</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackViewStorage.html</anchorfile>
-      <anchor>a08c73eb93e3ece01faa19f18293a5325</anchor>
+      <anchor>a4bebdbeccc416c77fd91af564dd4f57f</anchor>
       <arglist>() const</arglist>
     </member>
   </compound>
@@ -16603,10 +16658,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const std::vector&lt; Extension &gt; &amp;</type>
+      <type>static Containers::ArrayView&lt; const Extension &gt;</type>
       <name>extensions</name>
       <anchorfile>classMagnum_1_1Audio_1_1Extension.html</anchorfile>
-      <anchor>abb60df01dace0c8ced3fb9eb73d8bd3a</anchor>
+      <anchor>a1fcd513de7e8dc63f0abe1f98a4f76ad</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -20333,15 +20388,8 @@
       <type>Buffer &amp;</type>
       <name>setData</name>
       <anchorfile>classMagnum_1_1GL_1_1Buffer.html</anchorfile>
-      <anchor>a1f461dc524e0f8f9b96bb1d85256e5ce</anchor>
-      <arglist>(const std::vector&lt; T &gt; &amp;data, BufferUsage usage=BufferUsage::StaticDraw)</arglist>
-    </member>
-    <member kind="function">
-      <type>Buffer &amp;</type>
-      <name>setData</name>
-      <anchorfile>classMagnum_1_1GL_1_1Buffer.html</anchorfile>
-      <anchor>a8c320736b8f3fcbd6ca2a0f60866df34</anchor>
-      <arglist>(const std::array&lt; T, size &gt; &amp;data, BufferUsage usage=BufferUsage::StaticDraw)</arglist>
+      <anchor>a5f096f14dc4a9434332da0669d481b6c</anchor>
+      <arglist>(std::initializer_list&lt; T &gt; data, BufferUsage usage=BufferUsage::StaticDraw)</arglist>
     </member>
     <member kind="function">
       <type>Buffer &amp;</type>
@@ -20354,15 +20402,8 @@
       <type>Buffer &amp;</type>
       <name>setSubData</name>
       <anchorfile>classMagnum_1_1GL_1_1Buffer.html</anchorfile>
-      <anchor>acb4cd45845ee16b6e2cfc8e0d308a9cc</anchor>
-      <arglist>(GLintptr offset, const std::vector&lt; T &gt; &amp;data)</arglist>
-    </member>
-    <member kind="function">
-      <type>Buffer &amp;</type>
-      <name>setSubData</name>
-      <anchorfile>classMagnum_1_1GL_1_1Buffer.html</anchorfile>
-      <anchor>ad8e3ef6565c27821f3dddc5e4361cfa0</anchor>
-      <arglist>(GLintptr offset, const std::array&lt; T, size &gt; &amp;data)</arglist>
+      <anchor>ac1fb0604bd3f3b8b059106acecbab96b</anchor>
+      <arglist>(GLintptr offset, std::initializer_list&lt; T &gt; data)</arglist>
     </member>
     <member kind="function">
       <type>Buffer &amp;</type>
@@ -22956,10 +22997,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function" static="yes">
-      <type>static const std::vector&lt; Extension &gt; &amp;</type>
+      <type>static Containers::ArrayView&lt; const Extension &gt;</type>
       <name>extensions</name>
       <anchorfile>classMagnum_1_1GL_1_1Extension.html</anchorfile>
-      <anchor>a8fc7f5096517a64055466fa36930c681</anchor>
+      <anchor>a322cf3c0b43bb448898e47082d6d18c6</anchor>
       <arglist>(Version version)</arglist>
     </member>
   </compound>
@@ -27171,6 +27212,20 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>Containers::StridedArrayView&lt; dimensions+1, char &gt;</type>
+      <name>pixels</name>
+      <anchorfile>classMagnum_1_1Image.html</anchorfile>
+      <anchor>a2fa5831183fcd118cb3e4040a258e895</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Containers::StridedArrayView&lt; dimensions+1, const char &gt;</type>
+      <name>pixels</name>
+      <anchorfile>classMagnum_1_1Image.html</anchorfile>
+      <anchor>a608203a161cef0e2e2e79dc8287f83d6</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
       <type>Containers::Array&lt; char &gt;</type>
       <name>release</name>
       <anchorfile>classMagnum_1_1Image.html</anchorfile>
@@ -27178,6 +27233,7 @@
       <arglist>()</arglist>
     </member>
     <docanchor file="classMagnum_1_1Image" title="Basic usage">Image-usage</docanchor>
+    <docanchor file="classMagnum_1_1Image" title="Obtaining a view on pixel data">Image-pixel-views</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::ImageView</name>
@@ -27369,6 +27425,13 @@
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
       <anchor>ac8042e1f428aa0f73880900000af219e</anchor>
       <arglist>(Containers::ArrayView&lt; const void &gt; data)</arglist>
+    </member>
+    <member kind="function">
+      <type>Containers::StridedArrayView&lt; dimensions+1, const char &gt;</type>
+      <name>pixels</name>
+      <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
+      <anchor>a4dc472e58479d9bcaa92f480c2bc9404</anchor>
+      <arglist>() const</arglist>
     </member>
     <docanchor file="classMagnum_1_1ImageView" title="Basic usage">ImageView-usage</docanchor>
     <docanchor file="classMagnum_1_1ImageView" title="Implementation-specific formats">ImageView-usage-implementation-specific</docanchor>
@@ -27586,8 +27649,15 @@
       <type>constexpr</type>
       <name>Bezier</name>
       <anchorfile>classMagnum_1_1Math_1_1Bezier.html</anchorfile>
-      <anchor>aee59f00bfe4b6a84c1ce22d2cdbb15ee</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a1d6c92a2deccc4095df18c9f4b905e45</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Bezier</name>
+      <anchorfile>classMagnum_1_1Math_1_1Bezier.html</anchorfile>
+      <anchor>a77d627eecfdd39d555ee6a5b883e2165</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -27727,8 +27797,15 @@
       <type>constexpr</type>
       <name>BoolVector</name>
       <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
-      <anchor>a8f89dac5226c1e2fe8caff1cdbb6177b</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a5aedb24f182c55947dd77b5a71412570</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>BoolVector</name>
+      <anchorfile>classMagnum_1_1Math_1_1BoolVector.html</anchorfile>
+      <anchor>af6fb45b087c7175e6f7d8c282af9e8ce</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -27919,6 +27996,7 @@
       <anchor>a05ecfedf1ed791f07d32b7d45d978432</anchor>
       <arglist>(Corrade::Utility::Debug &amp;debug, const BoolVector&lt; size &gt; &amp;value)</arglist>
     </member>
+    <docanchor file="classMagnum_1_1Math_1_1BoolVector" title="Bit indexing">Math-BoolVector-indexing</docanchor>
     <docanchor file="classMagnum_1_1Math_1_1BoolVector" title="Boolean operations">Math-BoolVector-boolean</docanchor>
   </compound>
   <compound kind="class">
@@ -27944,8 +28022,15 @@
       <type>constexpr</type>
       <name>Color3</name>
       <anchorfile>classMagnum_1_1Math_1_1Color3.html</anchorfile>
-      <anchor>a2a6a972bfe445ca702bcfd7beee1981b</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a741ddcd548a07d332ec9eab16432980a</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Color3</name>
+      <anchorfile>classMagnum_1_1Math_1_1Color3.html</anchorfile>
+      <anchor>a8b672f86b5f789f04f581d1394830a68</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -28466,8 +28551,15 @@
       <type>constexpr</type>
       <name>ColorHsv</name>
       <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
-      <anchor>a4a9b0acc8e3e89b9fa5e21de8f5bbbe9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a11433b330ca71936425387d46603b801</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>ColorHsv</name>
+      <anchorfile>structMagnum_1_1Math_1_1ColorHsv.html</anchorfile>
+      <anchor>aa07a6c2017e7a2857a80f933e9a8488c</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -28576,8 +28668,15 @@
       <type>constexpr</type>
       <name>Complex</name>
       <anchorfile>classMagnum_1_1Math_1_1Complex.html</anchorfile>
-      <anchor>a56eef832fc64c4d4bad2da36ec27b1a2</anchor>
-      <arglist>(IdentityInitT=IdentityInit) noexcept</arglist>
+      <anchor>a84ca1871d9a1ebd42206e55c6a98e7dd</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Complex</name>
+      <anchorfile>classMagnum_1_1Math_1_1Complex.html</anchorfile>
+      <anchor>a37087d820ab87abce18a3437963bdf6e</anchor>
+      <arglist>(IdentityInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
@@ -29243,8 +29342,15 @@
       <type>constexpr</type>
       <name>Deg</name>
       <anchorfile>classMagnum_1_1Math_1_1Deg.html</anchorfile>
-      <anchor>a1a0b6900e3288e7a555ffb9688c5111d</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>aca386bba50be4f4d5cbb7b1bc4488533</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Deg</name>
+      <anchorfile>classMagnum_1_1Math_1_1Deg.html</anchorfile>
+      <anchor>aafafe69fc606edafeeaf01eec9009f3e</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -29529,8 +29635,15 @@
       <type>constexpr</type>
       <name>DualComplex</name>
       <anchorfile>classMagnum_1_1Math_1_1DualComplex.html</anchorfile>
-      <anchor>a0821085a82fc0660a7c39a7a1527d13c</anchor>
-      <arglist>(IdentityInitT=IdentityInit) noexcept</arglist>
+      <anchor>a26423201043550b407e4c9e03afe1e4b</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>DualComplex</name>
+      <anchorfile>classMagnum_1_1Math_1_1DualComplex.html</anchorfile>
+      <anchor>a7510dd566c7d03d532c98d9ed91b8c45</anchor>
+      <arglist>(IdentityInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
@@ -29745,8 +29858,15 @@
       <type>constexpr</type>
       <name>DualQuaternion</name>
       <anchorfile>classMagnum_1_1Math_1_1DualQuaternion.html</anchorfile>
-      <anchor>aa9afda807c74bdc4f725968a0c10b9b5</anchor>
-      <arglist>(IdentityInitT=IdentityInit) noexcept</arglist>
+      <anchor>abfe14254541d958d9da27a9db66a3373</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>DualQuaternion</name>
+      <anchorfile>classMagnum_1_1Math_1_1DualQuaternion.html</anchorfile>
+      <anchor>acb84623784522e697a087dffd80245fe</anchor>
+      <arglist>(IdentityInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
@@ -29974,8 +30094,15 @@
       <type>constexpr</type>
       <name>Frustum</name>
       <anchorfile>classMagnum_1_1Math_1_1Frustum.html</anchorfile>
-      <anchor>a875f2f61a1f6f71d346df95a08603bef</anchor>
-      <arglist>(IdentityInitT=IdentityInit) noexcept</arglist>
+      <anchor>a6694ccce85ef7b3ac118e56e29f24ded</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Frustum</name>
+      <anchorfile>classMagnum_1_1Math_1_1Frustum.html</anchorfile>
+      <anchor>ab38690f67f445e2c3821e6dc05daefda</anchor>
+      <arglist>(IdentityInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -30160,8 +30287,15 @@
       <type>constexpr</type>
       <name>Half</name>
       <anchorfile>classMagnum_1_1Math_1_1Half.html</anchorfile>
-      <anchor>ae695a1ae9e5f3e2a7d940919d21a96e9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a4363d9e60ca34b9aa1329a30772f4657</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Half</name>
+      <anchorfile>classMagnum_1_1Math_1_1Half.html</anchorfile>
+      <anchor>a5f7472dee1022319aca9dcca798ac545</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
@@ -30274,8 +30408,15 @@
       <type>constexpr</type>
       <name>Matrix</name>
       <anchorfile>classMagnum_1_1Math_1_1Matrix.html</anchorfile>
-      <anchor>abe49a040366765693c2403dab506a3be</anchor>
-      <arglist>(IdentityInitT=IdentityInit, T value=T(1)) noexcept</arglist>
+      <anchor>a3f45b28de8d83b5fef4e9de286a5b2ae</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Matrix</name>
+      <anchorfile>classMagnum_1_1Math_1_1Matrix.html</anchorfile>
+      <anchor>a71bdb64c27c381d9fa9ac1e0788699fb</anchor>
+      <arglist>(IdentityInitT, T value=T(1)) noexcept</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
@@ -30385,8 +30526,15 @@
       <type>constexpr</type>
       <name>Matrix3</name>
       <anchorfile>classMagnum_1_1Math_1_1Matrix3.html</anchorfile>
-      <anchor>aa50d936be37151345b8abe31fbe7de45</anchor>
-      <arglist>(IdentityInitT=IdentityInit, T value=T{1}) noexcept</arglist>
+      <anchor>ae7e4f50af7d17071f51dae94942274bf</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Matrix3</name>
+      <anchorfile>classMagnum_1_1Math_1_1Matrix3.html</anchorfile>
+      <anchor>a0a33c9739acf1728ec121cc28a148d32</anchor>
+      <arglist>(IdentityInitT, T value=T{1}) noexcept</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
@@ -30636,8 +30784,15 @@
       <type>constexpr</type>
       <name>Matrix4</name>
       <anchorfile>classMagnum_1_1Math_1_1Matrix4.html</anchorfile>
-      <anchor>a0be8f8e761f7e807400a6c2bff1fa2c2</anchor>
-      <arglist>(IdentityInitT=IdentityInit, T value=T{1}) noexcept</arglist>
+      <anchor>ab52f256b38c1eb82dbc531bd2ab19f57</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Matrix4</name>
+      <anchorfile>classMagnum_1_1Math_1_1Matrix4.html</anchorfile>
+      <anchor>a8077a9f1b2fe83e42066ee74dcdf98dc</anchor>
+      <arglist>(IdentityInitT, T value=T{1}) noexcept</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
@@ -30956,8 +31111,15 @@
       <type>constexpr</type>
       <name>Quaternion</name>
       <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
-      <anchor>a6fb3a072aa64fa86b17c7d68050e9e33</anchor>
-      <arglist>(IdentityInitT=IdentityInit) noexcept</arglist>
+      <anchor>a7b74640bc04651a9f8c755bf0debed1c</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Quaternion</name>
+      <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
+      <anchor>a564619a4909c7eeb0250bc84589541e0</anchor>
+      <arglist>(IdentityInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
@@ -31100,6 +31262,13 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>Quaternion&lt; T &gt;</type>
+      <name>operator-</name>
+      <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
+      <anchor>afa68cb15d04ef08a87eb5dea405b3754</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
       <type>Quaternion&lt; T &gt; &amp;</type>
       <name>operator+=</name>
       <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
@@ -31112,13 +31281,6 @@
       <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
       <anchor>adc12b36273b20e6aeadbd88fa17803a7</anchor>
       <arglist>(const Quaternion&lt; T &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
-      <type>Quaternion&lt; T &gt;</type>
-      <name>operator-</name>
-      <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
-      <anchor>afa68cb15d04ef08a87eb5dea405b3754</anchor>
-      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>Quaternion&lt; T &gt; &amp;</type>
@@ -31312,8 +31474,15 @@
       <type>constexpr</type>
       <name>Rad</name>
       <anchorfile>classMagnum_1_1Math_1_1Rad.html</anchorfile>
-      <anchor>ac2379e7bd29ee10507bbcaf9e2fb7074</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a72936fdcd7fcf088fa89a1e73d3779a9</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Rad</name>
+      <anchorfile>classMagnum_1_1Math_1_1Rad.html</anchorfile>
+      <anchor>a36917ffee1793b2991ccc32d2ef9ebea</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -31388,8 +31557,15 @@
       <type>constexpr</type>
       <name>Range</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a9924f26a86ab957d3d7dc232c9cf0fed</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a650845bc19f8fe4c1574f97b003c873b</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Range</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a8e8e55738263e64c8fb90e99c15df06d</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -31612,8 +31788,15 @@
       <type>constexpr</type>
       <name>Range2D</name>
       <anchorfile>classMagnum_1_1Math_1_1Range2D.html</anchorfile>
-      <anchor>ac9b21c1c010f3048b61043bee2196930</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a8e5fa029f93091756be5ac1ab4659ce9</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Range2D</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range2D.html</anchorfile>
+      <anchor>ad6fbfb66b109a075ec04f9c1714901f0</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -31800,8 +31983,15 @@
       <type>constexpr</type>
       <name>Range3D</name>
       <anchorfile>classMagnum_1_1Math_1_1Range3D.html</anchorfile>
-      <anchor>aee2a2cf6e1d539031eaec09588246646</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a81ee8ecebe092b6bb4e0bf75221af907</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Range3D</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range3D.html</anchorfile>
+      <anchor>a7c5bded658f8c8e3136087eb2e96ebfe</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -32116,8 +32306,15 @@
       <type>constexpr</type>
       <name>RectangularMatrix</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>abeb0103eaf56ea2342b5ad73f9970dfa</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>ae4553743a264bc6e0a66a8776ae14da8</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>RectangularMatrix</name>
+      <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
+      <anchor>a6009f95ed2cba70259e3cc748d229069</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -32291,29 +32488,29 @@
       <type>RectangularMatrix&lt; cols, rows, T &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>a70040f31a16b2a57b2684b851efc55dd</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>aff9cc62672a8d760f43d9caa25f95854</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>RectangularMatrix&lt; cols, rows, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>a446c04858693301637f9cea4fff1be9f</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>ad493e29f21cce9cdf014c97eda1e8b37</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>RectangularMatrix&lt; cols, rows, T &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>ada246062b0ab6ed68fb90392f4e0fc08</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a15a877951dbfc7804a0b883b6aae60da</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>RectangularMatrix&lt; cols, rows, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>a4be5729fedee75037a78d6af65d5d88e</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>a01f0e65957dc0fe3c9c0bdebab7dbc42</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>RectangularMatrix&lt; size, rows, T &gt;</type>
@@ -32396,15 +32593,15 @@
       <type>RectangularMatrix&lt; cols, rows, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>a5fb024d60450494266e132fb59b60f16</anchor>
-      <arglist>(T number, const RectangularMatrix&lt; cols, rows, T &gt; &amp;matrix)</arglist>
+      <anchor>a857a83c191f7e2b43540231bd31f6ca9</anchor>
+      <arglist>(T scalar, const RectangularMatrix&lt; cols, rows, T &gt; &amp;matrix)</arglist>
     </member>
     <member kind="function">
       <type>RectangularMatrix&lt; cols, rows, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>ad0953eb681885b46309e31592f2d41fe</anchor>
-      <arglist>(T number, const RectangularMatrix&lt; cols, rows, T &gt; &amp;matrix)</arglist>
+      <anchor>ab8a19b385a4f0fd3f5ba1bbeb18e4ccf</anchor>
+      <arglist>(T scalar, const RectangularMatrix&lt; cols, rows, T &gt; &amp;matrix)</arglist>
     </member>
     <member kind="function">
       <type>RectangularMatrix&lt; cols, size, T &gt;</type>
@@ -32488,8 +32685,15 @@
       <type>constexpr</type>
       <name>Unit</name>
       <anchorfile>classMagnum_1_1Math_1_1Unit.html</anchorfile>
-      <anchor>a9714e781ce84621954ca716011a07bed</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a618525f8bcc09d925e2ad4df434088d7</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Unit</name>
+      <anchorfile>classMagnum_1_1Math_1_1Unit.html</anchorfile>
+      <anchor>a92df661b8b5708e9163143120ef8c146</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -32674,8 +32878,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -32849,29 +33060,29 @@
       <type>Vector&lt; size, T &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt; &amp;</type>
@@ -33031,15 +33242,15 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(T number, const Vector&lt; size, T &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(T scalar, const Vector&lt; size, T &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(T number, const Vector&lt; size, T &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(T scalar, const Vector&lt; size, T &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -33150,36 +33361,36 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -33233,8 +33444,15 @@
       <type>constexpr</type>
       <name>Vector2</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector2.html</anchorfile>
-      <anchor>a17e35d30f59d967caf01fd5367b0915d</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a8ee62c69a2005bbd1b0e3f5c89b52c4f</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector2</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector2.html</anchorfile>
+      <anchor>aeec1dd75eec65d056b6e418527181895</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -33358,8 +33576,15 @@
       <type>constexpr</type>
       <name>Vector3</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector3.html</anchorfile>
-      <anchor>adda67d067f2efe9554e0ee7fe251175d</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a694547ad274e9d0655f8b34899f8f2d8</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector3</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector3.html</anchorfile>
+      <anchor>a96ab187a56a28a976f424efa2cbe6a62</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -33560,8 +33785,15 @@
       <type>constexpr</type>
       <name>Vector4</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector4.html</anchorfile>
-      <anchor>a858a8009a77b9b4743cbbb72ef6e4c00</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>aa42da5920b0c7b9a22c231a7ce2023ec</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector4</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector4.html</anchorfile>
+      <anchor>ad203bf8fe5464c2139ec449e945b4ad2</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -36631,8 +36863,8 @@
       <type>void</type>
       <name>exit</name>
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
-      <anchor>ab52d2ddc9de6dd023bf024e79e406325</anchor>
-      <arglist>()</arglist>
+      <anchor>a7de5fd1778375d52c93d8ee50495684c</anchor>
+      <arglist>(int exitCode=0)</arglist>
     </member>
     <member kind="function">
       <type>GLFWwindow *</type>
@@ -36682,6 +36914,20 @@
       <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
       <anchor>a865aecbf1e84f6afcc62eb94be8e4cc1</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setMinWindowSize</name>
+      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
+      <anchor>a4f4056460a635eec25fda0502012a52e</anchor>
+      <arglist>(const Vector2i &amp;size={-1, -1})</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setMaxWindowSize</name>
+      <anchorfile>classMagnum_1_1Platform_1_1GlfwApplication.html</anchorfile>
+      <anchor>a16a2e1debd10d99a8324c6aa7abc7990</anchor>
+      <arglist>(const Vector2i &amp;size={-1, -1})</arglist>
     </member>
     <member kind="function">
       <type>Vector2i</type>
@@ -37716,8 +37962,8 @@
       <type>void</type>
       <name>exit</name>
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
-      <anchor>a69aba64c4514c0c61670aa303e5c32c1</anchor>
-      <arglist>()</arglist>
+      <anchor>a07f69abfc17925a015a4494d06baef0a</anchor>
+      <arglist>(int exitCode=0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -37781,6 +38027,20 @@
       <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
       <anchor>a878988745a29773a4b7d224ef53f425c</anchor>
       <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setMinWindowSize</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
+      <anchor>a73c0278414599c4a887fe7e9b6d4c845</anchor>
+      <arglist>(const Vector2i &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>setMaxWindowSize</name>
+      <anchorfile>classMagnum_1_1Platform_1_1Sdl2Application.html</anchorfile>
+      <anchor>ae3a0c90d55a7f2c974fc2c6e1b98ca7f</anchor>
+      <arglist>(const Vector2i &amp;size)</arglist>
     </member>
     <member kind="function">
       <type>Vector2i</type>
@@ -47208,6 +47468,20 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>Containers::StridedArrayView&lt; dimensions+1, char &gt;</type>
+      <name>pixels</name>
+      <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
+      <anchor>a1ccfd90a59f65fd031c1ccf29e305ade</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Containers::StridedArrayView&lt; dimensions+1, const char &gt;</type>
+      <name>pixels</name>
+      <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
+      <anchor>a9907ae9a6d970fba936da45192c8ef02</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
       <type>Containers::Array&lt; char &gt;</type>
       <name>release</name>
       <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
@@ -50226,8 +50500,15 @@
       <type>constexpr</type>
       <name>Matrix3</name>
       <anchorfile>classMagnum_1_1Math_1_1Matrix3.html</anchorfile>
-      <anchor>aa50d936be37151345b8abe31fbe7de45</anchor>
-      <arglist>(IdentityInitT=IdentityInit, Float value=Float {1}) noexcept</arglist>
+      <anchor>ae7e4f50af7d17071f51dae94942274bf</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Matrix3</name>
+      <anchorfile>classMagnum_1_1Math_1_1Matrix3.html</anchorfile>
+      <anchor>a0a33c9739acf1728ec121cc28a148d32</anchor>
+      <arglist>(IdentityInitT, Float value=Float {1}) noexcept</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
@@ -50476,8 +50757,15 @@
       <type>constexpr</type>
       <name>Matrix4</name>
       <anchorfile>classMagnum_1_1Math_1_1Matrix4.html</anchorfile>
-      <anchor>a0be8f8e761f7e807400a6c2bff1fa2c2</anchor>
-      <arglist>(IdentityInitT=IdentityInit, Float value=Float {1}) noexcept</arglist>
+      <anchor>ab52f256b38c1eb82dbc531bd2ab19f57</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Matrix4</name>
+      <anchorfile>classMagnum_1_1Math_1_1Matrix4.html</anchorfile>
+      <anchor>a8077a9f1b2fe83e42066ee74dcdf98dc</anchor>
+      <arglist>(IdentityInitT, Float value=Float {1}) noexcept</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
@@ -50767,8 +51055,15 @@
       <type>constexpr</type>
       <name>Quaternion</name>
       <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
-      <anchor>a6fb3a072aa64fa86b17c7d68050e9e33</anchor>
-      <arglist>(IdentityInitT=IdentityInit) noexcept</arglist>
+      <anchor>a7b74640bc04651a9f8c755bf0debed1c</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Quaternion</name>
+      <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
+      <anchor>a564619a4909c7eeb0250bc84589541e0</anchor>
+      <arglist>(IdentityInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type>constexpr</type>
@@ -50911,20 +51206,6 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Quaternion&lt; Float &gt; &amp;</type>
-      <name>operator+=</name>
-      <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
-      <anchor>af978cb442efcd8cdc60926804931fdee</anchor>
-      <arglist>(const Quaternion&lt; Float &gt; &amp;other)</arglist>
-    </member>
-    <member kind="function">
-      <type>Quaternion&lt; Float &gt;</type>
-      <name>operator+</name>
-      <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
-      <anchor>adc12b36273b20e6aeadbd88fa17803a7</anchor>
-      <arglist>(const Quaternion&lt; Float &gt; &amp;other) const</arglist>
-    </member>
-    <member kind="function">
       <type>Quaternion&lt; Float &gt;</type>
       <name>operator-</name>
       <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
@@ -50936,6 +51217,20 @@
       <name>operator-</name>
       <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
       <anchor>ab31dbb0b1957393b21db0025f08b0fff</anchor>
+      <arglist>(const Quaternion&lt; Float &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>Quaternion&lt; Float &gt; &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
+      <anchor>af978cb442efcd8cdc60926804931fdee</anchor>
+      <arglist>(const Quaternion&lt; Float &gt; &amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>Quaternion&lt; Float &gt;</type>
+      <name>operator+</name>
+      <anchorfile>classMagnum_1_1Math_1_1Quaternion.html</anchorfile>
+      <anchor>adc12b36273b20e6aeadbd88fa17803a7</anchor>
       <arglist>(const Quaternion&lt; Float &gt; &amp;other) const</arglist>
     </member>
     <member kind="function">
@@ -51122,8 +51417,15 @@
       <type>constexpr</type>
       <name>Rad</name>
       <anchorfile>classMagnum_1_1Math_1_1Rad.html</anchorfile>
-      <anchor>ac2379e7bd29ee10507bbcaf9e2fb7074</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a72936fdcd7fcf088fa89a1e73d3779a9</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Rad</name>
+      <anchorfile>classMagnum_1_1Math_1_1Rad.html</anchorfile>
+      <anchor>a36917ffee1793b2991ccc32d2ef9ebea</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -51190,8 +51492,15 @@
       <type>constexpr</type>
       <name>Range2D</name>
       <anchorfile>classMagnum_1_1Math_1_1Range2D.html</anchorfile>
-      <anchor>ac9b21c1c010f3048b61043bee2196930</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a8e5fa029f93091756be5ac1ab4659ce9</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Range2D</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range2D.html</anchorfile>
+      <anchor>ad6fbfb66b109a075ec04f9c1714901f0</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -51377,8 +51686,15 @@
       <type>constexpr</type>
       <name>Range2D</name>
       <anchorfile>classMagnum_1_1Math_1_1Range2D.html</anchorfile>
-      <anchor>ac9b21c1c010f3048b61043bee2196930</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a8e5fa029f93091756be5ac1ab4659ce9</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Range2D</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range2D.html</anchorfile>
+      <anchor>ad6fbfb66b109a075ec04f9c1714901f0</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -51570,8 +51886,15 @@
       <type>constexpr</type>
       <name>Range</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a9924f26a86ab957d3d7dc232c9cf0fed</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a650845bc19f8fe4c1574f97b003c873b</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Range</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a8e8e55738263e64c8fb90e99c15df06d</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -51798,8 +52121,15 @@
       <type>constexpr</type>
       <name>Range</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a9924f26a86ab957d3d7dc232c9cf0fed</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a650845bc19f8fe4c1574f97b003c873b</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Range</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a8e8e55738263e64c8fb90e99c15df06d</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -52026,8 +52356,15 @@
       <type>constexpr</type>
       <name>Range</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a9924f26a86ab957d3d7dc232c9cf0fed</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a650845bc19f8fe4c1574f97b003c873b</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Range</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a8e8e55738263e64c8fb90e99c15df06d</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -52254,8 +52591,15 @@
       <type>constexpr</type>
       <name>Range</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a9924f26a86ab957d3d7dc232c9cf0fed</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a650845bc19f8fe4c1574f97b003c873b</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Range</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a8e8e55738263e64c8fb90e99c15df06d</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -52482,8 +52826,15 @@
       <type>constexpr</type>
       <name>Range</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a9924f26a86ab957d3d7dc232c9cf0fed</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a650845bc19f8fe4c1574f97b003c873b</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Range</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a8e8e55738263e64c8fb90e99c15df06d</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -52710,8 +53061,15 @@
       <type>constexpr</type>
       <name>Range</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a9924f26a86ab957d3d7dc232c9cf0fed</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a650845bc19f8fe4c1574f97b003c873b</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Range</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a8e8e55738263e64c8fb90e99c15df06d</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -52938,8 +53296,15 @@
       <type>constexpr</type>
       <name>Range</name>
       <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
-      <anchor>a9924f26a86ab957d3d7dc232c9cf0fed</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a650845bc19f8fe4c1574f97b003c873b</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Range</name>
+      <anchorfile>classMagnum_1_1Math_1_1Range.html</anchorfile>
+      <anchor>a8e8e55738263e64c8fb90e99c15df06d</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -53184,8 +53549,15 @@
       <type>constexpr</type>
       <name>RectangularMatrix</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>abeb0103eaf56ea2342b5ad73f9970dfa</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>ae4553743a264bc6e0a66a8776ae14da8</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>RectangularMatrix</name>
+      <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
+      <anchor>a6009f95ed2cba70259e3cc748d229069</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -53359,15 +53731,15 @@
       <type>RectangularMatrix&lt; cols, rows, T &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>a70040f31a16b2a57b2684b851efc55dd</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>aff9cc62672a8d760f43d9caa25f95854</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>RectangularMatrix&lt; cols, rows, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>a446c04858693301637f9cea4fff1be9f</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>ad493e29f21cce9cdf014c97eda1e8b37</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>RectangularMatrix&lt; size, rows, T &gt;</type>
@@ -53387,15 +53759,15 @@
       <type>RectangularMatrix&lt; cols, rows, T &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>ada246062b0ab6ed68fb90392f4e0fc08</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a15a877951dbfc7804a0b883b6aae60da</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>RectangularMatrix&lt; cols, rows, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>a4be5729fedee75037a78d6af65d5d88e</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>a01f0e65957dc0fe3c9c0bdebab7dbc42</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>RectangularMatrix&lt; rows, cols, T &gt;</type>
@@ -53464,8 +53836,8 @@
       <type>RectangularMatrix&lt; cols, rows, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>a5fb024d60450494266e132fb59b60f16</anchor>
-      <arglist>(T number, const RectangularMatrix&lt; cols, rows, T &gt; &amp;matrix)</arglist>
+      <anchor>a857a83c191f7e2b43540231bd31f6ca9</anchor>
+      <arglist>(T scalar, const RectangularMatrix&lt; cols, rows, T &gt; &amp;matrix)</arglist>
     </member>
     <member kind="function">
       <type>RectangularMatrix&lt; cols, size, T &gt;</type>
@@ -53478,8 +53850,8 @@
       <type>RectangularMatrix&lt; cols, rows, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>ad0953eb681885b46309e31592f2d41fe</anchor>
-      <arglist>(T number, const RectangularMatrix&lt; cols, rows, T &gt; &amp;matrix)</arglist>
+      <anchor>ab8a19b385a4f0fd3f5ba1bbeb18e4ccf</anchor>
+      <arglist>(T scalar, const RectangularMatrix&lt; cols, rows, T &gt; &amp;matrix)</arglist>
     </member>
     <member kind="function">
       <type>Corrade::Utility::Debug &amp;</type>
@@ -53983,10 +54355,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Containers::StridedArrayView&lt; const Float &gt;</type>
+      <type>Containers::StridedArrayView1D&lt; const Float &gt;</type>
       <name>keys</name>
       <anchorfile>classMagnum_1_1Animation_1_1TrackViewStorage.html</anchorfile>
-      <anchor>a08c73eb93e3ece01faa19f18293a5325</anchor>
+      <anchor>a4bebdbeccc416c77fd91af564dd4f57f</anchor>
       <arglist>() const</arglist>
     </member>
   </compound>
@@ -54004,8 +54376,15 @@
       <type>constexpr</type>
       <name>Unit</name>
       <anchorfile>classMagnum_1_1Math_1_1Unit.html</anchorfile>
-      <anchor>a9714e781ce84621954ca716011a07bed</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a618525f8bcc09d925e2ad4df434088d7</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Unit</name>
+      <anchorfile>classMagnum_1_1Math_1_1Unit.html</anchorfile>
+      <anchor>a92df661b8b5708e9163143120ef8c146</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -54176,8 +54555,15 @@
       <type>constexpr</type>
       <name>Unit</name>
       <anchorfile>classMagnum_1_1Math_1_1Unit.html</anchorfile>
-      <anchor>a9714e781ce84621954ca716011a07bed</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a618525f8bcc09d925e2ad4df434088d7</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Unit</name>
+      <anchorfile>classMagnum_1_1Math_1_1Unit.html</anchorfile>
+      <anchor>a92df661b8b5708e9163143120ef8c146</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -54348,8 +54734,15 @@
       <type>constexpr</type>
       <name>Unit</name>
       <anchorfile>classMagnum_1_1Math_1_1Unit.html</anchorfile>
-      <anchor>a9714e781ce84621954ca716011a07bed</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a618525f8bcc09d925e2ad4df434088d7</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Unit</name>
+      <anchorfile>classMagnum_1_1Math_1_1Unit.html</anchorfile>
+      <anchor>a92df661b8b5708e9163143120ef8c146</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -54514,8 +54907,15 @@
       <type>constexpr</type>
       <name>Vector2</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector2.html</anchorfile>
-      <anchor>a17e35d30f59d967caf01fd5367b0915d</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a8ee62c69a2005bbd1b0e3f5c89b52c4f</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector2</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector2.html</anchorfile>
+      <anchor>aeec1dd75eec65d056b6e418527181895</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -54638,8 +55038,15 @@
       <type>constexpr</type>
       <name>Vector2</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector2.html</anchorfile>
-      <anchor>a17e35d30f59d967caf01fd5367b0915d</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a8ee62c69a2005bbd1b0e3f5c89b52c4f</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector2</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector2.html</anchorfile>
+      <anchor>aeec1dd75eec65d056b6e418527181895</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -54762,8 +55169,15 @@
       <type>constexpr</type>
       <name>Vector3</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector3.html</anchorfile>
-      <anchor>adda67d067f2efe9554e0ee7fe251175d</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a694547ad274e9d0655f8b34899f8f2d8</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector3</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector3.html</anchorfile>
+      <anchor>a96ab187a56a28a976f424efa2cbe6a62</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -54963,8 +55377,15 @@
       <type>constexpr</type>
       <name>Vector3</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector3.html</anchorfile>
-      <anchor>adda67d067f2efe9554e0ee7fe251175d</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a694547ad274e9d0655f8b34899f8f2d8</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector3</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector3.html</anchorfile>
+      <anchor>a96ab187a56a28a976f424efa2cbe6a62</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -55164,8 +55585,15 @@
       <type>constexpr</type>
       <name>Vector4</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector4.html</anchorfile>
-      <anchor>a858a8009a77b9b4743cbbb72ef6e4c00</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>aa42da5920b0c7b9a22c231a7ce2023ec</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector4</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector4.html</anchorfile>
+      <anchor>ad203bf8fe5464c2139ec449e945b4ad2</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -55400,8 +55828,15 @@
       <type>constexpr</type>
       <name>Vector4</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector4.html</anchorfile>
-      <anchor>a858a8009a77b9b4743cbbb72ef6e4c00</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>aa42da5920b0c7b9a22c231a7ce2023ec</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector4</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector4.html</anchorfile>
+      <anchor>ad203bf8fe5464c2139ec449e945b4ad2</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -55648,8 +56083,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -55823,8 +56265,8 @@
       <type>Vector&lt; size, Float &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(Float number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(Float scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Float &gt; &amp;</type>
@@ -55837,8 +56279,8 @@
       <type>Vector&lt; size, Float &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(Float number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(Float scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Float &gt;</type>
@@ -55851,8 +56293,8 @@
       <type>Vector&lt; size, Float &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(Float number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(Float scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Float &gt; &amp;</type>
@@ -55865,8 +56307,8 @@
       <type>Vector&lt; size, Float &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(Float number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(Float scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Float &gt;</type>
@@ -55991,8 +56433,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -56005,22 +56447,22 @@
       <type>Vector&lt; size, Float &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(Float number, const Vector&lt; size, Float &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(Float scalar, const Vector&lt; size, Float &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -56040,8 +56482,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -56054,15 +56496,15 @@
       <type>Vector&lt; size, Float &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(Float number, const Vector&lt; size, Float &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(Float scalar, const Vector&lt; size, Float &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -56218,8 +56660,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -56393,8 +56842,8 @@
       <type>Vector&lt; size, Int &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(Int number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(Int scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Int &gt; &amp;</type>
@@ -56407,8 +56856,8 @@
       <type>Vector&lt; size, Int &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(Int number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(Int scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Int &gt;</type>
@@ -56421,8 +56870,8 @@
       <type>Vector&lt; size, Int &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(Int number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(Int scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Int &gt; &amp;</type>
@@ -56435,8 +56884,8 @@
       <type>Vector&lt; size, Int &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(Int number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(Int scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Int &gt;</type>
@@ -56561,8 +57010,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -56575,22 +57024,22 @@
       <type>Vector&lt; size, Int &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(Int number, const Vector&lt; size, Int &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(Int scalar, const Vector&lt; size, Int &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -56610,8 +57059,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -56624,15 +57073,15 @@
       <type>Vector&lt; size, Int &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(Int number, const Vector&lt; size, Int &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(Int scalar, const Vector&lt; size, Int &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -56788,8 +57237,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -56963,8 +57419,8 @@
       <type>Vector&lt; size, T &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt; &amp;</type>
@@ -56977,8 +57433,8 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
@@ -56991,8 +57447,8 @@
       <type>Vector&lt; size, T &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt; &amp;</type>
@@ -57005,8 +57461,8 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
@@ -57131,8 +57587,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -57145,22 +57601,22 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(T number, const Vector&lt; size, T &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(T scalar, const Vector&lt; size, T &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -57180,8 +57636,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -57194,15 +57650,15 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(T number, const Vector&lt; size, T &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(T scalar, const Vector&lt; size, T &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -57358,8 +57814,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -57533,8 +57996,8 @@
       <type>Vector&lt; size, Float &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(Float number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(Float scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Float &gt; &amp;</type>
@@ -57547,8 +58010,8 @@
       <type>Vector&lt; size, Float &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(Float number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(Float scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Float &gt;</type>
@@ -57561,8 +58024,8 @@
       <type>Vector&lt; size, Float &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(Float number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(Float scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Float &gt; &amp;</type>
@@ -57575,8 +58038,8 @@
       <type>Vector&lt; size, Float &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(Float number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(Float scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Float &gt;</type>
@@ -57701,8 +58164,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -57715,22 +58178,22 @@
       <type>Vector&lt; size, Float &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(Float number, const Vector&lt; size, Float &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(Float scalar, const Vector&lt; size, Float &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -57750,8 +58213,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -57764,15 +58227,15 @@
       <type>Vector&lt; size, Float &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(Float number, const Vector&lt; size, Float &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(Float scalar, const Vector&lt; size, Float &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -57928,8 +58391,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -58103,8 +58573,8 @@
       <type>Vector&lt; size, Int &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(Int number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(Int scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Int &gt; &amp;</type>
@@ -58117,8 +58587,8 @@
       <type>Vector&lt; size, Int &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(Int number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(Int scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Int &gt;</type>
@@ -58131,8 +58601,8 @@
       <type>Vector&lt; size, Int &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(Int number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(Int scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Int &gt; &amp;</type>
@@ -58145,8 +58615,8 @@
       <type>Vector&lt; size, Int &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(Int number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(Int scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Int &gt;</type>
@@ -58271,8 +58741,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -58285,22 +58755,22 @@
       <type>Vector&lt; size, Int &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(Int number, const Vector&lt; size, Int &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(Int scalar, const Vector&lt; size, Int &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -58320,8 +58790,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -58334,15 +58804,15 @@
       <type>Vector&lt; size, Int &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(Int number, const Vector&lt; size, Int &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(Int scalar, const Vector&lt; size, Int &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -58498,8 +58968,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -58673,8 +59150,8 @@
       <type>Vector&lt; size, T &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt; &amp;</type>
@@ -58687,8 +59164,8 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
@@ -58701,8 +59178,8 @@
       <type>Vector&lt; size, T &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt; &amp;</type>
@@ -58715,8 +59192,8 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
@@ -58841,8 +59318,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -58855,22 +59332,22 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(T number, const Vector&lt; size, T &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(T scalar, const Vector&lt; size, T &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -58890,8 +59367,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -58904,15 +59381,15 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(T number, const Vector&lt; size, T &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(T scalar, const Vector&lt; size, T &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -59068,8 +59545,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -59243,8 +59727,8 @@
       <type>Vector&lt; size, Float &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(Float number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(Float scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Float &gt; &amp;</type>
@@ -59257,8 +59741,8 @@
       <type>Vector&lt; size, Float &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(Float number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(Float scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Float &gt;</type>
@@ -59271,8 +59755,8 @@
       <type>Vector&lt; size, Float &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(Float number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(Float scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Float &gt; &amp;</type>
@@ -59285,8 +59769,8 @@
       <type>Vector&lt; size, Float &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(Float number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(Float scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Float &gt;</type>
@@ -59411,8 +59895,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -59425,22 +59909,22 @@
       <type>Vector&lt; size, Float &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(Float number, const Vector&lt; size, Float &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(Float scalar, const Vector&lt; size, Float &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -59460,8 +59944,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -59474,15 +59958,15 @@
       <type>Vector&lt; size, Float &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(Float number, const Vector&lt; size, Float &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(Float scalar, const Vector&lt; size, Float &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -59638,8 +60122,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -59813,8 +60304,8 @@
       <type>Vector&lt; size, Int &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(Int number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(Int scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Int &gt; &amp;</type>
@@ -59827,8 +60318,8 @@
       <type>Vector&lt; size, Int &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(Int number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(Int scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Int &gt;</type>
@@ -59841,8 +60332,8 @@
       <type>Vector&lt; size, Int &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(Int number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(Int scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Int &gt; &amp;</type>
@@ -59855,8 +60346,8 @@
       <type>Vector&lt; size, Int &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(Int number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(Int scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Int &gt;</type>
@@ -59981,8 +60472,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -59995,22 +60486,22 @@
       <type>Vector&lt; size, Int &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(Int number, const Vector&lt; size, Int &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(Int scalar, const Vector&lt; size, Int &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -60030,8 +60521,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -60044,15 +60535,15 @@
       <type>Vector&lt; size, Int &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(Int number, const Vector&lt; size, Int &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(Int scalar, const Vector&lt; size, Int &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -60208,8 +60699,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -60383,8 +60881,8 @@
       <type>Vector&lt; size, T &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt; &amp;</type>
@@ -60397,8 +60895,8 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
@@ -60411,8 +60909,8 @@
       <type>Vector&lt; size, T &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt; &amp;</type>
@@ -60425,8 +60923,8 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
@@ -60551,8 +61049,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -60565,22 +61063,22 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(T number, const Vector&lt; size, T &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(T scalar, const Vector&lt; size, T &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -60600,8 +61098,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -60614,15 +61112,15 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(T number, const Vector&lt; size, T &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(T scalar, const Vector&lt; size, T &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -60778,8 +61276,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -60953,8 +61458,8 @@
       <type>Vector&lt; size, std::int32_t &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(std::int32_t number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(std::int32_t scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, std::int32_t &gt; &amp;</type>
@@ -60967,8 +61472,8 @@
       <type>Vector&lt; size, std::int32_t &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(std::int32_t number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(std::int32_t scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, std::int32_t &gt;</type>
@@ -60981,8 +61486,8 @@
       <type>Vector&lt; size, std::int32_t &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(std::int32_t number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(std::int32_t scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, std::int32_t &gt; &amp;</type>
@@ -60995,8 +61500,8 @@
       <type>Vector&lt; size, std::int32_t &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(std::int32_t number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(std::int32_t scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, std::int32_t &gt;</type>
@@ -61121,8 +61626,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -61135,22 +61640,22 @@
       <type>Vector&lt; size, std::int32_t &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(std::int32_t number, const Vector&lt; size, std::int32_t &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(std::int32_t scalar, const Vector&lt; size, std::int32_t &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -61170,8 +61675,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -61184,15 +61689,15 @@
       <type>Vector&lt; size, std::int32_t &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(std::int32_t number, const Vector&lt; size, std::int32_t &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(std::int32_t scalar, const Vector&lt; size, std::int32_t &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -61348,8 +61853,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -61523,8 +62035,8 @@
       <type>Vector&lt; size, T &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt; &amp;</type>
@@ -61537,8 +62049,8 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
@@ -61551,8 +62063,8 @@
       <type>Vector&lt; size, T &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt; &amp;</type>
@@ -61565,8 +62077,8 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
@@ -61691,8 +62203,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -61705,22 +62217,22 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(T number, const Vector&lt; size, T &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(T scalar, const Vector&lt; size, T &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -61740,8 +62252,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -61754,15 +62266,15 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(T number, const Vector&lt; size, T &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(T scalar, const Vector&lt; size, T &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -61918,8 +62430,15 @@
       <type>constexpr</type>
       <name>Vector</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>aef609f61883287f2da4754a7d194d1c9</anchor>
-      <arglist>(ZeroInitT=ZeroInit) noexcept</arglist>
+      <anchor>a3c134c9f5cdb4e5c6886d8c73f2b57d1</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>constexpr</type>
+      <name>Vector</name>
+      <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
+      <anchor>ac3524040cfdd9709bdb56242e5efd882</anchor>
+      <arglist>(ZeroInitT) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -62093,8 +62612,8 @@
       <type>Vector&lt; size, T &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a9083674911810851891810be218d1115</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a2b7f88740a354041a7874b67b45a7068</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt; &amp;</type>
@@ -62107,8 +62626,8 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a569facfb5cc297cc67283731fcd201e6</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>af48972b84492b789e790bbc4bbc91008</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
@@ -62121,8 +62640,8 @@
       <type>Vector&lt; size, T &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>acdea6a05fcd2c83f44107294a436c82a</anchor>
-      <arglist>(T number)</arglist>
+      <anchor>a7ece942a9d2413efa3a80d203a0fb0f2</anchor>
+      <arglist>(T scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt; &amp;</type>
@@ -62135,8 +62654,8 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>addc175dd7ad54c8345374fbb6ea1407a</anchor>
-      <arglist>(T number) const</arglist>
+      <anchor>a997212fb25ecc5086fdc40bee98f5a54</anchor>
+      <arglist>(T scalar) const</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, T &gt;</type>
@@ -62261,8 +62780,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator *=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a375c68d456f5f40c1c0d687fef21460d</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>ae51db32d9dd90d4afdedcf008e15a5fb</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -62275,22 +62794,22 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a4b744f225a56d0f65481b64d8f6a0a19</anchor>
-      <arglist>(T number, const Vector&lt; size, T &gt; &amp;vector)</arglist>
+      <anchor>a1ea63308ee1f0174b602004293189a5b</anchor>
+      <arglist>(T scalar, const Vector&lt; size, T &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ad7515a268aaa3316d10c59a338c39847</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a5e4baf5c1f33fe5db74b29835e356654</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator *</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a0d118701217ac1a7c628d87cd8e9c2f1</anchor>
-      <arglist>(FloatingPoint number, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
+      <anchor>aa947967a1311fcc5edbb52332b418e46</anchor>
+      <arglist>(FloatingPoint scalar, const Vector&lt; size, Integral &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -62310,8 +62829,8 @@
       <type>Vector&lt; size, Integral &gt; &amp;</type>
       <name>operator/=</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a8ff1ad5c99830e1f120e027119013624</anchor>
-      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>a320e28a1b95546d77d2603fa5da088cf</anchor>
+      <arglist>(Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt; &amp;</type>
@@ -62324,15 +62843,15 @@
       <type>Vector&lt; size, T &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>ac602863261ec1a6ff02fe1ec5bffad37</anchor>
-      <arglist>(T number, const Vector&lt; size, T &gt; &amp;vector)</arglist>
+      <anchor>a740e684ba6af1944fe621ab15600e738</anchor>
+      <arglist>(T scalar, const Vector&lt; size, T &gt; &amp;vector)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
       <name>operator/</name>
       <anchorfile>classMagnum_1_1Math_1_1Vector.html</anchorfile>
-      <anchor>a790689ac947bedb3f294ebfc9aeb686a</anchor>
-      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint number)</arglist>
+      <anchor>af26b82bbc46d722b34979df93bd7c344</anchor>
+      <arglist>(const Vector&lt; size, Integral &gt; &amp;vector, FloatingPoint scalar)</arglist>
     </member>
     <member kind="function">
       <type>Vector&lt; size, Integral &gt;</type>
@@ -62785,6 +63304,27 @@
       <name>Half</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
       <anchor>ae9ad232db78b650420d4a56d3d67f0e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::BoolVector&lt; 2 &gt;</type>
+      <name>BoolVector2</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>afc5f5955d48bb8a4edbf20309fce63dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::BoolVector&lt; 3 &gt;</type>
+      <name>BoolVector3</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a339fdabda899980a33990aa2e3c8a98a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::BoolVector&lt; 4 &gt;</type>
+      <name>BoolVector4</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a931bd102da709344ae82507d5a4f1f84</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -63768,6 +64308,27 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>Math::BoolVector&lt; 2 &gt;</type>
+      <name>BoolVector2</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>afc5f5955d48bb8a4edbf20309fce63dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::BoolVector&lt; 3 &gt;</type>
+      <name>BoolVector3</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a339fdabda899980a33990aa2e3c8a98a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Math::BoolVector&lt; 4 &gt;</type>
+      <name>BoolVector4</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a931bd102da709344ae82507d5a4f1f84</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>Math::Vector2&lt; Float &gt;</type>
       <name>Vector2</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
@@ -64420,15 +64981,15 @@
       <type>R</type>
       <name>interpolate</name>
       <anchorfile>namespaceMagnum_1_1Animation.html</anchorfile>
-      <anchor>ae400ccb9ce42aa518ea5ff137613b6fe</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, Extrapolation before, Extrapolation after, R(*interpolator)(const V &amp;, const V &amp;, Float), K frame, std::size_t &amp;hint)</arglist>
+      <anchor>af41a638940b3dad82022e00207a86b9d</anchor>
+      <arglist>(const Containers::StridedArrayView1D&lt; const K &gt; &amp;keys, const Containers::StridedArrayView1D&lt; const V &gt; &amp;values, Extrapolation before, Extrapolation after, R(*interpolator)(const V &amp;, const V &amp;, Float), K frame, std::size_t &amp;hint)</arglist>
     </member>
     <member kind="function">
       <type>R</type>
       <name>interpolateStrict</name>
       <anchorfile>namespaceMagnum_1_1Animation.html</anchorfile>
-      <anchor>ac8f918c75790a864b1a43fa25404cf04</anchor>
-      <arglist>(const Containers::StridedArrayView&lt; const K &gt; &amp;keys, const Containers::StridedArrayView&lt; const V &gt; &amp;values, R(*interpolator)(const V &amp;, const V &amp;, Float), K frame, std::size_t &amp;hint)</arglist>
+      <anchor>a428c4d01d812c2c8159044c6e8da987e</anchor>
+      <arglist>(const Containers::StridedArrayView1D&lt; const K &gt; &amp;keys, const Containers::StridedArrayView1D&lt; const V &gt; &amp;values, R(*interpolator)(const V &amp;, const V &amp;, Float), K frame, std::size_t &amp;hint)</arglist>
     </member>
     <member kind="function">
       <type>constexpr auto</type>
@@ -71826,6 +72387,7 @@
     <title>Extras</title>
     <filename>changelog-extras</filename>
     <docanchor file="changelog-extras" title="Changes since 2019.01">changelog-extras-latest</docanchor>
+    <docanchor file="changelog-extras" title="New features">changelog-extras-latest-new</docanchor>
     <docanchor file="changelog-extras" title="Build system">changelog-extras-latest-buildsystem</docanchor>
     <docanchor file="changelog-extras" title="2019.01">changelog-extras-2019-01</docanchor>
     <docanchor file="changelog-extras" title="Dependency changes">changelog-extras-2019-01-dependencies</docanchor>
