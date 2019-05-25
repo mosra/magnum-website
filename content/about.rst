@@ -110,7 +110,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Fabien Freling <ffreling>`
         -   :gh-name:`Fred Helmesjö <helmesjo>`
         -   :gh-name:`Guillaume Giraud <Guillaume227>`
-        -   :gh-name:`Guillaume Jacquemin <williamjcm>`
+        -   :gh-name-big:`Guillaume Jacquemin <williamjcm>`
         -   :gh-name:`Hilario Pérez Corona <hpcorona>`
         -   :gh-name:`Ivan P. <uzername>`
         -   :gh-name:`Jan Dupal <JanDupal>`
