@@ -101,7 +101,7 @@
 
     Text utility printing info about Magnum OpenGL capabilities. Versions for
     `WebGL 1 <{filename}/showcase/gl-info.rst>`__,
-    `asm.js WebGL 1 <{filename}/showcase/gl-info.rst>`__ and
+    `asm.js WebGL 1 <{filename}/showcase/gl-info-asmjs.rst>`__ and
     `WebGL 2 <{filename}/showcase/gl-info-webgl2.rst>`__.
 
 .. [/gl-info]
