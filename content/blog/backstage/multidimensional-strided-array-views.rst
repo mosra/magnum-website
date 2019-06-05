@@ -9,6 +9,9 @@ Multi-dimensional strided array views in Magnum
     possibilities for more efficient workflows with pixel, vertex and animation
     data.
 
+.. role:: cpp(code)
+    :language: c++
+
 While :dox:`Containers::ArrayView` and friends
 `described previously <{filename}array-view-implementations.rst>`_ are at its core just
 a pointer and size stored together, the :dox:`Containers::StridedArrayView` is
