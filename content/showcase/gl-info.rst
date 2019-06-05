@@ -22,8 +22,8 @@ An `asm.js WebGL 1 version <{filename}/showcase/gl-info-asmjs.rst>`_ and
 
     <div id="container">
       <div id="sizer"><div id="expander"><div id="listener">
-        <canvas id="module" class="hidden"></canvas>
-        <pre id="log"></pre>
+        <canvas id="canvas" class="hidden"></canvas>
+        <pre id="log" class="m-console-wrap"></pre>
         <div id="status">Initialization...</div>
         <div id="status-description"></div>
         <script async="async" src="{static}/showcase/gl-info/magnum-gl-info.js"></script>

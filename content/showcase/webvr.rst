@@ -26,7 +26,7 @@ Android as well.
 
     <div id="container" class="aspect-2-1">
       <div id="sizer"><div id="expander"><div id="listener">
-        <canvas id="module" tabindex="0"></canvas>
+        <canvas id="canvas" tabindex="0"></canvas>
         <div id="status">Initialization...</div>
         <div id="status-description"></div>
         <script async="async" src="{static}/showcase/webvr/magnum-webvr.js"></script>

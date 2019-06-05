@@ -31,6 +31,7 @@
 .m-container-inflatable > .m-row > [class*='m-col-'] > #container:not(.fullsize) {
   margin: 1rem -1rem 1rem -1rem;
 }
+/* TODO: use the same console wrap as in m.css */
 #sizer {
   margin-left: auto;
   margin-right: auto;
@@ -101,17 +102,17 @@
 #container.aspect-2-1 #expander { padding-bottom: 50%; }
 #container.aspect-1-2 #expander { padding-bottom: 200%; }
 
-#module, pre#log {
+#canvas, pre#log {
   max-width: 100%;
   width: 100%;
   height: 100%;
   z-index: 10;
   border-radius: 0.2rem; /*var(--border-radius)*/
 }
-#module {
+#canvas {
   margin-bottom: -0.25rem; /* otherwise there's scrollbar w/ fullsize (why?) */
 }
-#container.fullsize #module:focus {
+#container.fullsize #canvas:focus {
   outline-width: 0;
 }
 #status, #status-description {
@@ -130,7 +131,7 @@
   padding-left: 2rem;
   padding-right: 2rem;
 }
-#module.hidden {
+#canvas.hidden {
   display: none;
 }
 pre#log {

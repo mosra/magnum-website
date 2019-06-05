@@ -18,7 +18,7 @@ A viewer and player for `glTF <https://www.khronos.org/gltf/>`_ scenes. Drop a
 
     <div id="container">
       <div id="sizer"><div id="expander"><div id="listener">
-        <canvas id="module" tabindex="0"></canvas>
+        <canvas id="canvas" tabindex="0"></canvas>
         <div id="status">Initialization...</div>
         <div id="status-description"></div>
         <script async="async" src="{static}/showcase/player/magnum-player.js"></script>
@@ -97,6 +97,8 @@ A viewer and player for `glTF <https://www.khronos.org/gltf/>`_ scenes. Drop a
     -   :label-default:`Num 7` / :label-warning:`Ctrl` :label-default:`Num 7`
         switches to a top / bottom view
     -   :label-default:`Num 0` resets the camera back to the original view
+    -   :label-default:`+` / :label-default:`Num +` or :label-default:`-` /
+        :label-default:`Num -` increases or decreases lighting brightness
 
 .. block-warning:: Doesn't work?
 
