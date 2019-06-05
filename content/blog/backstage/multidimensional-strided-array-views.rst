@@ -15,23 +15,7 @@ a pointer and size stored together, the :dox:`Containers::StridedArrayView` is
 a bit more complex beast. Based on a very insightful
 `article by Per Vognsen <https://gist.github.com/pervognsen/0e1be3b683d62b16fd81381c909bf67e>`_
 it recently went through a major redesign, making it multi-dimensional and
-allowing for zero and negative strides. Let's see what that means.)
-
-
-.. code:: pycon
-
-    >>> from corrade import containers
-    >>> a = b'heeeeeee'
-    >>> b = containers.ArrayView(a)
-    >>> a[2] = 'h'
-    Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
-    TypeError: 'bytes' object does not support item assignment
-    >>> a
-    b'heeeeeee'
-    >>> b[2] = 'h'
-    >>> a
-    b'heheeeee'
+allowing for zero and negative strides. Let's see what that means.
 
 `I have a bag of data and I am scared of it`_
 =============================================
