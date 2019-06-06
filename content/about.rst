@@ -99,6 +99,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Borislav Stanimirov <iboB>`
         -   :gh-name:`Chris Chambers <chris-chambers>`
         -   :gh-name:`Daniel Bloor <Bluer01>`
+        -   :gh-name:`Daniel Guzman <roig>`
         -   :gh-name:`David Lin <davll>`
         -   :gh-name:`denesik`
         -   :gh-name:`Denis Igorevich Lobanov <denislobanov>`
@@ -125,6 +126,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Max Schwarz <xqms>`
         -   :gh-name:`Michael "Croydon" Keck <Croydon>`
         -   :gh-name:`Michael Dietschi <mdietsch>`
+        -   :gh-name:`Michael Tao <mtao>`
         -   :name:`Michal Mikula`
         -   :gh-name:`Miguel Martin <miguelmartin75>`
         -   :gh-name:`Natesh Narain <nnarain>`
@@ -148,6 +150,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Tobias Stein <NussknackerXXL>`
         -   :gh-name:`Tomáš Skřivan <lecopivo>`
         -   :gh-name:`Travis Watkins <amaranth>`
+        -   :gh-name:`Winfried Baumann <codewing>`
         -   :gh-name:`xantares`
 
 .. class:: m-text m-dim m-small m-text-center
