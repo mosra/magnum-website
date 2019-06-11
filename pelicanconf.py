@@ -76,6 +76,7 @@ M_LINKS_NAVBAR1 = [('Features', 'features/', 'features', [
                         ('Getting Started', '//doc.magnum.graphics/magnum/getting-started.html', ''),
                         ('Corrade', '//doc.magnum.graphics/corrade/', ''),
                         ('Magnum', '//doc.magnum.graphics/magnum/', ''),
+                        ('Python API', '//doc.magnum.graphics/python/', ''),
                         ('Doc Downloads', 'doc-downloads/', 'doc-downloads')])]
 
 M_LINKS_NAVBAR2 = [('Premium Services', 'premium/', 'premium', []),
@@ -97,6 +98,7 @@ M_LINKS_FOOTER2 = [('Docs', '//doc.magnum.graphics/'),
                    ('Getting Started', '//doc.magnum.graphics/magnum/getting-started.html'),
                    ('Corrade', '//doc.magnum.graphics/corrade/'),
                    ('Magnum', '//doc.magnum.graphics/magnum/'),
+                   ('Python API', '//doc.magnum.graphics/python/'),
                    ('Doc Downloads', 'doc-downloads/')]
 
 M_LINKS_FOOTER3 = [('Contact Us', 'contact/'),
