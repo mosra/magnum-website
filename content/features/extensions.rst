@@ -55,12 +55,17 @@ Plugins for converting image data between various formats.
     See the :dox:`Trade::AbstractImageConverter` class and ``*ImageConverter``
     classes in the :dox:`Trade` namespace for details.
 
+`Mesh converters`_
+==================
+
+*Coming soon.* Subscribe to :gh:`mosra/magnum#240` for updates.
+
 `Audio importers`_
 ==================
 
 Plugins importing audio data.
 
--   OGG Vorbis, AAC, WAV and FLAC support
+-   OGG Vorbis, MP3, AAC, WAV and FLAC support
 -   "Any importer" plugin delegating to other audio importer plugins based on
     detected file format
 
@@ -112,6 +117,6 @@ explicit conversion.
 
 .. note-dim::
 
-    There's a builtin integration with Bullet, GLM, Vulkan and other
+    There's a builtin integration with Bullet, Eigen, GLM, Vulkan and other
     third-party APIs. See :dox:`the full list <types-thirdparty-integration>`
     for a detailed overview.

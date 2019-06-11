@@ -13,11 +13,11 @@ Exporting:
     need ``python2-lxml`` and ``python2-scour`` packages.
 #.  Hand-edit each exported SVG and:
 
-    -   Convert absolute URLs so ``{filename}`` is first (three times each)
     -   Remove all top-level ``<g display="none">`` elements (use editor code
         collapsing feature), there should be only four top-level ``<g>``
         elements left. Scour unfortunately doesn't implement this yet:
         https://github.com/scour-project/scour/issues/73
+    -   Convert absolute URLs so ``{filename}`` is first (three times each)
     -   Replace ``width``/``height`` on the top-level ``<svg>`` with::
 
             style="max-width: 875px; max-height: 415px;"

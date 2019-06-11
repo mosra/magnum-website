@@ -213,7 +213,6 @@ scene objects.
     flexibility and speed/accuracy tradeoff
 -   Camera object implementation with convenient handling of projection and
     camera matrices
--   Collection of collision shapes for basic physics or object picking
 
 .. note-dim::
 
@@ -268,6 +267,8 @@ improve interoperability with third-party libraries.
     math type conversion and renderer for DART worlds
 -   `Oculus SDK <https://www.oculus.com/>`_ math type conversion and wrapper
     classes for full Oculus VR support in Magnum
+-   `Eigen <http://eigen.tuxfamily.org/>`_ math library integration with
+    conversion for all types
 -   `GLM <https://glm.g-truc.net/>`_ math library integration with conversion
     for all types and debug output
 -   `Dear ImGui <https://github.com/ocornut/imgui>`_ integration with
@@ -276,5 +277,5 @@ improve interoperability with third-party libraries.
 .. note-dim::
 
     See documentation of the :dox:`BulletIntegration`, :dox:`DartIntegration`,
-    :dox:`GlmIntegration`, :dox:`ImGuiIntegration` and :dox:`OvrIntegration`
-    namespaces for details.
+    :dox:`EigenIntegration`, :dox:`GlmIntegration`, :dox:`ImGuiIntegration` and
+    :dox:`OvrIntegration` namespaces for details.
