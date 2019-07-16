@@ -65,18 +65,18 @@ A viewer and player for `glTF <https://www.khronos.org/gltf/>`_ scenes. Drop a
         }
     }
 
-    /* Done here instead of using Sdl2Application::setContainerCssClass() so
-       we can do extra things like hiding scrollbars */
-    function setFullsize(fullsize) {
+    /* Done here in addition to using
+       EmscriptenApplication::setContainerCssClass() so we can do extra things
+       like hiding scrollbars. The original function still needs to be called
+       in order to properly propagate window size changes. */
+    Module.setFullsize = function(fullsize) {
         if(fullsize) {
-            document.getElementById('container').className = 'fullsize';
             document.body.style.overflow = 'hidden';
             window.scrollTo(0, 0);
         } else {
-            document.getElementById('container').className = '';
             document.body.style.overflow = 'auto';
         }
-    }
+    };
 
     Module.canvas.addEventListener('drop', handleDrop);
     Module.canvas.addEventListener('dragover', handleDragOver);
