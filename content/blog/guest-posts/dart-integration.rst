@@ -1,7 +1,7 @@
 Using DART to control a robotic manipulator
 ###########################################
 
-:date: 2019-07-18
+:date: 2019-07-20
 :category: Guest Posts
 :cover: {static}/img/blog/guest-posts/dart-example.png
 :tags: C++, DART, Physics, Robotics, Magnum, DartIntegration
