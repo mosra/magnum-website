@@ -139,12 +139,6 @@ Here is how a part of the URDF model of the manipulator that we are going to use
       </geometry>
       <material name="Grey"/>
     </collision>
-    <self_collision_checking>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <capsule length="0.25" radius="0.15"/>
-      </geometry>
-    </self_collision_checking>
   </link>
   <!-- joint between link_0 and link_1 -->
   <joint name="iiwa_joint_1" type="revolute">
@@ -153,29 +147,10 @@ Here is how a part of the URDF model of the manipulator that we are going to use
     <origin rpy="0 0 0" xyz="0 0 0.1575"/>
     <axis xyz="0 0 1"/>
     <limit effort="320" lower="-2.96705972839" upper="2.96705972839" velocity="1.4835298642"/>
-    <safety_controller k_position="100" k_velocity="2" soft_lower_limit="-2.81870674197" soft_upper_limit="2.81870674197"/>
     <dynamics damping="0.5"/>
   </joint>
   <link name="iiwa_link_1">
-    <inertial>
-      <origin rpy="0 0 0" xyz="0 -0.03 0.12"/>
-      <mass value="4"/>
-      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.09" iyz="0" izz="0.02"/>
-    </inertial>
-    <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://iiwa_description/meshes/iiwa14/visual/link_1.stl"/>
-      </geometry>
-      <material name="Orange"/>
-    </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 -0.02 0.13"/>
-      <geometry>
-        <box size="0.175 0.19 0.26"/>
-      </geometry>
-      <material name="Orange"/>
-    </collision>
+    ...
   </link>
 
 This is to get an idea of how a URDF file would look like; no need to understand it!
@@ -367,6 +342,31 @@ Putting everything together and with a few additional things (e.g., two lights),
     :figclass: m-flat
 
     Our example scene in DART rendered in Magnum through the DartIntegration
+
+`Simulating any robot with the DartIntegration`_
+-------------------------------------------------
+
+Using the exactly the same code (just changing the URDF file), we can load any robot in DART and render it
+with Magnum. Here are a few other examples rendering a humanoid (`iCub <http://www.icub.org/>`_), a
+`hexapod <https://www.resibots.eu/photos.html#pexod-robot>`_ and quadruped (`ANYmal <https://github.com/ANYbotics/anymal_b_simple_description>`_) robot:
+
+.. figure:: {static}/img/blog/guest-posts/dart-example/icub_magnum.png
+    :alt: DartIntegration rendering iCub
+    :figclass: m-flat
+
+    Rendering a humanoid robot in Magnum via DartIntegration
+
+.. figure:: {static}/img/blog/guest-posts/dart-example/hexapod_magnum.png
+    :alt: DartIntegration rendering hexapod
+    :figclass: m-flat
+
+    Rendering a hexapod robot in Magnum via DartIntegration
+
+.. figure:: {static}/img/blog/guest-posts/dart-example/anymal_magnum.png
+    :alt: DartIntegration rendering quadruped
+    :figclass: m-flat
+
+    Rendering a quadruped robot (with textures) in Magnum via DartIntegration
 
 `Controlling a robotic manipulator`_
 =====================================
