@@ -199,8 +199,10 @@ with DART:
     /* Load the URDF in a DART Skeleton */
     auto manipulator = loader.parseSkeleton(filename);
 
-The KUKA manipulator URDF that we used is a modified version of the one in the `iiwa_ros <https://github.com/epfl-lasa/iiwa_ros>`_ package.
-The Robotiq URDF that we used is a modified version of the one in the `robotiq_arg85_description <https://github.com/a-price/robotiq_arg85_description>`_
+The `KUKA LBR Iiwa manipulator <https://www.kuka.com/en-ch/products/robotics-systems/industrial-robots/lbr-iiwa>`_ URDF that we used is a
+modified version of the one in the `iiwa_ros <https://github.com/epfl-lasa/iiwa_ros>`_ package.
+The `Robotiq gripper 2F-85 <https://robotiq.com/products/2f85-140-adaptive-robot-gripper?ref=nav_product_new_button>`_ URDF that we used is
+a modified version of the one in the `robotiq_arg85_description <https://github.com/a-price/robotiq_arg85_description>`_
 package. Once we have loaded/created all our robots, we add them to the DART world:
 
 .. code:: c++
@@ -220,6 +222,14 @@ DartIntegration provides two main classes: (a) :dox:`DartIntegration::World`, an
 The most common usage will be something like the following:
 
 .. code:: c++
+
+    /* DART world */
+    auto dart_world = dart::simulation::WorldPtr(new dart::simulation::World);
+    /// Add robots and objects into DART world
+
+    /* Create our DARTIntegration object/world */
+    auto dartObj = new Object3D{&_scene};
+    auto world = std::unique_ptr<Magnum::DartIntegration::World>(new DartIntegration::World(*dartObj, *dart_world));
 
     /* Simulate with time step of 0.001 seconds */
     world.world().setTimeStep(0.001);
@@ -277,8 +287,8 @@ and create the following class:
     };
 
 Note that each :dox:`DartIntegration::Object` can contain multiple meshes with color or texture material.
-
-To keep track of which objects are being updated, we have defined an unordered_map:
+To keep track of which objects are being updated (this should only happen if the visual properties, that
+is the mesh or material information, of a body changes), we have defined an unordered_map:
 
 .. code:: c++
 
@@ -288,8 +298,14 @@ To update the information of our objects (both the transformations but also the 
 
 .. code:: c++
 
+    world->refresh();
+
+To get and update the new meshes and material information, we perform something like the following:
+
+.. code:: c++
+
     /* For each update object */
-    for(DartIntegration::Object& object : _dartWorld->updatedShapeObjects()) {
+    for(DartIntegration::Object& object : world->updatedShapeObjects()) {
         /* Get material information */
         std::vector<MaterialData> materials;
         std::vector<std::reference_wrapper<GL::Mesh>> meshes;
@@ -339,7 +355,7 @@ To update the information of our objects (both the transformations but also the 
         }
     }
 
-    _dartWorld->clearUpdatedShapeObjects();
+    world->clearUpdatedShapeObjects();
 
 The :dox:`DartIntegration::Object` stores in memory the mesh, material and texture information and thus it is advised
 to keep references or pointers to these values.
@@ -402,7 +418,7 @@ Using these simple controllers, one can do some very amazing and interesting thi
 -----------------------------
 
 However, most of the interesting things happen in the Cartesian 6D space. This is the space where the end-effector
-of our manipulator leaves in. Moreover, this is the space where most of the real world tasks can be very intuitively
+of our manipulator lives in. Moreover, this is the space where most of the real world tasks can be very intuitively
 described. For this reason, we call it the task-space.
 
 `Jacobian`_
@@ -426,8 +442,8 @@ give us the following relationship:
     \end{aligned}
 
 With this last equation, we have an analytical equation that relates the joint velocities, :math:`\dot{q}`
-to end-effector velocities :math:`\dot{x}`. Moreover, this is a linear relationship. Using the conservation
-of energy property (from traditional physics) and some mathematical manipulation, we can generalize this
+to end-effector velocities :math:`\dot{x}`. Moreover, this is a linear relationship. Using the property of
+conservation of energy (from traditional physics) and some mathematical manipulation, we can generalize this
 relationship to forces and torques (we drop the arguments in :math:`J` for clarity):
 
 .. math ::
