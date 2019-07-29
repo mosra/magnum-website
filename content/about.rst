@@ -134,6 +134,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Miguel Martin <miguelmartin75>`
         -   :gh-name:`Natesh Narain <nnarain>`
         -   :gh-name:`Nathan Ollerenshaw <matjam>`
+        -   :gh-name:`Nick Skelsey <NSkelsey>`
         -   :gh-name:`Nicholas "LB" Branden <LB-->`
         -   :gh-name:`Olga Turanksaya <olga-python>`
         -   :gh-name:`Pascal Thomet <pthom>`
