@@ -3,7 +3,7 @@ Multi-dimensional strided array views in Magnum
 
 :date: 2019-04-30
 :category: Backstage
-:tags: C++, animation, Python
+:tags: C++, animation, Python, singles
 :summary: Magnum recently gained a new data structure usable for easy data
     description, transformation and inspection, opening lots of new
     possibilities for more efficient workflows with pixel, vertex and animation
