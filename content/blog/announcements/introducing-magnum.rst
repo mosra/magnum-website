@@ -55,8 +55,8 @@ vector math at compile-time.
 .. code:: c++
 
     Math::Matrix<3, 5, Int> a({2, 5, -1, 10, 0},                  /* using C++11 */
-                            {3, 53, -60, -27, 25},
-                            {9, 0, 4, 7, 135});
+                              {3, 53, -60, -27, 25},
+                              {9, 0, 4, 7, 135});
 
 Variadic function templates greatly simplify repetitive things and avoid
 mistakes, however you are not limited to do this at compile-time only. It is
@@ -110,7 +110,7 @@ nasty mistakes with units in unobtrusive way:
 
     Object3D object;                                              /* using C++03 */
     object.translate(Vector3(1.5f, 0.3f, -1.0f))
-        .rotate(35.0f); // this function accepts degrees, right?
+        .rotate(35.0f); // this function accepts degrees, right? (it doesn't)
 
 .. code:: c++
 
