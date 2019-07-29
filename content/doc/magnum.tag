@@ -4287,7 +4287,8 @@
     <name>Image.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/</path>
     <filename>Image_8h</filename>
-    <includes id="ImageView_8h" name="ImageView.h" local="yes" imported="no">Magnum/ImageView.h</includes>
+    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
+    <includes id="PixelStorage_8h" name="PixelStorage.h" local="yes" imported="no">Magnum/PixelStorage.h</includes>
     <class kind="class">Magnum::Image</class>
     <class kind="class">Magnum::CompressedImage</class>
     <namespace>Magnum</namespace>
@@ -4345,45 +4346,115 @@
     <class kind="class">Magnum::CompressedImageView</class>
     <namespace>Magnum</namespace>
     <member kind="typedef">
-      <type>ImageView&lt; 1 &gt;</type>
+      <type>ImageView&lt; dimensions, const char &gt;</type>
+      <name>BasicImageView</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a876e8ce27cf7df9fb6201f81406ae250</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicImageView&lt; 1 &gt;</type>
       <name>ImageView1D</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a52c690705313e0dfde62d0f5315953be</anchor>
+      <anchor>ad6cbc90385cec67f103dae61d9d3bbd6</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ImageView&lt; 2 &gt;</type>
+      <type>BasicImageView&lt; 2 &gt;</type>
       <name>ImageView2D</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a4e378fbaa61814138523f9ee49e2c2c0</anchor>
+      <anchor>ab6bcfc56373c89f9655b9f87f2566ca8</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ImageView&lt; 3 &gt;</type>
+      <type>BasicImageView&lt; 3 &gt;</type>
       <name>ImageView3D</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a4f151ab2ce87b457b9dd503c3aa162c1</anchor>
+      <anchor>aedaaa1cbb49a03bbb3cafc132d42584e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CompressedImageView&lt; 1 &gt;</type>
+      <type>ImageView&lt; dimensions, char &gt;</type>
+      <name>BasicMutableImageView</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>af62f11692685ea6c74d752ff71ecf54b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicMutableImageView&lt; 1 &gt;</type>
+      <name>MutableImageView1D</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>ae0490cb632c2db81a8fb038fce48ae60</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicMutableImageView&lt; 2 &gt;</type>
+      <name>MutableImageView2D</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>ac8d2058eea925905bfe83f7d5db93c54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicMutableImageView&lt; 3 &gt;</type>
+      <name>MutableImageView3D</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a0eb96702168beb80f3e12301cb621019</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CompressedImageView&lt; dimensions, const char &gt;</type>
+      <name>BasicCompressedImageView</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a2138d3f22fed7afa0e2a705437071631</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicCompressedImageView&lt; 1 &gt;</type>
       <name>CompressedImageView1D</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a17f67f03d9d178db86121ea1385d3e33</anchor>
+      <anchor>a60316e5a48cf52d44eabdb0c9656c41b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CompressedImageView&lt; 2 &gt;</type>
+      <type>BasicCompressedImageView&lt; 2 &gt;</type>
       <name>CompressedImageView2D</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a7f75b72713e3d1f671354cbd0c261b7e</anchor>
+      <anchor>aa65c2f90270d256799d0ad88f51b3c0f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CompressedImageView&lt; 3 &gt;</type>
+      <type>BasicCompressedImageView&lt; 3 &gt;</type>
       <name>CompressedImageView3D</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>abb65097cc08025b36cae174ad55a7bff</anchor>
+      <anchor>aaaf1c516639176324b0c113d80f73cbe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CompressedImageView&lt; dimensions, char &gt;</type>
+      <name>BasicMutableCompressedImageView</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a35a9f731843c8c10ca97bac072bc4bfa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicMutableCompressedImageView&lt; 1 &gt;</type>
+      <name>MutableCompressedImageView1D</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a87ab485cce4fc929265a79edb4b2f8ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicMutableCompressedImageView&lt; 2 &gt;</type>
+      <name>MutableCompressedImageView2D</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a84c876f73db1161bf43e6ea2d8f2670e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicMutableCompressedImageView&lt; 3 &gt;</type>
+      <name>MutableCompressedImageView3D</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a993dd48773615e001f154221079614d7</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -11065,7 +11136,8 @@
     <name>ImageData.h</name>
     <path>/home/mosra/Code/magnum/src/Magnum/Trade/</path>
     <filename>ImageData_8h</filename>
-    <includes id="ImageView_8h" name="ImageView.h" local="yes" imported="no">Magnum/ImageView.h</includes>
+    <includes id="DimensionTraits_8h" name="DimensionTraits.h" local="yes" imported="no">Magnum/DimensionTraits.h</includes>
+    <includes id="PixelStorage_8h" name="PixelStorage.h" local="yes" imported="no">Magnum/PixelStorage.h</includes>
     <class kind="class">Magnum::Trade::ImageData</class>
     <namespace>Magnum</namespace>
     <namespace>Magnum::Trade</namespace>
@@ -18894,9 +18966,16 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>operator CompressedImageView&lt; dimensions &gt;</name>
+      <name>operator BasicMutableCompressedImageView&lt; dimensions &gt;</name>
       <anchorfile>classMagnum_1_1CompressedImage.html</anchorfile>
-      <anchor>abef8a12cbd0e0371b156e0ba1a571ac2</anchor>
+      <anchor>a5a5953c005767793bb3b702d743ac8c4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator BasicCompressedImageView&lt; dimensions &gt;</name>
+      <anchorfile>classMagnum_1_1CompressedImage.html</anchorfile>
+      <anchor>a3f7d046b16d25d263e99fd2f17c5967b</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -18924,22 +19003,36 @@
       <type>std::pair&lt; VectorTypeFor&lt; dimensions, std::size_t &gt;, VectorTypeFor&lt; dimensions, std::size_t &gt; &gt;</type>
       <name>dataProperties</name>
       <anchorfile>classMagnum_1_1CompressedImage.html</anchorfile>
-      <anchor>ada517a1daec32c208b65727b01789d2c</anchor>
+      <anchor>a5dbe37addb2b4686496143fa78e04002</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>Containers::ArrayView&lt; char &gt;</type>
       <name>data</name>
       <anchorfile>classMagnum_1_1CompressedImage.html</anchorfile>
-      <anchor>abd6aaf3b7b12c63641ca9d9768da3ba0</anchor>
-      <arglist>()</arglist>
+      <anchor>a5c929fadec5e990c32673306e8dfafe9</anchor>
+      <arglist>() &amp;</arglist>
     </member>
     <member kind="function">
       <type>Containers::ArrayView&lt; const char &gt;</type>
       <name>data</name>
       <anchorfile>classMagnum_1_1CompressedImage.html</anchorfile>
-      <anchor>a079e4a6aef72750a250c536667d1ecca</anchor>
-      <arglist>() const</arglist>
+      <anchor>a0d59eb7be9d42e7ad19545dd89f4f1ac</anchor>
+      <arglist>() const &amp;</arglist>
+    </member>
+    <member kind="function">
+      <type>Containers::Array&lt; char &gt;</type>
+      <name>data</name>
+      <anchorfile>classMagnum_1_1CompressedImage.html</anchorfile>
+      <anchor>a81a876085c45ebc5b367b54253d47e04</anchor>
+      <arglist>() &amp;&amp;</arglist>
+    </member>
+    <member kind="function">
+      <type>Containers::Array&lt; char &gt;</type>
+      <name>data</name>
+      <anchorfile>classMagnum_1_1CompressedImage.html</anchorfile>
+      <anchor>ab43f781092df6255c9b40c2d2e72a02e</anchor>
+      <arglist>() const &amp;&amp;=delete</arglist>
     </member>
     <member kind="function">
       <type>T *</type>
@@ -18968,124 +19061,147 @@
     <name>Magnum::CompressedImageView</name>
     <filename>classMagnum_1_1CompressedImageView.html</filename>
     <templarg>dimensions</templarg>
+    <templarg></templarg>
     <member kind="enumvalue">
       <name>Dimensions</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>ab0502eb0a873e0f2926ad37f22276e68a201e9b7dc568bdbd99378738c2eea517</anchor>
+      <anchor>ab0502eb0a873e0f2926ad37f22276e68a905a69f12e2ef3b2196c80ed08d07c3e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>T</type>
+      <name>Type</name>
+      <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
+      <anchor>a7357104dbfcc00f9915e4772e91a7282</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::conditional&lt; std::is_const&lt; T &gt;::value, const void, void &gt;::type</type>
+      <name>ErasedType</name>
+      <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
+      <anchor>aed7e1a893999858ebc0faa3e305d75af</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Dimensions</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>ab0502eb0a873e0f2926ad37f22276e68a201e9b7dc568bdbd99378738c2eea517</anchor>
+      <anchor>ab0502eb0a873e0f2926ad37f22276e68a905a69f12e2ef3b2196c80ed08d07c3e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CompressedImageView</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>a9749a500572b275ab079a8598a9615ac</anchor>
-      <arglist>(CompressedPixelStorage storage, CompressedPixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data) noexcept</arglist>
+      <anchor>a858a0744ac20057593532720138170ad</anchor>
+      <arglist>(CompressedPixelStorage storage, CompressedPixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; ErasedType &gt; data) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CompressedImageView</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>ae4b723cd4c6da7815e997f3310f1f33b</anchor>
-      <arglist>(CompressedPixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data) noexcept</arglist>
+      <anchor>a83091a7be68130b1397cda6f06bb1f13</anchor>
+      <arglist>(CompressedPixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; ErasedType &gt; data) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CompressedImageView</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>a75d41942816ff4440026d120993aa9ea</anchor>
+      <anchor>a985034203471b62b378589e9c582471b</anchor>
       <arglist>(CompressedPixelStorage storage, CompressedPixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CompressedImageView</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>a62862706726d5b77932f22a6c46a8380</anchor>
+      <anchor>ab07ceb51c9262e46750e2e58116e3d5d</anchor>
       <arglist>(CompressedPixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CompressedImageView</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>a303029b2510657ad348209fcc798152f</anchor>
-      <arglist>(CompressedPixelStorage storage, T format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data) noexcept</arglist>
+      <anchor>ae8c210957703d6d5007853b3b813e127</anchor>
+      <arglist>(CompressedPixelStorage storage, U format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; ErasedType &gt; data) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CompressedImageView</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>acc0afa31eab6aa3d429335ec60e1012e</anchor>
-      <arglist>(T format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data) noexcept</arglist>
+      <anchor>acea13059c6a857229070318f53d994ca</anchor>
+      <arglist>(U format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; ErasedType &gt; data) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CompressedImageView</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>a75fb70c2031c4b9f80735f6c0849eb7b</anchor>
-      <arglist>(CompressedPixelStorage storage, T format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
+      <anchor>a91edb27c381d3db6d4978df6f4fc0c28</anchor>
+      <arglist>(CompressedPixelStorage storage, U format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CompressedImageView</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>a250efa613be93332a440bc88b997b529</anchor>
-      <arglist>(T format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
+      <anchor>afb261cd5f47e76ef6f567ac98e192bef</anchor>
+      <arglist>(U format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CompressedImageView</name>
+      <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
+      <anchor>acea0b2a47cb93edebc2da413afcecaf1</anchor>
+      <arglist>(const CompressedImageView&lt; dimensions, U &gt; &amp;other) noexcept</arglist>
     </member>
     <member kind="function">
       <type>CompressedPixelStorage</type>
       <name>storage</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>ae1b2a51a308c320de422d91b82cbf616</anchor>
+      <anchor>ad07ccd62ee757bc9deaa546105b6d051</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>CompressedPixelFormat</type>
       <name>format</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>aadfa86338ede5bc608f7b27eb37c92d7</anchor>
+      <anchor>a4c907677d8a71b4a580e2b177f542b77</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>constexpr VectorTypeFor&lt; dimensions, Int &gt;</type>
       <name>size</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>ab514649d094594b36c8f03187237e57a</anchor>
+      <anchor>a4cbdc72e624d4bc6171bb4a4a7e6882d</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>std::pair&lt; VectorTypeFor&lt; dimensions, std::size_t &gt;, VectorTypeFor&lt; dimensions, std::size_t &gt; &gt;</type>
       <name>dataProperties</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>ae1cd83d902933639ad900ff7d3aa51f7</anchor>
+      <anchor>aee8833157d7377f91fb5bf56e23c0422</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Containers::ArrayView&lt; const char &gt;</type>
+      <type>Containers::ArrayView&lt; Type &gt;</type>
       <name>data</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>ac087b07efa869e5ed4617fef6096e2a2</anchor>
+      <anchor>a10e5f690e258ef09db001681aa547056</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const T *</type>
+      <type>const U *</type>
       <name>data</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>a7b9f5e934dc1348686156b98a810cb6c</anchor>
+      <anchor>ad68ac06f5a778ca6fd4bd4d5a44bfd74</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setData</name>
       <anchorfile>classMagnum_1_1CompressedImageView.html</anchorfile>
-      <anchor>a081408ea65fa6d9bba65cddab46083f1</anchor>
-      <arglist>(Containers::ArrayView&lt; const void &gt; data)</arglist>
+      <anchor>abfab0efbc9445eb3a051ac381c4ae23e</anchor>
+      <arglist>(Containers::ArrayView&lt; ErasedType &gt; data)</arglist>
     </member>
     <docanchor file="classMagnum_1_1CompressedImageView" title="Basic usage">CompressedImageView-usage</docanchor>
+    <docanchor file="classMagnum_1_1CompressedImageView" title="Data mutability">CompressedImageView-mutable</docanchor>
     <docanchor file="classMagnum_1_1CompressedImageView" title="Implementation-specific formats">CompressedImageView-usage-implementation-specific</docanchor>
   </compound>
   <compound kind="class">
@@ -19370,6 +19486,13 @@
       <arglist>(T &amp;object, dart::simulation::World &amp;world)</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>World</name>
+      <anchorfile>classMagnum_1_1DartIntegration_1_1World.html</anchorfile>
+      <anchor>af2a8014b5eb7192aa62fd68f8568c8fe</anchor>
+      <arglist>(PluginManager::Manager&lt; Trade::AbstractImporter &gt; &amp;importerManager, T &amp;object, dart::simulation::World &amp;world)</arglist>
+    </member>
+    <member kind="function">
       <type>World &amp;</type>
       <name>refresh</name>
       <anchorfile>classMagnum_1_1DartIntegration_1_1World.html</anchorfile>
@@ -19380,14 +19503,14 @@
       <type>World &amp;</type>
       <name>step</name>
       <anchorfile>classMagnum_1_1DartIntegration_1_1World.html</anchorfile>
-      <anchor>a49ab4e73e11de683c206a6dd5d9b0dbb</anchor>
-      <arglist>()</arglist>
+      <anchor>afc84911336686d0690af5f386be15cd8</anchor>
+      <arglist>(bool resetCommand=true)</arglist>
     </member>
     <member kind="function">
       <type>std::vector&lt; std::unique_ptr&lt; Object &gt; &gt; &amp;</type>
       <name>unusedObjects</name>
       <anchorfile>classMagnum_1_1DartIntegration_1_1World.html</anchorfile>
-      <anchor>ae7026398103d6c0e0d7d2cadd3ca83c0</anchor>
+      <anchor>a9939bb879e32d567b6b87f2d76807b68</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -19436,7 +19559,7 @@
       <type>dart::simulation::World &amp;</type>
       <name>world</name>
       <anchorfile>classMagnum_1_1DartIntegration_1_1World.html</anchorfile>
-      <anchor>a6658e85b2a2c77467c7b240af91ce8d5</anchor>
+      <anchor>a41bd7a09d84f51dd849175c8ea3a0476</anchor>
       <arglist>()</arglist>
     </member>
     <docanchor file="classMagnum_1_1DartIntegration_1_1World" title="Usage">DartIntegration-World-usage</docanchor>
@@ -19846,6 +19969,13 @@
       <anchorfile>classMagnum_1_1GL_1_1AbstractFramebuffer.html</anchorfile>
       <anchor>ae11d0b7f2763900ce16314a9d5e3f23b</anchor>
       <arglist>(const Range2Di &amp;rectangle, Image2D &amp;&amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>read</name>
+      <anchorfile>classMagnum_1_1GL_1_1AbstractFramebuffer.html</anchorfile>
+      <anchor>aa0f5c080a53f2c3e418edc8b9bae81f6</anchor>
+      <arglist>(const Range2Di &amp;rectangle, MutableImageView2D &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -21553,7 +21683,7 @@
       <type>std::pair&lt; VectorTypeFor&lt; dimensions, std::size_t &gt;, VectorTypeFor&lt; dimensions, std::size_t &gt; &gt;</type>
       <name>dataProperties</name>
       <anchorfile>classMagnum_1_1GL_1_1BufferImage.html</anchorfile>
-      <anchor>a675fcd184611b3b1a0a8131740eb9a77</anchor>
+      <anchor>a942ed7399347dc1d2829a5336d349377</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -21844,7 +21974,7 @@
       <type>std::pair&lt; VectorTypeFor&lt; dimensions, std::size_t &gt;, VectorTypeFor&lt; dimensions, std::size_t &gt; &gt;</type>
       <name>dataProperties</name>
       <anchorfile>classMagnum_1_1GL_1_1CompressedBufferImage.html</anchorfile>
-      <anchor>a7950623cef8c24de2e2385cdf843e538</anchor>
+      <anchor>abc30b84b21df0e36b4c3b53ad277aec4</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -22149,6 +22279,13 @@
       <anchor>aa7f34247f1113f57149a300e62c72510</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>makeCurrent</name>
+      <anchorfile>classMagnum_1_1GL_1_1Context.html</anchorfile>
+      <anchor>a31317e4c31e6956163646c6b528b00eb</anchor>
+      <arglist>(Context *context)</arglist>
+    </member>
     <member kind="function">
       <type>Debug &amp;</type>
       <name>operator&lt;&lt;</name>
@@ -22178,6 +22315,8 @@
       <arglist>(Debug &amp;debug, Context::DetectedDrivers value)</arglist>
     </member>
     <docanchor file="classMagnum_1_1GL_1_1Context" title="Command-line options">GL-Context-command-line</docanchor>
+    <docanchor file="classMagnum_1_1GL_1_1Context" title="Thread safety">GL-Context-multithreading</docanchor>
+    <docanchor file="classMagnum_1_1GL_1_1Context" title="Using multiple OpenGL contexts">GL-Context-multiple</docanchor>
   </compound>
   <compound kind="class">
     <name>Magnum::GL::CubeMapTexture</name>
@@ -22418,6 +22557,13 @@
       <type>void</type>
       <name>image</name>
       <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
+      <anchor>a29c18dc36e40eb7e1ee0c2b738eb5d0c</anchor>
+      <arglist>(Int level, MutableImageView3D &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>image</name>
+      <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
       <anchor>a266e2ca07059591ddc419006814d0b86</anchor>
       <arglist>(Int level, BufferImage3D &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -22441,6 +22587,13 @@
       <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
       <anchor>a8e462b2e076ae2af5b600a2ae5be9c3f</anchor>
       <arglist>(Int level, CompressedImage3D &amp;&amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compressedImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
+      <anchor>a74e3f5f7eedf7d1c94ae730a2723ff6c</anchor>
+      <arglist>(Int level, MutableCompressedImageView3D &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -22474,6 +22627,13 @@
       <type>void</type>
       <name>image</name>
       <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
+      <anchor>a1a79057f8c4b993a87068e2710e9f623</anchor>
+      <arglist>(CubeMapCoordinate coordinate, Int level, MutableImageView2D &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>image</name>
+      <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
       <anchor>a2069e71c39e53fdf4fd8cb22ea80bd11</anchor>
       <arglist>(CubeMapCoordinate coordinate, Int level, BufferImage2D &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -22497,6 +22657,13 @@
       <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
       <anchor>a25b763c41ddc2dcf5d57ace8c822a279</anchor>
       <arglist>(CubeMapCoordinate coordinate, Int level, CompressedImage2D &amp;&amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compressedImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
+      <anchor>a0058d8e4fb9918a0f45fc8de9333caf4</anchor>
+      <arglist>(CubeMapCoordinate coordinate, Int level, MutableCompressedImageView2D &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -22530,6 +22697,13 @@
       <type>void</type>
       <name>subImage</name>
       <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
+      <anchor>aa3c48103f14e2adf4cb632c3a6ba51fc</anchor>
+      <arglist>(Int level, const Range3Di &amp;range, MutableImageView3D &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>subImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
       <anchor>ac172d91b294dbf3d5b28d847c603e37c</anchor>
       <arglist>(Int level, const Range3Di &amp;range, BufferImage3D &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -22553,6 +22727,13 @@
       <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
       <anchor>afcbda19a4528331bf3a7b535b0d60694</anchor>
       <arglist>(Int level, const Range3Di &amp;range, CompressedImage3D &amp;&amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compressedSubImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1CubeMapTexture.html</anchorfile>
+      <anchor>afc305a5d4b3ba24a5d63b5897c14d35a</anchor>
+      <arglist>(Int level, const Range3Di &amp;range, MutableCompressedImageView3D &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -22984,6 +23165,13 @@
       <type>void</type>
       <name>image</name>
       <anchorfile>classMagnum_1_1GL_1_1CubeMapTextureArray.html</anchorfile>
+      <anchor>a672b25cf4c712d2dd85e3a7a00645db4</anchor>
+      <arglist>(Int level, MutableImageView3D &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>image</name>
+      <anchorfile>classMagnum_1_1GL_1_1CubeMapTextureArray.html</anchorfile>
       <anchor>a9cb6e3d1dcfdb19c7c798877d58cfc0f</anchor>
       <arglist>(Int level, BufferImage3D &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -23007,6 +23195,13 @@
       <anchorfile>classMagnum_1_1GL_1_1CubeMapTextureArray.html</anchorfile>
       <anchor>a7798ea9b3095617660cd04ce99974658</anchor>
       <arglist>(Int level, CompressedImage3D &amp;&amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compressedImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1CubeMapTextureArray.html</anchorfile>
+      <anchor>aca659a9364bb4041b3fee8129b726261</anchor>
+      <arglist>(Int level, MutableCompressedImageView3D &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -23040,6 +23235,13 @@
       <type>void</type>
       <name>subImage</name>
       <anchorfile>classMagnum_1_1GL_1_1CubeMapTextureArray.html</anchorfile>
+      <anchor>aac05edd2bc3fb5f627d917cb04f7dd64</anchor>
+      <arglist>(Int level, const Range3Di &amp;range, MutableImageView3D &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>subImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1CubeMapTextureArray.html</anchorfile>
       <anchor>a672a386edfea41f03a235d86e1b8d8af</anchor>
       <arglist>(Int level, const Range3Di &amp;range, BufferImage3D &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -23063,6 +23265,13 @@
       <anchorfile>classMagnum_1_1GL_1_1CubeMapTextureArray.html</anchorfile>
       <anchor>a92280973a5f3f145b7d794b40b8dbac9</anchor>
       <arglist>(Int level, const Range3Di &amp;range, CompressedImage3D &amp;&amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compressedSubImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1CubeMapTextureArray.html</anchorfile>
+      <anchor>a9867b6e6da12f77aa3036e62738fa60c</anchor>
+      <arglist>(Int level, const Range3Di &amp;range, MutableCompressedImageView3D &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -25199,6 +25408,13 @@
       <type>void</type>
       <name>image</name>
       <anchorfile>classMagnum_1_1GL_1_1RectangleTexture.html</anchorfile>
+      <anchor>a6cf05f8aba290a038626999303717643</anchor>
+      <arglist>(MutableImageView2D &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>image</name>
+      <anchorfile>classMagnum_1_1GL_1_1RectangleTexture.html</anchorfile>
       <anchor>ad29d931b2f5ba70579ab442d9011d56a</anchor>
       <arglist>(BufferImage2D &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -25222,6 +25438,13 @@
       <anchorfile>classMagnum_1_1GL_1_1RectangleTexture.html</anchorfile>
       <anchor>a02568fd54076a583fc3fcc3e5e141b5f</anchor>
       <arglist>(CompressedImage2D &amp;&amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compressedImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1RectangleTexture.html</anchorfile>
+      <anchor>ac1f4ba8b7fcbf17b7633c62e4d6b76a3</anchor>
+      <arglist>(MutableCompressedImageView2D &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -25255,6 +25478,13 @@
       <type>void</type>
       <name>subImage</name>
       <anchorfile>classMagnum_1_1GL_1_1RectangleTexture.html</anchorfile>
+      <anchor>a4e2a160bbe6c2340ee1c43c7402b2cce</anchor>
+      <arglist>(const Range2Di &amp;range, MutableImageView2D &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>subImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1RectangleTexture.html</anchorfile>
       <anchor>a6f6d5ce081e60f4071e82aad2397bfcf</anchor>
       <arglist>(const Range2Di &amp;range, BufferImage2D &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -25278,6 +25508,13 @@
       <anchorfile>classMagnum_1_1GL_1_1RectangleTexture.html</anchorfile>
       <anchor>ad97c6aba6291ff281d17a59d7cf5cb1a</anchor>
       <arglist>(const Range2Di &amp;range, CompressedImage2D &amp;&amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compressedSubImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1RectangleTexture.html</anchorfile>
+      <anchor>aba5afcf161906a4c45f65d61bd37311d</anchor>
+      <arglist>(const Range2Di &amp;range, MutableCompressedImageView2D &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -26794,6 +27031,13 @@
       <type>void</type>
       <name>image</name>
       <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
+      <anchor>a3a67a15476b8d23588e61d7add5e3671</anchor>
+      <arglist>(Int level, BasicMutableImageView&lt; dimensions &gt; &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>image</name>
+      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
       <anchor>a7068dafa28faab0b12316e920ca5442f</anchor>
       <arglist>(Int level, BufferImage&lt; dimensions &gt; &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -26817,6 +27061,13 @@
       <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
       <anchor>a8153fd9d12bf5406c729e6a7d3114c4a</anchor>
       <arglist>(Int level, CompressedImage&lt; dimensions &gt; &amp;&amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compressedImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
+      <anchor>a8bb6e92784ff4f3f049a1d72d96383e7</anchor>
+      <arglist>(Int level, BasicMutableCompressedImageView&lt; dimensions &gt; &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -26850,6 +27101,13 @@
       <type>void</type>
       <name>subImage</name>
       <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
+      <anchor>a8e1f19ffb857a60d462820e4910f2db9</anchor>
+      <arglist>(Int level, const RangeTypeFor&lt; dimensions, Int &gt; &amp;range, BasicMutableImageView&lt; dimensions &gt; &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>subImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
       <anchor>ad21fce402fab6dd1f07a5a92a2315c40</anchor>
       <arglist>(Int level, const RangeTypeFor&lt; dimensions, Int &gt; &amp;range, BufferImage&lt; dimensions &gt; &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -26878,6 +27136,13 @@
       <type>void</type>
       <name>compressedSubImage</name>
       <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
+      <anchor>a454c4826ae5c6f51693cef530493c6ad</anchor>
+      <arglist>(Int level, const RangeTypeFor&lt; dimensions, Int &gt; &amp;range, BasicMutableCompressedImageView&lt; dimensions &gt; &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compressedSubImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
       <anchor>a3f7b6d55c4d166f6a2917c98aaed2365</anchor>
       <arglist>(Int level, const RangeTypeFor&lt; dimensions, Int &gt; &amp;range, CompressedBufferImage&lt; dimensions &gt; &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -26892,8 +27157,8 @@
       <type>Texture&lt; dimensions &gt; &amp;</type>
       <name>setImage</name>
       <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ac7962eedd04b32285391da1fc84b2dd7</anchor>
-      <arglist>(Int level, TextureFormat internalFormat, const ImageView&lt; dimensions &gt; &amp;image)</arglist>
+      <anchor>a060cd5c0ce5d8e69dfd2f6fd746890c9</anchor>
+      <arglist>(Int level, TextureFormat internalFormat, const BasicImageView&lt; dimensions &gt; &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>Texture&lt; dimensions &gt; &amp;</type>
@@ -26913,8 +27178,8 @@
       <type>Texture&lt; dimensions &gt; &amp;</type>
       <name>setCompressedImage</name>
       <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>a57ed66d4b889a22be2ee40ac4f0fcf10</anchor>
-      <arglist>(Int level, const CompressedImageView&lt; dimensions &gt; &amp;image)</arglist>
+      <anchor>a1a13087b41bf2dc1175fc2519148b231</anchor>
+      <arglist>(Int level, const BasicCompressedImageView&lt; dimensions &gt; &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>Texture&lt; dimensions &gt; &amp;</type>
@@ -26934,8 +27199,8 @@
       <type>Texture&lt; dimensions &gt; &amp;</type>
       <name>setSubImage</name>
       <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ad3bb523a881dd4fac66c535dd069dbb4</anchor>
-      <arglist>(Int level, const VectorTypeFor&lt; dimensions, Int &gt; &amp;offset, const ImageView&lt; dimensions &gt; &amp;image)</arglist>
+      <anchor>ac78f469c4c2bd3b793f10ba8ba374055</anchor>
+      <arglist>(Int level, const VectorTypeFor&lt; dimensions, Int &gt; &amp;offset, const BasicImageView&lt; dimensions &gt; &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>Texture&lt; dimensions &gt; &amp;</type>
@@ -26955,8 +27220,8 @@
       <type>Texture&lt; dimensions &gt; &amp;</type>
       <name>setCompressedSubImage</name>
       <anchorfile>classMagnum_1_1GL_1_1Texture.html</anchorfile>
-      <anchor>ad0966a995394f7dae2a5547b0810051b</anchor>
-      <arglist>(Int level, const VectorTypeFor&lt; dimensions, Int &gt; &amp;offset, const CompressedImageView&lt; dimensions &gt; &amp;image)</arglist>
+      <anchor>a61ba2d2fda25cb2480a230ab66d61d8e</anchor>
+      <arglist>(Int level, const VectorTypeFor&lt; dimensions, Int &gt; &amp;offset, const BasicCompressedImageView&lt; dimensions &gt; &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>Texture&lt; dimensions &gt; &amp;</type>
@@ -27275,6 +27540,13 @@
       <type>void</type>
       <name>image</name>
       <anchorfile>classMagnum_1_1GL_1_1TextureArray.html</anchorfile>
+      <anchor>a0955601bc50ad235a993991e6e00a977</anchor>
+      <arglist>(Int level, BasicMutableImageView&lt; dimensions+1 &gt; &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>image</name>
+      <anchorfile>classMagnum_1_1GL_1_1TextureArray.html</anchorfile>
       <anchor>a3e3c5359561e45d3589ed7451c26de2d</anchor>
       <arglist>(Int level, BufferImage&lt; dimensions+1 &gt; &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -27298,6 +27570,13 @@
       <anchorfile>classMagnum_1_1GL_1_1TextureArray.html</anchorfile>
       <anchor>a2d122741dbde27f30c4fc182046ae5b8</anchor>
       <arglist>(Int level, CompressedImage&lt; dimensions+1 &gt; &amp;&amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compressedImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1TextureArray.html</anchorfile>
+      <anchor>a851b974bf267e5ea4d2a133764b7fe48</anchor>
+      <arglist>(Int level, BasicMutableCompressedImageView&lt; dimensions+1 &gt; &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -27331,6 +27610,13 @@
       <type>void</type>
       <name>subImage</name>
       <anchorfile>classMagnum_1_1GL_1_1TextureArray.html</anchorfile>
+      <anchor>ac4a79ffbb18d0ab521622d1f8f0645ec</anchor>
+      <arglist>(Int level, const RangeTypeFor&lt; dimensions+1, Int &gt; &amp;range, BasicMutableImageView&lt; dimensions+1 &gt; &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>subImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1TextureArray.html</anchorfile>
       <anchor>a9cb92f968020015c940021c992dbb0e0</anchor>
       <arglist>(Int level, const RangeTypeFor&lt; dimensions+1, Int &gt; &amp;range, BufferImage&lt; dimensions+1 &gt; &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -27359,6 +27645,13 @@
       <type>void</type>
       <name>compressedSubImage</name>
       <anchorfile>classMagnum_1_1GL_1_1TextureArray.html</anchorfile>
+      <anchor>a9404a6fe41e6e30e8e9fa97cff96b942</anchor>
+      <arglist>(Int level, const RangeTypeFor&lt; dimensions+1, Int &gt; &amp;range, BasicMutableCompressedImageView&lt; dimensions+1 &gt; &amp;image)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>compressedSubImage</name>
+      <anchorfile>classMagnum_1_1GL_1_1TextureArray.html</anchorfile>
       <anchor>a4278371fa0651b8e8ec7b127626d3c2b</anchor>
       <arglist>(Int level, const RangeTypeFor&lt; dimensions+1, Int &gt; &amp;range, CompressedBufferImage&lt; dimensions+1 &gt; &amp;image, BufferUsage usage)</arglist>
     </member>
@@ -27373,8 +27666,8 @@
       <type>TextureArray&lt; dimensions &gt; &amp;</type>
       <name>setImage</name>
       <anchorfile>classMagnum_1_1GL_1_1TextureArray.html</anchorfile>
-      <anchor>ae9a29a34f4042f84259db28d125ee964</anchor>
-      <arglist>(Int level, TextureFormat internalFormat, const ImageView&lt; dimensions+1 &gt; &amp;image)</arglist>
+      <anchor>a339bf896c21de1c6b07d92aaa7e50584</anchor>
+      <arglist>(Int level, TextureFormat internalFormat, const BasicImageView&lt; dimensions+1 &gt; &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>TextureArray&lt; dimensions &gt; &amp;</type>
@@ -27394,8 +27687,8 @@
       <type>TextureArray&lt; dimensions &gt; &amp;</type>
       <name>setCompressedImage</name>
       <anchorfile>classMagnum_1_1GL_1_1TextureArray.html</anchorfile>
-      <anchor>ac78f34d911a5a37d4b28a049d15ef18b</anchor>
-      <arglist>(Int level, const CompressedImageView&lt; dimensions+1 &gt; &amp;image)</arglist>
+      <anchor>ac10fc011440230cc2da1e08590bcd713</anchor>
+      <arglist>(Int level, const BasicCompressedImageView&lt; dimensions+1 &gt; &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>TextureArray&lt; dimensions &gt; &amp;</type>
@@ -27415,8 +27708,8 @@
       <type>TextureArray&lt; dimensions &gt; &amp;</type>
       <name>setSubImage</name>
       <anchorfile>classMagnum_1_1GL_1_1TextureArray.html</anchorfile>
-      <anchor>ae34b350f876a2c76e9d35fcd9a191d6e</anchor>
-      <arglist>(Int level, const VectorTypeFor&lt; dimensions+1, Int &gt; &amp;offset, const ImageView&lt; dimensions+1 &gt; &amp;image)</arglist>
+      <anchor>adf330871a73d4d8353b796a675e77842</anchor>
+      <arglist>(Int level, const VectorTypeFor&lt; dimensions+1, Int &gt; &amp;offset, const BasicImageView&lt; dimensions+1 &gt; &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>TextureArray&lt; dimensions &gt; &amp;</type>
@@ -27436,8 +27729,8 @@
       <type>TextureArray&lt; dimensions &gt; &amp;</type>
       <name>setCompressedSubImage</name>
       <anchorfile>classMagnum_1_1GL_1_1TextureArray.html</anchorfile>
-      <anchor>aa9fd07d41c28e9b9d0e2f1e19f4b9825</anchor>
-      <arglist>(Int level, const VectorTypeFor&lt; dimensions+1, Int &gt; &amp;offset, const CompressedImageView&lt; dimensions+1 &gt; &amp;image)</arglist>
+      <anchor>afec0f200b1ac4e4553779050f02fd6d1</anchor>
+      <arglist>(Int level, const VectorTypeFor&lt; dimensions+1, Int &gt; &amp;offset, const BasicCompressedImageView&lt; dimensions+1 &gt; &amp;image)</arglist>
     </member>
     <member kind="function">
       <type>TextureArray&lt; dimensions &gt; &amp;</type>
@@ -27930,9 +28223,16 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>operator ImageView&lt; dimensions &gt;</name>
+      <name>operator BasicMutableImageView&lt; dimensions &gt;</name>
       <anchorfile>classMagnum_1_1Image.html</anchorfile>
-      <anchor>af8454a1dbd1484aef683950031ef28b0</anchor>
+      <anchor>a79c6f2502c38eea9d6ca10da7aec3159</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator BasicImageView&lt; dimensions &gt;</name>
+      <anchorfile>classMagnum_1_1Image.html</anchorfile>
+      <anchor>abf75d77f42eef8840407fd4576e8336b</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -27974,7 +28274,7 @@
       <type>std::pair&lt; VectorTypeFor&lt; dimensions, std::size_t &gt;, VectorTypeFor&lt; dimensions, std::size_t &gt; &gt;</type>
       <name>dataProperties</name>
       <anchorfile>classMagnum_1_1Image.html</anchorfile>
-      <anchor>aa1dc4542f9d36579be1269afa61722aa</anchor>
+      <anchor>aae5920049461cfe189a68b0200497726</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -27985,13 +28285,6 @@
       <arglist>() &amp;</arglist>
     </member>
     <member kind="function">
-      <type>Containers::ArrayView&lt; char &gt;</type>
-      <name>data</name>
-      <anchorfile>classMagnum_1_1Image.html</anchorfile>
-      <anchor>a3badf1497ed460f9968bc5b3349a2a41</anchor>
-      <arglist>() &amp;&amp;=delete</arglist>
-    </member>
-    <member kind="function">
       <type>Containers::ArrayView&lt; const char &gt;</type>
       <name>data</name>
       <anchorfile>classMagnum_1_1Image.html</anchorfile>
@@ -27999,10 +28292,17 @@
       <arglist>() const &amp;</arglist>
     </member>
     <member kind="function">
-      <type>Containers::ArrayView&lt; const char &gt;</type>
+      <type>Containers::Array&lt; char &gt;</type>
       <name>data</name>
       <anchorfile>classMagnum_1_1Image.html</anchorfile>
-      <anchor>af1a014bc2e2ec017fc9e4183752a17cf</anchor>
+      <anchor>aaaa7d2c9fee1f268e3fd8aa1e53ab9b8</anchor>
+      <arglist>() &amp;&amp;</arglist>
+    </member>
+    <member kind="function">
+      <type>Containers::Array&lt; char &gt;</type>
+      <name>data</name>
+      <anchorfile>classMagnum_1_1Image.html</anchorfile>
+      <anchor>a339a528e0fb2fb75dba930fd3a3c1e06</anchor>
       <arglist>() const &amp;&amp;=delete</arglist>
     </member>
     <member kind="function">
@@ -28061,208 +28361,231 @@
     <name>Magnum::ImageView</name>
     <filename>classMagnum_1_1ImageView.html</filename>
     <templarg>dimensions</templarg>
+    <templarg></templarg>
     <member kind="enumvalue">
       <name>Dimensions</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>ae91ce080e231c0705fe9a84302321de8a66fad4ae48d49f49716637edddd184f8</anchor>
+      <anchor>ae91ce080e231c0705fe9a84302321de8a26cd5807eb6fa0a94cf14d8153995ec7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>T</type>
+      <name>Type</name>
+      <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
+      <anchor>adfe5d6695cfb2bf72bc70425104dd6b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::conditional&lt; std::is_const&lt; T &gt;::value, const void, void &gt;::type</type>
+      <name>ErasedType</name>
+      <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
+      <anchor>abe5ec4937a11fb84fb3fa1b861434486</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <name>Dimensions</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>ae91ce080e231c0705fe9a84302321de8a66fad4ae48d49f49716637edddd184f8</anchor>
+      <anchor>ae91ce080e231c0705fe9a84302321de8a26cd5807eb6fa0a94cf14d8153995ec7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a5de4e4525456d064bef02439924a071c</anchor>
-      <arglist>(PixelStorage storage, PixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data) noexcept</arglist>
+      <anchor>aa1b6192193bb993eed13d75083c79c5e</anchor>
+      <arglist>(PixelStorage storage, PixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; ErasedType &gt; data) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>af2608354cbfe5edc1829b28300f155b7</anchor>
-      <arglist>(PixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data) noexcept</arglist>
+      <anchor>af485d18b4eb29775b973421b6d59704e</anchor>
+      <arglist>(PixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; ErasedType &gt; data) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>aec1a6d0da60d3cc3d3b82475b504f1f2</anchor>
+      <anchor>a09251735d25915b3c90caa57c11b3511</anchor>
       <arglist>(PixelStorage storage, PixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a4d80f21ce370fae3ca5b80725a6ee751</anchor>
+      <anchor>a5cd4e285d04bcf26fa0682866a49cb73</anchor>
       <arglist>(PixelFormat format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a731d40a09c28cb3a1b2cb2d960c1e78d</anchor>
-      <arglist>(PixelStorage storage, UnsignedInt format, UnsignedInt formatExtra, UnsignedInt pixelSize, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data) noexcept</arglist>
+      <anchor>a316f8b016dd26295e391d6be8af364a9</anchor>
+      <arglist>(PixelStorage storage, UnsignedInt format, UnsignedInt formatExtra, UnsignedInt pixelSize, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; ErasedType &gt; data) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a6d70e52b04f3b6ae93227911515eddef</anchor>
-      <arglist>(PixelStorage storage, PixelFormat format, UnsignedInt formatExtra, UnsignedInt pixelSize, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data) noexcept</arglist>
+      <anchor>abf75019af70d3c5a4556b0d274756d24</anchor>
+      <arglist>(PixelStorage storage, PixelFormat format, UnsignedInt formatExtra, UnsignedInt pixelSize, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; ErasedType &gt; data) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a5a58baefcb0d12176ade7fb37da3d7e0</anchor>
+      <anchor>a25baf1e23384af907ed31418e1fe5a9e</anchor>
       <arglist>(PixelStorage storage, UnsignedInt format, UnsignedInt formatExtra, UnsignedInt pixelSize, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a14489f912a23e23e80b0fe51bddcec02</anchor>
+      <anchor>a2e593e679f0db4252b285cbb92becde9</anchor>
       <arglist>(PixelStorage storage, PixelFormat format, UnsignedInt formatExtra, UnsignedInt pixelSize, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>ae9bb3afebcabac057f1992c903373b83</anchor>
-      <arglist>(PixelStorage storage, T format, U formatExtra, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data) noexcept</arglist>
+      <anchor>a03fdda770a6625062f482fac879377a8</anchor>
+      <arglist>(PixelStorage storage, U format, V formatExtra, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; ErasedType &gt; data) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>ad8fbca999e133a6e70d0fca7509ce536</anchor>
-      <arglist>(PixelStorage storage, T format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data) noexcept</arglist>
+      <anchor>a6f63f207ee0da9d8a815f75846d997e8</anchor>
+      <arglist>(PixelStorage storage, U format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; ErasedType &gt; data) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a843ae86af8f46f8111113cf6bb2e13f4</anchor>
-      <arglist>(T format, U formatExtra, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data) noexcept</arglist>
+      <anchor>a9d5d514a07293390bbefe4f0e6e8ba62</anchor>
+      <arglist>(U format, V formatExtra, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; ErasedType &gt; data) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a4d1445b664e5cc6868c8d8a7776f8853</anchor>
-      <arglist>(T format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; const void &gt; data) noexcept</arglist>
+      <anchor>a891569eccb324264eaef0772b0626e4e</anchor>
+      <arglist>(U format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size, Containers::ArrayView&lt; ErasedType &gt; data) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a27fd5ee1b624c0d2202af6f631df1b8d</anchor>
-      <arglist>(PixelStorage storage, T format, U formatExtra, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
+      <anchor>afcb1e42b1af026b18a18e0a3cbd2285a</anchor>
+      <arglist>(PixelStorage storage, U format, V formatExtra, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a7797b8fda0c2bfb89e602d4b8995d57c</anchor>
-      <arglist>(PixelStorage storage, T format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
+      <anchor>aef9e2c91ddc8295b5f50670aaf444b9f</anchor>
+      <arglist>(PixelStorage storage, U format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>ac0cda56aaca0c0ce6704ff8a5ca6d5a8</anchor>
-      <arglist>(T format, U formatExtra, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
+      <anchor>a3d75499895de338d852acd827b02e44a</anchor>
+      <arglist>(U format, V formatExtra, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>ImageView</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a169ce4612bb919edb99e2f3584e2f9a7</anchor>
-      <arglist>(T format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
+      <anchor>a4b6dd42c8e002c1a7bec2d4437d1aa67</anchor>
+      <arglist>(U format, const VectorTypeFor&lt; dimensions, Int &gt; &amp;size) noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ImageView</name>
+      <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
+      <anchor>adf095a3cd4e4d3943873c3c5bf057db5</anchor>
+      <arglist>(const ImageView&lt; dimensions, U &gt; &amp;other) noexcept</arglist>
     </member>
     <member kind="function">
       <type>PixelStorage</type>
       <name>storage</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a9b04e944d0a7ab035f671e3dff2f7882</anchor>
+      <anchor>afb7cbb4cae2686c7ae407b065567292f</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>PixelFormat</type>
       <name>format</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a23f711bdc4a68e81f898afeca969e71d</anchor>
+      <anchor>a3633ff647c9c359861ac7bcfdcb98393</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>UnsignedInt</type>
       <name>formatExtra</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a9da27a115e0beb193f583cef36204072</anchor>
+      <anchor>a8a3bdbe489ed468be624da25b87963ff</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>UnsignedInt</type>
       <name>pixelSize</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>ac54be8651fb11e1e792a06d55d7eb561</anchor>
+      <anchor>aa2860f9031a1a2a7019d0ac5ef5342c0</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>constexpr VectorTypeFor&lt; dimensions, Int &gt;</type>
       <name>size</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a5ef2cfede7bea2c60304dfb8d21fce31</anchor>
+      <anchor>ae4900ab401191dd8b0864b25930d620d</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>std::pair&lt; VectorTypeFor&lt; dimensions, std::size_t &gt;, VectorTypeFor&lt; dimensions, std::size_t &gt; &gt;</type>
       <name>dataProperties</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a64f8a35501ce4a7c328f280f543676c0</anchor>
+      <anchor>a43d2c8481a40cf110baf5888788c00f0</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Containers::ArrayView&lt; const char &gt;</type>
+      <type>Containers::ArrayView&lt; Type &gt;</type>
       <name>data</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a315839a841cb97b3b63dc4dd2261eabd</anchor>
+      <anchor>a8912e449f976d0d8a6d67c775fb175d6</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const T *</type>
+      <type>const U *</type>
       <name>data</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a43704e82aa46f30e3e6bd4575c754b6e</anchor>
+      <anchor>a4db2c3ad6f957533553a3b188a8d20cf</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>setData</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>ac8042e1f428aa0f73880900000af219e</anchor>
-      <arglist>(Containers::ArrayView&lt; const void &gt; data)</arglist>
+      <anchor>a34eabb7f51e1b2cfaf9bd59da830b706</anchor>
+      <arglist>(Containers::ArrayView&lt; ErasedType &gt; data)</arglist>
     </member>
     <member kind="function">
-      <type>Containers::StridedArrayView&lt; dimensions+1, const char &gt;</type>
+      <type>Containers::StridedArrayView&lt; dimensions+1, Type &gt;</type>
       <name>pixels</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>a4dc472e58479d9bcaa92f480c2bc9404</anchor>
+      <anchor>a13bedd03f65287197a040b32ac51ac7f</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>Containers::StridedArrayView&lt; dimensions, const T &gt;</type>
+      <type>Containers::StridedArrayView&lt; dimensions, typename std::conditional&lt; std::is_const&lt; Type &gt;::value, typename std::add_const&lt; U &gt;::type, U &gt;::type &gt;</type>
       <name>pixels</name>
       <anchorfile>classMagnum_1_1ImageView.html</anchorfile>
-      <anchor>afdd59c996e14d6d8faefcd81a1d10587</anchor>
+      <anchor>adeb303dc779520049f45a997cb99e0f0</anchor>
       <arglist>() const</arglist>
     </member>
     <docanchor file="classMagnum_1_1ImageView" title="Basic usage">ImageView-usage</docanchor>
+    <docanchor file="classMagnum_1_1ImageView" title="Data mutability">ImageView-mutable</docanchor>
     <docanchor file="classMagnum_1_1ImageView" title="Implementation-specific formats">ImageView-usage-implementation-specific</docanchor>
   </compound>
   <compound kind="class">
@@ -28433,6 +28756,7 @@
     <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Rendering">ImGuiIntegration-Context-usage-rendering</docanchor>
     <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Event handling">ImGuiIntegration-Context-usage-events</docanchor>
     <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Text input">ImGuiIntegration-Context-usage-text-input</docanchor>
+    <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Loading custom fonts">ImGuiIntegration-Context-fonts</docanchor>
     <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="DPI awareness">ImGuiIntegration-Context-dpi</docanchor>
     <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="HiDPI fonts">ImGuiIntegration-Context-dpi-fonts</docanchor>
     <docanchor file="classMagnum_1_1ImGuiIntegration_1_1Context" title="Multiple contexts">ImGuiIntegration-Context-multiple-contexts</docanchor>
@@ -31956,6 +32280,13 @@
     </member>
     <member kind="function" static="yes">
       <type>static Matrix4&lt; T &gt;</type>
+      <name>perspectiveProjection</name>
+      <anchorfile>classMagnum_1_1Math_1_1Matrix4.html</anchorfile>
+      <anchor>ac9e1d8b17f47c17213a20ab26a53f3b5</anchor>
+      <arglist>(const Vector2&lt; T &gt; &amp;bottomLeft, const Vector2&lt; T &gt; &amp;topRight, T near, T far)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Matrix4&lt; T &gt;</type>
       <name>lookAt</name>
       <anchorfile>classMagnum_1_1Math_1_1Matrix4.html</anchorfile>
       <anchor>a568407217908849afa90cfe99ccf54a7</anchor>
@@ -33424,7 +33755,7 @@
       <type>constexpr Vector&lt; DiagonalSize, T &gt;</type>
       <name>diagonal</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>aebcc322b7a6dfdb30c8257265a5d3085</anchor>
+      <anchor>a7c799b9741575c1919e61d9f38a52228</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -38521,10 +38852,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const EmscriptenUiEvent &amp;</type>
+      <type>const EmscriptenUiEvent *</type>
       <name>event</name>
       <anchorfile>classMagnum_1_1Platform_1_1EmscriptenApplication_1_1ViewportEvent.html</anchorfile>
-      <anchor>aa595009598e289cc036a18eb99e5df21</anchor>
+      <anchor>a1900ddf56d5280ad8c99a510ea19fb91</anchor>
       <arglist>() const</arglist>
     </member>
   </compound>
@@ -42557,6 +42888,34 @@
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
       <anchor>ac990bb8ae690e0a3b2df1126f7e9d064</anchor>
       <arglist>(Resource&lt; T, U &gt; &amp;&amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a352d8300dd2f2b8d30d6095fe39f8082</anchor>
+      <arglist>(const Resource&lt; T, U &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a97f234864749ac4ec196781707cf714b</anchor>
+      <arglist>(const Resource&lt; V, W &gt; &amp;) const =delete</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ae14859fe7a66ce771eb7ba4fc95b8156</anchor>
+      <arglist>(const Resource&lt; T, U &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>acbfa5216decd74ddca0247d7d6528af6</anchor>
+      <arglist>(const Resource&lt; V, W &gt; &amp;) const =delete</arglist>
     </member>
     <member kind="function">
       <type>ResourceKey</type>
@@ -49257,16 +49616,30 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>operator ImageView&lt; dimensions &gt;</name>
+      <name>operator BasicMutableImageView&lt; dimensions &gt;</name>
       <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
-      <anchor>ae6be182ec2bc3cfcc40207b916c118ed</anchor>
+      <anchor>a3871c685425545013ea0628b399e2aa5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator BasicImageView&lt; dimensions &gt;</name>
+      <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
+      <anchor>a85ae3fbd13e10ef04acd9e2f0cc3f5d7</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>operator CompressedImageView&lt; dimensions &gt;</name>
+      <name>operator BasicMutableCompressedImageView&lt; dimensions &gt;</name>
       <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
-      <anchor>aa5ac9fe147bc87f0037dee6b8ee5dbd2</anchor>
+      <anchor>ac4696e0ce16244b6e6490db63914196c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator BasicCompressedImageView&lt; dimensions &gt;</name>
+      <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
+      <anchor>ae95cf4dde7f8ab81b85177f47791a8f4</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -49333,13 +49706,6 @@
       <arglist>() &amp;</arglist>
     </member>
     <member kind="function">
-      <type>Containers::ArrayView&lt; char &gt;</type>
-      <name>data</name>
-      <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
-      <anchor>abfecf5b01f89f747f3b5ed2066bb9bd9</anchor>
-      <arglist>() &amp;&amp;=delete</arglist>
-    </member>
-    <member kind="function">
       <type>Containers::ArrayView&lt; const char &gt;</type>
       <name>data</name>
       <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
@@ -49347,10 +49713,17 @@
       <arglist>() const &amp;</arglist>
     </member>
     <member kind="function">
-      <type>Containers::ArrayView&lt; const char &gt;</type>
+      <type>Containers::Array&lt; char &gt;</type>
       <name>data</name>
       <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
-      <anchor>a496da37d9c87160b8726f3e05040170b</anchor>
+      <anchor>a33a9e8bdfca8514ac2af4b70119e61ca</anchor>
+      <arglist>() &amp;&amp;</arglist>
+    </member>
+    <member kind="function">
+      <type>Containers::Array&lt; char &gt;</type>
+      <name>data</name>
+      <anchorfile>classMagnum_1_1Trade_1_1ImageData.html</anchorfile>
+      <anchor>a87537890e55b6d3c72be8c39a2623200</anchor>
       <arglist>() const &amp;&amp;=delete</arglist>
     </member>
     <member kind="function">
@@ -51558,7 +51931,7 @@
       <type>Signal</type>
       <name>tapped</name>
       <anchorfile>classMagnum_1_1Ui_1_1Button.html</anchorfile>
-      <anchor>a0903428b90b7e71c9390da426572b036</anchor>
+      <anchor>adb362d95ca1f537dd2c1628ff61be509</anchor>
       <arglist>()</arglist>
     </member>
     <docanchor file="classMagnum_1_1Ui_1_1Button" title="Styling">Ui-Button-styling</docanchor>
@@ -51649,21 +52022,21 @@
       <type>Signal</type>
       <name>focused</name>
       <anchorfile>classMagnum_1_1Ui_1_1Input.html</anchorfile>
-      <anchor>a88ec9f6958502d05e3184419861a70d8</anchor>
+      <anchor>aa690e3fa629be6195286459df40b6f97</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>Signal</type>
       <name>blurred</name>
       <anchorfile>classMagnum_1_1Ui_1_1Input.html</anchorfile>
-      <anchor>a872cdfd023d4e31b118b30de141522ec</anchor>
+      <anchor>ac3f3140b89d32decc8ef166f9fef655c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>Signal</type>
       <name>valueChanged</name>
       <anchorfile>classMagnum_1_1Ui_1_1Input.html</anchorfile>
-      <anchor>a5407fafcf25f97016f03fd3b63a08d05</anchor>
+      <anchor>a99de355cbc4c060933b458547d896b43</anchor>
       <arglist>(const std::string &amp;value)</arglist>
     </member>
   </compound>
@@ -52145,14 +52518,14 @@
       <type>Signal</type>
       <name>inputWidgetFocused</name>
       <anchorfile>classMagnum_1_1Ui_1_1UserInterface.html</anchorfile>
-      <anchor>ae6356d2cc3400b6b80f06822696f0be1</anchor>
+      <anchor>a57f14bb3b23fd194904886cce2504873</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>Signal</type>
       <name>inputWidgetBlurred</name>
       <anchorfile>classMagnum_1_1Ui_1_1UserInterface.html</anchorfile>
-      <anchor>a4101e9b947d67939d32b96dbb8658e8e</anchor>
+      <anchor>a8bd58c7540403b91b3b953512bac43ab</anchor>
       <arglist>()</arglist>
     </member>
     <docanchor file="classMagnum_1_1Ui_1_1UserInterface" title="DPI awareness">Ui-UserInterface-dpi</docanchor>
@@ -52939,6 +53312,13 @@
       <anchorfile>classMagnum_1_1Math_1_1Matrix4.html</anchorfile>
       <anchor>a6475b3ef155c9142b890c8133504ae9b</anchor>
       <arglist>(Rad&lt; Float &gt; fov, Float aspectRatio, Float near, Float far)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static Matrix4&lt; Float &gt;</type>
+      <name>perspectiveProjection</name>
+      <anchorfile>classMagnum_1_1Math_1_1Matrix4.html</anchorfile>
+      <anchor>ac9e1d8b17f47c17213a20ab26a53f3b5</anchor>
+      <arglist>(const Vector2&lt; Float &gt; &amp;bottomLeft, const Vector2&lt; Float &gt; &amp;topRight, Float near, Float far)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static Matrix4&lt; Float &gt;</type>
@@ -55708,7 +56088,7 @@
       <type>constexpr Vector&lt; DiagonalSize, T &gt;</type>
       <name>diagonal</name>
       <anchorfile>classMagnum_1_1Math_1_1RectangularMatrix.html</anchorfile>
-      <anchor>aebcc322b7a6dfdb30c8257265a5d3085</anchor>
+      <anchor>a7c799b9741575c1919e61d9f38a52228</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -55821,6 +56201,34 @@
       <arglist>(Resource&lt; Magnum::DebugTools::ForceRendererOptions, Magnum::DebugTools::ForceRendererOptions &gt; &amp;&amp;other)</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a352d8300dd2f2b8d30d6095fe39f8082</anchor>
+      <arglist>(const Resource&lt; Magnum::DebugTools::ForceRendererOptions, Magnum::DebugTools::ForceRendererOptions &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a97f234864749ac4ec196781707cf714b</anchor>
+      <arglist>(const Resource&lt; V, W &gt; &amp;) const=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ae14859fe7a66ce771eb7ba4fc95b8156</anchor>
+      <arglist>(const Resource&lt; Magnum::DebugTools::ForceRendererOptions, Magnum::DebugTools::ForceRendererOptions &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>acbfa5216decd74ddca0247d7d6528af6</anchor>
+      <arglist>(const Resource&lt; V, W &gt; &amp;) const=delete</arglist>
+    </member>
+    <member kind="function">
       <type>ResourceKey</type>
       <name>key</name>
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
@@ -55907,6 +56315,34 @@
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
       <anchor>ac990bb8ae690e0a3b2df1126f7e9d064</anchor>
       <arglist>(Resource&lt; Magnum::DebugTools::ObjectRendererOptions, Magnum::DebugTools::ObjectRendererOptions &gt; &amp;&amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a352d8300dd2f2b8d30d6095fe39f8082</anchor>
+      <arglist>(const Resource&lt; Magnum::DebugTools::ObjectRendererOptions, Magnum::DebugTools::ObjectRendererOptions &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a97f234864749ac4ec196781707cf714b</anchor>
+      <arglist>(const Resource&lt; V, W &gt; &amp;) const=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ae14859fe7a66ce771eb7ba4fc95b8156</anchor>
+      <arglist>(const Resource&lt; Magnum::DebugTools::ObjectRendererOptions, Magnum::DebugTools::ObjectRendererOptions &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>acbfa5216decd74ddca0247d7d6528af6</anchor>
+      <arglist>(const Resource&lt; V, W &gt; &amp;) const=delete</arglist>
     </member>
     <member kind="function">
       <type>ResourceKey</type>
@@ -55997,6 +56433,34 @@
       <arglist>(Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;&amp;other)</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a352d8300dd2f2b8d30d6095fe39f8082</anchor>
+      <arglist>(const Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a97f234864749ac4ec196781707cf714b</anchor>
+      <arglist>(const Resource&lt; V, W &gt; &amp;) const=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ae14859fe7a66ce771eb7ba4fc95b8156</anchor>
+      <arglist>(const Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::Flat&lt; dimensions &gt; &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>acbfa5216decd74ddca0247d7d6528af6</anchor>
+      <arglist>(const Resource&lt; V, W &gt; &amp;) const=delete</arglist>
+    </member>
+    <member kind="function">
       <type>ResourceKey</type>
       <name>key</name>
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
@@ -56085,6 +56549,34 @@
       <arglist>(Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;&amp;other)</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a352d8300dd2f2b8d30d6095fe39f8082</anchor>
+      <arglist>(const Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a97f234864749ac4ec196781707cf714b</anchor>
+      <arglist>(const Resource&lt; V, W &gt; &amp;) const=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ae14859fe7a66ce771eb7ba4fc95b8156</anchor>
+      <arglist>(const Resource&lt; Magnum::GL::AbstractShaderProgram, Magnum::Shaders::VertexColor&lt; dimensions &gt; &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>acbfa5216decd74ddca0247d7d6528af6</anchor>
+      <arglist>(const Resource&lt; V, W &gt; &amp;) const=delete</arglist>
+    </member>
+    <member kind="function">
       <type>ResourceKey</type>
       <name>key</name>
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
@@ -56171,6 +56663,34 @@
       <anchorfile>classMagnum_1_1Resource.html</anchorfile>
       <anchor>ac990bb8ae690e0a3b2df1126f7e9d064</anchor>
       <arglist>(Resource&lt; Magnum::GL::Mesh, Magnum::GL::Mesh &gt; &amp;&amp;other)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a352d8300dd2f2b8d30d6095fe39f8082</anchor>
+      <arglist>(const Resource&lt; Magnum::GL::Mesh, Magnum::GL::Mesh &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>a97f234864749ac4ec196781707cf714b</anchor>
+      <arglist>(const Resource&lt; V, W &gt; &amp;) const=delete</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>ae14859fe7a66ce771eb7ba4fc95b8156</anchor>
+      <arglist>(const Resource&lt; Magnum::GL::Mesh, Magnum::GL::Mesh &gt; &amp;other) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classMagnum_1_1Resource.html</anchorfile>
+      <anchor>acbfa5216decd74ddca0247d7d6528af6</anchor>
+      <arglist>(const Resource&lt; V, W &gt; &amp;) const=delete</arglist>
     </member>
     <member kind="function">
       <type>ResourceKey</type>
@@ -65109,45 +65629,115 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ImageView&lt; 1 &gt;</type>
+      <type>ImageView&lt; dimensions, const char &gt;</type>
+      <name>BasicImageView</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a876e8ce27cf7df9fb6201f81406ae250</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicImageView&lt; 1 &gt;</type>
       <name>ImageView1D</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a52c690705313e0dfde62d0f5315953be</anchor>
+      <anchor>ad6cbc90385cec67f103dae61d9d3bbd6</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ImageView&lt; 2 &gt;</type>
+      <type>BasicImageView&lt; 2 &gt;</type>
       <name>ImageView2D</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a4e378fbaa61814138523f9ee49e2c2c0</anchor>
+      <anchor>ab6bcfc56373c89f9655b9f87f2566ca8</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ImageView&lt; 3 &gt;</type>
+      <type>BasicImageView&lt; 3 &gt;</type>
       <name>ImageView3D</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a4f151ab2ce87b457b9dd503c3aa162c1</anchor>
+      <anchor>aedaaa1cbb49a03bbb3cafc132d42584e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CompressedImageView&lt; 1 &gt;</type>
+      <type>ImageView&lt; dimensions, char &gt;</type>
+      <name>BasicMutableImageView</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>af62f11692685ea6c74d752ff71ecf54b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicMutableImageView&lt; 1 &gt;</type>
+      <name>MutableImageView1D</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>ae0490cb632c2db81a8fb038fce48ae60</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicMutableImageView&lt; 2 &gt;</type>
+      <name>MutableImageView2D</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>ac8d2058eea925905bfe83f7d5db93c54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicMutableImageView&lt; 3 &gt;</type>
+      <name>MutableImageView3D</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a0eb96702168beb80f3e12301cb621019</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CompressedImageView&lt; dimensions, const char &gt;</type>
+      <name>BasicCompressedImageView</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a2138d3f22fed7afa0e2a705437071631</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicCompressedImageView&lt; 1 &gt;</type>
       <name>CompressedImageView1D</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a17f67f03d9d178db86121ea1385d3e33</anchor>
+      <anchor>a60316e5a48cf52d44eabdb0c9656c41b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CompressedImageView&lt; 2 &gt;</type>
+      <type>BasicCompressedImageView&lt; 2 &gt;</type>
       <name>CompressedImageView2D</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>a7f75b72713e3d1f671354cbd0c261b7e</anchor>
+      <anchor>aa65c2f90270d256799d0ad88f51b3c0f</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CompressedImageView&lt; 3 &gt;</type>
+      <type>BasicCompressedImageView&lt; 3 &gt;</type>
       <name>CompressedImageView3D</name>
       <anchorfile>namespaceMagnum.html</anchorfile>
-      <anchor>abb65097cc08025b36cae174ad55a7bff</anchor>
+      <anchor>aaaf1c516639176324b0c113d80f73cbe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CompressedImageView&lt; dimensions, char &gt;</type>
+      <name>BasicMutableCompressedImageView</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a35a9f731843c8c10ca97bac072bc4bfa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicMutableCompressedImageView&lt; 1 &gt;</type>
+      <name>MutableCompressedImageView1D</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a87ab485cce4fc929265a79edb4b2f8ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicMutableCompressedImageView&lt; 2 &gt;</type>
+      <name>MutableCompressedImageView2D</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a84c876f73db1161bf43e6ea2d8f2670e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BasicMutableCompressedImageView&lt; 3 &gt;</type>
+      <name>MutableCompressedImageView3D</name>
+      <anchorfile>namespaceMagnum.html</anchorfile>
+      <anchor>a993dd48773615e001f154221079614d7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -73915,6 +74505,7 @@
     <docanchor file="changelog" title="GL library">changelog-latest-changes-gl</docanchor>
     <docanchor file="changelog" title="Math library">changelog-latest-changes-math</docanchor>
     <docanchor file="changelog" title="MeshTools library">changelog-latest-changes-meshtools</docanchor>
+    <docanchor file="changelog" title="Shaders library">changelog-latest-changes-shaders</docanchor>
     <docanchor file="changelog" title="TextureTools library">changelog-latest-changes-texturetools</docanchor>
     <docanchor file="changelog" title="Platform libraries">changelog-latest-changes-platform</docanchor>
     <docanchor file="changelog" title="Text library">changelog-latest-changes-text</docanchor>
@@ -74202,7 +74793,7 @@
   </compound>
   <compound kind="page">
     <name>openal-support</name>
-    <title>OpenAL support state</title>
+    <title>Support state</title>
     <filename>openal-support</filename>
     <docanchor file="openal-support" title="OpenAL implementation state">openal-support-state</docanchor>
     <docanchor file="openal-support" title="Extensions">openal-extension-support</docanchor>
@@ -74726,6 +75317,8 @@
     <title>Examples</title>
     <filename>changelog-examples</filename>
     <docanchor file="changelog-examples" title="Changes since 2019.01">changelog-examples-latest</docanchor>
+    <docanchor file="changelog-examples" title="New features">changelog-examples-latest-new</docanchor>
+    <docanchor file="changelog-examples" title="Changes and improvements">changelog-examples-latest-changes</docanchor>
     <docanchor file="changelog-examples" title="Bug fixes">changelog-examples-latest-bugfixes</docanchor>
     <docanchor file="changelog-examples" title="2019.01">changelog-examples-2019-01</docanchor>
     <docanchor file="changelog-examples" title="Dependency changes">changelog-examples-2019-01-dependencies</docanchor>
@@ -74759,6 +75352,14 @@
     <docanchor file="examples-cubemap" title="Key controls">examples-cubemap-controls</docanchor>
     <docanchor file="examples-cubemap" title="Credits">examples-cubemap-credits</docanchor>
     <docanchor file="examples-cubemap" title="Source">examples-cubemap-source</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>examples-dart</name>
+    <title>DART Physics</title>
+    <filename>examples-dart</filename>
+    <docanchor file="examples-dart" title="Key controls">examples-dart-controls</docanchor>
+    <docanchor file="examples-dart" title="Credits">examples-dart-credits</docanchor>
+    <docanchor file="examples-dart" title="Source">examples-dart-source</docanchor>
   </compound>
   <compound kind="page">
     <name>examples-imgui</name>
@@ -74914,6 +75515,7 @@
     <filename>changelog-extras</filename>
     <docanchor file="changelog-extras" title="Changes since 2019.01">changelog-extras-latest</docanchor>
     <docanchor file="changelog-extras" title="New features">changelog-extras-latest-new</docanchor>
+    <docanchor file="changelog-extras" title="Changes and improvements">changelog-extras-latest-changes</docanchor>
     <docanchor file="changelog-extras" title="Build system">changelog-extras-latest-buildsystem</docanchor>
     <docanchor file="changelog-extras" title="2019.01">changelog-extras-2019-01</docanchor>
     <docanchor file="changelog-extras" title="Dependency changes">changelog-extras-2019-01-dependencies</docanchor>
