@@ -2,14 +2,14 @@ Array view implementations in Magnum
 ####################################
 
 :date: 2019-02-18
-:modified: 2019-02-19
+:modified: 2019-08-03
 :category: Backstage
 :tags: C++, Corrade, Eigen, GLM, ImGui, Vulkan, singles
 :summary: Similarly to the pointer and reference wrappers
     `described in the last article <{filename}lightweight-stl-compatible-unique-pointer.rst>`_,
     Magnum's array views recently received STL compatibility as well. Let's
     take that as an opportunity to compare them with the standard
-    implementation in |span|.
+    implementation in :dox:`std::span`.
 
 .. role:: cpp(code)
     :language: c++
@@ -19,18 +19,25 @@ Array view implementations in Magnum
 .. TODO: replace with :dox:`span` when the tag file has it
 .. role:: link-flat(link)
     :class: m-flat
-.. |span| replace:: :link-flat:`std::span <https://en.cppreference.com/w/cpp/container/span>`
-.. |subspan| replace:: :link-flat:`std::span::subspan() <https://en.cppreference.com/w/cpp/container/span/subspan>``
 .. |as_bytes| replace:: :link-flat:`std::as_bytes() <https://en.cppreference.com/w/cpp/container/span/as_bytes>`
 
 This was meant to be a short blog post showing the new STL compatibility of
 various :dox:`ArrayView <Containers::ArrayView>` classes. However, after diving
-deep into |span|, there was suddenly much more to write about.
+deep into :dox:`std::span`, there was suddenly much more to write about.
 
-.. note-success:: Content care: Feb 19, 2019
+.. note-success:: Content care
 
-    Apart from various clarifications and typo fixes, the `Magnum's array views`_
-    section is now corrected to avoid spreading misinformation about :cpp:`operator[]` overhead.
+    .. class:: m-diary
+
+    Feb 19, 2019
+        Apart from various clarifications and typo fixes, the `Magnum's array views`_
+        section is now corrected to avoid spreading misinformation about
+        :cpp:`operator[]` overhead.
+    Aug 3, 2019
+        The original :dox:`std::span` proposal used *signed* :dox:`std::ptrdiff_t`
+        instead of :dox:`std::size_t` as an index type. This caused a lot of
+        unnecessary friction and was corrected since. The article is updated to
+        reflect this change.
 
 `The story of waiting for a thing to get standardized...`_
 ==========================================================
@@ -45,7 +52,7 @@ it would take before the standard introduces an equivalent, allowing me to get
 rid of my own in favor of a *well-tested, well-optimized and well-known
 implementation*.
 
-Fast forward to 2019, we *might* soon be there with |span|, scheduled
+Fast forward to 2019, we *might* soon be there with :dox:`std::span`, scheduled
 for inclusion in C++2a. In the meantime, Magnum's :dox:`Containers::ArrayView`
 stabilized, learned from its past mistakes and was used in so many contexts
 that I dare to say it's feature-complete. In the process it received a
@@ -58,15 +65,15 @@ data. I'll be showing its sparse magic in a later article.
 
 Much like :dox:`std::optional`, originally scheduled for C++11 but due to its
 design becoming more and more complex (:cpp:`constexpr` support, optional
-references, ...), causing it to be delayed until C++17; |span| is, in my
-opinion, arriving way too late as well.
+references, ...), causing it to be delayed until C++17; :dox:`std::span` is, in
+my opinion, arriving way too late as well.
 
 Instead of shipping a minimal viable implementation as soon as possible to get
 codebases jump on it --- and let its future design adapt to user feedback ---
 design-in-a-vacuum means C++2a will ship with a complex implementation and a
 set of gudelines that users have to adapt to instead.
 
-In short, the C++2a |span| provides:
+In short, the C++2a :dox:`std::span` provides:
 
 -   the usual index-based and iterator access to elements of the view,
 -   both dynamic-size and fixed-size array views in a single type (which, as I
@@ -74,40 +81,45 @@ In short, the C++2a |span| provides:
     any real benefits)
 -   implicit conversion from C-style arrays, :dox:`std::array` and
     :dox:`std::vector`,
--   as the only STL type uses *signed* integer for sizes (which, again, as I
-    realized, only brings complications when interfacing with about every other
-    code)
 -   and a well-meant, but fundamentally broken *implicit* conversion from *any
     type* that contains a :cpp:`data()` and a :cpp:`size()` member. If that
     sounds dangerous, it's because it really is. More on that below.
 
-Originally, |span| was meant to not only handle both dynamic and fixed-size
-array views, but also multi-dimensional and strided views. *Fortunately* such
-functionality was separated into `std::mdspan`_, to arrive probably no earlier
-than in C++23 (again, *way too late*).
+Originally, :dox:`std::span` was meant to not only handle both dynamic and
+fixed-size array views, but also multi-dimensional and strided views.
+*Fortunately* such functionality was separated into `std::mdspan`_, to arrive
+probably no earlier than in C++23 (again, *way too late*). If you want to
+know more about multi-dimensional array views and how they compare to the
+proposed standard containers, have a look at
+`Multi-dimensional strided array views in Magnum <{filename}multidimensional-strided-array-views.rst>`_.
 
 .. block-warning:: Span? Array view?
 
-    The |span| was originally named :cpp:`std::array_view`, which to me
-    personally conveys the meaning of a view on a contiguous memory range
+    The :dox:`std::span` was originally named :cpp:`std::array_view`, which to
+    me personally conveys the meaning of a view on a contiguous memory range
     *much better*. However, we ended up with a span, because it seems the
     committee `felt like calling it a span that day <https://cor3ntin.github.io/posts/span/#is-span-a-view>`_.
-    Together with lumping both dynamic and statically-sized views together
-    while adding some further inconsistencies to the mix (such as signed
-    sizes), I fear it only makes such a simple type harder to teach and reason
-    about.
+    Together with lumping both dynamic and statically-sized views into one bag,
+    I fear it only makes such a simple type harder to teach and reason about.
 
     To add more salt to the wound, C++17 has :dox:`std::string_view` (so *not*
-    :cpp:`std::string_span`), it has *unsigned* sizes and is a :cpp:`const`
-    view. So much for the consistency.
+    :cpp:`std::string_span`) and is a :cpp:`const` view. So much for the
+    consistency.
+
+    There was one additional inconsistency --- fortunately corrected since ---
+    where :dox:`std::span` was the only type that used *signed*
+    :dox:`std::ptrdiff_t` instead of :dox:`std::size_t` as an index type. This
+    caused a lot of unnecessary friction and was reverted with
+    `P1227 <https://wg21.link/p1227>`_. Corresponding changes in Clang's libc++
+    will probably `ship with Clang 9 <https://github.com/llvm-mirror/libcxx/commit/b3c66aa0ab768e7a4ab73e581b18b6ff5f1c2040>`_.
 
 `Magnum's array views`_
 =======================
 
-So, what's :dox:`Containers::ArrayView` capable of? Like |span|, it can be
-implicitly constructed from a C array reference, or explicitly from a pair of
-pointer and a size. It's also possible to slice the array, equivalently to
-|subspan| and friends:
+So, what's :dox:`Containers::ArrayView` capable of? Like :dox:`std::span`, it
+can be implicitly constructed from a C array reference, or explicitly from a
+pair of pointer and a size. It's also possible to slice the array, equivalently
+to :dox:`std::span::subspan()` and friends:
 
 .. code:: c++
 
@@ -120,7 +132,7 @@ pointer and a size. It's also possible to slice the array, equivalently to
 Similarly it goes for statically-sized array views. It's possible to
 convert between dynamically-sized and statically-sized array views using
 fixed-size :dox:`slice<n>() <Containers::ArrayView::slice()>` and related APIs
---- again, |span| has that too:
+--- again, :dox:`std::span` has that too:
 
 .. code:: c++
 
@@ -160,7 +172,8 @@ compile time.
     for random access, since the :cpp:`operator T*` has to be called instead.
     Both are function calls and have the same overhead in debug builds. This
     also means array views *might* get checked :cpp:`operator[]` at some point
-    as well, howewer it'll probably be opt-in to avoid assertion messages     getting inlined in every place where the function gets called.
+    as well, howewer it'll probably be opt-in to avoid assertion messages
+    getting inlined in every place where the function gets called.
 
 `STL compatibility`_
 --------------------
@@ -193,14 +206,15 @@ iterator or element access:
     for(float i: Containers::arrayView(data).prefix(100))
         sum += i;
 
-In case you're feeling like using the standard C++2a |span| instead (or you
-interface with a library using it), there's no need to worry either. A
+In case you're feeling like using the standard C++2a :dox:`std::span` instead
+(or you interface with a library using it), there's no need to worry either. A
 compatibility with it is provided in
 :dox:`Corrade/Containers/ArrayViewStlSpan.h </home/mosra/Code/corrade/src/Corrade/Containers/ArrayViewStlSpan.h>`.
 As far as I'm aware, only libc++ ships an implementation of it at the moment.
 For the span there's many more different conversion possibilities,
 :dox:`see the docs <Containers-ArrayView-stl>` for more information. This
-conversion is again separate from the rest because (at least the libc++) :cpp:`#include <span>` managed to gain almost twice the weight as both
+conversion is again separate from the rest because (at least the libc++)
+:cpp:`#include <span>` managed to gain almost twice the weight as both
 :cpp:`#include <vector>` and :cpp:`#include <array>` together. I don't know
 how's that possible for just a fancy pair of pointer and size with a handful of
 one-liner member functions to be that big, but here we are.
@@ -264,10 +278,11 @@ specialization is used for such case and to make it possible to pass in array
 views of any type, it's implicitly convertible from them, with their size
 getting recalculated to byte count.
 
-Looking at |span|, it provides something similar through |as_bytes|, however
-it's an explicit operation and is using the fancy new :cpp:`std::byte` type
-(which, in my opinion, doesn't add anything useful over the similarly opaque :cpp:`void*`) --- and also, due to that, is *not* :cpp:`constexpr` (while the
-Magnum array view type erasure *is*).
+Looking at :dox:`std::span`, it provides something similar through |as_bytes|,
+however it's an explicit operation and is using the fancy new :dox:`std::byte`
+type (which, in my opinion, doesn't add anything useful over the similarly
+opaque :cpp:`void*`) --- and also, due to that, is *not* :cpp:`constexpr`
+(while the Magnum array view type erasure *is*).
 
 `Pointer-like semantics`_
 -------------------------
@@ -277,7 +292,8 @@ arrays --- they're implicitly convertible to its underlying pointer type
 (which, again, allows us to optimize debug performance by not having to
 explicitly provide :cpp:`operator[]`) and the usual pointer arithmetic works on
 them as well. That allows them to be more easily used when interfacing with C
-APIs, for example like below. The |span| doesn't expose any such functionality.
+APIs, for example like below. The :dox:`std::span` doesn't expose any such
+functionality.
 
 .. code:: c++
 
@@ -287,12 +303,12 @@ APIs, for example like below. The |span| doesn't expose any such functionality.
 
 The pointer-like semantics means also that :cpp:`operator==` and other
 comparison operators work the same way as on pointers. According to
-cppreference at least, |span| doesn't provide any of these and since it doesn't
-retain anything else from the pointer-like semantics, it's probably
+cppreference at least, :dox:`std::span` doesn't provide any of these and since
+it doesn't retain anything else from the pointer-like semantics, it's probably
 `for the better <https://cor3ntin.github.io/posts/span/#span-operator>`_ ---
-since |span| has neither really a pointer nor a container semantics, both
-reasons for :cpp:`==` behavior like on a pointer or like on a container are
-equally valid for either party and equally confusing for the other.
+since :dox:`std::span` has neither really a pointer nor a container semantics,
+both reasons for :cpp:`==` behavior like on a pointer or like on a container
+are equally valid for either party and equally confusing for the other.
 
 `Sized null views`_
 -------------------
@@ -313,8 +329,9 @@ bytes:
     buffer.setData({nullptr, 32*3*sizeof(float)});
 
 Later, when adding :dox:`Containers::StaticArrayView`, this feature allowed me
-to provide it with an implicit constructor. When checking out |span|, I
-discovered that implicit constructor of the fixed-size variant is not possible.
+to provide it with an implicit constructor. When checking out :dox:`std::span`,
+I discovered that implicit constructor of the fixed-size variant is not
+possible.
 
 .. code:: c++
 
@@ -327,7 +344,8 @@ discovered that implicit constructor of the fixed-size variant is not possible.
     pointer is :cpp:`nullptr` and :cpp:`true` if not. With views, and
     especially :cpp:`nullptr` views, the result of boolean conversion is less
     clear. While it's possible to enforce all null views to have a zero size
-    (like |span| does), what about zero-sized non-null views? Since the view is empty, should boolean conversion really return :cpp:`true`?
+    (like :dox:`std::span` does), what about zero-sized non-null views? Since
+    the view is empty, should boolean conversion really return :cpp:`true`?
 
     Currently, Magnum is following the pointer semantics, so :cpp:`false` is
     returned if and only if the pointer is :cpp:`nullptr`. That's mainly due to
@@ -375,9 +393,9 @@ times, it correlates with it pretty well.
     :values: 2451 8608 12029 15117 0 30715 17607
     :colors: success primary primary warning default danger warning
 
-|span| ships in Clang's libc++ 7.0 (and thus I assume in Xcode 10.0 as well),
-so here's a comparison using libc++. To make the comparison fair, it uses the
-C++2a standard in all cases:
+:dox:`std::span` ships in Clang's libc++ 7.0 (and thus I assume in Xcode 10.0
+as well), so here's a comparison using libc++. To make the comparison fair, it
+uses the C++2a standard in all cases:
 
 .. code:: sh
 
@@ -409,17 +427,17 @@ due to all the compiler magic that needs to be different for each platform.
     while forward declarations for all container classes in Magnum are
     available simply by including
     :dox:`Corrade/Containers/Containers.h </home/mosra/Code/corrade/src/Corrade/Containers/Containers.h>`,
-    neither |span|, :cpp:`gsl::span` nor the Span Lite provide anything
-    standardized like that, and due to the default template argument for the
-    extent, you can't even provide the forward declaration yourself. So the
-    cost of > 25k preprocessed lines is *omnipresent*.
+    neither :dox:`std::span`, :cpp:`gsl::span` nor the Span Lite provide
+    anything standardized like that, and due to the default template
+    argument for the extent, you can't even provide the forward declaration
+    yourself. So the cost of > 25k preprocessed lines is *omnipresent*.
 
     On the other hand, using :dox:`Containers::ArrayView` can help reduce
     compile times even in STL-based workflows --- for all functions that would
     take an :dox:`std::array` or :dox:`std::vector` by a :cpp:`const` reference
-    (or a |span|), take an :dox:`Containers::ArrayView` instead. You'll save on
-    the vector/array :cpp:`#include`\ s, and if you go even further and
-    forward-declare the view, you can save those 2k lines as well.
+    (or a :dox:`std::span`), take an :dox:`Containers::ArrayView` instead.
+    You'll save on the vector/array :cpp:`#include`\ s, and if you go even
+    further and forward-declare the view, you can save those 2k lines as well.
 
 `Compile times`_
 ----------------
@@ -512,7 +530,7 @@ for an unoptimized version of the snippet above, the Magnum implementation is
 `code written with Span Lite <https://gcc.godbolt.org/z/W2OOFU>`_ and about
 *three times* smaller `than the same using GSL span <https://gcc.godbolt.org/z/GDdRC0>`_. In all cases the compiler is able to optimize everything away at
 ``-O1``. Unfortunately Compiler Explorer doesn't have an option to use libc++,
-so couldn't make a comparison with |span| there.
+so couldn't make a comparison with :dox:`std::span` there.
 
 `The baby steps (and falls) of std::span`_
 ==========================================
@@ -545,11 +563,11 @@ But in that case it's not harmful, only annoying, as the conversion can no
 longer be done directly through an explicit conversion but rather using some
 conversion function.
 
-In case of |span|, it's much worse --- there's an all-catching constructor
-taking any container-like type. It's a well meant feature, however, it works
-even in the case of a fixed-size span --- and there it gets dangerous, as shown
-below. And this is not just a cause of an implementation issue in libc++, it's
-*designed this way* in
+In case of :dox:`std::span`, it's much worse --- there's an all-catching
+constructor taking any container-like type. It's a well meant feature, however,
+it works even in the case of a fixed-size span --- and there it gets dangerous,
+as shown below. And this is not just a cause of an implementation issue in
+libc++, it's *designed this way* in
 `the standard itself <https://en.cppreference.com/w/cpp/container/span/span>`_
 --- of all things (exceptions, asserts, compile-time errors), it chooses the
 worst --- such conversion is declared as undefined behavior.  Fortunately,
