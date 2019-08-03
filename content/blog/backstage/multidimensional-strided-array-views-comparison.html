@@ -1,0 +1,157 @@
+<table class="m-table">
+<thead>
+  <tr>
+    <th colspan="2"></th>
+    <th>StridedArrayView</th>
+    <th>std::mdspan</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th colspan="2">
+      Works on C++11
+    </th>
+    <td class="m-success m-text-center">✔</td>
+    <td class="m-warning m-text-center">
+      …<br />
+      <span class="m-text m-small">STL version won't</span>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2">
+      Construction with<br/>
+      a bounds check
+    </th>
+    <td class="m-success m-text-center">
+      ✔<br/>
+      <span class="m-text m-small">requires a sized view</span>
+    </td>
+    <td class="m-danger m-text-center">
+      ✘<br/>
+      <span class="m-text m-small">takes just a pointer</span>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2">
+      Zero and negative strides
+    </th>
+    <td class="m-success m-text-center">✔</td>
+    <td class="m-success m-text-center">
+      ✔<br/>
+      <span class="m-text m-small">(I hope?)</span>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2">
+      Direct element access
+    </th>
+    <td class="m-success m-text-center">
+      ✔<br/>
+      <span class="m-text m-small"><code>[i][j][k]</code></span>
+    </td>
+    <td class="m-success m-text-center">
+      ✔<br/>
+      <span class="m-text m-small"><code>(i, j, k)</code></span>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2">
+      Iterable with range-for
+    </th>
+    <td class="m-success m-text-center">✔</td>
+    <td class="m-danger m-text-center">✘</td>
+  </tr>
+  <tr>
+    <th colspan="2">
+      <code>[]</code> returns a view<br />
+      of one dimension less
+    </th>
+    <td class="m-success m-text-center">✔</td>
+    <td class="m-danger m-text-center">
+      ✘<br/>
+      <span class="m-text m-small"><code>[]</code> allowed only for 1D</span>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2">
+      Both run-time and<br/>
+      compile-time sizes
+    </th>
+    <td class="m-danger m-text-center">✘</td>
+    <td class="m-success m-text-center">
+      ✔<br/>
+      <span class="m-text m-small"><code>std::dynamic_extent</code></span>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2">
+      Complexity of instantiating<br />
+      a simple 2D view
+    </th>
+    <td class="m-success m-text-center">
+      ✔<br/>
+      <span class="m-text m-small">easy</span>
+    </td>
+    <td class="m-warning m-text-center">
+      …<br/>
+      <span class="m-text m-small">extremely non-trivial</span>
+    </td>
+  </tr>
+  <tr>
+    <th rowspan="5">
+      Simple<br/>
+      operations
+    </th>
+    <th>slicing</th>
+    <td class="m-success m-text-center">✔</td>
+    <td class="m-warning m-text-center">
+      …<br/>
+      <span class="m-text m-small">verbose</span>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      expand/flatten<br/>
+      dimensions
+    </th>
+    <td class="m-success m-text-center">✔</td>
+    <td class="m-warning m-text-center">
+      …<br/>
+      <span class="m-text m-small">verbose</span>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      dimension<br/>
+      flipping
+    </th>
+    <td class="m-success m-text-center">✔</td>
+    <td class="m-dim m-text-center">
+      ?<br/>
+      <span class="m-text m-small">can't tell</span>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      dimension<br/>
+      transposing
+    </th>
+    <td class="m-success m-text-center">✔</td>
+    <td class="m-dim m-text-center">
+      ?<br/>
+      <span class="m-text m-small">can't tell</span>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      dimension<br/>
+      broadcasting
+    </th>
+    <td class="m-success m-text-center">✔</td>
+    <td class="m-dim m-text-center">
+      ?<br/>
+      <span class="m-text m-small">can't tell</span>
+    </td>
+  </tr>
+</tbody>
+</table>

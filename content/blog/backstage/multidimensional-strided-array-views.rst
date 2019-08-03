@@ -2,6 +2,7 @@ Multi-dimensional strided array views in Magnum
 ###############################################
 
 :date: 2019-04-30
+:modified: 2019-08-03
 :category: Backstage
 :tags: C++, animation, Python, singles
 :summary: Magnum recently gained a new data structure usable for easy data
@@ -13,12 +14,18 @@ Multi-dimensional strided array views in Magnum
     :language: c++
 
 While :dox:`Containers::ArrayView` and friends
-`described previously <{filename}array-view-implementations.rst>`_ are at its core just
-a pointer and size stored together, the :dox:`Containers::StridedArrayView` is
-a bit more complex beast. Based on a very insightful
-`article by Per Vognsen <https://gist.github.com/pervognsen/0e1be3b683d62b16fd81381c909bf67e>`_
+`described previously <{filename}array-view-implementations.rst>`_ are at its
+core just a pointer and size stored together, the
+:dox:`Containers::StridedArrayView` is a bit more complex beast. Based on a
+very insightful `article by Per Vognsen <https://gist.github.com/pervognsen/0e1be3b683d62b16fd81381c909bf67e>`_
 it recently went through a major redesign, making it multi-dimensional and
 allowing for zero and negative strides. Let's see what that means.
+
+.. note-success:: Update August 3rd, 2019
+
+    Now that there's a *real* implementation of :cpp:`std::mdspan` at
+    https://github.com/kokkos/mdspan, I went forward and
+    `compared it against what Magnum has <#comparison-against-kokkos-implementation>`_.
 
 `I have a bag of data and I am scared of it`_
 =============================================
@@ -374,20 +381,14 @@ currently underway to allow for efficient data sharing between C++ and Python.
 `std::mdspan in C++23(?)`_
 ==========================
 
-.. role:: link-flat(link)
-    :class: m-flat
-.. |span| replace:: :link-flat:`std::span <https://en.cppreference.com/w/cpp/container/span>`
-
-|span|, currently `scheduled for C++20 <{filename}array-view-implementations.rst#stl-compatibility>`_,
+:dox:`std::span`, currently `scheduled for C++20 <{filename}array-view-implementations.rst#stl-compatibility>`_,
 was originally meant to include multi-dimensional strided as well.
 *Fortunately* that's not the case --- even without it, both compile-time-sized
 and dynamic views together in a single interface are pretty complex already.
 The multi-dimensional functionality is now part of a `std::mdspan`_ proposal,
 with an optimistic estimate appearing in C++23. From a brief look, it should
 have a *superset* of :dox:`Containers::StridedArrayView` features as it allows
-the user to provide a custom data addressing function. However I was not able
-to find any currently active implementation so I can'd do a deeper usability
-comparison.
+the user to provide a custom data addressing function.
 
 .. block-danger:: Strided views and strict aliasing
 
@@ -400,6 +401,230 @@ comparison.
     undefined behavior in its implementation. Only time will tell if this is
     an acceptable implementation policy or the language restrictions need to
     get lifted to allow such use cases.
+
+`Comparison against the implementation by @kokkos`_
+---------------------------------------------------
+
+In August 2019 a *real* implementation of ``std::mdspan`` finally appeared,
+available on https://github.com/kokkos/mdspan. I got interested especially
+because of the following --- this looked like I could learn some neat C++17
+tricks to improve my compile times even further!
+
+    -   C++14 backport (e.g., fold expressions not required)
+
+        -   Compile times of this backport will be substantially slower than
+            the C++17 version
+
+    -   C++11 backport
+
+        -   Compile times of this backport will be substantially slower than
+            the C++14 backport
+
+    .. class:: m-text m-text-right m-dim m-em
+
+    --- from `project README <https://github.com/kokkos/mdspan/tree/04e93536ad9d30703b7cc1d363ff4e7d4a1b8ef8#features>`_
+
+.. note-warning:: Disclaimer
+
+    The following might be sounding a bit harsh, but please note it's not
+    directed against this particular implementation, but rather the standards
+    proposal --- and an implementation can be only as good as the design allows
+    it.
+
+*(Eight hours pass)*
+
+I have to admit that evaluating an API with absolutely no human-readable
+documentation or code examples is *hard*, so please take the following with a
+grain of salt --- I *hope* the real usage won't be like this! The only code
+example I found was at the end of `P0009 <https://wg21.link/p0009>`_ and based
+on that very sparse info, I attempted to rewrite code of this article using
+``std::mdspan``. In order to get a *Real Feel™* of the
+eventually-becoming-a-standard API, I refrained from using any sanity-restoring
+:cpp:`typedef`\ s, ending up with *beauties* like
+
+.. code:: c++
+    :class: m-console-wrap
+
+    std::experimental::basic_mdspan<Color3ub, std::experimental::extents<std::experimental::dynamic_extent, std::experimental::dynamic_extent>, std::experimental::layout_stride<std::experimental::dynamic_extent, std::experimental::dynamic_extent>> pixels{imageData, std::array<std::ptrdiff_t, 2>{37, 37}};
+
+.. class:: m-noindent
+
+equivalent to :cpp:`Containers::StridedArrayView2D<Color3ub> pixels{imageData, {37, 37}}`; or the following, which is equivalent to the ``border`` variable
+`instantiated above <#value-broadcasting>`_:
+
+.. code:: c++
+    :class: m-console-wrap
+
+    std::experimental::basic_mdspan<const Color3ub, std::experimental::extents<std::experimental::dynamic_extent, std::experimental::dynamic_extent>, std::experimental::layout_stride<std::experimental::dynamic_extent, std::experimental::dynamic_extent>> border{borderData, std::experimental::layout_stride<std::experimental::dynamic_extent, std::experimental::dynamic_extent>::template mapping<std::experimental::extents<std::experimental::dynamic_extent, std::experimental::dynamic_extent>>(std::experimental::extents<std::experimental::dynamic_extent, std::experimental::dynamic_extent>(3, 37), std::array<std::ptrdiff_t, 2>{sizeof(Color3ub), 0})};
+
+(No, line breaks won't help with the readability of this. I tried.) I won't
+include more of the code here, `see it yourself if you really want to <https://github.com/mosra/magnum-website/blob/master/artwork/blog/backstage/multidimensional-strided-array-views/mdspan.cpp>`_.
+To my eyes this is an absolutely *awful* overengineered and unintuitive API,
+being in the complexity ranks of :dox:`std::codecvt`. Judging from the complete
+lack of any googleable code snippets related to ``std::mdspan``, I assume the
+design of this abomination was done without anybody actually *trying* to use it
+first. Forcing users to type out the whole
+:cpp:`std::array<std::ptrdiff_t, 2>{37, 37}` in the age of "almost always auto"
+is an unforgivable crime.
+
+Trying to make sense of it all, I attempted to do a balanced feature comparison
+table --- again please forgive me in case I failed to decipher the paper and
+the missing features actually *are there*. The feature descriptions correspond
+to what's explained in the article above:
+
+.. container:: m-scroll
+
+    .. raw:: html
+        :file: multidimensional-strided-array-views-comparison.html
+
+Next are the usual compile preprocessed size and compile time benchmarks.
+Preprocessed line count is taken with the following command:
+
+.. code:: sh
+    :class: m-console-wrap
+
+    echo "#include <experimental/mdspan>" gcc -std=c++11 -P -E -x c++ - | wc -l
+
+.. plot:: Preprocessed line count, GCC 9.1
+    :type: barh
+    :labels:
+        <Containers/ArrayView.h>
+        <Containers/StridedArrayView.h>
+        <Containers/StridedArrayView.h>
+        <experimental/mdspan>
+        <experimental/mdspan>
+    :labels_extra:
+        C++11
+        C++11
+        C++17
+        C++11
+        C++17
+    :units: lines
+    :values: 2538 2964 3512 23488 33476
+    :colors: success info info warning danger
+
+While :dox:`Containers::StridedArrayView` is not the most lightweight container
+out there, it still fares much better than this particular ``std::mdspan``
+implementation. Note that the compilation times are taken with the *whole* code
+from the top of this article. Unfortunately I don't see any claims of C++11
+compiling slower than C++17 reflected in the benchmarks. Maybe it was just for
+:cpp:`constexpr` code?
+
+.. Starting CompileTimeBenchmark with 8 test cases...
+..  BENCH [1]  57.75 ± 3.62   ms baseline()@19x1 (wall time)
+..  BENCH [2] 107.05 ± 4.95   ms arrayView()@19x1 (wall time)
+..  BENCH [2] 140.15 ± 7.44   ms stridedArrayView(GCC, C++11)@19x1 (wall time)
+..  BENCH [3] 139.64 ± 2.80   ms stridedArrayView(GCC, C++17)@19x1 (wall time)
+..  BENCH [4] 142.67 ± 8.79   ms stridedArrayView(GCC, C++2a)@19x1 (wall time)
+..  BENCH [5] 292.25 ± 5.86   ms mdspanInclude()@19x1 (wall time)
+..  BENCH [6] 292.43 ± 7.07   ms mdspan(GCC, C++11)@19x1 (wall time)
+..  BENCH [7] 392.63 ± 8.20   ms mdspan(GCC, C++17)@19x1 (wall time)
+..  BENCH [8] 407.49 ± 7.27   ms mdspan(GCC, C++2a)@19x1 (wall time)
+.. Finished CompileTimeBenchmark with 0 errors out of 160 checks.
+
+.. plot:: Compilation time, GCC 9.1
+    :type: barh
+    :labels:
+        baseline
+        ArrayView
+        StridedArrayView
+        StridedArrayView
+        StridedArrayView
+        std::mdspan
+        std::mdspan
+        std::mdspan
+    :labels_extra:
+        int main() {}
+        (just including it)
+        C++11
+        C++17
+        C++2a
+        C++11
+        C++17
+        C++2a
+    :units: ms
+    :values: 57.75 107.05 140.15 139.64 142.67 292.43 392.63 407.49
+    :errors: 3.62 4.95 7.44 2.80 8.79 7.07 8.20 7.27
+    :colors: default success info info info warning danger danger
+
+Finally, what matters is not just developer productivity but also runtime
+performance, right? So, let's see --- I took the :cpp:`blit()` function
+`from above <#using-a-view-for-precisely-aimed-modifications>`_ and compared it
+to its equivalent implemented using ``std::mdspan``. Additionally the benchmark
+includes a version where I did a lowest-hanging-fruit optimization, avoiding
+repeated calculations at a small readability cost.
+
+.. code:: c++
+    :class: m-inverted
+    :hl_lines: 4 5 6 7
+
+    void blitOptimized(Containers::StridedArrayView2D<const int> source,
+                       Containers::StridedArrayView2D<int> destination) {
+        for(std::size_t i = 0; i != source.size()[0]; ++i) {
+            Containers::StridedArrayView1D<const int> sourceRow = source[i];
+            Containers::StridedArrayView1D<int> destinationRow = destination[i];
+            for(std::size_t j = 0; j != sourceRow.size(); ++j)
+                destinationRow[j] = sourceRow[j];
+        }
+    }
+
+.. Starting RuntimeBenchmark with 4 test cases...
+..  BENCH [1]  21.71 ± 3.07   µs plainLoop()@499x10 (wall time)
+..  BENCH [2] 458.76 ± 19.05  µs stridedArrayView()@499x10 (wall time)
+..  BENCH [3] 136.10 ± 7.29   µs stridedArrayViewOptimized()@499x10 (wall time)
+..  BENCH [4] 860.42 ± 26.75  µs mdspan()@499x10 (wall time)
+.. Finished RuntimeBenchmark with 0 errors out of 2000 checks.
+
+.. plot:: Copy 100x100 items, GCC 9.1, C++11
+    :type: barh
+    :labels:
+        baseline
+        StridedArrayView
+        StridedArrayView
+        std::mdspan
+    :labels_extra:
+        ..
+        blit()
+        blitOptimized()
+        ..
+    :units: µs
+    :values: 21.71 458.76 136.10 860.42
+    :errors: 3.07 19.05 7.29 26.75
+    :colors: default info success warning
+
+And, finally, a release build, with both ``NDEBUG`` and :dox:`CORRADE_NO_ASSERT`
+defined, to have equal conditions for both:
+
+.. Starting RuntimeBenchmark with 4 test cases...
+..  BENCH [1] 783.94 ± 108.29 ns plainLoop()@4999x100 (wall time)
+..  BENCH [2] 774.62 ± 93.99  ns stridedArrayView()@4999x100 (wall time)
+..  BENCH [3] 765.37 ± 99.56  ns stridedArrayViewOptimized()@4999x100 (wall time)
+..  BENCH [4]   3.37 ± 0.25   µs mdspan()@4999x100 (wall time)
+.. Finished RuntimeBenchmark with 0 errors out of 20000 checks.
+
+.. plot:: Copy 100x100 items, GCC 9.1, C++11, -O3
+    :type: barh
+    :labels:
+        baseline
+        StridedArrayView
+        StridedArrayView
+        std::mdspan
+    :labels_extra:
+        ..
+        blit()
+        blitOptimized()
+        ..
+    :units: ns
+    :values: 783.94 774.62 765.37 3370
+    :errors: 108.29 93.99 99.56 250
+    :colors: default success success danger
+
+Here the optimizer managed to fully remove all overhead of :dox:`Containers::StridedArrayView`, making it equally performant as the plain
+for loop. This is of course just a microbenchmark testing a very narrow aspect
+of the API, but nevertheless --- with Corrade's containers you don't need to
+worry much about hand-optimizing your code, in many cases even a naive code
+will perform acceptable. For reference, source of both benchmarks
+`is on GitHub <https://github.com/mosra/magnum-website/tree/master/artwork/blog/backstage/multidimensional-strided-array-views>`_.
 
 `Use it in your projects`_
 ==========================
@@ -434,7 +659,8 @@ Library                           LoC       PpLoC Description
 
     Questions? Complaints? Share your opinion on social networks:
     `Twitter <https://twitter.com/czmosra/status/1123304711967395842>`_,
-    `Reddit r/cpp <https://www.reddit.com/r/cpp/comments/bj7bqk/multidimensional_strided_array_views_in_the/>`_,
+    Reddit r/cpp (`original article <https://www.reddit.com/r/cpp/comments/bj7bqk/multidimensional_strided_array_views_in_the/>`_,
+    `kokkos implementation <https://www.reddit.com/r/cpp/comments/cl127i/mdspan_productionquality_reference_implementation/evu9tec/>`_),
     `Hacker News <https://news.ycombinator.com/item?id=19790990>`_
 
 .. _std::mdspan: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0009r9.html
