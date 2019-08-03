@@ -25,7 +25,7 @@ allowing for zero and negative strides. Let's see what that means.
 
     Now that there's a *real* implementation of :cpp:`std::mdspan` at
     https://github.com/kokkos/mdspan, I went forward and
-    `compared it against what Magnum has <#comparison-against-kokkos-implementation>`_.
+    `compared it against what Magnum has <#comparison-against-the-implementation-by-kokkos>`_.
 
 `I have a bag of data and I am scared of it`_
 =============================================
@@ -464,8 +464,8 @@ being in the complexity ranks of :dox:`std::codecvt`. Judging from the complete
 lack of any googleable code snippets related to ``std::mdspan``, I assume the
 design of this abomination was done without anybody actually *trying* to use it
 first. Forcing users to type out the whole
-:cpp:`std::array<std::ptrdiff_t, 2>{37, 37}` in the age of "almost always auto"
-is an unforgivable crime.
+:cpp:`std::array<std::ptrdiff_t, 2>{37, 37}` in the age of "almost always
+:cpp:`auto`" is an unforgivable crime.
 
 Trying to make sense of it all, I attempted to do a balanced feature comparison
 table --- again please forgive me in case I failed to decipher the paper and
@@ -477,7 +477,8 @@ to what's explained in the article above:
     .. raw:: html
         :file: multidimensional-strided-array-views-comparison.html
 
-Next are the usual compile preprocessed size and compile time benchmarks.
+Next --- admittedly being more about this particular implementation and less
+about the API ---- are the usual preprocessed size and compile time benchmarks.
 Preprocessed line count is taken with the following command:
 
 .. code:: sh
@@ -623,7 +624,17 @@ Here the optimizer managed to fully remove all overhead of :dox:`Containers::Str
 for loop. This is of course just a microbenchmark testing a very narrow aspect
 of the API, but nevertheless --- with Corrade's containers you don't need to
 worry much about hand-optimizing your code, in many cases even a naive code
-will perform acceptable. For reference, source of both benchmarks
+will perform acceptable.
+
+.. note-primary::
+
+    In case of ``std::mdspan``, I'm unfortunately quite certain that the very
+    complex design of it defines a fairly low ceiling for potential
+    implementations to reach. There's not much an implementation can do to
+    overcome such constraints and have better compile times or debug
+    performance.
+
+For reference, source of both benchmarks
 `is on GitHub <https://github.com/mosra/magnum-website/tree/master/artwork/blog/backstage/multidimensional-strided-array-views>`_.
 
 `Use it in your projects`_
@@ -658,7 +669,8 @@ Library                           LoC       PpLoC Description
 .. note-dim::
 
     Questions? Complaints? Share your opinion on social networks:
-    `Twitter <https://twitter.com/czmosra/status/1123304711967395842>`_,
+    Twitter (`original article <https://twitter.com/czmosra/status/1123304711967395842>`__,
+    `comparison to kokkos implementation <https://twitter.com/czmosra/status/1157700064023863296>`_),
     Reddit r/cpp (`original article <https://www.reddit.com/r/cpp/comments/bj7bqk/multidimensional_strided_array_views_in_the/>`_,
     `kokkos implementation <https://www.reddit.com/r/cpp/comments/cl127i/mdspan_productionquality_reference_implementation/evu9tec/>`_),
     `Hacker News <https://news.ycombinator.com/item?id=19790990>`_
