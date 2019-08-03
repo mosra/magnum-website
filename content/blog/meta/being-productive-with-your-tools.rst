@@ -2,6 +2,7 @@ Being productive with your tools
 ################################
 
 :date: 2019-07-08
+:modified: 2019-08-03
 :category: Meta
 :tags: Git, C++, CMake, Eigen, Linux, m.css, Python
 :summary: Magnum is developed with a `"Zen Garden" philosophy <{filename}/features.rst#our-zen-garden-philosophy>`_
@@ -19,7 +20,13 @@ on `our Gitter chat <https://gitter.im/mosra/magnum/archives/2019/07/06?at=5d20d
 I decided to share what I think is useful for being a productive developer. In
 this case with Linux and the KDE Plasma 5 desktop being my system of choice.
 
-.. note-success::
+.. note-success:: Content care: Aug 3, 2019
+
+    Extended the article to mention various alternatives for non-Linux users
+    thanks to suggestions by `@Squareys <https://twitter.com/Squareys>`_ and
+    `@freling <https://twitter.com/freling>`_.
+
+.. note-primary::
 
     The purpose of this article is *not* to say that the tools, OS or libraries
     you use are *bad*. I'm only sharing the positive view, why I think the
@@ -75,7 +82,10 @@ why I'd rather SSH into a Mac than use its keyboard directly.
 Pick a shell where you can work fast --- 90% of what you do there is repeatedly
 executing short commands, so it's essential to have this optimized. The plain
 Windows ``cmd.exe`` is *absolutely terrible* at that, but most other shells can
-be made a joy to work with if you configure their history handling.
+be made a joy to work with if you configure their history handling. If you are
+on Windows and can't or don't want to use Git Bash (which contains ``readline``
+and thus can be made usable), have a look at `Clink <http://mridgers.github.io/clink/>`_.
+
 
 .. code-figure::
 
@@ -275,8 +285,11 @@ of *any* Sphinx-generated docs is a **bad joke** and Googling the actual
 behavior of Python's ``splitlines()`` isn't nearly as straightforward as it
 should be either. I ended up building my own *searchable* copy of
 `Eigen documentation <https://tmp.mosra.cz/eigen-docs/>`_, did a similar thing
-for Android NDK and I'm planning to do that for Python standard library as
-well.
+for Android NDK and
+`I'm planning to do that for Python standard library as well <https://twitter.com/czmosra/status/1151938326003363840>`_.
+
+Worth mentioning is `Zeal <https://zealdocs.org/>`_, providing offline docs for
+various libraries. I never used it myself, so can't comment further.
 
 .. note-dim::
 
