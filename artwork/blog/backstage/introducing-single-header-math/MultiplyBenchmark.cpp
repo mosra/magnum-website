@@ -2,21 +2,21 @@
 //
 // put MagnumMath.hpp here
 //
-// g++ -march=native MultiplyBenchmark.cpp -o MultiplyBenchmark -std=c++17 -lCorradeTestSuite-d -lCorradeUtility-d -I/usr/include/eigen3 -I/home/mosra/Code/CxxSwizzle/include -I/home/mosra/Code/vml/vml -I/home/mosra/Code/mathfu/include -I/home/mosra/Code/mathfu/dependencies/vectorial/include -fno-operator-names
+// g++ -march=native MultiplyBenchmark.cpp -o MultiplyBenchmark -std=c++17 -lCorradeTestSuite-d -lCorradeUtility-d -I/usr/include/eigen3 -I/home/mosra/Code/CxxSwizzle/include -I/home/mosra/Code/vml/vml -I/home/mosra/Code/mathfu/include -I/home/mosra/Code/mathfu/dependencies/vectorial/include -I/home/mosra/Code/rtm/includes -fno-operator-names
 //
 // or -O3 to the above
 //
 // ./MultiplyBenchmark --color on # until it gets white
 //
 //
-// /opt/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ MultiplyBenchmark.cpp -o MultiplyBenchmark.arm64 --target=aarch64-none-linux-android --gcc-toolchain=/opt/android-ndk/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/opt/android-ndk/platforms/android-22/arch-arm64 -no-canonical-prefixes -std=c++17 -funwind-tables -no-canonical-prefixes -D__ANDROID_API__=22 -fexceptions -frtti -DNDEBUG -fPIE -pie -Wl,--gc-sections /opt/android-ndk/platforms/android-22/arch-arm64/usr/lib/libCorradeTestSuite.a /opt/android-ndk/platforms/android-22/arch-arm64/usr/lib/libCorradeUtility.a -llog "/opt/android-ndk/sources/cxx-stl/llvm-libc++/libs/arm64-v8a/libc++_static.a" "/opt/android-ndk/sources/cxx-stl/llvm-libc++/libs/arm64-v8a/libc++abi.a" -latomic -nostdlib++ -isystem /opt/android-ndk/sources/cxx-stl/llvm-libc++/include -isystem /opt/android-ndk/sources/android/support/include -isystem /opt/android-ndk/sources/cxx-stl/llvm-libc++abi/include -isystem /opt/android-ndk/sysroot/usr/include -isystem /opt/android-ndk/sysroot/usr/include/aarch64-linux-android -I/usr/include/eigen3 -I/home/mosra/Code/glm -I/home/mosra/Code/CxxSwizzle/include -I/home/mosra/Code/vml/vml -I/home/mosra/Code/mathfu/include -I/home/mosra/Code/mathfu/dependencies/vectorial/include -fno-operator-names
+// /opt/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ MultiplyBenchmark.cpp -o MultiplyBenchmark.arm64 --target=aarch64-none-linux-android --gcc-toolchain=/opt/android-ndk/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 --sysroot=/opt/android-ndk/platforms/android-22/arch-arm64 -no-canonical-prefixes -std=c++17 -funwind-tables -no-canonical-prefixes -D__ANDROID_API__=22 -fexceptions -frtti -DNDEBUG -fPIE -pie -Wl,--gc-sections /opt/android-ndk/platforms/android-22/arch-arm64/usr/lib/libCorradeTestSuite.a /opt/android-ndk/platforms/android-22/arch-arm64/usr/lib/libCorradeUtility.a -llog "/opt/android-ndk/sources/cxx-stl/llvm-libc++/libs/arm64-v8a/libc++_static.a" "/opt/android-ndk/sources/cxx-stl/llvm-libc++/libs/arm64-v8a/libc++abi.a" -latomic -nostdlib++ -isystem /opt/android-ndk/sources/cxx-stl/llvm-libc++/include -isystem /opt/android-ndk/sources/android/support/include -isystem /opt/android-ndk/sources/cxx-stl/llvm-libc++abi/include -isystem /opt/android-ndk/sysroot/usr/include -isystem /opt/android-ndk/sysroot/usr/include/aarch64-linux-android -I/usr/include/eigen3 -I/home/mosra/Code/glm -I/home/mosra/Code/CxxSwizzle/include -I/home/mosra/Code/vml/vml -I/home/mosra/Code/mathfu/include -I/home/mosra/Code/mathfu/dependencies/vectorial/include -I/home/mosra/Code/rtm/includes -fno-operator-names
 //
 // or -O3 to above
 //
 // adb push MultiplyBenchmark.arm64 /data/local/tmp/ && adb shell /data/local/tmp/MultiplyBenchmark.arm64 --repeat-every 1 --color on --repeat-all 5
 //
 //
-// em++ MultiplyBenchmark.cpp -o MultiplyBenchmark.js -O3 --llvm-lto 1 -std=c++17 /usr/lib/emscripten/system/lib/CorradeTestSuite.bc /usr/lib/emscripten/system/lib/CorradeUtility.bc -I/usr/include/eigen3 -I/home/mosra/Code/glm -I/home/mosra/Code/CxxSwizzle/include -I/home/mosra/Code/vml/vml -I/home/mosra/Code/mathfu/include -I/home/mosra/Code/mathfu/dependencies/vectorial/include -fno-operator-names
+// em++ MultiplyBenchmark.cpp -o MultiplyBenchmark.js -O3 --llvm-lto 1 -std=c++17 /usr/lib/emscripten/system/lib/CorradeTestSuite.bc /usr/lib/emscripten/system/lib/CorradeUtility.bc -I/usr/include/eigen3 -I/home/mosra/Code/glm -I/home/mosra/Code/CxxSwizzle/include -I/home/mosra/Code/vml/vml -I/home/mosra/Code/mathfu/include -I/home/mosra/Code/mathfu/dependencies/vectorial/include -I/home/mosra/Code/rtm/includes -fno-operator-names
 
 #if defined(__ANDROID__) || defined(__EMSCRIPTEN__)
 #include <Eigen/Core>
@@ -56,6 +56,10 @@
 /* mathfu */
 #include "mathfu/matrix.h"
 
+/* Real-Time Math */
+#include <rtm/matrix3x3f.h>
+#include <rtm/matrix4x4f.h>
+
 using namespace Corrade;
 using namespace Magnum;
 using namespace Magnum::Math::Literals;
@@ -73,6 +77,7 @@ struct MultiplyBenchmark: TestSuite::Tester {
     void boostQvm4();
     #endif
     void mathfu4();
+    void rtm4();
     #if !defined(__ANDROID__) && !defined(__EMSCRIPTEN__)
     void sse4();
     #endif
@@ -87,6 +92,7 @@ struct MultiplyBenchmark: TestSuite::Tester {
     void boostQvm3();
     #endif
     void mathfu3();
+    void rtm3();
     #if !defined(__ANDROID__) && !defined(__EMSCRIPTEN__)
     void sse3();
     #endif
@@ -107,6 +113,7 @@ MultiplyBenchmark::MultiplyBenchmark() {
         &MultiplyBenchmark::boostQvm4,
         #endif
         &MultiplyBenchmark::mathfu4,
+        &MultiplyBenchmark::rtm4,
         #if !defined(__ANDROID__) && !defined(__EMSCRIPTEN__)
         &MultiplyBenchmark::sse4,
         #endif
@@ -121,6 +128,7 @@ MultiplyBenchmark::MultiplyBenchmark() {
         &MultiplyBenchmark::boostQvm3,
         #endif
         &MultiplyBenchmark::mathfu3,
+        &MultiplyBenchmark::rtm3,
         #if !defined(__ANDROID__) && !defined(__EMSCRIPTEN__)
         &MultiplyBenchmark::sse3,
         #endif
@@ -226,6 +234,19 @@ void MultiplyBenchmark::mathfu4() {
     }
 
     CORRADE_VERIFY(Matrix4::from(&a(0, 0)).toVector().sum() != 0);
+}
+
+void MultiplyBenchmark::rtm4() {
+    rtm::matrix4x4f a;
+    Matrix4::from(&a.x_axis[0]) = data4;
+
+    auto aa = rtm::matrix_mul(a, a);
+//     CORRADE_VERIFY(Matrix4::from(&a.x_axis[0]) == data4*data4);
+    CORRADE_BENCHMARK(Repeats) {
+        a = rtm::matrix_mul(a, a);
+    }
+
+    CORRADE_VERIFY(Matrix4::from(&a.x_axis[0]).toVector().sum() != 0);
 }
 
 void MultiplyBenchmark::sse4() {
@@ -385,6 +406,23 @@ void MultiplyBenchmark::mathfu3() {
     }
 
     CORRADE_VERIFY(Matrix3::from(&a(0, 0)).toVector().sum() != 0);
+}
+
+void MultiplyBenchmark::rtm3() {
+    rtm::matrix3x3f a;
+    Vector3::from(&a.x_axis[0]) = data3[0];
+    Vector3::from(&a.y_axis[0]) = data3[1];
+    Vector3::from(&a.z_axis[0]) = data3[2];
+
+    auto aa = rtm::matrix_mul(a, a);
+//     CORRADE_VERIFY(Vector3::from(&a.x_axis[0]) == (data3*data3)[0]);
+//     CORRADE_VERIFY(Vector3::from(&a.y_axis[0]) == (data3*data3)[1]);
+//     CORRADE_VERIFY(Vector3::from(&a.z_axis[0]) == (data3*data3)[2]);
+    CORRADE_BENCHMARK(Repeats) {
+        a = rtm::matrix_mul(a, a);
+    }
+
+    CORRADE_VERIFY(Matrix3::from(&a.x_axis[0]).toVector().sum() != 0);
 }
 
 void MultiplyBenchmark::sse3() {
