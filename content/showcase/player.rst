@@ -5,14 +5,10 @@ Magnum Player
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
-A viewer and player for `glTF <https://www.khronos.org/gltf/>`_ scenes. Drop a
-``*.gltf`` or ``*.glb`` file onto the canvas to load it.
-
-.. note-warning::
-
-    This is a preview of an experimental work-in-progress feature. It is not
-    yet fully tested and documented and may not behave properly on all
-    platforms. Bug reports very welcome!
+A viewer and player for images and `glTF <https://www.khronos.org/gltf/>`_
+scenes. Drop a ``*.gltf`` or ``*.glb`` file or any of the ``*.jpg``, ``*.png``,
+... image formats supported by the :dox:`StbImageImporter <Trade::StbImageImporter>`
+plugin onto the canvas to load it.
 
 .. raw:: html
 
@@ -80,6 +76,9 @@ A viewer and player for `glTF <https://www.khronos.org/gltf/>`_ scenes. Drop a
 
     Module.canvas.addEventListener('drop', handleDrop);
     Module.canvas.addEventListener('dragover', handleDragOver);
+    Module.canvas.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    }, true);
     </script>
 
 .. block-flat:: Controls
@@ -90,6 +89,8 @@ A viewer and player for `glTF <https://www.khronos.org/gltf/>`_ scenes. Drop a
     -   :label-warning:`Shift` :label-default:`mouse drag` pans the scene at
         depth of the cursor
     -   :label-default:`mouse wheel` zooms in/out relative to cursor position
+    -   :label-default:`right mouse button` selects and highlights mesh under
+        cursor, showing stats for it
     -   :label-default:`Num 1` / :label-warning:`Ctrl` :label-default:`Num 1`
         switches to a front / back view
     -   :label-default:`Num 3` / :label-warning:`Ctrl` :label-default:`Num 3`
