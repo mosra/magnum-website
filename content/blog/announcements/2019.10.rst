@@ -1,0 +1,754 @@
+Magnum 2019.10 released
+#######################
+
+:date: 2019-10-30
+:category: Announcements
+:tags: C++, Corrade, Eigen, Emscripten, HiDPI, numpy, OpenGL, Python, robotics,
+    singles, Vcpkg, WebAssembly, WebGL, glTF
+:cover: {static}/img/blog/announcements/2019.10/cover.jpg
+:summary: The new release brings Python bindings, Basis Universal texture
+    compression, improved STL interoperability, better Unicode experience for
+    Windows users, a more efficient Emscripten application implementation,
+    single-header libraries, new OpenGL driver workarounds and much more.
+
+.. |x| unicode:: U+00D7 .. nicer multiply sign
+.. role:: cpp(code)
+    :language: c++
+.. role:: bat(code)
+    :language: bat
+.. role:: link-flat(link)
+    :class: m-flat
+
+`STL-compatible container classes and further work on reducing compile times`_
+==============================================================================
+
+Continuing from :dox:`Containers::Pointer` and :dox:`Containers::Optional`
+`introduced in the previous release <{filename}/blog/backstage/lightweight-stl-compatible-unique-pointer.rst>`_,
+the 2019.10 release adds STL compatibility to its :dox:`Containers::ArrayView`
+classes as well. In practice this means :dox:`std::vector` or :dox:`std::array`
+instances can be implicitly converted to Magnum array views, and if you're on
+the bleeding edge and use C++2a :dox:`std::span`, the conversion can go both
+ways:
+
+.. code:: c++
+
+    #include <Corrade/Containers/ArrayViewStl.h> // enables implicit conversions
+
+    /* Image view backed by a std::vector */
+    std::vector<char> pixels = …;
+    MutableImageView2D image{PixelFormat::RGBA8Unorm, {32, 24}, pixels};
+
+    /* Getting the data back as a span on C++2a */
+    std::span<char> span = image.data();
+
+The new release also introduces a reworked :dox:`Containers::StridedArrayView`,
+now supporting multiple dimensions and zero / negative strides, giving it a
+feature parity with :ref:`numpy.ndarray` in Python. It's also getting used in a
+broader set of APIs, including :dox:`MeshTools::generateSmoothNormals()`,
+range-taking :dox:`Math::min()` or the very useful :dox:`Image::pixels()` that
+gives raw typed access to pixel data, and even print them on terminal:
+
+.. code-figure::
+
+    .. code:: c++
+
+        importer.openFile("mosra.png");
+        Trade::ImageData2D image = importer.image2D(0);
+        Debug{} << Debug::color << Debug::packed << image.pixels<Color3ub>();
+
+    .. include:: 2019.10/pixels.ansi
+        :code: ansi
+        :class: m-nopad m-text m-tiny
+
+All this interoperability however doesn't mean all headers suddenly need to
+:cpp:`#include <vector>` or the like. On the contrary --- the conversion is
+enabled by including dedicated headers listed below, together with the ability
+to forward-declare *some* STL types when you don't need the full definition.
+Put all together, this means the code both compiles faster (when you don't need
+to use STL types) and can interoperate with STL types better (when you actually
+want that).
+
+.. container:: m-col-m-5 m-right-m m-right-l m-container-inflate
+
+    .. frame::
+
+        This quick overview barely scratches the surface, so be sure to read
+        more in dedicated articles:
+
+        .. class:: m-text m-big
+
+        -   `Array view implementations in Magnum » <{filename}/blog/backstage/array-view-implementations.rst>`_
+        -   `Multi-dimensional strided array views in Magnum » <{filename}/blog/backstage/multidimensional-strided-array-views.rst>`_
+        -   `Forward-declaring STL container types » <{filename}/blog/backstage/forward-declaring-stl-container-types.rst>`_
+
+.. FUCK YOU doxygen for forcing me to do this
+
+-   :dox:`Corrade/Containers/ArrayViewStl.h </home/mosra/Code/corrade/src/Corrade/Containers/ArrayViewStl.h>`
+    makes array views convertible from :dox:`std::vector` / :dox:`std::array`
+-   :dox:`Corrade/Containers/ArrayViewStlSpan.h </home/mosra/Code/corrade/src/Corrade/Containers/ArrayViewStlSpan.h>`
+    makes array views convertible from / to C++2a :dox:`std::span`
+-   :dox:`Corrade/Containers/OptionalStl.h </home/mosra/Code/corrade/src/Corrade/Containers/OptionalStl.h>`
+    enables conversion between :dox:`Containers::Optional` and C++17
+    :dox:`std::optional`
+-   :dox:`Corrade/Containers/PointerStl.h </home/mosra/Code/corrade/src/Corrade/Containers/PointerStl.h>`
+    enables conversion between :dox:`Containers::Pointer` and
+    :dox:`std::unique_ptr`
+-   :dox:`Corrade/Utility/DebugStl.h </home/mosra/Code/corrade/src/Corrade/Utility/DebugStl.h>`
+    is now an opt-in header to make :dox:`Utility::Debug` work with
+    :dox:`std::string` or :dox:`std::tuple`
+-   :dox:`Corrade/Utility/FormatStl.h </home/mosra/Code/corrade/src/Corrade/Utility/FormatStl.h>`
+    is now an opt-in header to make :dox:`Utility::format()` work with
+    :dox:`std::string`
+-   :dox:`Corrade/Utility/StlMath.h </home/mosra/Code/corrade/src/Corrade/Utility/StlMath.h>`
+    is :cpp:`#include <cmath>` but without dragging in all C++17 additions that
+    `make your code compile twice as slow <https://twitter.com/czmosra/status/1085993965529255936>`_
+-   :dox:`Corrade/Utility/StlForwardArray.h </home/mosra/Code/corrade/src/Corrade/Utility/StlForwardArray.h>`,
+    :dox:`StlForwardString.h </home/mosra/Code/corrade/src/Corrade/Utility/StlForwardString.h>`,
+    :dox:`StlForwardTuple.h </home/mosra/Code/corrade/src/Corrade/Utility/StlForwardTuple.h>` and
+    :dox:`StlForwardVector.h </home/mosra/Code/corrade/src/Corrade/Utility/StlForwardVector.h>`
+    provide forward declarations for :dox:`std::array`, :dox:`std::vector`,
+    :dox:`std::tuple` and :dox:`std::vector` where STL implementations make it
+    possible (and including the full definitions where not)
+
+`New power-efficient application implementation for Emscripten`_
+================================================================
+
+While all Magnum applications historically defaulted to redrawing and making
+the CPU busy only when needed in order to save power, this was not really the
+case on the web. Contributed by :gh:`Squareys`, there's a new
+:dox:`Platform::EmscriptenApplication` that aims to be more efficient and
+smaller to download. Besides that, the Emscripten SDL "emulation" has a lot
+of limitations and having an implementation based directly off the HTML5 APIs
+allows us to be more flexible.
+
+.. container:: m-row
+
+    .. container:: m-col-m-6
+
+        .. figure:: {static}/img/blog/announcements/new-emscripten-application-implementation/sdl2.png
+            :scale: 58%
+            :figclass: m-flat
+
+            Idle :dox:`Sdl2Application <Platform::Sdl2Application>`
+
+    .. container:: m-col-m-6
+
+        .. figure:: {static}/img/blog/announcements/new-emscripten-application-implementation/emscripten.png
+            :scale: 58%
+            :figclass: m-flat
+
+            Idle :dox:`EmscriptenApplication <Platform::EmscriptenApplication>`
+
+The new implementation was also used for an experiment in how far *can* Magnum
+potentially get with executable size optimization. A few of those optimizations
+already made it to 2019.10 and lots more is in the buffer for next releases ---
+subscribe to :gh:`mosra/magnum#293` for updates.
+
+.. plot:: Download size (*.js, *.wasm)
+    :type: barh
+    :labels:
+        Initial state
+        Enabling minimal runtime
+        Additional slimming flags
+        Disabling filesystem
+        Chopping off all C++ stream usage
+        Enabling CORRADE_NO_ASSERT
+        Removing a single use of std::sort()
+        Removing one std::unordered_map
+        Using emmalloc instead of dlmalloc
+        Removing all printf() usage
+    :units: kB
+    :bar_height: 0.3
+    :values:
+        52.1 36.3 35.7 19.4 14.7 14.7 14.7 14.7 14.7 14.7
+        226.3 224.5 224.5 224.5 83.6 75.4 69.3 62.6 56.3 44
+    :colors:
+        success
+        info
+
+.. frame::
+
+    .. class:: m-text m-big m-noindent
+
+    Read more: `New Application implementation for Emscripten » <{filename}/blog/announcements/new-emscripten-application-implementation.rst>`_
+
+`Python bindings and Eigen interoperability`_
+=============================================
+
+By far the largest part of this release are the new Python bindings, made using
+:gh:`pybind11 <pybind/pybind11>` and available through a separate repository at
+https://github.com/mosra/magnum-bindings. To get a first impressions, check out
+how the basic C++ tutorials :ref:`look like when rewritten in Python <std:doc:examples>`.
+Large effort went into making the Python API feel like Python, including
+GLSL-like vector swizzles:
+
+.. code:: pycon
+
+    >>> from magnum import *
+    >>> a = Vector4(1.5, 0.3, -1.0, 1.0)
+    >>> b = Vector4(7.2, 2.3, 1.1, 0.0)
+    >>> a.wxy = b.xwz
+    >>> a
+    Vector(0, 1.1, -1, 7.2)
+
+The bindings are optimized for zero-copy data transfer between C++ and Python
+using CPython's Buffer Protocol, which at the very core means the Magnum array
+view classes got exposed as :ref:`containers.ArrayView`,
+:ref:`containers.StridedArrayView1D` etc., with support for the full Python
+slicing syntax and interoperability with :ref:`numpy.ndarray`, :ref:`memoryview`
+and other views and containers.
+
+.. block-success:: Python doc generator
+
+    An important side-product of exposing Magnum to Python is a Sphinx-alike
+    documentation generator with first-class support for pybind11-generated
+    code, focus on type annotations and --- of course --- a blazing-fast search
+    you're used to from Magnum C++ docs. Check them out at
+    https://doc.magnum.graphics/python/; the generator itself is documented at
+    https://mcss.mosra.cz/documentation/python/.
+
+    One of the early adopters for Magnum Python bindings and the Python doc
+    generator is the *AI Habitat* project --- https://aihabitat.org. The whole
+    site and all its documentation is made using the m.css framework, only with
+    a different theme than Magnum sites.
+
+.. frame::
+
+    .. class:: m-text m-big m-noindent
+
+    Read more: `Introducing Magnum Python Bindings » <{filename}/blog/announcements/introducing-python-bindings.rst>`_
+
+While NumPy is used extensively by researchers in the Python world, same could
+be said about Eigen in the C++ world. In 2019.10, :dox:`EigenIntegration`
+joins the ranks of :dox:`GlmIntegration` in bringing builtin conversion between
+foreign and Magnum math types. Goal for both is not needing to worry about
+whether matrix is row- or column-major or which order quaternion components are
+stored in:
+
+.. code:: c++
+
+    #include <Magnum/EigenIntegration/Integration.h>
+
+    Eigen::Vector3f a{1.0f, 2.0f, 3.0f};
+    Vector3 b(a);
+
+    auto c = Matrix4::rotation(Vector3(a), 35.0_degf);
+
+`Image API improvements`_
+=========================
+
+With :dox:`MutableImageView2D` and friends and new overloads to
+:dox:`GL::AbstractFramebuffer::read()`, :dox:`GL::Texture::image()` etc. it's
+now possible to read GPU images into existing memory, without unwanted large
+memory allocations happening in the background. These new APIs are also exposed
+to Python, allowing for efficient transfer of rendered images directly into a
+memory buffer managed by a machine learning framework, for example.
+
+Back in `2018.04 <2018.04.rst>`_, Magnum gained backend-independent pixel
+formats, however the :dox:`CompressedPixelFormat` enum was quite neglected
+until now, supporting just basic S3TC. Now it supports all widely-used
+compression formats --- sRGB S3TC variants, one/two-channel BC4 and BC5
+formats, BC6h and BC7, ETC2 and EAC formats for mobile platforms, ASTC
+(including 3D and HDR) and PVRTC. On the GL side, :dox:`GL::CompressedPixelFormat`
+learned PVRTC formats as well, exposed the (3D) ASTC formats for WebGL, and
+same was done for the :dox:`Vk::vkFormat()` conversion utility. Besides GL and
+Vulkan, the :dox:`PixelFormat` / :dox:`CompressedPixelFormat` enum
+documentation now lists also corresponding D3D and Metal values to make it
+easier for people using (or coming from) these backends.
+
+These improvements are the initial batch of new features being added, with more
+following next --- improved DDS support (see :gh:`mosra/magnum-plugins#67`),
+a `KTX2 <http://github.khronos.org/KTX-Specification/>`_ importer or, for
+example, mip level selection (:gh:`mosra/magnum#369`).
+
+`Basis Universal texture compression`_
+======================================
+
+The main reason why all the above-listed compression formats were added is
+`Basis Universal <https://github.com/BinomialLLC/basis_universal>`_. It's a
+successor to `Crunch <https://github.com/binomialLLC/crunch>`_, open-sourced a
+few months ago thanks to funding from Google. What makes it so revolutional is
+best explained by the following plot. I took the
+`cover.jpg <{static}/img/blog/announcements/2019.10/cover.jpg>`_ used on top of
+this article and converted it to `cover.basis <{static}/img/blog/announcements/2019.10/cover.basis>`_
+and a bunch of raw block compression formats for comparison:
+
+.. magnum-imageconverter cover.jpg cover.basis --converter BasisImageConverter -c threads=0
+.. resize cover.jpg to 2048x1024 cover-pot.jpg
+.. magnum-imageconverter cover.basis --importer BasisImporterBc3RGBA --raw-output cover.bc3
+.. magnum-imageconverter cover.basis --importer BasisImporterEtc2RGBA --raw-output cover.etc2
+.. magnum-imageconverter cover-pot.basis --importer BasisImporterPvrtcRGBA4bpp --raw-output cover.pvrtc
+.. zstd -19 cover.bc3 -o cover.bc3.zst
+.. zstd -19 cover.etc2 -o cover.etc2.zst
+.. zstd -19 cover.pvrtc -o cover.pvrtc.zst
+
+.. plot:: File size / memory use
+    :type: barh
+    :labels:
+        JPEG -> RGBA8
+        Uncompressed BC3 DDS -> BC3
+        Compressed BC3 + ETC2 + PVRTC -> BC3
+        Basis Universal -> BC3
+    :colors:
+        success
+        danger
+        warning
+        info
+    :values:
+        215.0 1296 269.5 154.9
+        0.0 0.0 242.1 0.0
+        0.0 0.0 508.1 0.0
+        4969.0 0.0 276.3 1141.1
+    :units: kB
+    :bar_height: 0.33
+
+Before Basis, you had basically two ways how to optimize your asset size:
+
+-   Either optimize storage size by using lossy compression (such as JPEG), but
+    then having to fully uncompress to RGBA8. With the 1536\ |x|\ 864 cover
+    image it's a ~200 kB image inflated to over 5 MB of RGBA data.
+-   Or optimize GPU memory usage by using various block compression formats
+    (such as BC3 / DXT5), which is only 1.3 MB of data in memory; and with a
+    lossless compression on top you'll get down to a 270 kB file. However,
+    especially on mobile devices, each GPU vendor supports a different format
+    so you need to ship at least a BCn, ETC and PVRTC variant.
+
+With Basis Universal, you get the best of both worlds --- data is internally
+stored in a subset of the ETC1 block compression format with additional
+compression on top, making it smaller than an equivalent JPEG, and then you can
+transcode that single file to BCn, ETC2, ASTC or PVRTC depending on what the
+GPU needs.
+
+Thanks to work done by :gh:`Squareys`, Magnum supports both importing (and
+transcoding to a desired GPU format) via the :dox:`BasisImporter <Trade::BasisImporter>`
+plugin as well as encoding images into the Basis Universal format using the
+:dox:`BasisImageConverter <Trade::BasisImageConverter>`. Compared to the
+official ``basisu`` tool, which works only with PNGs, the
+:dox:`magnum-imageconverter <magnum-imageconverter>` utility supports any
+format that Magnum can import:
+
+.. code:: sh
+
+    magnum-imageconverter image.jpg image.basis
+
+Of course, all options supported by ``basisu`` are exposed to the plugin
+configuration as well:
+
+.. code:: sh
+
+    magnum-imageconverter image.jpg --converter BasisImageConverter \
+        -c flip_y=false,threads=8 image.basis
+
+The :dox:`TinyGltfImporter <Trade::TinyGltfImporter>` supports Basis files
+through the unofficial ``GOOGLE_texture_basis`` extension. There are still some
+features we're waiting on to get merged in order to have a full support. One of
+them is an ability to Y-flip images during transcode (instead of only in the
+encoder, :gh:`BinomialLLC/basis_universal#79`), another are buildsystem
+improvements (:gh:`BinomialLLC/basis_universal#13`) --- right now, the software
+can't be built as a library on its own and thus is impossible to package /
+distribute without requiring each project to bundle it. Until that's resolved,
+Basis won't be enabled in any Magnum packages. The only exception is Vcpkg,
+where a Basis fork, based off the above PR, is used.
+
+`Magnum Player improvements`_
+=============================
+
+The `Magnum Player <{filename}/showcase/player.rst>`_ utility received quite a
+few new features. It can now automatically generate smooth normals for models
+that don't have them and you can inspect mesh topology by selecting it using a right-click.
+
+.. image:: {static}/img/blog/announcements/2019.10/player.png
+    :scale: 58%
+
+Apart from meshes, the player can now also open images of all types that Magnum
+can import. This includes the above-mentioned Basis Universal --- and the web
+version knows those, too, and transcodes to BCn, ETC, PVRTC, ASTC or plain RGBA
+depending on what your browser supports.
+
+.. button-success:: {filename}/showcase/player.rst
+
+    Magnum Web Player
+
+    drag&drop any glTF, JPEG, PNG or Basis file
+
+`DART integration and an example`_
+==================================
+
+The :dox:`DartIntegration` library, integrating the DART Animation and Robotics
+Toolkit, contributed by :gh:`costashatz` over a year ago, now received a
+well-polished interactive example. As a side dish, Costas wrote a detailed
+overview post, explaining both the code and the robotics background:
+
+.. figure:: {static}/img/blog/guest-posts/using-dart-to-control-a-robotic-manipulator.png
+    :target: {filename}/blog/guest-posts/using-dart-to-control-a-robotic-manipulator.rst
+    :width: 400px
+
+    `Using DART to control a robotic manipulator » <{filename}/blog/guest-posts/using-dart-to-control-a-robotic-manipulator.rst>`_
+
+    Gues post by Konstantinos Chatzilygeroudis
+
+`Buildsystem usability improvements`_
+=====================================
+
+The 2019.10 release irons out the remaining pain points in using Magnum
+libraries as CMake subprojects. All binaries are now put into a common
+directory inside the build dir, which means no hassle with DLL paths on Windows
+anymore --- and to help the common use cases even further, SDL and GLFW DLLs
+are automatically copied there as well.
+
+Plugin usage with CMake subprojects is significantly improved too. Dynamic
+plugin binaries are put in a central place in the build directory and the
+plugin managers now look for them relatively to location of given plugin
+interface library, removing the need to install everything first.
+
+.. code:: cmake
+
+    set(WITH_TINYGLTFIMPORTER ON)
+    set(WITH_STBIMAGEIMPORTER ON)
+    add_subdirectory(magnum-plugins)
+
+Note that the above bumped the minimal CMake version requirement from 3.1 to
+3.4, although we don't expect any issues as the versions currently in
+widespread use is 3.5. In any case, you can always download a prebuilt version
+for your platform.
+
+Thanks to extensive feedback from :gh:`alanjfs`, the :dox:`Getting Started Guide <getting-started>`
+got rewritten and is now easier to follow by first-time users on Windows, not
+requiring anybody to fiddle with :bat:`%PATH%` or installing things to random
+places anymore.
+
+`Windows-specific goodies`_
+===========================
+
+Compared to 2019.01, there's an official support for MSVC 2019. The compiler
+still needs a few workarounds compared to GCC / Clang, but it's relatively
+minor things that should not affect usability. Extrapolating further, we expect
+the next version of MSVC to be fully conforming, and thus not needing any
+compiler-specific handling. We're commited to fully supporting all previous
+versions back to MSVC 2015 for the foreseeable future.
+
+:dox:`Corrade::Main <main>` is a new library that, on Windows, adds a shim
+around your :cpp:`main()` function, sets up UTF-8 terminal encoding, enables
+ANSI color escape codes and converts Unicode command-line arguments to UTF-8 as
+well, enabling you to use the same standards-conforming code on all platforms.
+Additionally, it'll also allow you to hide the terminal window lurking in
+background without forcing you to implement :cpp:`WinMain()`. With CMake, this
+is all you need to do:
+
+.. code:: cmake
+
+    find_package(Corrade REQUIRED Main)
+    add_executable(my-application WIN32 main.cpp) # WIN32 turns it into a GUI app
+    target_link_libraries(my-application PRIVATE Corrade::Main)
+
+Another thing worth mentioning is that :dox:`Platform::Sdl2Application` and
+:dox:`Platform::GlfwApplication` now have basic DPI awareness on Windows,
+catching up with other platforms.
+
+`OpenGL-related improvements`_
+==============================
+
+Compared to other parts of the library, the OpenGL backend was kept on the
+backburner in the last few releases, not receiving any huge new features. For
+2019.10, it got cleaned up from the old :glext:`EXT_direct_state_access`
+extension, keeping just the newer and better-designed :glext:`ARB_direct_state_access`
+simply because all current drivers implementing the EXT variant support the ARB
+one as well. On the other hand, there's a *ton* of driver bugs related to the
+:abbr:`new <2014 was a mere year ago, right?>` extension, especially on Intel
+and AMD drivers on Windows. To counter that, Magnum received
+`about a dozen new driver workarounds <https://twitter.com/czmosra/status/1106955396219105285>`_
+to ensure it behaves as expected even when the driver doesn't.
+
+One of the *essential* new things is the ``--magnum-gpu-validation``
+command-line option. Instead of having to create a debug context manually and
+then fiddle with :dox:`GL::DebugOutput` callbacks, this option will do this for
+you. Very useful for quick debugging of the dreaded "why it doesn't render"
+issues. For windowless EGL contexts on Linux, there's also a new
+``--magnum-device``  option giving you an ability to switch between different
+devices. It's known to work with binary NVidia drivers and Mesa since 19.2 ---
+there it usually allows you to choose between an integrated GPU, a dedicated
+card or a software renderer.
+
+.. note-info::
+
+    The new option names are deliberately chosen to not have any relation to
+    the OpenGL API, since the plan is to have the same options affect the
+    upcoming Vulkan backend as well.
+
+`Single-header libraries`_
+==========================
+
+Starting with this release, a subset of Magnum functionality is being exposed
+through single-header libraries. These are all
+:dox:`generated from multi-file sources <acme>` and thus contain the best of
+both worlds --- small footprint of the generated files as all documentation,
+comments and non-essential features are stripped out, but on the other hand
+they inherit extensive documentation and >95% test coverage of the original
+source code.
+
+The libraries were gradually introduced in the past posts, here's the whole
+list:
+
+.. class:: m-table m-container-inflate
+
+=============================== ========= ============= =======================
+Library                         LoC       PpLoC\ [1]_   Description
+=============================== ========= ============= =======================
+`CorradeArrayView.h`_           644       2489          :dox:`Containers::ArrayView`
+                                                        and :dox:`StaticArrayView <Containers::StaticArrayView>`,
+                                                        lightweight alternatives
+                                                        to :dox:`std::span`
+`CorradeStridedArrayView.h`_    594\ [2]_ 2923          :dox:`Containers::StridedArrayView`,
+                                                        lightweight alternative to
+                                                        proposed `std::mdspan`_.
+`CorradeArray.h`_               698\ [2]_ 3344          :dox:`Containers::Array`
+                                                        and :dox:`StaticArray <Containers::StaticArray>`,
+                                                        lightweight
+                                                        alternatives to
+                                                        :dox:`std::vector` and
+                                                        :dox:`std::array`
+`CorradeOptional.h`_            330       2736          :dox:`Containers::Optional`,
+                                                        a lightweight
+                                                        alternative to
+                                                        :dox:`std::optional`
+`CorradePointer.h`_             263       2312          :dox:`Containers::Pointer`,
+                                                        a lightweight
+                                                        alternative to
+                                                        :dox:`std::unique_ptr`
+`CorradeReference.h`_           115       1626          :dox:`Containers::Reference`,
+                                                        a lightweight
+                                                        alternative to
+                                                        :dox:`std::reference_wrapper`
+`CorradeScopeGuard.h`_          131       34            :dox:`Containers::ScopeGuard`,
+                                                        alternative to
+                                                        :dox:`std::unique_ptr`
+                                                        with a custom deleter
+`CorradeStlForwardArray.h`_     67        2436\ [3]_    :dox:`Forward declaration for std::array </home/mosra/Code/corrade/src/Corrade/Utility/StlForwardArray.h>`
+`CorradeStlForwardString.h`_    74        48            :dox:`Forward declaration for std::string </home/mosra/Code/corrade/src/Corrade/Utility/StlForwardString.h>`
+`CorradeStlForwardTuple.h`_     78        1601          :dox:`Forward declaration for std::tuple </home/mosra/Code/corrade/src/Corrade/Utility/StlForwardTuple.h>`
+`CorradeStlForwardVector.h`_    62        766\ [3]_     :dox:`Forward declaration for std::vector </home/mosra/Code/corrade/src/Corrade/Utility/StlForwardVector.h>`
+`CorradeStlMath.h`_             57        2970\ [4]_    Like :cpp:`#include <cmath>`, but :dox:`without the heavy C++17 additions </home/mosra/Code/corrade/src/Corrade/Utility/StlMath.h>`
+=============================== ========= ============= =======================
+
+.. _std::mdspan: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0009r9.html
+.. _CorradeArrayView.h: https://github.com/mosra/magnum-singles/blob/master/CorradeArrayView.h
+.. _CorradeArray.h: https://github.com/mosra/magnum-singles/blob/master/CorradeArray.h
+.. _CorradeStridedArrayView.h: https://github.com/mosra/magnum-singles/blob/master/CorradeStridedArrayView.h
+.. _CorradeOptional.h: https://github.com/mosra/magnum-singles/blob/master/CorradeOptional.h
+.. _CorradePointer.h: https://github.com/mosra/magnum-singles/blob/master/CorradePointer.h
+.. _CorradeReference.h: https://github.com/mosra/magnum-singles/blob/master/CorradeReference.h
+.. _CorradeScopeGuard.h: https://github.com/mosra/magnum-singles/blob/master/CorradeScopeGuard.h
+.. _CorradeStlForwardArray.h: https://github.com/mosra/magnum-singles/blob/master/CorradeStlForwardArray.h
+.. _CorradeStlForwardString.h: https://github.com/mosra/magnum-singles/blob/master/CorradeStlForwardString.h
+.. _CorradeStlForwardTuple.h: https://github.com/mosra/magnum-singles/blob/master/CorradeStlForwardTuple.h
+.. _CorradeStlForwardVector.h: https://github.com/mosra/magnum-singles/blob/master/CorradeStlForwardVector.h
+.. _CorradeStlMath.h: https://github.com/mosra/magnum-singles/blob/master/CorradeStlMath.h
+
+.. [1] lines of code after a preprocessor run, with system includes expanded.
+    Gathered using GCC 9.2 and libstdc++, unless said otherwise.
+.. [2] not a total size due to inter-library dependencies
+.. [3] gathered using Clang 9.0 and libc++, since libstdc++ doesn't have a
+    forward declaration for :dox:`std::array` / :dox:`std::vector`
+.. [4] gathered using GCC 9.2, libstdc++ and ``-std=c++17``
+
+`TestSuite improvements, shader testing`_
+=========================================
+
+If you're not yet using :dox:`TestSuite <TestSuite::Tester>` for tests in your
+Magnum-based project (well, or any other), consider giving it a try. For this
+release, continued effort was put on render output testing ---
+:dox:`DebugTools::CompareImage` received an ability to save a diagnostic file
+in case of a comparison failure, and can compare against an arbitrary pixel
+view in addition to files and :dox:`ImageView` instances. Tests can be now also
+run with verbose output, showing detailed info even in case the comparison
+passes:
+
+.. code-figure::
+
+    .. code:: sh
+
+        ./ShadersPhongGLTest -v --only 38
+
+    .. include:: 2019.10/compare.ansi
+        :code: ansi
+        :class: m-nopad m-console-wrap
+
+With these improvements in place, the whole :dox:`Shaders` library has tests
+for rendering output. So far, thanks to these, we ironed out a bunch of bugs
+in dusty corner cases, but that's not all --- it makes further modifications,
+optimizations and improvements easier to make as regressions will now be caught
+through automatic testing.
+
+`Reduced overhead, guaranteed thread safety and uniqueness of globals`_
+=======================================================================
+
+While globals are often a source of immense pain, sometimes having a state
+global is the most pragmatic decision of all. Magnum currently uses globals in
+these few places:
+
+.. container:: m-col-m-4 m-right-m m-container-inflate
+
+    .. note-danger::
+
+        Singletons are bad!!
+
+        .. class:: m-text m-dim m-text-right
+
+        --- everyone
+
+1.  :dox:`Utility::Debug` scoped output redirection and coloring
+2.  Each compiled-in :dox:`Utility::Resource` resource registers itself
+    into a global storage
+3.  Similarly, static plugins register themselves into :dox:`PluginManager`
+4.  And because OpenGL (and then OpenAL, which is modelled after it) has a
+    global context, it makes sense to have current :dox:`GL::Context` /
+    :dox:`Audio::Context` globally accessible as well
+
+One other usage of globals was in :dox:`ResourceManager` (and transitively in :dox:`DebugTools::ObjectRenderer` as well), but those APIs are now deprecated
+in favor of explicitly passed references. And, for the upcoming Vulkan backend,
+there's no plan to have a GL-like "global context" at all.
+
+For this release, all global state was rewritten to be completely
+allocation-free (registration of resources and static plugins is now just
+building an intrusive linked list), which means there's no need to run any
+global destructors for these. Moreover, while already very lightweight, the
+automatic registration can be completely opted out of, allowing you to get rid
+of global constructors as well.
+
+All global state that's read-write is now made :cpp:`thread_local`, meaning
+every thread will have its own copy of the global data. This makes more sense
+than having the global state access guarded by a lock. Besides being faster,
+you might want to redirect your log output to a file in one thread but not in
+the other. Apart from these, Magnum doesn't do anything about threading on its
+own --- if your app needs to share data across threads, you're fully
+responsible for guarding against data races. Thread-local variables of course
+come with some small overhead, and if you don't need that, you can turn it off
+via the :dox:`CORRADE_BUILD_MULTITHREADED` option.
+
+With the introduction of Python bindings, globals posed another problem --- if
+Magnum is built statically and then linked into two distinct Python modules,
+the globals get duplicated, each module having its own copy. On Unix systems
+this was easily solved by marking the few globals exported *weak symbols*,
+telling the dynamic linker to always pick only one of them. On Windows there's
+no notion of a weak linking and additionally :cpp:`__declspec(dllexport)`
+attributes can't be :cpp:`thread_local`, so this got solved by a
+:abbr:`brown magic <it's a shitty workaround>` involving
+:link-flat:`GetProcAddress() <https://docs.microsoft.com/en-us/cpp/build/getprocaddress?view=vs-2019>`.
+
+`Audio-related additions`_
+==========================
+
+:gh:`williamjcm`, who can be now considered our audio expert thanks to all his
+contributions, implemented loop points in :dox:`Audio::Buffer`, buffer queuing
+and an MP3 importer in :dox:`DrMp3AudioImporter <Audio::DrMp3Importer>` --- all
+MP3-related patents finally expired back in 2017, so there's shouldn't be any
+legal pressure against using MP3 files for your audio tracks anymore.
+
+Following :dox:`GL::Context`, the :dox:`Audio::Context` now understands the
+``--magnum-disable-extensions`` and ``--magnum-log`` options as well.
+
+`Full changelog ... and what's next?`_
+======================================
+
+This release took almost 9 months to make, much more than initially planned,
+and a "release cut" had to be made in order to keep it from growing
+indefinitely. Because of that, there's a lot of things that didn't fit into
+this announcement and the changelogs are larger than you might expect:
+
+-   :dox:`Changes in Corrade 2019.10 <corrade-changelog-2019-10>`
+-   :dox:`Changes in Magnum 2019.10 <changelog-2019-10>`
+-   :dox:`Changes in Magnum Plugins 2019.10 <changelog-plugins-2019-10>`
+-   :dox:`Changes in Magnum Integration 2019.10 <changelog-integration-2019-10>`
+-   :dox:`Changes in Magnum Extras 2019.10 <changelog-extras-2019-10>`
+-   :dox:`Changes in Magnum Examples 2019.10 <changelog-examples-2019-10>`
+
+For the next version, apart from image-related improvements
+`hinted above <#image-api-improvements>`_, well underway is a rework of
+:dox:`Trade::MeshData3D`, with support for more vertex attributes, arbitrary
+data types and zero-copy data import. This one will likely result also in
+additions to Corrade container types (growable arrays) and various other
+things. Subscribe to :gh:`mosra/magnum#371` for updates.
+
+Having Python bindings out of the way, the Vulkan bindings got a priority as
+well --- expect Vulkan-related changes popping up in the next months.
+
+`Updating from previous versions`_
+==================================
+
+If you're using Homebrew, MSYS packages ArchLinux AUR or Vcpkg, 2019.10 is
+already in the repositories. ArchLinux community packages are scheduled for an
+update, and Ubuntu packages can be built directly from within the cloned
+repository as usual.
+
+The library is constantly undergoing a "header hygiene" include cleanup,
+meaning you can now get compiler errors related to use of incomplete types. The
+fix is in most cases including corresponding headers --- in many cases some of
+these:
+
+.. code:: c++
+
+    #include <Corrade/Containers/Reference.h>
+    #include <Corrade/Containers/Optional.h>
+    #include <Corrade/Utility/DebugStl.h>
+    #include <Magnum/Math/Matrix4.h>
+
+Since it's been over a year since the "GL split" in `2018.04`_, 2019.10 removes
+all compatibility aliases of :dox:`GL` APIs in the root namespace. If you're
+upgrading from older versions, the recommended way is as always jumping over
+all stable releases (so 2018.04, 2018.10, 2019.01) and fixing up what breaks,
+instead of directly trying with the latest.
+
+`Thank you`_
+============
+
+A huge part of the work for this release was done by external contributors ---
+sincere thanks to everyone (and apologies to those I forgot):
+
+-   :gh:`Alan Jefferson <alanjfs>` for extensive usability feedback on
+    tutorials and documentation
+-   :gh:`Allie <bowling-allie>` for Emscripten-related usability improvements
+-   :gh:`Cameron Egbert <cegbertOculus>` for work on the Windows port of the
+    new Python bindings
+-   :gh:`Daniel Bloor <Bluer01>` for setting old code on fire
+-   :gh:`Daniel Guzman <roig>` for :dox:`ResourceManager` improvements
+-   :gh:`Florian Goujeon <fgoujeon>` for iOS fixes in the :dox:`Shaders`
+    library
+-   :gh:`Guillaume Jacquemin <williamjcm>` for various
+    :dox:`Platform::GlfwApplication` / :dox:`Platform::Sdl2Application`
+    improvements, :dox:`Audio::Buffer` queuing and loop point support,
+    feature parity between :dox:`Audio::Context` and :dox:`GL::Context`,
+    the :dox:`DrMp3AudioImporter <Audio::DrMp3Importer>` plugin,
+    :dox:`ImGuiIntegration` improvements, MSYS package maintenance and much
+    more
+-   :gh:`Igor Kalevatykh <ikalevatykh>` for improvements to
+    :dox:`AssimpImporter <Trade::AssimpImporter>`
+-   :gh:`Jakob Weiss <TheHugeManatee>` for initial work on making the
+    :dox:`Interconnect` library accept stateful lambdas
+-   :gh:`Jonathan Hale <Squareys>` for :dox:`Platform::EmscriptenApplication`,
+    :dox:`BasisImporter <Trade::BasisImporter>` and
+    :dox:`BasisImageConverter <Trade::BasisImageConverter>`, Vcpkg package
+    maintenance and more
+-   :gh:`Konstantinos Chatzilygeroudis <costashatz>` for continued maintenance
+    of :dox:`DartIntegration` and the DART example
+-   :gh:`Marco Melorio <Melix19>` for :dox:`ImGuiIntegration` improvements and
+    help with macOS/iOS testing
+-   :gh:`Max Schwarz <xqms>` for all work done on improving asset management,
+    multithreading and general stability
+-   :gh:`Nick Skelsey <NSkelsey>` for documentation copy-editing
+-   :gh:`Winfried Baumann <codewing>` for example code cleanup
+-   :gh:`Cong Xie <xiconxi>`, :gh:`Erik Wijmans <erikwijmans>`,
+    :gh:`Ivan Sanz Carasa <isc30>`, :gh:`Mandeep Singh Baines <msbaines>`,
+    :gh:`Michael Tao <mtao>`, :gh:`pkubaj`, :gh:`Selot`,
+    :gh:`Thibault Jochem <Tryum>` and many others who contributed various fixes
+    to make things work better on a broader range of platforms
+
+.. note-dim::
+
+    Share your opinion on social networks:
+    `Twitter <https://twitter.com/czmosra/status/1189558650957946882>`_;
+    Reddit `r/cpp <https://www.reddit.com/r/cpp/comments/dp80np/magnum_engine_201910_released_with_python/>`_,
+    `r/python <https://www.reddit.com/r/Python/comments/dp86aq/magnum_engine_201910_released_with_python/>`_,
+    `r/gamedev <https://www.reddit.com/r/gamedev/comments/dp85pv/magnum_engine_201910_released_with_python/>`_,
+    `r/gltf <https://www.reddit.com/r/glTF/comments/dp8las/magnum_engine_201910_released_with_python/>`_,
+    `r/webgl <https://www.reddit.com/r/webgl/comments/dp92oi/magnum_engine_201910_released_with_emscripten/>`_;
+    `Hacker News <https://news.ycombinator.com/item?id=21398699>`_

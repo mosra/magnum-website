@@ -34,7 +34,7 @@ Magnum Engine
 
         .. container:: m-col-l-3 m-push-l-2 m-col-m-4 m-push-m-1 m-col-s-6 m-push-s-3 m-col-t-8 m-push-t-2
 
-            .. button-default:: https://doc.magnum.graphics/magnum/getting-started.html
+            .. button-warning:: https://doc.magnum.graphics/magnum/getting-started.html
                 :class: m-fullwidth
 
                 Dive right in
@@ -42,10 +42,11 @@ Magnum Engine
                 | quick guide to
                 | get you started
 
-            .. class:: m-text-center m-text m-primary m-noindent
+            .. class:: m-text-center m-text m-warning m-noindent
 
-            | Usability-focused version
-            | `2019.01 <{filename}/blog/announcements/2019.01.rst>`_ is now out!
+            | Version `2019.10 <{filename}/blog/announcements/2019.10.rst>`_ with
+              Python
+            | and Basis support now out!
 
 .. role:: raw-html(raw)
     :format: html
@@ -58,14 +59,14 @@ Magnum Engine
             :figclass: m-fullwidth m-warning
             :alt: Core features
 
-        .. block-success:: Beauty of *simplicity*
+        .. block-warning:: Beauty of *simplicity*
 
             Among Magnum essentials is a UTF-8-aware OS, filesystem and console
             abstraction, a versatile vector math library and a slim C++11
             wrapper of Vulkan and OpenGL API families. Build on top of that or
             opt-in for more.
 
-            .. button-success:: {filename}/features.rst
+            .. button-warning:: {filename}/features.rst
                 :class: m-fullwidth
 
                 See all core features
@@ -94,14 +95,14 @@ Magnum Engine
             :figclass: m-fullwidth m-success
             :alt: Feature
 
-        .. block-info:: Screws are *not glued in*
+        .. block-success:: Screws are *not glued in*
 
             There's always more than one way to do things. Enjoy the freedom of
             choice and integrate your own asset loader, texture compressor,
             font format or math library, if you feel the need. Or use any of
             the various plugins.
 
-            .. button-info:: {filename}/features/extensions.rst
+            .. button-success:: {filename}/features/extensions.rst
                 :class: m-fullwidth
 
                 View extension points
