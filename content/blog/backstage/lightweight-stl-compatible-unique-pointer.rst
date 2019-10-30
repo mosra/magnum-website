@@ -399,7 +399,7 @@ didn't like those at all.)*
 I was looking forward to C++ modules to simplify library linking to the point
 where you just say "this is the library I want to link to" on the command line
 and it will feed both the linker with correct object code and the compiler with
-corect imported definitions. Wishful thinking.
+correct imported definitions. Wishful thinking.
 
 This is nowhere near that and the speed gains are not *that* significant
 compared to responsible header hygiene. People with bigger codebases are
