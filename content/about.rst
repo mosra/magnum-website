@@ -87,10 +87,12 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
 
         .. class:: m-block-dot-t m-spacing-150 m-text-center
 
+        -   :gh-name:`Alan Jefferson <alanjfs>`
         -   :gh-name:`Alan <Alan-FGR>`
         -   :gh-name:`Alexander F Rødseth <xyproto>`
         -   :gh-name:`Alexey Yurchenko <alexesDev>`
         -   :gh-name-big:`Alice Margatroid <alicemargatroid>`
+        -   :gh-name:`Allie <bowling-allie>`
         -   :gh-name:`Andy Somogyi <andysomogyi>`
         -   :gh-name:`ArEnSc`
         -   :gh-name:`Ashwin Ravichandran <ashrko619>`
@@ -98,6 +100,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`biosek`
         -   :gh-name:`Borislav Stanimirov <iboB>`
         -   :gh-name:`Cameron Egbert <cegbertOculus>`
+        -   :gh-name:`Cong Xie <xiconxi>`
         -   :gh-name:`Chris Chambers <chris-chambers>`
         -   :gh-name:`Daniel Bloor <Bluer01>`
         -   :gh-name:`Daniel Guzman <roig>`
@@ -109,11 +112,14 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Eliot Saba <staticfloat>`
         -   :gh-name:`Émile Grégoire <emgre>`
         -   :gh-name:`Erik Wijmans <erikwijmans>`
+        -   :gh-name:`Florian Goujeon <fgoujeon>`
         -   :gh-name:`Fabien Freling <ffreling>`
         -   :gh-name:`Fred Helmesjö <helmesjo>`
         -   :gh-name:`Guillaume Giraud <Guillaume227>`
         -   :gh-name-big:`Guillaume Jacquemin <williamjcm>`
         -   :gh-name:`Hilario Pérez Corona <hpcorona>`
+        -   :gh-name:`hunt978`
+        -   :gh-name:`Igor Kalevatykh <ikalevatykh>`
         -   :gh-name:`Ivan P. <uzername>`
         -   :gh-name:`Ivan Sanz Carasa <isc30>`
         -   :gh-name:`Jakob Weiss <TheHugeManatee>`
@@ -126,6 +132,8 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name-big:`Konstantinos Chatzilygeroudis <costashatz>`
         -   :gh-name:`Krzysztof Szenk <Crisspl>`
         -   :gh-name:`Leon Moctezuma <leonidax>`
+        -   :gh-name:`Mandeep Singh Baines <msbaines>`
+        -   :gh-name:`Marco Melorio <Melix19>`
         -   :gh-name-big:`Max Schwarz <xqms>`
         -   :gh-name:`Michael "Croydon" Keck <Croydon>`
         -   :gh-name:`Michael Dietschi <mdietsch>`
@@ -139,6 +147,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Olga Turanksaya <olga-python>`
         -   :gh-name:`Pascal Thomet <pthom>`
         -   :gh-name:`Patrick Werner <boonto>`
+        -   :gh-name:`pkubaj`
         -   :gh-name:`Sam Spilsbury <smspillaz>`
         -   :gh-name:`Samuel Kogler <skogler>`
         -   :gh-name:`Selot`
