@@ -236,8 +236,7 @@ function fetch() {
         /* These are not on AppVeyor */
         if(projects[i][0].indexOf('flextgl') === -1 &&
            projects[i][0].indexOf('homebrew') === -1 &&
-           projects[i][0].indexOf('magnum-singles') === -1 &&
-           projects[i][0].indexOf('magnum-bindings') === -1)
+           projects[i][0].indexOf('magnum-singles') === -1)
             fetchLatestAppveyorJobs(projects[i][0], projects[i][1]);
         /* These don't have coverage reports */
         if(projects[i][0].indexOf('magnum-examples') == -1 &&
