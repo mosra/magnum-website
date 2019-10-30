@@ -142,6 +142,7 @@ PLUGINS = ['m.abbr',
            'm.alias',
            'm.code',
            'm.components',
+           'm.dot',
            'm.dox',
            'm.filesize',
            'm.gh',
@@ -152,6 +153,7 @@ PLUGINS = ['m.abbr',
            'm.math',
            'm.metadata',
            'm.plots',
+           'm.sphinx',
            'm.vk']
 
 FORMATTED_FIELDS = ['summary', 'description', 'landing', 'badge', 'header', 'footer']
@@ -168,9 +170,17 @@ M_SHOW_AUTHOR_LIST = True
 M_HTMLSANITY_SMART_QUOTES = True
 M_HTMLSANITY_HYPHENATION = True
 M_DOX_TAGFILES = [
-    ('doxygen/stl.tag', 'https://en.cppreference.com/w/', [], ['m-flat']),
+    ('external/stl.tag', 'https://en.cppreference.com/w/', [], ['m-flat']),
     ('content/doc/corrade.tag', 'https://doc.magnum.graphics/corrade/', ['Corrade::'], ['m-flat', 'm-text', 'm-strong']),
     ('content/doc/magnum.tag', 'https://doc.magnum.graphics/magnum/', ['Magnum::'], ['m-flat', 'm-text', 'm-strong'])]
+M_SPHINX_INVENTORIES = [
+    ('external/python.inv', 'https://docs.python.org/3/', [], ['m-flat']),
+    ('external/numpy.inv', 'https://docs.scipy.org/doc/numpy/', [], ["m-flat"]),
+    ('external/scipy.inv', 'https://docs.scipy.org/doc/scipy/reference/', [], ["m-flat"]),
+    # It's in external instead of content/doc because there's already
+    # https://doc.magnum.graphics/python/objects.inv that people can download
+    ('external/magnum.inv', 'https://doc.magnum.graphics/python/', ['corrade.', 'magnum.'], ['m-flat', 'm-text', 'm-strong'])
+]
 M_IMAGES_REQUIRE_ALT_TEXT = True
 M_METADATA_AUTHOR_PATH = 'blog/authors'
 M_METADATA_CATEGORY_PATH = 'blog/categories'

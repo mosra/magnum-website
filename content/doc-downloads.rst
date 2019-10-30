@@ -3,8 +3,15 @@ Doc Downloads
 
 :summary: Downloads of Corrade and Magnum documentation
 
-Up-to-date documentation for Corrade and Magnum is actively maintained on
-https://doc.magnum.graphics/corrade/ and https://doc.magnum.graphics/magnum/.
+Up-to-date documentation for Corrade, Magnum and Magnum Python Bindings is
+actively maintained on
+
+-   https://doc.magnum.graphics/corrade/,
+-   https://doc.magnum.graphics/magnum/ and
+-   https://doc.magnum.graphics/python/.
+
+.. class:: m-noindent
+
 While it's possible to scrape these for offline viewing, it's advised to build
 your own version locally instead. Guide how to do that is available
 :dox:`in the documentation <building-doc>`. Thank you for being nice to server
@@ -40,9 +47,24 @@ the files.
 
         TAGFILES += stl.tag=https://en.cppreference.com/w/
 
+`Intersphinx inventory file`_
+=============================
+
+If you use the Python API and want to crosslink to that as well, the
+`Intersphinx <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html>`_
+inventory file is in its usual location:
+
+-   https://doc.magnum.graphics/python/objects.inv (:filesize:`{static}/../external/magnum.inv`)
+
+Either point Sphinx directly to https://doc.magnum.graphics/python/ or download
+the file and hook it up manually
+
 .. note-success::
 
     In case you are wondering, the online Magnum docs are generated using the
-    `m.css Doxygen theme <https://mcss.mosra.cz/doxygen/>`_. It's also possible
-    to conveniently link to Doxygen docs from your Pelican blog using
-    `a m.css plugin <https://mcss.mosra.cz/plugins/links/#doxygen-documentation>`_.
+    `m.css Doxygen theme <https://mcss.mosra.cz/documentation/doxygen/>`_
+    (and the Python API using the `m.css Python doc generator <https://mcss.mosra.cz/documentation/python/>`_).
+    It's also possible to conveniently link to Doxygen / Sphinx docs from your
+    Pelican blog using the `m.dox <https://mcss.mosra.cz/plugins/links/#doxygen-documentation>`_ and `m.sphinx <https://mcss.mosra.cz/plugins/sphinx/>`_
+    m.css plugins.
+
