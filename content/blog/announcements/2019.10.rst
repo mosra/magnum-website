@@ -479,12 +479,12 @@ card or a software renderer.
 ==========================
 
 Starting with this release, a subset of Magnum functionality is being exposed
-through single-header libraries. These are all
-:dox:`generated from multi-file sources <acme>` and thus contain the best of
-both worlds --- small footprint of the generated files as all documentation,
-comments and non-essential features are stripped out, but on the other hand
-they inherit extensive documentation and >95% test coverage of the original
-source code.
+through single-header libraries over at https://github.com/mosra/magnum-singles.
+These are all :dox:`generated from multi-file sources <acme>` and thus contain
+the best of both worlds --- small footprint of the generated files as all
+documentation, comments and non-essential features are stripped out, but on the
+other hand they inherit extensive documentation and >95% test coverage of the
+original source code.
 
 The libraries were gradually introduced in the past posts, here's the whole
 list:
