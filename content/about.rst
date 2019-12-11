@@ -107,7 +107,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`David Lin <davll>`
         -   :gh-name:`denesik`
         -   :gh-name:`Denis Igorevich Lobanov <denislobanov>`
-        -   :name:`Gerhard de Clercq`
+        -   :gh-name:`DJQuardaboff`
         -   :gh-name:`dlardi`
         -   :gh-name:`Eliot Saba <staticfloat>`
         -   :gh-name:`Émile Grégoire <emgre>`
@@ -115,6 +115,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Florian Goujeon <fgoujeon>`
         -   :gh-name:`Fabien Freling <ffreling>`
         -   :gh-name:`Fred Helmesjö <helmesjo>`
+        -   :name:`Gerhard de Clercq`
         -   :gh-name:`Guillaume Giraud <Guillaume227>`
         -   :gh-name-big:`Guillaume Jacquemin <williamjcm>`
         -   :gh-name:`Hilario Pérez Corona <hpcorona>`
@@ -142,6 +143,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Miguel Martin <miguelmartin75>`
         -   :gh-name:`Natesh Narain <nnarain>`
         -   :gh-name:`Nathan Ollerenshaw <matjam>`
+        -   :gh-name:`Nghia Truong <ttnghia>`
         -   :gh-name:`Nick Skelsey <NSkelsey>`
         -   :gh-name:`Nicholas "LB" Branden <LB-->`
         -   :gh-name:`Olga Turanksaya <olga-python>`
