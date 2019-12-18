@@ -101,6 +101,15 @@ Proof of concept implementation of hot code reloading using
 -   **License:** :label-success:`MIT`
 -   **Platforms:** Windows
 
+`Bazel buildsystem`_
+====================
+
+Integrates Magnum into the `Bazel <https://bazel.build/>`_ buildsystem.
+
+-   **GitHub:** :gh:`dbacchet/magnum-bazel`
+-   **License:** :label-success:`MIT`
+-   **Platforms:** Ubuntu 16.04 and 18.04, macOS 10.14+
+
 `MacPorts packages`_
 ====================
 
