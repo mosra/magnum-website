@@ -35,7 +35,7 @@ below. You can also click on various parts of the architecture diagram.
 ======================
 
 -   **Linux** and embedded Linux
--   **Windows** with both MSVC and MinGW, **Windows RT** (Store/Phone)
+-   **Windows** with MSVC, clang-cl and MinGW, **Windows RT** (Store/Phone)
 -   **macOS**, **iOS**
 -   **Android**
 -   **Web** (`WebAssembly <https://webassembly.org/>`_ or `asm.js <http://asmjs.org/>`_),
