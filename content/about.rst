@@ -123,6 +123,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Igor Kalevatykh <ikalevatykh>`
         -   :gh-name:`Ivan P. <uzername>`
         -   :gh-name:`Ivan Sanz Carasa <isc30>`
+        -   :gh-name:`Jackson Campolattaro <JacksonCampolattaro>`
         -   :gh-name:`Jakob Weiss <TheHugeManatee>`
         -   :gh-name:`Jan Dupal <JanDupal>`
         -   :gh-name:`Janick Martinez Esturo <ph03>`
