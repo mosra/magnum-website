@@ -54,17 +54,17 @@ Show builds for:
 
 .. container:: m-row
 
-    .. container:: m-col-m-4
+    .. container:: m-col-m-4 m-nopadt
 
         .. raw:: html
             :file: build-status-flextgl.html
 
-    .. container:: m-col-m-4
+    .. container:: m-col-m-4 m-nopadt
 
         .. raw:: html
             :file: build-status-singles.html
 
-    .. container:: m-col-m-4
+    .. container:: m-col-m-4 m-nopadt
 
         .. raw:: html
             :file: build-status-brew.html
