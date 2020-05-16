@@ -7,7 +7,7 @@ Being productive with your tools
 :tags: Git, C++, CMake, Eigen, Linux, m.css, Python
 :summary: Magnum is developed with a `"Zen Garden" philosophy <{filename}/features.rst#our-zen-garden-philosophy>`_
     in mind, focusing on productivity, predictability and ease of use. Let's
-    see how can that extend beyond just the library itself --- into your daily
+    see how that can extend beyond just the library itself --- into your daily
     workflow.
 
 .. role:: sh(code)
