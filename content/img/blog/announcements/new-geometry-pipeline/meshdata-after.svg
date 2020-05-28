@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="740" height="120" version="1.1" viewBox="0 0 195.79 31.75" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-1.0618 -2.9851)">
+  <rect x="1.0618" y="2.9851" width="195.79" height="31.75" fill="#2f363f" stop-color="#000000"/>
+ </g>
+ <g transform="translate(-1.0618 -2.9851)">
+  <path d="m50.047 18.443a6.1769 4.3128 13.823 0 0 0.27604 0.8687 6.1769 4.3128 13.823 0 0 2.564 2.6163 7.2502 5.9417 15.019 0 0 0.0254 0.14571 7.2502 5.9417 15.019 0 0 1.1178 2.4618 2.8283 3.7889 82.164 0 0-0.89918 1.4968 2.8283 3.7889 82.164 0 0 3.1492 3.0525 2.8283 3.7889 82.164 0 0 3.6535-1.3851 7.2502 5.9417 15.019 0 0 1.213 0.02413 7.2502 5.9417 15.019 0 0 1.5882-0.25152 7.6581 5.6251 22.315 0 0 6.2335 1.459 7.6581 5.6251 22.315 0 0 4.3278-6.7462 7.6581 5.6251 22.315 0 0-2.006-2.6485 4.8042 3.5914 7.4987 0 0 0.32997-1.9097 4.8042 3.5914 7.4987 0 0-3.9266-3.2528 3.031 3.4597 63.435 0 0 0.0585-0.2512 3.031 3.4597 63.435 0 0-2.8143-3.2729 3.031 3.4597 63.435 0 0-2.5724 0.85564 7.2502 5.9417 15.019 0 0-1.4178-0.0486 7.2502 5.9417 15.019 0 0-5.0741 2.5349 6.1769 4.3128 13.823 0 0-1.7778 0.01806 6.1769 4.3128 13.823 0 0-4.0488 4.2331z" fill="none" opacity=".78303" stop-color="#000000" stroke="#b5b5b5" stroke-width=".13229" style="font-variation-settings:normal;mix-blend-mode:normal"/>
+  <g transform="rotate(106.1 77.633 28.118)">
+   <rect x="76.379" y="33.298" width="3.7772" height="10.473" fill="#a5c9ea" fill-rule="evenodd" stroke="#2f363f" stroke-width=".13229"/>
+   <text transform="rotate(-90)" x="-38.500755" y="79.255089" fill="#2f363f" font-family="'Source Sans Pro'" font-size="2.8222px" stroke-width=".26458" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0.95" xml:space="preserve"><tspan x="-38.500755" y="79.255089" fill="#2f363f" font-family="'Source Sans Pro'" stroke-width=".26458" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">data</tspan></text>
+  </g>
+  <g transform="rotate(52.26 41.679 -12.07)">
+   <rect x="76.742" y="-3.6528" width="4.2268" height="8.0906" fill="#a5c9ea" fill-rule="evenodd" stroke="#2f363f" stroke-width=".13229"/>
+   <text transform="rotate(-90)" x="-0.4080525" y="79.744408" fill="#2f363f" font-family="'Source Sans Pro'" font-size="2.8222px" stroke-width=".26458" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0.95" xml:space="preserve"><tspan x="-0.40805262" y="79.744408" fill="#2f363f" font-family="'Source Sans Pro'" stroke-width=".26458" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">meta</tspan></text>
+  </g>
+  <g stroke="#2f363f" stroke-width=".13229">
+   <g fill-rule="evenodd">
+    <rect x="67.208" y="10.923" width="5.2917" height="2.6458" fill="#cd3431" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="64.562" y="8.2768" width="2.6458" height="2.6458" fill="#2f83cc" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="51.333" y="8.2768" width="7.9375" height="2.6458" fill="#c7cf2f" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="59.27" y="8.2768" width="5.2917" height="2.6458" fill="#cd3431" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="56.624" y="16.214" width="2.6459" height="2.6458" fill="#2f83cc" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="51.333" y="10.923" width="5.2917" height="2.6458" fill="#cd3431" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="67.208" y="8.2768" width="7.9375" height="2.6458" fill="#c7cf2f" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="67.208" y="13.568" width="7.9375" height="2.6458" fill="#c7cf2f" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="59.27" y="13.568" width="5.2917" height="2.6458" fill="#cd3431" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="59.27" y="10.923" width="7.9375" height="2.6458" fill="#c7cf2f" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="72.499" y="10.923" width="2.6458" height="2.6458" fill="#2f83cc" stop-color="#000000" style="font-variation-settings:normal"/>
+   </g>
+   <circle cx="60.593" cy="17.537" r=".4072" fill="#c7cf2f" stop-color="#000000" style="font-variation-settings:normal"/>
+   <circle cx="61.916" cy="17.537" r=".4072" fill="#cd3431" stop-color="#000000" style="font-variation-settings:normal"/>
+   <circle cx="63.239" cy="17.537" r=".4072" fill="#2f83cc" stop-color="#000000" style="font-variation-settings:normal"/>
+  </g>
+  <g fill="#747474" stroke="#2f363f" stroke-width=".13229">
+   <g fill-rule="evenodd">
+    <rect x="73.822" y="16.214" width="1.3229" height="2.6458" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="72.499" y="16.214" width="1.3229" height="2.6458" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="71.176" y="16.214" width="1.3229" height="2.6458" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="69.853" y="16.214" width="1.3229" height="2.6458" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="68.531" y="16.214" width="1.3229" height="2.6458" stop-color="#000000" style="font-variation-settings:normal"/>
+    <rect x="67.208" y="16.214" width="1.3229" height="2.6458" stop-color="#000000" style="font-variation-settings:normal"/>
+   </g>
+   <circle cx="64.562" cy="17.537" r=".4072" stop-color="#000000" style="font-variation-settings:normal"/>
+  </g>
+  <g fill-rule="evenodd" stroke="#2f363f" stroke-width=".13229">
+   <rect x="56.624" y="10.923" width="2.6458" height="2.6458" fill="#2f83cc" stop-color="#000000" style="font-variation-settings:normal"/>
+   <rect x="64.562" y="13.568" width="2.6458" height="2.6458" fill="#2f83cc" stop-color="#000000" style="font-variation-settings:normal"/>
+   <rect x="65.885" y="16.214" width="1.3229" height="2.6458" fill="#747474" stop-color="#000000" style="font-variation-settings:normal"/>
+  </g>
+  <g transform="translate(105.57 -65.804)">
+   <rect x="26.458" y="76.729" width="15.875" height="15.875" fill="#2a703f" stop-color="#000000" stroke="#3bd267" stroke-width=".52917" style="font-variation-settings:normal"/>
+   <text x="27.781248" y="87.020279" fill="#3bd267" font-family="'Source Sans Pro'" font-size="7.1976px" font-weight="600" stroke-width=".26458" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25" xml:space="preserve"><tspan x="27.781248" y="87.020279" fill="#3bd267" font-family="'Source Sans Pro'" font-size="7.1976px" font-weight="600" stroke-width=".26458" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">GPU</tspan></text>
+  </g>
+  <path d="m80.437 13.571h44.979v1.3229l2.6458-2.6458-2.6458-2.6458v1.3229h-44.979z" fill="none" stop-color="#000000" stroke="#3bd267" stroke-linejoin="round" stroke-width=".529" style="font-variation-settings:normal"/>
+  <g>
+   <text transform="translate(139.24 -81.13)" x="-49.373215" y="100.8324" dominant-baseline="auto" fill="#5b9dd9" font-family="'Source Sans Pro'" font-size="2.8222px" stop-color="#000000" stroke-width=".26458" text-align="end" text-anchor="end" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;line-height:1.25;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal" xml:space="preserve"><tspan x="-49.373215" y="100.8324" dominant-baseline="auto" fill="#5b9dd9" font-family="'Source Sans Pro'" font-size="2.8222px" stop-color="#000000" stroke-width=".26458" text-align="end" text-anchor="end" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;line-height:1.25;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal">compile()</tspan></text>
+   <rect x="51.333" y="13.568" width="7.9375" height="2.6458" fill="#c7cf2f" fill-rule="evenodd" stop-color="#000000" stroke="#2f363f" stroke-width=".13229" style="font-variation-settings:normal"/>
+   <rect x="51.333" y="16.214" width="5.2917" height="2.6458" fill="#cd3431" fill-rule="evenodd" stop-color="#000000" stroke="#2f363f" stroke-width=".13229" style="font-variation-settings:normal"/>
+  </g>
+  <g transform="translate(-35.964 12.909)">
+   <rect transform="rotate(90)" x="10.583" y="-156.1" width="3.9688" height="31.75" fill="#a5c9ea" fill-rule="evenodd" stroke="#2f363f" stroke-width=".13229"/>
+   <text x="140.21364" y="13.439136" fill="#2f363f" font-family="'Source Sans Pro'" font-size="2.8222px" stroke-width=".26458" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0.95" xml:space="preserve"><tspan x="140.21364" y="13.439136" fill="#2f363f" font-family="'Source Sans Pro'" stroke-width=".26458" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">metadata</tspan></text>
+  </g>
+  <path d="m124.09 26.8h1.3229v1.3229l2.6458-2.6458-2.6458-2.6458v1.3229h-1.3229z" fill="none" stop-color="#000000" stroke="#3bd267" stroke-linejoin="round" stroke-width=".529" style="font-variation-settings:normal"/>
+  <path d="m80.437 26.8h1.3229v1.3229l2.6458-2.6458-2.6458-2.6458v1.3229h-1.3229z" fill="none" stop-color="#000000" stroke="#3bd267" stroke-linejoin="round" stroke-width=".529" style="font-variation-settings:normal"/>
+ </g>
+</svg>

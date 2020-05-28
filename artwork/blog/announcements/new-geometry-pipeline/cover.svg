@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1536"
+   height="864"
+   viewBox="0 0 406.39999 228.60001"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="cover.svg"
+   inkscape:export-filename="/home/mosra/Code/magnum-website/content/img/blog/announcements/new-geometry-pipeline/cover.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1643">
+      <rect
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#d2548f;fill-opacity:0.784789;stroke:none;stroke-width:0.132292;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+         id="rect1645"
+         width="105.34997"
+         height="300.31079"
+         x="65.894676"
+         y="-70.863106"
+         transform="rotate(14.999999)" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1648">
+      <path
+         d="M -25.062338,-58.909622 76.697911,-31.643045 -1.028228,258.43487 -102.78848,231.16829 Z"
+         style="opacity:0.634493;fill:#acd254;fill-opacity:0.811955;stroke:none;stroke-width:0.132292;stop-color:#000000"
+         id="path1650" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1977">
+      <path
+         id="path1979"
+         style="opacity:0.634493;fill:#acd254;fill-opacity:0.811955;stroke:none;stroke-width:0.132292;stop-color:#000000"
+         d="M 408.70206,-49.576276 510.46229,-22.309698 432.73615,267.76823 330.97592,240.50164 Z" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1981">
+      <rect
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#547fd2;fill-opacity:0.831008;stroke:none;stroke-width:0.132292;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+         id="rect1983"
+         width="105.34997"
+         height="300.31079"
+         x="276.59464"
+         y="-122.31418"
+         transform="rotate(14.999999)" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1985">
+      <rect
+         transform="rotate(14.999999)"
+         y="-97.077759"
+         x="171.24464"
+         height="300.31079"
+         width="105.34997"
+         id="rect1987"
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#6154d2;fill-opacity:0.875365;stroke:none;stroke-width:0.132292;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="1121.1324"
+     inkscape:cy="544.72332"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer5"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="3840"
+     inkscape:window-height="2056"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:snap-page="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="false"
+     inkscape:object-paths="false"
+     inkscape:bbox-nodes="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="bg">
+    <image
+       sodipodi:absref="/home/mosra/Code/magnum-website/artwork/blog/announcements/new-geometry-pipeline/cover-2.png"
+       xlink:href="cover-2.png"
+       y="0"
+       x="1.7763568e-15"
+       width="406.39999"
+       height="228.60001"
+       preserveAspectRatio="none"
+       id="image2076" />
+  </g>
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline;opacity:0.98264285;mix-blend-mode:color-dodge">
+    <image
+       sodipodi:absref="/home/mosra/Code/magnum-website/artwork/blog/announcements/new-geometry-pipeline/object-id.jpg"
+       xlink:href="object-id.jpg"
+       y="-31.586573"
+       x="6.1035157e-06"
+       width="406.39998"
+       height="304.79999"
+       preserveAspectRatio="none"
+       id="image1638"
+       clip-path="url(#clipPath1643)" />
+    <image
+       sodipodi:absref="/home/mosra/Code/magnum-website/artwork/blog/announcements/new-geometry-pipeline/prim-id-orig.jpg"
+       xlink:href="prim-id-orig.jpg"
+       y="-31.586573"
+       x="6.1035157e-06"
+       width="406.39998"
+       height="304.79999"
+       preserveAspectRatio="none"
+       id="image1724"
+       clip-path="url(#clipPath1985)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="yet another"
+     style="mix-blend-mode:luminosity;opacity:0.85071492">
+    <image
+       sodipodi:absref="/home/mosra/Code/magnum-website/artwork/blog/announcements/new-geometry-pipeline/wireframe.jpg"
+       xlink:href="wireframe.jpg"
+       style="display:inline;opacity:1;mix-blend-mode:normal"
+       y="-31.586573"
+       x="6.1035157e-06"
+       width="406.39998"
+       height="304.79999"
+       preserveAspectRatio="none"
+       id="image1561"
+       clip-path="url(#clipPath1648)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="another"
+     style="opacity:0.77838947;mix-blend-mode:color-dodge">
+    <image
+       sodipodi:absref="/home/mosra/Code/magnum-website/artwork/blog/announcements/new-geometry-pipeline/prim-id-meshopt.jpg"
+       xlink:href="prim-id-meshopt.jpg"
+       y="-31.586573"
+       x="6.1035157e-06"
+       width="406.39998"
+       height="304.79999"
+       preserveAspectRatio="none"
+       id="image1880"
+       clip-path="url(#clipPath1981)"
+       style="display:inline;opacity:1;mix-blend-mode:normal" />
+    <image
+       sodipodi:absref="/home/mosra/Code/magnum-website/artwork/blog/announcements/new-geometry-pipeline/prim-id-01.jpg"
+       xlink:href="prim-id-01.jpg"
+       y="-31.586573"
+       x="6.1035157e-06"
+       width="406.39998"
+       height="304.79999"
+       preserveAspectRatio="none"
+       id="image1972"
+       clip-path="url(#clipPath1977)"
+       style="display:inline;opacity:1;mix-blend-mode:color-dodge" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="cuts"
+     style="opacity:0.634493" />
+  <g
+     inkscape:label="cuts copy"
+     id="g1455"
+     inkscape:groupmode="layer"
+     style="display:none">
+    <rect
+       transform="rotate(14.999999)"
+       y="-70.863106"
+       x="65.894676"
+       height="300.31079"
+       width="105.34997"
+       id="rect1445"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#d2548f;fill-opacity:0.784789;stroke:none;stroke-width:0.132292;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1" />
+    <rect
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#6154d2;fill-opacity:0.875365;stroke:none;stroke-width:0.132292;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       id="rect1447"
+       width="105.34997"
+       height="300.31079"
+       x="171.24464"
+       y="-97.077759"
+       transform="rotate(14.999999)" />
+    <rect
+       transform="rotate(14.999999)"
+       y="-122.31418"
+       x="276.59464"
+       height="300.31079"
+       width="105.34997"
+       id="rect1449"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#547fd2;fill-opacity:0.831008;stroke:none;stroke-width:0.132292;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1" />
+    <path
+       d="M 408.70205,-49.576275 510.4623,-22.309698 432.73616,267.76822 330.97591,240.50164 Z"
+       style="fill:#acd254;fill-opacity:0.811955;stroke:none;stroke-width:0.132292;stop-color:#000000"
+       id="path1451" />
+    <path
+       id="path1453"
+       style="fill:#acd254;fill-opacity:0.811955;stroke:none;stroke-width:0.132292;stop-color:#000000"
+       d="M -25.062338,-58.909623 76.697911,-31.643045 -1.028228,258.43487 -102.78848,231.16829 Z" />
+  </g>
+</svg>
