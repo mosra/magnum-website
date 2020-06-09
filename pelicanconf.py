@@ -1,3 +1,4 @@
+import re
 import shutil
 import logging
 
@@ -185,6 +186,14 @@ M_IMAGES_REQUIRE_ALT_TEXT = True
 M_METADATA_AUTHOR_PATH = 'blog/authors'
 M_METADATA_CATEGORY_PATH = 'blog/categories'
 M_METADATA_TAG_PATH = 'blog/tags'
+
+_magnum_colors_src = re.compile(r"""<span class="mh">0x(?P<hex>[0-9a-f]{6})(?P<alpha>[0-9a-f]{2})?(?P<literal>_s?rgba?f?)</span>""")
+_magnum_colors_dst = r"""<span class="mh">0x\g<hex>\g<alpha>\g<literal><span class="m-code-color" style="background-color: #\g<hex>;"></span></span>"""
+#_zwnj_in_console_colors_src = re.compile(
+
+M_CODE_FILTERS_POST = {
+    'C++': lambda str: _magnum_colors_src.sub(_magnum_colors_dst, str)
+}
 
 if not shutil.which('latex'):
     logging.warning("LaTeX not found, fallback to rendering math as code")
