@@ -197,7 +197,7 @@ complete with padding to ensure vertices are aligned to four-byte addresses:
     :end-before: // packed
     :code: c++
     :class: m-inverted
-    :hl_lines: 1 2 3 4 5 6 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+    :hl-lines: 1 2 3 4 5 6 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
 
 The resulting ``meshData`` variable is a self-contained instance containing all
 vertex and index data of the mesh. You can then for example pass it directly to
@@ -261,7 +261,7 @@ passed view type:
     :end-before: // interleave
     :code: c++
     :class: m-inverted
-    :hl_lines: 6 7 8 9 10 11 12
+    :hl-lines: 6 7 8 9 10 11 12
 
 Thanks to the flexibility of :dox:`Trade::MeshData`, many of historically quite
 verbose operations are now available through single-argument APIs. Taking a
@@ -587,7 +587,7 @@ how long it takes to render before and after meshoptimizer looked at it:
             :units: ms
             :values: 62.52 20.95 11.98 9.91
             :colors: info success info success
-            :graph_width: 4.5
+            :plot-width: 4.5
 
     .. container:: m-col-m-6
 
@@ -606,7 +606,7 @@ how long it takes to render before and after meshoptimizer looked at it:
             :units: vertex shader invocations / all submitted vertices
             :values: 0.82 0.21 0.85 0.24
             :colors: info success info success
-            :graph_width: 4.5
+            :plot-width: 4.5
 
 To simulate a real-world scenario, the render was deliberately done in a
 default camera location, with a large part of the model being out of the view.
@@ -659,7 +659,7 @@ the data with meshoptimizer on default settings and saves the output to a PLY:
 
     .. code:: shell-session
         :class: m-console-wrap m-nopad m-inverted
-        :hl_lines: 3 4
+        :hl-lines: 3 4
 
         Mesh 0:
           Level 0: MeshPrimitive::Triangles, 6509526 vertices (152567.0 kB)
@@ -677,7 +677,7 @@ the data with meshoptimizer on default settings and saves the output to a PLY:
 
     .. code:: shell-session
         :class: m-console-wrap m-nopad m-inverted
-        :hl_lines: 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+        :hl-lines: 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 
         Trade::AnySceneImporter::openFile(): using StlImporter
         Duplicate removal: 6509526 -> 1084923 vertices
@@ -743,7 +743,7 @@ below on one of the `pbrt-v3 sample scenes <https://www.pbrt.org/scenes-v3.html>
 
     .. code:: shell-session
         :class: m-console-wrap m-nopad m-inverted
-        :hl_lines: 5 6
+        :hl-lines: 5 6
 
         Mesh 0 (referenced by 0 objects):
           Level 0: MeshPrimitive::Triangles, 924422 vertices (10833.1 kB)
@@ -798,7 +798,7 @@ work for representations from other tools as well, such as
     :end-before: // meshlets-data
     :code: c++
     :class: m-inverted
-    :hl_lines: 8 9 10 11 12 13 14 15 16 17
+    :hl-lines: 8 9 10 11 12 13 14 15 16 17
 
 One important thing to note is the *array attributes* --- those are accessed
 with a special syntax, and give you a 2D view instead of a 1D one:
@@ -958,7 +958,7 @@ like this:
 
 .. code:: sh
     :class: m-inverted
-    :hl_lines: 1 2 5
+    :hl-lines: 1 2 5
 
     magnum-sceneconverter file.blend --mesh "chair" chair.blob
     magnum-sceneconverter scene.glb --mesh "tree" tree.blob
