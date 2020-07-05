@@ -17,10 +17,6 @@ New geometry pipeline in Magnum
 .. role:: sh(code)
     :language: sh
 
-.. TODO: tags
-.. TODO: cover
-.. TODO: twitter -- Here's why there was no article in the past six+ months
-
 During the past six months, Magnum had undergone a rather massive rework of its
 very central parts --- mesh data import and storage. The original (and now
 deprecated) :cpp:`Trade::MeshData2D` / :cpp:`Trade::MeshData3D` classes stayed
