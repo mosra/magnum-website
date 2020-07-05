@@ -34,7 +34,7 @@ Magnum Engine
 
         .. container:: m-col-l-3 m-push-l-2 m-col-m-4 m-push-m-1 m-col-s-6 m-push-s-3 m-col-t-8 m-push-t-2
 
-            .. button-warning:: https://doc.magnum.graphics/magnum/getting-started.html
+            .. button-primary:: https://doc.magnum.graphics/magnum/getting-started.html
                 :class: m-fullwidth
 
                 Dive right in
@@ -42,11 +42,10 @@ Magnum Engine
                 | quick guide to
                 | get you started
 
-            .. class:: m-text-center m-text m-warning m-noindent
+            .. class:: m-text-center m-text m-default m-noindent
 
-            | Version `2019.10 <{filename}/blog/announcements/2019.10.rst>`_ with
-              Python
-            | and Basis support now out!
+            | New geometry pipeline
+            | in version `2020.06 <{filename}/blog/announcements/2020.06.rst>`_
 
 .. role:: raw-html(raw)
     :format: html
@@ -59,14 +58,14 @@ Magnum Engine
             :figclass: m-fullwidth m-warning
             :alt: Core features
 
-        .. block-warning:: Beauty of *simplicity*
+        .. block-primary:: Beauty of *simplicity*
 
             Among Magnum essentials is a UTF-8-aware OS, filesystem and console
             abstraction, a versatile vector math library and a slim C++11
             wrapper of Vulkan and OpenGL API families. Build on top of that or
             opt-in for more.
 
-            .. button-warning:: {filename}/features.rst
+            .. button-primary:: {filename}/features.rst
                 :class: m-fullwidth
 
                 See all core features
@@ -77,14 +76,14 @@ Magnum Engine
             :figclass: m-fullwidth m-info
             :alt: Feature
 
-        .. block-primary:: With batteries *included*
+        .. block-default:: With batteries *included*
 
             Shaders and primitives for fast prototyping, algorithms, debugging
             and automatic testing, asset management, integration with popular
             windowing toolkits and a UI library. Everything fits together but
             you still have a choice.
 
-            .. button-primary:: {filename}/features/extras.rst
+            .. button-default:: {filename}/features/extras.rst
                 :class: m-fullwidth
 
                 List the extra features
@@ -95,14 +94,14 @@ Magnum Engine
             :figclass: m-fullwidth m-success
             :alt: Feature
 
-        .. block-success:: Screws are *not glued in*
+        .. block-info:: Screws are *not glued in*
 
             There's always more than one way to do things. Enjoy the freedom of
             choice and integrate your own asset loader, texture compressor,
             font format or math library, if you feel the need. Or use any of
             the various plugins.
 
-            .. button-success:: {filename}/features/extensions.rst
+            .. button-info:: {filename}/features/extensions.rst
                 :class: m-fullwidth
 
                 View extension points
