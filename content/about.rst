@@ -89,22 +89,29 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
 
         -   :gh-name:`Alan Jefferson <alanjfs>`
         -   :gh-name:`Alan <Alan-FGR>`
+        -   :gh-name:`Alex Forrence <aforren1>`
         -   :gh-name:`Alexander F Rødseth <xyproto>`
         -   :gh-name:`Alexey Yurchenko <alexesDev>`
         -   :gh-name-big:`Alice Margatroid <alicemargatroid>`
         -   :gh-name:`Allie <bowling-allie>`
+        -   :gh-name:`Amphaal`
+        -   :gh-name:`Andrew <sheerluck>`
+        -   :gh-name:`Andrew Huang <andyroiiid>`
         -   :gh-name:`Andy Somogyi <andysomogyi>`
         -   :gh-name:`ArEnSc`
         -   :gh-name:`Ashwin Ravichandran <ashrko619>`
         -   :gh-name-big:`Bill Robinson <wivlaro>`
         -   :gh-name:`biosek`
         -   :gh-name:`Borislav Stanimirov <iboB>`
+        -   :gh-name:`Brandon Pomeroy <pomeroyb>`
+        -   :gh-name:`Burak Canik <HaroldReyiz>`
         -   :gh-name:`Cameron Egbert <cegbertOculus>`
         -   :gh-name:`Cong Xie <xiconxi>`
         -   :gh-name:`Chris Chambers <chris-chambers>`
         -   :gh-name:`Daniel Bloor <Bluer01>`
         -   :gh-name:`Daniel Guzman <roig>`
         -   :gh-name:`David Lin <davll>`
+        -   :gh-name:`Davide Bacchet <dbacchet>`
         -   :gh-name:`denesik`
         -   :gh-name:`Denis Igorevich Lobanov <denislobanov>`
         -   :gh-name:`DJQuardaboff`
@@ -119,6 +126,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Guillaume Giraud <Guillaume227>`
         -   :gh-name-big:`Guillaume Jacquemin <williamjcm>`
         -   :gh-name:`Hilario Pérez Corona <hpcorona>`
+        -   :gh-name:`hsdk123`
         -   :gh-name:`hunt978`
         -   :gh-name:`Igor Kalevatykh <ikalevatykh>`
         -   :gh-name:`Ivan P. <uzername>`
@@ -131,6 +139,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Joel Clay <jclay>`
         -   :gh-name-big:`Jonathan Hale <Squareys>`
         -   :gh-name:`Jonathan Mercier-Ganady <Jmgr>`
+        -   :gh-name:`Jordan Peck <Auburns>`
         -   :gh-name-big:`Konstantinos Chatzilygeroudis <costashatz>`
         -   :gh-name:`Krzysztof Szenk <Crisspl>`
         -   :gh-name:`Leon Moctezuma <leonidax>`
@@ -144,12 +153,13 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Miguel Martin <miguelmartin75>`
         -   :gh-name:`Natesh Narain <nnarain>`
         -   :gh-name:`Nathan Ollerenshaw <matjam>`
-        -   :gh-name:`Nghia Truong <ttnghia>`
+        -   :gh-name-big:`Nghia Truong <ttnghia>`
         -   :gh-name:`Nick Skelsey <NSkelsey>`
         -   :gh-name:`Nicholas "LB" Branden <LB-->`
         -   :gh-name:`Olga Turanksaya <olga-python>`
         -   :gh-name:`Pascal Thomet <pthom>`
         -   :gh-name:`Patrick Werner <boonto>`
+        -   :gh-name:`Pablo Escobar <pezcode>`
         -   :gh-name:`pkubaj`
         -   :gh-name:`Sam Spilsbury <smspillaz>`
         -   :gh-name:`Samuel Kogler <skogler>`
@@ -161,6 +171,8 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`sigman78`
         -   :gh-name:`Steeve Morin <steeve>`
         -   :gh-name:`Stefan Wasilewski <smw>`
+        -   :gh-name:`Stéphane Brard <aspioupiou>`
+        -   :gh-name:`Tracy Ma <linuxaged>`
         -   :gh-name:`Thibault Jochem <Tryum>`
         -   :gh-name:`Thomas Tissot-Dupont <dolphineye>`
         -   :gh-name:`Tobias Stein <NussknackerXXL>`
