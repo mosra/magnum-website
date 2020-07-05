@@ -1,0 +1,838 @@
+Magnum 2020.06 released
+#######################
+
+:category: Announcements
+:date: 2020-07-02
+:tags: Assimp, C++, COLLADA, Corrade, Emscripten, glTF, ImGui, JavaScript,
+    meshoptimizer, OpenGL, physics, singles, VR, Vulkan, WebAssembly, WebGL
+:cover: {static}/img/blog/announcements/2020.06/cover.jpg
+:summary: Redesigned geometry pipeline together with massive additions to
+    importer plugins, new debugging, visualization and profiling tools, new
+    examples including fluid simulation and raytracing, instancing in builtin
+    shaders and a gallery of cool projects to get inspired from.
+
+.. role:: glsl(code)
+    :language: glsl
+.. role:: ini(code)
+    :language: ini
+.. role:: s
+    :class: m-text m-s
+.. role:: text-dim
+    :class: m-text m-dim
+.. role:: link-dim(link)
+    :class: m-text m-dim
+.. role:: label-flat-success-link(link)
+    :class: m-label m-success m-flat
+
+Big reworks take time to ferment properly, which is why this release comes more
+than six months after the previous one, `2019.10 <{filename}2019.10.rst>`_. I
+dare to say this is the busiest release of Magnum yet, with work spanning
+across several areas of the project. Following are release highlights, for a
+detailed changelog that's about 100 times bigger please see
+`links at the bottom <#full-changelog>`_.
+
+`New geometry pipeline`_
+========================
+
+Asset import and geometry processing is one of the central parts of Magnum. For
+2020.06 it got rewritten from a rather basic decade-old "toy engine"
+implementation full of nested :dox:`std::vector`\ s to an efficient and
+flexible GPU-friendly design that's ready for new paradigms such as mesh
+shaders. I won't be reiterating everything that went into it again in this
+announcement, please go see the in-depth introduction article for detailed
+information:
+
+.. container:: m-row
+
+    .. container:: m-col-m-8 m-push-m-2
+
+        .. figure:: {static}/img/blog/announcements/2020.06/new-geometry-pipeline-cover-small.jpg
+            :alt: New Geometry Pipeline in Magnum cover image
+            :figclass: m-figure m-fullwidth m-info
+            :target: {filename}new-geometry-pipeline.rst
+
+            `New Geometry Pipeline in Magnum <{filename}new-geometry-pipeline.rst>`_ :label-flat-info:`May 27, 2020`
+
+            Flexible and efficient mesh representation, custom attributes, new
+            data types and a ton of new processing, visualization and analyzing
+            tools. GPU-friendly geometry storage as it should be in the 21st century.
+
+`Let's fork C++ further`_
+=========================
+
+The move away from :dox:`std::vector`, which is visible especially in the
+redesigned :dox:`MeshTools` namespace, means Magnum had to provide a
+replacement. :dox:`Containers::Array` is around for quite a while --- but for
+the purpose of certain importers and :dox:`Primitives` that can't easily know
+the final index/vertex count beforehand --- it had to be extended to support
+arbitrary growing, like :dox:`std::vector` has.
+
+.. container:: m-col-m-6 m-center-m
+
+    .. code-figure::
+
+        .. code:: c++
+
+            Containers::Array<Color3> palette;
+
+            arrayAppend<MyFancyAllocator>(palette, {
+                0xa5c9ea_rgbf,
+                0x3bd267_rgbf,
+                0xc7cf2f_rgbf
+            });
+
+        .. class:: m-text m-small m-noindent
+
+        A :dox:`Containers::Array` instance isn't tied to a particular
+        allocator --- and you can also switch to a different allocator at any point later.
+
+The design is rather unconventional in order to avoid the well-known
+shortcomings of :dox:`std::vector`, especially when it comes to custom
+allocators. The implementation present in 2020.06 is still missing arbitrary
+insertion and deletion which is why it's not advertised in more detail yet ---
+once that's done, expect a dedicated article together with benchmarks and
+comparison to common implementations. Until then, see
+:dox:`Containers-Array-growable` for an introduction.
+
+One of the last remaining pieces of STL that are :s:`holding us back` not as
+lightweight & flexible as I'd want them to be are :dox:`std::string`\ s. After
+the release cut I decided that new APIs are not going to use those anymore,
+which means a replacement is underway. Existing APIs will get gradually ported
+away, similarly as was done with :dox:`std::vector` or :dox:`std::unique_ptr`
+in the past. Of course, as always, an *opt-in* compatibility of the new APIs
+with :dox:`std::string` / :dox:`std::string_view` will be provided --- the goal
+is not to alienate users of standard C++, the goal is to be flexible and
+provide alternatives.
+
+`Math and algorithm goodies`_
+=============================
+
+Because the new :dox:`Trade::MeshData` APIs expanded a lot on supported vertex
+formats, the math library received batch :dox:`Math::packInto()` /
+:dox:`unpackInto() <Math::unpackInto()>` functions that allow for efficient
+conversion between floating-point and 8-/16-bit packed or half-float types.
+When no conversion is needed, :dox:`Utility::copy()` from a new
+:dox:`Utility/Algorithms.h </home/mosra/Code/corrade/src/Corrade/Utility/Algorithms.h>`
+header gives you a :dox:`std::memcpy()` / :dox:`std::copy()` alternative that
+works on multiple dimensions and sparse data layouts as well.
+
+.. container:: m-col-m-8 m-center-m
+
+    .. code-figure::
+
+        .. code:: c++
+
+            ImageView2D src, dst;
+
+            Utility::copy(src.pixels().flipped<1>(), dst.pixels());
+
+        .. class:: m-text m-small m-noindent
+
+        Mirroring an image --- in an oneliner, with
+        :dox:`Containers::StridedArrayView` underneath.
+
+The :dox:`MeshTools` library, apart from being adapted for the redesigned
+workflow, now contains :dox:`MeshTools::concatenate()` for joining multiple
+meshes together, or for example :dox:`MeshTools::generateIndices()` for
+converting strips, loops or fans to plain indexed meshes.
+
+`What's new in plugins`_
+========================
+
+The more Magnum gets used to import a increasingly broad range of datasets in
+various formats, the more previously unhandled corner cases get discovered and
+fixed.
+
+-   The :dox:`AssimpImporter <Trade::AssimpImporter>` now correctly imports
+    multi-primitive meshes, preserves alpha in materials and accounts for Y up
+    / Z up orientation override, if a file defines it.
+-   All importers now import both base color and texture instead of either one
+    or the other. Interestingly, this was a limitation that originated from the
+    COLLADA format --- the early :dox:`Trade` APIs and the now-gone
+    ``ColladaImporter`` plugin were modelled after it, however when reviewing
+    this design decision it turned out that COLLADA is actually the only format
+    with such restriction and every other format (OBJ, glTF, OpenGEX, ...)
+    supports combining both.
+-   :dox:`TinyGltfImporter <Trade::TinyGltfImporter>` failed to import
+    interleaved meshes. This was a shortcut done to make the early
+    implementation simpler. To my surprise, apparently the vast majority of
+    glTF models is exported de-interleaved and thus inefficient for the GPU,
+    which explains why this limitation went largely unnoticed since the
+    original plugin release in 2018.
+
+Image importers weren't left behind either --- formats that support it such as
+DDS or Basis Universal now can import particular mip levels using
+:dox:`Trade::AbstractImporter::image2DLevelCount()` and the second parameter of
+:dox:`Trade::AbstractImporter::image2D()`, with this being proxied into all
+scene importers as well. Vaguely related to this, :dox:`DevIlImageImporter <Trade::DevIlImageImporter>`
+and :dox:`StbImageImporter <Trade::StbImageImporter>` can now import frames of
+animated GIFs for a very crude :dox:`video playback <examples-animated-gif>`.
+
+.. container:: m-right-m m-col-m-6 m-container-inflate
+
+    .. figure:: {static}/img/blog/announcements/2020.06/primitives.png
+
+        ..
+
+        Suited mainly for testing purposes, the whole :dox:`Primitives` library
+        is now exposed through a :dox:`PrimitiveImporter <Trade::PrimitiveImporter>`
+        plugin. This can be used for example to expose builtin primitives to
+        existing ``Importer``-based pipelines without having to add new code
+        path for each.
+
+As mentioned in the `New Geometry Pipeline in Magnum <{filename}new-geometry-pipeline.rst>`_
+article already, there's several additions and improvements that go together
+with the new :dox:`Trade::MeshData` APIs:
+
+-   :dox:`AssimpImporter <Trade::AssimpImporter>` and
+    :dox:`TinyGltfImporter <Trade::TinyGltfImporter>` now import tangents /
+    bitangents as well, with support for skinning attributes getting ready in
+    :gh:`mosra/magnum#441`
+-   :dox:`StanfordImporter <Trade::StanfordImporter>` for the PLY file format
+    got extended to support normals, texture coordinates, vertex colors and
+    per-face attributes, being also highly optimized for near-instant import
+    times
+-   :dox:`TinyGltfImporter <Trade::TinyGltfImporter>` and
+    :dox:`StanfordImporter <Trade::StanfordImporter>` now recognize a
+    per-vertex Object ID attribute, used in various datasets for semantic
+    annotations. Because it isn't standardized in any way and each dataset
+    might use it differently, the :ini:`objectIdAttribute`
+    :dox:`plugin-specific configuration option <Trade-TinyGltfImporter-configuration>`
+    can be used to recognize it under a different name.
+-   :dox:`TinyGltfImporter <Trade::TinyGltfImporter>` received support for
+    several new extensions including `KHR_lights_punctual <https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Khronos/KHR_lights_punctual>`_,
+    `KHR_texture_transform <https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Khronos/KHR_texture_transform>`_
+    and `KHR_mesh_quantization <https://github.com/KhronosGroup/glTF/blob/master/extensions/2.0/Khronos/KHR_mesh_quantization/README.md>`_
+
+Finally, there is a new scene converter plugin interface, with
+:dox:`MeshOptimizerSceneConverter <Trade::MeshOptimizerSceneConverter>` and
+:dox:`StanfordSceneConverter <Trade::StanfordSceneConverter>` being the first
+two plugins implementing it. Apart from that, image importers now have a simple
+:dox:`IcoImporter <Trade::IcoImporter>` for Windows ``*.ico`` files and there's
+(also a very trivial) :dox:`StlImporter <Trade::StlImporter>` for binary STL
+files, commonly used in 3D printing.
+
+All importer and converter plugins received a flag to enable verbose output,
+which is also exposed as a ``--verbose`` option in the
+:dox:`magnum-imageconverter <magnum-imageconverter>`,
+:dox:`magnum-sceneconverter <magnum-sceneconverter>` and
+:dox:`magnum-player <magnum-player>` utilities. The plugins use that to notify
+you about longer-running operations or processing stats. It's probably most
+helpful in case of Assimp, which likes to crash or misbehave on certain files.
+
+`Builtin shader improvements, new visualization tools`_
+=======================================================
+
+Perhaps the most significant shader addition is instancing support in
+:dox:`Shaders::Phong` and :dox:`Shaders::Flat` --- while instancing alone was
+supported in the :dox:`GL` library since 2014, the builtin shaders didn't
+implement this functionality until now. For showcase, the :dox:`examples-bullet`
+and :dox:`examples-box2d` examples are now reimplemented using instancing, each
+of them using just a single draw call for the whole scene. Try them out online:
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [box2d]
+            :end-before: [/box2d]
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [bullet]
+            :end-before: [/bullet]
+
+Complementing the glTF `KHR_texture_transform`_ extension support, there's now
+:dox:`Shaders::Phong::setTextureMatrix()` together with ability to have
+instanced texture offset, and the same in :dox:`Shaders::Flat`.
+
+With tangent and normal map import being done, :dox:`Shaders::Phong` normal
+map support added in 2019.10 can finally be fully utilized. This is closely
+tied with :dox:`Shaders::MeshVisualizer3D` now being able to visualize not just
+wireframe but also tangent, bitangent and normal direction --- very useful for
+debugging those dreaded lighting issues.
+
+.. image:: {static}/img/blog/announcements/2020.06/meshvisualizer3d.png
+    :scale: 50%
+
+:dox:`Shaders::Phong` / :dox:`Shaders::Flat` can now output also per-vertex
+Object ID attribute, which means :dox:`Shaders::MeshVisualizer3D` can visualize
+that one as well, together with vertex and primitive ID. This goes hand-in-hand
+with a new :dox:`DebugTools::ColorMap` namespace that includes also the
+`very recognizable Turbo colormap <https://twitter.com/antovsky/status/1265711996718080001>`_
+by Anton Mikhailov.
+
+`Certain GL drivers continue to be a hot mess`_
+===============================================
+
+Even if all other new features shown here wouldn't be a convincing reason for
+you to upgrade, you'll definitely want to pick up these three workarounds for
+better driver compatibility:
+
+.. container:: m-col-m-4 m-right-m m-container-inflate
+
+    .. note-danger:: Beware: Intel drivers
+
+        Unlike most workarounds where the engine fully shields you from driver
+        bugs, broken :glsl:`layout(location=N)` on Intel Windows drivers
+        affects you as well --- think twice before using explicit uniform locations if you need to support Intel GPUs on Windows. Even though it
+        makes the shader code simpler, the frustrating debugging experience
+        afterwards is not worth it.
+
+-   A hard-to-reproduce :abbr:`synchronization <or I assume so>` bug on Intel
+    Windows drivers makes the :glext:`ARB_direct_state_access` extension
+    basically unusable for anything related to buffers or VAOs. Usually
+    manifested as flickering in ImGui-based apps. A subset of this workaround
+    was done for 2019.10 already but due to its semi-random nature it didn't
+    cover all cases. This workaround abandonds all hope and completely disables
+    DSA for affected code paths on these drivers.
+
+-   Intel Windows drivers don't really respect explicit uniform locations but
+    instead only take it as a very vague suggestion. This bug was most
+    certainly `also present since forever <https://twitter.com/czmosra/status/1106955396219105285>`_,
+    but only became visible after the latest additions of texture transform,
+    normal maps and instancing to builtin shaders, which caused the uniform
+    locations to be anything but a contiguous increasing sequence. Since
+    there's no apparent rhyme or reason in which the drivers allocate uniform
+    IDs, solution was to disable the :glext:`ARB_explicit_uniform_location` on
+    Intel Windows drivers altogether.
+
+-   It's hard to find bugs in drivers that are capable of very little, but even
+    then --- while this bug was probably present ever since Apple rewrote their
+    (deprecated) GL 4.1 driver on top of Metal, it got independently discovered
+    by two different users only recently. When :dox:`GL::BufferTexture` is
+    bound, it causes all buffer modifications to crash due to what I assume is
+    corruption of internal driver state. The workaround avoids the crash by
+    unbinding the texture when updating or mapping a :dox:`GL::Buffer`.
+
+For your amusement, the list of all current OpenGL driver workarounds is
+:dox:`in the documentation <opengl-workarounds>`.
+
+`But there are also some non-negative GL news, even`_
+=====================================================
+
+.. container:: m-col-m-5 m-left-m m-container-inflate
+
+    .. console-figure::
+
+        .. include:: 2020.06/debugtools-frameprofiler.ansi
+            :code: ansi
+
+        .. class:: m-text m-small m-noindent
+
+        An example where pipeline statistic queries can be useful. Output from
+        :dox:`DebugTools::FrameProfiler`.
+
+Working on the geometry pipeline and large datasets required me to do various
+measurements, which led to a new :dox:`GL::PipelineStatisticsQuery` class. It
+exposes the :glext:`ARB_pipeline_statistics_query` extension which doesn't
+provide *really* much, but it's at least something --- and sadly the only
+non-proprietary way to get *any* stats on NVidia drivers. A new
+:dox:`DebugTools::FrameProfiler` class uses those queries to give you a
+easy-to-integrate per-frame profiling.
+
+Apart from that, various tiny bits and pieces such as
+:dox:`clipping plane support <GL::Renderer::Feature::ClipDistance0>` were
+added, mostly on-demand based on needs of various users. See the changelog
+links at the bottom for the full list.
+
+One quite minor but widely appreciated change was turning :cpp:`mesh.draw(shader)`
+into :cpp:`shader.draw(mesh)`. The original was a result of how the API evolved
+over the years, which is why I was blind to its counterintuitiveness until it
+was finally pointed out to me. A good takeaway from that is --- if you see
+anything in Magnum APIs that feels strange or unnecessarily complicated, please
+complain, no matter how "noob" or inexperienced you might feel. Feedback like
+this matters a lot, and if I never hear it, I might never discover the problem.
+
+One interesting project that is making great progress recently is Mesa's Zink
+OpenGL-over-Vulkan driver. Stable Mesa 20.1 doesn't have it enabled by default
+yet and there it's just at GL 2.1, but latest commits already
+`bring it up to 3.1 support <http://www.supergoodcode.com/opengl-3.1/>`_. After
+fixing some bad assumptions in context creation routines in order to make pure
+GL 2.1 contexts work again, Magnum can now work with Zink as well.
+
+.. note-success::
+
+    If you want to try Zink, you have to compile Mesa from sources. If you are
+    on ArchLinux, easiest is to take the AUR
+    `mesa-git <https://aur.archlinux.org/packages/mesa-git/>`_ package and
+    add ``zink`` to the ``-D gallium-drivers`` list. Alternatively, if you
+    don't want to play with fire *that much*, modify the
+    `stable package <https://git.archlinux.org/svntogit/packages.git/tree/trunk?h=packages/mesa>`_
+    instead.
+
+`Application improvements`_
+===========================
+
+Thanks to a joint effort from several contributors,
+:dox:`Platform::GlfwApplication` and :dox:`Platform::Sdl2Application` now
+support cursor management, which is also used by the :dox:`ImGuiIntegration`
+library. Both applications can now also set window icon, and if you are on
+Windows, you can use it together with the new :dox:`IcoImporter <Trade::IcoImporter>`
+to use one file to set an :dox:`executable icon <platform-windows-icon>` and a
+window icon as well, optionally also providing several resolutions to let the
+OS choose from.
+
+The :dox:`ImGuiIntegration` library was switched to use builtin
+:dox:`Shaders::Flat2D` instead of a custom shader, which removed quite some
+code *and* made it work on WebGL 1 as well. This was possible thanks to builtin
+shaders receiving vertex color support in the 2019.10 release.
+
+Windowless apps, which are commonly used for data processing or testing, got
+extended to support context sharing. The :dox:`Platform::WindowlessEglApplication`
+supports EGL device selection through the ``--magnum-device`` option since
+2019.10 and now it supports also ``--magnum-cuda-device`` for filtering only
+CUDA devices, if you're running on a machine with NVidia GPUs.
+
+If you don't use the builtin application wrappers, there's a new
+:gh:`base-gtkmm <mosra/magnum-bootstrap$base-gtkmm>` bootstrap project to get
+you started using GTKmm, joining :gh:`base-wxwidgets <mosra/magnum-bootstrap$base-wxwidgets>`
+added in the previous release, and with a QtQuick bootstrap being worked on
+for the next.
+
+`A gigaton of cool new examples`_
+=================================
+
+The *Contributor of the Year* award goes to :gh:`Nghia Truong <ttnghia>` ---
+submitting five extremely interesting examples, each implementing a different
+algorithm completely from scratch, with many more goodies promised. All of them
+are now available as WebGL demos, feel free to try them out:
+
+.. container:: m-row m-container-inflate
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [fluidsimulation2d]
+            :end-before: [/fluidsimulation2d]
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [fluidsimulation3d]
+            :end-before: [/fluidsimulation3d]
+
+    .. container:: m-clearfix-m
+
+        ..
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [raytracing]
+            :end-before: [/raytracing]
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [octree]
+            :end-before: [/octree]
+
+    .. container:: m-clearfix-m
+
+        ..
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [arcball]
+            :end-before: [/arcball]
+
+    .. container:: m-col-m-6
+
+        .. include:: ../../showcase-figures.rst.in
+            :start-after: [webxr]
+            :end-before: [/webxr]
+
+Apart from these, the original WebVR API got obsoleted by WebXR, and so follows
+our example, linked above --- currently you can try it out in Chrome, and it
+also works in the Android browser.
+
+`Buildsystem improvements`_
+===========================
+
+`Clang-CL <https://docs.microsoft.com/en-us/cpp/build/clang-support-msbuild?view=vs-2019>`_
+is now an officially supported and tested compiler, in case you want to build
+for Windows but :s:`hate both` neither MinGW nor MSVC suits your needs. Some
+work was done for MinGW Clang support but
+:gh:`serious untackled issues <mosra/magnum#439>` still remain, so GCC is still
+the only supported compiler under MinGW.
+
+Because dependency management is hard unless you have a system-wide package
+manager or :gh:`Vcpkg <microsoft/vcpkg>` doing the work for you, certain
+dependencies such as OpenAL, Basis Universal, meshoptimizer or ImGui can now
+be bundled as CMake subprojects. In addition, various fixes were done in CMake
+Find modules for statically-linked dependencies that are commonly used when
+distributing project binaries.
+
+To better track versions of your dependencies, all Magnum projects now contain
+a ``version.h`` header containing the exact commit the library was built from.
+
+Builtin CMake Android support, which got broken with the introduction of NDK
+r19, is working with CMake 3.16+ again, only with
+:abbr:`minimal workarounds <it's Android, don't expect things to "just work">`.
+Building documentation and the :dox:`Android troubleshooting guide <platforms-android>`
+were updated to reflect this fact.
+
+`New and improved tools`_
+=========================
+
+Going with the new :dox:`Trade::AbstractSceneConverter` plugin interface,
+there's a :dox:`magnum-sceneconverter <magnum-sceneconverter>` utility as well.
+Currently the only supported output is PLY (through :dox:`StanfordSceneConverter <Trade::StanfordSceneConverter>`)
+and the amount of operations is limited, but this area is going to expand over
+time, like it did for image conversion plugins. In addition the tool also
+exposes various :dox:`MeshTools` algorithms such as duplicate removal or
+attribute filtering.
+
+:dox:`magnum-imageconverter <magnum-imageconverter>` can now
+consume and produce raw pixel data of a specified format, which is useful when
+dealing with low-level pipelines that don't understand high-level image
+container formats. For data diagnostic and debugging, both
+:dox:`magnum-imageconverter <magnum-imageconverter>` and
+:dox:`magnum-sceneconverter <magnum-sceneconverter>` learned a new ``--info``
+option that prints information about file contents, pixel / vertex formats and
+data layout.
+
+The :dox:`magnum-player <magnum-player>` utility is heavily used for internal
+testing and thus absorbed basically all new engine additions --- it can display
+normal maps, exposes all visualization features of :dox:`Shaders::MeshVisualizer3D` and you can run :dox:`DebugTools::FrameProfiler`
+with the :label-default:`P` key. Only the native app has the new additions
+right now, the web version wasn't updated yet.
+
+`Magnum Project Spotlight`_
+===========================
+
+To give you an idea what Magnum is used for, here's a selection of currently
+active or recently published Magnum-based projects, with many more getting
+ready to appear next. Presented in no particular order:
+
+.. TODO: downscale images
+
+.. role:: link-big(link)
+    :class: m-text m-big m-strong
+
+.. container:: m-row
+
+    .. container:: m-col-t-6 m-push-t-6 m-col-m-4 m-push-m-6
+
+        .. image:: {static}/img/blog/announcements/2020.06/ternarii.png
+            :height: 20em
+            :target: https://ternarii.com
+
+    .. container:: m-col-t-6 m-pull-t-6 m-col-m-4 m-pull-m-2
+
+        .. class:: m-nopadb
+
+        |
+
+        .. raw:: html
+
+            <h3><a href="https://ternarii.com" class="m-flat">Ternarii</a></h3>
+
+        An *addictive* and colorful Tetris-inspired puzzle game, running in a
+        browser. My highest score so far is 63k, beat me!
+
+        -   **Author:** :gh:`Florian Goujeon <fgoujeon>`
+        -   **License:** :label-flat-primary:`GPL`
+        -   **GitHub:** :gh:`fgoujeon/ternarii`
+
+        .. button-success:: https://ternarii.com
+
+            Play now!
+
+            ternarii.com
+
+.. container:: m-row
+
+    .. container:: m-col-m-6
+
+        .. image:: {static}/img/blog/announcements/2020.06/oberon.png
+            :target: https://github.com/Melix19/oberon
+
+    .. container:: m-col-m-6
+
+        .. class:: m-show-m m-nopadb
+
+        |
+
+        .. raw:: html
+
+            <h3><a href="https://github.com/Melix19/oberon" class="m-flat">Oberon</a></h3>
+
+        A work-in-progress lightweight game engine with an emphasis on
+        usability and performance.
+
+        -   **Author:** :gh:`Marco Melorio <Melix19>`
+        -   **License:** :label-flat-success:`MIT`
+        -   **GitHub:** :gh:`Melix19/oberon`
+
+.. container:: m-row
+
+    .. container:: m-col-m-6 m-push-m-6
+
+        .. image:: {static}/img/blog/announcements/2020.06/sculptron.png
+            :target: https://render.otoy.com/forum/viewtopic.php?f=7&t=73278
+
+    .. container:: m-col-m-6 m-pull-m-6
+
+        .. class:: m-show-m m-nopadb
+
+        |
+
+        .. raw:: html
+
+            <h3><a href="https://render.otoy.com/forum/viewtopic.php?f=7&t=73278" class="m-flat">Sculptron</a></h3>
+
+        GPU-based sculpt/animate application. Currently in alpha.
+
+        -   **Author:** `OTOY <https://otoy.com>`_
+        -   **License:** :label-flat-default:`Commercial`
+        -   **Preview video:** https://youtu.be/aEcKpEvTVcc
+        -   `Forum link <https://render.otoy.com/forum/viewtopic.php?f=7&t=73278>`_
+
+.. container:: m-row
+
+    .. container:: m-col-m-6
+
+        .. image:: {static}/img/blog/announcements/2020.06/cant-say-the-name.png
+            :target: https://twitter.com/vhiterabbitvr
+
+    .. container:: m-col-m-6
+
+        .. class:: m-show-m m-nopadb
+
+        |
+
+        .. raw:: html
+
+            <h3><a href="https://twitter.com/vhiterabbitvr" class="m-flat">[redacted]</a></h3>
+
+        Vhite Rabbit's yet-unreleased Web-focused Game Engine.
+
+        -   **Author:** `Vhite Rabbit <https://vhiterabbit.com/>`_
+        -   **License:** :label-flat-dim:`Unreleased`
+        -   **Twitter:** `@vhiterabbitvr <https://twitter.com/vhiterabbitvr>`_
+
+.. container:: m-row
+
+    .. container:: m-col-m-6 m-push-m-6
+
+        .. image:: {static}/img/blog/announcements/2020.06/n-body.png
+            :target: https://github.com/JacksonCampolattaro/n_body
+
+    .. container:: m-col-m-6 m-pull-m-6
+
+        .. class:: m-show-m m-nopadb
+
+        |
+
+        .. raw:: html
+
+            <h3><a href="https://github.com/JacksonCampolattaro/n_body" class="m-flat">MINI</a></h3>
+
+        An N-body gravity simulator, currently in process of being ported to
+        Magnum. :text-dim:`This announcement cover image is a still frame from one of the simulations.`
+
+        -   **Author:** :gh:`Jackson Campolattaro <JacksonCampolattaro>`
+        -   **License:** :label-flat-primary:`GPL`
+        -   **GitHub:** :gh:`JacksonCampolattaro/n_body`
+
+.. container:: m-row
+
+    .. container:: m-col-m-6
+
+        .. image:: {static}/img/blog/announcements/2020.06/cubic.png
+            :target: https://ttnghia.github.io/posts/quadratic-approximation-of-cubic-curves/
+
+    .. container:: m-col-m-6
+
+        .. raw:: html
+
+            <h3><a href="https://ttnghia.github.io/posts/quadratic-approximation-of-cubic-curves/" class="m-flat">Quadratic Approximation of Cubic Curves</a></h3>
+
+        A simple degree reduction technique for converting piecewise cubic
+        splines into piecewise quadratic splines that maintain parameterization
+        and :math:`C^1` continuity.
+
+        -   **Authors:** Nghia Truong, Cem Yuksel and Larry Seiler,
+            `High-Performance Graphics 2020 <https://www.highperformancegraphics.org/2020/>`_
+        -   **Paper:** `coming soon <https://ttnghia.github.io/pdf/QuadraticApproximation.pdf>`_
+        -   **GitHub:** :gh:`ttnghia/QuadraticApproximation`
+
+.. container:: m-row
+
+    .. container:: m-col-m-6 m-push-m-6
+
+        .. image:: {static}/img/blog/announcements/2020.06/sequentity.png
+            :target: https://github.com/alanjfs/sequentity
+
+    .. container:: m-col-m-6 m-pull-m-6
+
+        .. class:: m-show-m m-nopadb
+
+        |
+
+        .. raw:: html
+
+            <h3><a href="https://github.com/alanjfs/sequentity" class="m-flat">Sequentity</a></h3>
+
+        A single-file, immediate-mode sequencer widget for C++17, Dear ImGui
+        and EnTT. Example powered by Magnum.
+
+        -   **Author:** :gh:`Alan Jefferson <alanjfs>`
+        -   **License:** :label-flat-success-link:`Jefferson Licence <https://github.com/alanjfs/sequentity/blob/08b041798fa2680897a34e894eda1c187f1d02db/Sequentity.h#L1422-L1458>`
+        -   **GitHub:** :gh:`alanjfs/sequentity`
+
+.. container:: m-row
+
+    .. container:: m-col-m-6
+
+        .. image:: {static}/img/blog/announcements/2020.06/stillleben.jpg
+            :target: hhttps://ais-bonn.github.io/stillleben/
+
+    .. container:: m-col-m-6
+
+        .. class:: m-show-m m-nopadb
+
+        |
+
+        .. raw:: html
+
+            <h3><a href="https://ais-bonn.github.io/stillleben/" class="m-flat">Stillleben</a></h3>
+
+        Generates realistic arrangements of rigid bodies and provides various outputs that can be used to train deep learning models.
+
+        -   **Authors:** Max Schwarz and Arul Selvam Periyasamy
+        -   **Paper:** https://arxiv.org/pdf/2005.05659.pdf
+        -   **GitHub:** :gh:`AIS-Bonn/stillleben`
+
+.. container:: m-row
+
+    .. container:: m-col-m-6 m-push-m-6
+
+        .. image:: {static}/img/blog/announcements/2020.06/mpfluid.jpg
+            :target: https://github.com/sariug/mpfluid_cave_frontend
+
+    .. container:: m-col-m-6 m-pull-m-6
+
+        .. raw:: html
+
+            <h3><a href="https://github.com/sariug/mpfluid_cave_frontend" class="m-flat">mpFluid CAVE Front End</a></h3>
+
+        Interactive Exploration and Computational Steering in CAVE-like Environments for High-Performance Fluid Simulations.
+        :link-dim:`The CAVE-like environment was featured previously here. <{filename}/blog/guest-posts/teaching-vr-with-magnum.rst>`
+
+        -   **Author:** :gh:`Uğurcan Sarı <sariug>`
+        -   `Thesis PDF <https://www.ugurcansari.com/pdf/MasterArbeit.pdf>`_
+        -   **GitHub:** :gh:`sariug/mpfluid_cave_frontend`
+
+.. container:: m-text m-success m-small m-text-center m-center-m m-col-m-8
+
+    If you have a project that you want to have mentioned in the next Project
+    Spotlight, `let <mailto:info@magnum.graphics>`_
+    `us <https://gitter.im/mosra/magnum>`_
+    `know <https://twitter.com/czmosra>`_! For projects hosted on GitHub don't
+    forget to add the `#magnum <https://github.com/topics/magnum>`_ tag to make
+    them easier to discover.
+
+`Full changelog`_
+=================
+
+There's so much happening that this article is, as always, just a distilled
+version of the changelog --- and I'm sure I forgot to mention some of the
+hidden gems:
+
+-   :dox:`Changes in Corrade 2020.06 <corrade-changelog-2020-06>`
+-   :dox:`Changes in Magnum 2020.06 <changelog-2020-06>`
+-   :dox:`Changes in Magnum Plugins 2020.06 <changelog-plugins-2020-06>`
+-   :dox:`Changes in Magnum Integration 2020.06 <changelog-integration-2020-06>`
+-   :dox:`Changes in Magnum Extras 2020.06 <changelog-extras-2020-06>`
+-   :dox:`Changes in Magnum Examples 2020.06 <changelog-examples-2020-06>`
+
+`Updating from previous versions`_
+==================================
+
+If you use :gh:`Homebrew <mosra/homebrew-magnum>`,
+`ArchLinux AUR <https://aur.archlinux.org/packages/?O=0&K=magnum>`_ or build
+your own ``*.deb`` packages, the 2020.06 release is already available there.
+Vcpkg package update is currently waiting for a merge in
+:gh:`microsoft/vcpkg#12211`, MSYS packages are almost ready in
+:gh:`msys2/MINGW-packages#6641` and ArchLinux community package updates will
+follow shortly. If you use :gh:`Magnum Singles <mosra/magnum-singles>`, those
+have all additions from 2020.06 present.
+
+If you have your code already using the new :dox:`Trade::MeshData` APIs,
+congrats --- you're 95% there. If not, the new release should *mostly* compile
+with your existing code, only emit a lot of deprecation warnings where each
+will tell you what API to use instead.
+
+.. block-warning:: Breaking changes
+
+    While Magnum tries to avoid breaking changes if possible, sometimes it's
+    inevitable, and those are the major ones that might bite you:
+
+    -   Predefined locations of generic mesh attributes --- in particular
+        normals, tangents and colors --- got changed in order to accomodate for
+        new attribute types . This may break custom shaders if these rely on
+        generic attribute definitions or are used together with :dox:`MeshTools::compile()`. To avoid such breakages, you're advised to
+        propagate the generic definitions to the shader code as shown in the
+        :dox:`Shaders::Generic <Shaders-Generic-custom>` documentation.
+    -   :dox:`CORRADE_ASSERT_UNREACHABLE()` got renamed to
+        :dox:`CORRADE_INTERNAL_ASSERT_UNREACHABLE()` and the original name is
+        reused for a macro with a custom error message. If you were not using
+        Corrade asserts in your code, this change won't affect you, otherwise
+        you'll get a compilation error and need to adapt.
+    -   :dox:`ResourceManager` :cpp:`instance()` singleton that got deprecated
+        in 2019.10 had to be fully removed. Usually a deprecated API is kept
+        for at least a year to give everyone enough time to upgrade, but here
+        it was severely limiting multithreaded applications and so it's gone
+        earlier.
+
+`Thank you`_
+============
+
+A significant portion of the work on Magnum is being done by external
+contributors, and this release is no exception --- thanks, everybody (and
+apologies to those I forgot):
+
+-   :gh:`Allie <bowling-allie>` for implementing
+    :dox:`IcoImporter <Trade::IcoImporter>`, additions and fixes to
+    :dox:`ImGuiIntegration` and various other things
+-   :gh:`Brandon Pomeroy <pomeroyb>` for example cleanup
+-   :gh:`Erik Wijmans <erikwijmans>` for implementing CUDA device selection in
+    :dox:`Platform::WindowlessEglApplication`
+-   :gh:`Guillaume Jacquemin <williamjcm>` for continued MSYS package
+    maintenance, bugreports and fixes
+-   :gh:`Jonathan Hale <Squareys>` for continued Vcpkg package maintenance,
+    implementing texture coordinate set support, Emscripten fixes, light
+    support in :dox:`TinyGltfImporter <Trade::TinyGltfImporter>`, :dox:`Math`
+    and :dox:`GL` additions and more
+-   :gh:`Konstantinos Chatzilygeroudis <costashatz>` for various application
+    fixes and additions, continued :dox:`DartIntegration` maintenance
+-   :gh:`Marco Melorio <Melix19>` for adding cursor management to all
+    applications + :dox:`ImGuiIntegration`, :dox:`Math` and python bindings
+    additions
+-   :gh:`Max Schwarz <xqms>` for implementing multi-primitive support in
+    :dox:`AssimpImporter <Trade::AssimpImporter>` and/ an extreme patience with
+    Assimp in general
+-   :gh:`Nghia Truong <ttnghia>` for all the cool examples and related
+    :dox:`Math` additions
+-   :gh:`Stéphane Brard <aspioupiou>` for shared context support in windowless
+    apps
+-   :gh:`Amphaal`, :gh:`Burak Canik <HaroldReyiz>`,
+    :gh:`Daniel Guzman <roig>`, :gh:`Davide Bacchet <dbacchet>`,
+    :gh:`Jackson Campolattaro <JacksonCampolattaro>`,
+    :gh:`Jordan Peck <Auburns>` and :gh:`pezcode` for various fixes,
+    improvements and documentation clarifications
+
+.. note-dim::
+
+    Impressed? Annoyed? Bored? Angry? That's what social networks are for:
+    `Twitter <https://twitter.com/czmosra/status/1278670039005171712>`_;
+    Reddit `r/cpp <https://www.reddit.com/r/cpp/comments/hjwbrb/magnum_engine_202006_released_with_redesigned/>`_,
+    `r/gamedev <https://www.reddit.com/r/gamedev/comments/hjwcal/magnum_engine_202006_released_with_redesigned/>`_,
+    `r/webgl <https://www.reddit.com/r/webgl/comments/hjweok/magnum_engine_202006_released_with_redesigned/>`_;
+    `Hacker News <https://news.ycombinator.com/item?id=23712530>`_

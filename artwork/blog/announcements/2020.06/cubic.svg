@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="cubic.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 210 297"
+   height="297mm"
+   width="210mm">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="0"
+     inkscape:window-y="48"
+     inkscape:window-x="85"
+     inkscape:window-height="896"
+     inkscape:window-width="1280"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer2"
+     inkscape:document-units="mm"
+     inkscape:cy="507.02062"
+     inkscape:cx="-171.04243"
+     inkscape:zoom="0.24748737"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Vrstva 1" />
+  <g
+     inkscape:label="over"
+     id="layer2"
+     inkscape:groupmode="layer">
+    <rect
+       inkscape:export-ydpi="42.333332"
+       inkscape:export-xdpi="42.333332"
+       inkscape:export-filename="/home/mosra/Code/magnum-website/content/img/blog/announcements/2020.06/cubic.png"
+       y="52.62529"
+       x="-294.94498"
+       height="270"
+       width="480"
+       id="rect925"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.132292;stop-color:#000000" />
+    <image
+       sodipodi:absref="/home/mosra/Code/magnum-website/artwork/blog/announcements/2020.06/cubic.png"
+       xlink:href="cubic.png"
+       y="104.91035"
+       x="-294.94498"
+       width="480.00002"
+       height="165.42987"
+       preserveAspectRatio="none"
+       id="image1023"
+       style="stroke-width:1.46182" />
+  </g>
+</svg>
