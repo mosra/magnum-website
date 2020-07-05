@@ -140,8 +140,8 @@ page:
     .. container:: m-col-m-6
 
         .. include:: ../../showcase-figures.rst.in
-            :start-after: [webvr]
-            :end-before: [/webvr]
+            :start-after: [webxr]
+            :end-before: [/webxr]
 
     .. container:: m-col-m-6
 

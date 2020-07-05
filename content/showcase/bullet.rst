@@ -5,7 +5,11 @@ Bullet Physics Example
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
-Shows a rotating table full of cubes that you can shoot down.
+Shows a rotating table full of cubes that you can shoot down, showcasing the
+:dox:`BulletIntegration` library together with :dox:`SceneGraph` using
+:dox:`BulletIntegration::MotionState`, visualizing various properties of the
+Bullet physics world using :dox:`BulletIntegration::DebugDraw`. Everything is
+rendered in at most three draw calls using instanced :dox:`Shaders::Phong`.
 
 .. topic:: Key controls
 
@@ -31,8 +35,9 @@ Shows a rotating table full of cubes that you can shoot down.
 .. block-warning:: Doesn't work?
 
     This example requires `WebAssembly <https://webassembly.org/>`_-capable
-    browser with WebGL 1 enabled. See the `Showcase <{filename}/showcase.rst>`_
-    page for more information; you can also report a bug either for the
+    browser with WebGL 1 and the :webglext:`ANGLE_instanced_arrays` extension
+    supported. See the `Showcase <{filename}/showcase.rst>`_ page for more
+    information; you can also report a bug either for the
     :gh:`example itself <mosra/magnum-examples>` or
     :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
 

@@ -6,7 +6,8 @@ Box2D Example
 :breadcrumb: {filename}/showcase.rst Showcase
 
 Builds a pyramid out of cubes and allows you to expand or destroy it by adding
-more.
+more. Uses the :dox:`SceneGraph` library directly with Box2D and renders
+everything in a single draw call using instanced :dox:`Shaders::Flat`.
 
 .. topic:: Key controls
 
@@ -27,8 +28,9 @@ more.
 .. block-warning:: Doesn't work?
 
     This example requires `WebAssembly <https://webassembly.org/>`_-capable
-    browser with WebGL 1 enabled. See the `Showcase <{filename}/showcase.rst>`_
-    page for more information; you can also report a bug either for the
+    browser with WebGL 1 and the :webglext:`ANGLE_instanced_arrays` extension
+    supported. See the `Showcase <{filename}/showcase.rst>`_ page for more
+    information; you can also report a bug either for the
     :gh:`example itself <mosra/magnum-examples>` or
     :gh:`for the website <mosra/magnum-website>`. Feedback welcome!
 

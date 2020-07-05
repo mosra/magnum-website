@@ -29,7 +29,7 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/al-info.rst
 
-    Magnum AL Info :label-flat-info:`wasm`
+    `Magnum AL Info <{filename}/showcase/al-info.rst>`__
 
     Text utility printing out various information about Magnum and the OpenAL
     implementation it's running on.
@@ -42,13 +42,27 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/arealights.rst
 
-    Area Lights Example :label-flat-info:`wasm` :label-success:`webgl2`
-    :label-primary:`ui`
+    `Area Lights Example <{filename}/showcase/arealights.rst>`__
+    :label-success:`webgl2` :label-primary:`ui`
 
     A basic implementation of
     `Real-Time Polygonal-Light Shading with Linearly Transformed Cosines <https://eheitzresearch.wordpress.com/415-2/>`_.
 
 .. [/arealights]
+.. [arcball]
+
+.. figure:: {static}/showcase/arcball/screenshot.png
+    :alt: Arc Ball example screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/arcball.rst
+
+    `ArcBall Camera Example <{filename}/showcase/arcball.rst>`__
+    :label-success:`webgl2`
+
+    Implementation of `Ken Shoemake's arcball camera <https://www.talisman.org/~erlkonig/misc/shoemake92-arcball.pdf>`_
+    with smooth navigation feature.
+
+.. [/arcball]
 .. [audio]
 
 .. figure:: {static}/showcase/audio/screenshot.png
@@ -56,8 +70,8 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/audio.rst
 
-    Audio Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
-    :label-warning:`sound`
+    `Audio Example <{filename}/showcase/audio.rst>`__
+    :label-flat-success:`webgl1` :label-warning:`audio`
 
     Loads an OGG file and shows how to play spatialized audio with the Magnum
     :dox:`Audio` library.
@@ -70,8 +84,9 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/box2d.rst
 
-    Box2D Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
-    :label-warning:`physics`
+    `Box2D Example <{filename}/showcase/box2d.rst>`__
+    :label-flat-success:`webgl1` :label-warning:`physics`
+    :label-primary:`instancing`
 
     Builds a pyramid out of cubes and allows you to destroy it after.
 
@@ -83,8 +98,9 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/bullet.rst
 
-    Bullet Physics Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
-    :label-warning:`physics`
+    `Bullet Physics Example <{filename}/showcase/bullet.rst>`__
+    :label-flat-success:`webgl1` :label-warning:`physics`
+    :label-primary:`instancing`
 
     Shows a rotating table full of cubes that you can shoot down.
 
@@ -96,8 +112,9 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/gl-info.rst
 
-    Magnum GL Info :label-flat-info:`wasm` :label-info:`asm.js`
-    :label-flat-success:`webgl1` :label-success:`webgl2`
+    `Magnum GL Info <{filename}/showcase/gl-info.rst>`__
+    :label-info:`asm.js fallback` :label-flat-success:`webgl1`
+    :label-success:`webgl2`
 
     Text utility printing info about Magnum OpenGL capabilities. Versions for
     `WebGL 1 <{filename}/showcase/gl-info.rst>`__,
@@ -105,6 +122,32 @@
     `WebGL 2 <{filename}/showcase/gl-info-webgl2.rst>`__.
 
 .. [/gl-info]
+.. [fluidsimulation2d]
+
+.. figure:: {static}/showcase/fluidsimulation2d/screenshot.png
+    :alt: 2D Fluid Simulation example screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/fluidsimulation2d.rst
+
+    `2D Fluid Simulation Example <{filename}/showcase/fluidsimulation2d.rst>`__
+    :label-success:`webgl2` :label-warning:`physics` :label-primary:`ui`
+
+    2D fluid simulation using the APIC method.
+
+.. [/fluidsimulation2d]
+.. [fluidsimulation3d]
+
+.. figure:: {static}/showcase/fluidsimulation3d/screenshot.png
+    :alt: 3D Fluid Simulation example screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/fluidsimulation3d.rst
+
+    `3D Fluid Simulation Example <{filename}/showcase/fluidsimulation3d.rst>`__
+    :label-success:`webgl2` :label-warning:`physics` :label-primary:`ui`
+
+    SPH fluid simulation with a dynamic boundary.
+
+.. [/fluidsimulation3d]
 .. [imgui]
 
 .. figure:: {static}/showcase/imgui/screenshot.png
@@ -112,8 +155,8 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/imgui.rst
 
-    Dear ImGui Example :label-flat-info:`wasm` :label-success:`webgl2`
-    :label-primary:`ui`
+    `Dear ImGui Example <{filename}/showcase/imgui.rst>`__
+    :label-flat-success:`webgl1` :label-primary:`ui`
 
     HiDPI-enabled immediate-mode GUI rendering using the
     :gh:`Dear ImGui <ocornut/imgui>` library.
@@ -126,12 +169,27 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/mouseinteraction.rst
 
-    Mouse Interaction Example :label-flat-info:`wasm` :label-success:`webgl2`
+    `Mouse Interaction Example <{filename}/showcase/mouseinteraction.rst>`__
+    :label-success:`webgl2`
 
     Blender-inspired depth-aware panning, zooming and rotation for easy scene
     navigation.
 
 .. [/mouseinteraction]
+.. [octree]
+
+.. figure:: {static}/showcase/octree/screenshot.png
+    :alt: Octree example screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/octree.rst
+
+    `Octree <{filename}/showcase/octree.rst>`__
+    :label-flat-success:`webgl1` :label-warning:`physics`
+    :label-primary:`instancing`
+
+    Loose octree for accelerating collision detection
+
+.. [/octree]
 .. [picking]
 
 .. figure:: {static}/showcase/picking/screenshot.png
@@ -139,7 +197,8 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/picking.rst
 
-    Object Picking Example :label-flat-info:`wasm` :label-success:`webgl2`
+    `Object Picking Example <{filename}/showcase/picking.rst>`__
+    :label-success:`webgl2`
 
     Showcases usage of multiple framebuffer attachments to implement object
     picking.
@@ -152,7 +211,8 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/player.rst
 
-    Magnum Player :label-flat-info:`wasm` :label-success:`webgl2`
+    `Magnum Player <{filename}/showcase/player.rst>`__
+    :label-success:`webgl2`
 
     A viewer and player for animated glTF scenes. Drag&drop a file to load it.
 
@@ -164,12 +224,26 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/primitives.rst
 
-    Primitives Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
+    `Primitives Example <{filename}/showcase/primitives.rst>`__
+    :label-flat-success:`webgl1`
 
     Shows how to use builtin primitives and how to do simple input handling.
     Displays an interactive cube.
 
 .. [/primitives]
+.. [raytracing]
+
+.. figure:: {static}/showcase/raytracing/screenshot.png
+    :alt: Ray Tracing example screenshot
+    :figclass: m-figure m-fullwidth
+    :target: {filename}/showcase/raytracing.rst
+
+    `Ray Tracing <{filename}/showcase/raytracing.rst>`__
+    :label-flat-success:`webgl1`
+
+    Simple iterative CPU ray tracing.
+
+.. [/raytracing]
 .. [text]
 
 .. figure:: {static}/showcase/text/screenshot.png
@@ -177,7 +251,8 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/text.rst
 
-    Text Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
+    `Text Example <{filename}/showcase/text.rst>`__
+    :label-flat-success:`webgl1`
 
     Showcase of Magnum :dox:`text rendering <Text>` using signed distance
     fields. Full UTF-8 support.
@@ -190,7 +265,8 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/textured-triangle.rst
 
-    Textured Triangle Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
+    `Textured Triangle Example <{filename}/showcase/textured-triangle.rst>`__
+    :label-flat-success:`webgl1`
 
     Slightly extended version of the triangle example; uses TGA importer plugin
     to load a stone image and displays a triangle with colored texture on it.
@@ -203,8 +279,8 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/triangle.rst
 
-    Triangle Example :label-flat-info:`wasm` :label-info:`asm.js`
-    :label-flat-success:`webgl1`
+    `Triangle Example <{filename}/showcase/triangle.rst>`__
+    :label-info:`asm.js fallback` :label-flat-success:`webgl1`
 
     Displays simple triangle with interpolated colors. For the unlucky, an
     `asm.js version <{filename}/showcase/triangle-asmjs.rst>`__ that doesn't
@@ -218,7 +294,8 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/ui-gallery.rst
 
-    Magnum::Ui Gallery :label-flat-info:`wasm` :label-success:`webgl2` :label-primary:`ui`
+    `Magnum::Ui Gallery <{filename}/showcase/ui-gallery.rst>`__
+    :label-success:`webgl2` :label-primary:`ui`
 
     A gallery of various widgets (buttons, labels, inputs, modals) provided by
     the :dox:`Magnum::Ui` library.
@@ -231,24 +308,26 @@
     :figclass: m-figure m-fullwidth
     :target: {filename}/showcase/viewer.rst
 
-    Viewer Example :label-flat-info:`wasm` :label-flat-success:`webgl1`
+    `Viewer Example <{filename}/showcase/viewer.rst>`__
+    :label-flat-success:`webgl1`
 
     Uses scene importer plugins to load a 3D scene for interactive viewing.
 
 .. [/viewer]
-.. [webvr]
+.. [webxr]
 
-.. figure:: {static}/showcase/webvr/screenshot.png
-    :alt: WebVR example screenshot
+.. figure:: {static}/showcase/webxr/screenshot.png
+    :alt: WebXR example screenshot
     :figclass: m-figure m-fullwidth
-    :target: {filename}/showcase/webvr.rst
+    :target: {filename}/showcase/webxr.rst
 
-    WebVR Example :label-flat-info:`wasm` :label-flat-success:`webgl1` :label-primary:`webvr`
+    `WebXR Example <{filename}/showcase/webxr.rst>`__
+    :label-flat-success:`webgl1` :label-primary:`webxr`
 
     A basic demonstration of how to use the
-    `Emscripten VR API <https://kripken.github.io/emscripten-site/docs/api_reference/vr.h.html>`_
+    `Emscripten WebXR library <https://github.com/VhiteRabbit/emscripten-webxr>`_
     with Magnum.
 
-.. [/webvr]
+.. [/webxr]
 
 .. kate: hl reStructuredText

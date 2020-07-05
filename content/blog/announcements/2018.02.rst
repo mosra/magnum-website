@@ -101,8 +101,8 @@ that, there's a live example showing WebVR integration in Emscripten:
     .. container:: m-col-m-6 m-push-m-3
 
         .. include:: ../../showcase-figures.rst.in
-            :start-after: [webvr]
-            :end-before: [/webvr]
+            :start-after: [webxr]
+            :end-before: [/webxr]
 
 `Windows improvements`_
 =======================

@@ -9,12 +9,6 @@ Integration of :gh:`Dear ImGui <ocornut/imgui>` into Magnum. Shows the Dear
 ImGui demo window and two other example windows which demonstrate rendering of
 immediate-mode GUI using the HiDPI-enabled :dox:`ImGuiIntegration` library.
 
-.. note-success:: WebGL 2
-
-    At the moment, the :dox:`ImGuiIntegration` library is running on WebGL 2
-    / OpenGL ES 3 only. Backport to WebGL 1 (GLES 2) for greater compatibility
-    is planned soon.
-
 .. raw:: html
 
     <div id="container">
@@ -37,7 +31,7 @@ immediate-mode GUI using the HiDPI-enabled :dox:`ImGuiIntegration` library.
 .. block-warning:: Doesn't work?
 
     This example requires `WebAssembly <https://webassembly.org/>`_-capable
-    browser with WebGL 2 enabled. See the `Showcase <{filename}/showcase.rst>`_
+    browser with WebGL 1 enabled. See the `Showcase <{filename}/showcase.rst>`_
     page for more information; you can also report a bug either for the
     :gh:`ImGuiIntegration library itself <mosra/magnum-integration>` or
     :gh:`for the website <mosra/magnum-website>`. Feedback welcome!

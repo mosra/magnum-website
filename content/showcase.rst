@@ -40,6 +40,38 @@ isn't capable, you can at least try the
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
+            :start-after: [fluidsimulation2d]
+            :end-before: [/fluidsimulation2d]
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [fluidsimulation3d]
+            :end-before: [/fluidsimulation3d]
+
+    .. container:: m-clearfix-m
+
+        ..
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [raytracing]
+            :end-before: [/raytracing]
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [octree]
+            :end-before: [/octree]
+
+    .. container:: m-clearfix-m
+
+        ..
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
             :start-after: [player]
             :end-before: [/player]
 
@@ -88,8 +120,8 @@ isn't capable, you can at least try the
     .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
-            :start-after: [webvr]
-            :end-before: [/webvr]
+            :start-after: [webxr]
+            :end-before: [/webxr]
 
     .. container:: m-col-m-6
 
@@ -133,11 +165,17 @@ isn't capable, you can at least try the
 
         ..
 
-    .. container:: m-col-m-6 m-push-m-3
+    .. container:: m-col-m-6
 
         .. include:: showcase-figures.rst.in
             :start-after: [mouseinteraction]
             :end-before: [/mouseinteraction]
+
+    .. container:: m-col-m-6
+
+        .. include:: showcase-figures.rst.in
+            :start-after: [arcball]
+            :end-before: [/arcball]
 
 .. container:: m-row m-container-inflate
 
