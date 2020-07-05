@@ -4,7 +4,9 @@ Magnum WebGL 1 Info
 :css: {static}/showcase/showcase.css
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
-:alias: /showcase/magnum-gl-info/
+:alias:
+    /showcase/magnum-gl-info/
+    /showcase/magnum-info/
 
 Displays various information about Magnum and the WebGL implementation it's
 running on. As with the command-line :dox:`magnum-gl-info` utility, it's
