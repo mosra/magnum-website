@@ -39,6 +39,37 @@ Community Contributions
 On top of everything else, there are libraries, tools and concepts built by the
 community --- not part of Magnum itself, but worth mentioning nevertheless.
 
+`Graphics Template App`_
+========================
+
+A self-contained template for developing graphics applications containing
+Magnum, ImGui, :gh:`ImGuizmo <CedricGuillemet/ImGuizmo>` and GLFW. All
+dependencies are included CMake subprojects --- generate a project file and
+build.
+
+-   **GitHub:** :gh:`ttnghia/GraphicsTemplateApp`
+-   **License:** :label-success:`Apache 2.0`
+-   **Platforms:** any
+
+`Fedora RPM packages`_
+======================
+
+-   **GitHub:** :gh:`alkavan/magnum-rpm-specs-f28`
+-   **License:** :label-success:`MIT`
+-   **Platforms:** Fedora Linux
+
+`OpenSUSE and Ubuntu packages`_
+===============================
+
+Maintained as dependencies for `Monopticon <https://github.com/NSkelsey/monopticon>`_.
+
+.. role:: abbr-strong(abbr)
+    :class: m-text m-strong
+
+-   :abbr-strong:`OBS: <OpenSUSE Build Service>` https://build.opensuse.org/project/show/home:synnick
+-   **License:** :label-danger:`GPLv3`
+-   **Platforms:** OpenSUSE, Ubuntu Linux
+
 `Magnum Tips`_
 ==============
 
