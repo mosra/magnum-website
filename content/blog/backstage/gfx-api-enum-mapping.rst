@@ -419,7 +419,7 @@ In case of enums in various application implementations (such as
 :dox:`Platform::Sdl2Application::KeyEvent::Key`), there the enum is directly
 aliasing the underlying value --- so far, for the applications, there was no
 need to have a generic interface to them. Instead, the application APIs are
-designed with `static polymorphism <static-and-dynamic-polymorphism-in-magnum.rst>`_
+designed with `static polymorphism <{filename}/blog/backstage/static-and-dynamic-polymorphism-in-magnum.rst>`_
 in mind, allowing to switch from one to another usually just by using a
 different :cpp:`#include`. Interfaces that need to be able to work with any of
 these (such as the :dox:`Ui` library or :dox:`ImGuiIntegration`) then use

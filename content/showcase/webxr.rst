@@ -43,4 +43,4 @@ and search for WebXR. Works on Android as well.
 .. block-info:: Source code and documentation
 
     You can find further information and source code of this example
-    :dox:`in the documentation <examples-webvr>`.
+    :dox:`in the documentation <examples-webxr>`.
