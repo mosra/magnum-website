@@ -43,8 +43,8 @@ function fetchTravisJobStatus(latestJobs) {
     var req = window.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
     if(!req) return;
 
-    req.open("GET", 'https://api.travis-ci.org/jobs?ids[]=' + latestJobs.join('&ids[]='), true);
-    req.setRequestHeader("Accept", "application/vnd.travis-ci.2+json");
+    req.open("GET", 'https://api.travis-ci.com/jobs?ids[]=' + latestJobs.join('&ids[]='), true);
+    req.setRequestHeader("Accept", "application/vnd.travis-ci.2.1+json");
     req.responseType = 'json';
     req.onreadystatechange = function() {
         if(req.readyState != 4) return;
@@ -109,7 +109,7 @@ function fetchTravisJobStatus(latestJobs) {
                 title = jobs[i]['state'];
             }
 
-            elem.innerHTML = '<a href="https://travis-ci.org/' + repo + '/jobs/' + jobs[i]['id'] + '" title="' + title + '">' + status + '<br /><span class="m-text m-small">' + age + '</span></a>';
+            elem.innerHTML = '<a href="https://travis-ci.com/' + repo + '/jobs/' + jobs[i]['id'] + '" title="' + title + '">' + status + '<br /><span class="m-text m-small">' + age + '</span></a>';
             elem.className = type;
         }
     };
@@ -120,8 +120,8 @@ function fetchLatestTravisJobs(project, branch) {
     var req = window.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
     if(!req) return;
 
-    req.open("GET", 'https://api.travis-ci.org/repos/' + project + '/branches/' + branch, true);
-    req.setRequestHeader("Accept", "application/vnd.travis-ci.2+json");
+    req.open("GET", 'https://api.travis-ci.com/repos/' + project + '/branches/' + branch, true);
+    req.setRequestHeader("Accept", "application/vnd.travis-ci.2.1+json");
     req.responseType = 'json';
     req.onreadystatechange = function() {
         if(req.readyState != 4) return;
