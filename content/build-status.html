@@ -28,7 +28,7 @@
       <th rowspan="8"><svg width="20" height="80">
         <text x="16" y="40" transform="rotate(-90, 16, 40)" style="text-anchor: middle">Linux</text>
       </svg></th>
-      <th colspan="2" class="m-text-right">GL + <abbr title="on GCC 4.8, only compilation tests">Vulkan</abbr></th>
+      <th colspan="2" class="m-text-right">GL + <abbr title="on GCC 4.8, compile tests against Mesa">Vulkan</abbr></th>
       <td rowspan="4" id="corrade-linux"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-linux-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td rowspan="4" id="magnum-plugins-linux"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
@@ -39,7 +39,7 @@
       <td id="magnum-examples-ports-linux-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
     <tr>
-      <th colspan="2" class="m-text-right">GLES2</th>
+      <th colspan="2" class="m-text-right"><abbr title="rendering tests against SwiftShader">GLES2</abbr></th>
       <td id="magnum-linux-gles2"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td class="m-dim"></td>
       <td id="magnum-integration-linux-gles2"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
@@ -48,7 +48,7 @@
       <td id="magnum-examples-ports-linux-gles2"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
     <tr>
-      <th colspan="2" class="m-text-right">GLES3</th>
+      <th colspan="2" class="m-text-right"><abbr title="rendering tests against SwiftShader">GLES3</abbr></th>
       <td id="magnum-linux-gles3"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-extras-linux-gles3"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-integration-linux-gles3"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
@@ -57,7 +57,7 @@
       <td id="magnum-examples-ports-linux-gles3"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
     <tr>
-      <th colspan="2" class="m-text-right"><abbr title="on GCC 7, with rendering tests">Vulkan</a></th>
+      <th colspan="2" class="m-text-right"><abbr title="on GCC 7, rendering tests against SwiftShader">Vulkan</a></th>
       <td id="magnum-linux-vulkan"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td class="m-dim"></td>
       <td class="m-dim"></td>
@@ -113,7 +113,7 @@
       <th rowspan="3"><svg width="20" height="80">
         <text x="16" y="40" transform="rotate(-90, 16, 40)" style="text-anchor: middle">macOS</text>
       </svg></th>
-      <th colspan="2" class="m-text-right">GL</th>
+      <th colspan="2" class="m-text-right">GL + <abbr title="compile tests against MoltenVK">Vulkan</abbr></th>
       <td id="corrade-macos" rowspan="2"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-macos-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-plugins-macos" rowspan="2"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
@@ -124,7 +124,7 @@
       <td id="magnum-examples-ports-macos-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
     <tr>
-      <th colspan="2" class="m-text-right">Vulkan</th>
+      <th colspan="2" class="m-text-right"><abbr title="rendering tests against SwiftShader">Vulkan</abbr></th>
       <td id="magnum-macos-vulkan"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td class="m-dim"></td>
       <td class="m-dim"></td>
@@ -167,13 +167,13 @@
       <td id="magnum-examples-ports-ios-gles3"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
     <tr>
-      <th rowspan="2"><svg width="20" height="80">
+      <th rowspan="3"><svg width="20" height="80">
         <text x="16" y="40" transform="rotate(-90, 16, 40)" style="text-anchor: middle">Android</text>
       </svg></th>
       <th colspan="2" class="m-text-right">GLES2</th>
-      <td rowspan="2" id="corrade-android"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td rowspan="3" id="corrade-android"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-android-gles2"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td rowspan="2" id="magnum-plugins-android"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td rowspan="3" id="magnum-plugins-android"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td class="m-dim"></td>
       <td id="magnum-integration-android-gles2"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td class="m-dim"></td>
@@ -188,6 +188,15 @@
       <td class="m-dim"></td>
       <td id="magnum-examples-android-gles3" class="m-dim"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-examples-ports-android-gles3"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+    </tr>
+    <tr>
+      <th colspan="2" class="m-text-right">Vulkan</th>
+      <td id="magnum-android-vulkan"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td class="m-dim"></td>
+      <td class="m-dim"></td>
+      <td class="m-dim"></td>
+      <td class="m-dim"></td>
+      <td class="m-dim"></td>
     </tr>
     <tr>
       <th rowspan="2"><svg width="20" height="80">
@@ -221,13 +230,13 @@
       </svg></th>
       <th class="m-text-right">GL</th>
       <td id="corrade-windows-msvc2015"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-windows-gl-msvc2015"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-windows-msvc2015"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-plugins-windows-msvc2015"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-extras-windows-gl-msvc2015"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-integration-windows-gl-msvc2015"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-extras-windows-msvc2015"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-integration-windows-msvc2015"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td class="m-dim"></td>
-      <td id="magnum-examples-windows-gl-msvc2015"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-examples-ports-windows-gl-msvc2015"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-examples-windows-msvc2015"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-examples-ports-windows-msvc2015"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
     <tr>
       <th class="m-text-right"><abbr title="All other builds are debug 64bit">32bit, release</abbr></th>
@@ -246,13 +255,13 @@
       </svg></th>
       <th class="m-text-right">GL</th>
       <td rowspan="3" id="corrade-windows-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-windows-gl-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-windows-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td rowspan="3" id="magnum-plugins-windows-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-extras-windows-gl-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-integration-windows-gl-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-bindings-windows-gl-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-examples-windows-gl-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-examples-ports-windows-gl-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-extras-windows-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-integration-windows-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-bindings-windows-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-examples-windows-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-examples-ports-windows-msvc2017"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
     <tr>
       <th class="m-text-right">GLES2</th>
@@ -304,18 +313,18 @@
       <td id="magnum-examples-ports-windows-rt-gles3-msvc2017" class="m-dim"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
     <tr>
-      <th rowspan="6"><svg width="20" height="80">
+      <th rowspan="5"><svg width="20" height="80">
         <text x="16" y="40" transform="rotate(-90, 16, 40)" style="text-anchor: middle">MSVC 2019</text>
       </svg></th>
-      <th class="m-text-right">GL</th>
-      <td rowspan="4" id="corrade-windows-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-windows-gl-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td rowspan="4" id="magnum-plugins-windows-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-extras-windows-gl-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-integration-windows-gl-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-bindings-windows-gl-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-examples-windows-gl-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-examples-ports-windows-gl-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <th class="m-text-right">GL + Vulkan</th>
+      <td rowspan="3" id="corrade-windows-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-windows-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td rowspan="3" id="magnum-plugins-windows-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-extras-windows-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-integration-windows-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-bindings-windows-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-examples-windows-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-examples-ports-windows-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
     <tr>
       <th class="m-text-right">GLES2</th>
@@ -334,15 +343,6 @@
       <td id="magnum-bindings-windows-gles3-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-examples-windows-gles3-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-examples-ports-windows-gles3-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-    </tr>
-    <tr>
-      <th class="m-text-right">Vulkan</th>
-      <td id="magnum-windows-vulkan-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td class="m-dim"></td>
-      <td class="m-dim"></td>
-      <td class="m-dim"></td>
-      <td id="magnum-examples-windows-vulkan-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-examples-ports-windows-vulkan-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
     <tr>
       <th class="m-text-right">static</th>
@@ -367,15 +367,15 @@
       <td class="m-dim"></td>
     </tr>
     <tr>
-      <th colspan="2" class="m-text-right">MinGW GL</th>
+      <th colspan="2" class="m-text-right">MinGW</th>
       <td id="corrade-windows-mingw"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-windows-gl-mingw"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-windows-mingw"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-plugins-windows-mingw"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-extras-windows-gl-mingw"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-integration-windows-gl-mingw"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-extras-windows-mingw"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-integration-windows-mingw"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td class="m-dim"></td>
-      <td id="magnum-examples-windows-gl-mingw"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-examples-ports-windows-gl-mingw"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-examples-windows-mingw"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-examples-ports-windows-mingw"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
   </tbody>
 </table>
