@@ -10,8 +10,6 @@ var projects = [['mosra/corrade', 'master'],
                 ['mosra/magnum-singles', 'master'],
                 ['mosra/flextgl', 'master'],
                 ['mosra/homebrew-magnum', 'master']];
-var latestTravisJobs = [];
-var travisDone = 0;
 var travisJobIdRe = /JOBID=([a-zA-Z0-9-]+)/
 
 var appveyorDone = 0;
@@ -129,11 +127,11 @@ function fetchLatestTravisJobs(project, branch) {
     req.setRequestHeader("Accept", "application/vnd.travis-ci.2.1+json");
     req.responseType = 'json';
     req.onreadystatechange = function() {
-        if(req.readyState != 4) return;
+        if(req.readyState != 4 || req.status != 200) return;
 
-        latestTravisJobs = latestTravisJobs.concat(req.response['branch']['job_ids']);
-        if(++travisDone == projects.length)
-            fetchTravisJobStatus(latestTravisJobs);
+        /* Originally I was putting all these IDs into a giant array and
+           fetching it just once. But I don't care anymore. */
+        fetchTravisJobStatus(req.response['branch']['job_ids']);
     };
     req.send();
 }
