@@ -54,7 +54,12 @@ function fetchTravisJobStatus(latestJobs) {
         var now = new Date(Date.now());
         var jobs = req.response['jobs'];
         for(var i = 0; i != jobs.length; ++i) {
-            var match = jobs[i]['config']['env'].match(travisJobIdRe);
+            var env = jobs[i]['config']['env'];
+            if(!env) {
+                console.log("Travis job doesn't have any environment, skipping:", jobs[i]['repository_slug']);
+                continue;
+            }
+            var match = env.match(travisJobIdRe);
             if(!match) continue;
 
             /* ID is combined repository name (w/o author) and the job ID from
