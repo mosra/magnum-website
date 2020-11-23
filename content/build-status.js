@@ -136,6 +136,91 @@ function fetchLatestTravisJobs(project, branch) {
     req.send();
 }
 
+/* https://circleci.com/docs/api/#recent-builds-for-a-single-project */
+function fetchLatestCircleCiJobs(project, branch) {
+    var req = window.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
+    if(!req) return;
+
+    /* TODO: expand the limit once we have more than 10 builds per project */
+    req.open('GET', 'https://circleci.com/api/v1.1/project/github/' + project + '/tree/' + branch + '?limit=10&offset=0&shallow=true');
+    req.responseType = 'json';
+    req.onreadystatechange = function() {
+        if(req.readyState != 4) return;
+
+        //console.log(req.response);
+
+        var now = new Date(Date.now());
+
+        /* It's not possible to query just the latest build, so instead we have
+           to query N latest jobs and then go as long as they have the same
+           commit. Which is kinda silly, but better than going one-by-one like
+           with Travis, right? */
+        var commit = '';
+        for(var i = 0; i != req.response.length; ++i) {
+            var job = req.response[i];
+
+            /* Some other commit, we have everything. Otherwise remember the
+               commit for the next iteration. */
+            if(commit && job['vcs_revision'] != commit)
+                break;
+            commit = job['vcs_revision'];
+
+            /* If the YML fails to parse, job_name is Build Error. Skip it
+               completely to avoid errors down the line. */
+            if(job['workflows']['job_name'] == 'Build Error')
+                continue;
+
+            var id = job['reponame'] + '-' + job['workflows']['job_name'];
+            var elem = document.getElementById(id);
+            if(!elem) {
+                console.log('Unknown CircleCI job ID', id);
+                continue;
+            }
+
+            var type;
+            var status;
+            var ageField;
+            if(job['status'] == 'success') {
+                type = 'm-success';
+                status = '✔';
+                ageField = 'stop_time';
+            } else if(job['status'] == 'queued' || job['status'] == 'scheduled' || job['status'] == 'not_running') {
+                type = 'm-info';
+                status = '…';
+                ageField = 'queued_at';
+            } else if(job['status'] == 'running') {
+                type = 'm-warning';
+                status = '↺';
+                ageField = 'start_time';
+            } else if(job['status'] == 'failed' || job['status'] == 'infrastructure_fail' || job['status'] == 'timedout') {
+                type = 'm-danger';
+                status = '✘';
+                ageField = 'finished';
+            } else if(job['status'] == 'canceled') {
+                type = 'm-dim';
+                status = '∅';
+                ageField = 'stop_time';
+            } else {
+                /* retried, not_run, not_running, no_test, fixed -- not sure
+                   what exactly these mean */
+                type = 'm-default';
+                status = job['status'];
+                ageField = 'queued_at';
+            }
+
+            var age = timeDiff(new Date(Date.parse(job[ageField])), now);
+
+            /* Update the field only if it's not already filled -- in that case
+               it means this job got re-run. */
+            if(!elem.className) {
+                elem.innerHTML = '<a href="' + job['build_url'] + '" title="' + job['status'] + ' @ ' + job[ageField] + '">' + status + '<br /><span class="m-text m-small">' + age + '</span></a>';
+                elem.className = type;
+            }
+        }
+    };
+    req.send();
+}
+
 function fetchLatestAppveyorJobs(project, branch) {
     var req = window.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
     if(!req) return;
@@ -236,6 +321,9 @@ function fetchLatestCodecovJobs(project, branch) {
 function fetch() {
     for(var i = 0; i != projects.length; ++i) {
         fetchLatestTravisJobs(projects[i][0], projects[i][1]);
+        /* Only some are on CircleCI right now */
+        if(projects[i][0].indexOf('corrade') != -1)
+            fetchLatestCircleCiJobs(projects[i][0], projects[i][1]);
         /* These are not on AppVeyor */
         if(projects[i][0].indexOf('flextgl') === -1 &&
            projects[i][0].indexOf('homebrew') === -1 &&
