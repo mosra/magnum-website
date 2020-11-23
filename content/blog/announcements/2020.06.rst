@@ -11,6 +11,8 @@ Magnum 2020.06 released
     examples including fluid simulation and raytracing, instancing in builtin
     shaders and a gallery of cool projects to get inspired from.
 
+.. role:: cpp(code)
+    :language: cpp
 .. role:: glsl(code)
     :language: glsl
 .. role:: ini(code)
