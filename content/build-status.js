@@ -74,7 +74,9 @@ function fetchTravisJobStatus(latestJobs) {
             var status;
             var ageField;
             if(jobs[i]['state'] == 'passed') {
-                type = 'm-success';
+                /* Travis CI is useless right now, so it doesn't make sense to
+                   mark the increasingly stale builds green. */
+                type = 'm-dim';
                 status = '✔';
                 ageField = 'finished_at';
             } else if(jobs[i]['state'] == 'started') {
@@ -112,8 +114,12 @@ function fetchTravisJobStatus(latestJobs) {
                 title = jobs[i]['state'];
             }
 
-            elem.innerHTML = '<a href="https://travis-ci.com/' + repo + '/jobs/' + jobs[i]['id'] + '" title="' + title + '">' + status + '<br /><span class="m-text m-small">' + age + '</span></a>';
-            elem.className = type;
+            /* Update the field only if it's not already provided by some other
+               provider */
+            if(!elem.className) {
+                elem.innerHTML = '<a href="https://travis-ci.com/' + repo + '/jobs/' + jobs[i]['id'] + '" title="' + title + '">' + status + '<br /><span class="m-text m-small">' + age + '</span></a>';
+                elem.className = type;
+            }
         }
     };
     req.send();
