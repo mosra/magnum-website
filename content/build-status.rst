@@ -41,7 +41,7 @@ Show builds for:
 
 .. block-warning:: Travis CI woes
 
-    Travis CI recently switched all OSS projects to `trial plans with an one-time credit allowance <https://blog.travis-ci.com/2020-11-02-travis-ci-new-billing>`_,
+    Travis CI recently switched all OSS projects to `trial plans with a one-time credit allowance <https://blog.travis-ci.com/2020-11-02-travis-ci-new-billing>`_,
     practically preventing everyone from using their services. Affected builds,
     which will get increasingly stale, are marked with a :label-flat-dim:`dim color`
     and migration to other services is underway. PR merges may get delayed and
