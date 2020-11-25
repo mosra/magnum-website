@@ -332,7 +332,8 @@ function fetch() {
     for(var i = 0; i != projects.length; ++i) {
         fetchLatestTravisJobs(projects[i][0], projects[i][1]);
         /* Only some are on CircleCI right now */
-        if(projects[i][0].indexOf('corrade') != -1)
+        if(projects[i][0].indexOf('corrade') != -1 ||
+           projects[i][0].endsWith('/magnum'))
             fetchLatestCircleCiJobs(projects[i][0], projects[i][1]);
         /* These are not on AppVeyor */
         if(projects[i][0].indexOf('flextgl') === -1 &&
