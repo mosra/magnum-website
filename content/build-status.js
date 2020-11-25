@@ -194,6 +194,10 @@ function fetchLatestCircleCiJobs(project, branch) {
                 type = 'm-info';
                 status = '…';
                 ageField = 'queued_at';
+            } else if(job['status'] == 'not_running') {
+                type = 'm-info';
+                status = '…';
+                ageField = 'usage_queued_at';
             } else if(job['status'] == 'running') {
                 type = 'm-warning';
                 status = '↺';
@@ -201,7 +205,7 @@ function fetchLatestCircleCiJobs(project, branch) {
             } else if(job['status'] == 'failed' || job['status'] == 'infrastructure_fail' || job['status'] == 'timedout') {
                 type = 'm-danger';
                 status = '✘';
-                ageField = 'finished';
+                ageField = 'stop_time';
             } else if(job['status'] == 'canceled') {
                 type = 'm-dim';
                 status = '∅';
@@ -211,7 +215,7 @@ function fetchLatestCircleCiJobs(project, branch) {
                    what exactly these mean */
                 type = 'm-default';
                 status = job['status'];
-                ageField = 'queued_at';
+                ageField = 'usage_queued_at';
             }
 
             var age = timeDiff(new Date(Date.parse(job[ageField])), now);
