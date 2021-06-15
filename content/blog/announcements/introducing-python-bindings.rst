@@ -49,12 +49,18 @@ the first few examples are ported to it:
 
     example code
 
-.. note-success:: Update September 18th, 2019
+.. note-success:: Content care
 
-    Added a note about `-flto=jobserver <#become-a-10-programmer-with-this-one-weird-trick>`_,
-    about the `Pyrr math library <#what-python-apis-and-docs-could-learn-from-c>`__
-    and made the `Sphinx alternative <#everyone-just-uses-sphinx-you>`_
-    / m.css Python doc generator more visible.
+    .. class:: m-diary
+
+    Sep 18th, 2019
+        Added a note about `-flto=jobserver <#become-a-10-programmer-with-this-one-weird-trick>`_,
+        about the `Pyrr math library <#what-python-apis-and-docs-could-learn-from-c>`__
+        and made the `Sphinx alternative <#everyone-just-uses-sphinx-you>`_
+        / m.css Python doc generator more visible.
+    May 17, 2021
+        Clarified :dox:`std::string` allocations in the section about
+        `buffer protocol <#let-s-allocate-a-bunch-of-vectors-and-strings-to-do-a-zero-copy-data-transfer>`_.
 
 `Enter pybind11`_
 =================
@@ -631,7 +637,8 @@ only natively in plain C) is quite speedy, so there's definitely something
 
             Oh, so `that's why <https://pybind11.readthedocs.io/en/stable/advanced/pycpp/numpy.html#buffer-protocol>`_.
 
-All the :dox:`std::string` and :dox:`std::vector` allocations in
+The :dox:`std::vector` allocations (and :dox:`std::string` possibly as well, if
+the format specifier is too long for small string optimization) in
 ``pybind11::buffer_info`` add up to the overhead, so I decided to sidestep
 pybind11 altogether and interface directly with the underlying Python C API
 instead. Because the :ref:`c:type:Py_buffer` structure is quite flexible, I
