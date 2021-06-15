@@ -3,7 +3,7 @@ Magnum Engine
 
 :save_as: index.html
 :url:
-:cover: {static}/img/cover.jpg
+:cover: {static}/img/blog/announcements/a-decade-of-magnum.jpg
 :description: Lightweight and modular C++11/C++14 open-source graphics
     middleware for games and data visualization.
 :summary: Lightweight and modular C++11/C++14 graphics middleware for games and
@@ -34,18 +34,13 @@ Magnum Engine
 
         .. container:: m-col-l-3 m-push-l-2 m-col-m-4 m-push-m-1 m-col-s-6 m-push-s-3 m-col-t-8 m-push-t-2
 
-            .. button-primary:: https://doc.magnum.graphics/magnum/getting-started.html
+            .. button-success:: https://doc.magnum.graphics/magnum/getting-started.html
                 :class: m-fullwidth
 
                 Dive right in
 
                 | quick guide to
                 | get you started
-
-            .. class:: m-text-center m-text m-default m-noindent
-
-            | New geometry pipeline
-            | in version `2020.06 <{filename}/blog/announcements/2020.06.rst>`_
 
 .. role:: raw-html(raw)
     :format: html
