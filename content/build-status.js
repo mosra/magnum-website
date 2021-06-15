@@ -147,8 +147,8 @@ function fetchLatestCircleCiJobs(project, branch) {
     var req = window.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
     if(!req) return;
 
-    /* TODO: expand the limit once we have more than 10 builds per project */
-    req.open('GET', 'https://circleci.com/api/v1.1/project/github/' + project + '/tree/' + branch + '?limit=10&offset=0&shallow=true');
+    /* TODO: expand the limit once we have more than 15 builds per project */
+    req.open('GET', 'https://circleci.com/api/v1.1/project/github/' + project + '/tree/' + branch + '?limit=15&offset=0&shallow=true');
     req.responseType = 'json';
     req.onreadystatechange = function() {
         if(req.readyState != 4) return;
@@ -190,7 +190,7 @@ function fetchLatestCircleCiJobs(project, branch) {
                 type = 'm-success';
                 status = '✔';
                 ageField = 'stop_time';
-            } else if(job['status'] == 'queued' || job['status'] == 'scheduled' || job['status'] == 'not_running') {
+            } else if(job['status'] == 'queued' || job['status'] == 'scheduled') {
                 type = 'm-info';
                 status = '…';
                 ageField = 'queued_at';
@@ -210,8 +210,13 @@ function fetchLatestCircleCiJobs(project, branch) {
                 type = 'm-dim';
                 status = '∅';
                 ageField = 'stop_time';
+            /* For example when I didn't pay for macOS */
+            } else if(job['status'] == 'not_run') {
+                type = 'm-dim';
+                status = '⚠';
+                ageField = 'stop_time';
             } else {
-                /* retried, not_run, not_running, no_test, fixed -- not sure
+                /* retried, no_test, fixed -- not sure
                    what exactly these mean */
                 type = 'm-default';
                 status = job['status'];
@@ -331,10 +336,7 @@ function fetchLatestCodecovJobs(project, branch) {
 function fetch() {
     for(var i = 0; i != projects.length; ++i) {
         fetchLatestTravisJobs(projects[i][0], projects[i][1]);
-        /* Only some are on CircleCI right now */
-        if(projects[i][0].indexOf('corrade') != -1 ||
-           projects[i][0].endsWith('/magnum'))
-            fetchLatestCircleCiJobs(projects[i][0], projects[i][1]);
+        fetchLatestCircleCiJobs(projects[i][0], projects[i][1]);
         /* These are not on AppVeyor */
         if(projects[i][0].indexOf('flextgl') === -1 &&
            projects[i][0].indexOf('homebrew') === -1 &&

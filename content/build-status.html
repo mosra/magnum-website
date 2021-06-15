@@ -35,8 +35,15 @@
       <td id="magnum-extras-linux-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-integration-linux-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-bindings-linux-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-examples-linux-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-examples-ports-linux-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td rowspan="2" id="magnum-examples-linux"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td rowspan="2" id="magnum-examples-ports-linux"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+    </tr>
+    <tr>
+      <th colspan="2" class="m-text-right"><abbr title="on GCC 7, rendering tests against SwiftShader">Vulkan</a></th>
+      <td id="magnum-linux-vulkan"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td class="m-dim"></td>
+      <td class="m-dim"></td>
+      <td class="m-dim"></td>
     </tr>
     <tr>
       <th colspan="2" class="m-text-right"><abbr title="rendering tests against SwiftShader">GLES2</abbr></th>
@@ -55,15 +62,6 @@
       <td id="magnum-bindings-linux-gles3"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-examples-linux-gles3"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-examples-ports-linux-gles3"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-    </tr>
-    <tr>
-      <th colspan="2" class="m-text-right"><abbr title="on GCC 7, rendering tests against SwiftShader">Vulkan</a></th>
-      <td id="magnum-linux-vulkan"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td class="m-dim"></td>
-      <td class="m-dim"></td>
-      <td class="m-dim"></td>
-      <td id="magnum-examples-linux-vulkan"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-examples-ports-linux-vulkan"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
     <tr>
       <th colspan="2" class="m-text-right"><abbr title="and no assert, Release">no deprecated</abbr></th>
@@ -103,8 +101,8 @@
       <td id="corrade-linux-static"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-linux-static"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-plugins-linux-static"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td class="m-dim"></td>
-      <td class="m-dim"></td>
+      <td id="magnum-extras-linux-static"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-integration-linux-static"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-bindings-linux-static"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td class="m-dim"></td>
       <td class="m-dim"></td>
@@ -120,14 +118,12 @@
       <td id="magnum-extras-macos-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-integration-macos-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-bindings-macos-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-examples-macos-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td id="magnum-examples-ports-macos-gl"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td rowspan="2" id="magnum-examples-macos"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td rowspan="2" id="magnum-examples-ports-macos"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
     </tr>
     <tr>
       <th colspan="2" class="m-text-right"><abbr title="rendering tests against SwiftShader">Vulkan</abbr></th>
       <td id="magnum-macos-vulkan"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td class="m-dim"></td>
-      <td class="m-dim"></td>
       <td class="m-dim"></td>
       <td class="m-dim"></td>
       <td class="m-dim"></td>
@@ -137,8 +133,8 @@
       <td id="corrade-macos-static"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-macos-static"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-plugins-macos-static"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td class="m-dim"></td>
-      <td class="m-dim"></td>
+      <td id="magnum-extras-macos-static"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-integration-macos-static"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-bindings-macos-static"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td class="m-dim"></td>
       <td class="m-dim"></td>
@@ -349,8 +345,8 @@
       <td id="corrade-windows-static-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-windows-static-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-plugins-windows-static-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
-      <td class="m-dim"></td>
-      <td class="m-dim"></td>
+      <td id="magnum-extras-windows-static-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
+      <td id="magnum-integration-windows-static-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td id="magnum-bindings-windows-static-msvc2019"><a>&nbsp;<br/><span class="m-text m-small">&nbsp;</span></a></td>
       <td class="m-dim"></td>
       <td class="m-dim"></td>
