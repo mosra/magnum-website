@@ -335,7 +335,7 @@ function fetchLatestCodecovJobs(project, branch) {
 
 function fetch() {
     for(var i = 0; i != projects.length; ++i) {
-        fetchLatestTravisJobs(projects[i][0], projects[i][1]);
+//         fetchLatestTravisJobs(projects[i][0], projects[i][1]);
         fetchLatestCircleCiJobs(projects[i][0], projects[i][1]);
         /* These are not on AppVeyor */
         if(projects[i][0].indexOf('flextgl') === -1 &&
