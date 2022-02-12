@@ -147,8 +147,8 @@ function fetchLatestCircleCiJobs(project, branch) {
     var req = window.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
     if(!req) return;
 
-    /* TODO: expand the limit once we have more than 15 builds per project */
-    req.open('GET', 'https://circleci.com/api/v1.1/project/github/' + project + '/tree/' + branch + '?limit=15&offset=0&shallow=true');
+    /* TODO: expand the limit once we have more than 20 builds per project */
+    req.open('GET', 'https://circleci.com/api/v1.1/project/github/' + project + '/tree/' + branch + '?limit=20&offset=0&shallow=true');
     req.responseType = 'json';
     req.onreadystatechange = function() {
         if(req.readyState != 4) return;
