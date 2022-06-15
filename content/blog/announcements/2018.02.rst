@@ -377,7 +377,7 @@ provide further convenience utilities:
 =========================
 
 The :dox:`Math` library received a class representing :dox:`Bezier <Math::Bezier>`
-curves and a :dox:`Frustum` structure. The :dox:`Math::Geometry::Intersection`
+curves and a :dox:`Frustum` structure. The :dox:`Math::Geometry::Intersection <Math::Intersection>`
 namespace is extended with frustum culling algorithms and further additions are
 already being worked on.
 
@@ -494,7 +494,7 @@ application UI rendering on the main thread.
 
 In order to make debugging easier, it's now possible to blacklist certain
 OpenGL extensions or driver workarounds from the command-line and environment.
-See :dox:`the documentation for more information <GL-Context-command-line>`.
+See :dox:`the documentation for more information <GL-Context-usage-command-line>`.
 
 `Even more new stuff`_
 =======================

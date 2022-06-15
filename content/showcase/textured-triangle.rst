@@ -33,4 +33,4 @@ on it.
 .. block-info:: Source code and documentation
 
     You can find a thorough tutorial together with source code of this example
-    :dox:`in the documentation <examples-textured-triangle>`.
+    :dox:`in the documentation <examples-texturedquad>`.

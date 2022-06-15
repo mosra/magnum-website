@@ -39,7 +39,7 @@ studies loosely based on existing Magnum users to help you decide.
             Magnum provides you with a versatile multiplatform toolbox with
             everything you need to create a fast-to-download demo.
 
-            .. button-primary:: https://doc.magnum.graphics/magnum/examples-textured-triangle.html
+            .. button-primary:: https://doc.magnum.graphics/magnum/examples-texturedquad.html
                 :class: m-fullwidth
 
                 See the shader workflow

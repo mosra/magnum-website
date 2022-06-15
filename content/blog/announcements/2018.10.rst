@@ -278,10 +278,11 @@ manage them. Of course there are flexibility tradeoffs, so when using the mesh
 APIs directly, you have the option of :dox:`GL::Mesh::addVertexBuffer()` either
 taking a non-owning reference to the buffer or fully taking over its ownership.
 
-There's a new :dox:`Containers::ScopedExit` class that simply calls a passed
-exit / close / destroy function on given value at the end of scope. Very useful
-when interacting with low-level C APIs and much easier than wrestling with
-:dox:`std::unique_ptr`, trying to convince it to do the same.
+There's a new :dox:`Containers::ScopedExit <Containers::ScopeGuard>` class that
+simply calls a passed exit / close / destroy function on given value at the end
+of scope. Very useful when interacting with low-level C APIs and much easier
+than wrestling with :dox:`std::unique_ptr`, trying to convince it to do the
+same.
 
 .. code:: c++
 

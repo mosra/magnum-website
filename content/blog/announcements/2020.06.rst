@@ -247,8 +247,9 @@ of them using just a single draw call for the whole scene. Try them out online:
             :end-before: [/bullet]
 
 Complementing the glTF `KHR_texture_transform`_ extension support, there's now
-:dox:`Shaders::Phong::setTextureMatrix()` together with ability to have
-instanced texture offset, and the same in :dox:`Shaders::Flat`.
+:dox:`Shaders::Phong::setTextureMatrix() <Shaders::PhongGL::setTextureMatrix()>`
+together with ability to have instanced texture offset, and the same in
+:dox:`Shaders::Flat`.
 
 With tangent and normal map import being done, :dox:`Shaders::Phong` normal
 map support added in 2019.10 can finally be fully utilized. This is closely
@@ -781,7 +782,7 @@ will tell you what API to use instead.
         new attribute types . This may break custom shaders if these rely on
         generic attribute definitions or are used together with :dox:`MeshTools::compile()`. To avoid such breakages, you're advised to
         propagate the generic definitions to the shader code as shown in the
-        :dox:`Shaders::Generic <Shaders-Generic-custom>` documentation.
+        :dox:`Shaders::Generic <Shaders-GenericGL-custom>` documentation.
     -   :dox:`CORRADE_ASSERT_UNREACHABLE()` got renamed to
         :dox:`CORRADE_INTERNAL_ASSERT_UNREACHABLE()` and the original name is
         reused for a macro with a custom error message. If you were not using
