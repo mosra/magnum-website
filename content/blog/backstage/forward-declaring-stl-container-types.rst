@@ -2,6 +2,7 @@ Forward-declaring STL container types
 #####################################
 
 :date: 2019-03-28
+:modified: 2022-06-15
 :category: Backstage
 :tags: C++, singles
 :summary: Some time ago, when looking into different ways how to reduce STL
@@ -17,6 +18,15 @@ Forward-declaring STL container types
 .. TODO: remove this once the STL tag file has it
 .. |span| replace:: :link-flat:`std::span <https://en.cppreference.com/w/cpp/container/span>`
 .. |wink| replace:: 😉
+
+.. note-success:: Content care: Jun 15, 2022
+
+    Updated for GCC 11, Clang 13 and MSVC 2022. Slightly larger line counts for
+    about everything, except for :dox:`std::array`, :dox:`std::tuple`,
+    :dox:`std::set` and other associative containers that are each smaller by
+    several thousand lines. Unfortunately I didn't discover any new forward
+    declarations on either, on the other hand one :dox:`std::tuple` forward
+    declaration got removed in GCC 12, so a different header is needed.
 
 Using forward declarations to avoid the need to :cpp:`#include` the whole
 type definition is one of the essential techniques to counter the
@@ -185,7 +195,6 @@ forward declaration on a particular implementation, if applicable.
         either but what can I do. TODO: is there some better solution for this?
 
     [1]_ [2]_ [3]_ [4]_ [5]_ [6]_ [7]_ [8]_ [9]_ [10]_ [11]_ [12]_ [13]_ [14]_
-    [15]_
 
 .. container:: m-scroll
 
@@ -229,8 +238,13 @@ forward declaration on a particular implementation, if applicable.
 .. [9] MSVC STL has a forward declaration for :dox:`std::array` and
     :dox:`std::tuple` defined in the standard ``<utility>``, next to
     :dox:`std::pair`.
-.. [10] libstdc++ has a forward declaration for :dox:`std::tuple` in the
-    standard `<type_traits> <https://github.com/gcc-mirror/gcc/blob/c014d57d57a03e6061a57fa8534e90979567392b/libstdc%2B%2B-v3/include/std/type_traits#L2465-L2466>`_.
+.. [10] libstdc++ from version 7 to 11 has a forward declaration for
+    :dox:`std::tuple` in the standard `<type_traits> <https://github.com/gcc-mirror/gcc/blob/releases/gcc-7.1.0/libstdc++-v3/include/std/type_traits#L2557-L2558>`_
+    header, but it got removed in GCC 12. The other forward declaration, added
+    in 4.6 and available also in GCC 12, is in
+    `<bits/stl_pair.h> <https://github.com/gcc-mirror/gcc/blob/releases/gcc-12.1.0/libstdc++-v3/include/bits/stl_pair.h#L89>`_.
+    To avoid issues, include the whole ``<utility>`` --- it isn't that much
+    larger than ``<type_traits>``.
 .. [11] MSVC has the full :dox:`std::vector` definition in ``<vector>``,
     libstdc++ has a small-ish full definition in ``<bits/stl_vector.h>`` but
     the header is not hermetic and when all needed dependencies are included as
@@ -238,13 +252,12 @@ forward declaration on a particular implementation, if applicable.
 .. [12] libc++ 3.9 and up has a forward declaration for :dox:`std::vector` in
     the standard `<iosfwd> <https://github.com/llvm-mirror/libcxx/blob/8c58c2293739d3d090c721827e4217c113ced89f/include/iosfwd#L199-L200>`__ (older
     versions don't).
-.. [13] Neither libstdc++ nor MSVC STL implement C++20 |span| yet.
-.. [14] libc++ 7.0 has a :cpp:`friend` forward declaration for |span|
+.. [13] libc++ 7.0 has a :cpp:`friend` forward declaration for |span|
     in the `<iterator> <https://github.com/llvm-mirror/libcxx/blob/73d2eccc78ac83d5947243c4d26a53f668b4f432/include/iterator#L1429>`_
     header but that's *not* enough to have the forward declaration available
     globally in the :cpp:`std` namespace. Too bad, because the ``<span>``
     header is *heavy*.
-.. [15] All standard (unordered) (multi)map/set implementations have just the
+.. [14] All standard (unordered) (multi)map/set implementations have just the
     full definition with no possibility to forward-declare. Since these types
     are very rarely used directly as function parameters or return types, it's
     not such a big problem. Besides that, they tend to be rather heavy both at
