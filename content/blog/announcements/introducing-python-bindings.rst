@@ -60,7 +60,7 @@ the first few examples are ported to it:
         / m.css Python doc generator more visible.
     May 17, 2021
         Clarified :dox:`std::string` allocations in the section about
-        `buffer protocol <#let-s-allocate-a-bunch-of-vectors-and-strings-to-do-a-zero-copy-data-transfer>`_.
+        `buffer protocol <#let-s-allocate-a-bunch-of-vectors-and-strings-to-do-a-zero-copy-data-transfer>`__.
 
 `Enter pybind11`_
 =================
