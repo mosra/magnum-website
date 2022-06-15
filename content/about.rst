@@ -10,7 +10,7 @@ Magnum library code, documentation and website is licensed under the MIT/Expat
 license:
 
     Copyright © 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019,
-    2020 Vladimír Vondruš <mosra@centrum.cz> and contributors
+    2020, 2021, 2022 Vladimír Vondruš <mosra@centrum.cz> and contributors
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
