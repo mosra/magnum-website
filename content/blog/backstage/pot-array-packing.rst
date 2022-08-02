@@ -70,7 +70,10 @@ In my case, given that I can assume power-of-two squares and can just overflow
 to another array layer when the previous gets full, the algorithm becomes
 pretty clear. Importantly, power-of-two squares also make it possible to do
 the packing in a way that makes all layers except the last one completely full,
-with zero wasted space.
+with zero wasted space. Such constraint also helps avoiding texture-leaking
+artifacts when using block compression --- except for the smallest sizes, a
+4\ |x|\ 4 block (or 8\ |x|\ 8 for certain ASTC formats) will never span two
+independent textures.
 
 .. raw:: html
     :file: pot-array-packing/packed.svg
