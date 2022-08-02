@@ -189,7 +189,32 @@ M_METADATA_TAG_PATH = 'blog/tags'
 
 _magnum_colors_src = re.compile(r"""<span class="mh">0x(?P<hex>[0-9a-f]{6})(?P<alpha>[0-9a-f]{2})?(?P<literal>_s?rgba?f?)</span>""")
 _magnum_colors_dst = r"""<span class="mh">0x\g<hex>\g<alpha>\g<literal><span class="m-code-color" style="background-color: #\g<hex>;"></span></span>"""
-#_zwnj_in_console_colors_src = re.compile(
+
+# Code wrapped in MCSS_ELLIPSIS() will get replaced by an (Unicode) ellipsis in
+# the output; code wrapped in MCSS_IGNORE() will get replaced by nothing. In
+# order to make the same code compilable, add
+#
+#   #define MCSS_ELLIPSIS(...) __VA_ARGS__
+#   #define MCSS_IGNORE(...) __VA_ARGS__
+#
+# to the snippet code. Equivalent to what's in magnum/doc/conf.py, except for
+# a different name.
+def _mcss_ignore(code: str):
+    for macro, replace in [('MCSS_ELLIPSIS(', '…'), ('MCSS_IGNORE(', '')]:
+        while macro in code:
+            i = code.index(macro)
+            depth = 1
+            for j in range(i + len(macro), len(code)):
+                if code[j] == '(': depth += 1
+                elif code[j] == ')': depth -= 1
+                if depth == 0: break
+            assert depth == 0, "unmatched %s) parentheses in %s" % (macro, code)
+            code = code[:i] + replace + code[j+1:]
+    return code
+
+M_CODE_FILTERS_PRE = {
+    'C++': _mcss_ignore
+}
 
 M_CODE_FILTERS_POST = {
     'C++': lambda str: _magnum_colors_src.sub(_magnum_colors_dst, str)
