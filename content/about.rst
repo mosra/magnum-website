@@ -150,8 +150,10 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name-big:`Jonathan Hale <Squareys>`
         -   :gh-name:`Jonathan Mercier-Ganady <Jmgr>`
         -   :gh-name:`Jordan Peck <Auburns>`
+        -   :gh-name:`Juanpe Bolívar <arximboldi>`
         -   :gh-name-big:`Konstantinos Chatzilygeroudis <costashatz>`
         -   :gh-name:`Krzysztof Szenk <Crisspl>`
+        -   :gh-name:`lacyyy`
         -   :gh-name:`Leon Moctezuma <leonidax>`
         -   :gh-name:`Mandeep Singh Baines <msbaines>`
         -   :gh-name:`Marco Melorio <Melix19>`
