@@ -10,6 +10,8 @@ Convenient CPU feature detection and dispatch
     detection and dispatch on x86, ARM and WebAssembly. The core idea behind
     allows adding new variants without having to write *any* dispatching code.
 
+.. role:: cpp(code)
+    :language: c++
 .. role:: doc-link(link)
     :class: m-flat
 .. role:: text-dim
@@ -158,10 +160,10 @@ address sanitizer and static analysis complaints.
 
 The *Heureka Moment* came to me when I was checking
 `if C++ could do function currying <https://vittorioromeo.info/index/blog/cpp17_curry.html>`_,
-and the solution isn't that much complex than the original idea. First let me
-show how the :cpp:`memrchr()` example from the top would be rewritten in a way
-that *actually works* with both a compile-time and a runtime dispatch, and uses
-an *actual* :dox:`Corrade::Cpu` library:
+and the solution isn't that much more complex than the original idea. First let
+me show how the :cpp:`memrchr()` example from the top would be rewritten in a
+way that *actually works* with both a compile-time and a runtime dispatch, and
+uses an *actual* :dox:`Corrade::Cpu` library:
 
 .. include:: cpu-feature-detection-dispatch/main.cpp
     :code: c++
