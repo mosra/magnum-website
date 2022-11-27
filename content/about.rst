@@ -128,12 +128,13 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Fabien Freling <ffreling>`
         -   :gh-name:`Fred Helmesjö <helmesjo>`
         -   :name:`Gerhard de Clercq`
+        -   :gh-name:`grishavanika`
         -   :gh-name:`Guillaume Giraud <Guillaume227>`
         -   :gh-name-big:`Guillaume Jacquemin <williamjcm>`
         -   :gh-name:`Hans Loeblich <thehans>`
         -   :gh-name:`Hilario Pérez Corona <hpcorona>`
         -   :gh-name:`hsdk123`
-        -   :gh-name:`Hugo Amnov <hugoam>`
+        -   :gh-name-big:`Hugo Amnov <hugoam>`
         -   :gh-name:`hunt978`
         -   :gh-name:`Igor Kalevatykh <ikalevatykh>`
         -   :gh-name:`Ivan P. <uzername>`
@@ -151,10 +152,12 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Jonathan Mercier-Ganady <Jmgr>`
         -   :gh-name:`Jordan Peck <Auburns>`
         -   :gh-name:`Juanpe Bolívar <arximboldi>`
+        -   :gh-name:`Kleis Auke Wolthuizen <kleisauke>`
         -   :gh-name-big:`Konstantinos Chatzilygeroudis <costashatz>`
         -   :gh-name:`Krzysztof Szenk <Crisspl>`
         -   :gh-name:`lacyyy`
         -   :gh-name:`Leon Moctezuma <leonidax>`
+        -   :gh-name:`Li BingMuyou <li6in9muyou>`
         -   :gh-name:`Mandeep Singh Baines <msbaines>`
         -   :gh-name:`Marco Melorio <Melix19>`
         -   :gh-name:`Mathis Logemann <mathisloge>`
@@ -197,6 +200,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Tomáš Skřivan <lecopivo>`
         -   :gh-name:`Travis Watkins <amaranth>`
         -   :gh-name:`Vladimir Gamalyan <vladimirgamalyan>`
+        -   :gh-name:`Vladislav <dranikpg>`
         -   :gh-name:`Winfried Baumann <codewing>`
         -   :gh-name:`xantares`
 
