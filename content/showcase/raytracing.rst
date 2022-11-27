@@ -53,4 +53,4 @@ after around 100 iterations.
 .. block-info:: Source code and documentation
 
     You can find further information and source code of this example
-    :dox:`in the documentation <examples-arcball>`.
+    :dox:`in the documentation <examples-raytracing>`.
