@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /corrade-archive/
-Disallow: /magnum-archive/
+Disallow: /magnum-meshdata-cereal-killer/
