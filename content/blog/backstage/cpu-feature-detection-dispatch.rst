@@ -900,10 +900,10 @@ project:
 ========================= ==== ================ ===============================
 Library                   LoC  Preprocessed LoC Description
 ========================= ==== ================ ===============================
-`CorradeCpu.h`_ |n|       1646 2085             See the :dox:`Cpu` namespace docs
+`CorradeCpu.hpp`_ |n|     1646 2085             See the :dox:`Cpu` namespace docs
 ========================= ==== ================ ===============================
 
-.. _CorradeCpu.h: https://github.com/mosra/magnum-singles/blob/master/CorradeCpu.h
+.. _CorradeCpu.hpp: https://github.com/mosra/magnum-singles/blob/master/CorradeCpu.hpp
 
 To put the header size into perspective, just :cpp:`#include <immintrin.h>` for
 all AVX intrinsics yields *34 thousand* preprocessed lines on GCC. Compared to
