@@ -2,6 +2,6 @@
 indent_style = space
 indent_size = 4
 
-[*.{css,html}]
+[*.{css,html,tag}]
 indent_style = space
 indent_size = 2
