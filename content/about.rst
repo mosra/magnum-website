@@ -107,7 +107,7 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`biosek`
         -   :gh-name:`Borislav Stanimirov <iboB>`
         -   :gh-name:`Brandon Pomeroy <pomeroyb>`
-        -   :gh-name:`Burak Canik <HaroldReyiz>`
+        -   :gh-name:`Burak Canik <fauder>`
         -   :gh-name:`Cameron Egbert <cegbertOculus>`
         -   :gh-name:`Cong Xie <xiconxi>`
         -   :gh-name:`Chris Chambers <chris-chambers>`
