@@ -222,7 +222,7 @@ function fetchLatestCodecovJobs(project, branch) {
         var date = commit['updatestamp'];
         var age = timeDiff(new Date(Date.parse(date)), new Date(Date.now()));
 
-        elem.innerHTML = '<a href="https://codecov.io/gh/mosra/' + repo + '/tree/' + commit['commitid'] + '" title="@ ' + date + '"><strong>' + coverage + '</strong>%<br /><span class="m-text m-small">' + age + '</span></a>';
+        elem.innerHTML = '<a href="https://app.codecov.io/github/mosra/' + repo + '/commit/' + commit['commitid'] + '" title="@ ' + date + '"><strong>' + coverage + '</strong>%<br /><span class="m-text m-small">' + age + '</span></a>';
         elem.className = type;
     };
     req.send();
