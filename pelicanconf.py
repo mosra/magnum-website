@@ -18,8 +18,11 @@ PATH = 'content'
 
 STATIC_URL = 'static/{path}'
 STATIC_SAVE_AS = 'static/{path}'
-STATIC_PATHS = ['img', 'showcase']
-EXTRA_PATH_METADATA = {'img/favicon.ico': {'path': '../favicon.ico'}}
+STATIC_PATHS = ['img', 'showcase', 'packages']
+EXTRA_PATH_METADATA = {
+    'img/favicon.ico': {'path': '../favicon.ico'},
+    'packages/deb.sh': {'path': '../packages/deb.sh'}
+}
 
 ARTICLE_PATHS = ['blog']
 ARTICLE_EXCLUDES = ['blog/authors', 'blog/categories', 'blog/tags']
@@ -100,7 +103,8 @@ M_LINKS_FOOTER2 = [('Docs', '//doc.magnum.graphics/'),
                    ('Corrade', '//doc.magnum.graphics/corrade/'),
                    ('Magnum', '//doc.magnum.graphics/magnum/'),
                    ('Python API', '//doc.magnum.graphics/python/'),
-                   ('Doc Downloads', 'doc-downloads/')]
+                   ('Doc Downloads', 'doc-downloads/'),
+                   ('Packages', 'packages/')]
 
 M_LINKS_FOOTER3 = [('Contact Us', 'contact/'),
                    ('Blog Feed', M_BLOG_URL + '/feeds/all.atom.xml'),
