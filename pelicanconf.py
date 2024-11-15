@@ -240,9 +240,12 @@ PAGINATED_TEMPLATES = {'archives': None, 'tag': None, 'category': None, 'author'
 SLUGIFY_SOURCE = 'basename'
 PATH_METADATA = '(blog/)?(?P<slug>.+).rst'
 SLUG_REGEX_SUBSTITUTIONS = [
-        (r'[^\w\s-]', ''),  # remove non-alphabetical/whitespace/'-' chars
-        (r'(?u)\A\s*', ''),  # strip leading whitespace
-        (r'(?u)\s*\Z', ''),  # strip trailing whitespace
-        (r'[-\s]+', '-'),  # reduce multiple whitespace or '-' to single '-'
-        (r'C\+\+', 'cpp'),
-    ]
+    # Has to be first so the ++ isn't removed by the time it reaches this
+    (r'C\+\+', 'cpp'),
+
+    # Pelican defaults
+    (r'[^\w\s-]', ''),      # remove non-alphabetical/whitespace/'-' chars
+    (r'(?u)\A\s*', ''),     # strip leading whitespace
+    (r'(?u)\s*\Z', ''),     # strip trailing whitespace
+    (r'[-\s]+', '-'),       # reduce multiple whitespace or '-' to single '-'
+]
