@@ -14,8 +14,7 @@ You can contact the team and follow the development via the following means:
 -   `Blog feed <https://blog.magnum.graphics/feeds/all.atom.xml>`_
 -   Google Groups mailing list --- magnum-engine@googlegroups.com
     (`archive <https://groups.google.com/forum/#!forum/magnum-engine>`_)
--   Twitter --- https://twitter.com/czmosra and the
-    `#MagnumEngine <https://twitter.com/hashtag/MagnumEngine>`_ hashtag
+-   Bluesky --- https://bsky.app/profile/mosra.cz
 
 `Contribute to the project`_
 ============================
