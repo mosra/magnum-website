@@ -21,7 +21,10 @@ STATIC_SAVE_AS = 'static/{path}'
 STATIC_PATHS = ['img', 'showcase', 'packages']
 EXTRA_PATH_METADATA = {
     'img/favicon.ico': {'path': '../favicon.ico'},
-    'packages/deb.sh': {'path': '../packages/deb.sh'}
+    'packages/deb.sh': {
+        'path': '../packages/deb.sh',
+        'url': 'packages/deb.sh'
+    }
 }
 
 ARTICLE_PATHS = ['blog']
