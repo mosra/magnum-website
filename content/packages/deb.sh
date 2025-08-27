@@ -5,7 +5,7 @@
 #
 #   Copyright © 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019,
 #               2020, 2021, 2022, 2023 Vladimír Vondruš <mosra@centrum.cz>
-#   Copyright © 2024 Dora "catdotjs" <catdotjs@gmail.com>
+#   Copyright © 2024, 2025 Dora "catdotjs" <catdotjs@gmail.com>
 #
 #   Permission is hereby granted, free of charge, to any person obtaining a
 #   copy of this software and associated documentation files (the "Software"),
@@ -47,6 +47,7 @@ everythingflag=15
 installflags=0
 
 skipaskinginstall=false
+skipaskingcustomflags=true
 
 leave() {
   echo "Exiting..."
@@ -57,6 +58,11 @@ leave() {
 git_install() {
   git clone https://github.com/mosra/$1 && cd $1
   ln -s package/debian .
+
+  if [[ $skipaskingcustomflags = false ]]; then
+    xdg-open package/debian/rules
+  fi
+
   dpkg-buildpackage --no-sign
   sudo dpkg -i ../$1*.deb
 }
@@ -112,10 +118,16 @@ package_check() {
 }
 
 base_installer() {
-  echo "Do you want to be asked for every package being installed? (y/n)"
+  echo "Do you want to be asked for every package being installed? (y/n) (default: y)"
   read -r option
   if [[ "$option" == "n" || "$option" == "N" ]]; then
     skipaskinginstall=true
+  fi
+
+  echo "Do you want to specify CMAKE compile flags(debian/rules) per installed package? (y/n) (default: n)"
+  read -r option
+  if [[ "$option" == "y" || "$option" == "Y" ]]; then
+    skipaskingcustomflags=false
   fi
 
   printf "\n-- Installing dependencies to build --\n"
@@ -268,13 +280,13 @@ menu_choosing() {
 }
 
 # Script starts here
-echo "-- Written by catdotjs@github 2024 --"
+echo "-- Written by catdotjs@github 2024 2025 --"
 echo "-- updating apt --"
 sudo apt update
 echo "-- updated apt for latest packages --"
 cd $(mktemp -d)
 echo "-- Current working directory is $(pwd) --"
-echo "-- Installer version 1.0.1 --"
-printf "Welcome to the Magnum/Corrade installer!\nCheck out https://magnum.graphics/ and https://doc.magnum.graphics/ to learn more.
+echo "-- Installer version 1.0.2 --"
+printf "Welcome to the Magnum/Corrade installer!\nCheck out https://magnum.graphics/ and https://doc.magnum.graphics to learn more.
 \n"
 menu_choosing
