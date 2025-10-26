@@ -211,7 +211,11 @@ function fetchLatestCodecovJobs(project, branch) {
         var elem = document.getElementById(id);
 
         var commit = req.response['head_commit'];
-        var coverage = commit['totals']['coverage'].toFixed(1);
+        /* Floor to one decimal place so coverage of 99.96% doesn't result in
+           misleading 100.0% being shown. toFixed() alone performs a rounding
+           to nearest. Display the full value a tooltip. */
+        var coverage = (Math.floor(commit['totals']['coverage']*10)*0.1).toFixed(1);
+        var coverageFull = commit['totals']['coverage'];
         var type;
         if(commit['state'] != 'complete') type = 'm-info';
         else if(Math.round(coverage) > 90) type = 'm-success';
@@ -221,7 +225,7 @@ function fetchLatestCodecovJobs(project, branch) {
         var date = req.response['updatestamp'];
         var age = timeDiff(new Date(Date.parse(date)), new Date(Date.now()));
 
-        elem.innerHTML = '<a href="https://app.codecov.io/github/' + project + '/tree/' + branch + '" title="@ ' + date + '"><strong>' + coverage + '</strong>%<br /><span class="m-text m-small">' + age + '</span></a>';
+        elem.innerHTML = '<a href="https://app.codecov.io/github/' + project + '/tree/' + branch + '" title="' + coverageFull + '% @ ' + date + '"><strong>' + coverage + '</strong>%<br /><span class="m-text m-small">' + age + '</span></a>';
         elem.className = type;
     };
     req.send();
