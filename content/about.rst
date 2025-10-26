@@ -155,7 +155,6 @@ each particular project can be seen :dox:`in the documentation <credits-contribu
         -   :gh-name:`Kleis Auke Wolthuizen <kleisauke>`
         -   :gh-name-big:`Konstantinos Chatzilygeroudis <costashatz>`
         -   :gh-name:`Krzysztof Szenk <Crisspl>`
-        -   :gh-name:`lacyyy`
         -   :gh-name:`Leon Moctezuma <leonidax>`
         -   :gh-name:`Li BingMuyou <li6in9muyou>`
         -   :gh-name:`Mandeep Singh Baines <msbaines>`
