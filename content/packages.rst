@@ -31,7 +31,7 @@ also install a tagged release or build from within the source itself,
 =================================
 
 An interactive script building and installing ``*.deb`` packages of the latest
-Git revision, contributed by :gh:`catdotjs`, is available:
+Git revision, contributed by https://git.thenight.club/cat, is available:
 `deb.sh <{static}/packages/deb.sh>`_. Alternatively, if you feel adventurous,
 you can pipe it straight to shell:
 
