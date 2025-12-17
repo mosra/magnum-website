@@ -6,11 +6,8 @@ Magnum::Ui Gallery
 :breadcrumb: {filename}/showcase.rst Showcase
 :alias: /showcase/magnum-ui-gallery/
 
-A gallery of various widgets (buttons, labels, text input, modals) provided by
-the :dox:`Magnum::Ui` library. It's possible to select among different themes:
-
--   `m.css dark theme <?>`_ (based on `m.css <https://mcss.mosra.cz>`_)
--   `Default theme <?style=default>`_
+A gallery of various widgets (buttons, labels, text input) provided by
+the :dox:`Magnum::Ui` library.
 
 .. note-warning::
 
@@ -20,7 +17,7 @@ the :dox:`Magnum::Ui` library. It's possible to select among different themes:
 
 .. raw:: html
 
-    <div class="mn-container">
+    <div class="mn-container mn-aspect-3-2 mn-width-800">
       <div class="mn-sizer"><div class="mn-expander"><div class="mn-listener">
         <canvas class="mn-canvas" id="canvas" tabindex="0"></canvas>
         <div class="mn-status" id="status">Initialization...</div>
