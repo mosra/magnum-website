@@ -61,7 +61,7 @@ dependency order:
 
 To update, replace :console:`install --HEAD` with :console:`upgrade --fetch-HEAD`.
 Some packages contain flags for enabling or disabling optional dependencies,
-:dox:`see the documentation for more infor <building-packages-brew>`.
+:dox:`see the documentation for more information <building-packages-brew>`.
 
 `Vcpkg`_
 ========
