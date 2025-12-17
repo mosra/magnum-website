@@ -63,6 +63,30 @@ To update, replace :console:`install --HEAD` with :console:`upgrade --fetch-HEAD
 Some packages contain flags for enabling or disabling optional dependencies,
 :dox:`see the documentation for more information <building-packages-brew>`.
 
+`Void Linux`_
+=============
+
+There is a repository maintained by `cat@git.thenight.club <https://git.thenight.club/cat>`_
+that compiles packages for x86_64, i686, AArch64, and ARMv7l. Currently for
+glibc only, musl support is planned in the future. The repo can be set up with
+these following steps:
+
+.. code:: shell-session
+    :class: m-console-wrap
+
+    sudo sh -c "echo \"repository=https://voidpkgs.thenight.club/\" > /usr/share/xbps.d/30-repository-the-void-club.conf"
+    sudo xbps-install -S
+
+After setting up the repository the following packages will be available:
+
+-   ``corrade``
+-   ``magnum``
+-   ``magnum-plugins``
+-   ``magnum-extras``
+-   ``magnum-integration``
+-   ``magnum-examples``
+-   ``magnum-all``, which is a meta-package for installing all of the above
+
 `Vcpkg`_
 ========
 
