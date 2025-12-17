@@ -20,8 +20,8 @@ everything in a single draw call using instanced :dox:`Shaders::Flat`.
         <canvas class="mn-canvas" id="canvas" tabindex="0"></canvas>
         <div class="mn-status" id="status">Initialization...</div>
         <div class="mn-status-description" id="status-description"></div>
-        <script async="async" src="{static}/showcase/box2d/magnum-box2d.js"></script>
         <script src="{static}/showcase/EmscriptenApplication.js"></script>
+        <script async="async" src="{static}/showcase/box2d/magnum-box2d.js"></script>
       </div></div></div>
     </div>
 

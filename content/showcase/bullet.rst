@@ -27,8 +27,8 @@ rendered in at most three draw calls using instanced :dox:`Shaders::Phong`.
         <canvas class="mn-canvas" id="canvas" tabindex="0"></canvas>
         <div class="mn-status" id="status">Initialization...</div>
         <div class="mn-status-description" id="status-description"></div>
-        <script async="async" src="{static}/showcase/bullet/magnum-bullet.js"></script>
         <script src="{static}/showcase/EmscriptenApplication.js"></script>
+        <script async="async" src="{static}/showcase/bullet/magnum-bullet.js"></script>
       </div></div></div>
     </div>
 

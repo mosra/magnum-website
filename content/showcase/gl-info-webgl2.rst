@@ -27,8 +27,8 @@ available.
         <pre class="mn-log m-console-wrap" id="log"></pre></pre>
         <div class="mn-status" id="status">Initialization...</div>
         <div class="mn-status-description" id="status-description"></div>
-        <script async="async" src="{static}/showcase/gl-info-webgl2/magnum-gl-info.js"></script>
         <script src="{static}/showcase/WindowlessEmscriptenApplication.js"></script>
+        <script async="async" src="{static}/showcase/gl-info-webgl2/magnum-gl-info.js"></script>
       </div></div></div>
     </div>
 

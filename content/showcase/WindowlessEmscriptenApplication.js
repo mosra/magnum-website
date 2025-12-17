@@ -25,10 +25,9 @@
 
 /* Patched version of the upstream Magnum driver code in order to support
    having extra files on another domain. Be careful when updating. The module
-   <script> tag has to be *right before* this one for the following to work. */
-var scripts = document.getElementsByTagName('script');
-var moduleSrc = scripts[scripts.length - 2].src;
-var moduleBaseDir = moduleSrc.substr(0, moduleSrc.lastIndexOf('/') + 1);
+   <script> tag has to be *right after* this one for the following to work.
+   Continued in locateFile below. */
+var thisScriptId = document.getElementsByTagName('script').length - 1;
 
 var Module = {
     preRun: [],
@@ -48,7 +47,12 @@ var Module = {
         log.innerHTML += Array.prototype.slice.call(arguments).join(' ') + '\n';
     },
 
-    locateFile: function(url) { return moduleBaseDir + url; },
+    locateFile: function(url) {
+        /* Continued from above */
+        var moduleSrc = document.getElementsByTagName('script')[thisScriptId + 1].src;
+        var moduleBaseDir = moduleSrc.substr(0, moduleSrc.lastIndexOf('/') + 1);
+        return moduleBaseDir + url;
+    },
 
     /* onAbort not handled here, as the output is printed directly on the page */
 

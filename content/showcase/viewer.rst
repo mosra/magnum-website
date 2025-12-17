@@ -21,8 +21,8 @@ animation player see the `Magnum Player <{filename}/showcase/player.rst>`_ app.
         <canvas class="mn-canvas" id="canvas" tabindex="0"></canvas>
         <div class="mn-status" id="status">Initialization...</div>
         <div class="mn-status-description" id="status-description"></div>
-        <script async="async" src="{static}/showcase/viewer/magnum-viewer.js"></script>
         <script src="{static}/showcase/EmscriptenApplication.js"></script>
+        <script async="async" src="{static}/showcase/viewer/magnum-viewer.js"></script>
       </div></div></div>
     </div>
 
