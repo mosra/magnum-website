@@ -22,11 +22,11 @@ and search for WebXR. Works on Android as well.
 
 .. raw:: html
 
-    <div id="container" class="aspect-2-1">
-      <div id="sizer"><div id="expander"><div id="listener">
-        <canvas id="canvas" tabindex="0"></canvas>
-        <div id="status">Initialization...</div>
-        <div id="status-description"></div>
+    <div class="mn-container mn-aspect-2-1">
+      <div class="mn-sizer"><div class="mn-expander"><div class="mn-listener">
+        <canvas class="mn-canvas" id="canvas" tabindex="0"></canvas>
+        <div class="mn-status" id="status">Initialization...</div>
+        <div class="mn-status-description" id="status-description"></div>
         <script async="async" src="{static}/showcase/webxr/magnum-webxr.js"></script>
         <script src="{static}/showcase/EmscriptenApplication.js"></script>
       </div></div></div>

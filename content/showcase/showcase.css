@@ -23,32 +23,32 @@
     DEALINGS IN THE SOFTWARE.
 */
 
-/* #container         makes the canvas occupy the whole page width
-   #sizer             centers it
-   #expander          does aspect ratio preservation
-   #listener          snaps to #expander edges
-   #listener::before  does the border, which finally goes below the canvas */
-.m-container-inflatable > .m-row > [class*='m-col-'] > #container:not(.fullsize) {
+/* .mn-container        makes the canvas occupy the whole page width
+   .mn-sizer            centers it
+   .mn-expander         does aspect ratio preservation
+   .mn-listener         snaps to .mn-expander edges
+   .mn-listener::before does the border, which finally goes below the canvas */
+.m-container-inflatable > .m-row > [class*='m-col-'] > .mn-container:not(.mn-fullsize) {
   margin: 1rem -1rem 1rem -1rem;
 }
 /* TODO: use the same console wrap as in m.css */
-#sizer {
+.mn-sizer {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
   width: 640px;
 }
-#expander {
+.mn-expander {
   position: relative;
 }
-#listener {
+.mn-listener {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
-#listener::before {
+.mn-listener::before {
   position: absolute;
   content: ' ';
   top: 0;
@@ -67,7 +67,7 @@
    elements up the hierarchy (m.css grid layout) and so that wouldn't work.
    It's also done in a way that makes the top navbar (and the dropdowns) still
    visible. */
-#container.fullsize {
+.mn-container.mn-fullsize {
   position: fixed;
   z-index: 10; /* navbar dropdowns have 99999 */
   top: 3rem;
@@ -75,66 +75,74 @@
   left: 0;
   right: 0;
   margin: 0;
+  /* TODO fix the canvas to not be semitransparent with alpha blending */
+  background-color: #2f363f; /*var(--background-color)*/
 }
-#container.fullsize #sizer, #container.fullsize #expander {
+.mn-container.mn-fullsize .mn-sizer, .mn-container.mn-fullsize .mn-expander {
   width: 100%; height: 100%;
 }
 
-#container.width-240 #sizer { width: 240px; }
-#container.width-320 #sizer { width: 320px; }
-#container.width-360 #sizer { width: 360px; }
-#container.width-480 #sizer { width: 480px; }
-#container.width-600 #sizer { width: 600px; }
-#container.width-640 #sizer, #container #sizer {
+.mn-container.mn-width-240 .mn-sizer { width: 240px; }
+.mn-container.mn-width-320 .mn-sizer { width: 320px; }
+.mn-container.mn-width-360 .mn-sizer { width: 360px; }
+.mn-container.mn-width-480 .mn-sizer { width: 480px; }
+.mn-container.mn-width-600 .mn-sizer { width: 600px; }
+.mn-container.mn-width-640 .mn-sizer, .mn-container .mn-sizer {
   width: 640px; /* default */
 }
-#container.width-800 #sizer { width: 800px; }
+.mn-container.mn-width-800 .mn-sizer { width: 800px; }
+.mn-container.mn-width-960 .mn-sizer { width: 960px; }
+.mn-container.mn-width-1024 .mn-sizer { width: 1024px; }
+.mn-container.mn-width-1280 .mn-sizer { width: 1280px; }
 
-#container.aspect-1-1 #expander { padding-bottom: 100%; }
-#container.aspect-4-3 #expander, #container:not(.fullsize) #expander {
+.mn-container.mn-aspect-1-1 .mn-expander { padding-bottom: 100%; }
+.mn-container.mn-aspect-4-3 .mn-expander,
+.mn-container:not(.mn-fullsize):not([class*='mn-aspect-']) .mn-expander {
   padding-bottom: 75%; /* default */
 }
-#container.aspect-3-4 #expander { padding-bottom: 133.3333%; }
-#container.aspect-3-2 #expander { padding-bottom: 66.6667%; }
-#container.aspect-2-3 #expander { padding-bottom: 150%; }
-#container.aspect-16-9 #expander { padding-bottom: 56.25% }
-#container.aspect-9-16 #expander { padding-bottom: 177.7778% }
-#container.aspect-2-1 #expander { padding-bottom: 50%; }
-#container.aspect-1-2 #expander { padding-bottom: 200%; }
+.mn-container.mn-aspect-3-4 .mn-expander { padding-bottom: 133.3333%; }
+.mn-container.mn-aspect-3-2 .mn-expander { padding-bottom: 66.6667%; }
+.mn-container.mn-aspect-2-3 .mn-expander { padding-bottom: 150%; }
+.mn-container.mn-aspect-16-10 .mn-expander { padding-bottom: 62.5%; }
+.mn-container.mn-aspect-16-9 .mn-expander { padding-bottom: 56.25% }
+.mn-container.mn-aspect-10-16 .mn-expander { padding-bottom: 160%; }
+.mn-container.mn-aspect-9-16 .mn-expander { padding-bottom: 177.7778% }
+.mn-container.mn-aspect-2-1 .mn-expander { padding-bottom: 50%; }
+.mn-container.mn-aspect-1-2 .mn-expander { padding-bottom: 200%; }
 
-#canvas, pre#log {
+.mn-canvas, pre#log {
   max-width: 100%;
   width: 100%;
   height: 100%;
   z-index: 10;
   border-radius: 0.2rem; /*var(--border-radius)*/
 }
-#canvas {
+.mn-canvas {
   margin-bottom: -0.25rem; /* otherwise there's scrollbar w/ fullsize (why?) */
 }
-#container.fullsize #canvas:focus {
+.mn-container.mn-fullsize .mn-canvas:focus {
   outline-width: 0;
 }
-#status, #status-description {
+.mn-status, .mn-status-description {
   position: absolute;
   text-align: center;
   width: 100%;
   z-index: 9;
 }
-#status {
+.mn-status {
   top: 10%;
   font-size: 1.5rem;
   font-weight: 600;
 }
-#status-description {
+.mn-status-description {
   top: 22.5%;
   padding-left: 2rem;
   padding-right: 2rem;
 }
-#canvas.hidden {
+.mn-canvas.mn-hidden {
   display: none;
 }
-pre#log {
+pre.mn-log {
   font-size: 0.8rem; /* so 80 columns fits into 640 pixels */
 }
 
