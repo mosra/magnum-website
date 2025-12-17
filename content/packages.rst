@@ -31,9 +31,9 @@ also install a tagged release or build from within the source itself,
 =================================
 
 An interactive script building and installing ``*.deb`` packages of the latest
-Git revision, contributed by https://git.thenight.club/cat, is available:
-`deb.sh <{static}/packages/deb.sh>`_. Alternatively, if you feel adventurous,
-you can pipe it straight to shell:
+Git revision, contributed by `cat@git.thenight.club <https://git.thenight.club/cat>`_,
+is available: `deb.sh <{static}/packages/deb.sh>`_. Alternatively, if you feel
+adventurous, you can pipe it straight to shell:
 
 .. code:: shell-session
 
