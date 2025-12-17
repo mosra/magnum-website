@@ -5,14 +5,13 @@ Magnum Player
 :highlight: showcase
 :breadcrumb: {filename}/showcase.rst Showcase
 
-A viewer and player for images and `glTF <https://www.khronos.org/gltf/>`_
-scenes. Drop a ``*.gltf`` or ``*.glb`` file or any of the ``*.jpg``, ``*.png``,
-... image formats supported by the :dox:`StbImageImporter <Trade::StbImageImporter>`
-plugin onto the canvas to load it.
+Views and plays back various 3D and image files. Drop a file onto the canvas to
+load it. In case of 3D files referencing external data (such as a glTF with
+external images), select and drop multiple files at once.
 
 .. raw:: html
 
-    <div class="mn-container">
+    <div class="mn-container mn-width-800 mn-aspect-16-10">
       <div class="mn-sizer"><div class="mn-expander"><div class="mn-listener">
         <canvas class="mn-canvas" id="canvas" tabindex="0"></canvas>
         <div class="mn-status" id="status">Initialization...</div>
@@ -81,25 +80,57 @@ plugin onto the canvas to load it.
     }, true);
     </script>
 
-.. block-flat:: Controls
+.. container:: m-row m-container-inflate
 
-    -   :label-default:`Space` plays or pauses the animation
-    -   :label-default:`arrow keys` seek the animation forward or backward
-    -   :label-default:`mouse drag` rotates the scene around the cursor
-    -   :label-warning:`Shift` :label-default:`mouse drag` pans the scene at
-        depth of the cursor
-    -   :label-default:`mouse wheel` zooms in/out relative to cursor position
-    -   :label-default:`right mouse button` selects and highlights mesh under
-        cursor, showing stats for it
-    -   :label-default:`Num 1` / :label-warning:`Ctrl` :label-default:`Num 1`
-        switches to a front / back view
-    -   :label-default:`Num 3` / :label-warning:`Ctrl` :label-default:`Num 3`
-        switches to a right / left view
-    -   :label-default:`Num 7` / :label-warning:`Ctrl` :label-default:`Num 7`
-        switches to a top / bottom view
-    -   :label-default:`Num 0` resets the camera back to the original view
-    -   :label-default:`+` / :label-default:`Num +` or :label-default:`-` /
-        :label-default:`Num -` increases or decreases lighting brightness
+    .. container:: m-col-l-6 m-nopady
+
+        .. block-flat:: Controls
+
+            -   :label-default:`Space` plays or pauses the animation
+            -   :label-default:`arrow keys` seek the animation forward or
+                backward
+            -   :label-default:`mouse drag` rotates the scene around the cursor
+            -   :label-warning:`Shift` :label-default:`mouse drag` pans the
+                scene at depth of the cursor
+            -   :label-default:`mouse wheel` zooms in/out relative to cursor
+                position
+            -   :label-default:`right mouse button` selects and highlights mesh
+                under cursor, showing stats for it
+            -   :label-default:`Num 1` / :label-warning:`Ctrl`
+                :label-default:`Num 1` switches to a front / back view
+            -   :label-default:`Num 3` / :label-warning:`Ctrl`
+                :label-default:`Num 3` switches to a right / left view
+            -   :label-default:`Num 7` / :label-warning:`Ctrl`
+                :label-default:`Num 7` switches to a top / bottom view
+            -   :label-default:`Num 0` resets the camera back to the original
+                view
+            -   :label-default:`+` / :label-default:`Num +` or
+                :label-default:`-` / :label-default:`Num -` increases or
+                decreases lighting brightness
+
+    .. container:: m-col-l-6 m-nopady
+
+        .. block-flat:: Supported 3D formats
+            :class: m-nopadb
+
+            -   FBX (``*.fbx``) using :dox:`UfbxImporter <Trade::UfbxImporter>`
+            -   glTF (``*.gltf``, ``*.glb``) using :dox:`GltfImporter <Trade::GltfImporter>`
+            -   OBJ (``*.obj``) using :dox:`UfbxImporter <Trade::UfbxImporter>`
+            -   Stanford PLY (``*.ply``) using :dox:`StanfordImporter <Trade::StanfordImporter>`
+
+        .. block-flat:: Common supported image formats
+
+            -   ASTC (``*.astc``) using :dox:`AstcImporter <Trade::AstcImporter>`
+            -   Basis (``*.basis``, ``*.ktx2``) using
+                :dox:`BasisImporter <Trade::BasisImporter>`
+            -   DDS (``*.dds``) using :dox:`DdsImporter <Trade::DdsImporter>`
+            -   OpenEXR (``*.exr``) using
+                :dox:`OpenExrImporter <Trade::OpenExrImporter>`
+            -   KTX2 (``*.ktx2``) using :dox:`KtxImporter <Trade::KtxImporter>`
+            -   TGA (``*.tga``) using :dox:`TgaImporter <Trade::TgaImporter>`
+            -   BMP (``*.bmp``), GIF (``*.gif``), HDR (``*.hdr``), JPEG
+                (``*.jpg``), PNG (``*.png``) etc. using
+                :dox:`StbImageImporter <Trade::StbImageImporter>`
 
 .. block-warning:: Doesn't work?
 
@@ -111,6 +142,6 @@ plugin onto the canvas to load it.
 
 .. block-info:: Documentation
 
-    See the :dox:`magnum-player` app documentation for more information.
-    Again, please note that this is an experimental feature and the
-    documentation is not yet finished.
+    See the :dox:`magnum-player` app documentation for more information. Please
+    note that this is an experimental feature and the documentation is not yet
+    finished.
