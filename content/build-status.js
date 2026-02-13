@@ -39,96 +39,136 @@ function timeDiff(before, now) {
 
 /* https://circleci.com/docs/api/#recent-builds-for-a-single-project */
 function fetchLatestCircleCiJobs(project, branch) {
-    var req = window.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
-    if(!req) return;
+    var reqPipeline = window.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
+    if(!reqPipeline)
+        return;
 
-    /* TODO: expand the limit once we have more than 20 builds per project */
-    req.open('GET', 'https://circleci.com/api/v1.1/project/github/' + project + '/tree/' + branch + '?limit=20&offset=0&shallow=true');
-    req.responseType = 'json';
-    req.onreadystatechange = function() {
-        if(req.readyState != 4) return;
+    var repo = project.substring(project.lastIndexOf('/') + 1);
 
-        //console.log(req.response);
+    var circleci_base_url = 'https://circleci.com';
 
-        var now = new Date(Date.now());
+    /* The query gives back just the latest "pipeline" ID and need to use that
+       to query the actual "workflows" of given pipeline, to get their IDs, AND
+       THEN use that to query the jobs. Couldn't there just be a way to query
+       last jobs of given project directly?! Fucking!!! web stuff. */
+    reqPipeline.open('GET', circleci_base_url + '/api/v2/project/gh/' + project + '/pipeline?branch=' + branch);
+    reqPipeline.responseType = 'json';
+    reqPipeline.onreadystatechange = function() {
+        if(reqPipeline.readyState != 4)
+            return;
 
-        /* It's not possible to query just the latest build, so instead we have
-           to query N latest jobs and then go as long as they have the same
-           commit. Which is kinda silly, but better than going one-by-one like
-           with Travis, right? */
-        var commit = '';
-        for(var i = 0; i != req.response.length; ++i) {
-            var job = req.response[i];
-
-            /* Some other commit, we have everything. Otherwise remember the
-               commit for the next iteration. */
-            if(commit && job['vcs_revision'] != commit)
-                break;
-            commit = job['vcs_revision'];
-
-            /* If the YML fails to parse, job_name is Build Error. Skip it
-               completely to avoid errors down the line. */
-            if(job['workflows']['job_name'] == 'Build Error')
-                continue;
-
-            var id = job['reponame'] + '-' + job['workflows']['job_name'];
-            var elem = document.getElementById(id);
-            if(!elem) {
-                console.log('Unknown CircleCI job ID', id);
-                continue;
-            }
-
-            var type;
-            var status;
-            var ageField;
-            if(job['status'] == 'success') {
-                type = 'm-success';
-                status = '✔';
-                ageField = 'stop_time';
-            } else if(job['status'] == 'queued' || job['status'] == 'scheduled') {
-                type = 'm-info';
-                status = '…';
-                ageField = 'queued_at';
-            } else if(job['status'] == 'not_running') {
-                type = 'm-info';
-                status = '…';
-                ageField = 'usage_queued_at';
-            } else if(job['status'] == 'running') {
-                type = 'm-warning';
-                status = '↺';
-                ageField = 'start_time';
-            } else if(job['status'] == 'failed' || job['status'] == 'infrastructure_fail' || job['status'] == 'timedout') {
-                type = 'm-danger';
-                status = '✘';
-                ageField = 'stop_time';
-            } else if(job['status'] == 'canceled') {
-                type = 'm-dim';
-                status = '∅';
-                ageField = 'stop_time';
-            /* For example when I didn't pay for macOS */
-            } else if(job['status'] == 'not_run') {
-                type = 'm-dim';
-                status = '⚠';
-                ageField = 'stop_time';
-            } else {
-                /* retried, no_test, fixed -- not sure
-                   what exactly these mean */
-                type = 'm-default';
-                status = job['status'];
-                ageField = 'usage_queued_at';
-            }
-
-            var age = timeDiff(new Date(Date.parse(job[ageField])), now);
-
-            /* Update the field only if it's not already filled -- in that case
-               it means this job got re-run. */
-            if(!elem.className) {
-                elem.innerHTML = '<a href="' + job['build_url'] + '" title="' + job['status'] + ' @ ' + job[ageField] + '">' + status + '<br /><span class="m-text m-small">' + age + '</span></a>';
-                elem.className = type;
-            }
+        if(reqPipeline.response == null) {
+            console.error('Cannot query CircleCI pipelines for', project);
+            return;
         }
+
+        /* If the response has no items, the last build was either more than 90
+           days ago or this branch hasn't been built yet. */
+        if(reqPipeline.response["items"].length == 0)
+            return;
+
+        /* Now query the actual workflows of the pipeline */
+        var reqWorkflows = window.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
+        reqWorkflows.open('GET', circleci_base_url + '/api/v2/pipeline/' + reqPipeline.response["items"][0]["id"] + '/workflow');
+        reqWorkflows.responseType = 'json';
+        reqWorkflows.onreadystatechange = function() {
+            if(reqWorkflows.readyState != 4)
+                return;
+
+            if(reqWorkflows.response == null) {
+                console.error('Cannot query CircleCI workflows for', project);
+                return;
+            }
+
+            /* If the response has no items, the build failed for example due
+               to a YAML parse error */
+            if(reqWorkflows.response["items"].length == 0) {
+                console.error('No workflows for the latest CircleCI pipeline for', project, 'likely a YAML parse error');
+                return;
+            }
+
+            var workflowCreatedAt = reqWorkflows.response["items"][0]["created_at"];
+            var workflowId = reqWorkflows.response["items"][0]["id"];
+            var pipelineNumber = reqWorkflows.response["items"][0]["pipeline_number"];
+
+            /* And now... query the jobs. This is so fucking slow I cannot
+               believe it. */
+            var req = window.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
+            req.open('GET', circleci_base_url + '/api/v2/workflow/' + workflowId + '/job');
+            req.responseType = 'json';
+            req.onreadystatechange = function() {
+                if(req.readyState != 4)
+                    return;
+
+                var now = new Date(Date.now());
+
+                for(var i = 0; i != req.response["items"].length; ++i) {
+                    var job = req.response["items"][i];
+
+                    var id = job['project_slug'].substring(job['project_slug'].lastIndexOf('/') + 1) + '-' + job['name'];
+                    var elem = document.getElementById(id);
+                    if(!elem) {
+                        console.log('Unknown CircleCI job ID', id);
+                        continue;
+                    }
+
+                    var type;
+                    var status;
+                    var age;
+                    if(job['status'] == 'success') {
+                        type = 'm-success';
+                        status = '✔';
+                        age = job['stopped_at'];
+                    } else if(job['status'] == 'running') {
+                        type = 'm-warning';
+                        status = '↺';
+                        age = job['started_at'];
+                    /* For example when I didn't pay for macOS */
+                    } else if(job['status'] == 'not_run') {
+                        type = 'm-dim';
+                        status = '⚠';
+                        age = job['stopped_at'];
+                    } else if(job['status'] == 'failed' || job['status'] == 'infrastructure_fail' || job['status'] == 'timedout' || job['status'] == 'terminated-unknown'|| job['status'] == 'unauthorized') {
+                        type = 'm-danger';
+                        status = '✘';
+                        age = job['stopped_at'];
+                    /* When the job is blocked from running by dependencies
+                       that either didn't finish yet or failed */
+                    } else if(job['status'] == 'blocked') {
+                        type = 'm-dim';
+                        status = '⧖';
+                        age = workflowCreatedAt;
+                    } else if(job['status'] == 'queued') {
+                        type = 'm-info';
+                        status = '…';
+                        age = job['queued_at'];
+                    } else if(job['status'] == 'not_running') {
+                        type = 'm-info';
+                        status = '…';
+                        age = job['usage_queued_at'];
+                    } else if(job['status'] == 'canceled') {
+                        type = 'm-dim';
+                        status = '∅';
+                        age = job['stopped_at'];
+                    } else {
+                        /* retried, on_hold -- not sure what exactly these
+                           mean */
+                        type = 'm-default';
+                        status = job['status'];
+                        age = job['created_at'];
+                    }
+
+                    var age = timeDiff(new Date(Date.parse(age)), now);
+
+                    elem.innerHTML = '<a href="https://app.circleci.com/pipelines/github/' + job['project_slug'].substring(3) + '/' + pipelineNumber + '/workflows/' + workflowId + '/jobs/' + job['job_number'] + '" title="' + job['status'] + ' @ ' + age + '">' + status + '<br /><span class="m-text m-small">' + age + '</span></a>';
+                    elem.className = type;
+                }
+            };
+            req.send();
+        };
+        reqWorkflows.send();
     };
-    req.send();
+    reqPipeline.send();
 }
 
 function fetchLatestAppveyorJobs(project, branch) {
